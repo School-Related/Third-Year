@@ -5,7 +5,7 @@
 % Preamble
 
 \usepackage[margin=1in]{geometry}
-\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
 \usepackage{fancyhdr, float, graphicx}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
@@ -15,17 +15,17 @@
 \usepackage{xcolor}
 \usepackage{blindtext}
 \usepackage{hyperref}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
-    filecolor=magenta,      
-    urlcolor=cyan,
+    filecolor=black,      
+    urlcolor=codepurple,
     pdfpagemode=FullScreen,
     }
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
-\definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
@@ -53,11 +53,12 @@
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[L]{\textit{\Large{Digital Forensics and Investigation - 3nd Year B. Tech}}}
-%\fancyhead[R]{\textit{something}}
+\fancyhead[L]{\textit{\Large{Digital Forensics and Investigation - TY. B. Tech}}}
+\fancyhead[R]{\textit{Krishnaraj T}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{1pt}
-
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}[thm]{Definition}
 
 
 % Other Doc Editing
@@ -93,7 +94,7 @@
 
 
     \huge{\textsc{
-            Tools for Digital Forensics and Investigation
+            Tools for Digital Forensics and Investigation for Mobile Devices.
         }} \\
 
 
@@ -136,30 +137,234 @@
 \setcounter{page}{1}
 
 \section{Aim}
+To Learn about the different tools used in Digital Forensics and Investigation for Mobile Devices.
 
 \section{Objectives}
-
+\begin{enumerate}
+    \item Understand the need for Digital Forensics and Investigation for Mobile Devices.
+    \item Find out the tools available in the market for Forensics in Mobile Devices.
+    \item Experiment with some simple tools.
+\end{enumerate}
 
 \section{Theory}
 
-https://www.vskills.in/certification/tutorial/digital-forensics-tools/
-https://www.sleuthkit.org/index.php
-https://study.com/learn/lesson/mobile-forensics-uses-tools-steps.html
+\subsection{Definitions}
+
+\begin{dfn}
+    \textbf{Digital Forensics} is a branch of forensic science encompassing the recovery and investigation of material found in digital devices, often in relation to computer crime. The term digital forensics was originally used as a synonym for computer forensics but has expanded to cover investigation of all devices capable of storing digital data.
+\end{dfn}
+
+\begin{dfn}
+    \textbf{Mobile Forensics} is a sub-branch of Digital Forensics relating to recovery of digital evidence or data from a mobile device under forensically sound conditions. The phrase mobile device usually refers to mobile phones; however, it can also relate to any digital device that has both internal memory and communication ability, including PDA devices, GPS devices and tablet computers.
+\end{dfn}
+
+\subsection{Need for Mobile Forensics}
+
+
+\begin{enumerate}
+    \item \textbf{Digital Evidence Collection:} Mobile devices store a vast amount of digital evidence, including call logs, messages, app data, and location information. Forensics enables systematic extraction and preservation of this evidence for legal investigations.
+
+    \item \textbf{Criminal Investigations:} Mobile devices often contain crucial evidence in criminal cases, such as text messages, images, and GPS data. Forensic analysis aids law enforcement agencies in reconstructing timelines and uncovering relevant details.
+
+    \item \textbf{Cybersecurity Incidents:} Mobile devices can be compromised in cyberattacks, leading to data breaches or unauthorized access. Forensics helps identify attack vectors, assess the extent of compromise, and prevent future incidents.
+
+    \item \textbf{Fraud Detection:} Mobile forensics assists in detecting financial fraud by analyzing communication records, app usage, and location data to establish patterns of fraudulent activities.
+
+    \item \textbf{Employee Misconduct:} Employers can use mobile forensics to investigate cases of data theft, policy violations, or other employee misconduct, ensuring a secure workplace environment.
+
+    \item \textbf{Disaster Recovery:} Mobile forensics aids in recovering data from damaged or compromised devices, helping individuals and organizations restore lost information.
+
+    \item \textbf{Legal Proceedings:} Mobile device data can be presented as evidence in court. Forensic procedures validate the authenticity of data, ensuring its admissibility in legal proceedings.
+\end{enumerate}
+
+
+\section{Forensic Tool Types}
+
+An examiner can use various mobile forensic tools depending on the objective of the examination and the type of mobile device involved. Experts use the Mobile Forensic Tool Leveling System (Fig. 2) to assess the tool's capability in data acquisition. As the level in the pyramid increases, forensic tools become more expensive, methods become more invasive, and technical requirements also increase. Each level is briefly discussed below:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{./leveling_tool8743754519123385858.png}
+    \caption{}
+\end{figure}
+
+\begin{enumerate}
+    \item ``Manual Extraction'' - It involves physical analysis of the device and photographic documentation of the data present in it. Some of the tools used for manual analysis are Project-A-Phone and Fernico ZRT.
+    \item ``Logical Analysis'' - It requires connecting the data cable to the handset and extracting data using cell phone extraction software such as Oxygen Forensic Suite and Lantern.
+    \item ``Physical Analysis (Hex Dump)'' - It involves connecting the device to the forensic workstation and pushing a bootloader to instruct the device to dump the memory to the computer. The data dumped into the computer is then subjected to further analysis. Some common tools used for hex dump include XACT and Pandora's Box.
+    \item ``Physical Analysis (Chip-Off)'' - It involves removing the memory chip from the device and using a separate reader to review and analyze the data. Another way is to use a second mobile device to read data. Some tools used for this process are the iSeasamo Phone Opening Tool and the FEITA Digital inspection station.
+    \item ``Physical Analysis (Micro Read)'' - It entails using a high-powered electron microscope to view, analyze, and interpret data on memory chips.
+\end{enumerate}
+
+\section{Process}
+
+Cell phone digital forensics requires gathering data in forensically sound conditions. Forensically sound refers to data collection without alteration or destruction during the investigative process, whether on purpose or by accident. The compilation, analysis, handling, and storage of data must have been done in a manner acceptable by law. Mobile forensics requires legal and technical expertise in observing the forensic process discussed in the succeeding sections.
+
+\subsection{Preparation}
+The preparation stage involves researching information about the specific device and the appropriate tools to be used. It also requires the preparation of the machine and the devices needed for the examination (e.g., cables, extraction software, drivers, etc.).
+
+\subsection{Isolation}
+The isolation stage involves cutting off the device's connection from data or cellular access such as Bluetooth and Wi-Fi to preserve the data. Disabling network connectivity is essential because most mobile devices can be remotely controlled by the user, who may lock or completely wipe the information. Incoming calls and texts may also potentially modify existing data.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{./1280px-rf_bag_with_iphone3829824308128555210.png}
+    \caption{Phone kept in a rfid Safe bag, to prevent remote access, and isolate it completely. }
+\end{figure}
+\section{Tools}
+
+\subsection{Processing}
+In the processing stage, tools prepared in the previous steps can now be used to extract data from the mobile device. Depending on the circumstance and the objective of the examination, more intrusive tools can be used to extract data during the initial or final stage of the processing.
+
+\subsection{Verification}
+The verification stage requires the examiner to check whether the data obtained from the device is accurate. It is an essential step because, in some cases, the data in the mobile device is erroneous or incomplete.
+
+\section{Tools}
+
+\subsection{\href{https://www.sans.org/tools/sift-workstation/}{SANS Sift}}
+
+
+The SANS Investigative Forensic Toolkit (SIFT) is an Ubuntu based Live CD which includes all the tools you need to conduct an in-depth forensic or incident response investigation. It supports analysis of Expert Witness Format (E01), Advanced Forensic Format (AFF), and RAW (dd) evidence formats. SIFT includes tools such as log2timeline for generating a timeline from system logs, Scalpel for data file carving, Rifiuti for examining the recycle bin, and lots more.
+
+\subsection{\href{https://prodiscover.com/prodiscover-forensics}{Prodiscover Forensics}}
+
+ProDiscover Basic is a simple digital forensic investigation tool that allows you to image, analyse and report on evidence found on a drive. Once you add a forensic image you can view the data by content or by looking at the clusters that hold the data. You can also search for data using the Search node based on the criteria you specify.
+
+\subsection{\href{https://www.sleuthkit.org/index.php}{The Sleuth Kit (+Autopsy)}}
+
+The Sleuth Kit is an open source digital forensics toolkit that can be used to perform in-depth analysis of various file systems. Autopsy is essentially a GUI that sits on top of The Sleuth Kit. It comes with features like Timeline Analysis, Hash Filtering, File System Analysis and Keyword Searching out of the box, with the ability to add other modules for extended functionality.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{./slueth.png}
+    \caption{The Sleuth Kit + Autopsy webpage. }
+\end{figure}
+
+\subsection{\href{https://www.exterro.com/ftk-imager}{FTK Imager}}
+
+FTK Imager is a data preview and imaging tool that allows you to examine files and folders on local hard drives, network drives, CDs/DVDs, and review the content of forensic images or memory dumps. Using FTK Imager you can also create SHA1 or MD5 hashes of files, export files and folders from forensic images to disk, review and recover files that were deleted from the Recycle Bin (providing that their data blocks haven’t been overwritten), and mount a forensic image to view its contents in Windows Explorer.
+
+\subsection{\href{https://www.geeksforgeeks.org/dd-command-linux/}{Linux ‘dd’}}
+
+dd comes by default on the majority of Linux distributions available today (e.g. Ubuntu, Fedora). This tool can be used for various digital forensic tasks such as forensically wiping a drive (zero-ing out a drive) and creating a raw image of a drive.
+
+\subsection{\href{https://www.caine-live.net/page5/page5.html}{CAINE}}
+
+(Computer Aided INvestigative Environment) is Linux Live CD that contains a wealth of digital forensic tools. Features include a user-friendly GUI, semi-automated report creation and tools for Mobile Forensics, Network Forensics, Data Recovery and more.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{menu11.png}
+    \caption{}
+\end{figure}
+\subsection{\href{https://www.labsystems.co.in/oxygen.html}{Oxygen Forensic Suite 2013 Standard}}
+
+If you are investigating a case that requires you to gather evidence from a mobile phone to support your case, Oxygen Forensics Suite (Standard Edition) is a tool that will help you achieve this. Features include the ability to gather Device Information (Manufacturer, OS Platform, IMEI, Serial Number, etc.), Contacts, Messages (Emails, SMS, MMS, etc.) and recovery of deleted messages, Call Logs, and Calendar and Task information. It also comes with a file browser which allows you to access and analyse user photos, videos, documents and device databases.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{./014.jpg}
+    \caption{Oxygen Forensic Suite 2014}
+\end{figure}
+
+
+
+\subsection{\href{https://www.hhdsoftware.com/free-hex-editor}{Free Hex Editor Neo}}
+
+Free Hex Editor Neo is a basic hex editor that was designed to handle very large files. While a lot of the additional features are found in the commercial versions of Hex Editor Neo, I find this tool useful for loading large files (e.g. database files or forensic images) and performing actions such as manual data carving, low-level file editing, information gathering, or searching for hidden data.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{./HHD-Software-Hex-Editor_29.png}
+    \caption{}
+\end{figure}
+
+
+\subsection{\href{https://fireeye.market/apps/211364}{Mandiant RedLine}}
+
+RedLine offers the ability to perform memory and file analysis of a specific host. It collects information about running processes and drivers from memory, and gathers file system metadata, registry data, event logs, network information, services, tasks, and Internet history to help build an overall threat assessment profile.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{img3File.png}
+    \caption{}
+\end{figure}
+
+\subsection{\href{https://www.p2energysolutions.com/p2-explorer}{P2 eXplorer}}
+
+P2 eXplorer is a forensic image mounting tool that allows you to mount a forensic image as a physical disk and view the contents of that image in Windows Explorer or load it into an external forensic analysis tool. P2 eXplorer supports images in RAW, DD, IMG, EX01, SMART and SafeBack format, amongst others.
+
+\section{Experiments}
+
+For Experimentation and basic testing, we have used Andriller.
+
+\subsection{Andriller}
+Andriller is a software utility with a collection of forensic tools for smartphones. It performs read-only, forensically sound, non-destructive acquisition from Android devices. It has features, such as powerful Lockscreen cracking for Pattern, PIN code, or Password; custom decoders for Apps data from Android (some Apple iOS and Windows) databases for decoding communications. Extraction and decoders produce reports in HTML and Excel formats.
+
+\subsection{Screenshots}
+
+These are the reports generated by Andriller. The first one is from Parth's Phone and the second one is from Krish's Phone. USB Debugging had to be turned on for this to work.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{./Screenshot 2023-08-02 062105.png}
+    \caption{Krishnaraj's Phone}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{./Screenshot 2023-08-02 062224.png}
+    \caption{Parth's Phone}
+\end{figure}
+
+
+\subsection{Andriller in Action}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{./Picture3-18-18.jpg}
+    \caption{Andriller extracting information, Demo, not experimental. }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{./Picture4-16-18.jpg}
+    \caption{Andriller finishes extrating, Demo, not experimental. }
+\end{figure}
+\section{Results}
+
+We were able to extract some very basic information from the devices.
+
+\begin{enumerate}
+    \item We obtained the email ids logged in on the device.
+    \item We obtained android files for almost all apps.
+    \item We also got the db files for many notable apps like Instagram, contacts etc. This was the most significant part of the experiment.
+\end{enumerate}
+
+
 \section{Platform}
-\textbf{Operating System}: Arch Linux x86-64 \\
+\textbf{Operating System}: Windows 11 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
 \textbf{Compilers or Interpreters}: Python 3.10.1\\
-
-\section{Input and Output}
-
 
 % \section{Code}
 % \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
 
 \section{Conclusion}
-Thus, We have learnt IDS systems and their types. We have also learnt about various tools based on IDS systems.
+Thus, we were able to learn about the different tools used in Digital Forensics and Investigation for Mobile Devices. We also performed a very basic extraction from ours and our Friend's mobile devices, and managed to get some very basic information from it.
+
 \clearpage
 
-\section{FAQ}
-
+\pagebreak
+\begin{thebibliography}{}
+    \bibitem{Casey, E., Dietrich, E. (2011)}
+    \textit{Digital Evidence and Computer Crime: Forensic Science, Computers, and the Internet.} \\Academic Press.
+    \bibitem{Carrier, B. (2014)}
+    \textit{File System Forensic Analysis.}
+    \\Addison-Wesley.
+    \bibitem{Quick, D. (2019)}
+    \textit{Mobile Forensic Investigations: A Guide to Evidence Collection, Analysis, and Presentation.} \\Elsevier.
+    \bibitem{Vskills - Digital Forensic Tools}
+    \href{https://www.vskills.in/certification/tutorial/digital-forensics-tools/}{Vskills - Digital Forensic Tools} \\VSkills
+\end{thebibliography}
 \end{document}

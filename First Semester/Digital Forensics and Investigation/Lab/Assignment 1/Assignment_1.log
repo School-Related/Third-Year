@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.2)  2 AUG 2023 22:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.2)  14 AUG 2023 21:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -118,23 +118,34 @@ LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 ) (/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks24
+\thm@bodyfont=\toks25
+\thm@headfont=\toks26
+\thm@notefont=\toks27
+\thm@headpunct=\toks28
+\thm@preskip=\skip53
+\thm@postskip=\skip54
+\thm@headsep=\skip55
+\dth@everypar=\toks29
 ) (/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
-\f@nch@headwidth=\skip53
-\f@nch@O@elh=\skip54
-\f@nch@O@erh=\skip55
-\f@nch@O@olh=\skip56
-\f@nch@O@orh=\skip57
-\f@nch@O@elf=\skip58
-\f@nch@O@erf=\skip59
-\f@nch@O@olf=\skip60
-\f@nch@O@orf=\skip61
+\f@nch@headwidth=\skip56
+\f@nch@O@elh=\skip57
+\f@nch@O@erh=\skip58
+\f@nch@O@olh=\skip59
+\f@nch@O@orh=\skip60
+\f@nch@O@elf=\skip61
+\f@nch@O@erf=\skip62
+\f@nch@O@olf=\skip63
+\f@nch@O@orf=\skip64
 ) (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count274
-\float@exts=\toks24
+\float@exts=\toks30
 \float@box=\box53
-\@float@everytoks=\toks25
+\@float@everytoks=\toks31
 \@floatcapt=\box54
 ) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -153,8 +164,8 @@ File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 \Gin@req@width=\dimen159
 ) (/usr/share/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks26
-\inpenc@posthook=\toks27
+\inpenc@prehook=\toks32
+\inpenc@posthook=\toks33
 ) (/usr/share/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (/usr/share/texmf-dist/tex/latex/fouriernc/fouriernc.sty
@@ -354,7 +365,7 @@ Package tocbibind Note: Using section or other style headings.
 ) (/usr/share/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count275
 \lst@gtempboxa=\box55
-\lst@token=\toks28
+\lst@token=\toks34
 \lst@length=\count276
 \lst@currlwidth=\dimen160
 \lst@column=\count277
@@ -518,58 +529,59 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip62
+\Hy@SectionHShift=\skip65
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 24.
-LaTeX Font Info:    Trying to load font information for T1+fnc on input line 67.
+Package hyperref Info: Option `colorlinks' set `true' on input line 25.
+\c@thm=\count312
+LaTeX Font Info:    Trying to load font information for T1+fnc on input line 68.
  (/usr/share/texmf-dist/tex/latex/fouriernc/t1fnc.fd
 File: t1fnc.fd 2005/12/13 scaled font definitions for T1/fnc.
 )
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 10.18341pt on input line 67.
+(Font)              scaled to size 10.18341pt on input line 68.
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count312
+\l__color_backend_stack_int=\count313
 \l__pdf_internal_box=\box57
 ) (./Assignment_1.aux)
 \openout1 = `Assignment_1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 67.
-LaTeX Font Info:    Trying to load font information for FML+fncmi on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 68.
+LaTeX Font Info:    Trying to load font information for FML+fncmi on input line 68.
  (/usr/share/texmf-dist/tex/latex/fouriernc/fmlfncmi.fd
 File: fmlfncmi.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncmi.
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for FMS/fncm/m/n on input line 67.
-LaTeX Font Info:    Trying to load font information for FMS+fncm on input line 67.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for FMS/fncm/m/n on input line 68.
+LaTeX Font Info:    Trying to load font information for FMS+fncm on input line 68.
  (/usr/share/texmf-dist/tex/latex/fouriernc/fmsfncm.fd
 File: fmsfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FMS/fncm.
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 67.
-LaTeX Font Info:    Trying to load font information for FMX+futm on input line 67.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 68.
+LaTeX Font Info:    Trying to load font information for FMX+futm on input line 68.
  (/usr/share/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -607,49 +619,77 @@ LaTeX Font Info:    ... okay on input line 67.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count313
+\scratchcounter=\count314
 \scratchdimen=\dimen168
 \scratchbox=\box58
-\nofMPsegments=\count314
-\nofMParguments=\count315
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count316
+\nofMPsegments=\count315
+\nofMParguments=\count316
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count317
 \MPscratchDim=\dimen169
-\MPnumerator=\count317
-\makeMPintoPDFobject=\count318
-\everyMPtoPDFconversion=\toks30
+\MPnumerator=\count318
+\makeMPintoPDFobject=\count319
+\everyMPtoPDFconversion=\toks36
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Redeclaring math accent \widehat on input line 67.
-LaTeX Font Info:    Redeclaring math accent \widetilde on input line 67.
-\c@lstlisting=\count319
-Package hyperref Info: Link coloring ON on input line 67.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 68.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 68.
+\c@lstlisting=\count320
+Package hyperref Info: Link coloring ON on input line 68.
  (./Assignment_1.out) (./Assignment_1.out)
 \@outlinefile=\write3
 \openout3 = `Assignment_1.out'.
 
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 19.28804pt on input line 74.
+(Font)              scaled to size 19.28804pt on input line 75.
 LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 19.28804pt on input line 76.
+(Font)              scaled to size 19.28804pt on input line 77.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 16.07027pt on input line 80.
+(Font)              scaled to size 16.07027pt on input line 81.
 LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 16.07027pt on input line 111.
+(Font)              scaled to size 16.07027pt on input line 112.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 13.39188pt on input line 119.
+(Font)              scaled to size 13.39188pt on input line 120.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 13.39188pt on input line 132.
+(Font)              scaled to size 13.39188pt on input line 133.
  (./Assignment_1.toc
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 10.18341pt on input line 1.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 7.71893pt on input line 4.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 5.57996pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for FML+fncm on input line 4.
+ (/usr/share/texmf-dist/tex/latex/fouriernc/fmlfncm.fd
+File: fmlfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncm.
+)
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
 )
 \tf@toc=\write4
 \openout4 = `Assignment_1.toc'.
@@ -658,21 +698,19 @@ LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.134 \clearpage
+l.135 \clearpage
                  [1]
-Overfull \hbox (6.19994pt too wide) in paragraph at lines 145--148
-\T1/fnc/m/n/10.95 https://www.vskills.in/certification/tutorial/digital-forensics-tools/ https://www.sleuthkit.org/index.php
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--152
-
- []
-
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 11.15991pt on input line 151.
+LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
+(Font)              scaled to size 11.15991pt on input line 151.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 10.18341pt on input line 161.
+(Font)              scaled to size 10.18341pt on input line 153.
+LaTeX Font Info:    Font shape `T1/fnc/b/it' will be
+(Font)              scaled to size 10.18341pt on input line 154.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 13.39188pt on input line 161.
+(Font)              scaled to size 13.39188pt on input line 184.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -684,10 +722,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.161 \clearpage
-                 [1
+l.184 
+       [1
 
 ]
+<./leveling_tool8743754519123385858.png, id=198, 225.84375pt x 190.7125pt>
+File: ./leveling_tool8743754519123385858.png Graphic file (type png)
+<use ./leveling_tool8743754519123385858.png>
+Package pdftex.def Info: ./leveling_tool8743754519123385858.png  used on input line 187.
+(pdftex.def)             Requested size: 211.38832pt x 178.51605pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -695,25 +739,176 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[2
+[2 <./leveling_tool8743754519123385858.png>]
+<./1280px-rf_bag_with_iphone3829824308128555210.png, id=211, 451.6875pt x 300.12125pt>
+File: ./1280px-rf_bag_with_iphone3829824308128555210.png Graphic file (type png)
+<use ./1280px-rf_bag_with_iphone3829824308128555210.png>
+Package pdftex.def Info: ./1280px-rf_bag_with_iphone3829824308128555210.png  used on input line 211.
+(pdftex.def)             Requested size: 211.38832pt x 140.45709pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[3 <./1280px-rf_bag_with_iphone3829824308128555210.png>]
+<./slueth.png, id=221, 522.45187pt x 368.87813pt>
+File: ./slueth.png Graphic file (type png)
+<use ./slueth.png>
+Package pdftex.def Info: ./slueth.png  used on input line 239.
+(pdftex.def)             Requested size: 399.29463pt x 281.92628pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[4 <./slueth.png (PNG copy)>]
+<menu11.png, id=230, 1366.10374pt x 771.88374pt>
+File: menu11.png Graphic file (type png)
+<use menu11.png>
+Package pdftex.def Info: menu11.png  used on input line 257.
+(pdftex.def)             Requested size: 399.29463pt x 225.60724pt.
+<./014.jpg, id=232, 582.175pt x 445.665pt>
+File: ./014.jpg Graphic file (type jpg)
+<use ./014.jpg>
+Package pdftex.def Info: ./014.jpg  used on input line 266.
+(pdftex.def)             Requested size: 399.29463pt x 305.6731pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[5 <./menu11.png>]
+<./HHD-Software-Hex-Editor_29.png, id=240, 865.73438pt x 518.6878pt>
+File: ./HHD-Software-Hex-Editor_29.png Graphic file (type png)
+<use ./HHD-Software-Hex-Editor_29.png>
+Package pdftex.def Info: ./HHD-Software-Hex-Editor_29.png  used on input line 278.
+(pdftex.def)             Requested size: 399.29463pt x 239.23245pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[6 <./014.jpg>]
+<img3File.png, id=247, 956.57375pt x 684.5575pt>
+File: img3File.png Graphic file (type png)
+<use img3File.png>
+Package pdftex.def Info: img3File.png  used on input line 289.
+(pdftex.def)             Requested size: 399.29463pt x 285.74689pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[7 <./HHD-Software-Hex-Editor_29.png>]
+<./Screenshot 2023-08-02 062105.png, id=255, 756.57657pt x 657.2053pt>
+File: ./Screenshot 2023-08-02 062105.png Graphic file (type png)
+<use ./Screenshot 2023-08-02 062105.png>
+Package pdftex.def Info: ./Screenshot 2023-08-02 062105.png  used on input line 311.
+(pdftex.def)             Requested size: 446.26582pt x 387.65752pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[8 <./img3File.png>]
+<./Screenshot 2023-08-02 062224.png, id=261, 803.25093pt x 690.32906pt>
+File: ./Screenshot 2023-08-02 062224.png Graphic file (type png)
+<use ./Screenshot 2023-08-02 062224.png>
+Package pdftex.def Info: ./Screenshot 2023-08-02 062224.png  used on input line 317.
+(pdftex.def)             Requested size: 446.26582pt x 383.53745pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[9 <./Screenshot 2023-08-02 062105.png>]
+<./Picture3-18-18.jpg, id=268, 506.89375pt x 668.4975pt>
+File: ./Picture3-18-18.jpg Graphic file (type jpg)
+<use ./Picture3-18-18.jpg>
+Package pdftex.def Info: ./Picture3-18-18.jpg  used on input line 325.
+(pdftex.def)             Requested size: 211.38832pt x 278.77794pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[10 <./Screenshot 2023-08-02 062224.png>]
+<./Picture4-16-18.jpg, id=276, 495.8525pt x 427.5975pt>
+File: ./Picture4-16-18.jpg Graphic file (type jpg)
+<use ./Picture4-16-18.jpg>
+Package pdftex.def Info: ./Picture4-16-18.jpg  used on input line 331.
+(pdftex.def)             Requested size: 211.38832pt x 182.29091pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[11 <./Picture3-18-18.jpg> <./Picture4-16-18.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 346--349
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[13
 
 ] (./Assignment_1.aux)
 Package rerunfilecheck Info: File `Assignment_1.out' has not changed.
-(rerunfilecheck)             Checksum: 8C468B103806800B9D9F69B8F9F99BCE;587.
+(rerunfilecheck)             Checksum: 6D26F4BD1F2FD177FFDD5691F4A11131;3601.
  ) 
 Here is how much of TeX's memory you used:
- 12886 strings out of 477985
- 195624 string characters out of 5840059
- 1853388 words of memory out of 5000000
- 32885 multiletter control sequences out of 15000+600000
- 542345 words of font info for 54 fonts, out of 8000000 for 9000
+ 13218 strings out of 477985
+ 201391 string characters out of 5840059
+ 1861388 words of memory out of 5000000
+ 33108 multiletter control sequences out of 15000+600000
+ 558233 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,12n,76p,388b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_1.pdf (4 pages, 47448 bytes).
+ 75i,12n,76p,719b,538s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+Output written on Assignment_1.pdf (15 pages, 1404634 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 340 PDF objects out of 1000 (max. 8388607)
+ 296 compressed objects within 3 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 304 words of extra memory for PDF output out of 10000 (max. 10000000)
 
