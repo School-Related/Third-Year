@@ -9,6 +9,7 @@ a:any-link {
 	text-decoration: none;
 	color: inherit;
 }
+
 /* Custom Fonts */
 @font-face {
 	font-family: 'Avengers';
@@ -19,51 +20,33 @@ a:any-link {
 body {
 	color: white;
 	font-family: 'Avengers', cursive;
-	display: flex;
 	/* justify-content: center; */
 	/* align-items: center; */
-	flex-direction: column;
 	background-image: url(images/bg2.jpg);
 	background-size: cover;
 }
+
 button {
-	align-self: center;
-	width: 15rem;
-	height: 6rem;
-	border-radius: 1rem;
-	border: none;
-	padding: 2rem;
-	/* margin: 3rem; */
-	font-size: 3rem;
-    font-family: inherit;
+	font-family: 'Avengers', cursive;
 }
+
 header {
-	align-self: center;
-	margin: 1rem;
-	padding: 2rem;
+	font-family: 'Avengers', cursive;
 	font-size: 4rem;
 	font-size: 10vh;
 }
 
 footer {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	padding: 1rem;
-	font-size: large;
-}
-span {
-    font-size: 5vh;
-    padding: 1rem;
-}
-/* Classes */
-.grid-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* height: 100vh; */
+	font-family: 'Avengers', cursive;
 }
 
+span {
+	font-family: 'Avengers', cursive;
+	font-size: 5vh;
+	padding: 1rem;
+}
+
+/* Classes */
 .grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -71,19 +54,16 @@ span {
 	grid-gap: 1rem;
 	width: 30rem;
 	height: 30rem;
-	justify-content: center;
 	background-color: hwb(292 94% 0% / 0.611);
-	padding: 2rem;
-	border-radius: 3rem;
+	cursor: url(images/thanfos.png), auto;
 }
 
 .square {
 	background-color: rgba(121, 67, 121, 0.712);
-	/* background-color: white; */
-	/* background-color: transparent; */
-	/* border: 1px solid black; */
-	border-radius: 2rem;
-	cursor: url(images/thanfos.png), auto;
+}
+
+p {
+	font-family: 'Avengers', cursive;
 }
 
 .mole {
@@ -98,25 +78,22 @@ span {
 }
 
 .comment {
-    font-size: 5vh;
-    margin-top: 1rem;;
-    padding: 1rem;
+	font-family: 'Avengers', cursive;
+	font-size: 5vh;
+	margin-top: 1rem;
+	;
+	padding: 1rem;
 	align-self: center;
 }
 
-.score-container{
-    padding: 1rem;
-    top: 10rem;
-    position: fixed;
-    /* display:inline; */
-    font-size: 5vh;
+.score-container {
+	font-family: 'Avengers', cursive;
+	top: 10rem;
 }
 
-.time-container{
-    top: 15rem;
-    position: fixed;
-    padding: 1rem;
-    font-size: 5vh;
+.time-container {
+	font-family: 'Avengers', cursive;
+	top: 15rem;
 }
 
 @keyframes mole {
@@ -124,9 +101,11 @@ span {
 		filter: opacity(0);
 		/* transform:translateY(100%) */
 	}
+
 	50% {
 		/* transform:translateY(50%) */
 	}
+
 	100% {
 		filter: opacity(1);
 		/* transform: translateY(0%);
