@@ -1,0 +1,306 @@
+% This is a Basic Assignment Paper but with like Code and stuff allowed in it, there is also url, hyperlinks from contents included. 
+
+\documentclass[11pt]{article}
+
+% Preamble
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage{fancyhdr, float, graphicx}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdfpagemode=FullScreen,
+    }
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\textit{\Large{AI and ML Techniques - 3rd Year}}}
+\fancyhead[R]{\textit{Krishnaraj T}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{1pt}
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}[thm]{Definition}
+
+
+% Other Doc Editing
+% \parindent 0ex
+%\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+
+    %---------------------------NAMES-------------------------------
+
+    \huge\textsc{
+        MIT World Peace University
+    }\\
+
+    \vspace{0.75\baselineskip} % space after Uni Name
+
+    \LARGE{
+        Artificial Intelligence and Machine Learning Techniques\\
+        Third Year B. Tech, Semester 5
+    }
+
+    \vfill % space after Sub Name
+
+    %--------------------------TITLE-------------------------------
+
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.6pt}
+    \vspace{0.75\baselineskip} % Whitespace above the title
+
+
+
+    \huge{\textsc{
+            State Space Search
+        }} \\
+
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the title
+    \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
+    \rule{\textwidth}{1.6pt}
+
+    \vspace{1\baselineskip} % Whitespace after the title block
+
+    %--------------------------SUBTITLE --------------------------	
+
+    \LARGE\textsc{
+        Study Assignment
+    } % Subtitle or further description
+    \vfill
+
+    %--------------------------AUTHOR-------------------------------
+
+    Prepared By
+    \vspace{0.5\baselineskip} % Whitespace before the editors
+
+    \Large{
+        Krishnaraj Thadesar \\
+        Cyber Security and Forensics\\
+        Batch A1, PA 20
+    }
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the editor list
+    \today
+
+\end{titlepage}
+
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\setcounter{page}{1}
+
+\section{Aim}
+Study state space representation for AI problem solving.
+
+\section{Theory}
+
+\subsection{State Space Search}
+\begin{dfn}
+    \textbf{State Space} is a set of all possible configurations of the system. Each configuration is called a \textbf{state} of the system. The state space is the set of all possible states reachable from the initial state by any sequence of actions.\\
+
+    \noindent
+    It is a way to mathematically represent a problem by defining all the possible states
+    in which the problem can be. This is used in search algorithms to represent the initial state, goal
+    state, and current state of the problem. Each state in the state space is represented using a set of
+    variables.
+\end{dfn}
+
+\begin{dfn}
+    The \textbf{efficiency} of the search algorithm greatly depends on the size of the state space, and it is
+    important to choose an appropriate representation and search strategy to search the state space
+    efficiently.
+\end{dfn}
+
+One of the most well-known state space search algorithms is the $A^*$ algorithm. Other commonly
+used state space search algorithms include breadth-first search (BFS), depth-first search
+(DFS), hill climbing, simulated annealing, and genetic algorithms.
+
+\subsection{Features of State Space Search}
+State space search has several features that make it an effective problem-solving technique in
+Artificial Intelligence. These features include:
+
+\begin{enumerate}
+    \item \textbf{Exhaustiveness}:
+          State space search explores all possible states of a problem to find a solution.
+    \item \textbf{Completeness}:
+          If a solution exists, state space search will find it.
+    \item \textbf{Optimality}:
+          Searching through a state space results in an optimal solution.
+    \item \textbf{Uninformed and Informed           Search}:
+          State space search in artificial intelligence can be classified as uninformed if it provides
+          additional information about the problem.
+\end{enumerate}
+
+\subsection{Steps in State Space Search}
+
+The steps involved in state space search are as follows:
+
+\begin{enumerate}
+    \item To begin the search process, we set the current state to the initial state.
+    \item We then check if the current state is the goal state. If it is, we terminate the algorithm and
+          return the result.
+    \item If the current state is not the goal state, we generate the set of possible successor states
+          that can be reached from the current state.
+    \item For each successor state, we check if it has already been visited. If it has, we skip it, else
+          we add it to the queue of states to be visited.
+          Next, we set the next state in the queue as the current state and check if it's the goal state.
+    \item If it is, we return the result. If not, we repeat the previous step until we find the goal state
+          or explore all the states.
+    \item If all possible states have been explored and the goal state still needs to be found, we
+          return with no solution.
+\end{enumerate}
+
+\subsection{State Space Representation}
+
+\textbf{State space Representation} involves defining an INITIAL STATE and a GOAL STATE and
+then determining a sequence of actions, called states, to follow.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{./diagram1.png}
+    \caption{State Space Representation}
+\end{figure}
+
+\subsection{More Standard Definitions}
+
+\begin{dfn}
+    \textbf{State}:
+    A state can be an Initial State, a Goal State, or any other possible state that can be
+    generated by applying rules between them.
+
+\end{dfn}
+\begin{dfn}
+    \textbf{Space}:
+    In an AI problem, space refers to the exhaustive collection of all conceivable states.
+\end{dfn}
+\begin{dfn}
+    \textbf{Search}:
+    This technique moves from the beginning state to the desired state by applying good rules
+    while traversing the space of all possible states.
+\end{dfn}
+\begin{dfn}
+    \textbf{Search Tree}:
+    To visualize the search issue, a search tree is used, which is a tree-like structure that
+    represents the problem. The initial state is represented by the root node of the search tree,
+    which is the starting point of the tree.
+\end{dfn}
+\begin{dfn}
+    \textbf{Transition Model}:
+    This describes what each action does, while Path Cost assigns a cost value to each path,
+    an activity sequence that connects the beginning node to the end node. The optimal
+    option has the lowest cost among all alternatives.
+\end{dfn}
+
+\section{Platform}
+\textbf{Operating System}: Arch Linux x86-64 \\
+\textbf{IDEs or Text Editors Used}: Visual Studio Code\\
+\textbf{Compilers or Interpreters}: Not Required. \\
+
+\section{Rules Written for Towers of Hanoi}
+\lstinputlisting[caption=`Rules that were written for an agent for solving the towers of Hanoi Problem and creating the State Space Tree`]{../../Programs/Towers_of_Hanoi.md}
+
+% \section{Input and Output}
+
+
+% \section{Code}
+% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
+
+\section{Conclusion}
+State Space Search is a problem-solving technique used in AI to find a solution
+to a problem by exploring all possible states of the problem.
+
+\clearpage
+
+\section{FAQ}
+\begin{enumerate}
+    \item \textbf{State space representation of 8 Puzzle Problem}\\
+
+          \begin{enumerate}
+              \item The \textbf{8-puzzle} problem is a commonly used example of a state space search. It is a sliding
+                    puzzle game consisting of 8 numbered tiles arranged in a \textbf{3x3} grid and one blank space.
+                    The game aims to rearrange the tiles from their initial state to a final goal state by sliding
+                    them into the blank space.
+              \item To represent the state space in this problem, we use the nine tiles in the puzzle and their
+                    respective positions in the grid. Each state in the state space is represented by a \textbf{3x3} array
+                    with values ranging from 1 to 8, and the blank space is represented as an empty tile.
+              \item The initial state of the puzzle represents the starting configuration of the tiles, while the
+                    goal state represents the desired configuration. \textbf{Search algorithms} utilize the state space
+                    to find a sequence of moves that will transform the initial state into the goal state.
+          \end{enumerate}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=.45\textwidth]{8_queens1.png}
+              \caption{8 Puzzle Initial and Goal State}
+          \end{figure}
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=.55\textwidth]{8_queens2.png}
+              \caption{8 Puzzle State Space}
+          \end{figure}
+    \item \textbf{Application of Stata Space Search}\\
+          \begin{enumerate}
+              \item \textbf{State space search} algorithms are used in various fields, such as robotics, game playing,
+                    computer networks, operations research, bioinformatics, cryptography, and supply chain
+                    management. In artificial intelligence, state space search algorithms can solve problems
+                    like pathfinding, planning, and scheduling.
+              \item They are also useful in planning robot motion and finding the best sequence of actions to
+                    achieve a goal. In games, state space search algorithms can help determine the best move
+                    for a player given a particular game state.
+              \item \textbf{State space search algorithms} can optimize routing and resource allocation in computer
+                    networks and operations research.
+              \item In \textbf{Bioinformatics}, state space search algorithms can help find patterns in biological data
+                    and predict protein structures.
+              \item In \textbf{Cryptography}, state space search algorithms are used to break codes and find
+                    cryptographic keys.
+          \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
