@@ -1,0 +1,42 @@
+\contentsline {section}{\numberline {1}Aim}{1}{section.1}%
+\contentsline {section}{\numberline {2}Objectives}{1}{section.2}%
+\contentsline {section}{\numberline {3}Theory}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Router}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Router Logs}{1}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Attacks Simulated}{2}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Analysis}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Normal Usage Data}{3}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Interface Usage - Normal Usage}{3}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.2}DOS Attack Data}{4}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Devices Connected - Normal Usage}{4}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}IP Addresses Connected - DOS Attack}{4}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Hourly Usage - Normal Usage}{5}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Hourly Usage - Normal Usage}{5}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Protocols Used - Normal Usage}{6}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Protocol Usage - DOS Attack}{6}{subsubsection.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.7}Daily Usage - Normal Usage}{7}{subsubsection.4.2.7}%
+\contentsline {subsubsection}{\numberline {4.2.8}Daily Usage - DOS Attack}{7}{subsubsection.4.2.8}%
+\contentsline {subsection}{\numberline {4.3}Brute Force Attack Data}{8}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Hourly Usage - Normal Usage}{8}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Hourly Usage - Brute Force Attack}{8}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Daily Usage - Normal Usage}{9}{subsubsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.4}Daily Usage - Brute Force Attack}{9}{subsubsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.5}Websites Visited - Normal Usage}{10}{subsubsection.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.6}Websites Visited - Brute Force Attack}{10}{subsubsection.4.3.6}%
+\contentsline {subsection}{\numberline {4.4}Port Scanning Data}{11}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Ports Used - Normal Usage}{11}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Port Usage - Port Scanning Attack}{11}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Daily Usage - Normal Usage}{12}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4}Daily Usage - Port Scanning Attack}{12}{subsubsection.4.4.4}%
+\contentsline {section}{\numberline {5}Platform}{12}{section.5}%
+\contentsline {section}{\numberline {6}Code}{13}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Simulating various Attacks on a Household router network.}{13}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Strategy}{13}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Generating \emph {normal} demo data}{13}{section.7}%
+\contentsline {section}{\numberline {8}Let us now simulate some attacks}{17}{section.8}%
+\contentsline {subsection}{\numberline {8.1}DOS Attack}{17}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Hourly Traffic Distribution of the Household - DDoS Attack Demo}{19}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Instagram Account Brute Force Attack}{19}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Port Scanning}{21}{subsection.8.4}%
+\contentsline {section}{\numberline {9}Conclusion}{22}{section.9}%
+\contentsline {section}{References}{23}{section*.21}%

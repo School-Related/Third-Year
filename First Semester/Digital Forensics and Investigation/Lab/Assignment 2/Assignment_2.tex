@@ -1,0 +1,1285 @@
+
+\documentclass[11pt]{article}
+
+% Preamble
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{fancyhdr, float, graphicx}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage{hyperref}
+
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\textit{\Large{Digital Forensics and Investigation - TY. B. Tech}}}
+\fancyhead[R]{\textit{Krishnaraj T}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{1pt}
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}[thm]{Definition}
+
+
+\renewcommand{\footrulewidth}{1pt}
+
+\usepackage[breakable]{tcolorbox}
+\usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
+
+
+% Basic figure setup, for now with no caption control since it's done
+% automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+\usepackage{graphicx}
+% Maintain compatibility with old templates. Remove in nbconvert 6.0
+\let\Oldincludegraphics\includegraphics
+% Ensure that by default, figures have no caption (until we provide a
+% proper Figure object with a Caption API and a way to capture that
+% in the conversion process - todo).
+\usepackage{caption}
+\DeclareCaptionFormat{nocaption}{}
+\captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
+
+\usepackage{float}
+\floatplacement{figure}{H} % forces figures to be placed at the correct location
+\usepackage{xcolor} % Allow colors to be defined
+\usepackage{enumerate} % Needed for markdown enumerations to work
+\usepackage{geometry} % Used to adjust the document margins
+\usepackage{amsmath} % Equations
+\usepackage{amssymb} % Equations
+\usepackage{textcomp} % defines textquotesingle
+% Hack from http://tex.stackexchange.com/a/47451/13684:
+\AtBeginDocument{%
+    \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+}
+\usepackage{upquote} % Upright quotes for verbatim code
+\usepackage{eurosym} % defines \euro
+
+\usepackage{iftex}
+% \ifPDFTeX
+% 	\usepackage[T1]{fontenc}
+% 	\IfFileExists{alphabeta.sty}{
+% 		  \usepackage{alphabeta}
+% 	  }{
+% 		  \usepackage[mathletters]{ucs}
+% 		  \usepackage[utf8x]{inputenc}
+% 	  }
+% \else
+% 	\usepackage{fontspec}
+% 	\usepackage{unicode-math}
+% \fi
+
+\usepackage{fancyvrb} % verbatim replacement that allows latex
+\usepackage{grffile} % extends the file name processing of package graphics
+% to support a larger range
+\makeatletter % fix for old versions of grffile with XeLaTeX
+\@ifpackagelater{grffile}{2019/11/01}
+{
+    % Do nothing on new versions
+}
+{
+    \def\Gread@@xetex#1{%
+        \IfFileExists{"\Gin@base".bb}%
+        {\Gread@eps{\Gin@base.bb}}%
+        {\Gread@@xetex@aux#1}%
+    }
+}
+\makeatother
+\usepackage[Export]{adjustbox} % Used to constrain images to a maximum size
+\adjustboxset{max size={0.9\linewidth}{0.9\paperheight}}
+
+% The hyperref package gives us a pdf with properly built
+% internal navigation ('pdf bookmarks' for the table of contents,
+% internal cross-reference links, web links for URLs, etc.)
+\usepackage{hyperref}
+% The default LaTeX title has an obnoxious amount of whitespace. By default,
+% titling removes some of it. It also provides customization options.
+\usepackage{titling}
+\usepackage{longtable} % longtable support required by pandoc >1.10
+\usepackage{booktabs}  % table support for pandoc > 1.12.2
+\usepackage{array}     % table support for pandoc >= 2.11.3
+\usepackage{calc}      % table minipage width calculation for pandoc >= 2.11.1
+\usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+\usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+% normalem makes italics be italics, not underlines
+\usepackage{mathrsfs}
+
+
+
+% Colors for the hyperref package
+\definecolor{urlcolor}{rgb}{0,.145,.698}
+\definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+\definecolor{citecolor}{rgb}{.12,.54,.11}
+
+% ANSI colors
+\definecolor{ansi-black}{HTML}{3E424D}
+\definecolor{ansi-black-intense}{HTML}{282C36}
+\definecolor{ansi-red}{HTML}{E75C58}
+\definecolor{ansi-red-intense}{HTML}{B22B31}
+\definecolor{ansi-green}{HTML}{00A250}
+\definecolor{ansi-green-intense}{HTML}{007427}
+\definecolor{ansi-yellow}{HTML}{DDB62B}
+\definecolor{ansi-yellow-intense}{HTML}{B27D12}
+\definecolor{ansi-blue}{HTML}{208FFB}
+\definecolor{ansi-blue-intense}{HTML}{0065CA}
+\definecolor{ansi-magenta}{HTML}{D160C4}
+\definecolor{ansi-magenta-intense}{HTML}{A03196}
+\definecolor{ansi-cyan}{HTML}{60C6C8}
+\definecolor{ansi-cyan-intense}{HTML}{258F8F}
+\definecolor{ansi-white}{HTML}{C5C1B4}
+\definecolor{ansi-white-intense}{HTML}{A1A6B2}
+\definecolor{ansi-default-inverse-fg}{HTML}{FFFFFF}
+\definecolor{ansi-default-inverse-bg}{HTML}{000000}
+
+% common color for the border for error outputs.
+\definecolor{outerrorbackground}{HTML}{FFDFDF}
+
+% commands and environments needed by pandoc snippets
+% extracted from the output of `pandoc -s`
+\providecommand{\tightlist}{%
+    \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+
+% Additional commands for more recent versions of Pandoc
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+
+
+% Define a nice break command that doesn't care if a line doesn't already
+% exist.
+\def\br{\hspace*{\fill} \\* }
+% Math Jax compatibility definitions
+\def\gt{>}
+\def\lt{<}
+\let\Oldtex\TeX
+\let\Oldlatex\LaTeX
+\renewcommand{\TeX}{\textrm{\Oldtex}}
+\renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+% Document parameters
+% Document title
+\title{Assignment\_1}
+
+
+
+
+
+% Pygments definitions
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+                \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\@namedef{PY@tok@w}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\@namedef{PY@tok@c}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.24,0.48,0.48}{##1}}}
+\@namedef{PY@tok@cp}{\def\PY@tc##1{\textcolor[rgb]{0.61,0.40,0.00}{##1}}}
+\@namedef{PY@tok@k}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kp}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kt}{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\@namedef{PY@tok@o}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@ow}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\@namedef{PY@tok@nb}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@nf}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@nc}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@nn}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@ne}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.25,0.22}{##1}}}
+\@namedef{PY@tok@nv}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@no}{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\@namedef{PY@tok@nl}{\def\PY@tc##1{\textcolor[rgb]{0.46,0.46,0.00}{##1}}}
+\@namedef{PY@tok@ni}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.44,0.44,0.44}{##1}}}
+\@namedef{PY@tok@na}{\def\PY@tc##1{\textcolor[rgb]{0.41,0.47,0.13}{##1}}}
+\@namedef{PY@tok@nt}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@nd}{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\@namedef{PY@tok@s}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sd}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@si}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.64,0.35,0.47}{##1}}}
+\@namedef{PY@tok@se}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.36,0.12}{##1}}}
+\@namedef{PY@tok@sr}{\def\PY@tc##1{\textcolor[rgb]{0.64,0.35,0.47}{##1}}}
+\@namedef{PY@tok@ss}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@sx}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@m}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@gh}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\@namedef{PY@tok@gu}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\@namedef{PY@tok@gd}{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\@namedef{PY@tok@gi}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.52,0.00}{##1}}}
+\@namedef{PY@tok@gr}{\def\PY@tc##1{\textcolor[rgb]{0.89,0.00,0.00}{##1}}}
+\@namedef{PY@tok@ge}{\let\PY@it=\textit}
+\@namedef{PY@tok@gs}{\let\PY@bf=\textbf}
+\@namedef{PY@tok@gp}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\@namedef{PY@tok@go}{\def\PY@tc##1{\textcolor[rgb]{0.44,0.44,0.44}{##1}}}
+\@namedef{PY@tok@gt}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\@namedef{PY@tok@err}{\def\PY@bc##1{{\setlength{\fboxsep}{\string -\fboxrule}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}}
+\@namedef{PY@tok@kc}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kd}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kn}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kr}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@bp}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@fm}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@vc}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@vg}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@vi}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@vm}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@sa}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sb}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sc}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@dl}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@s2}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sh}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@s1}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@mb}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mf}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mh}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mi}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@il}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mo}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@ch}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.24,0.48,0.48}{##1}}}
+\@namedef{PY@tok@cm}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.24,0.48,0.48}{##1}}}
+\@namedef{PY@tok@cpf}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.24,0.48,0.48}{##1}}}
+\@namedef{PY@tok@c1}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.24,0.48,0.48}{##1}}}
+\@namedef{PY@tok@cs}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.24,0.48,0.48}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+% For linebreaks inside Verbatim environment from package fancyvrb.
+\makeatletter
+\newbox\Wrappedcontinuationbox
+\newbox\Wrappedvisiblespacebox
+\newcommand*\Wrappedvisiblespace {\textcolor{red}{\textvisiblespace}}
+\newcommand*\Wrappedcontinuationsymbol {\textcolor{red}{\llap{\tiny$\m@th\hookrightarrow$}}}
+\newcommand*\Wrappedcontinuationindent {3ex }
+\newcommand*\Wrappedafterbreak {\kern\Wrappedcontinuationindent\copy\Wrappedcontinuationbox}
+% Take advantage of the already applied Pygments mark-up to insert
+% potential linebreaks for TeX processing.
+%        {, <, #, %, $, ' and ": go to next line.
+%        _, }, ^, &, >, - and ~: stay at end of broken line.
+% Use of \textquotesingle for straight quote.
+\newcommand*\Wrappedbreaksatspecials {%
+    \def\PYGZus{\discretionary{\char`\_}{\Wrappedafterbreak}{\char`\_}}%
+    \def\PYGZob{\discretionary{}{\Wrappedafterbreak\char`\{}{\char`\{}}%
+    \def\PYGZcb{\discretionary{\char`\}}{\Wrappedafterbreak}{\char`\}}}%
+    \def\PYGZca{\discretionary{\char`\^}{\Wrappedafterbreak}{\char`\^}}%
+    \def\PYGZam{\discretionary{\char`\&}{\Wrappedafterbreak}{\char`\&}}%
+    \def\PYGZlt{\discretionary{}{\Wrappedafterbreak\char`\<}{\char`\<}}%
+    \def\PYGZgt{\discretionary{\char`\>}{\Wrappedafterbreak}{\char`\>}}%
+    \def\PYGZsh{\discretionary{}{\Wrappedafterbreak\char`\#}{\char`\#}}%
+    \def\PYGZpc{\discretionary{}{\Wrappedafterbreak\char`\%}{\char`\%}}%
+    \def\PYGZdl{\discretionary{}{\Wrappedafterbreak\char`\$}{\char`\$}}%
+    \def\PYGZhy{\discretionary{\char`\-}{\Wrappedafterbreak}{\char`\-}}%
+    \def\PYGZsq{\discretionary{}{\Wrappedafterbreak\textquotesingle}{\textquotesingle}}%
+    \def\PYGZdq{\discretionary{}{\Wrappedafterbreak\char`\"}{\char`\"}}%
+    \def\PYGZti{\discretionary{\char`\~}{\Wrappedafterbreak}{\char`\~}}%
+}
+% Some characters . , ; ? ! / are not pygmentized.
+% This macro makes them "active" and they will insert potential linebreaks
+\newcommand*\Wrappedbreaksatpunct {%
+    \lccode`\~`\.\lowercase{\def~}{\discretionary{\hbox{\char`\.}}{\Wrappedafterbreak}{\hbox{\char`\.}}}%
+    \lccode`\~`\,\lowercase{\def~}{\discretionary{\hbox{\char`\,}}{\Wrappedafterbreak}{\hbox{\char`\,}}}%
+    \lccode`\~`\;\lowercase{\def~}{\discretionary{\hbox{\char`\;}}{\Wrappedafterbreak}{\hbox{\char`\;}}}%
+    \lccode`\~`\:\lowercase{\def~}{\discretionary{\hbox{\char`\:}}{\Wrappedafterbreak}{\hbox{\char`\:}}}%
+    \lccode`\~`\?\lowercase{\def~}{\discretionary{\hbox{\char`\?}}{\Wrappedafterbreak}{\hbox{\char`\?}}}%
+    \lccode`\~`\!\lowercase{\def~}{\discretionary{\hbox{\char`\!}}{\Wrappedafterbreak}{\hbox{\char`\!}}}%
+    \lccode`\~`\/\lowercase{\def~}{\discretionary{\hbox{\char`\/}}{\Wrappedafterbreak}{\hbox{\char`\/}}}%
+    \catcode`\.\active
+    \catcode`\,\active
+    \catcode`\;\active
+    \catcode`\:\active
+    \catcode`\?\active
+    \catcode`\!\active
+    \catcode`\/\active
+    \lccode`\~`\~
+}
+\makeatother
+
+\let\OriginalVerbatim=\Verbatim
+\makeatletter
+\renewcommand{\Verbatim}[1][1]{%
+    %\parskip\z@skip
+    \sbox\Wrappedcontinuationbox {\Wrappedcontinuationsymbol}%
+    \sbox\Wrappedvisiblespacebox {\FV@SetupFont\Wrappedvisiblespace}%
+    \def\FancyVerbFormatLine ##1{\hsize\linewidth
+        \vtop{\raggedright\hyphenpenalty\z@\exhyphenpenalty\z@
+            \doublehyphendemerits\z@\finalhyphendemerits\z@
+            \strut ##1\strut}%
+    }%
+    % If the linebreak is at a space, the latter will be displayed as visible
+    % space at end of first line, and a continuation symbol starts next line.
+    % Stretch/shrink are however usually zero for typewriter font.
+    \def\FV@Space {%
+        \nobreak\hskip\z@ plus\fontdimen3\font minus\fontdimen4\font
+        \discretionary{\copy\Wrappedvisiblespacebox}{\Wrappedafterbreak}
+        {\kern\fontdimen2\font}%
+    }%
+
+    % Allow breaks at special characters using \PYG... macros.
+    \Wrappedbreaksatspecials
+    % Breaks at punctuation characters . , ; ? ! and / need catcode=\active
+    \OriginalVerbatim[#1,codes*=\Wrappedbreaksatpunct]%
+}
+\makeatother
+
+% Exact colors from NB
+\definecolor{incolor}{HTML}{303F9F}
+\definecolor{outcolor}{HTML}{D84315}
+\definecolor{cellborder}{HTML}{CFCFCF}
+\definecolor{cellbackground}{HTML}{F7F7F7}
+
+% prompt
+\makeatletter
+\newcommand{\boxspacing}{\kern\kvtcb@left@rule\kern\kvtcb@boxsep}
+\makeatother
+\newcommand{\prompt}[4]{
+    {\ttfamily\llap{{\color{#2}[#3]:\hspace{3pt}#4}}\vspace{-\baselineskip}}
+}
+
+
+
+% Prevent overflowing lines due to hard-to-break entities
+\sloppy
+% Setup hyperref package
+\hypersetup{
+    breaklinks=true,  % so long urls are correctly broken across lines
+    colorlinks=true,
+    urlcolor=urlcolor,
+    linkcolor=linkcolor,
+    citecolor=citecolor,
+}
+% Slightly bigger margins than the latex defaults
+
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdfpagemode=FullScreen,
+}
+
+
+
+% Other Doc Editing
+% \parindent 0ex
+%\renewcommand{\baselinestretch}{1.5}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% Other Doc Editing
+% \parindent 0ex
+%\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+
+    %---------------------------NAMES-------------------------------
+
+    \huge\textsc{
+        MIT World Peace University
+    }\\
+
+    \vspace{0.75\baselineskip} % space after Uni Name
+
+    \LARGE{
+        Digital Forensics and Investigation\\
+        Third Year B. Tech, Semester 5
+    }
+
+    \vfill % space after Sub Name
+
+    %--------------------------TITLE-------------------------------
+
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.6pt}
+    \vspace{0.75\baselineskip} % Whitespace above the title
+
+
+
+    \huge{\textsc{
+            Analysing Simlulated Household Router Logs
+        }} \\
+
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the title
+    \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
+    \rule{\textwidth}{1.6pt}
+
+    \vspace{1\baselineskip} % Whitespace after the title block
+
+    %--------------------------SUBTITLE --------------------------	
+
+    \LARGE\textsc{
+        Lab Assignment 2
+    } % Subtitle or further description
+    \vfill
+
+    %--------------------------AUTHOR-------------------------------
+
+    Prepared By
+    \vspace{0.5\baselineskip} % Whitespace before the editors
+
+    \Large{
+        Krishnaraj Thadesar \\
+        Cyber Security and Forensics\\
+        Batch A1, PA 20
+    }
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the editor list
+    \today
+
+\end{titlepage}
+
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\setcounter{page}{1}
+
+\section{Aim}
+To simulate different types of attacks on a router, or a home network.
+
+\section{Objectives}
+\begin{enumerate}
+    \item Simulating different types of attacks on a router, or a home network.
+    \item To learn about the different types of attacks that can be performed on a router, or a home network.
+    \item To analyze the Router logs, and make inferences about the attacks.
+\end{enumerate}
+
+\section{Theory}
+
+\subsection{Router}
+
+\begin{dfn}
+    \textbf{Router} is a networking device that operates at the network layer of the OSI model. It functions as a gateway, directing data packets between different computer networks. Routers use routing tables to determine the optimal path for forwarding packets, facilitating efficient communication between devices.
+\end{dfn}
+
+\begin{dfn}
+    \textbf{Logs} in the context of networking refer to records generated by various network devices, including routers, to capture significant events and activities. Router logs provide a chronological record of network operations, errors, warnings, and security-related events. These logs play a crucial role in network management, troubleshooting, and security analysis. They offer insights into network behavior, potential vulnerabilities, and unauthorized access attempts.
+\end{dfn}
+
+
+\subsection{Router Logs}
+
+We were unable to obtain the logs from our router, so we had to simluate the attacks on our own using a python script, which is given below. The logs were then generated using the script and then analysed.
+
+For our reference, though, we have included a sample log file from a router, which is given below.
+
+\begin{lstlisting}[language=bash, caption=Sample Router Log File]
+    1. [2023-08-15 10:12:34] INFO: Router successfully initialized.
+    2. [2023-08-15 11:45:21] WARNING: High network traffic detected from IP 192.168.1.15.
+    3. [2023-08-15 12:30:05] ERROR: Failed to establish connection with DNS server 8.8.8.8.
+    4. [2023-08-16 08:20:10] INFO: New device connected with MAC address 00:1A:2B:3C:4D:5E.
+    5. [2023-08-16 09:10:55] INFO: Firmware update successfully applied.
+    6. [2023-08-16 09:30:40] ERROR: Unsuccessful login attempt from IP 192.168.1.25.
+    7. [2023-08-17 14:05:12] WARNING: DHCP pool depletion. Only 5 IP addresses left.
+    8. [2023-08-17 15:20:30] INFO: VPN tunnel established with remote gateway 203.0.113.50.
+    9. [2023-08-18 08:45:02] ERROR: Port forwarding request for port 22 already exists.
+    10. [2023-08-18 09:55:18] INFO: Quality of Service (QoS) rules updated for improved VoIP performance.
+    11. [2023-08-18 12:15:45] WARNING: Suspicious ARP activity detected from IP 192.168.1.10.
+    12. [2023-08-19 07:30:22] ERROR: NAT configuration conflict detected in rule set.
+    13. [2023-08-19 10:40:17] INFO: Guest network "GuestWiFi" established with password authentication.
+    14. [2023-08-19 14:05:30] INFO: Router temperature exceeds safe threshold. Cooling initiated.
+    15. [2023-08-20 09:20:05] INFO: Port 80 forwarded to internal server at IP 192.168.1.50.
+    16. [2023-08-20 11:10:48] WARNING: Ping sweep detected from external IP 123.456.789.10.
+    17. [2023-08-21 13:25:15] ERROR: DNS cache corruption. Flushing cache for resolution.
+    18. [2023-08-21 14:50:29] INFO: Network time synchronization successful with NTP server.
+    19. [2023-08-22 10:15:02] INFO: Wireless channel changed to optimize signal quality.
+    20. [2023-08-22 12:40:18] WARNING: MAC address spoofing attempt from device with MAC 11:22:33:44:55:66.
+\end{lstlisting}
+
+We have instead chosen to directly make a table with the relevant information. The table and its description is given in the code further below.
+
+
+\subsection{Attacks Simulated}
+
+The following attack scenarios were simulated by my script.
+
+\begin{enumerate}
+    \item DOS Attack: A Denial of Service (DOS) Attack is a malicious attempt to disrupt the normal functioning of a network, service, or website by overwhelming it with a flood of traffic. This attack aims to exhaust the target's resources, causing it to become unavailable to legitimate users. DOS attacks can be achieved through various means, such as sending a high volume of requests, exploiting vulnerabilities, or using botnets.
+
+          On the router logs, we may see a high volume of requests from a single IP address, or a high volume of requests to a single IP address. This is what we are looking for.
+
+    \item Brute Force Attack to access Instagram: A brute force attack is a trial-and-error method used to obtain information such as a user password or personal identification number (PIN). In a brute force attack, automated software is used to generate a large number of consecutive guesses as to the value of the desired data. Brute force attacks may be used by criminals to crack encrypted data, or by security analysts to test an organization's network security.\\
+
+          On the router it appears as a failed login attempt, and if the attack is successful, it will appear as a successful login attempt, followed by multiple requests to the Instagram server. This is because the attacker will try to access the account and then try to change the password, which will require multiple requests to the server. He may then try and misuse the account amounting to multiple requests to the server. This is what we are looking for.
+
+    \item Port Scanning for Surveillance: Port scanning is a method used to determine which ports on a network are open and which are closed. It is used by hackers to identify vulnerable services listening on a port that can be exploited for malicious purposes. Port scanning is also used by security analysts to discover vulnerable services and applications that can be exploited.
+
+          On the router logs, we may a large number of requests to different ports from a single IP address. This is what we are looking for.
+
+\end{enumerate}
+
+\section{Analysis}
+
+\subsection{Normal Usage Data}
+
+
+\subsubsection{Interface Usage - Normal Usage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/normal_interface_usage.png}
+    \caption{Normal usage of Devices connected. }
+\end{figure}
+
+
+
+
+
+\subsection{DOS Attack Data}
+
+
+\subsubsection{Devices Connected - Normal Usage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/normal_devices_usage.png}
+    \caption{Normal usage of Devices connected. }
+\end{figure}
+
+
+
+\subsubsection{IP Addresses Connected - DOS Attack}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/ddos_attack_ips.png}
+    \caption{DOS Attack Simulation Data for IP Addresses}
+\end{figure}
+
+
+
+\subsubsection{Hourly Usage - Normal Usage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/normal_hourly_usage.png}
+    \caption{Normal usage of Devices connected. }
+\end{figure}
+
+
+\subsubsection{Hourly Usage - Normal Usage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/ddos_hourly_usage.png}
+    \caption{Normal usage of Devices connected during DOS Attack }
+\end{figure}
+
+\subsubsection{Protocols Used - Normal Usage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/normal_protocols.png}
+    \caption{Normal usage of Devices connected. }
+\end{figure}
+
+
+\subsubsection{Protocol Usage - DOS Attack}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/ddos_protocols.png}
+    \caption{DOS Attack Simulation Data for Protocol Usage}
+\end{figure}
+
+\subsubsection{Daily Usage - Normal Usage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/normal_requests_per_day.png}
+    \caption{Normal usage of Devices connected. }
+\end{figure}
+
+\subsubsection{Daily Usage - DOS Attack}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/ddos_requests_per_day.png}
+    \caption{DOS Attack Simulation Data for Requests per day}
+\end{figure}
+
+
+\subsection{Brute Force Attack Data}
+
+
+\subsubsection{Hourly Usage - Normal Usage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/normal_hourly_usage.png}
+    \caption{Normal usage of Devices connected. }
+\end{figure}
+
+\subsubsection{Hourly Usage - Brute Force Attack}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/insta_hourly_usage.png}
+    \caption{Brute Force Attack Simulation Data for Hourly Usage}
+\end{figure}
+
+\subsubsection{Daily Usage - Normal Usage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/normal_requests_per_day.png}
+    \caption{Normal usage of Devices connected. }
+\end{figure}
+
+
+\subsubsection{Daily Usage - Brute Force Attack}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/insta_requests_per_day.png}
+    \caption{Brute Force Attack Simulation Data for Daily Usage}
+\end{figure}
+
+\subsubsection{Websites Visited - Normal Usage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/normal_website_visits.png}
+    \caption{Normal usage of Devices connected. }
+\end{figure}
+
+
+\subsubsection{Websites Visited - Brute Force Attack}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/insta_website_visits.png}
+    \caption{Brute Force Attack Simulation Data for Website Visits}
+\end{figure}
+
+\subsection{Port Scanning Data}
+
+\subsubsection{Ports Used - Normal Usage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/normal_ports.png}
+    \caption{Normal usage of Devices connected. }
+\end{figure}
+
+
+\subsubsection{Port Usage - Port Scanning Attack}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/port_scanning_ports.png}
+    \caption{Port Scanning Attack Simulation Data for Ports Usage}
+\end{figure}
+
+\subsubsection{Daily Usage - Normal Usage}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/normal_requests_per_day.png}
+    \caption{Normal usage of Devices connected. }
+\end{figure}
+
+
+\subsubsection{Daily Usage - Port Scanning Attack}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{router_log_analysis_graphs/port_scanning_daily_usage.png}
+    \caption{Port Scanning Attack Simulation Data for Daily usage}
+\end{figure}
+
+
+\section{Platform}
+\textbf{Operating System}: Arch Linux x86-64 \\
+\textbf{IDEs or Text Editors Used}: Visual Studio Code\\
+\textbf{Compilers or Interpreters}: Python 3.11\\
+
+\section{Code}
+
+\subsection{Simulating various Attacks on a Household router
+    network.}\label{simulating-various-attacks-on-a-household-router-network.}
+
+We will first import necessary libraries
+
+\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{ }{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{dates} \PY{k}{as} \PY{n+nn}{mdates}
+        \PY{k+kn}{import} \PY{n+nn}{random}
+
+        \PY{c+c1}{\PYZsh{} changing style}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{style}\PY{o}{.}\PY{n}{use}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{default}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{rcParams}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{font.family}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Jetbrains Mono}\PY{l+s+s2}{\PYZdq{}}
+    \end{Verbatim}
+\end{tcolorbox}
+
+\hypertarget{strategy}{%
+    \subsection{Strategy}\label{strategy}}
+
+\begin{enumerate}
+    \def\labelenumi{\arabic{enumi}.}
+    \tightlist
+    \item
+          We will try and simluate a few attacks on a router, and check whether
+          those attacks can be detected in hindsight.
+    \item
+          To do that we will start with generating some demo data for a router,
+          inspired by my home router. This will be a monitor of active DHCP
+          Clients.
+    \item
+          We will then try and analyse the data to find out anomalies in normal
+          usage.
+\end{enumerate}
+
+\hypertarget{generating-normal-demo-data}{%
+    \section{\texorpdfstring{Generating \emph{normal} demo
+          data}{Generating normal demo data}}\label{generating-normal-demo-data}}
+
+\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{ }{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} columns}
+        \PY{n}{data} \PY{o}{=} \PY{p}{\PYZob{}}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MAC}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{p}{[}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IP Address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Device Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interface}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested IP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{p}{]}
+        \PY{p}{\PYZcb{}}
+    \end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{ }{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} Creating a pandas dataframe}
+
+        \PY{n}{normal\PYZus{}log\PYZus{}db} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{data}\PY{p}{)}
+        \PY{n}{normal\PYZus{}log\PYZus{}db}
+    \end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{ }{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} Writing functions for columns that we wanna generate randomly}
+        \PY{k}{def} \PY{n+nf}{generate\PYZus{}mac\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+        \PY{n}{mac} \PY{o}{=} \PY{p}{[}\PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mh}{0x00}\PY{p}{,} \PY{l+m+mh}{0xff}\PY{p}{)} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{]}
+        \PY{k}{return} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{:}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{n+nb}{map}\PY{p}{(}\PY{k}{lambda} \PY{n}{x}\PY{p}{:} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZpc{}02x}\PY{l+s+s2}{\PYZdq{}} \PY{o}{\PYZpc{}} \PY{n}{x}\PY{p}{,} \PY{n}{mac}\PY{p}{)}\PY{p}{)}
+
+
+        \PY{k}{def} \PY{n+nf}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+        \PY{c+c1}{\PYZsh{} define the weights for each website}
+        \PY{n}{website\PYZus{}weights} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Youtube}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{15}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Instagram}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Facebook}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Twitter}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Other}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{2}\PY{p}{\PYZcb{}}
+
+        \PY{c+c1}{\PYZsh{} create a list of websites based on their weights}
+        \PY{n}{websites} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+        \PY{k}{for} \PY{n}{website}\PY{p}{,} \PY{n}{weight} \PY{o+ow}{in} \PY{n}{website\PYZus{}weights}\PY{o}{.}\PY{n}{items}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+        \PY{n}{websites}\PY{o}{.}\PY{n}{extend}\PY{p}{(}\PY{p}{[}\PY{n}{website}\PY{p}{]} \PY{o}{*} \PY{n}{weight}\PY{p}{)}
+
+        \PY{c+c1}{\PYZsh{} randomly select a website from the list}
+        \PY{n}{website} \PY{o}{=} \PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{n}{websites}\PY{p}{)}
+
+        \PY{c+c1}{\PYZsh{} generate a random IP address for the website}
+        \PY{k}{if} \PY{n}{website} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Youtube}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+        \PY{k}{return} \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{216.58.194.45}\PY{l+s+s1}{\PYZsq{}} \PY{p}{,} \PY{n}{website}\PY{p}{)}
+        \PY{k}{elif} \PY{n}{website} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Instagram}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+        \PY{k}{return} \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{3.213.31.34}\PY{l+s+s1}{\PYZsq{}} \PY{p}{,} \PY{n}{website}\PY{p}{)}
+        \PY{k}{elif} \PY{n}{website} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Facebook}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+        \PY{k}{return} \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{69.63.176.22}\PY{l+s+s1}{\PYZsq{}} \PY{p}{,} \PY{n}{website}\PY{p}{)}
+        \PY{k}{elif} \PY{n}{website} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Twitter}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
+        \PY{k}{return} \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{104.244.42.12}\PY{l+s+s1}{\PYZsq{}} \PY{p}{,} \PY{n}{website}\PY{p}{)}
+        \PY{k}{else}\PY{p}{:}
+        \PY{k}{return} \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{192.168.1.53}\PY{l+s+s1}{\PYZsq{}} \PY{p}{,} \PY{n}{website}\PY{p}{)}
+
+        \PY{k}{def} \PY{n+nf}{generate\PYZus{}device\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+        \PY{c+c1}{\PYZsh{} define a list of 10 predefined IP addresses}
+        \PY{n}{ips} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{192.168.1.10}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{192.168.1.20}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{192.168.1.30}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{192.168.1.40}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{192.168.1.50}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{192.168.1.60}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{192.168.1.70}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{192.168.1.80}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{192.168.1.90}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{192.168.1.100}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+
+        \PY{c+c1}{\PYZsh{} generate a random integer between 0 and 9}
+        \PY{n}{index} \PY{o}{=} \PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{)}
+
+        \PY{c+c1}{\PYZsh{} return the IP address at the selected index}
+        \PY{k}{return} \PY{n}{ips}\PY{p}{[}\PY{n}{index}\PY{p}{]}
+
+        \PY{k}{def} \PY{n+nf}{generate\PYZus{}device\PYZus{}name}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+        \PY{n}{device\PYZus{}names} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{iPhone}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Samsung}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{OnePlus}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Nokia}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Xiaomi}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Oppo}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Vivo}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Realme}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Micromax}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Lenovo}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+        \PY{k}{return} \PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{n}{device\PYZus{}names}\PY{p}{)}
+
+        \PY{k}{def} \PY{n+nf}{generate\PYZus{}interface}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+        \PY{n}{interfaces} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{5gz}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{2.4gz}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+        \PY{k}{return} \PY{n}{random}\PY{o}{.}\PY{n}{choice}\PY{p}{(}\PY{n}{interfaces}\PY{p}{)}
+
+        \PY{k}{def} \PY{n+nf}{generate\PYZus{}date\PYZus{}time}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+        \PY{c+c1}{\PYZsh{} generate random date and time, but only in the range of a few days}
+        \PY{n}{start\PYZus{}date} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{to\PYZus{}datetime}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{2023\PYZhy{}01\PYZhy{}01}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+
+        \PY{c+c1}{\PYZsh{} generate random number of days}
+        \PY{n}{days\PYZus{}to\PYZus{}add} \PY{o}{=} \PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}
+
+        \PY{c+c1}{\PYZsh{} generate random number of seconds}
+        \PY{n}{seconds\PYZus{}to\PYZus{}add} \PY{o}{=} \PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{86400}\PY{p}{)}
+
+        \PY{c+c1}{\PYZsh{} add random days and seconds to start date}
+        \PY{n}{end\PYZus{}date} \PY{o}{=} \PY{n}{start\PYZus{}date} \PY{o}{+} \PY{n}{pd}\PY{o}{.}\PY{n}{Timedelta}\PY{p}{(}\PY{n}{days}\PY{o}{=}\PY{n}{days\PYZus{}to\PYZus{}add}\PY{p}{,} \PY{n}{seconds}\PY{o}{=}\PY{n}{seconds\PYZus{}to\PYZus{}add}\PY{p}{)}
+
+        \PY{c+c1}{\PYZsh{} set the hour of the timestamp based on the time of day}
+        \PY{n}{hour} \PY{o}{=} \PY{n}{end\PYZus{}date}\PY{o}{.}\PY{n}{hour}
+        \PY{k}{if} \PY{n}{hour} \PY{o}{\PYZlt{}} \PY{l+m+mi}{6}\PY{p}{:}
+        \PY{c+c1}{\PYZsh{} almost no traffic between 2am and 6am}
+        \PY{n}{hour} \PY{o}{=} \PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{23}\PY{p}{)}
+        \PY{k}{elif} \PY{n}{hour} \PY{o}{\PYZlt{}} \PY{l+m+mi}{9}\PY{p}{:}
+        \PY{c+c1}{\PYZsh{} more traffic during the morning hours}
+        \PY{n}{hour} \PY{o}{=} \PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}
+        \PY{k}{elif} \PY{n}{hour} \PY{o}{\PYZlt{}} \PY{l+m+mi}{18}\PY{p}{:}
+        \PY{c+c1}{\PYZsh{} most traffic during the daytime}
+        \PY{n}{hour} \PY{o}{=} \PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{9}\PY{p}{,} \PY{l+m+mi}{17}\PY{p}{)}
+        \PY{k}{else}\PY{p}{:}
+        \PY{c+c1}{\PYZsh{} less traffic during the evening hours}
+        \PY{n}{hour} \PY{o}{=} \PY{n}{random}\PY{o}{.}\PY{n}{randint}\PY{p}{(}\PY{l+m+mi}{17}\PY{p}{,} \PY{l+m+mi}{23}\PY{p}{)}
+
+        \PY{c+c1}{\PYZsh{} set the hour of the timestamp}
+        \PY{n}{end\PYZus{}date} \PY{o}{=} \PY{n}{end\PYZus{}date}\PY{o}{.}\PY{n}{replace}\PY{p}{(}\PY{n}{hour}\PY{o}{=}\PY{n}{hour}\PY{p}{)}
+
+        \PY{c+c1}{\PYZsh{} return timestamp as string}
+        \PY{k}{return} \PY{n}{end\PYZus{}date}\PY{o}{.}\PY{n}{strftime}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{Y\PYZhy{}}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{m\PYZhy{}}\PY{l+s+si}{\PYZpc{}d}\PY{l+s+s1}{ }\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{H:}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{M:}\PY{l+s+s1}{\PYZpc{}}\PY{l+s+s1}{S}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+
+        \PY{k}{def} \PY{n+nf}{gen\PYZus{}protocols}\PY{p}{(}\PY{p}{)}\PY{p}{:}
+        \PY{n}{protocols} \PY{o}{=} \PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{TCP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{UDP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{DHCP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{HTTP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{HTTPS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{FTP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{SMTP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{POP3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IMAP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{DNS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ICMP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}
+        \PY{n}{ports} \PY{o}{=} \PY{p}{\PYZob{}}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{TCP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{21}\PY{p}{,}          \PY{c+c1}{\PYZsh{} HTTP}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{UDP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{53}\PY{p}{,}          \PY{c+c1}{\PYZsh{} DNS}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{DHCP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{67}\PY{p}{,}         \PY{c+c1}{\PYZsh{} DHCP Server}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{HTTP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{80}\PY{p}{,}         \PY{c+c1}{\PYZsh{} Hypertext Transfer Protocol}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{HTTPS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{443}\PY{p}{,}       \PY{c+c1}{\PYZsh{} HTTP Secure (TLS/SSL)}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{FTP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{21}\PY{p}{,}          \PY{c+c1}{\PYZsh{} File Transfer Protocol (Control)}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{SMTP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{25}\PY{p}{,}         \PY{c+c1}{\PYZsh{} Simple Mail Transfer Protocol}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{POP3}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{110}\PY{p}{,}        \PY{c+c1}{\PYZsh{} Post Office Protocol v3}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IMAP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{143}\PY{p}{,}        \PY{c+c1}{\PYZsh{} Internet Message Access Protocol}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{DNS}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{l+m+mi}{53}\PY{p}{,}          \PY{c+c1}{\PYZsh{} Domain Name System}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ICMP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{k+kc}{None}        \PY{c+c1}{\PYZsh{} Internet Control Message Protocol (does not use ports)}
+        \PY{p}{\PYZcb{}}
+        \PY{n}{weights} \PY{o}{=} \PY{p}{[}\PY{l+m+mf}{0.3}\PY{p}{,} \PY{l+m+mf}{0.2}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.15}\PY{p}{,} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{l+m+mf}{0.05}\PY{p}{,} \PY{l+m+mf}{0.05}\PY{p}{,} \PY{l+m+mf}{0.025}\PY{p}{,} \PY{l+m+mf}{0.025}\PY{p}{,} \PY{l+m+mf}{0.025}\PY{p}{,} \PY{l+m+mf}{0.030}\PY{p}{]}
+        \PY{n}{selection} \PY{o}{=} \PY{n}{random}\PY{o}{.}\PY{n}{choices}\PY{p}{(}\PY{n}{protocols}\PY{p}{,} \PY{n}{weights}\PY{o}{=}\PY{n}{weights}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+        \PY{k}{return} \PY{p}{(}\PY{n}{selection}\PY{p}{,} \PY{n}{ports}\PY{p}{[}\PY{n}{selection}\PY{p}{]}\PY{p}{)}
+    \end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{36}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} Generate normal data, consider a home environment. with 10 users. across a span of 10 days. Visiting 100 websites per device per day. }
+
+        \PY{n}{normal\PYZus{}log\PYZus{}db} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MAC}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IP Address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Device Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interface}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested IP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+
+        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{:}
+        \PY{n}{temp\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{\PYZob{}}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MAC}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}mac\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IP Address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}device\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Device Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}device\PYZus{}name}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interface}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}interface}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested IP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested Website}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Protocol}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{gen\PYZus{}protocols}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Port}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{gen\PYZus{}protocols}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}date\PYZus{}time}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}
+        \PY{p}{\PYZcb{}}\PY{p}{)}
+
+        \PY{n}{normal\PYZus{}log\PYZus{}db} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{normal\PYZus{}log\PYZus{}db}\PY{p}{,} \PY{n}{temp\PYZus{}df}\PY{p}{]}\PY{p}{,} \PY{n}{ignore\PYZus{}index}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+
+        \PY{n}{normal\PYZus{}log\PYZus{}db}
+    \end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{36}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+        MAC     IP Address Device Name Interface   Requested IP  \textbackslash{}
+        0    ff:39:6e:d3:c9:e3  192.168.1.100    Micromax       5gz   69.63.176.22
+        1    9b:b1:86:3a:a2:87   192.168.1.30      Lenovo       5gz    3.213.31.34
+        2    63:6c:47:95:0d:9e   192.168.1.80       Nokia     2.4gz  104.244.42.12
+        3    32:66:c6:a6:2a:14   192.168.1.70     OnePlus       5gz  216.58.194.45
+        4    e9:63:7e:f8:c0:9d   192.168.1.70      iPhone     2.4gz    3.213.31.34
+        ..                 {\ldots}            {\ldots}         {\ldots}       {\ldots}            {\ldots}
+        995  af:83:ca:22:ed:17   192.168.1.70     OnePlus       5gz    3.213.31.34
+        996  8a:af:4d:ae:3b:7d   192.168.1.10        Oppo       5gz    3.213.31.34
+        997  de:c7:c7:1c:49:36  192.168.1.100    Micromax     2.4gz  216.58.194.45
+        998  d1:7e:fc:b7:e0:d0   192.168.1.40      Realme       5gz    3.213.31.34
+        999  0a:0a:08:2b:78:34   192.168.1.30      Realme     2.4gz    3.213.31.34
+
+        Time Requested Website Protocol   Port
+        0    2023-01-05 23:33:06          Facebook     HTTP   53.0
+        1    2023-01-06 21:26:17          Facebook      DNS    NaN
+        2    2023-01-06 21:40:24         Instagram      TCP   53.0
+        3    2023-01-01 06:59:25          Facebook    HTTPS   21.0
+        4    2023-01-11 16:11:33           Youtube      TCP  443.0
+        ..                   {\ldots}               {\ldots}      {\ldots}    {\ldots}
+        995  2023-01-06 18:06:25           Youtube      TCP   21.0
+        996  2023-01-06 07:17:27           Youtube    HTTPS   21.0
+        997  2023-01-10 23:54:32           Twitter      DNS   80.0
+        998  2023-01-04 08:05:22          Facebook     POP3   21.0
+        999  2023-01-02 10:11:01          Facebook      TCP  443.0
+
+            [1000 rows x 9 columns]
+    \end{Verbatim}
+\end{tcolorbox}
+
+\hypertarget{let-us-now-simulate-some-attacks}{%
+    \section{Let us now simulate some
+      attacks}\label{let-us-now-simulate-some-attacks}}
+
+\hypertarget{dos-attack}{%
+    \subsection{DOS Attack}\label{dos-attack}}
+
+\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{37}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} Generate ddos attack data, consider a home environment. with 10 users. across a span of 10 days. Visiting 100 websites per device per day. }
+
+        \PY{n}{ddos\PYZus{}log\PYZus{}db} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MAC}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IP Address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Device Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interface}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested IP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+
+        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{:}
+
+
+        \PY{c+c1}{\PYZsh{} check if time columns is on 4th jan}
+        \PY{k}{if} \PY{n}{i} \PY{o}{==} \PY{l+m+mi}{4}\PY{p}{:}
+        \PY{n}{temp\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{\PYZob{}}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MAC}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}mac\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IP Address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}attacker\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Device Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}device\PYZus{}name}\PY{p}{(}\PY{p}{)} \PY{k}{if} \PY{n}{j} \PY{o}{\PYZgt{}} \PY{l+m+mi}{50} \PY{k}{else} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Vivo}\PY{l+s+s1}{\PYZsq{}} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interface}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}interface}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested IP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested Website}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Protocol}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{gen\PYZus{}attacker\PYZus{}protocols}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Port}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{gen\PYZus{}attacker\PYZus{}protocols}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}attacker\PYZus{}date\PYZus{}time}\PY{p}{(}\PY{p}{)} \PY{k}{if} \PY{n}{j} \PY{o}{\PYZlt{}} \PY{l+m+mi}{50} \PY{k}{else} \PY{n}{generate\PYZus{}date\PYZus{}time}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}
+        \PY{p}{\PYZcb{}}\PY{p}{)}
+
+        \PY{k}{else}\PY{p}{:}
+        \PY{n}{temp\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{\PYZob{}}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MAC}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}mac\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IP Address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}device\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Device Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}device\PYZus{}name}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interface}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}interface}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested IP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested Website}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Protocol}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{gen\PYZus{}protocols}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Port}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{gen\PYZus{}protocols}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}  \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}date\PYZus{}time}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}
+        \PY{p}{\PYZcb{}}\PY{p}{)}
+
+        \PY{n}{ddos\PYZus{}log\PYZus{}db} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{ddos\PYZus{}log\PYZus{}db}\PY{p}{,} \PY{n}{temp\PYZus{}df}\PY{p}{]}\PY{p}{,} \PY{n}{ignore\PYZus{}index}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+
+        \PY{n}{ddos\PYZus{}log\PYZus{}db}
+    \end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{37}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+        MAC     IP Address Device Name Interface   Requested IP  \textbackslash{}
+        0    8f:03:95:ed:b2:fa   192.168.1.60     OnePlus     2.4gz  216.58.194.45
+        1    0b:ea:5d:f7:3b:d4   192.168.1.30      Xiaomi       5gz   69.63.176.22
+        2    b4:e4:6c:fc:2e:89   192.168.1.50        Vivo       5gz    3.213.31.34
+        3    e9:6d:f4:7f:26:84   192.168.1.70     OnePlus       5gz  216.58.194.45
+        4    a5:e0:0e:07:30:df   192.168.1.30       Nokia       5gz    3.213.31.34
+        ..                 {\ldots}            {\ldots}         {\ldots}       {\ldots}            {\ldots}
+        995  62:00:c7:be:a4:4e   192.168.1.50     OnePlus     2.4gz    3.213.31.34
+        996  fa:44:4c:6e:a3:2b   192.168.1.50    Micromax     2.4gz   192.168.1.53
+        997  3c:65:92:8c:3a:87   192.168.1.40    Micromax       5gz    3.213.31.34
+        998  39:41:8d:f9:6f:85  192.168.1.100     Samsung       5gz    3.213.31.34
+        999  87:4d:8a:6c:5f:f5   192.168.1.10      Xiaomi     2.4gz  216.58.194.45
+
+        Time Requested Website Protocol  Port
+        0    2023-01-09 16:16:10         Instagram      TCP  53.0
+        1    2023-01-05 12:51:11         Instagram      UDP  21.0
+        2    2023-01-01 07:31:49           Youtube      UDP  80.0
+        3    2023-01-03 10:55:30             Other    HTTPS  25.0
+        4    2023-01-04 16:08:25          Facebook      UDP  80.0
+        ..                   {\ldots}               {\ldots}      {\ldots}   {\ldots}
+        995  2023-01-07 23:59:27          Facebook      UDP  67.0
+        996  2023-01-01 06:40:22           Twitter      TCP  21.0
+        997  2023-01-04 12:40:32          Facebook    HTTPS  21.0
+        998  2023-01-10 16:33:16           Twitter      UDP  53.0
+        999  2023-01-04 07:38:09          Facebook     DHCP  80.0
+
+            [1000 rows x 9 columns]
+    \end{Verbatim}
+\end{tcolorbox}
+
+\hypertarget{hourly-traffic-distribution-of-the-household---ddos-attack-demo}{%
+    \subsection{Hourly Traffic Distribution of the Household - DDoS Attack
+        Demo}\label{hourly-traffic-distribution-of-the-household---ddos-attack-demo}}
+
+\hypertarget{instagram-account-brute-force-attack}{%
+    \subsection{Instagram Account Brute Force
+        Attack}\label{instagram-account-brute-force-attack}}
+
+\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{38}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} Generate insta brute force attack data, consider a home environment. with 10 users. across a span of 10 days. Visiting 100 websites per device per day. }
+
+        \PY{n}{insta\PYZus{}brute\PYZus{}force\PYZus{}db} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MAC}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IP Address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Device Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interface}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested IP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+
+        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{:}
+        \PY{c+c1}{\PYZsh{} check if time columns is on 4th jan}
+        \PY{k}{if} \PY{n}{i} \PY{o}{==} \PY{l+m+mi}{7}\PY{p}{:}
+        \PY{n}{temp\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{\PYZob{}}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MAC}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}attacker\PYZus{}mac\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IP Address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}attacker\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Device Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}device\PYZus{}name}\PY{p}{(}\PY{p}{)} \PY{k}{if} \PY{n}{j} \PY{o}{\PYZgt{}} \PY{l+m+mi}{50} \PY{k}{else} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Vivo}\PY{l+s+s1}{\PYZsq{}} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interface}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}interface}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested IP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested Website}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}attacker\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Protocol}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{gen\PYZus{}attacker\PYZus{}protocols}\PY{p}{(}\PY{p}{)} \PY{k}{if} \PY{n}{j} \PY{o}{\PYZlt{}} \PY{l+m+mi}{50} \PY{k}{else} \PY{n}{gen\PYZus{}protocols}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}attacker\PYZus{}date\PYZus{}time}\PY{p}{(}\PY{p}{)} \PY{k}{if} \PY{n}{j} \PY{o}{\PYZlt{}} \PY{l+m+mi}{50} \PY{k}{else} \PY{n}{generate\PYZus{}date\PYZus{}time}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}
+        \PY{p}{\PYZcb{}}\PY{p}{)}
+
+        \PY{k}{else}\PY{p}{:}
+        \PY{n}{temp\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{\PYZob{}}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MAC}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}mac\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IP Address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}device\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Device Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}device\PYZus{}name}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interface}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}interface}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested IP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested Website}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Protocol}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{gen\PYZus{}attacker\PYZus{}protocols}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}date\PYZus{}time}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}
+        \PY{p}{\PYZcb{}}\PY{p}{)}
+
+        \PY{n}{insta\PYZus{}brute\PYZus{}force\PYZus{}db} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{insta\PYZus{}brute\PYZus{}force\PYZus{}db}\PY{p}{,} \PY{n}{temp\PYZus{}df}\PY{p}{]}\PY{p}{,} \PY{n}{ignore\PYZus{}index}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+
+        \PY{n}{insta\PYZus{}brute\PYZus{}force\PYZus{}db}
+    \end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{38}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+        MAC     IP Address Device Name Interface   Requested IP  \textbackslash{}
+        0    e8:e4:0c:11:92:26   192.168.1.10      iPhone       5gz    3.213.31.34
+        1    7b:92:19:a9:c4:e2   192.168.1.20     Samsung     2.4gz  216.58.194.45
+        2    8e:21:dc:bb:28:c4   192.168.1.20      iPhone       5gz   69.63.176.22
+        3    a2:d9:ae:9c:32:ce   192.168.1.10      Xiaomi       5gz   69.63.176.22
+        4    a1:7d:75:ab:a4:1a   192.168.1.20        Vivo       5gz  216.58.194.45
+        ..                 {\ldots}            {\ldots}         {\ldots}       {\ldots}            {\ldots}
+        995  ff:8d:0e:2d:b9:f9   192.168.1.10      Lenovo     2.4gz    3.213.31.34
+        996  c2:e4:76:2d:5c:c3  192.168.1.100        Vivo       5gz    3.213.31.34
+        997  d3:7b:0a:00:e6:35   192.168.1.20        Oppo       5gz   69.63.176.22
+        998  be:28:65:6c:ae:d0  192.168.1.100    Micromax     2.4gz  216.58.194.45
+        999  f7:b3:5b:0a:98:e6   192.168.1.50      Xiaomi       5gz   69.63.176.22
+
+        Time Requested Website      Protocol
+        0    2023-01-08 20:00:03           Twitter     (FTP, 21)
+        1    2023-01-11 15:05:35          Facebook     (TCP, 21)
+        2    2023-01-11 22:12:24          Facebook     (FTP, 21)
+        3    2023-01-10 20:22:50          Facebook  (HTTPS, 443)
+        4    2023-01-01 13:02:45           Twitter  (HTTPS, 443)
+        ..                   {\ldots}               {\ldots}           {\ldots}
+        995  2023-01-06 15:39:16          Facebook   (IMAP, 143)
+        996  2023-01-06 23:32:12         Instagram     (TCP, 21)
+        997  2023-01-02 12:05:54           Youtube  (HTTPS, 443)
+        998  2023-01-11 16:49:49          Facebook     (TCP, 21)
+        999  2023-01-09 09:33:55           Youtube    (DHCP, 67)
+
+        [1000 rows x 8 columns]
+    \end{Verbatim}
+\end{tcolorbox}
+
+\hypertarget{port-scanning}{%
+    \subsection{Port Scanning}\label{port-scanning}}
+
+This is a surveillance technique that is used to identify open ports on
+a system. This is used by hackers to identify vulnerable ports on a
+system.
+
+\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{39}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} Generate insta brute force attack data, consider a home environment. with 10 users. across a span of 10 days. Visiting 100 websites per device per day. }
+
+        \PY{n}{port\PYZus{}scanning\PYZus{}db} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{n}{columns}\PY{o}{=}\PY{p}{[}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MAC}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IP Address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Device Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interface}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested IP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{]}\PY{p}{)}
+
+        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{:}
+        \PY{c+c1}{\PYZsh{} check if time columns is on 4th jan}
+        \PY{k}{if} \PY{n}{i} \PY{o+ow}{in} \PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{]}\PY{p}{:}
+        \PY{n}{temp\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{\PYZob{}}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MAC}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}attacker\PYZus{}mac\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IP Address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}attacker\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Device Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}device\PYZus{}name}\PY{p}{(}\PY{p}{)} \PY{k}{if} \PY{n}{j} \PY{o}{\PYZgt{}} \PY{l+m+mi}{50} \PY{k}{else} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Vivo}\PY{l+s+s1}{\PYZsq{}} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interface}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}interface}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested IP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested Website}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}attacker\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Protocol}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{gen\PYZus{}attacker\PYZus{}protocols}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Port}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{gen\PYZus{}attacker\PYZus{}protocols}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}  \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}attacker\PYZus{}date\PYZus{}time}\PY{p}{(}\PY{p}{)} \PY{k}{if} \PY{n}{j} \PY{o}{\PYZlt{}} \PY{l+m+mi}{50} \PY{k}{else} \PY{n}{generate\PYZus{}date\PYZus{}time}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}
+        \PY{p}{\PYZcb{}}\PY{p}{)}
+
+        \PY{k}{else}\PY{p}{:}
+        \PY{n}{temp\PYZus{}df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{DataFrame}\PY{p}{(}\PY{p}{\PYZob{}}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{MAC}\PY{l+s+s1}{\PYZsq{}} \PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}mac\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{IP Address}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}device\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Device Name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}device\PYZus{}name}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Interface}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}interface}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested IP}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Requested Website}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}dest\PYZus{}ip\PYZus{}address}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Protocol}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{gen\PYZus{}protocols}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Port}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{gen\PYZus{}protocols}\PY{p}{(}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}\PY{p}{,}
+        \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Time}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:} \PY{p}{[}\PY{n}{generate\PYZus{}date\PYZus{}time}\PY{p}{(}\PY{p}{)} \PY{k}{for} \PY{n}{j} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{100}\PY{p}{)}\PY{p}{]}
+        \PY{p}{\PYZcb{}}\PY{p}{)}
+
+        \PY{n}{port\PYZus{}scanning\PYZus{}db} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{p}{[}\PY{n}{port\PYZus{}scanning\PYZus{}db}\PY{p}{,} \PY{n}{temp\PYZus{}df}\PY{p}{]}\PY{p}{,} \PY{n}{ignore\PYZus{}index}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+
+        \PY{n}{port\PYZus{}scanning\PYZus{}db}
+    \end{Verbatim}
+\end{tcolorbox}
+
+\begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{39}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+        MAC    IP Address Device Name Interface   Requested IP  \textbackslash{}
+        0    d0:08:9a:38:b9:4b  192.168.1.30      iPhone       5gz    3.213.31.34
+        1    f6:65:bb:3f:87:f2  192.168.1.20    Micromax       5gz  216.58.194.45
+        2    6e:46:7f:30:8e:c2  192.168.1.60      iPhone       5gz    3.213.31.34
+        3    ec:e3:ce:d6:90:a1  192.168.1.60    Micromax       5gz   192.168.1.53
+        4    ca:2b:1a:31:5d:c1  192.168.1.90      iPhone       5gz    3.213.31.34
+        ..                 {\ldots}           {\ldots}         {\ldots}       {\ldots}            {\ldots}
+        995  40:d1:01:ce:fa:97  192.168.1.90     OnePlus       5gz    3.213.31.34
+        996  a8:60:0a:a4:8f:ad  192.168.1.60        Vivo       5gz   69.63.176.22
+        997  7a:f4:35:70:51:9a  192.168.1.90     Samsung     2.4gz    3.213.31.34
+        998  96:13:ad:eb:d3:b2  192.168.1.20       Nokia       5gz  216.58.194.45
+        999  32:d0:50:44:6e:70  192.168.1.40        Oppo     2.4gz   69.63.176.22
+
+        Time Requested Website Protocol   Port
+        0    2023-01-06 11:16:44           Youtube     HTTP   80.0
+        1    2023-01-09 17:02:11         Instagram      UDP  110.0
+        2    2023-01-06 17:10:24         Instagram      TCP   80.0
+        3    2023-01-09 06:04:57          Facebook      DNS  443.0
+        4    2023-01-02 19:39:35         Instagram      UDP    NaN
+        ..                   {\ldots}               {\ldots}      {\ldots}    {\ldots}
+        995  2023-01-08 10:21:05         Instagram      UDP   53.0
+        996  2023-01-04 20:25:40          Facebook     IMAP  143.0
+        997  2023-01-08 10:36:44           Twitter    HTTPS   53.0
+        998  2023-01-10 09:34:39          Facebook     POP3   80.0
+        999  2023-01-06 11:20:31           Twitter      TCP   53.0
+
+            [1000 rows x 9 columns]
+    \end{Verbatim}
+\end{tcolorbox}
+
+
+\section{Conclusion}
+Thus, we have successfully simulated the attacks and analysed the logs generated by the router. We have also learnt how to analyse the logs and what to look for in the logs.
+\clearpage
+
+\pagebreak
+\begin{thebibliography}{}
+    \bibitem{Casey, E., Dietrich, E. (2011)}
+    \textit{Digital Evidence and Computer Crime: Forensic Science, Computers, and the Internet.} \\Academic Press.
+    \bibitem{Vskills - Digital Forensic Tools}
+    \href{https://www.vskills.in/certification/tutorial/digital-forensics-tools/}{Vskills - Digital Forensic Tools}
+
+    % Tanenbaum, A. S., & Wetherall, D. J. (2010). Computer Networks. Pearson.
+    % Douligeris, C., & Mitrokotsa, A. (2004). DDoS attacks and defense mechanisms: classification and state-of-the-art. Computer Networks, 44(5), 643-666.
+    % CERT Coordination Center. (2021). ARP Poisoning. Retrieved from https://www.kb.cert.org/vuls/id/240719
+    % Cisco. (2021). DNS Spoofing. Retrieved from https://www.cisco.com/c/en/us/support/docs/security/dns-domain-name-system/2429-136.html
+    % CERT Coordination Center. (2021). Router Security. Retrieved from https://www.kb.cert.org/vuls/id/958563
+    % Cisco. (2021). DDoS Overview. Retrieved from https://www.cisco.com/c/en/us/products/security/ddos-attacks-how-to-stop-them/index.html
+\end{thebibliography}
+\end{document}
