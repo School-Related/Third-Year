@@ -1,0 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Cormorant:wght@500&family=Quicksand&family=Titillium+Web:wght@300&family=Victor+Mono&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
