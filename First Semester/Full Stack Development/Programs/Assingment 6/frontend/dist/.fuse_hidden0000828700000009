@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="/icon.b1b2fa1c.png" type="image/x-icon">
+		<title>Library Book Management</title>
+		<!-- Include Tailwind CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+		<link href="/index.3a01df49.css" rel="stylesheet">
+	</head>
+	<body class="bg-purple-100 min-h-screen overflow-x-hidden">
+		<section class="relative mx-auto">
+			<!-- navbar -->
+			<nav class="flex justify-between bg-gray-900 text-white w-screen">
+				<div class="px-5 xl:px-12 py-6 flex w-full items-center">
+					<a class="text-3xl font-bold font-heading flex gap-4" href="#">
+						<img class="h-9" src="/icon.b1b2fa1c.png" alt="logo">
+						NovelTea Library
+					</a>
+					<!-- Nav Links -->
+					<ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
+						<li>
+							<a class="hover:text-gray-200" href="#">Home</a>
+						</li>
+						<li>
+							<a class="hover:text-gray-200" href="#">Add Books</a>
+						</li>
+						<li>
+							<a class="hover:text-gray-200" href="#">Delete Books</a>
+						</li>
+						<!-- <li>
+							<a class="hover:text-gray-200" href="#"
+								>Contact Us</a
+							>
+						</li> -->
+					</ul>
+					<!-- Header Icons -->
+					<div class="hidden xl:flex items-center space-x-5 items-center">
+						<a class="hover:text-gray-200" href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+							</svg>
+						</a>
+						<!-- <a
+							class="flex items-center hover:text-gray-200"
+							href="#"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+								/>
+							</svg>
+							<span class="flex absolute -mt-5 ml-4">
+								<span
+									class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"
+								></span>
+								<span
+									class="relative inline-flex rounded-full h-3 w-3 bg-pink-500"
+								>
+								</span>
+							</span>
+						</a> -->
+						<!-- Sign In / Register      -->
+						<!-- <a
+							class="flex items-center hover:text-gray-200"
+							href="#"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="h-6 w-6 hover:text-gray-200"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+								/>
+							</svg>
+						</a> -->
+					</div>
+				</div>
+				<!-- Responsive navbar -->
+				<a class="xl:hidden flex mr-6 items-center" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-200" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+					</svg>
+					<span class="flex absolute -mt-5 ml-4">
+						<span class="animate-ping absolute inline-flex h-3 w-3 rounded-full bg-pink-400 opacity-75"></span>
+						<span class="relative inline-flex rounded-full h-3 w-3 bg-pink-500">
+						</span>
+					</span>
+				</a>
+				<a class="navbar-burger self-center mr-12 xl:hidden" href="#">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hover:text-gray-200" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</a>
+			</nav>
+		</section>
+
+		<section class="min-h-full">
+			<div class="flex justify-center p-4 m-4">
+				<div class="text-5xl">Our Collection</div>
+			</div>
+
+			<div class="flex flex-wrap gap-8 m-8 p-8" id="maincontainer"></div>
+		</section>
+		<h2 class="fancy" style="--w: 50vw; --c: #1a0b2d; --b: 4px; --g: 40px">
+			...
+		</h2>
+
+		<!-- <div id="result" class="mt-4">
+			<table class="table-auto">
+				<thead>
+					<tr>
+						<th class="px-4 py-2">Title</th>
+						<th class="px-4 py-2">Author</th>
+						<th class="px-4 py-2">Genre</th>
+						<th class="px-4 py-2">Price</th>
+					</tr>
+				</thead>
+				<tbody id="book-list"></tbody>
+			</table>
+		</div> -->
+
+		<!-- Include Axios -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script>const apiUrl = "http://localhost:3000";
+const results = axios.get(apiUrl + "/books").then((response)=>{
+    console.log(response);
+    showbooks(response.data);
+    return response.data;
+}).catch((error)=>{
+    console.log(error);
+    alert("some error occured");
+});
+console.log(results);
+function showbooks(results) {
+    const books = results;
+    const container_div = document.getElementById("maincontainer");
+    books.forEach((book)=>{
+        const div = document.createElement("div");
+        div.className = "flex flex-col justify-center items-center";
+        div.innerHTML = `
+            <div class="flex flex-col justify-center items-center bg-white p-4 rounded-2xl">
+              <img
+                class="h-64 w-64 object-cover rounded-lg shadow-md"
+                src="${book.image}"
+                alt="book"
+              />
+              <div class="mt-4 flex flex-col gap-1 items-start justify-center">
+                <h1 class="text-xl font-semibold text-gray-700 dark:text-white">
+                  ${book.title}
+                </h1>
+                <div>
+                  </div>
+                <p class="mt-2 text-gray-600 dark:text-gray-300">
+                  By: ${book.author}
+                </p>
+                <p class="mt-2 text-gray-600 dark:text-gray-300 flex justify-center items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M13.725 21L7 14v-2h3.5q1.325 0 2.288-.863T13.95 9H6V7h7.65q-.425-.875-1.263-1.438T10.5 5H6V3h12v2h-3.25q.35.425.625.925T15.8 7H18v2h-2.025q-.2 2.125-1.75 3.563T10.5 14h-.725l6.725 7h-2.775Z"/></svg> ${book.price}
+                </p>
+              </div>
+            </div>
+            `;
+        container_div.appendChild(div);
+    });
+}
+function displayResult(result) {
+    const books = results;
+    const container_div = document.getElementById("book-list");
+    bookList.innerHTML = "";
+    books.forEach((book)=>{});
+}
+function listAllBooks() {
+    // Use Axios to make a GET request to list all books
+    axios.get(apiUrl + "/books").then((response)=>{
+        console.log(response);
+        displayResult(response.data);
+    }).catch((error)=>{
+        console.log(error);
+        alert("some error occured");
+    });
+}
+function getBookById() {
+    const bookId = document.getElementById("bookId").value;
+    if (!bookId) {
+        displayResult("Please enter a valid Book ID.");
+        return;
+    }
+    // Use Axios to make a GET request to get a book by ID
+    axios.get(apiUrl + `/books/${bookId}`).then((response)=>{
+        displayResult(JSON.stringify(response.data, null, 2));
+    }).catch((error)=>{
+        displayResult("Error: " + error.message);
+    });
+}
+function createBook() {
+// You can implement the logic to create a book here
+}
+function updateBook() {
+// You can implement the logic to update a book here
+}
+function deleteBook() {
+// You can implement the logic to delete a book here
+}
+
+</script>
+	<script src="/frontend.3464ddca.js"></script></body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "bookstore-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for the Bookstore project",
+  "main": "main.js",
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  }
+}
