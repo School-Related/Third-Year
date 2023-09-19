@@ -23,7 +23,8 @@ body {
 	/* justify-content: center; */
 	/* align-items: center; */
 	background-image: url(images/bg2.jpg);
-	background-size: cover;
+	background-size: auto;
+	background-repeat: no-repeat;
 }
 
 button {
@@ -52,8 +53,8 @@ span {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	grid-gap: 1rem;
-	width: 30rem;
-	height: 30rem;
+	/* width: 30rem; */
+	/* height: 30rem; */
 	background-color: hwb(292 94% 0% / 0.611);
 	cursor: url(images/thanfos.png), auto;
 }
@@ -88,12 +89,12 @@ p {
 
 .score-container {
 	font-family: 'Avengers', cursive;
-	top: 10rem;
+	/* top: 10rem; */
 }
 
 .time-container {
 	font-family: 'Avengers', cursive;
-	top: 15rem;
+	/* top: 15rem; */
 }
 
 @keyframes mole {
