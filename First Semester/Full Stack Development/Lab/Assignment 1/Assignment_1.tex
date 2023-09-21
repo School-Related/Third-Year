@@ -304,9 +304,52 @@ Thus, we have successfully learnt, understood and implemented the concepts of Ve
 
 \section{FAQ}
 \begin{enumerate}
-    \item \textit{What is branching in Git?}\\
+    \item \textit{What is branching in Git?}
 
-    \item \textit{How to create and merge branches in Git? Write the commands used.}\\
+    Branching in Git is a powerful feature that allows developers to work on multiple independent lines of development within the same repository. It essentially creates a copy of the codebase at a specific point, allowing you to make changes without affecting the main codebase. Branches are often used for implementing new features, fixing bugs, or isolating experimental changes.
+
+    \item \textit{How to create and merge branches in Git? Write the commands used.}
+
+    To create and merge branches in Git, you can use the following commands:
+
+    \textbf{Creating a New Branch:}
+    
+    To create a new branch and switch to it, you can use the following command:
+    
+    \begin{verbatim}
+    git checkout -b new-branch-name
+    \end{verbatim}
+
+    This command creates a new branch named "new-branch-name" and switches to it.
+
+    \textbf{Merging a Branch:}
+    
+    To merge changes from one branch into another (e.g., merging a feature branch into the main branch), use the following commands:
+
+    First, switch to the target branch (e.g., main branch):
+
+    \begin{verbatim}
+    git checkout main
+    \end{verbatim}
+
+    Then, merge the feature branch into the target branch:
+
+    \begin{verbatim}
+    git merge feature-branch
+    \end{verbatim}
+
+    This command incorporates the changes from "feature-branch" into the "main" branch.
+
+    \textbf{Deleting a Branch:}
+    
+    After the branch has been merged and is no longer needed, you can delete it:
+
+    \begin{verbatim}
+    git branch -d feature-branch
+    \end{verbatim}
+
+    This command deletes the "feature-branch" locally.
 
 \end{enumerate}
+
 \end{document}

@@ -27,6 +27,9 @@
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
 
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
@@ -57,8 +60,42 @@
 %\fancyhead[R]{\textit{something}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{1pt}
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}[thm]{Definition}
 
-
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+ 
+%define Javascript language
+\lstdefinelanguage{JavaScript}{
+keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+keywordstyle=\color{blue}\bfseries,
+ndkeywords={class, export, boolean, throw, implements, import, this},
+ndkeywordstyle=\color{darkgray}\bfseries,
+identifierstyle=\color{black},
+sensitive=false,
+comment=[l]{//},
+morecomment=[s]{/*}{*/},
+commentstyle=\color{purple}\ttfamily,
+stringstyle=\color{red}\ttfamily,
+morestring=[b]',
+morestring=[b]"
+}
+ 
+\lstset{
+language=JavaScript,
+extendedchars=true,
+basicstyle=\footnotesize\ttfamily,
+showstringspaces=false,
+showspaces=false,
+numbers=left,
+numberstyle=\footnotesize,
+numbersep=9pt,
+tabsize=2,
+breaklines=true,
+showtabs=false,
+captionpos=b
+}
 
 % Other Doc Editing
 % \parindent 0ex
@@ -93,7 +130,7 @@
 
 
     \huge{\textsc{
-            Creating a Website with HTML, CSS and JS
+            Response Web Design with Bootstrap.
         }} \\
 
 
@@ -107,8 +144,7 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Snap-A-Mole\\
-        Lab Assignment 2
+        Lab Assignment 1
     } % Subtitle or further description
     \vfill
 
@@ -137,30 +173,153 @@
 \setcounter{page}{1}
 
 \section{Aim}
+Design and develop a responsive web page using Bootstrap front end framework.
 
 \section{Objectives}
+\begin{itemize}
+    \item To understand HTML tags
+    \item To learn the styling of web pages using CSS
+    \item To learn Bootstrap Front End Framework.
+\end{itemize}
+
+\section{Problem Statement}
+Design and develop a responsive web page (For example student registration, course enrollment,
+library management system, online shopping system etc.) using Bootstrap front end framework.
+Web pages should contain HTML5 elements (Use all possible formatting for example font,
+colour etc.). Use all possible formatting.
+
 
 
 \section{Theory}
 
-https://www.vskills.in/certification/tutorial/digital-forensics-tools/
-https://www.sleuthkit.org/index.php
-https://study.com/learn/lesson/mobile-forensics-uses-tools-steps.html
+\section{Bootstrap}
+
+\begin{dfn}
+    Bootstrap is a popular front-end framework that provides a set of tools and components to design and develop responsive and visually appealing web applications. It includes CSS styles, JavaScript plugins, and a responsive grid system.
+\end{dfn}
+
+\subsection{Advantages}
+
+\begin{enumerate}
+    \item Simplifies web development.
+    \item Provides a consistent and polished look.
+    \item Offers a wide range of pre-built components.
+    \item Supports responsive design out of the box.
+\end{enumerate}
+
+
+\subsection{The Boostrap Grid System}
+
+The Bootstrap Grid System is a flexible and responsive system for creating layouts in web pages. It is based on a 12-column grid, which can be customized to fit the needs of your project. The grid system allows you to create rows and columns of content, and it automatically adjusts the layout based on the size of the screen.
+
+To use the Bootstrap Grid System, you need to include the Bootstrap CSS and JavaScript files in your HTML document. Then, you can create a container element with the class "container" or "container-fluid", and add rows and columns inside it using the "row" and "col" classes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{Bootstrap-Grid-System-1.png}
+    \caption{Bootstrap Grid System}
+\end{figure}
+
+\subsection{The Boostrap .container Class}
+
+The .container class is a fixed-width container that centers the content on the page. It is used to create a responsive layout that works well on a wide range of devices. The .container class has a max-width of 1140px, which means that it will adjust to fit the screen size of the device, up to a maximum width of 1140px.
+
+The .container class is used to wrap the content of a page, and it is typically used in conjunction with other Bootstrap classes to create a responsive layout. For example, you might use the .row class to create a row of columns, and then use the .col class to define the width of each column.
+
+\begin{lstlisting}[language=html]
+<div class="container">
+  <h1>Hello, world!</h1>
+  <p>This is a container.</p>
+</div>
+\end{lstlisting}
+
+\subsection{The Boostrap .container-fluid Class}
+
+The .container-fluid class is a full-width container that spans the entire width of the viewport. It is used to create a responsive layout that works well on large screens. The .container-fluid class has no max-width, which means that it will adjust to fit the screen size of the device, up to the full width of the viewport.
+
+The .container-fluid class is used in the same way as the .container class, but it is typically used for full-width sections of a page, such as hero images or full-width banners. It is also used in conjunction with other Bootstrap classes to create a responsive layout. For example, you might use the .row class to create a row of columns, and then use the .col class to define the width of each column within the full-width container.
+
+\begin{lstlisting}[language=html]
+<div class="container-fluid">
+    <h1>Hello, world!</h1>
+    <p>This is a full-width container.</p>
+</div>
+\end{lstlisting}
+
+\subsection{The Difference between them}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{27ixZ.png}
+    \caption{Boostrap .container Class}
+\end{figure}
+
+The .container class is a fixed-width container that centers the content on the page. It is used to create a responsive layout that works well on a wide range of devices. The .container-fluid class is a full-width container that spans the entire width of the viewport. It is used to create a responsive layout that works well on large screens.
+
+\section{Responsive Web Design}
+
+\begin{dfn}
+    Responsive web design is an approach to web development that aims to make web pages render well on a variety of devices and window or screen sizes. It involves using flexible layouts, CSS media queries, and fluid grids to create web applications that adapt to different viewing environments.
+\end{dfn}
+
 \section{Platform}
 \textbf{Operating System}: Arch Linux x86-64 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
-\textbf{Compilers or Interpreters}: Python 3.10.1\\
+\textbf{Compilers or Interpreters}: Brave Browser (Chromium v117.0.5938.88.) \\
 
 \section{Input and Output}
 
+\begin{enumerate}
+    \item A Game called \textit{Snap a Mole} was created using Javascript, HTML and CSS with Bootstrap. The game is hosted on and can be played \href{https://snap-a-mole.surge.sh/}{here}.
+    \item The source code for the game can be found at \href{https://github.com/KrishnarajT/Snap-A-Mole}{its Github Repo}.
+    \item It was made responsive, and can be played on any device. Media queries were used accordingly.
+    \item The Screenshots of the game are given below.
+\end{enumerate}
 
-% \section{Code}
-% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
+\section{Screenshots}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{big.png}
+    \caption{Webpage on a Desktop, Full HD Screen. 1920px wide. }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{large.png}
+    \caption{Webpage on a Desktop, smaller than Full HD. }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{mid.png}
+    \caption{Webpage on an even smaller screen, like a tablet or a Galaxy Fold. }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=.95\textwidth]{smol.png}
+    \caption{Webpage on a phone}
+\end{figure}
+
+\section{Code}
+\lstinputlisting[language=JavaScript, caption="App.js"]{../../Programs/Assignment 2/app.js}
+\lstinputlisting[language=HTML, caption="index.html"]{../../Programs/Assignment 2/index.html}
 
 \section{Conclusion}
-Thus, We have learnt IDS systems and their types. We have also learnt about various tools based on IDS systems.
+Thus, we have learnt how to create a responsive web page using Bootstrap and Media Queries. We have also learnt to use HTML, CSS and Javascript to create a game. We have used Git and Github to create a repository and push our code to it.
 \clearpage
 
 \section{FAQ}
+\begin{enumerate}
+    \item \textit{What is Responsive Design?}\\
 
+          Responsive web design is an approach to web development that aims to make web pages render well on a variety of devices and window or screen sizes. It involves using flexible layouts, CSS media queries, and fluid grids to create web applications that adapt to different viewing environments.
+
+    \item \textit{How does Bootstrap help to design a responsive website?}\\
+
+          Bootstrap is a popular front-end framework that provides a set of pre-built HTML, CSS, and JavaScript components that can be used to create responsive web pages. Bootstrap includes a grid system that allows developers to create flexible layouts that adjust to different screen sizes, as well as a set of CSS classes that can be used to style HTML elements.
+
+          By using Bootstrap, developers can save time and effort by not having to write as much custom CSS and JavaScript code. Bootstrap also provides a consistent look and feel across different web pages, which can help to improve the user experience. Additionally, Bootstrap is well-documented and has a large community of developers, which means that there are many resources available for learning and troubleshooting.
+
+\end{enumerate}
 \end{document}

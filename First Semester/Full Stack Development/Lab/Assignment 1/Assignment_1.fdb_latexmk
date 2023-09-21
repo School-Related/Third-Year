@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1695290126 "/run/media/krishnaraj/Classes/University/Third Year/First Semester/Full Stack Development/Lab/Assignment 1/Assignment_1.tex" "Assignment_1.pdf" "Assignment_1" 1695290128 0
-  "/run/media/krishnaraj/Classes/University/Third Year/First Semester/Full Stack Development/Lab/Assignment 1/Assignment_1.tex" 1695290125 10191 7d16467f1e70635eb4036c0361575a86 ""
+["pdflatex"] 1695292343 "/run/media/krishnaraj/Classes/University/Third Year/First Semester/Full Stack Development/Lab/Assignment 1/Assignment_1.tex" "Assignment_1.pdf" "Assignment_1" 1695292346 0
+  "/run/media/krishnaraj/Classes/University/Third Year/First Semester/Full Stack Development/Lab/Assignment 1/Assignment_1.tex" 1695292343 11698 0c9369cc6e2bccc853b945db224907c9 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1689853683 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1689853683 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -120,10 +120,10 @@
   "4.png" 1695289291 482003 ff8c2d4dad6ce540e40c8515b7bfe3b0 ""
   "6.png" 1695289726 608198 d41a7e2c851bb40cb9df980bc4ae53f4 ""
   "7.png" 1695290110 91155 49f19d575185198f4f22a689dcae345b ""
-  "Assignment_1.aux" 1695290127 2975 aab2a288e48588df9a1cb42713f4e292 "pdflatex"
-  "Assignment_1.out" 1695290127 1785 9eef84dc22479b235b2fb5f764939c0a "pdflatex"
-  "Assignment_1.tex" 1695290125 10191 7d16467f1e70635eb4036c0361575a86 ""
-  "Assignment_1.toc" 1695290127 1083 59181b8ab7eb7843d6ec08c82db1d9d3 "pdflatex"
+  "Assignment_1.aux" 1695292345 2975 aab2a288e48588df9a1cb42713f4e292 "pdflatex"
+  "Assignment_1.out" 1695292345 1785 9eef84dc22479b235b2fb5f764939c0a "pdflatex"
+  "Assignment_1.tex" 1695292343 11698 0c9369cc6e2bccc853b945db224907c9 ""
+  "Assignment_1.toc" 1695292345 1083 59181b8ab7eb7843d6ec08c82db1d9d3 "pdflatex"
   (generated)
   "Assignment_1.aux"
   "Assignment_1.log"
