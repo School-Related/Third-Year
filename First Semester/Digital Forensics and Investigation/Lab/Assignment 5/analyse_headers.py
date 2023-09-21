@@ -4,7 +4,7 @@ import re
 import requests
 
 # Define the path to the email file
-email_file = "email.eml"  # Replace with the path to your email file
+email_file = "./emails/Become a movie director!.eml"  # Replace with the path to your email file
 
 # Read the email file
 with open(email_file, "r", encoding="utf-8") as file:
@@ -57,9 +57,3 @@ if msg.is_multipart():
                     print("This email may be spam due to the keyword:", keyword)
 
             # Add more checks as needed
-
-# Please note that this is a simplified example, and real-world email analysis for malware and spam detection
-# involves more sophisticated techniques, including machine learning, heuristics, and integration with external
-# threat intelligence services.
-
-# Additionally, consider using dedicated email security solutions or services for comprehensive email analysis.

@@ -53,10 +53,12 @@
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[L]{\textit{\Large{Digital Forensics and Investigation - 3nd Year B. Tech}}}
+\fancyhead[L]{\textit{\Large{Full Stack Development - 3nd Year B. Tech}}}
 %\fancyhead[R]{\textit{something}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{1pt}
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}[thm]{Definition}
 
 
 
@@ -78,7 +80,7 @@
     \vspace{0.75\baselineskip} % space after Uni Name
 
     \LARGE{
-        Digital Forensics and Investigation\\
+        Full Stack Development\\
         Third Year B. Tech, Semester 5
     }
 
@@ -93,7 +95,7 @@
 
 
     \huge{\textsc{
-            Tools for Digital Forensics and Investigation
+            Version Control with Git
         }} \\
 
 
@@ -136,30 +138,175 @@
 \setcounter{page}{1}
 
 \section{Aim}
-
+Version control with Git.
 \section{Objectives}
+\begin{itemize}
+    \item To introduce the concepts and software behind version control, using the example of Git.
+    \item To understand the use of 'version control' in the context of a coding project.
+    \item To learn Git version control with Clone, commit to, and push, pull from a git repository.
+\end{itemize}
+
+\section{Problem Statement}
+Created a public git repository for your team and submit the repo URL as a solution to this
+assignment, Learn Git concept of Local and Remote Repository, Push, Pull, Merge and Branch.
+
 
 
 \section{Theory}
 
-https://www.vskills.in/certification/tutorial/digital-forensics-tools/
-https://www.sleuthkit.org/index.php
-https://study.com/learn/lesson/mobile-forensics-uses-tools-steps.html
+\section{What is Git}
+
+\begin{dfn}
+    Git is a distributed version control system that allows developers to track changes to their code over time. It was created by Linus Torvalds in 2005 and has since become one of the most popular version control systems in use today. Git is designed to be fast, efficient, and flexible, and it can be used for projects of any size, from small personal projects to large enterprise applications.
+\end{dfn}
+
+\subsection{History}
+
+\begin{itemize}
+    \item Git was created by Linus Torvalds in 2005.
+    \item It was originally designed for Linux kernel development, but it has since been adopted by many other projects.
+    \item Git is a distributed version control system that allows developers to track changes to their code over time.
+    \item It is designed to be fast, efficient, and flexible, and it can be used for projects of any size, from small personal projects to large enterprise applications.
+    \item Git is free software distributed under the terms of the GNU General Public License version 2.
+    \item It is available for Linux, macOS, and Windows operating systems.
+\end{itemize}
+\subsection{Advantages}
+
+\begin{enumerate}
+    \item Git is a distributed version control system, which means that every developer has a full copy of the repository on their local machine.
+    \item This allows developers to work offline and commit changes without having to connect to a central server.
+    \item Git is designed to be fast, efficient, and flexible.
+    \item It can be used for projects of any size, from small personal projects to large enterprise applications.
+    \item Git is free software distributed under the terms of the GNU General Public License version 2.
+    \item It is available for Linux, macOS, and Windows operating systems.
+\end{enumerate}
+
+\subsection{Differences between Github and Git}
+
+\begin{enumerate}
+    \item Git is a version control system that allows developers to track changes to their code over time.
+    \item Github is a web-based hosting service for Git repositories.
+    \item Git is a command-line tool that can be used locally or remotely.
+    \item Github is a web-based service that allows developers to host their Git repositories online.
+    \item Git is free software distributed under the terms of the GNU General Public License version 2.
+    \item Github is a proprietary service owned by Microsoft.
+\end{enumerate}
+
+\section{What is Version Control}
+
+\begin{dfn}
+    Version control is a system that allows multiple people to work on a project simultaneously, keeps track of changes made to the project's files and directories, and provides the ability to revert to previous versions of the project if necessary. It is essential for collaborative software development and is used to manage code, documents, and other digital assets efficiently.
+\end{dfn}
+
+\section{How to use Git for version controlling}
+
+\begin{enumerate}
+    \item First, you need to initialize a Git repository in your project's directory using the following command:
+
+          \begin{verbatim}
+    git init
+    \end{verbatim}
+
+    \item Add your project files to the Git repository by using the following command:
+
+          \begin{verbatim}
+    git add .
+    \end{verbatim}
+
+    \item Commit your changes with a descriptive message using the following command:
+
+          \begin{verbatim}
+    git commit -m "Initial commit"
+    \end{verbatim}
+
+    \item You can create branches to work on specific features or fixes. To create a new branch, use the following command:
+
+          \begin{verbatim}
+    git branch feature-branch
+    \end{verbatim}
+
+    \item Switch to the newly created branch:
+
+          \begin{verbatim}
+    git checkout feature-branch
+    \end{verbatim}
+
+    \item Make your changes and commit them to the branch.
+
+    \item To merge your changes back to the main branch (e.g., master), use the following command:
+
+          \begin{verbatim}
+    git checkout master
+    git merge feature-branch
+    \end{verbatim}
+
+    \item Finally, push your changes to a remote repository (e.g., GitHub) for collaboration and backup:
+
+          \begin{verbatim}
+    git push origin master
+    \end{verbatim}
+
+\end{enumerate}
+
 \section{Platform}
 \textbf{Operating System}: Arch Linux x86-64 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
-\textbf{Compilers or Interpreters}: Python 3.10.1\\
+\textbf{Compilers or Interpreters}: None Required. \\
 
 \section{Input and Output}
+
+\begin{enumerate}
+    \item The Repository "Anti Brutus" was created as part of the mini project in Full Stack Development.
+    \item It was created as a group effort between me and my team. And they were all added as collbaorators. 
+    \item It was then forked on everyones Github Account, and then cloned to their local machines.
+    \item Several branches were created for different features and then merged to the main branch. The images of the log graph are attached as reference. 
+\end{enumerate}
+
+\section{Screenshots}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{6.png}
+    \caption{Status and Commit to the Repository. }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{7.png}
+    \caption{The Repository on Github.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{2.png}
+    \caption{Log Graphs of Commits and Branches.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{4.png}
+    \caption{Log Graphs of Commits and Branches.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{3.png}
+    \caption{Log Graphs of Commits and Branches.}
+\end{figure}
+
 
 
 % \section{Code}
 % \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
 
 \section{Conclusion}
-Thus, We have learnt IDS systems and their types. We have also learnt about various tools based on IDS systems.
+Thus, we have successfully learnt, understood and implemented the concepts of Version Control with Git.
 \clearpage
 
 \section{FAQ}
+\begin{enumerate}
+    \item \textit{What is branching in Git?}\\
 
+    \item \textit{How to create and merge branches in Git? Write the commands used.}\\
+
+\end{enumerate}
 \end{document}
