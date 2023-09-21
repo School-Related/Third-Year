@@ -1,0 +1,15 @@
+.svgthing {
+  background-image: url("../assets/blob-haikei-light.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left;
+  /* background-color: hsl(var(--s)); */
+}
+
+.svgthingdark {
+  background-image: url("../assets/blob-haikei-dark.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: left;
+  /* background-color: hsl(var(--s)); */
+}

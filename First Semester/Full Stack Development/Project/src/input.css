@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Cormorant:wght@500&family=Quicksand&family=Titillium+Web:wght@300&family=Victor+Mono&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --shadow-color: 306deg 16% 56%;
+  }
+}
+
+@font-face {
+  font-family: "rocket";
+  src: url("../src/assets/fonts/Rocketwildness-7BB8R.ttf");
+}
+
+:root {
+  --shadow-color: 306deg 16% 56%;
+  --shadow-elevation-medium: 0.4px 0.7px 0.7px hsl(var(--shadow-color) / 0.59),
+    0.8px 1.6px 1.6px -1.4px hsl(var(--shadow-color) / 0.48),
+    2.6px 5.2px 5.1px -2.7px hsl(var(--shadow-color) / 0.36),
+    7.2px 14.3px 14.2px -4.1px hsl(var(--shadow-color) / 0.25);
+  --shadow-elevation-high: 0.4px 0.7px 0.7px hsl(var(--shadow-color) / 0.63),
+    1.2px 2.4px 2.4px -0.7px hsl(var(--shadow-color) / 0.56),
+    2.8px 5.5px 5.5px -1.4px hsl(var(--shadow-color) / 0.49),
+    6px 12px 11.9px -2px hsl(var(--shadow-color) / 0.42),
+    12px 23.9px 23.7px -2.7px hsl(var(--shadow-color) / 0.35),
+    21.7px 43.1px 42.7px -3.4px hsl(var(--shadow-color) / 0.28),
+    36.1px 71.7px 71px -4.1px hsl(var(--shadow-color) / 0.21);
+}
+
+html {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%238f6fc2' fill-opacity='0.1'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* padding: 1rem; */
+  /* min-height: 100vh; */
+  /* background-color: #ffffff; */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='152' height='152' viewBox='0 0 152 152'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='temple' fill='%238f6fc2' fill-opacity='0.1'%3E%3Cpath d='M152 150v2H0v-2h28v-8H8v-20H0v-2h8V80h42v20h20v42H30v8h90v-8H80v-42h20V80h42v40h8V30h-8v40h-42V50H80V8h40V0h2v8h20v20h8V0h2v150zm-2 0v-28h-8v20h-20v8h28zM82 30v18h18V30H82zm20 18h20v20h18V30h-20V10H82v18h20v20zm0 2v18h18V50h-18zm20-22h18V10h-18v18zm-54 92v-18H50v18h18zm-20-18H28V82H10v38h20v20h38v-18H48v-20zm0-2V82H30v18h18zm-20 22H10v18h18v-18zm54 0v18h38v-20h20V82h-18v20h-20v20H82zm18-20H82v18h18v-18zm2-2h18V82h-18v18zm20 40v-18h18v18h-18zM30 0h-2v8H8v20H0v2h8v40h42V50h20V8H30V0zm20 48h18V30H50v18zm18-20H48v20H28v20H10V30h20V10h38v18zM30 50h18v18H30V50zm-2-40H10v18h18V10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  font-family: "rubik", sans-serif;
+  /* overflow: hidden; */
+}
+
+.rubik {
+  font-family: "Rubik", sans-serif;
+}
+
+.quicksand {
+  font-family: "quicksand", sans-serif;
+  /* box-shadow: var(--shadow-elevation-high); */
+}
+
+.titillium {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.mediumshadow {
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+/* .mediumshadow :hover{
+    box-shadow: var(--shadow-elevation-high);
+} */
+
+.niceshadow {
+  box-shadow: var(--shadow-elevation-high);
+}
+
+.victormono {
+  font-family: "Victor Mono", monospace;
+}
+
+.cormorant {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.rocket {
+  font-family: "rocket";
+}

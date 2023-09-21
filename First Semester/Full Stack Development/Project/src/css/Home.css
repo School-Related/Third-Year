@@ -1,0 +1,114 @@
+#divbg {
+  background-image: url("../assets/img/blurry-gradient-haikei.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center;
+}
+
+#divbgdark {
+  background-image: url("../assets/img/blurry-gradient-haikei_dark.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center;
+}
+
+#logo {
+  background-image: url("../assets/img/undraw_secure_login_pdn4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.fancybutton {
+  --border: 5px;
+  /* the border width */
+  --slant: 0.7em;
+  /* control the slanted corners */
+  --color: #61cc8a;
+  /* the color */
+
+  font-size: 35px;
+  padding: 0.4em 1.2em;
+  color: var(--color);
+  border: 5px var(--color) solid;
+  cursor: pointer;
+  font-weight: bold;
+  background:
+    linear-gradient(to bottom left, var(--color) 50%, #0000 50.1%) top right,
+    linear-gradient(to top right, var(--color) 50%, #0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3 * var(--border))
+    calc(var(--slant) + 1.3 * var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s, #0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--slant)) 0,
+    100% var(--slant),
+    100% 100%,
+    var(--slant) 100%,
+    0 calc(100% - var(--slant))
+  );
+  transition:
+    color var(--t, 0.3s),
+    background-size 0.3s;
+}
+
+.fancybutton:focus-visible {
+  outline-offset: calc(-1 * var(--border));
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
+}
+
+.fancybutton:hover,
+.fancybutton:active {
+  background-size: 100% 100%;
+  color: #fff;
+  --t: 0.2s 0.1s;
+}
+
+.fancybutton:active {
+  --s: #0005;
+  transition: none;
+}
+
+#howwedo {
+  background-image: url("../assets/img/undraw_authentication_re_svpt.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#howwedodark {
+  background-image: url("../assets/img/undraw_authentication_re_svpt.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#fpasssvg {
+  background-image: url("../assets/img/undraw_forgot_password_re_hxwm.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#fpasssvgdark {
+  background-image: url("../assets/img/undraw_forgot_password_re_hxwm_dark.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#vaultspng {
+  background-image: url("../assets/img/undraw_vault_re_s4my.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#vaultspngdark {
+  background-image: url("../assets/img/undraw_vault_re_s4my_dark.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}

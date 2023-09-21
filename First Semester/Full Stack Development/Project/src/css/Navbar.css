@@ -1,0 +1,27 @@
+#brutuslogo {
+  background-image: url("../../design/logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#mainsvg {
+  background-image: url("../assets/undraw_fingerprint_login_re_t71l.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#mainsvgsignup {
+  background-image: url("../assets/img/undraw_unlock_re_a558.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#fpasssvg {
+  background-image: url("../assets/img/undraw_forgot_password_re_hxwm.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
