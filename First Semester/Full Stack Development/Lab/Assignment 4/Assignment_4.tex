@@ -27,6 +27,9 @@
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
 
 \lstdefinestyle{mystyle}{
     backgroundcolor=\color{backcolour},   
@@ -57,19 +60,53 @@
 %\fancyhead[R]{\textit{something}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{1pt}
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}[thm]{Definition}
 
-
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+ 
+%define Javascript language
+\lstdefinelanguage{JavaScript}{
+keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+keywordstyle=\color{blue}\bfseries,
+ndkeywords={class, export, boolean, throw, implements, import, this},
+ndkeywordstyle=\color{darkgray}\bfseries,
+identifierstyle=\color{black},
+sensitive=false,
+comment=[l]{//},
+morecomment=[s]{/*}{*/},
+commentstyle=\color{purple}\ttfamily,
+stringstyle=\color{red}\ttfamily,
+morestring=[b]',
+morestring=[b]"
+}
+ 
+\lstset{
+language=JavaScript,
+extendedchars=true,
+basicstyle=\footnotesize\ttfamily,
+showstringspaces=false,
+showspaces=false,
+numbers=left,
+numberstyle=\footnotesize,
+numbersep=9pt,
+tabsize=2,
+breaklines=true,
+showtabs=false,
+captionpos=b
+}
 
 % Other Doc Editing
 % \parindent 0ex
 %\renewcommand{\baselinestretch}{1.5}
 
 \begin{document}
+
 \begin{titlepage}
     \centering
 
     %---------------------------NAMES-------------------------------
-
 
     \huge\textsc{
         MIT World Peace University
@@ -93,7 +130,7 @@
 
 
     \huge{\textsc{
-            Creating A Website using Bootstrap
+            Server Side PHP Scripting and Database Management.
         }} \\
 
 
@@ -107,8 +144,7 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Snap-A-Mole\\
-        Lab Assignment 3
+        Lab Assignment 4
     } % Subtitle or further description
     \vfill
 
@@ -137,30 +173,186 @@
 \setcounter{page}{1}
 
 \section{Aim}
+Write server-side script in PHP to perform form validation and create database application
+using PHP and MySQL to perform insert, update, delete and search operations.
 
 \section{Objectives}
+\begin{itemize}
+    \item To understand Server-side Scripting.
+    \item To learn database connectivity using PHP-MySQL.
+    \item To perform insert, update, delete and search operations on database.
+\end{itemize}
 
+\section{Problem Statement}
+PHP CRUD Operations\\
+\begin{enumerate}
+    \item Student can create a PHP form or use existing/ implemented HTML form for Student’s
+          Registration System with the fields mentioned: First name,Last name, Roll No/ID, Password,
+          Confirm Password,Contact number and perform following operations
+    \item Insert student details -First name,Last name, Roll No/ID, Password, Confirm Password,Contact
+          number
+    \item Delete the Student records based on Roll no/ID
+    \item Update the Student details based on Roll no/ID- Example students can update their contact
+          details based on searching the record with Roll no.
+    \item Display the Updated student details or View the Students record in tabular format.
+\end{enumerate}
+Apply Form Validation on the necessary fields using PHP/Javascript
 
 \section{Theory}
+\section{PHP}
 
-https://www.vskills.in/certification/tutorial/digital-forensics-tools/
-https://www.sleuthkit.org/index.php
-https://study.com/learn/lesson/mobile-forensics-uses-tools-steps.html
+\begin{dfn}
+    PHP stands for \textbf{Hypertext Preprocessor}. It is a widely-used open-source scripting language primarily designed for web development. PHP is embedded within HTML code and executed on the server-side to generate dynamic web pages.
+\end{dfn}
+
+\subsection{Features}
+\begin{enumerate}
+    \item \textbf{Server-Side Scripting:} PHP is a server-side scripting language, which means it is executed on the web server before the web page is sent to the client's browser.
+    \item \textbf{Cross-Platform Compatibility:} PHP is compatible with various operating systems, including Windows, Linux, macOS, making it highly versatile.
+    \item \textbf{Database Integration:} PHP offers robust support for database integration, allowing developers to interact with databases like MySQL, PostgreSQL, and more.
+    \item \textbf{Extensive Library Support:} PHP has a vast standard library and a thriving community of developers, resulting in a rich ecosystem of extensions and libraries.
+    \item \textbf{Open Source:} PHP is open-source software, which means it's free to use, modify, and distribute, contributing to its widespread adoption.
+\end{enumerate}
+
+\subsection{Advantages}
+\begin{enumerate}
+    \item \textbf{Ease of Learning:} PHP has a relatively low learning curve, making it accessible to beginners in web development.
+    \item \textbf{Wide Adoption:} PHP is one of the most commonly used languages for web development, ensuring ample resources and community support.
+    \item \textbf{Rapid Development:} PHP's simplicity and numerous built-in functions facilitate rapid web application development.
+    \item \textbf{Platform Independence:} PHP can run on various platforms, ensuring compatibility with different hosting environments.
+    \item \textbf{Active Community:} A large and active PHP community continually updates and enhances the language and its ecosystem.
+\end{enumerate}
+
+\subsection{History and Significance}
+\begin{enumerate}
+    \item \textbf{Origins:} PHP was created by Rasmus Lerdorf in 1994 as a set of Common Gateway Interface (CGI) binaries written in C. It was initially a simple tool for tracking visits to his online resume.
+    \item \textbf{PHP 3 and Beyond:} PHP 3, released in 1997, introduced a new parser written in C and marked the transition to a more robust scripting language. Subsequent versions, like PHP 4 and PHP 5, added essential features and improvements.
+    \item \textbf{PHP 7:} PHP 7, released in 2015, brought substantial performance improvements, making PHP even more attractive for web development.
+    \item \textbf{Significance:} PHP has played a crucial role in the development of dynamic web applications and websites. It powers a substantial portion of the internet, from small personal blogs to large-scale e-commerce platforms.
+\end{enumerate}
+
+
 \section{Platform}
 \textbf{Operating System}: Arch Linux x86-64 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
-\textbf{Compilers or Interpreters}: Python 3.10.1\\
+\textbf{Compilers or Interpreters}: Brave Browser (Chromium v117.0.5938.88.) \\
 
 \section{Input and Output}
 
+\begin{enumerate}
+    \item A Library Interface called 'Novel Tea' Library was set up on the front end usign React. Its Back end was then written in PHP, and the database was set up using Mariadb.
+    \item The Front end was hosted on another locolhost port, while the php server was hosted using httpd, and default php server.
+    \item The Front end was then connected to the backend using the simple FETCH API or Axios calls, and the data was sent to the backend using JSON. The responses were also sent from the backend to the Frontend using JSON.
+    \item The Features of the Library include, and therefore extend to the backend:
+          \begin{enumerate}
+              \item Adding a Book to the Library
+              \item Removing a Book from the Library
+              \item Updating a Book in the Library
+              \item Searching for a Book in the Library
+              \item Getting all the Books from the library to display.
+          \end{enumerate}
+    \item These features are demonstrated in the screenshots below.
+\end{enumerate}
 
-% \section{Code}
-% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
+\section{Screenshots}
+
+\subsection{React Frontend}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{screenshots/home.png}
+    \caption{}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{screenshots/books.png}
+    \caption{ }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{screenshots/delete.png}
+    \caption{ }
+\end{figure}
+\begin{figure}[H]
+
+    \centering
+    \includegraphics[width=.95\textwidth]{screenshots/update.png}
+    \caption{ }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{screenshots/search.png}
+    \caption{ }
+\end{figure}
+
+\subsection{Requests using Postman}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{screenshots/postman 1.png}
+    \caption{}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{screenshots/postman 2.png}
+    \caption{}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{screenshots/postman 3.png}
+    \caption{}
+\end{figure}
+
+\subsection{PHP Server}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=.95\textwidth]{screenshots/php server 1.png}
+    \caption{}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=.95\textwidth]{screenshots/php server 2.png}
+    \caption{}
+\end{figure}
+
+\section{Code}
+\lstinputlisting[language=php, caption="get books.php"]{../../Programs/Assignment 4/php_server/get_books.php}
+\lstinputlisting[language=php, caption="add books.php"]{../../Programs/Assignment 4/php_server/add_books.php}
+\lstinputlisting[language=php, caption="delete books.php"]{../../Programs/Assignment 4/php_server/delete_books.php}
+\lstinputlisting[language=php, caption="update books.php"]{../../Programs/Assignment 4/php_server/update_books.php}
+\lstinputlisting[language=php, caption="connect db.php"]{../../Programs/Assignment 4/php_server/connect_db.php}
+\lstinputlisting[language=php, caption="headers.php"]{../../Programs/Assignment 4/php_server/headers.php}
 
 \section{Conclusion}
-Thus, We have learnt IDS systems and their types. We have also learnt about various tools based on IDS systems.
+Thus, we have learnt how to create a responsive web page using Bootstrap and Media Queries. We have also learnt to use HTML, CSS and Javascript to create a game. We have used Git and Github to create a repository and push our code to it.
 \clearpage
 
 \section{FAQ}
+\begin{enumerate}
+    \item \textit{Advantages of Server-side Scripting:}
+    \begin{itemize}
+        \item \textbf{Dynamic Content Generation:} Server-side scripting allows dynamic content generation based on user input, database queries, or other variables, enhancing user interactivity.
+        \item \textbf{Data Security:} Sensitive data and processing logic can be kept on the server, reducing the risk of exposure to client-side manipulation or security breaches.
+        \item \textbf{Platform Independence:} Server-side scripts are executed on the server, making web applications compatible with various client devices and operating systems.
+        \item \textbf{Enhanced Performance:} Server-side processing offloads resource-intensive tasks from the client's device, improving overall application performance.
+    \end{itemize}
+    
+    \item \textit{XAMPP and phpMyAdmin:}
+    \begin{itemize}
+        \item \textbf{XAMPP:} XAMPP is a free, open-source cross-platform software package that provides an easy way to set up a local web server environment. It includes components like Apache (web server), MySQL (database server), PHP, and Perl, allowing developers to test and develop web applications on their local machines before deploying them to a live server.
+        \item \textbf{phpMyAdmin:} phpMyAdmin is a web-based graphical user interface (GUI) tool for managing MySQL databases. It simplifies tasks such as creating, editing, and deleting databases and tables, running SQL queries, and managing user privileges, making database administration more accessible.
+    \end{itemize}
+    
+    \item \textit{Two Ways to Connect to a Database in PHP:}
+    \begin{itemize}
+        \item \textbf{Using MySQLi (MySQL Improved):} MySQLi is a PHP extension specifically designed for MySQL database interaction. It provides an object-oriented and procedural interface for connecting to MySQL databases, executing queries, and fetching results. MySQLi supports features like prepared statements for enhanced security.
+        \item \textbf{Using PDO (PHP Data Objects):} PDO is a database abstraction layer in PHP that offers a consistent API for connecting to various database management systems, including MySQL, PostgreSQL, and SQLite. It allows developers to write database-agnostic code and offers features like prepared statements and error handling.
+    \end{itemize}
+\end{enumerate}
 
 \end{document}
