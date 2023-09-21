@@ -61,6 +61,38 @@
 \newtheorem{dfn}[thm]{Definition}
 
 
+%define Javascript language
+\lstdefinelanguage{JavaScript}{
+keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+keywordstyle=\color{blue}\bfseries,
+ndkeywords={class, export, boolean, throw, implements, import, this},
+ndkeywordstyle=\color{darkgray}\bfseries,
+identifierstyle=\color{black},
+sensitive=false,
+comment=[l]{//},
+morecomment=[s]{/*}{*/},
+commentstyle=\color{purple}\ttfamily,
+stringstyle=\color{red}\ttfamily,
+morestring=[b]',
+morestring=[b]"
+}
+
+\lstset{
+language=JavaScript,
+extendedchars=true,
+basicstyle=\footnotesize\ttfamily,
+showstringspaces=false,
+showspaces=false,
+numbers=left,
+numberstyle=\footnotesize,
+numbersep=9pt,
+tabsize=2,
+breaklines=true,
+showtabs=false,
+captionpos=b
+}
+
+
 
 % Other Doc Editing
 % \parindent 0ex
@@ -95,7 +127,7 @@
 
 
     \huge{\textsc{
-            Version Control with Git
+            Implementation of Form Validation, JQuery, and Ajax
         }} \\
 
 
@@ -109,7 +141,7 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Lab Assignment 1
+        Lab Assignment 3
     } % Subtitle or further description
     \vfill
 
@@ -138,218 +170,365 @@
 \setcounter{page}{1}
 
 \section{Aim}
-Version control with Git.
+Write a program to perform following form validations using JavaScript, where all fields are mandatory, and some fields like Phone number, Email Address, Zip code Validation etc. are included. Also include JavaScript to access and manipulate Document Object Model (DOM) objects in an HTML web page. Include JQuery to develop to develop your application as an Ajax based application.
+
+
 \section{Objectives}
 \begin{itemize}
-    \item To introduce the concepts and software behind version control, using the example of Git.
-    \item To understand the use of 'version control' in the context of a coding project.
-    \item To learn Git version control with Clone, commit to, and push, pull from a git repository.
+    \item To understand what is form validation.
+    \item To learn basic functioning of DOM objects.
+    \item To learn how to apply various techniques to implement it.
 \end{itemize}
 
 \section{Problem Statement}
-Created a public git repository for your team and submit the repo URL as a solution to this
-assignment, Learn Git concept of Local and Remote Repository, Push, Pull, Merge and Branch.
+Write a program to design Student registration form by using HTML, CSS having following
+fields: Username, Email, Phone number, Password, Confirm Password and write external
+javascript code to achieve following validations:
+\begin{enumerate}
+    \item Fields should not be empty. If spaces are entered those should be considered empty
+    \item Phone number must accept only numeric values and it should be 10 digits
+    \item Password length must be at least 7 and it should contain at least one capital letter, one digit and one special character from the set (\&,\$,\#, \@)
+    \item Value entered in password field and confirm password fields must match
+\end{enumerate}
 
+Email address must contain @ sign and a ., there should be few letters before the @ sign, should be three letters between @ sign and a . There must be 3 or 2 letters after the . (hint: Use
+regular expression)
 
 
 \section{Theory}
 
-\section{What is Git}
+\section{Types of Form Validation}
 
 \begin{dfn}
-    Git is a distributed version control system that allows developers to track changes to their code over time. It was created by Linus Torvalds in 2005 and has since become one of the most popular version control systems in use today. Git is designed to be fast, efficient, and flexible, and it can be used for projects of any size, from small personal projects to large enterprise applications.
+    Form validation is the process of checking that a form has been filled in correctly before it is submitted. It is used to prevent users from submitting invalid data, such as an email address without an @ sign or a password that is too short.
 \end{dfn}
+
+
+\subsection{Types}
+\begin{enumerate}
+    \item \textbf{Client-side validation:} Client-side validation is performed by the web browser before the form is submitted to the server. It is used to provide immediate feedback to the user about any errors in their input.
+    \item \textbf{Server-side validation:} Server-side validation is performed by the web server after the form has been submitted. It is used to ensure that the data submitted by the user is valid and safe to process.
+    \item \textbf{Database validation:} Database validation is performed by the database management system after the data has been stored in the database. It is used to ensure that the data is consistent with the database schema and any constraints defined on the table.
+    \item \textbf{Business logic validation:} Business logic validation is performed by the application after the data has been retrieved from the database. It is used to ensure that the data is consistent with the business rules defined by the application.
+\end{enumerate}
+
+
+\section{The Document Object Model}
+
+\begin{dfn}
+    The Document Object Model (DOM) is a programming interface for HTML and XML documents. It defines the logical structure of a document and the way it is accessed and manipulated.
+\end{dfn}
+
+\begin{enumerate}
+    \item The DOM is used by JavaScript to access and manipulate HTML documents.
+    \item It is also used by other programming languages, such as PHP and Python, to generate HTML documents dynamically.
+    \item The DOM is an object-oriented model that represents HTML documents as a collection of objects.
+    \item Each object has properties and methods that can be used to access and manipulate the document.
+    \item The DOM is a platform-independent model that can be used with any programming language.
+\end{enumerate}
+
+\subsection{DOM Tree}
+
+\begin{dfn}
+    The DOM tree is a hierarchical representation of the HTML document. It consists of nodes that represent elements, attributes, text, and comments.
+\end{dfn}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{0*Sk5AAj4ze_bDFPA0.png}
+    \caption{The DOM Tree}
+\end{figure}
+
 
 \subsection{History}
 
 \begin{itemize}
-    \item Git was created by Linus Torvalds in 2005.
-    \item It was originally designed for Linux kernel development, but it has since been adopted by many other projects.
-    \item Git is a distributed version control system that allows developers to track changes to their code over time.
-    \item It is designed to be fast, efficient, and flexible, and it can be used for projects of any size, from small personal projects to large enterprise applications.
-    \item Git is free software distributed under the terms of the GNU General Public License version 2.
-    \item It is available for Linux, macOS, and Windows operating systems.
+    \item The DOM was first introduced in 1998 by the World Wide Web Consortium (W3C).
+    \item It was designed to be a platform-independent model for representing HTML documents.
+    \item It is now supported by all major web browsers, including Internet Explorer, Firefox, Chrome, Safari, and Opera.
+
 \end{itemize}
+
+
 \subsection{Advantages}
 
 \begin{enumerate}
-    \item Git is a distributed version control system, which means that every developer has a full copy of the repository on their local machine.
-    \item This allows developers to work offline and commit changes without having to connect to a central server.
-    \item Git is designed to be fast, efficient, and flexible.
-    \item It can be used for projects of any size, from small personal projects to large enterprise applications.
-    \item Git is free software distributed under the terms of the GNU General Public License version 2.
-    \item It is available for Linux, macOS, and Windows operating systems.
+    \item The DOM is a platform-independent model that can be used with any programming language.
+    \item It is a standard model that is supported by all major web browsers.
+    \item It is an object-oriented model that represents HTML documents as a collection of objects.
+    \item It is a hierarchical model that represents the logical structure of an HTML document.
+    \item It is a dynamic model that can be used to access and manipulate HTML documents.
+    \item It is a flexible model that can be extended to support new features.
+    \item It is a powerful model that can be used to create interactive web applications.
+    \item It is a simple model that is easy to learn and understand.
+    \item It is a scalable model that can be used to create large web applications.
 \end{enumerate}
 
-\subsection{Differences between Github and Git}
-
-\begin{enumerate}
-    \item Git is a version control system that allows developers to track changes to their code over time.
-    \item Github is a web-based hosting service for Git repositories.
-    \item Git is a command-line tool that can be used locally or remotely.
-    \item Github is a web-based service that allows developers to host their Git repositories online.
-    \item Git is free software distributed under the terms of the GNU General Public License version 2.
-    \item Github is a proprietary service owned by Microsoft.
-\end{enumerate}
-
-\section{What is Version Control}
+\section{JQuery}
 
 \begin{dfn}
-    Version control is a system that allows multiple people to work on a project simultaneously, keeps track of changes made to the project's files and directories, and provides the ability to revert to previous versions of the project if necessary. It is essential for collaborative software development and is used to manage code, documents, and other digital assets efficiently.
+    JQuery is a JavaScript library that simplifies the process of creating interactive web pages. It is used to manipulate HTML documents and handle events.
 \end{dfn}
 
-\section{How to use Git for version controlling}
+\subsection{History and Significance}
 
 \begin{enumerate}
-    \item First, you need to initialize a Git repository in your project's directory using the following command:
+    \item JQuery was first released in 2006 by John Resig.
+    \item It was designed to simplify the process of creating interactive web pages.
+    \item It is now supported by all major web browsers, including Internet Explorer, Firefox, Chrome, Safari, and Opera.
+    \item It is used by many popular websites, such as Google, Facebook, Twitter, and YouTube.
+    \item It is used by many popular web applications, such as WordPress, Drupal, Joomla, and Magento.
+\end{enumerate}
 
-          \begin{verbatim}
-    git init
-    \end{verbatim}
+\subsection{Advantages}
 
-    \item Add your project files to the Git repository by using the following command:
+\begin{enumerate}
 
-          \begin{verbatim}
-    git add .
-    \end{verbatim}
+    \item \textbf{Simplified DOM Manipulation:} jQuery simplifies DOM (Document Object Model) manipulation tasks. It provides easy-to-use methods to select, modify, and manipulate HTML elements.
 
-    \item Commit your changes with a descriptive message using the following command:
+          \begin{lstlisting}[language=HTML, caption=Example: Selecting and Modifying Elements]
+<!-- HTML -->
+<button id="myButton">Click Me</button>
 
-          \begin{verbatim}
-    git commit -m "Initial commit"
-    \end{verbatim}
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Selecting an element by ID
+    var button = $("#myButton");
 
-    \item You can create branches to work on specific features or fixes. To create a new branch, use the following command:
+    // Modifying its text
+    button.text("New Text");
+</script>
+\end{lstlisting}
 
-          \begin{verbatim}
-    git branch feature-branch
-    \end{verbatim}
+    \item \textbf{Event Handling:} jQuery simplifies event handling by providing methods like `.on()` and `.click()` for attaching event handlers to elements.
 
-    \item Switch to the newly created branch:
+          \begin{lstlisting}[language=HTML, caption=Example: Event Handling]
+<!-- HTML -->
+<button id="myButton">Click Me</button>
 
-          \begin{verbatim}
-    git checkout feature-branch
-    \end{verbatim}
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Event handling with jQuery
+    $("#myButton").click(function() {
+        alert("Button Clicked!");
+    });
+</script>
+\end{lstlisting}
 
-    \item Make your changes and commit them to the branch.
+    \item \textbf{AJAX Support:} jQuery streamlines AJAX (Asynchronous JavaScript and XML) requests, making it easier to fetch data from a server without reloading the entire page.
 
-    \item To merge your changes back to the main branch (e.g., master), use the following command:
+          \begin{lstlisting}[language=JavaScript, caption=Example: AJAX Request]
+// jQuery AJAX request
+$.ajax({
+    url: "https://api.example.com/data",
+    method: "GET",
+    success: function(data) {
+        console.log(data);
+    },
+    error: function(error) {
+        console.error(error);
+    }
+});
+\end{lstlisting}
 
-          \begin{verbatim}
-    git checkout master
-    git merge feature-branch
-    \end{verbatim}
+    \item \textbf{Cross-Browser Compatibility:} jQuery abstracts away browser-specific differences, ensuring consistent behavior across various browsers.
 
-    \item Finally, push your changes to a remote repository (e.g., GitHub) for collaboration and backup:
+    \item \textbf{Rich Set of Plugins:} jQuery offers a vast ecosystem of plugins that extend its functionality, allowing developers to add features like sliders, date pickers, and more without reinventing the wheel.
 
-          \begin{verbatim}
-    git push origin master
-    \end{verbatim}
+    \item \textbf{Animation and Effects:} jQuery provides methods for creating animations and adding visual effects to web pages with ease.
+
+          \begin{lstlisting}[language=HTML, caption=Example: Animation]
+<!-- HTML -->
+<div id="box">Click Me</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // jQuery animation
+    $("#box").click(function() {
+        $(this).animate({ left: "200px" }, "slow");
+    });
+</script>
+\end{lstlisting}
 
 \end{enumerate}
+
+\subsection{JQuery Selectors}
+
+jQuery provides a variety of selectors that allow you to target and manipulate specific elements in the HTML DOM. Here are some commonly used jQuery selectors:
+
+\begin{enumerate}
+
+    \item \textbf{Element Selector:} Selects all elements with a specified tag name.
+
+          \begin{lstlisting}[language=HTML, caption=Example: Element Selector]
+<!-- HTML -->
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Select all <li> elements
+    var listItems = $("li");
+</script>
+\end{lstlisting}
+
+    \item \textbf{ID Selector:} Selects a single element with a specific ID attribute.
+
+          \begin{lstlisting}[language=HTML, caption=Example: ID Selector]
+<!-- HTML -->
+<div id="myDiv">Hello, World!</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Select the element with ID "myDiv"
+    var myElement = $("#myDiv");
+</script>
+\end{lstlisting}
+
+    \item \textbf{Class Selector:} Selects all elements with a specific class attribute.
+
+          \begin{lstlisting}[language=HTML, caption=Example: Class Selector]
+<!-- HTML -->
+<p class="highlight">This is a highlighted text.</p>
+<p>This is a normal text.</p>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Select all elements with class "highlight"
+    var highlightedElements = $(".highlight");
+</script>
+\end{lstlisting}
+
+    \item \textbf{Attribute Selector:} Selects elements with a specific attribute and optional value.
+
+          \begin{lstlisting}[language=HTML, caption=Example: Attribute Selector]
+<!-- HTML -->
+<input type="text" id="username" name="username" value="John" />
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Select element with attribute "name"
+    var usernameInput = $("[name='username']");
+</script>
+\end{lstlisting}
+
+    \item \textbf{Descendant Selector:} Selects all elements that are descendants of a specified element.
+
+          \begin{lstlisting}[language=HTML, caption=Example: Descendant Selector]
+<!-- HTML -->
+<ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Select all <li> elements inside the element with ID "myList"
+    var listItems = $("#myList li");
+</script>
+\end{lstlisting}
+
+\end{enumerate}
+
 
 \section{Platform}
 \textbf{Operating System}: Arch Linux x86-64 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
-\textbf{Compilers or Interpreters}: None Required. \\
+\textbf{Compilers or Interpreters}: Brave Browser (Chromium v117.0.5938.88.) \\
 
 \section{Input and Output}
 
 \begin{enumerate}
-    \item The Repository "Anti Brutus" was created as part of the mini project in Full Stack Development.
-    \item It was created as a group effort between me and my team. And they were all added as collbaorators. 
-    \item It was then forked on everyones Github Account, and then cloned to their local machines.
-    \item Several branches were created for different features and then merged to the main branch. The images of the log graph are attached as reference. 
+    \item The Student Validaiton form was created, and the relevant fields were added.
+    \item The validation was done on client side using Javascript Successfully.
+    \item The screenshots of the same are given below.
 \end{enumerate}
 
 \section{Screenshots}
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=.95\textwidth]{6.png}
-%     \caption{Status and Commit to the Repository. }
-% \end{figure}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=.85\textwidth]{7.png}
-%     \caption{The Repository on Github.}
-% \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{02.png}
+    \caption{The Student Validation form with Mandatory Fields. You cant submit without filling them. The Phone Number field only accepts numbers.}
+\end{figure}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=.75\textwidth]{2.png}
-%     \caption{Log Graphs of Commits and Branches.}
-% \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{03.png}
+    \caption{The Country Code Selection Field. The Countries REST api is called by using Jquery AJAX to get the list of countries. }
+\end{figure}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=.85\textwidth]{4.png}
-%     \caption{Log Graphs of Commits and Branches.}
-% \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{04.png}
+    \caption{Email Validation done on client side JS}
+\end{figure}
 
-% \begin{figure}[H]
-%     \centering
-%     \includegraphics[width=.85\textwidth]{3.png}
-%     \caption{Log Graphs of Commits and Branches.}
-% \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{05.png}
+    \caption{Form being submitted after entering everything. Notice the button is blue. }
+\end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{06.png}
+    \caption{The Color of the button changes to green for 3 seconds, as instructed in the problem statement. Only then the form submits. }
+\end{figure}
 
-
-% \section{Code}
-% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
+\section{Code}
+\lstinputlisting[language=HTML, caption="index.html"]{../../Programs/Assignment 3/index.html}
 
 \section{Conclusion}
-Thus, we have successfully learnt, understood and implemented the concepts of Version Control with Git.
+Thus, we have successfully implemented form validation using Javascript and used Jquery as well as JQuery Ajax.
 \clearpage
 
 \section{FAQ}
 \begin{enumerate}
-    \item \textit{What is branching in Git?}
+    \item \textbf{Reasons for Form Validations:}
+          \begin{itemize}
+              \item \textbf{Data Integrity:} Form validations ensure that the data submitted by users is accurate and follows the expected format. This prevents incorrect or malicious data from being processed, maintaining the integrity of your application's database.
+              \item \textbf{Enhanced User Experience:} Validations provide immediate feedback to users, helping them correct errors before submission. This enhances the user experience and reduces frustration.
+              \item \textbf{Security:} Proper form validations can prevent common security vulnerabilities like SQL injection and cross-site scripting (XSS) attacks by rejecting potentially harmful input.
+          \end{itemize}
 
-    Branching in Git is a powerful feature that allows developers to work on multiple independent lines of development within the same repository. It essentially creates a copy of the codebase at a specific point, allowing you to make changes without affecting the main codebase. Branches are often used for implementing new features, fixing bugs, or isolating experimental changes.
+    \item \textbf{Modifying Attribute Value using DOM:} In JavaScript, you can modify an attribute value using the DOM (Document Object Model) as follows:
+          \begin{lstlisting}[language=JavaScript, caption=Example: Modifying Attribute Value using DOM]
+// Assuming 'element' is a reference to the HTML element you want to modify.
 
-    \item \textit{How to create and merge branches in Git? Write the commands used.}
+// To change the 'src' attribute of an image:
+element.setAttribute('src', 'new_image.jpg');
 
-    To create and merge branches in Git, you can use the following commands:
+// To modify the 'href' attribute of a link:
+element.setAttribute('href', 'new_url.html');
+        \end{lstlisting}
 
-    \textbf{Creating a New Branch:}
-    
-    To create a new branch and switch to it, you can use the following command:
-    
-    \begin{verbatim}
-    git checkout -b new-branch-name
-    \end{verbatim}
 
-    This command creates a new branch named "new-branch-name" and switches to it.
+    \item \textbf{jQuery Ajax:} jQuery Ajax is a feature in the jQuery library that allows you to make asynchronous HTTP requests to a server and handle the responses without requiring a full page reload. It offers a simplified way to perform tasks like fetching data from a server, sending data to a server, or updating a web page without the need for extensive JavaScript code.
 
-    \textbf{Merging a Branch:}
-    
-    To merge changes from one branch into another (e.g., merging a feature branch into the main branch), use the following commands:
-
-    First, switch to the target branch (e.g., main branch):
-
-    \begin{verbatim}
-    git checkout main
-    \end{verbatim}
-
-    Then, merge the feature branch into the target branch:
-
-    \begin{verbatim}
-    git merge feature-branch
-    \end{verbatim}
-
-    This command incorporates the changes from "feature-branch" into the "main" branch.
-
-    \textbf{Deleting a Branch:}
-    
-    After the branch has been merged and is no longer needed, you can delete it:
-
-    \begin{verbatim}
-    git branch -d feature-branch
-    \end{verbatim}
-
-    This command deletes the "feature-branch" locally.
-
+          \begin{lstlisting}[language=JavaScript, caption=Example: AJAX Request]
+// jQuery AJAX request
+$.ajax({
+    url: "https://api.example.com/data",
+    method: "GET",
+    success: function(data) {
+        console.log(data);
+    },
+    error: function(error) {
+        console.error(error);
+    }
+});
+        \end{lstlisting}
 \end{enumerate}
-
 \end{document}

@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1695294090 "/run/media/krishnaraj/Classes/University/Third Year/First Semester/Full Stack Development/Lab/Assignment 2/Assignment_2.tex" "Assignment_2.pdf" "Assignment_2" 1695294093 0
+["pdflatex"] 1695314304 "/run/media/krishnaraj/Classes/University/Third Year/First Semester/Full Stack Development/Lab/Assignment 2/Assignment_2.tex" "Assignment_2.pdf" "Assignment_2" 1695314306 0
   "../../Programs/Assignment 2/app.js" 1673012147 1591 989e0552bfbec15238ffa8169b1e8461 ""
   "../../Programs/Assignment 2/index.html" 1695100206 3062 8e404e2a7a86fcb1e18f1aa09e0e8ce1 ""
-  "/run/media/krishnaraj/Classes/University/Third Year/First Semester/Full Stack Development/Lab/Assignment 2/Assignment_2.tex" 1695294087 12206 2f4a1a25a7d1e851388c81a39acaf32e ""
+  "/run/media/krishnaraj/Classes/University/Third Year/First Semester/Full Stack Development/Lab/Assignment 2/Assignment_2.tex" 1695314304 12206 68fe6de897948aa50809bfbfcf91b121 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1689853683 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1689853683 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -120,10 +120,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1695285212 4482925 a1a254cacf5c7108f7b28226c8f3b19f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1695285176 6768050 f1abe6d2662983ea80d0bdb89af7992a ""
   "27ixZ.png" 1453806584 13316 62a0e47f0599439c537ea33aa7696ed2 ""
-  "Assignment_2.aux" 1695294093 3622 d144ab540c353ec26c6c00ca7cb38741 "pdflatex"
-  "Assignment_2.out" 1695294093 2078 357f1202b79b37dc05dc36b3f782e32e "pdflatex"
-  "Assignment_2.tex" 1695294087 12206 2f4a1a25a7d1e851388c81a39acaf32e ""
-  "Assignment_2.toc" 1695294093 1252 7d75e98aee85ceec40861495cfe3e3ee "pdflatex"
+  "Assignment_2.aux" 1695314306 3622 d144ab540c353ec26c6c00ca7cb38741 "pdflatex"
+  "Assignment_2.out" 1695314306 2078 357f1202b79b37dc05dc36b3f782e32e "pdflatex"
+  "Assignment_2.tex" 1695314304 12206 68fe6de897948aa50809bfbfcf91b121 ""
+  "Assignment_2.toc" 1695314306 1252 7d75e98aee85ceec40861495cfe3e3ee "pdflatex"
   "Bootstrap-Grid-System-1.png" 1602592212 22508 a2cfe5c9b28bc347ddb6e39d233aef64 ""
   "big.png" 1695101127 2575018 89bfe8a859631c0bbb37e573aa3c880a ""
   "large.png" 1695100239 2233263 e2343d0f161e135865e17e0b6627fa2e ""
