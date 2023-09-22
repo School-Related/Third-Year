@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {8}Screenshots}{3}{section.8}%
 \contentsline {subsection}{\numberline {8.1}React Frontend}{3}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Requests using Postman}{6}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}PHP Server}{7}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.3}PHP Server}{8}{subsection.8.3}%
 \contentsline {section}{\numberline {9}Code}{8}{section.9}%
-\contentsline {section}{\numberline {10}Conclusion}{11}{section.10}%
-\contentsline {section}{\numberline {11}FAQ}{12}{section.11}%
+\contentsline {section}{\numberline {10}Conclusion}{12}{section.10}%
+\contentsline {section}{\numberline {11}FAQ}{13}{section.11}%

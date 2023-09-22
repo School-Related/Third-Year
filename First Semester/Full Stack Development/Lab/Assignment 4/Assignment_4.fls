@@ -824,6 +824,11 @@ INPUT ./screenshots/books.png
 INPUT screenshots/books.png
 INPUT ./screenshots/books.png
 INPUT ./screenshots/books.png
+INPUT ./screenshots/add.png
+INPUT ./screenshots/add.png
+INPUT screenshots/add.png
+INPUT ./screenshots/add.png
+INPUT ./screenshots/add.png
 INPUT ./screenshots/delete.png
 INPUT ./screenshots/delete.png
 INPUT screenshots/delete.png
@@ -884,6 +889,9 @@ INPUT ../../Programs/Assignment 4/php_server/get_books.php
 INPUT ../../Programs/Assignment 4/php_server/get_books.php
 INPUT ../../Programs/Assignment 4/php_server/get_books.php
 INPUT ../../Programs/Assignment 4/php_server/get_books.php
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncr8t.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8r.tfm
+INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1095.tfm
 INPUT ../../Programs/Assignment 4/php_server/add_books.php
 INPUT ../../Programs/Assignment 4/php_server/add_books.php
@@ -891,9 +899,6 @@ INPUT ../../Programs/Assignment 4/php_server/add_books.php
 INPUT ../../Programs/Assignment 4/php_server/add_books.php
 INPUT ../../Programs/Assignment 4/php_server/add_books.php
 INPUT ../../Programs/Assignment 4/php_server/add_books.php
-INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncr8t.vf
-INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8r.tfm
-INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
 INPUT ../../Programs/Assignment 4/php_server/delete_books.php
 INPUT ../../Programs/Assignment 4/php_server/delete_books.php
 INPUT ../../Programs/Assignment 4/php_server/delete_books.php

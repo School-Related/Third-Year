@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  22 SEP 2023 10:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  22 SEP 2023 13:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -761,15 +761,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
 [3 <./screenshots/home.png (PNG copy)>]
-<screenshots/delete.png, id=147, 1445.4pt x 813.0375pt>
+<screenshots/add.png, id=147, 1441.63594pt x 755.82375pt>
+File: screenshots/add.png Graphic file (type png)
+<use screenshots/add.png>
+Package pdftex.def Info: screenshots/add.png  used on input line 274.
+(pdftex.def)             Requested size: 446.26582pt x 233.96848pt.
+<screenshots/delete.png, id=148, 1445.4pt x 813.0375pt>
 File: screenshots/delete.png Graphic file (type png)
 <use screenshots/delete.png>
-Package pdftex.def Info: screenshots/delete.png  used on input line 274.
+Package pdftex.def Info: screenshots/delete.png  used on input line 280.
 (pdftex.def)             Requested size: 446.26582pt x 251.02173pt.
-<screenshots/update.png, id=148, 1445.4pt x 812.28468pt>
+<screenshots/update.png, id=149, 1445.4pt x 812.28468pt>
 File: screenshots/update.png Graphic file (type png)
 <use screenshots/update.png>
-Package pdftex.def Info: screenshots/update.png  used on input line 280.
+Package pdftex.def Info: screenshots/update.png  used on input line 286.
 (pdftex.def)             Requested size: 446.26582pt x 250.7893pt.
 
 
@@ -779,36 +784,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[4 <./screenshots/books.png (PNG copy)> <./screenshots/delete.png (PNG copy)>]
-<screenshots/search.png, id=155, 1443.14156pt x 758.835pt>
+[4 <./screenshots/books.png (PNG copy)> <./screenshots/add.png (PNG copy)>]
+<screenshots/search.png, id=156, 1443.14156pt x 758.835pt>
 File: screenshots/search.png Graphic file (type png)
 <use screenshots/search.png>
-Package pdftex.def Info: screenshots/search.png  used on input line 286.
+Package pdftex.def Info: screenshots/search.png  used on input line 292.
 (pdftex.def)             Requested size: 446.26582pt x 234.65747pt.
-<screenshots/postman 1.png, id=156, 1302.36563pt x 657.95813pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[5 <./screenshots/delete.png (PNG copy)> <./screenshots/update.png (PNG copy)>]
+<screenshots/postman 1.png, id=164, 1302.36563pt x 657.95813pt>
 File: screenshots/postman 1.png Graphic file (type png)
 <use screenshots/postman 1.png>
-Package pdftex.def Info: screenshots/postman 1.png  used on input line 294.
+Package pdftex.def Info: screenshots/postman 1.png  used on input line 300.
 (pdftex.def)             Requested size: 446.26582pt x 225.44969pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[5 <./screenshots/update.png (PNG copy)> <./screenshots/search.png (PNG copy)>]
-<screenshots/postman 2.png, id=164, 1282.03969pt x 766.36313pt>
+<screenshots/postman 2.png, id=165, 1282.03969pt x 766.36313pt>
 File: screenshots/postman 2.png Graphic file (type png)
 <use screenshots/postman 2.png>
-Package pdftex.def Info: screenshots/postman 2.png  used on input line 300.
+Package pdftex.def Info: screenshots/postman 2.png  used on input line 306.
 (pdftex.def)             Requested size: 446.26582pt x 266.7577pt.
-<screenshots/postman 3.png, id=165, 1309.14093pt x 554.82281pt>
-File: screenshots/postman 3.png Graphic file (type png)
-<use screenshots/postman 3.png>
-Package pdftex.def Info: screenshots/postman 3.png  used on input line 306.
-(pdftex.def)             Requested size: 446.26582pt x 189.12828pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -817,40 +817,45 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[6 <./screenshots/postman 1.png (PNG copy)> <./screenshots/postman 2.png (PNG copy)>]
-<screenshots/php server 1.png, id=172, 1363.34344pt x 341.02406pt>
+[6 <./screenshots/search.png (PNG copy)> <./screenshots/postman 1.png (PNG copy)>]
+<screenshots/postman 3.png, id=172, 1309.14093pt x 554.82281pt>
+File: screenshots/postman 3.png Graphic file (type png)
+<use screenshots/postman 3.png>
+Package pdftex.def Info: screenshots/postman 3.png  used on input line 312.
+(pdftex.def)             Requested size: 446.26582pt x 189.12828pt.
+<screenshots/php server 1.png, id=173, 1363.34344pt x 341.02406pt>
 File: screenshots/php server 1.png Graphic file (type png)
 <use screenshots/php server 1.png>
-Package pdftex.def Info: screenshots/php server 1.png  used on input line 314.
+Package pdftex.def Info: screenshots/php server 1.png  used on input line 320.
 (pdftex.def)             Requested size: 446.26582pt x 111.62766pt.
-<screenshots/php server 2.png, id=173, 1097.60063pt x 512.66531pt>
+<screenshots/php server 2.png, id=174, 1097.60063pt x 512.66531pt>
 File: screenshots/php server 2.png Graphic file (type png)
 <use screenshots/php server 2.png>
-Package pdftex.def Info: screenshots/php server 2.png  used on input line 319.
+Package pdftex.def Info: screenshots/php server 2.png  used on input line 325.
 (pdftex.def)             Requested size: 446.26582pt x 208.43404pt.
- (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[7 <./screenshots/postman 2.png (PNG copy)> <./screenshots/postman 3.png (PNG copy)>] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (/usr/share/texmf-dist/tex/latex/listings/lstlang2.sty
 File: lstlang2.sty 2023/02/27 1.9 listings language file
 )
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[7 <./screenshots/postman 3.png (PNG copy)> <./screenshots/php server 1.png (PNG copy)> <./screenshots/php server 2.png (PNG copy)>]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 324.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 330.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 8.36993pt on input line 324.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 324.
+(Font)              scaled to size 8.36993pt on input line 330.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 330.
  (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) (../../Programs/Assignment 4/php_server/get_books.php
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 3.
-) (../../Programs/Assignment 4/php_server/add_books.php
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -858,7 +863,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[8{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]) (../../Programs/Assignment 4/php_server/delete_books.php
+[8{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./screenshots/php server 1.png (PNG copy)> <./screenshots/php server 2.png (PNG copy)>]) (../../Programs/Assignment 4/php_server/add_books.php
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -866,7 +871,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[9]) (../../Programs/Assignment 4/php_server/update_books.php) (../../Programs/Assignment 4/php_server/connect_db.php
+[9]) (../../Programs/Assignment 4/php_server/delete_books.php) (../../Programs/Assignment 4/php_server/update_books.php
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -874,7 +879,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[10]) (../../Programs/Assignment 4/php_server/headers.php)
+[10]) (../../Programs/Assignment 4/php_server/connect_db.php) (../../Programs/Assignment 4/php_server/headers.php
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -882,7 +887,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[11]
+[11])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -890,25 +895,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[12
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[13
 
 ] (./Assignment_4.aux)
 Package rerunfilecheck Info: File `Assignment_4.out' has not changed.
 (rerunfilecheck)             Checksum: 405162CE66A694E488C78F2BC3424E7A;1747.
  ) 
 Here is how much of TeX's memory you used:
- 15561 strings out of 477985
- 240036 string characters out of 5840058
- 2184388 words of memory out of 5000000
- 35235 multiletter control sequences out of 15000+600000
+ 15570 strings out of 477985
+ 240204 string characters out of 5840058
+ 2181388 words of memory out of 5000000
+ 35241 multiletter control sequences out of 15000+600000
  561460 words of font info for 88 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,13n,76p,605b,3109s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,76p,605b,3931s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_4.pdf (14 pages, 4393161 bytes).
+Output written on Assignment_4.pdf (15 pages, 4565864 bytes).
 PDF statistics:
- 481 PDF objects out of 1000 (max. 8388607)
- 440 compressed objects within 5 object streams
- 264 named destinations out of 1000 (max. 500000)
- 187 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 445 compressed objects within 5 object streams
+ 266 named destinations out of 1000 (max. 500000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 
