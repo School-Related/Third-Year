@@ -1,0 +1,409 @@
+% This is a Basic Assignment Paper but with like Code and stuff allowed in it, there is also url, hyperlinks from contents included. 
+
+\documentclass[11pt]{article}
+
+% Preamble
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{fancyhdr, float, graphicx}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdfpagemode=FullScreen,
+    }
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\textit{\Large{Full Stack Development - 3nd Year B. Tech}}}
+%\fancyhead[R]{\textit{something}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{1pt}
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}[thm]{Definition}
+
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+ 
+%define Javascript language
+\lstdefinelanguage{JavaScript}{
+keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+keywordstyle=\color{blue}\bfseries,
+ndkeywords={class, export, boolean, throw, implements, import, this},
+ndkeywordstyle=\color{darkgray}\bfseries,
+identifierstyle=\color{black},
+sensitive=false,
+comment=[l]{//},
+morecomment=[s]{/*}{*/},
+commentstyle=\color{purple}\ttfamily,
+stringstyle=\color{red}\ttfamily,
+morestring=[b]',
+morestring=[b]"
+}
+ 
+\lstset{
+language=JavaScript,
+extendedchars=true,
+basicstyle=\footnotesize\ttfamily,
+showstringspaces=false,
+showspaces=false,
+numbers=left,
+numberstyle=\footnotesize,
+numbersep=9pt,
+tabsize=2,
+breaklines=true,
+showtabs=false,
+captionpos=b
+}
+
+% Other Doc Editing
+% \parindent 0ex
+%\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+
+    %---------------------------NAMES-------------------------------
+
+    \huge\textsc{
+        MIT World Peace University
+    }\\
+
+    \vspace{0.75\baselineskip} % space after Uni Name
+
+    \LARGE{
+        Full Stack Development\\
+        Third Year B. Tech, Semester 5
+    }
+
+    \vfill % space after Sub Name
+
+    %--------------------------TITLE-------------------------------
+
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.6pt}
+    \vspace{0.75\baselineskip} % Whitespace above the title
+
+
+
+    \huge{\textsc{
+            Design and Develop an interactive User Interface using React
+        }} \\
+
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the title
+    \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
+    \rule{\textwidth}{1.6pt}
+
+    \vspace{1\baselineskip} % Whitespace after the title block
+
+    %--------------------------SUBTITLE --------------------------	
+
+    \LARGE\textsc{
+        Lab Assignment 5
+    } % Subtitle or further description
+    \vfill
+
+    %--------------------------AUTHOR-------------------------------
+
+    Prepared By
+    \vspace{0.5\baselineskip} % Whitespace before the editors
+
+    \Large{
+        Krishnaraj Thadesar \\
+        Cyber Security and Forensics\\
+        Batch A1, PA 20
+    }
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the editor list
+    \today
+
+\end{titlepage}
+
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\setcounter{page}{1}
+
+\section{Aim}
+Design and develop an interactive user interface using React.
+
+\section{Objectives}
+\begin{itemize}
+    \item Articulate what React is and why it is useful.
+    \item Explore the basic architecture of a React application.
+    \item Use React components to build interactive interfaces
+\end{itemize}
+
+\section{Problem Statement}
+Design any UI using React.
+
+\section{Theory}
+\subsection{React}
+
+\begin{dfn}
+    \textbf{React} is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
+\end{dfn}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{react/react_2.jpg}
+    \caption{The React Logo. }
+\end{figure}
+
+\subsection{Features}
+\begin{enumerate}
+    \item \textbf{Declarative:} React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
+    \item \textbf{Component-Based:} Build encapsulated components that manage their own state, then compose them to make complex UIs.
+    \item \textbf{Learn Once, Write Anywhere:} We don’t make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code.
+\end{enumerate}
+
+\subsection{Advantages}
+\begin{enumerate}
+    \item \textbf{Easy to Learn:} React is a JavaScript library, so we recommend that you have a basic understanding of the JavaScript language before diving into React. However, React is not a complex framework, and we believe that it is easy to learn.
+    \item \textbf{Reusable Components:} React allows you to create reusable UI components. This means that you can build encapsulated components that manage their own state, then compose them to make complex UIs.
+    \item \textbf{Virtual DOM:} React uses a virtual DOM (a JavaScript representation of the real DOM). The virtual DOM can improve the performance of a web application by updating the DOM efficiently.
+    \item \textbf{Performance:} React uses a virtual DOM, which is a JavaScript representation of the real DOM. The virtual DOM can improve the performance of a web application by updating the DOM efficiently.
+    \item \textbf{Testability:} React provides a set of utilities to test components and their behavior. You can use those utilities to test both React components and the DOM output.
+    \item \textbf{Developer Tools:} React has a great set of developer tools. These tools can help you create, debug, and test React applications.
+\end{enumerate}
+
+\subsection{History and Significance}
+\begin{enumerate}
+    \item React was created by Jordan Walke, a software engineer at Facebook, who released an early prototype of React called "FaxJS". He was influenced by XHP, an HTML component framework for PHP. It was first deployed on Facebook's News Feed in 2011 and later on Instagram in 2012.
+    \item React Native, which enables native Android, iOS, and UWP development with React, was announced at Facebook's React Conf in February 2015 and open-sourced in March 2015.
+    \item On April 18, 2017, Facebook announced React Fiber, a new core algorithm of React framework library for building user interfaces. React Fiber was to become the foundation of any future improvements and feature development of the React framework.
+    \item On September 26, 2017, React 16.0 was released to the public. On February 16, 2019, React 16.8 was released to the public. The release introduced React Hooks.
+    \item On August 10, 2020, React 17.0 was released to the public. The release is primarily for the React 17 release to be a drop-in replacement for previous versions.
+\end{enumerate}
+
+\section{Create React App (CRA)}
+
+\begin{dfn}
+    \textbf{Create React App} is a tool (built by developers at Facebook) that gives you a massive head start when building React apps. It saves you from time-consuming setup and configuration. You simply run one command and Create React App sets up the tools you need to start your React project.
+\end{dfn}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{create-react-app/create-react-app_2.jpg}
+    \caption{Create React App. }
+\end{figure}
+
+\subsection{Modern Alternatives}
+
+When it comes to starting a new React project, Create React App (CRA) is a popular choice. However, there are several modern alternatives that offer additional features and flexibility. Here are some of them:
+
+\subsubsection{1. Vite}
+
+\textbf{Vite} is a build tool that focuses on fast development and optimized production builds. It supports React and provides an instant server start and hot module replacement (HMR) for a smooth development experience. Vite leverages ES modules for quicker bundling and can be used with various front-end frameworks, including React.
+
+\subsubsection{2. Snowpack}
+
+\textbf{Snowpack} is another build tool that offers near-instant development server startup. It's designed to work with modern web standards and allows you to import npm packages directly in your browser. Snowpack can be configured to work with React and provides a fast development environment.
+
+\subsubsection{3. Next.js}
+
+\textbf{Next.js} is a popular React framework that provides server-side rendering (SSR) and static site generation (SSG) capabilities out of the box. It simplifies routing, API handling, and SEO optimization. Next.js is suitable for building not only single-page applications but also full-fledged websites.
+
+\subsubsection{4. Parcel}
+
+\textbf{Parcel} is a zero-config bundler that supports React and other popular front-end technologies. It's known for its simplicity and ease of use. Parcel automatically analyzes your project's dependencies and bundles them efficiently. It's a great choice for small to medium-sized projects.
+
+\subsubsection{5. Remix}
+
+\textbf{Remix} is a modern framework for building web applications, including React-based apps. Remix focuses on server-rendered React and offers features like routing, data loading, and client-side navigation. It aims to provide a great developer experience with strong conventions.
+
+
+
+\subsection{Steps to Create a React App}
+
+\subsubsection{Prerequisites}
+Before you begin, ensure you have the following installed:
+\begin{itemize}
+    \item \textbf{Node.js and npm:} Download and install Node.js from \url{https://nodejs.org/}. npm (Node Package Manager) is included with Node.js.
+    \item \textbf{Git:} Install Git from \url{https://git-scm.com/}.
+\end{itemize}
+
+\subsubsection{Steps}
+
+\begin{enumerate}
+    \item \textbf{Install create-react-app:} Open your terminal or command prompt and run the following command to install the `create-react-app` globally:
+    \begin{verbatim}
+    npm install -g create-react-app
+    \end{verbatim}
+    
+    \item \textbf{Create a new React app:} To create a new React app, run the following command, replacing `my-react-app` with your desired app name:
+    \begin{verbatim}
+    npx create-react-app my-react-app
+    \end{verbatim}
+    
+    \item \textbf{Navigate to the app directory:} Change your working directory to the newly created app directory:
+    \begin{verbatim}
+    cd my-react-app
+    \end{verbatim}
+    
+    \item \textbf{Start the development server:} Run the following command to start the development server:
+    \begin{verbatim}
+    npm start
+    \end{verbatim}
+    This will launch your React app in a web browser, and you can begin development.
+    
+    \item \textbf{Edit the app:} Open the project directory in your code editor and make changes to the source code in the `src` folder. The app will automatically update in the browser as you save your changes.
+    
+    \item \textbf{Build for production:} When you're ready to deploy your app, use the following command to create a production build:
+    \begin{verbatim}
+    npm run build
+    \end{verbatim}
+    This will generate optimized and minified files in the `build` folder.
+    
+    \item \textbf{Deployment:} You can deploy your React app to various hosting platforms, such as GitHub Pages, Netlify, or a custom server. Follow the hosting platform's specific instructions for deployment.
+    
+    \item \textbf{Additional Configuration:} If needed, you can further configure your React app by editing the `package.json` and other configuration files in the project root.
+\end{enumerate}
+
+\section{Passing Data through Props in React}
+
+In React, you can pass data from a parent component to a child component using \textbf{props} (short for properties). Props allow you to send information down the component tree, enabling child components to receive and use data from their parent components.
+
+Let's consider a simple example of passing a person's name from a parent component to a child component.
+
+\subsection{Parent Component}
+
+\begin{lstlisting}[language=JavaScript, caption={ParentComponent.js}]
+import React from 'react';
+import ChildComponent from './ChildComponent';
+
+function ParentComponent() {
+    const personName = "John";
+
+    return (
+        <div>
+            <h1>Parent Component</h1>
+            <ChildComponent name={personName} />
+        </div>
+    );
+}
+
+export default ParentComponent;
+\end{lstlisting}
+
+In this example, we have a \texttt{ParentComponent} that defines a \texttt{personName} variable and renders a \texttt{ChildComponent}. We pass the \texttt{personName} as a prop called \texttt{name} to the \texttt{ChildComponent}.
+
+\subsection{Child Component}
+
+\begin{lstlisting}[language=JavaScript, caption={ChildComponent.js}]
+import React from 'react';
+
+function ChildComponent(props) {
+    return (
+        <div>
+            <h2>Child Component</h2>
+            <p>Name: {props.name}</p>
+        </div>
+    );
+}
+
+export default ChildComponent;
+\end{lstlisting}
+
+In the \texttt{ChildComponent}, we receive the \texttt{name} prop and display it within a paragraph.
+
+
+
+\section{Platform}
+\textbf{Operating System}: Arch Linux x86-64 \\
+\textbf{IDEs or Text Editors Used}: Visual Studio Code\\
+\textbf{Compilers or Interpreters}: Brave Browser (Chromium v117.0.5938.88.) \\
+
+\section{Input and Output}
+
+\begin{enumerate}
+    \item A Webpage was created for searching for images. The user can enter a search term and the number of images to be displayed. The images are fetched from the Unsplash, Pexels and Pixabay APIs, and merged into a single array. The images are then displayed on the webpage.
+    \item This was done so as to resolve the problem of having to browser multiple webpages to find high quality images for making presentations. This webpage allows the user to search for images from multiple sources at once.
+    \item The webpage was created using React and Tailwindcss. The images are fetched using the Axios library. The screenshot of the webpage is shown below.
+\end{enumerate}
+
+\section{Screenshots}
+
+\subsection{React Frontend}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{ss.png}
+    \caption{The Image Searcher Webpage, with search term: Dog. }
+\end{figure}
+
+\section{Code}
+\lstinputlisting[language=JavaScript, caption="index.js"]{../../Programs/Assignment 5/src/index.js}
+\lstinputlisting[language=JavaScript, caption="app.js"]{../../Programs/Assignment 5/src/components/App.js}
+\lstinputlisting[language=JavaScript, caption="ImageList.js"]{../../Programs/Assignment 5/src/components/ImageList.js}
+\lstinputlisting[language=JavaScript, caption="SearchInput.js"]{../../Programs/Assignment 5/src/components/SearchInput.js}
+\lstinputlisting[language=HTML, caption="index.html"]{../../Programs/Assignment 5/public/index.html}
+
+\section{Conclusion}
+Thus, we have learnt how to make a simple React Application. We have also learnt how to use Tailwindcss to style our React Application.
+\clearpage
+
+\section{FAQ}
+\begin{enumerate}
+    \item \textit{What are React states and hooks?}\\
+          \begin{enumerate}
+              \item \textbf{State} is a JavaScript object that stores a component's dynamic data and determines the component's behavior. Because state is dynamic, it enables a component to keep track of changing information in between renders and for it to be dynamic and interactive.
+              \item \textbf{Hooks} are functions that let you “hook into” React state and lifecycle features from function components. Hooks don't work inside classes — they let you use React without classes.
+          \end{enumerate}
+
+          \textbf{Their Use Cases:}
+          \begin{enumerate}
+              \item   \textbf{State:} State is used for mutable data, or data that will change. Because state is mutable, it enables a component to keep track of changing information in between renders and for it to be dynamic and interactive.
+              \item  \textbf{Hooks:} Hooks are used to add state and lifecycle methods to functional components. They also give you the ability to tie into React features from functional components.
+          \end{enumerate}
+
+\end{enumerate}
+
+\end{document}
