@@ -330,14 +330,21 @@ Creating a RESTful API with Node.js and Express is a common task for building se
 \section{Input and Output}
 
 \begin{enumerate}
-    \item A Webpage was created for searching for images. The user can enter a search term and the number of images to be displayed. The images are fetched from the Unsplash, Pexels and Pixabay APIs, and merged into a single array. The images are then displayed on the webpage.
-    \item This was done so as to resolve the problem of having to browser multiple webpages to find high quality images for making presentations. This webpage allows the user to search for images from multiple sources at once.
-    \item The webpage was created using React and Tailwindcss. The images are fetched using the Axios library. The screenshot of the webpage is shown below.
+    \item A Library Interface called 'Novel Tea' Library was set up on the front end usign React. Its Back end was then written in PHP, and the database was set up using MongoDB.
+    \item The Front end was hosted on another locolhost port, while the php server was hosted using httpd, and default php server.
+    \item The Front end was then connected to the backend using the simple FETCH API or Axios calls, and the data was sent to the backend using JSON. The responses were also sent from the backend to the Frontend using JSON.
+    \item The Features of the Library include, and therefore extend to the backend:
+          \begin{enumerate}
+              \item Adding a Book to the Library
+              \item Removing a Book from the Library
+              \item Updating a Book in the Library
+              \item Searching for a Book in the Library
+              \item Getting all the Books from the library to display.
+          \end{enumerate}
+    \item These features are demonstrated in the screenshots below.
 \end{enumerate}
 
 \section{Screenshots}
-
-\subsection{React Frontend}
 
 \subsection{React Frontend}
 \begin{figure}[H]
@@ -412,7 +419,7 @@ Creating a RESTful API with Node.js and Express is a common task for building se
 \lstinputlisting[language=HTML, caption=books.js serving routes. ]{../../Programs/Assignment 6/backend/controllers/books.js}
 
 \section{Conclusion}
-Thus, we have successfully created a REST API using Node.js and Express.js. We have also created a frontend using React.js and Tailwindcss. The frontend interacts with the backend using Axios. The backend interacts with the MongoDB database using Mongoose. The frontend and backend are hosted on Heroku. The database is hosted on MongoDB Atlas. The frontend is hosted at \url{https://noveltea.surge.sh/} and the backend is hosted at \url{https://novel-tea-library-backend.herokuapp.com/}.
+Thus, we have successfully created a REST API using Node.js and Express.js. We have also created a frontend using React.js and Tailwindcss. The frontend interacts with the backend using Axios. The backend interacts with the MongoDB database using Mongoose. The frontend and backend are hosted on Heroku. The database is hosted on MongoDB Atlas. The frontend is hosted at \href{http://noveltea.surge.sh/}{here} and the backend is hosted at locally. \href{https://github.com/KrishnarajT/NovelTea-Library}{on its github repo. }
 
 \clearpage
 

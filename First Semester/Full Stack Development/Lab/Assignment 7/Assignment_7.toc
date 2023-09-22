@@ -3,26 +3,20 @@
 \contentsline {section}{\numberline {3}Problem Statement}{1}{section.3}%
 \contentsline {section}{\numberline {4}Theory}{1}{section.4}%
 \contentsline {subsection}{\numberline {4.1}The MERN Stack}{1}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Components of the Mern Stack}{1}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Features}{1}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Advantages}{3}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}History and Significance}{3}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Steps to Create a REST API using Node and Express}{3}{subsection.4.6}%
-\contentsline {subsubsection}{\numberline {4.6.1}Set Up a Node.js Project}{3}{subsubsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.2}Install Express}{4}{subsubsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.3}Create an Express Application}{4}{subsubsection.4.6.3}%
-\contentsline {subsubsection}{\numberline {4.6.4}Define Routes and Handlers}{4}{subsubsection.4.6.4}%
-\contentsline {subsubsection}{\numberline {4.6.5}Start the Server}{4}{subsubsection.4.6.5}%
-\contentsline {subsubsection}{\numberline {4.6.6}Test Your API}{4}{subsubsection.4.6.6}%
-\contentsline {subsubsection}{\numberline {4.6.7}Add Database Integration (Optional)}{4}{subsubsection.4.6.7}%
-\contentsline {subsubsection}{\numberline {4.6.8}Deploy Your API (Optional)}{5}{subsubsection.4.6.8}%
+\contentsline {subsection}{\numberline {4.2}Features}{2}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Advantages}{2}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}History and Significance}{2}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Components of the Mern Stack}{3}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}MongoDB}{3}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Express JS}{4}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}React JS}{4}{subsubsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.4}Node JS}{5}{subsubsection.4.5.4}%
 \contentsline {section}{\numberline {5}Platform}{5}{section.5}%
 \contentsline {section}{\numberline {6}Input and Output}{5}{section.6}%
 \contentsline {section}{\numberline {7}Screenshots}{6}{section.7}%
 \contentsline {subsection}{\numberline {7.1}React Frontend}{6}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}React Frontend}{6}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Requests using Postman}{12}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Node and Express Backend}{14}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Code}{15}{section.8}%
-\contentsline {section}{\numberline {9}Conclusion}{19}{section.9}%
-\contentsline {section}{\numberline {10}FAQ}{20}{section.10}%
+\contentsline {subsection}{\numberline {7.2}Node and Express Backend}{9}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}MongoDB Database}{10}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Code}{10}{section.8}%
+\contentsline {section}{\numberline {9}Conclusion}{14}{section.9}%
+\contentsline {section}{\numberline {10}FAQ}{15}{section.10}%

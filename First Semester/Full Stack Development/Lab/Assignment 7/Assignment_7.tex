@@ -131,7 +131,7 @@ captionpos=b
 
     \huge{\textsc{
             Developing a FSD Application using MERN Stack. \\
-            Novel Tea Library
+            \textbf{ Novel Tea Library}
         }} \\
 
 
@@ -178,9 +178,9 @@ Develop a full stack web application using MERN stack to perform CRUD operations
 
 \section{Objectives}
 \begin{itemize}
-   \item To develop full-stack web projects using the MERN stack.
-   \item To learn database connectivity using fetch api.
-   \item To perform insert, update, delete and search operations on database.
+    \item To develop full-stack web projects using the MERN stack.
+    \item To learn database connectivity using fetch api.
+    \item To perform insert, update, delete and search operations on database.
 \end{itemize}
 
 \section{Problem Statement}
@@ -196,143 +196,107 @@ Publisher name and perform following operations
 \end{enumerate}
 
 \section{Theory}
-
 \subsection{The MERN Stack}
-What is MERN stack?
-Use of Fetch api.
+
 \begin{dfn}
-    The MERN stack is a JavaScript stack that’s designed to make the development process smoother. MERN includes four open-source components: MongoDB, Express, React, and Node.js. These components provide an end-to-end framework for developers to work in. MERN stack is a combination of four technologies: MongoDB, Express, React, and Node.js. It is designed to make the development process smoother and easier.
+    The MERN stack is a JavaScript stack designed to streamline the development process. MERN comprises four open-source components: MongoDB, Express, React, and Node.js. These components together create a comprehensive framework for developers. The MERN stack is known for its ability to simplify and enhance the development experience.
 \end{dfn}
 
-\subsection{Components of the Mern Stack}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.55\textwidth]{MERN Stack/MERN Stack_2.jpg}
+    \caption{The MERN Stack}
+\end{figure}
+
 \subsection{Features}
 
 \begin{enumerate}
-    \item \textbf{Statelessness:} REST APIs are stateless, meaning each request from a client to a server must contain all the information needed to understand and fulfill the request. There is no session state stored on the server between requests, making it scalable and easy to cache responses.
+    \item \textbf{Full-Stack JavaScript:} MERN is entirely built on JavaScript, making it a full-stack solution. This allows developers to use a single programming language for both the front-end (React) and back-end (Node.js).
 
-    \item \textbf{Resource-Based:} REST treats every piece of information or functionality as a resource, which can be uniquely identified using URLs. Resources can represent objects, data, or services.
+    \item \textbf{Modularity:} Each component of the MERN stack (MongoDB, Express, React, and Node.js) is modular and can be replaced or extended with other libraries or frameworks to suit specific project requirements.
 
-    \item \textbf{HTTP Methods:} REST uses standard HTTP methods such as GET, POST, PUT, DELETE, etc., to perform actions on resources. These methods provide a uniform interface for interacting with resources.
+    \item \textbf{Reusability:} React components can be reused across the application, improving code maintainability and reducing development time.
 
-    \item \textbf{Representation:} Data in REST is represented in a format, such as JSON or XML. Clients can request specific representations of resources, allowing flexibility in data exchange.
+    \item \textbf{Real-Time Updates:} MERN applications can easily incorporate real-time features using technologies like WebSockets or libraries like Socket.io.
 
-    \item \textbf{Stateless Communication:} RESTful communication between the client and server is stateless, which means each request from a client to a server must contain all the information needed. The server does not store information about the client's state between requests.
+    \item \textbf{Scalability:} MERN applications can be scaled horizontally and vertically to handle increased user loads and growing data requirements.
 
 \end{enumerate}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.95\textwidth]{rest api/rest api_2.jpg}
-    \caption{REST APIs Explained}
-\end{figure}
-
 
 \subsection{Advantages}
 
 \begin{enumerate}
-    \item \textbf{Simplicity:} REST APIs are easy to understand and use due to their simplicity. They use standard HTTP methods and rely on URLs to access resources.
+    \item \textbf{Rapid Development:} MERN's unified JavaScript ecosystem allows for quicker development, as developers can work seamlessly across the entire stack.
 
-    \item \textbf{Scalability:} Stateless nature and resource-based architecture make REST APIs highly scalable. They can handle a large number of concurrent requests.
+    \item \textbf{Community and Libraries:} The MERN stack benefits from a large and active developer community, along with numerous libraries and packages available through npm (Node Package Manager).
 
-    \item \textbf{Flexibility:} REST APIs support multiple data formats (JSON, XML, etc.) and can be used with various programming languages. This flexibility makes them suitable for diverse applications.
+    \item \textbf{Isomorphic Applications:} MERN allows for isomorphic or universal JavaScript applications, where code can run on both the server and client. This enhances SEO and improves initial page load times.
 
-    \item \textbf{Interoperability:} RESTful Web services enable interoperability between different systems and platforms, making them suitable for building distributed and heterogeneous applications.
+    \item \textbf{Single-Page Applications (SPAs):} React's component-based architecture facilitates the development of SPAs, resulting in a smooth and interactive user experience.
 
-    \item \textbf{Caching:} REST APIs can leverage caching mechanisms, improving response times and reducing server load for frequently accessed resources.
+    \item \textbf{Flexibility:} Developers have the flexibility to choose from a wide range of libraries, tools, and plugins to tailor the stack to their specific project requirements.
 
 \end{enumerate}
 
 \subsection{History and Significance}
 
 \begin{enumerate}
-    \item \textbf{Origin:} The term "REST" was introduced by Roy Fielding in his Ph.D. dissertation in 2000. It draws inspiration from the principles of the World Wide Web and HTTP.
+    \item \textbf{Origin:} The MERN stack emerged as a response to the growing popularity of JavaScript as a server-side language. It brings together key technologies, with React introduced by Facebook, Node.js by Ryan Dahl, Express by TJ Holowaychuk, and MongoDB as a NoSQL database.
 
-    \item \textbf{Significance:} REST has become the predominant architectural style for designing networked applications and web services due to its simplicity, scalability, and flexibility. It has been widely adopted for building APIs for web and mobile applications.
+    \item \textbf{Significance:} MERN has become a prominent stack for building web applications and APIs due to its versatility and efficiency. It is widely used for creating both small-scale projects and large-scale applications.
 
-    \item \textbf{Continued Evolution:} Over the years, RESTful practices and conventions have evolved, and new technologies and tools have emerged to support the development and consumption of RESTful APIs.
+    \item \textbf{Continued Development:} The MERN stack continues to evolve with updates to individual components, the introduction of new libraries, and the development of best practices. It remains a popular choice in the web development community.
 
 \end{enumerate}
 
-\subsection{Steps to Create a REST API using Node and Express}
 
-Creating a RESTful API with Node.js and Express is a common task for building server-side applications. Here are the steps to create a REST API using these technologies:
+\subsection{Components of the Mern Stack}
 
-\subsubsection{Set Up a Node.js Project}
+\subsubsection{MongoDB}
 
-\begin{enumerate}
-    \item Ensure you have Node.js installed. If not, download and install it from the official website: \url{https://nodejs.org/}.
-    \item Create a new project directory for your REST API.
-    \item Open a terminal or command prompt and navigate to your project directory.
-    \item Initialize a Node.js project by running the following command:
-          \begin{verbatim}
-    npm init -y
-    \end{verbatim}
-          This will create a `package.json` file.
-\end{enumerate}
+MongoDB is a NoSQL database that stores data in JSON-like documents. It is an open-source, cross-platform, document-oriented database written in C++. MongoDB is a NoSQL database that stores data in JSON-like documents. It is an open-source, cross-platform, document-oriented database written in C++.
 
-\subsubsection{Install Express}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.35\textwidth]{MongoDB/MongoDB_6.jpg}
+    \caption{MongoDB}
+\end{figure}
 
-\begin{enumerate}
-    \item Install Express as a dependency for your project using npm:
-          \begin{verbatim}
-    npm install express
-    \end{verbatim}
-\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.72\textwidth]{MongoDB/MongoDB_7.jpg}
+    \caption{Sample from MongoDB}
+\end{figure}
 
-\subsubsection{Create an Express Application}
+\subsubsection{Express JS}
 
-\begin{enumerate}
-    \item Create a JavaScript file (e.g., `app.js`) for your Express application.
-    \item In `app.js`, import Express and create an instance of the Express application:
-          \begin{verbatim}
-    const express = require('express');
-    const app = express();
-    \end{verbatim}
-\end{enumerate}
+Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 
-\subsubsection{Define Routes and Handlers}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.55\textwidth]{ExpressJS/ExpressJS_7.jpg}
+    \caption{Express JS}
+\end{figure}
 
-\begin{enumerate}
-    \item Define routes and request handlers for your API. For example, to create a simple endpoint that returns a JSON response:
-          \begin{verbatim}
-    app.get('/api', (req, res) => {
-        res.json({ message: 'Welcome to the REST API!' });
-    });
-    \end{verbatim}
-          You can create more complex routes and handlers as needed for your application.
-\end{enumerate}
+\subsubsection{React JS}
 
-\subsubsection{Start the Server}
+React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications. React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
 
-\begin{enumerate}
-    \item Start the Express server by specifying a port and listening for incoming requests:
-          \begin{verbatim}
-    const port = process.env.PORT || 3000;
-    app.listen(port, () => {
-        console.log(`Server is running on port ${port}`);
-    });
-    \end{verbatim}
-\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{ReactJS/ReactJS_7.jpg}
+    \caption{React Js Features}
+\end{figure}
 
-\subsubsection{Test Your API}
+\subsubsection{Node JS}
 
-\begin{enumerate}
-    \item Use a tool like Postman or your web browser to test your API by sending HTTP requests to the defined endpoints (e.g., `http://localhost:3000/api`).
-    \item Verify that your API is responding as expected.
-\end{enumerate}
+Node is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. Node is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
 
-\subsubsection{Add Database Integration (Optional)}
-
-\begin{enumerate}
-    \item If your application requires database storage, integrate a database system like MongoDB or PostgreSQL. You can use libraries like Mongoose (for MongoDB) or Sequelize (for SQL databases) to interact with the database.
-    \item Define database models and routes for CRUD operations (Create, Read, Update, Delete) on your data.
-\end{enumerate}
-
-\subsubsection{Deploy Your API (Optional)}
-
-\begin{enumerate}
-    \item Deploy your REST API to a hosting platform or server. Popular options include Heroku, AWS, Azure, and DigitalOcean.
-    \item Set up any necessary environment variables and configure your server for production use.
-\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{NodeJS/NodeJS_0.jpg}
+    \caption{Node JS}
+\end{figure}
 
 \section{Platform}
 \textbf{Operating System}: Arch Linux x86-64 \\
@@ -342,14 +306,21 @@ Creating a RESTful API with Node.js and Express is a common task for building se
 \section{Input and Output}
 
 \begin{enumerate}
-    \item A Webpage was created for searching for images. The user can enter a search term and the number of images to be displayed. The images are fetched from the Unsplash, Pexels and Pixabay APIs, and merged into a single array. The images are then displayed on the webpage.
-    \item This was done so as to resolve the problem of having to browser multiple webpages to find high quality images for making presentations. This webpage allows the user to search for images from multiple sources at once.
-    \item The webpage was created using React and Tailwindcss. The images are fetched using the Axios library. The screenshot of the webpage is shown below.
+    \item A Library Interface called 'Novel Tea' Library was set up on the front end usign React. Its Back end was then written in PHP, and the database was set up using MongoDB.
+    \item The Front end was hosted on another locolhost port, while the php server was hosted using httpd, and default php server.
+    \item The Front end was then connected to the backend using the simple FETCH API or Axios calls, and the data was sent to the backend using JSON. The responses were also sent from the backend to the Frontend using JSON.
+    \item The Features of the Library include, and therefore extend to the backend:
+          \begin{enumerate}
+              \item Adding a Book to the Library
+              \item Removing a Book from the Library
+              \item Updating a Book in the Library
+              \item Searching for a Book in the Library
+              \item Getting all the Books from the library to display.
+          \end{enumerate}
+    \item These features are demonstrated in the screenshots below.
 \end{enumerate}
 
 \section{Screenshots}
-
-\subsection{React Frontend}
 
 \subsection{React Frontend}
 \begin{figure}[H]
@@ -388,32 +359,30 @@ Creating a RESTful API with Node.js and Express is a common task for building se
     \caption{The Search Page showing results of search term "H"}
 \end{figure}
 
-\subsection{Requests using Postman}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.95\textwidth]{Screenshots/postman 1.png}
-    \caption{Requests sent using Postman}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.95\textwidth]{Screenshots/postman 2.png}
-    \caption{Requests sent using Postman}
-\end{figure}
-
-
 \subsection{Node and Express Backend}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.95\textwidth]{Screenshots/backend 1.png}
+    \includegraphics[width=.70\textwidth]{Screenshots/backend 1.png}
     \caption{The Node and Express Backend server running. It is listening on port 3000.}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.95\textwidth]{Screenshots/backend 2.png}
+    \includegraphics[width=.70\textwidth]{Screenshots/backend 2.png}
     \caption{The Node and Express Backend server running and serving request. }
+\end{figure}
+
+\subsection{MongoDB Database}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{Screenshots/mongo.png}
+    \caption{The MongoDB Compass showing the database. }
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{Screenshots/mongo 2.png}
+    \caption{The MongoDB Database}
 \end{figure}
 
 \section{Code}
@@ -424,27 +393,24 @@ Creating a RESTful API with Node.js and Express is a common task for building se
 \lstinputlisting[language=HTML, caption=books.js serving routes. ]{../../Programs/Assignment 6/backend/controllers/books.js}
 
 \section{Conclusion}
-Thus, we have successfully created a REST API using Node.js and Express.js. We have also created a frontend using React.js and Tailwindcss. The frontend interacts with the backend using Axios. The backend interacts with the MongoDB database using Mongoose. The frontend and backend are hosted on Heroku. The database is hosted on MongoDB Atlas. The frontend is hosted at \url{https://noveltea.surge.sh/} and the backend is hosted at \url{https://novel-tea-library-backend.herokuapp.com/}.
+Thus, we have successfully created a MERN Stack Application, and performed CRUD operations on it. The database is hosted on MongoDB Atlas. The frontend is hosted at \href{http://noveltea.surge.sh/}{here} and the backend is hosted at locally. \href{https://github.com/KrishnarajT/NovelTea-Library}{on its Github repo. }
 
 \clearpage
 
 \section{FAQ}
 \begin{enumerate}
-    \item \textit{What are HTTP Request types?}\\
-
-          \begin{dfn}
-              HTTP (Hypertext Transfer Protocol) is a protocol used for communication between web servers and clients. There are several types of HTTP requests that can be used to interact with a web server:
-          \end{dfn}
-
+    \item \textit{ What makes MERN stack the fastest growing tech stack?}
+          \noindent
           \begin{enumerate}
-              \item GET: retrieves a resource from the server. This is the most common type of request, and it is used to retrieve web pages, images, and other types of content.
-              \item POST: submits data to the server. This is commonly used for submitting form data, such as login credentials or search queries.
-              \item PUT: updates a resource on the server. This is used to update an existing resource, such as a file or a database record.
-              \item DELETE: deletes a resource from the server. This is used to delete an existing resource, such as a file or a database record.
-              \item HEAD: retrieves the headers for a resource. This is used to retrieve metadata about a resource, such as its content type and length, without actually retrieving the resource itself.
-              \item OPTIONS: retrieves the supported HTTP methods for a resource. This is used to determine which HTTP methods are supported by a resource, such as GET, POST, PUT, and DELETE.
+              \item \textbf{MERN is a full-stack JavaScript solution:} MERN includes four powerful technologies that work together to build dynamic web applications. These technologies are MongoDB, Express, React, and Node.js. All of these technologies are based on JavaScript, which makes it easier for developers to work on the entire stack within the same language. This also makes it easier to switch between front-end and back-end development.
+              \item \textbf{MERN is open-source:} All of the technologies in the MERN stack are open-source, which means that they are free to use and can be modified by developers. This allows developers to customize the stack to suit their specific project requirements.
+              \item \textbf{MERN is flexible and extensible:} MERN is modular and can be extended with other libraries and frameworks to suit specific project requirements. Developers can also choose from a wide range of tools and packages to customize the stack.
+              \item \textbf{MERN is easy to learn:} MERN is based on JavaScript, which is one of the most popular programming languages. This makes it easier for developers to learn the stack and build applications using the MERN stack.
+              \item \textbf{MERN is supported by a large community:} MERN has a large and active developer community, which provides support and resources for developers. This makes it easier for developers to learn the stack and build applications using the MERN stack.
+              \item \textbf{MERN is scalable:} MERN applications can be scaled horizontally and vertically to handle increased user loads and growing data requirements.
+              \item \textbf{MERN is cross-platform:} MERN applications can be deployed on any platform, including Windows, Linux, and macOS.
+              \item \textbf{MERN is secure:} MERN applications are secure by default, as they are built on top of secure technologies like MongoDB and Node.js.
           \end{enumerate}
-          Each HTTP request consists of a request method, a URL, and optional headers and data. The server responds to each request with an HTTP status code, which indicates whether the request was successful or not.
 
 
 \end{enumerate}
