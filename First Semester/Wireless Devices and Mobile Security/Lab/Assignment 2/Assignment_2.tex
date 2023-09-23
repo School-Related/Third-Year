@@ -93,7 +93,7 @@
 
 
     \huge{\textsc{
-            Tools for Digital Forensics and Investigation
+            Simulation of Two Network Nodes in NS2
         }} \\
 
 
@@ -107,7 +107,7 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Lab Assignment 1
+        Lab Assignment 2
     } % Subtitle or further description
     \vfill
 
@@ -136,27 +136,288 @@
 \setcounter{page}{1}
 
 \section{Aim}
-
-\section{Objectives}
-
+Write a program to simulate two node wireless network. You may use NetSimor NS2 or QualNet
+for this experiment.
 
 \section{Theory}
+
+\subsection{The Wireless Model}
+
+\subsection{Routing Protocols for Wireless Devices}
+
+\subsection{Creating Mobile Nodes}
+
+\begin{verbatim}
+    for { set j 0 } { $j < $val(nn)} {incr j} {
+        set node_($j) [ $ns_ node ]
+        $node_($i) random-motion 0 ;# disable random motion
+        }
+\end{verbatim}
+
+\subsection{Setting Mobile Node Movements}
+
+\begin{verbatim}
+    $node set X_ <x1>
+    $node set Y_ <y1>
+    $node set Z_ <z1>
+    $ns at $time $node setdest <x2> <y2> <speed>
+\end{verbatim}
+
+\subsection{Topology Definition}
+
+\begin{verbatim}
+    set topo [new Topography]
+    $topo load_flatgrid $val(x) $val(y)
+    where val(x) and val(y) are the boundaries used in simulation .
+\end{verbatim}
+
+\subsection{Network Components in Mobile node: }
+
+
+The network stack for a mobilenode consists of a link
+layer(LL), an ARP module connected to LL, an interface priority queue(IFq), a mac layer(MAC), a
+network interface(netIF), all connected to the channel. These network components are created and
+plumbed together in OTcl. Each component is briefly described here.
+
+\subsection{Link Layer : }
+
+The LL used by mobilenode is same as described in Chapter 14. The only difference being
+the link layer for mobilenode, has an ARP module connected to it which resolves all IP to hardware
+(Mac) address conversions. Normally for all outgoing (into the channel) packets, the packets are handed
+down to the LL by the Routing Agent. The LL hands down packets to the interface queue. For all
+incoming packets (out of the channel), the mac layer hands up packets to the LL which is then
+handed off at the nodeentry point.
+
+\subsection{ARP: }
+
+
+The Address Resolution Protocol (implemented in BSD style) module receives queries from Link
+layer. If ARP has the hardware address for destination, it writes it into the mac header of the packet.
+Otherwise it broadcasts an ARP query, and caches the packet temporarily. For each unknown destination
+hardware address, there is a buffer for a single packet. Incase additional packets to the same destination is
+sent to ARP, the earlier buffered packet is dropped. Once the hardware address of a packet’s next hop is
+known, the packet is inserted into the interface queue. The class ARPTable is implemented in
+~ns/arp.{cc,h} and ~ns/tcl/lib/ns-mobilenode.tcl.
+\subsection{Interface Queue: }
+
+
+The class PriQueue is implemented as a priority queuewhich gives priority to routing
+rotocol packets, inserting them at the head of the queue. It supports running a filter over all packets in the
+queue and removes those with a specified destination address. See ~ns/priqueue.{cc,h} for interface
+queue implementation.
+\subsection{Mac Layer: }
+
+
+Historically, ns-2 (prior to release ns-2.33) has used the implementation of IEEE 802.11
+distributed coordination function (DCF) from CMU. Starting with ns-2.33, several 802.11
+implementations are available.
+\subsection{Tap Agents: }
+
+
+Agents that subclass themselves as class Tap defined in mac.h can register themselves with
+the mac object using method installTap(). If the particular Mac protocol permits it, the tap will
+promiscuously be given all packets received by the mac layer, before address filtering is done.
+\subsection{Network Interfaces: }
+
+
+The Network Interphase layer serves as a hardware interface which is used by
+mobilenode to access thechannel. The wireless shared media interface is implemented as class
+Phy/WirelessPhy. This interface subject to collisions and the radio propagation model receives packets
+transmitted by other node interfaces to the channel. The interface stamps each transmitted packet with the
+meta-data related to the transmitting interface like the transmission power, wavelength etc. This meta-
+data in pkt header is used by the propagation model in receiving network interface to determine if the
+packet has minimum power to be received and/or captured and/or detected (carrier sense) by the
+receiving node. The model approximates the DSSS radio interface (LucentWaveLan direct-sequence
+spread-spectrum).
+\subsection{Radio Propagation Model: }
+
+
+It uses Friss-space attenuation (1/r2) at near distances and an approximation
+to Two ray Ground (1/r4) at far distances. The approximation assumes specular reflection off a flat
+ground plane.
+\subsection{Antenna: }
+
+
+An omni-directional antenna having unity gain is used by mobilenodes.
+
+
+
+\subsection{Description of some TCL Commands}
+
+\begin{enumerate}
+    \item The ‘set’ and ‘val( )’ keywords are used to initialize the configuration parameters, as shown below.
+          \begin{verbatim}
+        
+        "set val(chan) Channel/WirelessChannel"
+    \end{verbatim}
+    \item The ‘new’ keyword is used to create a new object reference to a particular class, as shown below.
+          \begin{verbatim}
+        "set ns [new Simulator]"
+          \end{verbatim}
+    \item The ‘open’ keyword is used to open a file in the given r/w/x mode. If that particular file does not exist,
+          it is created and opened, as shown below.
+          \begin{verbatim}
+        "set tf [open wireless.tr w]"
+          \end{verbatim}
+    \item The ‘trace-all’ function is used to trace the events in the opened trace file (*.tr).
+    \item The ‘namtrace-all-wireless’ function is to trace the events in the nam file created (*.nam).
+    \item The ‘load-flatgrid’ function is used to load the topography value of the simulation, like 1000 x 1000,
+          as shown below.
+          \begin{verbatim}
+        $topo load_flatgrid 500 500"
+          \end{verbatim}
+    \item The ‘create-god’ function is used to create the General Operations Director.
+    \item The ‘node-config’ function is used to configure the node by setting in it the configuration parameters.
+    \item The ‘attach-agent’ function is used to link one agent/application to another node/agent respectively.
+    \item The ‘setdest’ function is used to set the position of the node at a particular time.
+    \item The ‘start’ and ‘stop’ keywords are used to start and stop the application respectively.
+    \item The ‘proc’ keyword is used to indicate a procedure or a function.
+    \item The ‘flush-trace’ function is used to flush the traced events into the trace files.
+    \item The ‘run’ keyword is used to run the file.
+\end{enumerate}
+
+
 
 \section{Platform}
 \textbf{Operating System}: Arch Linux x86-64 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
 \textbf{Compilers or Interpreters}: Python 3.10.1\\
 
-\section{Input and Output}
+\section{Screenshots}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../../Programs/Assignment 2/Screenshots/1.jpeg}
+    \caption{Watching the Animation of the output in NAM}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../../Programs/Assignment 2/Screenshots/2.jpeg}
+    \caption{Watching the Animation of the output in NAM}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../../Programs/Assignment 2/Screenshots/4.jpeg}
+    \caption{Watching the Animation of the output in NAM}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../../Programs/Assignment 2/Screenshots/6.jpeg}
+    \caption{Running the TCL Script. }
+\end{figure}
 
 
-% \section{Code}
-% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
+
+\section{Code and Algorithm}
+\subsection{Algorithm}
+\begin{enumerate}
+    \item Initialize variables
+    \item Create a Simulator object
+    \item Create Tracing and animation file
+    \item Create Topography
+    \item Create GOD - General Operations Director
+    \item Create nodes
+    \item Create Channel (Communication PATH)
+    \item Position of the nodes (Wireless nodes needs a location)
+    \item Any mobility codes (if the nodes are moving)
+    \item Run the simulation
+\end{enumerate}
+
+\subsection{Code}
+
+\lstinputlisting[language=bash, caption=Assignment 2.tcl]{../../Programs/Assignment 2/Assignment_2.tcl}
 
 \section{Conclusion}
-Thus, We have learnt IDS systems and their types. We have also learnt about various tools based on IDS systems.
+Thus, we have studied and simulated wireless nodes with mobility.
+
 \clearpage
 
 \section{FAQ}
+
+\begin{enumerate}
+    \item \textit{Why propagation model is used in wireless network? What are the different types of it?}
+
+          Propagation models are essential in wireless networks for predicting how radio signals propagate in the environment. They serve the following purposes:
+
+          \begin{itemize}
+              \item Predict Signal Coverage: Propagation models help estimate the coverage area of wireless transmitters, enabling network planners to determine where signals can be received.
+              \item Network Design: By understanding signal behavior, network designers can optimize antenna placement, power levels, and frequency allocation.
+              \item Signal Analysis: During simulations or real-world deployments, propagation models assist in analyzing signal quality, interference, and path loss.
+          \end{itemize}
+
+          Different types of propagation models include:
+
+          \begin{itemize}
+              \item Free-Space Path Loss Model (FSPL)
+              \item Two-Ray Ground Reflection Model
+              \item Log-Distance Path Loss Model
+              \item Shadowing and Fading Models
+              \item ITU-R P.1411 Urban Propagation Model
+              \item Okumura-Hata Model
+          \end{itemize}
+
+    \item \textit{Explain different types of queue object in wireless network.}
+
+          In wireless networks, queue objects manage the flow of data packets. Several types of queue objects are used:
+
+          \begin{itemize}
+              \item DropTail Queue: This simple queue drops packets when it reaches its capacity, which can lead to unfairness.
+              \item Random Early Detection (RED) Queue: RED prevents congestion by randomly dropping packets before the queue becomes full, providing better fairness.
+              \item Class-Based Queueing (CBQ): CBQ divides traffic into classes with different priorities, allowing for QoS management.
+          \end{itemize}
+
+    \item \textit{Draw and explain trace file format in wireless network.}
+
+          Trace files record events and parameters in wireless network simulations. A typical trace file includes lines with the following format:
+
+          \begin{verbatim}
+    Event Type   Time   Node ID   Parameters...
+    ----------------------------------------
+    Send         0.1    Node 1    Packet ID: 1, Destination: Node 2
+    Receive      0.2    Node 2    Packet ID: 1
+    Drop         0.3    Node 3    Packet ID: 2, Reason: Queue Full
+    
+    Event Type indicates the type of event, Time is the simulation time,
+    Node ID identifies the involved node, and Parameters
+    provide event-specific details.
+    \end{verbatim}
+
+    \item \textit{What is the role of GOD?}
+
+          In the context of wireless network simulations using NS-2, GOD (Graphical Object Debugger) serves as a crucial tool for debugging and visualization. Its roles include real-time visualization of network simulations, packet tracing, node debugging, and event monitoring, enhancing the debugging and analysis process.
+
+          \begin{enumerate}
+              \item \textbf{Real-Time Visualization} GOD provides real-time visualization of the network simulation. It allows users to observe the movement of nodes, packet transmissions, and interactions within the simulated environment.
+
+              \item \textbf{Packet Tracing} GOD enables users to trace the paths of packets as they traverse the network. This is essential for debugging and understanding how packets move through the wireless network.
+
+              \item \textbf{Node Debugging} Users can interactively debug nodes within the simulation. This includes examining node states, variable values, and the execution of event handlers.
+
+              \item \textbf{Visualization of Node Mobility} For scenarios involving mobile nodes, GOD can display node trajectories, making it easier to assess node movements and behaviors.
+
+              \item \textbf{Event Monitoring} GOD allows users to monitor and inspect events as they occur during the simulation. This is useful for diagnosing issues and understanding the sequence of events.
+
+          \end{enumerate}
+
+
+    \item \textit{How to deal with Very large trace files?}
+
+          Managing very large trace files in wireless network simulations can be challenging. Strategies include subsampling, data compression, parallel processing, filtering, summary statistics, database storage, visualization tools, incremental analysis, resource scaling, data sampling, and archiving.
+
+
+          \begin{enumerate}
+              \item \textbf{Subsampling} Instead of analyzing the entire trace, consider subsampling by extracting a representative subset of data for analysis. This reduces the file size while retaining essential information.
+
+              \item \textbf{Data Compression} Use data compression techniques to reduce the size of trace files. Tools like gzip or tar can compress trace files before storage.
+
+              \item \textbf{Parallel Processing} If possible, leverage parallel processing or distributed computing to analyze large trace files more efficiently. Divide the analysis workload among multiple processors or nodes.
+
+          \end{enumerate}
+
+\end{enumerate}
+
 
 \end{document}

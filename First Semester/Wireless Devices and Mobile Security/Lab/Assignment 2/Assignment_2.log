@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  24 SEP 2023 01:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  24 SEP 2023 01:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/run/media/krishnaraj/Classes/University/Third Year/First Semester/Wireless Devices and Mobile Security/Lab/Assignment 1/Assignment_1.tex"
-(/run/media/krishnaraj/Classes/University/Third Year/First Semester/Wireless Devices and Mobile Security/Lab/Assignment 1/Assignment_1.tex
+**"/run/media/krishnaraj/Classes/University/Third Year/First Semester/Wireless Devices and Mobile Security/Lab/Assignment 2/Assignment_2.tex"
+(/run/media/krishnaraj/Classes/University/Third Year/First Semester/Wireless Devices and Mobile Security/Lab/Assignment 2/Assignment_2.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22> (/usr/share/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -531,8 +531,8 @@ LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count312
 \l__pdf_internal_box=\box57
-) (./Assignment_1.aux)
-\openout1 = `Assignment_1.aux'.
+) (./Assignment_2.aux)
+\openout1 = `Assignment_2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
@@ -628,9 +628,9 @@ LaTeX Font Info:    Redeclaring math accent \widehat on input line 67.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 67.
 \c@lstlisting=\count319
 Package hyperref Info: Link coloring ON on input line 67.
- (./Assignment_1.out) (./Assignment_1.out)
+ (./Assignment_2.out) (./Assignment_2.out)
 \@outlinefile=\write3
-\openout3 = `Assignment_1.out'.
+\openout3 = `Assignment_2.out'.
 
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 19.28804pt on input line 74.
@@ -647,7 +647,7 @@ LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 13.39188pt on input line 132.
- (./Assignment_1.toc
+ (./Assignment_2.toc
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 10.18341pt on input line 1.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
@@ -680,7 +680,7 @@ LaTeX Font Info:    Font shape `U/futm/m/n' will be
 (Font)              scaled to size 5.51999pt on input line 3.
 )
 \tf@toc=\write4
-\openout4 = `Assignment_1.toc'.
+\openout4 = `Assignment_2.toc'.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -692,15 +692,14 @@ LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 11.15991pt on input line 144.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 11.15991pt on input line 144.
-<Simulation/Simulation_3.jpg, id=80, 1579.9025pt x 977.6525pt>
-File: Simulation/Simulation_3.jpg Graphic file (type jpg)
-<use Simulation/Simulation_3.jpg>
-Package pdftex.def Info: Simulation/Simulation_3.jpg  used on input line 163.
-(pdftex.def)             Requested size: 211.38832pt x 130.79889pt.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 150.
+ (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 10.18341pt on input line 169.
+(Font)              scaled to size 10.18341pt on input line 201.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 13.39188pt on input line 169.
+(Font)              scaled to size 13.39188pt on input line 201.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -713,21 +712,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.169 
-       [1
+l.201 \subsection
+                 {Interface Queue: } [1
 
- <./Simulation/Simulation_3.jpg>]
-<Network Simulator 2/Network Simulator 2_1.jpg, id=91, 1284.8pt x 724.7075pt>
-File: Network Simulator 2/Network Simulator 2_1.jpg Graphic file (type jpg)
-<use Network Simulator 2/Network Simulator 2_1.jpg>
-Package pdftex.def Info: Network Simulator 2/Network Simulator 2_1.jpg  used on input line 188.
-(pdftex.def)             Requested size: 211.38832pt x 119.22878pt.
-<NS2 Architecture/NS2 Architecture_4.jpg, id=92, 770.88pt x 578.16pt>
-File: NS2 Architecture/NS2 Architecture_4.jpg Graphic file (type jpg)
-<use NS2 Architecture/NS2 Architecture_4.jpg>
-Package pdftex.def Info: NS2 Architecture/NS2 Architecture_4.jpg  used on input line 194.
-(pdftex.def)             Requested size: 305.33789pt x 229.00146pt.
-
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -735,44 +723,66 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[2 <./Network Simulator 2/Network Simulator 2_1.jpg>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[3 <./NS2 Architecture/NS2 Architecture_4.jpg>]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 254.
- (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
-)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[4]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[5{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 334--337
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 282--285
 
  []
 
-<../../Programs/Assignment 1/2.jpeg, id=141, 469.755pt x 300.12125pt>
-File: ../../Programs/Assignment 1/2.jpeg Graphic file (type jpg)
-<use ../../Programs/Assignment 1/2.jpeg>
-Package pdftex.def Info: ../../Programs/Assignment 1/2.jpeg  used on input line 342.
-(pdftex.def)             Requested size: 446.26582pt x 285.11357pt.
+<../../Programs/Assignment 2/Screenshots/1.jpeg, id=145, 1371.1225pt x 770.88pt>
+File: ../../Programs/Assignment 2/Screenshots/1.jpeg Graphic file (type jpg)
+<use ../../Programs/Assignment 2/Screenshots/1.jpeg>
+Package pdftex.def Info: ../../Programs/Assignment 2/Screenshots/1.jpeg  used on input line 290.
+(pdftex.def)             Requested size: 446.26582pt x 250.89767pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[3]
+<../../Programs/Assignment 2/Screenshots/2.jpeg, id=164, 1371.1225pt x 770.88pt>
+File: ../../Programs/Assignment 2/Screenshots/2.jpeg Graphic file (type jpg)
+<use ../../Programs/Assignment 2/Screenshots/2.jpeg>
+Package pdftex.def Info: ../../Programs/Assignment 2/Screenshots/2.jpeg  used on input line 296.
+(pdftex.def)             Requested size: 446.26582pt x 250.89767pt.
+<../../Programs/Assignment 2/Screenshots/4.jpeg, id=165, 1371.1225pt x 770.88pt>
+File: ../../Programs/Assignment 2/Screenshots/4.jpeg Graphic file (type jpg)
+<use ../../Programs/Assignment 2/Screenshots/4.jpeg>
+Package pdftex.def Info: ../../Programs/Assignment 2/Screenshots/4.jpeg  used on input line 302.
+(pdftex.def)             Requested size: 446.26582pt x 250.89767pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[4 <../../Programs/Assignment 2/Screenshots/1.jpeg> <../../Programs/Assignment 2/Screenshots/2.jpeg>]
+<../../Programs/Assignment 2/Screenshots/6.jpeg, id=172, 1371.1225pt x 770.88pt>
+File: ../../Programs/Assignment 2/Screenshots/6.jpeg Graphic file (type jpg)
+<use ../../Programs/Assignment 2/Screenshots/6.jpeg>
+Package pdftex.def Info: ../../Programs/Assignment 2/Screenshots/6.jpeg  used on input line 308.
+(pdftex.def)             Requested size: 446.26582pt x 250.89767pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[5 <../../Programs/Assignment 2/Screenshots/4.jpeg> <../../Programs/Assignment 2/Screenshots/6.jpeg>] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 331.
+ (../../Programs/Assignment 2/Assignment_2.tcl
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 8.36993pt on input line 1.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -781,11 +791,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
 [6]
-<../../Programs/Assignment 1/1.jpeg, id=149, 1371.1225pt x 389.455pt>
-File: ../../Programs/Assignment 1/1.jpeg Graphic file (type jpg)
-<use ../../Programs/Assignment 1/1.jpeg>
-Package pdftex.def Info: ../../Programs/Assignment 1/1.jpeg  used on input line 348.
-(pdftex.def)             Requested size: 446.26582pt x 126.75558pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[7])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[8]
+LaTeX Font Info:    Trying to load font information for TS1+fnc on input line 346.
+ (/usr/share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd
+File: ts1fnc.fd 2005/12/13 font definitions for TS1/fnc.
+)
+LaTeX Font Info:    Font shape `TS1/fnc/m/n' will be
+(Font)              scaled to size 10.18341pt on input line 346.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -794,15 +821,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[7 <../../Programs/Assignment 1/2.jpeg> <../../Programs/Assignment 1/1.jpeg>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[8
+[9
 
 ]
 
@@ -812,31 +831,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[9]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[10] (./Assignment_1.aux)
-Package rerunfilecheck Info: File `Assignment_1.out' has not changed.
-(rerunfilecheck)             Checksum: 164DAE637905FFED97FEAC09E64569D9;1558.
+[10] (./Assignment_2.aux)
+Package rerunfilecheck Info: File `Assignment_2.out' has not changed.
+(rerunfilecheck)             Checksum: AE401F2E2E4C88D09554CBD61F661017;3288.
  ) 
 Here is how much of TeX's memory you used:
- 13084 strings out of 477985
- 199319 string characters out of 5840058
- 1862388 words of memory out of 5000000
- 32989 multiletter control sequences out of 15000+600000
- 554567 words of font info for 81 fonts, out of 8000000 for 9000
+ 13720 strings out of 477985
+ 206280 string characters out of 5840058
+ 2174388 words of memory out of 5000000
+ 33485 multiletter control sequences out of 15000+600000
+ 558493 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,13n,76p,629b,692s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_1.pdf (12 pages, 672078 bytes).
+ 75i,13n,76p,613b,2169s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+Output written on Assignment_2.pdf (12 pages, 576124 bytes).
 PDF statistics:
- 212 PDF objects out of 1000 (max. 8388607)
- 182 compressed objects within 2 object streams
- 70 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 414 PDF objects out of 1000 (max. 8388607)
+ 382 compressed objects within 4 object streams
+ 198 named destinations out of 1000 (max. 500000)
+ 213 words of extra memory for PDF output out of 10000 (max. 10000000)
 

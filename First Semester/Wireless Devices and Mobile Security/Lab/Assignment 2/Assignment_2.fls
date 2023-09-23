@@ -1,8 +1,8 @@
-PWD /run/media/krishnaraj/Classes/University/Third Year/First Semester/Wireless Devices and Mobile Security/Lab/Assignment 1
+PWD /run/media/krishnaraj/Classes/University/Third Year/First Semester/Wireless Devices and Mobile Security/Lab/Assignment 2
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /run/media/krishnaraj/Classes/University/Third Year/First Semester/Wireless Devices and Mobile Security/Lab/Assignment 1/Assignment_1.tex
-OUTPUT Assignment_1.log
+INPUT /run/media/krishnaraj/Classes/University/Third Year/First Semester/Wireless Devices and Mobile Security/Lab/Assignment 2/Assignment_2.tex
+OUTPUT Assignment_2.log
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
@@ -684,10 +684,10 @@ INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./Assignment_1.aux
-INPUT Assignment_1.aux
-INPUT Assignment_1.aux
-OUTPUT Assignment_1.aux
+INPUT ./Assignment_2.aux
+INPUT Assignment_2.aux
+INPUT Assignment_2.aux
+OUTPUT Assignment_2.aux
 INPUT /usr/share/texmf-dist/tex/latex/fouriernc/fmlfncmi.fd
 INPUT /usr/share/texmf-dist/tex/latex/fouriernc/fmlfncmi.fd
 INPUT /usr/share/texmf-dist/tex/latex/fouriernc/fmlfncmi.fd
@@ -720,18 +720,18 @@ INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texmf-dist/tex/latex/graphics/color.sty
-INPUT ./Assignment_1.out
-INPUT Assignment_1.out
-INPUT ./Assignment_1.out
-INPUT Assignment_1.out
-INPUT ./Assignment_1.out
-INPUT Assignment_1.out
-INPUT ./Assignment_1.out
-INPUT Assignment_1.out
-OUTPUT Assignment_1.pdf
-INPUT ./Assignment_1.out
-INPUT ./Assignment_1.out
-OUTPUT Assignment_1.out
+INPUT ./Assignment_2.out
+INPUT Assignment_2.out
+INPUT ./Assignment_2.out
+INPUT Assignment_2.out
+INPUT ./Assignment_2.out
+INPUT Assignment_2.out
+INPUT ./Assignment_2.out
+INPUT Assignment_2.out
+OUTPUT Assignment_2.pdf
+INPUT ./Assignment_2.out
+INPUT ./Assignment_2.out
+OUTPUT Assignment_2.out
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncrc8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8t.tfm
@@ -749,9 +749,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncr8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8r.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncb8t.tfm
-INPUT ./Assignment_1.toc
-INPUT Assignment_1.toc
-INPUT Assignment_1.toc
+INPUT ./Assignment_2.toc
+INPUT Assignment_2.toc
+INPUT Assignment_2.toc
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncb8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8t.tfm
@@ -788,7 +788,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/fouriernc/fncmi.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/fourier/fourier-bb.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/fourier/fourier-bb.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/fourier/fourier-bb.tfm
-OUTPUT Assignment_1.toc
+OUTPUT Assignment_2.toc
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncb8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncb8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncb8t.vf
@@ -797,46 +797,68 @@ INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncr8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8r.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncb8t.tfm
-INPUT ./Simulation/Simulation_3.jpg
-INPUT ./Simulation/Simulation_3.jpg
-INPUT Simulation/Simulation_3.jpg
-INPUT ./Simulation/Simulation_3.jpg
-INPUT ./Simulation/Simulation_3.jpg
+INPUT /usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1095.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncri8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncri8t.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncri8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncri8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncb8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncb8r.tfm
-INPUT ./Network Simulator 2/Network Simulator 2_1.jpg
-INPUT ./Network Simulator 2/Network Simulator 2_1.jpg
-INPUT Network Simulator 2/Network Simulator 2_1.jpg
-INPUT ./Network Simulator 2/Network Simulator 2_1.jpg
-INPUT ./Network Simulator 2/Network Simulator 2_1.jpg
-INPUT ./NS2 Architecture/NS2 Architecture_4.jpg
-INPUT ./NS2 Architecture/NS2 Architecture_4.jpg
-INPUT NS2 Architecture/NS2 Architecture_4.jpg
-INPUT ./NS2 Architecture/NS2 Architecture_4.jpg
-INPUT ./NS2 Architecture/NS2 Architecture_4.jpg
-INPUT /usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1095.tfm
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
-INPUT ../../Programs/Assignment 1/2.jpeg
-INPUT ../../Programs/Assignment 1/2.jpeg
-INPUT ../../Programs/Assignment 1/2.jpeg
-INPUT ../../Programs/Assignment 1/2.jpeg
-INPUT ../../Programs/Assignment 1/2.jpeg
-INPUT ../../Programs/Assignment 1/1.jpeg
-INPUT ../../Programs/Assignment 1/1.jpeg
-INPUT ../../Programs/Assignment 1/1.jpeg
-INPUT ../../Programs/Assignment 1/1.jpeg
-INPUT ../../Programs/Assignment 1/1.jpeg
-INPUT Assignment_1.aux
-INPUT ./Assignment_1.out
-INPUT ./Assignment_1.out
+INPUT ../../Programs/Assignment 2/Screenshots/1.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/1.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/1.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/1.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/1.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/2.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/2.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/2.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/2.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/2.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/4.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/4.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/4.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/4.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/4.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/6.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/6.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/6.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/6.jpeg
+INPUT ../../Programs/Assignment 2/Screenshots/6.jpeg
+INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT ../../Programs/Assignment 2/Assignment_2.tcl
+INPUT ../../Programs/Assignment 2/Assignment_2.tcl
+INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt0900.tfm
+INPUT ../../Programs/Assignment 2/Assignment_2.tcl
+INPUT ../../Programs/Assignment 2/Assignment_2.tcl
+INPUT ../../Programs/Assignment 2/Assignment_2.tcl
+INPUT ../../Programs/Assignment 2/Assignment_2.tcl
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8t.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncr8t.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8r.tfm
+INPUT /usr/share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd
+INPUT /usr/share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd
+INPUT /usr/share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd
+INPUT /usr/share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8c.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncri8t.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncri8r.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncr8c.vf
+INPUT Assignment_2.aux
+INPUT ./Assignment_2.out
+INPUT ./Assignment_2.out
+INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb
