@@ -1,0 +1,341 @@
+% This is a Basic Assignment Paper but with like Code and stuff allowed in it, there is also url, hyperlinks from contents included. 
+
+\documentclass[11pt]{article}
+
+% Preamble
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage{fancyhdr, float, graphicx}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\definecolor{codepurple}{rgb}{0.58,0,0.952}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=codepurple,
+    pdfpagemode=FullScreen,
+    }
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\textit{\Large{Digital Forensics and Investigation - TY. B. Tech}}}
+\fancyhead[R]{\textit{Krishnaraj T}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{1pt}
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}[thm]{Definition}
+
+
+% Other Doc Editing
+% \parindent 0ex
+%\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+
+    %---------------------------NAMES-------------------------------
+
+    \huge\textsc{
+        MIT World Peace University
+    }\\
+
+    \vspace{0.75\baselineskip} % space after Uni Name
+
+    \LARGE{
+        Digital Forensics and Investigation\\
+        Third Year B. Tech, Semester 5
+    }
+
+    \vfill % space after Sub Name
+
+    %--------------------------TITLE-------------------------------
+
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.6pt}
+    \vspace{0.75\baselineskip} % Whitespace above the title
+
+
+
+    \huge{\textsc{
+            To demonstrate Computer forencsic application programs for recovering deleted files and or deleted partitions.
+        }} \\
+
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the title
+    \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
+    \rule{\textwidth}{1.6pt}
+
+    \vspace{1\baselineskip} % Whitespace after the title block
+
+    %--------------------------SUBTITLE --------------------------	
+
+    \LARGE\textsc{
+        Lab Assignment 3
+    } % Subtitle or further description
+    \vfill
+
+    %--------------------------AUTHOR-------------------------------
+
+    Prepared By
+    \vspace{0.5\baselineskip} % Whitespace before the editors
+
+    \Large{
+        Krishnaraj Thadesar \\
+        Cyber Security and Forensics\\
+        Batch A1, PA 20
+    }
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the editor list
+    \today
+
+\end{titlepage}
+
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\setcounter{page}{1}
+
+\section{Aim}
+Explore various computer forensic application programs for recovering deleted files and or deleted partitions and demonstrate any one such tool.
+
+\section{Objectives}
+\begin{enumerate}
+    \item Understand the concept of computer forensics and its importance in recovering deleted files and partitions.
+    \item Select one computer forensic application program and demonstrate its usage for recovering deleted files and/or partitions.
+    \item To understand the working of the tool.
+    \item To understand the importance of the tool.
+\end{enumerate}
+
+\section{Theory}
+\subsection{Introduction to Digital Data Recovery}
+Digital data recovery is a critical process in the field of information technology. It involves the retrieval of lost, deleted, or corrupted data from digital storage devices. These devices can range from hard drives and solid-state drives (SSDs) to memory cards, USB drives, and even network-attached storage (NAS) systems. Data recovery plays a vital role in safeguarding valuable information and ensuring data integrity.
+
+\subsection{Need for Data Recovery Tools}
+\subsubsection{Causes of Data Loss}
+Data loss can occur due to various reasons, including:
+\begin{itemize}
+    \item Accidental Deletion: Users unintentionally delete important files or folders.
+    \item Hardware Failure: Storage devices may experience physical or logical failures.
+    \item Software Errors: Operating system crashes or software glitches can lead to data loss.
+    \item Viruses and Malware: Malicious software can corrupt or delete files.
+\end{itemize}
+
+\subsubsection{Minimizing Downtime}
+The need for data recovery tools is evident in their ability to minimize downtime in both personal and professional settings. Organizations rely on these tools to recover critical business data, while individuals use them to retrieve cherished photos, documents, and more.
+
+\subsection{Types of Data Recovery Tools}
+Data recovery tools can be categorized into two main types:
+
+\subsubsection{Software-Based Tools}
+Software-based data recovery tools are applications that run on a computer's operating system. They employ various algorithms and techniques to recover lost data. Some notable software-based tools include:
+\begin{itemize}
+    \item \textbf{Recuva:} A user-friendly tool for recovering deleted files.
+    \item \textbf{TestDisk:} A powerful open-source tool for partition recovery.
+    \item \textbf{PhotoRec:} A tool specialized in recovering media files from various storage devices.
+\end{itemize}
+
+\subsubsection{Hardware-Based Tools}
+Hardware-based data recovery tools are specialized devices used primarily for physical data recovery. These tools are employed when a storage device has suffered severe damage or has become inaccessible through normal software-based methods.
+
+\subsection{Historical Perspective}
+\subsubsection{Early Data Recovery Tools}
+In the early days of computing, data recovery tools were rudimentary and could often recover only specific file types. These tools were limited in their capabilities and relied on basic file recovery methods.
+
+\subsubsection{Modern Data Recovery Tools}
+With advancements in technology, modern data recovery tools have evolved significantly. They now employ advanced techniques such as file carving, which allows them to recover a wide range of data formats by identifying file signatures and assembling fragmented files.
+
+\subsection{Common Data Recovery Processes}
+The data recovery process typically involves the following steps:
+
+\subsubsection{Scanning and Detection}
+Data recovery tools initiate a thorough scan of the storage device to identify lost or damaged files. During this phase, the tool identifies file headers and footers, as well as file signatures, to determine the file types present on the device.
+
+\subsubsection{File Reconstruction}
+In cases where files are fragmented or partially overwritten, data recovery tools attempt to reconstruct these files by piecing together available fragments. Advanced tools employ algorithms to determine file boundaries and recover the maximum amount of data.
+
+\subsubsection{Data Extraction}
+Once the lost data is identified and reconstructed, it is extracted from the damaged storage device. It is crucial to save the recovered data to a separate, secure location to prevent further data loss.
+
+\subsection{Challenges in Data Recovery}
+\subsubsection{Fragmentation}
+One of the primary challenges in data recovery is dealing with fragmented data. Files can be scattered across a storage device, requiring sophisticated algorithms to reassemble them correctly.
+
+\subsubsection{Encryption}
+The prevalence of data encryption poses a significant challenge to data recovery efforts. Encrypted data requires decryption keys for successful recovery, and without these keys, recovery may be impossible.
+
+\subsubsection{Physical Damage}
+In cases of severe hardware failure, such as a malfunctioning read/write head on a hard drive, physical repairs may be necessary. However, physical repairs are complex and not always successful, making them a last resort in data recovery.
+
+\subsection{Forensic Perspective on Data Recovery}
+From a forensic standpoint, digital data recovery takes on a crucial role in investigations and legal proceedings. Forensic experts often find themselves needing to recover deleted files for various reasons:
+
+\subsubsection{Importance of Recovering Deleted Files in Forensic Investigations}
+\begin{itemize}
+  \item \textit{Digital Evidence} Deleted files can contain critical digital evidence in criminal investigations. This evidence may include incriminating documents, communications, or digital footprints left by suspects.
+  \item \textit{Case Reconstruction} Recovering deleted files aids in reconstructing the sequence of events or actions that occurred on a digital device. This reconstruction can be pivotal in understanding the timeline and context of a crime.
+  \item \textit{Alibi Verification} Deleted files may also serve to corroborate or refute alibis provided by suspects or witnesses. Their recovery can help establish the credibility of statements made during an investigation.
+\end{itemize}
+
+\subsubsection{Challenges in Forensic Data Recovery}
+Forensic experts encounter unique challenges in the process of recovering deleted files:
+\begin{itemize}
+  \item \textit{Anti-Forensic Measures} Perpetrators often employ anti-forensic techniques to hinder data recovery efforts, including secure file deletion, encryption, and data obfuscation.
+  \item \textit{Chain of Custody} Maintaining a proper chain of custody for recovered data is critical in forensic investigations to ensure its admissibility as evidence in court.
+  \item \textit{Data Tampering} Recovered data must be handled with care to prevent any unintentional tampering or alteration that could compromise its integrity in legal proceedings.
+\end{itemize}
+
+\subsection{Legal and Ethical Considerations in Forensic Data Recovery}
+Forensic experts are bound by strict legal and ethical standards when recovering deleted files:
+\begin{itemize}
+  \item \textit{Search Warrants} The acquisition of digital evidence, including recovered deleted files, often requires proper search warrants and legal authorization.
+  \item \textit{Data Privacy} Respect for individuals' data privacy rights is paramount, and forensic experts must ensure that their actions are in compliance with relevant laws and regulations.
+  \item \textit{Expert Testimony} Forensic experts may be called upon to provide expert testimony in court regarding the methods used in data recovery and the authenticity of the recovered files.
+\end{itemize}
+
+\section{Deleted File Recovery Procedure}
+Using testdisk to recover deleted files and partitions.
+
+\subsection*{Files to be recovered}
+\subsubsection*{Partition Before Deletion}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/ss 01.png}
+    \caption{Partition Before Deletion}
+\end{figure}
+
+\subsubsection*{Deleting Files}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/ss 02.png}
+    \caption{Deleting Files}
+\end{figure}
+
+\subsection*{Steps}
+\subsubsection*{Selecting the disk}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/01.png}
+    \caption{Selecting the disk}
+\end{figure}
+
+\subsubsection*{Selecting the partition table type}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/02.png}
+    \caption{Selecting the partition table type}
+\end{figure}
+
+\subsubsection*{Selecting the type of files needs to be recover}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/07.png}
+    \caption{Selecting the type of files needs to be recover}
+\end{figure}
+
+\subsubsection*{Select if All space needs to be searched or just the free space}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/03.png}
+    \caption{Select if All space needs to be searched or just the free space}
+\end{figure}
+
+\subsubsection*{Selecting the Location to store the recovered files}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/04.png}
+    \caption{Selecting the Location to store the recovered files}
+\end{figure}
+
+\subsubsection*{Recovering the files}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/06.png}
+    \caption{Recovering the files}
+\end{figure}
+
+\subsubsection*{Recovered Files are Stored In the Recup\_dir.1}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/09.png}
+    \caption{Recovered Files are Stored In the Recup\_dir.1}
+\end{figure}
+
+\subsubsection*{Recovered Files}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{images/08.png}
+    \caption{Recovered Files}
+\end{figure}
+
+
+\section{Platform}
+\textbf{Operating System}: Arch Linux x86-64 \\
+\textbf{IDEs or Text Editors Used}: Visual Studio Code\\
+\textbf{Compilers or Interpreters}: None.\\
+
+% \section{Code}
+% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
+
+\section{Conclusion}
+In forensic investigations, the recovery of deleted files is not only valuable but often essential for uncovering the truth and building a strong case. \\
+
+Forensic experts face distinct challenges in this process, including countering anti-forensic measures, maintaining chain of custody, and upholding legal and ethical standards. Nevertheless, their expertise in digital data recovery is pivotal in delivering justice and ensuring the integrity of the legal system.\\
+
+We have successfully explored and Studied various computer forensic application programs for recovering deleted files and or deleted partitions and demonstrated any one such tool.
+
+\clearpage
+
+\pagebreak
+\begin{thebibliography}{}
+    \bibitem{Software Suggest}
+    \href{https://www.softwaresuggest.com/blog/top-free-open-source-data-recovery-software/}{Open Source Data Recovery Software List}\\
+    Software Suggest
+
+    \bibitem{Test Disk Data Recovery Software}
+    \href{https://www.cgsecurity.org/wiki/TestDisk}{TestDisk Page} \\Test Disk Data Recovery Software
+
+    \bibitem{Documentation for Test Disk Data Recovery Software}
+    \href{https://www.cgsecurity.org/wiki/TestDisk}{TestDisk Docs} \\Documentation for Test Disk Data Recovery Software
+\end{thebibliography}
+\end{document}
