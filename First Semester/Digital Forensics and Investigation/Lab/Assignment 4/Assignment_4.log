@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  23 SEP 2023 22:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  25 SEP 2023 18:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -640,6 +640,7 @@ LaTeX Font Info:    Redeclaring math accent \widehat on input line 68.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 68.
 \c@lstlisting=\count320
 Package hyperref Info: Link coloring ON on input line 68.
+ (./Assignment_4.out) (./Assignment_4.out)
 \@outlinefile=\write3
 \openout3 = `Assignment_4.out'.
 
@@ -658,8 +659,38 @@ LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 13.39188pt on input line 133.
-
-No file Assignment_4.toc.
+ (./Assignment_4.toc
+LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
+(Font)              scaled to size 10.18341pt on input line 1.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 7.71893pt on input line 4.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 5.57996pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for FML+fncm on input line 4.
+ (/usr/share/texmf-dist/tex/latex/fouriernc/fmlfncm.fd
+File: fmlfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncm.
+)
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
+)
 \tf@toc=\write4
 \openout4 = `Assignment_4.toc'.
 
@@ -670,22 +701,29 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 l.135 \clearpage
                  [1]
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 11.15991pt on input line 151.
+(Font)              scaled to size 11.15991pt on input line 150.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 11.15991pt on input line 151.
-LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 10.18341pt on input line 155.
-LaTeX Font Info:    Trying to load font information for TS1+fnc on input line 158.
+(Font)              scaled to size 11.15991pt on input line 150.
+LaTeX Font Info:    Trying to load font information for TS1+fnc on input line 153.
  (/usr/share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd
 File: ts1fnc.fd 2005/12/13 font definitions for TS1/fnc.
 )
 LaTeX Font Info:    Font shape `TS1/fnc/m/n' will be
-(Font)              scaled to size 10.18341pt on input line 158.
-LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 10.18341pt on input line 172.
-LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 13.39188pt on input line 172.
+(Font)              scaled to size 10.18341pt on input line 153.
 
+Overfull \hbox (13.60889pt too wide) in paragraph at lines 163--164
+[]\T1/fnc/m/n/10.95 macOS uti-lizes the 'Con-sole' ap-pli-ca-tion to view sys-tem logs, in-clud-ing ker-nel logs and application-
+ []
+
+<elasticsearch/elasticsearch_0.jpg, id=110, 2007.5pt x 997.7275pt>
+File: elasticsearch/elasticsearch_0.jpg Graphic file (type jpg)
+<use elasticsearch/elasticsearch_0.jpg>
+Package pdftex.def Info: elasticsearch/elasticsearch_0.jpg  used on input line 172.
+(pdftex.def)             Requested size: 211.38832pt x 105.04611pt.
+LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
+(Font)              scaled to size 10.18341pt on input line 175.
+LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
+(Font)              scaled to size 13.39188pt on input line 175.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -697,10 +735,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.172 \begin{itemize}
-                      [1
+l.175     \item S
+                 plunk is a popular commercial tool for log analysis, offeri... [1
 
 ]
+<fluentd/fluentd_4.jpg, id=118, 1275.76625pt x 524.45938pt>
+File: fluentd/fluentd_4.jpg Graphic file (type jpg)
+<use fluentd/fluentd_4.jpg>
+Package pdftex.def Info: fluentd/fluentd_4.jpg  used on input line 179.
+(pdftex.def)             Requested size: 211.38832pt x 86.90018pt.
+<graylog/graylog_4.jpg, id=120, 2258.4375pt x 1399.2275pt>
+File: graylog/graylog_4.jpg Graphic file (type jpg)
+<use graylog/graylog_4.jpg>
+Package pdftex.def Info: graylog/graylog_4.jpg  used on input line 184.
+(pdftex.def)             Requested size: 211.38832pt x 130.96375pt.
+File: graylog/graylog_4.jpg Graphic file (type jpg)
+<use graylog/graylog_4.jpg>
+Package pdftex.def Info: graylog/graylog_4.jpg  used on input line 190.
+(pdftex.def)             Requested size: 211.38832pt x 130.96375pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -708,7 +761,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[2]
+[2 <./elasticsearch/elasticsearch_0.jpg> <./fluentd/fluentd_4.jpg> <./graylog/graylog_4.jpg>]
+<kibana/kibana_6.jpg, id=130, 702.625pt x 481.8pt>
+File: kibana/kibana_6.jpg Graphic file (type jpg)
+<use kibana/kibana_6.jpg>
+Package pdftex.def Info: kibana/kibana_6.jpg  used on input line 199.
+(pdftex.def)             Requested size: 211.38832pt x 144.9528pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -716,25 +775,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[3]
-
-LaTeX Warning: File `images/ss 01.png' not found on input line 243.
-
-
-/run/media/krishnaraj/Classes/University/Third Year/First Semester/Digital Forensics and Investigation/Lab/Assignment 4/Assignment_4.tex:243: Package pdftex.def Error: File `images/ss 01.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.243 ...s[width=0.95\textwidth]{images/ss 01.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 243.
-(/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+[3 <./kibana/kibana_6.jpg>]
+<Event logger/Event logger_0.jpg, id=138, 1027.84pt x 770.88pt>
+File: Event logger/Event logger_0.jpg Graphic file (type jpg)
+<use Event logger/Event logger_0.jpg>
+Package pdftex.def Info: Event logger/Event logger_0.jpg  used on input line 228.
+(pdftex.def)             Requested size: 211.38832pt x 158.53722pt.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 242.
+ (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -743,21 +796,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[4]
-
-LaTeX Warning: File `images/ss 02.png' not found on input line 250.
-
-
-/run/media/krishnaraj/Classes/University/Third Year/First Semester/Digital Forensics and Investigation/Lab/Assignment 4/Assignment_4.tex:250: Package pdftex.def Error: File `images/ss 02.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.250 ...s[width=0.95\textwidth]{images/ss 02.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+[4{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./Event logger/Event logger_0.jpg>]
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 8.36993pt on input line 248.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -766,22 +807,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[5{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-
-LaTeX Warning: File `images/01.png' not found on input line 258.
-
-
-/run/media/krishnaraj/Classes/University/Third Year/First Semester/Digital Forensics and Investigation/Lab/Assignment 4/Assignment_4.tex:258: Package pdftex.def Error: File `images/01.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.258 ...hics[width=0.95\textwidth]{images/01.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
+[5]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -791,21 +817,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6]
 
-LaTeX Warning: File `images/02.png' not found on input line 265.
-
-
-/run/media/krishnaraj/Classes/University/Third Year/First Semester/Digital Forensics and Investigation/Lab/Assignment 4/Assignment_4.tex:265: Package pdftex.def Error: File `images/02.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.265 ...hics[width=0.95\textwidth]{images/02.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.93642pt}.
@@ -814,21 +825,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7]
 
-LaTeX Warning: File `images/07.png' not found on input line 272.
-
-
-/run/media/krishnaraj/Classes/University/Third Year/First Semester/Digital Forensics and Investigation/Lab/Assignment 4/Assignment_4.tex:272: Package pdftex.def Error: File `images/07.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.272 ...hics[width=0.95\textwidth]{images/07.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.93642pt}.
@@ -836,20 +832,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
 [8]
+Underfull \hbox (badness 10000) in paragraph at lines 416--419
 
-LaTeX Warning: File `images/03.png' not found on input line 279.
-
-
-/run/media/krishnaraj/Classes/University/Third Year/First Semester/Digital Forensics and Investigation/Lab/Assignment 4/Assignment_4.tex:279: Package pdftex.def Error: File `images/03.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.279 ...hics[width=0.95\textwidth]{images/03.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -860,161 +845,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [9]
 
-LaTeX Warning: File `images/04.png' not found on input line 286.
-
-
-/run/media/krishnaraj/Classes/University/Third Year/First Semester/Digital Forensics and Investigation/Lab/Assignment 4/Assignment_4.tex:286: Package pdftex.def Error: File `images/04.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.286 ...hics[width=0.95\textwidth]{images/04.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.93642pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[10]
-
-LaTeX Warning: File `images/06.png' not found on input line 293.
-
-
-/run/media/krishnaraj/Classes/University/Third Year/First Semester/Digital Forensics and Investigation/Lab/Assignment 4/Assignment_4.tex:293: Package pdftex.def Error: File `images/06.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.293 ...hics[width=0.95\textwidth]{images/06.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[11]
-
-LaTeX Warning: File `images/09.png' not found on input line 300.
-
-
-/run/media/krishnaraj/Classes/University/Third Year/First Semester/Digital Forensics and Investigation/Lab/Assignment 4/Assignment_4.tex:300: Package pdftex.def Error: File `images/09.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.300 ...hics[width=0.95\textwidth]{images/09.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[12]
-
-LaTeX Warning: File `images/08.png' not found on input line 307.
-
-
-/run/media/krishnaraj/Classes/University/Third Year/First Semester/Digital Forensics and Investigation/Lab/Assignment 4/Assignment_4.tex:307: Package pdftex.def Error: File `images/08.png' not found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.307 ...hics[width=0.95\textwidth]{images/08.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 313--316
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 321--322
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 323--324
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[15]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[16
+[10
 
 ] (./Assignment_4.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Assignment_4.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Assignment_4.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  A14BC36EBE5BCE49F56E297D92B7AC6F;5245.
+Package rerunfilecheck Info: File `Assignment_4.out' has not changed.
+(rerunfilecheck)             Checksum: EF337ADDF9B2C79B63A8959F20C1A977;3937.
  ) 
 Here is how much of TeX's memory you used:
- 13409 strings out of 477985
- 205960 string characters out of 5840058
- 1859388 words of memory out of 5000000
- 33300 multiletter control sequences out of 15000+600000
- 547274 words of font info for 60 fonts, out of 8000000 for 9000
+ 14012 strings out of 477985
+ 209655 string characters out of 5840058
+ 2390388 words of memory out of 5000000
+ 33784 multiletter control sequences out of 15000+600000
+ 558493 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,12n,76p,583b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_4.pdf (18 pages, 96480 bytes).
+ 75i,13n,76p,599b,2002s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+Output written on Assignment_4.pdf (12 pages, 1290248 bytes).
 PDF statistics:
- 183 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
- 76 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 388 PDF objects out of 1000 (max. 8388607)
+ 352 compressed objects within 4 object streams
+ 186 named destinations out of 1000 (max. 500000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 

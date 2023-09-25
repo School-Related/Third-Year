@@ -1,29 +1,19 @@
 \contentsline {section}{\numberline {1}Aim}{1}{section.1}%
 \contentsline {section}{\numberline {2}Objectives}{1}{section.2}%
 \contentsline {section}{\numberline {3}Theory}{1}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Introduction to Digital Data Recovery}{1}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Need for Data Recovery Tools}{1}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Causes of Data Loss}{1}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Minimizing Downtime}{1}{subsubsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.3}Types of Data Recovery Tools}{1}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Software-Based Tools}{2}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Hardware-Based Tools}{2}{subsubsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.4}Historical Perspective}{2}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Early Data Recovery Tools}{2}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Modern Data Recovery Tools}{2}{subsubsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.5}Common Data Recovery Processes}{2}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Scanning and Detection}{2}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}File Reconstruction}{2}{subsubsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.3}Data Extraction}{2}{subsubsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.6}Challenges in Data Recovery}{3}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}Fragmentation}{3}{subsubsection.3.6.1}%
-\contentsline {subsubsection}{\numberline {3.6.2}Encryption}{3}{subsubsection.3.6.2}%
-\contentsline {subsubsection}{\numberline {3.6.3}Physical Damage}{3}{subsubsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.7}Forensic Perspective on Data Recovery}{3}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Importance of Recovering Deleted Files in Forensic Investigations}{3}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Challenges in Forensic Data Recovery}{3}{subsubsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.8}Legal and Ethical Considerations in Forensic Data Recovery}{4}{subsection.3.8}%
-\contentsline {section}{\numberline {4}Deleted File Recovery Procedure}{4}{section.4}%
-\contentsline {section}{\numberline {5}Platform}{14}{section.5}%
-\contentsline {section}{\numberline {6}Conclusion}{15}{section.6}%
-\contentsline {section}{References}{16}{section*.14}%
+\contentsline {subsection}{\numberline {3.1}System Logs}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}System Logs on Various Operating Systems}{1}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Tools to Analyse System Logs}{1}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Event Viewer in Windows}{3}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Scenarios that can be detected from System Logs}{4}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Scenarios Performed and Results on Linux}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Mounting Hard Disk Partitions}{5}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Connecting and Disconnecting the Wireless Mouse}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Connecting and Disconnecting the Wireless Keyboard}{5}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Connecting and Disconnecting a Pendrive after Ejecting it Safely. }{6}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Connecting and Disconnecting a Pendrive without Ejecting it Safely. }{7}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Switching on Bluetooth}{8}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Connecting to a Bluetooth Headset}{8}{subsection.4.7}%
+\contentsline {section}{\numberline {5}Platform}{9}{section.5}%
+\contentsline {section}{\numberline {6}Conclusion}{9}{section.6}%
+\contentsline {section}{References}{10}{section*.2}%

@@ -1,0 +1,1133 @@
+# Mounting Devices
+
+Sep 24 14:45:06 Krishnaraj-Arch ntfs-3g[6854]: Version 2022.10.3 external FUSE 29
+Sep 24 14:45:06 Krishnaraj-Arch ntfs-3g[6854]: Mounted /dev/sda6 (Read-Write, label "Programs", NTFS 3.1)
+Sep 24 14:45:06 Krishnaraj-Arch ntfs-3g[6854]: Cmdline options: rw
+Sep 24 14:45:06 Krishnaraj-Arch ntfs-3g[6854]: Mount options: allow_other,nonempty,relatime,rw,fsname=/dev/sda6,blkdev,blksize=4096
+Sep 24 14:45:06 Krishnaraj-Arch ntfs-3g[6854]: Ownership and permissions disabled, configuration type 7
+Sep 24 14:45:06 Krishnaraj-Arch sudo[6844]: pam_unix(sudo:session): session closed for user root
+Sep 24 14:45:06 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service' requested by ':1.86' (uid=1000 pid=2564 comm="/usr/bin/gnome-shell")
+Sep 24 14:45:06 Krishnaraj-Arch systemd[1]: Starting Hostname Service...
+Sep 24 14:45:06 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.home1' unit='dbus-org.freedesktop.home1.service' requested by ':1.142' (uid=0 pid=6856 comm="sudo mount --mkdir /dev/sda3 /run/media/krishnaraj")
+Sep 24 14:45:06 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.home1.service': Unit dbus-org.freedesktop.home1.service not found.
+Sep 24 14:45:06 Krishnaraj-Arch sudo[6856]: krishnaraj : TTY=pts/3 ; PWD=/home/krishnaraj ; USER=root ; COMMAND=/usr/bin/mount --mkdir /dev/sda3 /run/media/krishnaraj/Windows
+Sep 24 14:45:06 Krishnaraj-Arch sudo[6856]: pam_unix(sudo:session): session opened for user root(uid=0) by krishnaraj(uid=1000)
+Sep 24 14:45:06 Krishnaraj-Arch dbus-daemon[2306]: [session uid=1000 pid=2306] Activating service name='org.gnome.Shell.HotplugSniffer' requested by ':1.14' (uid=1000 pid=2564 comm="/usr/bin/gnome-shell")
+Sep 24 14:45:06 Krishnaraj-Arch nautilus[3037]: destroyed file has call_when_ready pending
+Sep 24 14:45:06 Krishnaraj-Arch dbus-daemon[2306]: [session uid=1000 pid=2306] Successfully activated service 'org.gnome.Shell.HotplugSniffer'
+Sep 24 14:45:06 Krishnaraj-Arch dbus-daemon[487]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Sep 24 14:45:06 Krishnaraj-Arch systemd[1]: Started Hostname Service.
+Sep 24 14:45:06 Krishnaraj-Arch ntfs-3g[6880]: Version 2022.10.3 external FUSE 29
+
+
+
+
+Sep 24 14:45:06 Krishnaraj-Arch ntfs-3g[6880]: Mounted /dev/sda3 (Read-Write, label "", NTFS 3.1)
+Sep 24 14:45:06 Krishnaraj-Arch ntfs-3g[6880]: Cmdline options: rw
+Sep 24 14:45:06 Krishnaraj-Arch ntfs-3g[6880]: Mount options: allow_other,nonempty,relatime,rw,fsname=/dev/sda3,blkdev,blksize=4096
+Sep 24 14:45:06 Krishnaraj-Arch ntfs-3g[6880]: Ownership and permissions disabled, configuration type 7
+Sep 24 14:45:06 Krishnaraj-Arch sudo[6856]: pam_unix(sudo:session): session closed for user root
+Sep 24 14:45:06 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.home1' unit='dbus-org.freedesktop.home1.service' requested by ':1.144' (uid=0 pid=6882 comm="sudo mount --mkdir /dev/sdb5 /run/media/krishnaraj")
+Sep 24 14:45:06 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.home1.service': Unit dbus-org.freedesktop.home1.service not found.
+Sep 24 14:45:06 Krishnaraj-Arch sudo[6882]: krishnaraj : TTY=pts/3 ; PWD=/home/krishnaraj ; USER=root ; COMMAND=/usr/bin/mount --mkdir /dev/sdb5 /run/media/krishnaraj/Extras
+Sep 24 14:45:06 Krishnaraj-Arch sudo[6882]: pam_unix(sudo:session): session opened for user root(uid=0) by krishnaraj(uid=1000)
+Sep 24 14:45:07 Krishnaraj-Arch ntfs-3g[6890]: Version 2022.10.3 external FUSE 29
+
+
+
+
+Sep 24 14:45:07 Krishnaraj-Arch ntfs-3g[6890]: Mounted /dev/sdb5 (Read-Write, label "Extras", NTFS 3.1)
+Sep 24 14:45:07 Krishnaraj-Arch ntfs-3g[6890]: Cmdline options: rw
+Sep 24 14:45:07 Krishnaraj-Arch ntfs-3g[6890]: Mount options: allow_other,nonempty,relatime,rw,fsname=/dev/sdb5,blkdev,blksize=4096
+Sep 24 14:45:07 Krishnaraj-Arch ntfs-3g[6890]: Ownership and permissions disabled, configuration type 7
+Sep 24 14:45:07 Krishnaraj-Arch sudo[6882]: pam_unix(sudo:session): session closed for user root
+Sep 24 14:45:07 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.home1' unit='dbus-org.freedesktop.home1.service' requested by ':1.145' (uid=0 pid=6895 comm="sudo mount --mkdir /dev/sdb10 /run/media/krishnara")
+Sep 24 14:45:07 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.home1.service': Unit dbus-org.freedesktop.home1.service not found.
+Sep 24 14:45:07 Krishnaraj-Arch sudo[6895]: krishnaraj : TTY=pts/3 ; PWD=/home/krishnaraj ; USER=root ; COMMAND=/usr/bin/mount --mkdir /dev/sdb10 /run/media/krishnaraj/Photos
+Sep 24 14:45:07 Krishnaraj-Arch sudo[6895]: pam_unix(sudo:session): session opened for user root(uid=0) by krishnaraj(uid=1000)
+Sep 24 14:45:07 Krishnaraj-Arch nautilus[3037]: destroyed file has call_when_ready pending
+Sep 24 14:45:09 Krishnaraj-Arch ntfs-3g[6907]: Version 2022.10.3 external FUSE 29
+
+
+
+Sep 24 14:45:09 Krishnaraj-Arch ntfs-3g[6907]: Mounted /dev/sdb10 (Read-Write, label "Photos And Media", NTFS 3.1)
+Sep 24 14:45:09 Krishnaraj-Arch ntfs-3g[6907]: Cmdline options: rw
+Sep 24 14:45:09 Krishnaraj-Arch ntfs-3g[6907]: Mount options: allow_other,nonempty,relatime,rw,fsname=/dev/sdb10,blkdev,blksize=4096
+Sep 24 14:45:09 Krishnaraj-Arch ntfs-3g[6907]: Ownership and permissions disabled, configuration type 7
+Sep 24 14:45:09 Krishnaraj-Arch sudo[6895]: pam_unix(sudo:session): session closed for user root
+Sep 24 14:45:09 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.home1' unit='dbus-org.freedesktop.home1.service' requested by ':1.146' (uid=0 pid=6912 comm="sudo mount --mkdir /dev/sdb11 /run/media/krishnara")
+Sep 24 14:45:09 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.home1.service': Unit dbus-org.freedesktop.home1.service not found.
+Sep 24 14:45:09 Krishnaraj-Arch sudo[6912]: krishnaraj : TTY=pts/3 ; PWD=/home/krishnaraj ; USER=root ; COMMAND=/usr/bin/mount --mkdir /dev/sdb11 /run/media/krishnaraj/Miscellaneous
+Sep 24 14:45:09 Krishnaraj-Arch sudo[6912]: pam_unix(sudo:session): session opened for user root(uid=0) by krishnaraj(uid=1000)
+Sep 24 14:45:09 Krishnaraj-Arch nautilus[3037]: destroyed file has call_when_ready pending
+Sep 24 14:45:09 Krishnaraj-Arch nautilus[3037]: destroyed file has call_when_ready pending
+Sep 24 14:45:10 Krishnaraj-Arch ntfs-3g[6929]: Version 2022.10.3 external FUSE 29
+
+
+
+Sep 24 14:45:10 Krishnaraj-Arch ntfs-3g[6929]: Mounted /dev/sdb11 (Read-Write, label "Miscellaneous", NTFS 3.1)
+Sep 24 14:45:10 Krishnaraj-Arch ntfs-3g[6929]: Cmdline options: rw
+Sep 24 14:45:10 Krishnaraj-Arch ntfs-3g[6929]: Mount options: allow_other,nonempty,relatime,rw,fsname=/dev/sdb11,blkdev,blksize=4096
+Sep 24 14:45:10 Krishnaraj-Arch ntfs-3g[6929]: Ownership and permissions disabled, configuration type 7
+Sep 24 14:45:10 Krishnaraj-Arch sudo[6912]: pam_unix(sudo:session): session closed for user root
+Sep 24 14:45:11 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.home1' unit='dbus-org.freedesktop.home1.service' requested by ':1.147' (uid=0 pid=6934 comm="sudo mount --mkdir /dev/sdb6 /run/media/krishnaraj")
+Sep 24 14:45:11 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.home1.service': Unit dbus-org.freedesktop.home1.service not found.
+Sep 24 14:45:11 Krishnaraj-Arch sudo[6934]: krishnaraj : TTY=pts/3 ; PWD=/home/krishnaraj ; USER=root ; COMMAND=/usr/bin/mount --mkdir /dev/sdb6 /run/media/krishnaraj/Classes
+Sep 24 14:45:11 Krishnaraj-Arch sudo[6934]: pam_unix(sudo:session): session opened for user root(uid=0) by krishnaraj(uid=1000)
+Sep 24 14:45:11 Krishnaraj-Arch nautilus[3037]: destroyed file has call_when_ready pending
+Sep 24 14:45:11 Krishnaraj-Arch nautilus[3037]: destroyed file has call_when_ready pending
+Sep 24 14:45:12 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:45:12 Krishnaraj-Arch ntfs-3g[6950]: Version 2022.10.3 external FUSE 29
+
+
+
+Sep 24 14:45:12 Krishnaraj-Arch ntfs-3g[6950]: Mounted /dev/sdb6 (Read-Write, label "Classes", NTFS 3.1)
+Sep 24 14:45:12 Krishnaraj-Arch ntfs-3g[6950]: Cmdline options: rw
+Sep 24 14:45:12 Krishnaraj-Arch ntfs-3g[6950]: Mount options: allow_other,nonempty,relatime,rw,fsname=/dev/sdb6,blkdev,blksize=4096
+Sep 24 14:45:12 Krishnaraj-Arch ntfs-3g[6950]: Ownership and permissions disabled, configuration type 7
+Sep 24 14:45:12 Krishnaraj-Arch sudo[6934]: pam_unix(sudo:session): session closed for user root
+Sep 24 14:45:12 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.home1' unit='dbus-org.freedesktop.home1.service' requested by ':1.148' (uid=0 pid=6953 comm="sudo mount --mkdir /dev/sdb1 /run/media/krishnaraj")
+Sep 24 14:45:12 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.home1.service': Unit dbus-org.freedesktop.home1.service not found.
+Sep 24 14:45:12 Krishnaraj-Arch sudo[6953]: krishnaraj : TTY=pts/3 ; PWD=/home/krishnaraj ; USER=root ; COMMAND=/usr/bin/mount --mkdir /dev/sdb1 /run/media/krishnaraj/Courses
+Sep 24 14:45:12 Krishnaraj-Arch sudo[6953]: pam_unix(sudo:session): session opened for user root(uid=0) by krishnaraj(uid=1000)
+Sep 24 14:45:12 Krishnaraj-Arch nautilus[3037]: destroyed file has call_when_ready pending
+Sep 24 14:45:12 Krishnaraj-Arch nautilus[3037]: destroyed file has call_when_ready pending
+Sep 24 14:45:13 Krishnaraj-Arch ntfs-3g[6972]: Version 2022.10.3 external FUSE 29
+
+
+
+Sep 24 14:45:13 Krishnaraj-Arch ntfs-3g[6972]: Mounted /dev/sdb1 (Read-Write, label "Courses", NTFS 3.1)
+Sep 24 14:45:13 Krishnaraj-Arch ntfs-3g[6972]: Cmdline options: rw
+Sep 24 14:45:13 Krishnaraj-Arch ntfs-3g[6972]: Mount options: allow_other,nonempty,relatime,rw,fsname=/dev/sdb1,blkdev,blksize=4096
+Sep 24 14:45:13 Krishnaraj-Arch ntfs-3g[6972]: Ownership and permissions disabled, configuration type 7
+Sep 24 14:45:13 Krishnaraj-Arch sudo[6953]: pam_unix(sudo:session): session closed for user root
+Sep 24 14:45:13 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.home1' unit='dbus-org.freedesktop.home1.service' requested by ':1.149' (uid=0 pid=6973 comm="sudo mount --mkdir /dev/sdb2 /run/media/krishnaraj")
+Sep 24 14:45:13 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.home1.service': Unit dbus-org.freedesktop.home1.service not found.
+Sep 24 14:45:13 Krishnaraj-Arch sudo[6973]: krishnaraj : TTY=pts/3 ; PWD=/home/krishnaraj ; USER=root ; COMMAND=/usr/bin/mount --mkdir /dev/sdb2 /run/media/krishnaraj/VBoxes
+Sep 24 14:45:13 Krishnaraj-Arch sudo[6973]: pam_unix(sudo:session): session opened for user root(uid=0) by krishnaraj(uid=1000)
+Sep 24 14:45:13 Krishnaraj-Arch nautilus[3037]: destroyed file has call_when_ready pending
+Sep 24 14:45:13 Krishnaraj-Arch nautilus[3037]: destroyed file has call_when_ready pending
+Sep 24 14:45:13 Krishnaraj-Arch gnome-shell[2564]: Unhandled promise rejection. To suppress this warning, add an error handler to your promise chain with .catch() or a try-catch block around your await expression. Stack trace of the failed promise:
+                                                     _onMountAdded@resource:///org/gnome/shell/ui/components/autorunManager.js:146:24
+Sep 24 14:45:13 Krishnaraj-Arch gnome-shell[2564]: Unhandled promise rejection. To suppress this warning, add an error handler to your promise chain with .catch() or a try-catch block around your await expression. Stack trace of the failed promise:
+                                                     _onMountAdded@resource:///org/gnome/shell/ui/components/autorunManager.js:146:24
+Sep 24 14:45:13 Krishnaraj-Arch ntfs-3g[6989]: Version 2022.10.3 external FUSE 29
+
+
+
+Sep 24 14:45:13 Krishnaraj-Arch ntfs-3g[6989]: Mounted /dev/sdb2 (Read-Write, label "Virtual Boxes", NTFS 3.1)
+Sep 24 14:45:13 Krishnaraj-Arch ntfs-3g[6989]: Cmdline options: rw
+Sep 24 14:45:13 Krishnaraj-Arch ntfs-3g[6989]: Mount options: allow_other,nonempty,relatime,rw,fsname=/dev/sdb2,blkdev,blksize=4096
+Sep 24 14:45:13 Krishnaraj-Arch ntfs-3g[6989]: Ownership and permissions disabled, configuration type 7
+Sep 24 14:45:13 Krishnaraj-Arch sudo[6973]: pam_unix(sudo:session): session closed for user root
+Sep 24 14:45:13 Krishnaraj-Arch dbus-daemon[2306]: [session uid=1000 pid=2306] Activating service name='org.gnome.Shell.HotplugSniffer' requested by ':1.14' (uid=1000 pid=2564 comm="/usr/bin/gnome-shell")
+Sep 24 14:45:14 Krishnaraj-Arch dbus-daemon[2306]: [session uid=1000 pid=2306] Successfully activated service 'org.gnome.Shell.HotplugSniffer'
+
+
+# Mouse Disconnected
+
+
+
+# Mouse Connected
+
+
+Sep 24 14:46:58 Krishnaraj-Arch kernel: usb 1-3: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Sep 24 14:46:58 Krishnaraj-Arch kernel: usb 1-3: Product: USB Receiver
+Sep 24 14:46:58 Krishnaraj-Arch kernel: usb 1-3: Manufacturer: Logitech
+Sep 24 14:46:58 Krishnaraj-Arch kernel: logitech-djreceiver 0003:046D:C52B.000A: hiddev96,hidraw0: USB HID v1.11 Device [Logitech USB Receiver] on usb-0000:00:14.0-3/input2
+Sep 24 14:46:59 Krishnaraj-Arch kernel: input: Logitech M585/M590 as /devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.2/0003:046D:C52B.000A/0003:046D:406B.000B/input/input31
+Sep 24 14:46:59 Krishnaraj-Arch kernel: logitech-hidpp-device 0003:046D:406B.000B: input,hidraw1: USB HID v1.11 Keyboard [Logitech M585/M590] on usb-0000:00:14.0-3/input2:1
+Sep 24 14:46:59 Krishnaraj-Arch mtp-probe[7278]: checking bus 1, device 6: "/sys/devices/pci0000:00/0000:00:14.0/usb1/1-3"
+Sep 24 14:46:59 Krishnaraj-Arch mtp-probe[7278]: bus: 1, device: 6 was not an MTP device
+Sep 24 14:46:59 Krishnaraj-Arch dbus-daemon[736]: [session uid=1000 pid=734] Activating service name='org.xfce.Xfconf' requested by ':1.14' (uid=1000 pid=927 comm="Thunar --sm-client-id 2cab99998-1bd7-4948-93bd-20f")
+Sep 24 14:46:59 Krishnaraj-Arch dbus-daemon[736]: [session uid=1000 pid=734] Successfully activated service 'org.xfce.Xfconf'
+Sep 24 14:46:59 Krishnaraj-Arch mtp-probe[7306]: checking bus 1, device 6: "/sys/devices/pci0000:00/0000:00:14.0/usb1/1-3"
+Sep 24 14:46:59 Krishnaraj-Arch mtp-probe[7306]: bus: 1, device: 6 was not an MTP device
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: Adding input device Logitech M585/M590 (/dev/input/mouse0)
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) No input driver specified, ignoring this device.
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) This device may have been added with another device file.
+Sep 24 14:46:59 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.155' (uid=969 pid=7291 comm="/usr/lib/colord-sane")
+Sep 24 14:46:59 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: Adding input device Logitech M585/M590 (/dev/input/event3)
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Logitech M585/M590: Applying InputClass "libinput pointer catchall"
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Logitech M585/M590: Applying InputClass "libinput keyboard catchall"
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) Using input driver 'libinput' for 'Logitech M585/M590'
+Sep 24 14:46:59 Krishnaraj-Arch systemd-logind[494]: Watching system buttons on /dev/input/event3 (Logitech M585/M590)
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: got fd for /dev/input/event3 13:67 fd 49 paused 0
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Logitech M585/M590: always reports core events
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "Device" "/dev/input/event3"
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event3  - Logitech M585/M590: is tagged by udev as: Keyboard Mouse
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event3  - Logitech M585/M590: device is a pointer
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event3  - Logitech M585/M590: device is a keyboard
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event3  - Logitech M585/M590: device removed
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) libinput: Logitech M585/M590: Step value 0 was provided, libinput Fallback acceleration function is used.
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) libinput: Logitech M585/M590: Step value 0 was provided, libinput Fallback acceleration function is used.
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) libinput: Logitech M585/M590: Step value 0 was provided, libinput Fallback acceleration function is used.
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) libinput: Logitech M585/M590: needs a virtual subdevice
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.2/0003:046D:C52B.000A/0003:046D:406B.000B/input/input31/event3"
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) XINPUT: Adding extended input device "Logitech M585/M590" (type: MOUSE, id 8)
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "AccelerationScheme" "none"
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Logitech M585/M590: (accel) selected scheme none/0
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Logitech M585/M590: (accel) acceleration factor: 2.000
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Logitech M585/M590: (accel) acceleration threshold: 4
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event3  - Logitech M585/M590: is tagged by udev as: Keyboard Mouse
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event3  - Logitech M585/M590: device is a pointer
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event3  - Logitech M585/M590: device is a keyboard
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Logitech M585/M590: Applying InputClass "libinput pointer catchall"
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Logitech M585/M590: Applying InputClass "libinput keyboard catchall"
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) Using input driver 'libinput' for 'Logitech M585/M590'
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: returning pre-existing fd for /dev/input/event3 13:67
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Logitech M585/M590: always reports core events
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "Device" "/dev/input/event3"
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) libinput: Logitech M585/M590: is a virtual subdevice
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) libinput: Logitech M585/M590: Step value 0 was provided, libinput Fallback acceleration function is used.
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) libinput: Logitech M585/M590: Step value 0 was provided, libinput Fallback acceleration function is used.
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) libinput: Logitech M585/M590: Step value 0 was provided, libinput Fallback acceleration function is used.
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb1/1-3/1-3:1.2/0003:046D:C52B.000A/0003:046D:406B.000B/input/input31/event3"
+Sep 24 14:46:59 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) XINPUT: Adding extended input device "Logitech M585/M590" (type: KEYBOARD, id 9)
+Sep 24 14:46:59 Krishnaraj-Arch gnome-shell[2564]: Property 'libinput Accel Profile Enabled Default' for device 'Logitech M585/M590' returned 3 items, expected 2
+Sep 24 14:46:59 Krishnaraj-Arch gnome-shell[2564]: Property 'libinput Accel Profiles Available' for device 'Logitech M585/M590' returned 3 items, expected 2
+Sep 24 14:46:59 Krishnaraj-Arch gnome-shell[2564]: Property 'libinput Accel Profile Enabled' for device 'Logitech M585/M590' returned 3 items, expected 2
+Sep 24 14:47:06 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+
+
+# Connected Keyboard
+
+
+Sep 24 14:47:07 Krishnaraj-Arch kernel: usb 1-1: new low-speed USB device number 7 using xhci_hcd
+Sep 24 14:47:07 Krishnaraj-Arch kernel: usb 1-1: New USB device found, idVendor=1a2c, idProduct=92f6, bcdDevice= 1.16
+Sep 24 14:47:07 Krishnaraj-Arch kernel: usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Sep 24 14:47:07 Krishnaraj-Arch kernel: usb 1-1: Product: Redgear Shadow Blade Mechanical Keyboard
+Sep 24 14:47:07 Krishnaraj-Arch kernel: usb 1-1: Manufacturer: SEMICO  
+Sep 24 14:47:07 Krishnaraj-Arch kernel: input: SEMICO   Redgear Shadow Blade Mechanical Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.0/0003:1A2C:92F6.000C/input/input32
+Sep 24 14:47:08 Krishnaraj-Arch kernel: hid-generic 0003:1A2C:92F6.000C: input,hidraw2: USB HID v1.10 Keyboard [SEMICO   Redgear Shadow Blade Mechanical Keyboard] on usb-0000:00:14.0-1/input0
+Sep 24 14:47:08 Krishnaraj-Arch kernel: input: SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000D/input/input33
+Sep 24 14:47:08 Krishnaraj-Arch kernel: input: SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000D/input/input34
+Sep 24 14:47:08 Krishnaraj-Arch kernel: input: SEMICO   Redgear Shadow Blade Mechanical Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000D/input/input36
+Sep 24 14:47:08 Krishnaraj-Arch kernel: hid-generic 0003:1A2C:92F6.000D: input,hiddev97,hidraw3: USB HID v1.10 Keyboard [SEMICO   Redgear Shadow Blade Mechanical Keyboard] on usb-0000:00:14.0-1/input1
+Sep 24 14:47:08 Krishnaraj-Arch mtp-probe[7371]: checking bus 1, device 7: "/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1"
+Sep 24 14:47:08 Krishnaraj-Arch mtp-probe[7371]: bus: 1, device: 7 was not an MTP device
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: Adding input device SEMICO   Redgear Shadow Blade Mechanical Keyboard (/dev/input/event4)
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard: Applying InputClass "libinput keyboard catchall"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) Using input driver 'libinput' for 'SEMICO   Redgear Shadow Blade Mechanical Keyboard'
+Sep 24 14:47:08 Krishnaraj-Arch systemd-logind[494]: Watching system buttons on /dev/input/event4 (SEMICO   Redgear Shadow Blade Mechanical Keyboard)
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: got fd for /dev/input/event4 13:68 fd 92 paused 0
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard: always reports core events
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "Device" "/dev/input/event4"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event4  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: is tagged by udev as: Keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event4  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device is a keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event4  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device removed
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.0/0003:1A2C:92F6.000C/input/input32/event4"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) XINPUT: Adding extended input device "SEMICO   Redgear Shadow Blade Mechanical Keyboard" (type: KEYBOARD, id 10)
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event4  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: is tagged by udev as: Keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event4  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device is a keyboard
+Sep 24 14:47:08 Krishnaraj-Arch systemd-logind[494]: Watching system buttons on /dev/input/event6 (SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control)
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: Adding input device SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control (/dev/input/event6)
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: Applying InputClass "libinput keyboard catchall"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) Using input driver 'libinput' for 'SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control'
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: got fd for /dev/input/event6 13:70 fd 107 paused 0
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: always reports core events
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "Device" "/dev/input/event6"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event6  - SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: is tagged by udev as: Keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event6  - SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: device is a keyboard
+Sep 24 14:47:08 Krishnaraj-Arch systemd-logind[494]: Watching system buttons on /dev/input/event5 (SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control)
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event6  - SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: device removed
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000D/input/input34/event6"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) XINPUT: Adding extended input device "SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control" (type: KEYBOARD, id 11)
+Sep 24 14:47:08 Krishnaraj-Arch systemd-logind[494]: Watching system buttons on /dev/input/event7 (SEMICO   Redgear Shadow Blade Mechanical Keyboard)
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event6  - SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: is tagged by udev as: Keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event6  - SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: device is a keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: Adding input device SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control (/dev/input/event5)
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: Applying InputClass "libinput keyboard catchall"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) Using input driver 'libinput' for 'SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control'
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: got fd for /dev/input/event5 13:69 fd 110 paused 0
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: always reports core events
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "Device" "/dev/input/event5"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event5  - SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: is tagged by udev as: Keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event5  - SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: device is a keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event5  - SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: device removed
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) libinput: SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: needs a virtual subdevice
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000D/input/input33/event5"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) XINPUT: Adding extended input device "SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control" (type: MOUSE, id 12)
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "AccelerationScheme" "none"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: (accel) selected scheme none/0
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: (accel) acceleration factor: 2.000
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: (accel) acceleration threshold: 4
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event5  - SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: is tagged by udev as: Keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event5  - SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: device is a keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: Applying InputClass "libinput keyboard catchall"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) Using input driver 'libinput' for 'SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control'
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: returning pre-existing fd for /dev/input/event5 13:69
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: always reports core events
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "Device" "/dev/input/event5"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) libinput: SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: is a virtual subdevice
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000D/input/input33/event5"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) XINPUT: Adding extended input device "SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control" (type: KEYBOARD, id 16)
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: Adding input device SEMICO   Redgear Shadow Blade Mechanical Keyboard (/dev/input/event7)
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard: Applying InputClass "libinput keyboard catchall"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) Using input driver 'libinput' for 'SEMICO   Redgear Shadow Blade Mechanical Keyboard'
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: got fd for /dev/input/event7 13:71 fd 111 paused 0
+Sep 24 14:47:08 Krishnaraj-Arch mtp-probe[7408]: checking bus 1, device 7: "/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard: always reports core events
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "Device" "/dev/input/event7"
+Sep 24 14:47:08 Krishnaraj-Arch mtp-probe[7408]: bus: 1, device: 7 was not an MTP device
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event7  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: is tagged by udev as: Keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event7  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device is a keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event7  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device removed
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000D/input/input36/event7"
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) XINPUT: Adding extended input device "SEMICO   Redgear Shadow Blade Mechanical Keyboard" (type: KEYBOARD, id 17)
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event7  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: is tagged by udev as: Keyboard
+Sep 24 14:47:08 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event7  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device is a keyboard
+Sep 24 14:47:08 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.157' (uid=969 pid=7383 comm="/usr/lib/colord-sane")
+Sep 24 14:47:08 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 24 14:47:13 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:47:17 Krishnaraj-Arch kernel: usb 1-1: USB disconnect, device number 7
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event4  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device removed
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: removing device SEMICO   Redgear Shadow Blade Mechanical Keyboard
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "fd" "92"
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) UnloadModule: "libinput"
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: releasing fd for 13:68
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event5  - SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: device removed
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: removing device SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "fd" "110"
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) UnloadModule: "libinput"
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: not releasing fd for 13:69, still in use
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: removing device SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "fd" "110"
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) UnloadModule: "libinput"
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: releasing fd for 13:69
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event6  - SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: device removed
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: removing device SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "fd" "107"
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) UnloadModule: "libinput"
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: releasing fd for 13:70
+Sep 24 14:47:18 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.159' (uid=969 pid=7501 comm="/usr/lib/colord-sane")
+Sep 24 14:47:18 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event7  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device removed
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: removing device SEMICO   Redgear Shadow Blade Mechanical Keyboard
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "fd" "111"
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) UnloadModule: "libinput"
+Sep 24 14:47:18 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: releasing fd for 13:71
+Sep 24 14:47:18 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.161' (uid=969 pid=7530 comm="/usr/lib/colord-sane")
+Sep 24 14:47:18 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 24 14:47:31 Krishnaraj-Arch kernel: usb 2-1: new SuperSpeed USB device number 3 using xhci_hcd
+
+
+# Add Pendrive
+
+
+Sep 24 14:47:31 Krishnaraj-Arch kernel: usb 2-1: New USB device found, idVendor=0781, idProduct=5581, bcdDevice= 1.00
+Sep 24 14:47:31 Krishnaraj-Arch kernel: usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Sep 24 14:47:31 Krishnaraj-Arch kernel: usb 2-1: Product:  SanDisk 3.2Gen1
+Sep 24 14:47:31 Krishnaraj-Arch kernel: usb 2-1: Manufacturer:  USB
+Sep 24 14:47:31 Krishnaraj-Arch kernel: usb 2-1: SerialNumber: 0401ded760d7a5feae6961e74e9bddbba50e7581d116b564e85e689eb8b4c9cd6afc000000000000000000005386096100890f18815581073fac26d0
+Sep 24 14:47:31 Krishnaraj-Arch kernel: usb-storage 2-1:1.0: USB Mass Storage device detected
+Sep 24 14:47:31 Krishnaraj-Arch kernel: scsi host2: usb-storage 2-1:1.0
+Sep 24 14:47:31 Krishnaraj-Arch mtp-probe[7595]: checking bus 2, device 3: "/sys/devices/pci0000:00/0000:00:14.0/usb2/2-1"
+Sep 24 14:47:31 Krishnaraj-Arch mtp-probe[7595]: bus: 2, device: 3 was not an MTP device
+Sep 24 14:47:31 Krishnaraj-Arch mtp-probe[7610]: checking bus 2, device 3: "/sys/devices/pci0000:00/0000:00:14.0/usb2/2-1"
+Sep 24 14:47:31 Krishnaraj-Arch mtp-probe[7610]: bus: 2, device: 3 was not an MTP device
+Sep 24 14:47:31 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.163' (uid=969 pid=7608 comm="/usr/lib/colord-sane")
+Sep 24 14:47:31 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 24 14:47:32 Krishnaraj-Arch kernel: scsi 2:0:0:0: Direct-Access      USB      SanDisk 3.2Gen1 1.00 PQ: 0 ANSI: 6
+Sep 24 14:47:32 Krishnaraj-Arch kernel: sd 2:0:0:0: Attached scsi generic sg2 type 0
+Sep 24 14:47:32 Krishnaraj-Arch kernel: sd 2:0:0:0: [sdc] 60125184 512-byte logical blocks: (30.8 GB/28.7 GiB)
+Sep 24 14:47:32 Krishnaraj-Arch kernel: sd 2:0:0:0: [sdc] Write Protect is off
+Sep 24 14:47:32 Krishnaraj-Arch kernel: sd 2:0:0:0: [sdc] Mode Sense: 43 00 00 00
+Sep 24 14:47:32 Krishnaraj-Arch kernel: sd 2:0:0:0: [sdc] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+Sep 24 14:47:32 Krishnaraj-Arch kernel:  sdc:
+Sep 24 14:47:32 Krishnaraj-Arch kernel: sd 2:0:0:0: [sdc] Attached SCSI removable disk
+Sep 24 14:47:32 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.165' (uid=969 pid=7632 comm="/usr/lib/colord-sane")
+Sep 24 14:47:32 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 24 14:47:32 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service' requested by ':1.86' (uid=1000 pid=2564 comm="/usr/bin/gnome-shell")
+Sep 24 14:47:32 Krishnaraj-Arch systemd[1]: Starting Hostname Service...
+Sep 24 14:47:32 Krishnaraj-Arch udisksd[1159]: Mounted /dev/sdc at /run/media/krishnaraj/krish trans on behalf of uid 1000
+Sep 24 14:47:32 Krishnaraj-Arch kernel: FAT-fs (sdc): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+
+Sep 24 14:47:32 Krishnaraj-Arch dbus-daemon[2306]: [session uid=1000 pid=2306] Activating service name='org.gnome.Shell.HotplugSniffer' requested by ':1.14' (uid=1000 pid=2564 comm="/usr/bin/gnome-shell")
+Sep 24 14:47:32 Krishnaraj-Arch systemd[1]: Started Hostname Service.
+Sep 24 14:47:32 Krishnaraj-Arch dbus-daemon[487]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Sep 24 14:47:32 Krishnaraj-Arch dbus-daemon[2306]: [session uid=1000 pid=2306] Successfully activated service 'org.gnome.Shell.HotplugSniffer'
+Sep 24 14:47:32 Krishnaraj-Arch nautilus[3037]: destroyed file has call_when_ready pending
+Sep 24 14:47:56 Krishnaraj-Arch tracker-miner-f[3922]: tracker_indexing_tree_remove: assertion 'TRACKER_IS_INDEXING_TREE (tree)' failed
+Sep 24 14:47:56 Krishnaraj-Arch systemd[1]: run-media-krishnaraj-krish\x20trans.mount: Deactivated successfully.
+Sep 24 14:47:56 Krishnaraj-Arch udisksd[1159]: Cleaning up mount point /run/media/krishnaraj/krish trans (device 8:32 is not mounted)
+Sep 24 14:47:56 Krishnaraj-Arch udisksd[1159]: Unmounted /dev/sdc on behalf of uid 1000
+Sep 24 14:47:56 Krishnaraj-Arch gnome-shell[2564]: Failed to query filesystem: method Gio.File.query_filesystem_info_async: At least 4 arguments required, but only 3 passed
+Sep 24 14:47:56 Krishnaraj-Arch gnome-shell[2564]: Object .Gjs_drive-menu_gnome-shell-extensions_gcampax_github_com_extension_MountMenuItem (0x55d577be30a0), has been already disposed — impossible to set any property on it. This might be caused by the object having been destroyed from C code using something such as destroy(), dispose(), or remove() vfuncs.
+Sep 24 14:47:56 Krishnaraj-Arch gnome-shell[2564]: == Stack trace for context 0x55d57499c540 ==
+Sep 24 14:47:56 Krishnaraj-Arch gnome-shell[2564]: #0   55d5771ea4c8 i   /usr/share/gnome-shell/extensions/drive-menu@gnome-shell-extensions.gcampax.github.com/extension.js:89 (27fa701741f0 @ 70)
+Sep 24 14:47:56 Krishnaraj-Arch gnome-shell[2564]: #1   55d5771ea428 i   self-hosted:632 (ec406c1a650 @ 15)
+Sep 24 14:47:56 Krishnaraj-Arch kernel: sdc: detected capacity change from 60125184 to 0
+Sep 24 14:48:03 Krishnaraj-Arch kernel: usb 2-1: USB disconnect, device number 3
+Sep 24 14:48:03 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.168' (uid=969 pid=7776 comm="/usr/lib/colord-sane")
+Sep 24 14:48:03 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 24 14:48:12 Krishnaraj-Arch kernel: usb 2-1: new SuperSpeed USB device number 4 using xhci_hcd
+Sep 24 14:48:12 Krishnaraj-Arch kernel: usb 2-1: New USB device found, idVendor=0781, idProduct=5581, bcdDevice= 1.00
+Sep 24 14:48:12 Krishnaraj-Arch kernel: usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Sep 24 14:48:12 Krishnaraj-Arch kernel: usb 2-1: Product:  SanDisk 3.2Gen1
+Sep 24 14:48:12 Krishnaraj-Arch kernel: usb 2-1: Manufacturer:  USB
+Sep 24 14:48:12 Krishnaraj-Arch kernel: usb 2-1: SerialNumber: 0401ded760d7a5feae6961e74e9bddbba50e7581d116b564e85e689eb8b4c9cd6afc000000000000000000005386096100890f18815581073fac26d0
+Sep 24 14:48:12 Krishnaraj-Arch kernel: usb-storage 2-1:1.0: USB Mass Storage device detected
+Sep 24 14:48:12 Krishnaraj-Arch kernel: scsi host2: usb-storage 2-1:1.0
+Sep 24 14:48:12 Krishnaraj-Arch mtp-probe[7822]: checking bus 2, device 4: "/sys/devices/pci0000:00/0000:00:14.0/usb2/2-1"
+Sep 24 14:48:12 Krishnaraj-Arch mtp-probe[7822]: bus: 2, device: 4 was not an MTP device
+Sep 24 14:48:12 Krishnaraj-Arch mtp-probe[7836]: checking bus 2, device 4: "/sys/devices/pci0000:00/0000:00:14.0/usb2/2-1"
+Sep 24 14:48:12 Krishnaraj-Arch mtp-probe[7836]: bus: 2, device: 4 was not an MTP device
+Sep 24 14:48:13 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.170' (uid=969 pid=7834 comm="/usr/lib/colord-sane")
+Sep 24 14:48:13 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 24 14:48:13 Krishnaraj-Arch kernel: scsi 2:0:0:0: Direct-Access      USB      SanDisk 3.2Gen1 1.00 PQ: 0 ANSI: 6
+Sep 24 14:48:13 Krishnaraj-Arch kernel: sd 2:0:0:0: Attached scsi generic sg2 type 0
+Sep 24 14:48:13 Krishnaraj-Arch kernel: sd 2:0:0:0: [sdc] 60125184 512-byte logical blocks: (30.8 GB/28.7 GiB)
+Sep 24 14:48:13 Krishnaraj-Arch kernel: sd 2:0:0:0: [sdc] Write Protect is off
+Sep 24 14:48:13 Krishnaraj-Arch kernel: sd 2:0:0:0: [sdc] Mode Sense: 43 00 00 00
+Sep 24 14:48:13 Krishnaraj-Arch kernel: sd 2:0:0:0: [sdc] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+Sep 24 14:48:13 Krishnaraj-Arch kernel:  sdc:
+Sep 24 14:48:13 Krishnaraj-Arch kernel: sd 2:0:0:0: [sdc] Attached SCSI removable disk
+Sep 24 14:48:14 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.172' (uid=969 pid=7856 comm="/usr/lib/colord-sane")
+Sep 24 14:48:14 Krishnaraj-Arch kernel: FAT-fs (sdc): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+Sep 24 14:48:14 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 24 14:48:14 Krishnaraj-Arch udisksd[1159]: Mounted /dev/sdc at /run/media/krishnaraj/krish trans on behalf of uid 1000
+Sep 24 14:48:14 Krishnaraj-Arch dbus-daemon[2306]: [session uid=1000 pid=2306] Activating service name='org.gnome.Shell.HotplugSniffer' requested by ':1.14' (uid=1000 pid=2564 comm="/usr/bin/gnome-shell")
+Sep 24 14:48:14 Krishnaraj-Arch dbus-daemon[2306]: [session uid=1000 pid=2306] Successfully activated service 'org.gnome.Shell.HotplugSniffer'
+Sep 24 14:48:20 Krishnaraj-Arch kernel: usb 2-1: USB disconnect, device number 4
+Sep 24 14:48:20 Krishnaraj-Arch udisksd[1159]: Cleaning up mount point /run/media/krishnaraj/krish trans (device 8:32 no longer exists)
+Sep 24 14:48:20 Krishnaraj-Arch systemd[1]: run-media-krishnaraj-krish\x20trans.mount: Deactivated successfully.
+Sep 24 14:48:21 Krishnaraj-Arch gnome-shell[2564]: Failed to query filesystem: method Gio.File.query_filesystem_info_async: At least 4 arguments required, but only 3 passed
+Sep 24 14:48:21 Krishnaraj-Arch gnome-shell[2564]: Object .Gjs_drive-menu_gnome-shell-extensions_gcampax_github_com_extension_MountMenuItem (0x55d57a277510), has been already disposed — impossible to set any property on it. This might be caused by the object having been destroyed from C code using something such as destroy(), dispose(), or remove() vfuncs.
+Sep 24 14:48:21 Krishnaraj-Arch gnome-shell[2564]: == Stack trace for context 0x55d57499c540 ==
+Sep 24 14:48:21 Krishnaraj-Arch gnome-shell[2564]: #0   55d5771ea4c0 i   /usr/share/gnome-shell/extensions/drive-menu@gnome-shell-extensions.gcampax.github.com/extension.js:89 (27fa701741f0 @ 70)
+Sep 24 14:48:21 Krishnaraj-Arch gnome-shell[2564]: #1   55d5771ea428 i   self-hosted:1422 (314056198880 @ 30)
+Sep 24 14:48:21 Krishnaraj-Arch gnome-shell[2564]: #2   7ffe40438840 b   self-hosted:632 (ec406c1a650 @ 15)
+Sep 24 14:48:21 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.174' (uid=969 pid=7926 comm="/usr/lib/colord-sane")
+Sep 24 14:48:21 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 24 14:48:21 Krishnaraj-Arch nautilus[3037]: destroyed file has call_when_ready pending
+Sep 24 14:48:31 Krishnaraj-Arch kernel: usb 1-1: new low-speed USB device number 8 using xhci_hcd
+Sep 24 14:48:31 Krishnaraj-Arch kernel: usb 1-1: New USB device found, idVendor=1a2c, idProduct=92f6, bcdDevice= 1.16
+Sep 24 14:48:31 Krishnaraj-Arch kernel: usb 1-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+Sep 24 14:48:31 Krishnaraj-Arch kernel: usb 1-1: Product: Redgear Shadow Blade Mechanical Keyboard
+Sep 24 14:48:31 Krishnaraj-Arch kernel: usb 1-1: Manufacturer: SEMICO  
+Sep 24 14:48:31 Krishnaraj-Arch kernel: input: SEMICO   Redgear Shadow Blade Mechanical Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.0/0003:1A2C:92F6.000E/input/input38
+Sep 24 14:48:31 Krishnaraj-Arch kernel: hid-generic 0003:1A2C:92F6.000E: input,hidraw2: USB HID v1.10 Keyboard [SEMICO   Redgear Shadow Blade Mechanical Keyboard] on usb-0000:00:14.0-1/input0
+Sep 24 14:48:31 Krishnaraj-Arch kernel: input: SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000F/input/input39
+Sep 24 14:48:31 Krishnaraj-Arch kernel: input: SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000F/input/input40
+Sep 24 14:48:31 Krishnaraj-Arch kernel: input: SEMICO   Redgear Shadow Blade Mechanical Keyboard as /devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000F/input/input42
+Sep 24 14:48:31 Krishnaraj-Arch kernel: hid-generic 0003:1A2C:92F6.000F: input,hiddev97,hidraw3: USB HID v1.10 Keyboard [SEMICO   Redgear Shadow Blade Mechanical Keyboard] on usb-0000:00:14.0-1/input1
+Sep 24 14:48:31 Krishnaraj-Arch mtp-probe[7969]: checking bus 1, device 8: "/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1"
+Sep 24 14:48:31 Krishnaraj-Arch mtp-probe[7969]: bus: 1, device: 8 was not an MTP device
+Sep 24 14:48:31 Krishnaraj-Arch systemd-logind[494]: Watching system buttons on /dev/input/event4 (SEMICO   Redgear Shadow Blade Mechanical Keyboard)
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: Adding input device SEMICO   Redgear Shadow Blade Mechanical Keyboard (/dev/input/event4)
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard: Applying InputClass "libinput keyboard catchall"
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) Using input driver 'libinput' for 'SEMICO   Redgear Shadow Blade Mechanical Keyboard'
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: got fd for /dev/input/event4 13:68 fd 92 paused 0
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard: always reports core events
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "Device" "/dev/input/event4"
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event4  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: is tagged by udev as: Keyboard
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event4  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device is a keyboard
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event4  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device removed
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.0/0003:1A2C:92F6.000E/input/input38/event4"
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) XINPUT: Adding extended input device "SEMICO   Redgear Shadow Blade Mechanical Keyboard" (type: KEYBOARD, id 10)
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event4  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: is tagged by udev as: Keyboard
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event4  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device is a keyboard
+Sep 24 14:48:31 Krishnaraj-Arch systemd-logind[494]: Watching system buttons on /dev/input/event7 (SEMICO   Redgear Shadow Blade Mechanical Keyboard)
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: Adding input device SEMICO   Redgear Shadow Blade Mechanical Keyboard (/dev/input/event7)
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard: Applying InputClass "libinput keyboard catchall"
+Sep 24 14:48:31 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) Using input driver 'libinput' for 'SEMICO   Redgear Shadow Blade Mechanical Keyboard'
+Sep 24 14:48:31 Krishnaraj-Arch systemd-logind[494]: Watching system buttons on /dev/input/event6 (SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control)
+Sep 24 14:48:32 Krishnaraj-Arch systemd-logind[494]: Watching system buttons on /dev/input/event5 (SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control)
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: got fd for /dev/input/event7 13:71 fd 107 paused 0
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard: always reports core events
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "Device" "/dev/input/event7"
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event7  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: is tagged by udev as: Keyboard
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event7  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device is a keyboard
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event7  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device removed
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000F/input/input42/event7"
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) XINPUT: Adding extended input device "SEMICO   Redgear Shadow Blade Mechanical Keyboard" (type: KEYBOARD, id 11)
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event7  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: is tagged by udev as: Keyboard
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event7  - SEMICO   Redgear Shadow Blade Mechanical Keyboard: device is a keyboard
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: Adding input device SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control (/dev/input/event6)
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: Applying InputClass "libinput keyboard catchall"
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) Using input driver 'libinput' for 'SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control'
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: got fd for /dev/input/event6 13:70 fd 110 paused 0
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: always reports core events
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "Device" "/dev/input/event6"
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event6  - SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: is tagged by udev as: Keyboard
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event6  - SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: device is a keyboard
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event6  - SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: device removed
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000F/input/input40/event6"
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) XINPUT: Adding extended input device "SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control" (type: KEYBOARD, id 12)
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event6  - SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: is tagged by udev as: Keyboard
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event6  - SEMICO   Redgear Shadow Blade Mechanical Keyboard System Control: device is a keyboard
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) config/udev: Adding input device SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control (/dev/input/event5)
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: Applying InputClass "libinput keyboard catchall"
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) Using input driver 'libinput' for 'SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control'
+Sep 24 14:48:32 Krishnaraj-Arch mtp-probe[8005]: checking bus 1, device 8: "/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1"
+Sep 24 14:48:32 Krishnaraj-Arch mtp-probe[8005]: bus: 1, device: 8 was not an MTP device
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: got fd for /dev/input/event5 13:69 fd 111 paused 0
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: always reports core events
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "Device" "/dev/input/event5"
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event5  - SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: is tagged by udev as: Keyboard
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event5  - SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: device is a keyboard
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event5  - SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: device removed
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) libinput: SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: needs a virtual subdevice
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000F/input/input39/event5"
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) XINPUT: Adding extended input device "SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control" (type: MOUSE, id 16)
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "AccelerationScheme" "none"
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: (accel) selected scheme none/0
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: (accel) acceleration factor: 2.000
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: (accel) acceleration threshold: 4
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event5  - SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: is tagged by udev as: Keyboard
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) event5  - SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: device is a keyboard
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: Applying InputClass "libinput keyboard catchall"
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) Using input driver 'libinput' for 'SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control'
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) systemd-logind: returning pre-existing fd for /dev/input/event5 13:69
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: always reports core events
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "Device" "/dev/input/event5"
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) libinput: SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control: is a virtual subdevice
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (**) Option "config_info" "udev:/sys/devices/pci0000:00/0000:00:14.0/usb1/1-1/1-1:1.1/0003:1A2C:92F6.000F/input/input39/event5"
+Sep 24 14:48:32 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (II) XINPUT: Adding extended input device "SEMICO   Redgear Shadow Blade Mechanical Keyboard Consumer Control" (type: KEYBOARD, id 17)
+Sep 24 14:48:32 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.Avahi' unit='dbus-org.freedesktop.Avahi.service' requested by ':1.176' (uid=969 pid=7981 comm="/usr/lib/colord-sane")
+Sep 24 14:48:32 Krishnaraj-Arch dbus-daemon[487]: [system] Activation via systemd failed for unit 'dbus-org.freedesktop.Avahi.service': Unit dbus-org.freedesktop.Avahi.service not found.
+Sep 24 14:48:34 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:48:40 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:48:42 Krishnaraj-Arch kernel: logitech-hidpp-device 0003:046D:406B.000B: HID++ 4.5 device connected.
+Sep 24 14:48:51 Krishnaraj-Arch systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Sep 24 14:48:55 Krishnaraj-Arch systemd[1]: Starting Load/Save RF Kill Switch Status...
+Sep 24 14:48:55 Krishnaraj-Arch systemd[1]: Started Load/Save RF Kill Switch Status.
+Sep 24 14:48:55 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547135.3482] device (04:C8:07:31:0F:FB): state change: disconnected -> unmanaged (reason 'removed', sys-iface-state: 'removed')
+Sep 24 14:49:00 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:49:00 Krishnaraj-Arch systemd[1]: systemd-rfkill.service: Deactivated successfully.
+Sep 24 14:49:02 Krishnaraj-Arch iwd[489]: rfkill id 0 not found in a RFKILL_OP_CHANGE event
+Sep 24 14:49:02 Krishnaraj-Arch kernel: wlan0: deauthenticating from b4:3d:08:08:d7:90 by local choice (Reason: 3=DEAUTH_LEAVING)
+Sep 24 14:49:02 Krishnaraj-Arch systemd[1]: Starting Load/Save RF Kill Switch Status...
+Sep 24 14:49:02 Krishnaraj-Arch wpa_supplicant[622]: wlan0: CTRL-EVENT-DISCONNECTED bssid=b4:3d:08:08:d7:90 reason=3 locally_generated=1
+Sep 24 14:49:02 Krishnaraj-Arch systemd[1]: Started Load/Save RF Kill Switch Status.
+Sep 24 14:49:03 Krishnaraj-Arch dhcpcd[490]: wlan0: carrier lost
+Sep 24 14:49:03 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547143.0298] manager: rfkill: Wi-Fi hardware radio set disabled
+Sep 24 14:49:03 Krishnaraj-Arch wpa_supplicant[622]: rfkill: WLAN soft blocked
+Sep 24 14:49:03 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547143.0298] device (wlan0): state change: activated -> unavailable (reason 'none', sys-iface-state: 'managed')
+Sep 24 14:49:03 Krishnaraj-Arch wpa_supplicant[622]: rfkill: WLAN soft blocked
+Sep 24 14:49:03 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547143.0301] dhcp4 (wlan0): canceled DHCP transaction
+Sep 24 14:49:03 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547143.0301] dhcp4 (wlan0): activation: beginning transaction (timeout in 45 seconds)
+Sep 24 14:49:03 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547143.0301] dhcp4 (wlan0): state changed no lease
+Sep 24 14:49:03 Krishnaraj-Arch dhcpcd[490]: ps_bpf_recvbpf: unexpected event 0x0100
+Sep 24 14:49:03 Krishnaraj-Arch dhcpcd[490]: ps_bpf_recvbpf: unexpected event 0x0100
+Sep 24 14:49:03 Krishnaraj-Arch dhcpcd[490]: wlan0: deleting address 2402:e280:3e28:3a0:a028:7837:bcaa:643f/64
+Sep 24 14:49:03 Krishnaraj-Arch dhcpcd[490]: wlan0: deleting route to 2402:e280:3e28:3a0::/64
+Sep 24 14:49:03 Krishnaraj-Arch dhcpcd[490]: wlan0: deleting default route via fe80::1
+Sep 24 14:49:03 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547143.1119] device (wlan0): set-hw-addr: set MAC address to 3A:24:1C:43:B7:12 (scanning)
+Sep 24 14:49:03 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547143.1125] manager: NetworkManager state is now DISCONNECTED
+Sep 24 14:49:03 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547143.1155] audit: op="radio-control" arg="wireless-enabled:off" pid=2564 uid=1000 result="success"
+Sep 24 14:49:03 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547143.1165] manager: rfkill: Wi-Fi now disabled by radio killswitch
+Sep 24 14:49:03 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547143.1220] device (p2p-dev-wlan0): state change: disconnected -> unavailable (reason 'supplicant-failed', sys-iface-state: 'managed')
+Sep 24 14:49:03 Krishnaraj-Arch wpa_supplicant[622]: p2p-dev-wlan0: CTRL-EVENT-DSCP-POLICY clear_all
+Sep 24 14:49:03 Krishnaraj-Arch wpa_supplicant[622]: p2p-dev-wlan0: CTRL-EVENT-DSCP-POLICY clear_all
+Sep 24 14:49:03 Krishnaraj-Arch wpa_supplicant[622]: nl80211: deinit ifname=p2p-dev-wlan0 disabled_11b_rates=0
+Sep 24 14:49:03 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.5' (uid=0 pid=548 comm="/usr/bin/NetworkManager --no-daemon")
+Sep 24 14:49:03 Krishnaraj-Arch dhcpcd[490]: wlan0: deleting address fe80::54e9:399f:98d:7418
+Sep 24 14:49:03 Krishnaraj-Arch wpa_supplicant[622]: wlan0: CTRL-EVENT-DSCP-POLICY clear_all
+Sep 24 14:49:03 Krishnaraj-Arch dhcpcd[490]: wlan0: deleting route to 192.168.1.0/24
+Sep 24 14:49:03 Krishnaraj-Arch dhcpcd[490]: wlan0: deleting default route via 192.168.1.1
+Sep 24 14:49:03 Krishnaraj-Arch systemd[1]: Starting Network Manager Script Dispatcher Service...
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/net-fortune/v2/fortune
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/user/zexc8gqns9sfqr8cqa9jirrrs/rootlist?decorate=revision%2Cattributes%2Clength%2Cowner%2Ccapabilities&from=0&length=120
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/played-state/v1/items?fromTimestamp=1692189436887
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:49:03 Krishnaraj-Arch dbus-daemon[487]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Sep 24 14:49:03 Krishnaraj-Arch systemd[1]: Started Network Manager Script Dispatcher Service.
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/5uwnHZlSpv3tD9twKnZ7UX/diff?revision=48%2Cc2d1c2485f6417ccdc896c24ce2aec8701b01dcc&handlesContent=
+Sep 24 14:49:03 Krishnaraj-Arch wpa_supplicant[622]: wlan0: CTRL-EVENT-DSCP-POLICY clear_all
+Sep 24 14:49:03 Krishnaraj-Arch wpa_supplicant[622]: nl80211: deinit ifname=wlan0 disabled_11b_rates=0
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch dhcpcd[490]: wlan0: old hardware address: 60:f6:77:52:55:a3
+Sep 24 14:49:03 Krishnaraj-Arch dhcpcd[490]: wlan0: new hardware address: 3a:24:1c:43:b7:12
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/6Rb63v6kUu0NAitew4zLqZ/diff?revision=2%2C59243045101279bdff00b0696480deac03f6644c&handlesContent=
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/5unfJYmuY56AAJWj8PLGXQ/diff?revision=18%2C044b8ec6430ff41b977fd09fd4c8ab37a103b8fd&handlesContent=
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/5aHtKeLjRutTfgLiNkf1xI/diff?revision=74%2C800e7b06dce79ce270aab9f9f3da750244f23718&handlesContent=
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/52sugPnh1EtisrL6NJRrkr/diff?revision=7%2C840703621e3795460ab908593e4ebceb1986c0a4&handlesContent=
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/37MdRifDWExhMzsYlSuTlz/diff?revision=16%2C07d646a7da4183d880650899ba5e50398c54658a&handlesContent=
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/2tLYxwbZDT2JbQeYDIc69f/diff?revision=2%2C17817c64e915b98e5968a1decb2f5fd054c88534&handlesContent=
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/0jzLzUkxLPmvTQFl0Sg1R8/diff?revision=34%2Cd3af8a071e1f601be282e98cfc246eadec572001&handlesContent=
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/2aHdNyrcSmZXltJUHFkoaO/diff?revision=9%2C8dd8f1ea8d15c7f4c103b7b243ea215dac209082&handlesContent=
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/6K4p9jTmGBZUPl5hmDm5BQ/diff?revision=31%2C0d2855df3325d14e37397ac59c0503cff8ce15c4&handlesContent=
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/0WIZIf1CYyRjql4virEX0f/diff?revision=7%2C56fdd4da146a16733fa7d78a0cd932a05d773df9&handlesContent=
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/0wfXxXIdXpawKoRSqCtNo2/diff?revision=9%2Cfe584c57d5ebd8824daf38b13915aacf10e12b2d&handlesContent=
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/37i9dQZF1DX5Ejj0EkURtP/diff?revision=0%2C31673312d6da30281aad13459489a80e9300e324&handlesContent=
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/7GMfyNLeCdDGVl8Tl41lFj/diff?revision=11%2Cca0ca82324dcfb10c38f0b2673fdfcbf335216bf&handlesContent=
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/5frxrxxUPlGmmyeFMjBAYk/diff?revision=15%2C584895ad096925c02ef3e58ebac1d1d90ef98277&handlesContent=
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/4stXzZIeXihVmhObCg11rC/diff?revision=9%2Ce39572c36ecbb9b850e2d213f6abf209c97d8cfc&handlesContent=
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/2eGB3dj6pusCgDyDHZQj2G/diff?revision=807%2C1af92e8db086ca4f935b86ae03f58d3730979337&handlesContent=
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/43GoRTvqLvZOwp74AQL9Lk/diff?revision=177%2C2b041230661b89d39dab8082de0e2abf6b4a5e82&handlesContent=
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/37i9dQZF1EpSuh09FyKWWL/diff?revision=1695404764%2C000000008642eecfa0c3af3e93300c2b442b9298&handlesContent=
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/1B9BPUMWDtl4ASyG4f693s/diff?revision=166%2C20918d44431527dbf63b66b28785ac514b2055c6&handlesContent=
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/1tVlreDaeWkDU1dwsvKZUS/diff?revision=12%2C142bd84277f13aef13282d23aa5b699d45ec28b0&handlesContent=
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/7GDl7BKZngzVFEZ81ocy0M/diff?revision=5%2C4cc4248d5b6636179d27276b4ea6f8e72628f910&handlesContent=
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/5lBA9wQhhxLe2iz8MC2M8N/diff?revision=59%2C3743a1ea26444c05a1b6cb2fe033ae6ea39e3ac7&handlesContent=
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/6HKNByS53IrYQOy47M5haG/diff?revision=129%2Cbcd59949741689edede633a6ef0dea71d8e54d53&handlesContent=
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/37i9dQZF1EUMDoJuT8yJsl/diff?revision=0%2C000000005366dcc64de1b9b27a8aee6cc0a962c0&handlesContent=
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/45kAbfAdCqx3DjnoByW5hg/diff?revision=235%2C34848fbf2709794b90ffd363f71a6ed49331dd07&handlesContent=
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/37i9dQZF1F0sijgNaJdgit/diff?revision=1669908962%2C00000000c9969e8e166b857eb2f350306c5c6c5a&handlesContent=
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/37i9dQZF1EQqedj0y9Uwvu/diff?revision=1695535200%2C00000000a3a3990dfdab513cc72fccf0622bb5ef&handlesContent=
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/14qNq30caELfSfeQGYiISO/diff?revision=31%2C200bee3c7cf2bcbf237f983b2c071ae93ab10b77&handlesContent=
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:05 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/37i9dQZF1DZ06evO0lbUOX/diff?revision=28257907%2C000000005061620bb6e29008610908c764258ed3&handlesContent=
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/55wfcxUmiPBjRoxbVxe3W0/diff?revision=97%2Ce41da45f1686c929698f98aa764f5eae6b3f44f7&handlesContent=
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/user/zexc8gqns9sfqr8cqa9jirrrs/rootlist/diff?revision=46%2C6bd125ae2dadf37e62b4cac34f7071808108d01b&handlesContent=
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:06 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:08 Krishnaraj-Arch systemd[1]: systemd-rfkill.service: Deactivated successfully.
+Sep 24 14:49:08 Krishnaraj-Arch brave-browser.desktop[3018]: [3018:3155:0924/144908.496566:ERROR:get_updates_processor.cc(265)] PostClientToServerMessage() failed during GetUpdates with error 2
+Sep 24 14:49:10 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144910.988182:WARNING:ftl_message_reception_channel.cc(213)] Timed out waiting for PONG message from server.
+Sep 24 14:49:10 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144910.989233:ERROR:ftl_signal_strategy.cc(430)] Received server error. Error code: 2, message: net::ERR_QUIC_PROTOCOL_ERROR, location: OnReceiveMessagesStreamClosed@remoting/signaling/ftl_signal_strategy.cc:321
+Sep 24 14:49:10 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144910.989265:INFO:ftl_signaling_connector.cc(98)] Signaling disconnected. error=NETWORK_ERROR
+Sep 24 14:49:11 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:49:11 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144911.607874:INFO:ftl_signaling_connector.cc(136)] Attempting to reconnect signaling.
+Sep 24 14:49:11 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144911.611313:ERROR:ftl_registration_manager.cc(199)] Failed to sign in. Error code: 2, message: net::ERR_INTERNET_DISCONNECTED
+Sep 24 14:49:11 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144911.611349:ERROR:ftl_signal_strategy.cc(430)] Received server error. Error code: 2, message: net::ERR_INTERNET_DISCONNECTED, location: OnSignInGaiaResponse@remoting/signaling/ftl_signal_strategy.cc:274
+Sep 24 14:49:11 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144911.611369:INFO:ftl_signaling_connector.cc(98)] Signaling disconnected. error=NETWORK_ERROR
+Sep 24 14:49:12 Krishnaraj-Arch iwd[489]: rfkill id 0 not found in a RFKILL_OP_CHANGE event
+Sep 24 14:49:12 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547152.2618] manager: rfkill: Wi-Fi hardware radio set enabled
+Sep 24 14:49:12 Krishnaraj-Arch kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+Sep 24 14:49:12 Krishnaraj-Arch systemd[1]: Starting Load/Save RF Kill Switch Status...
+Sep 24 14:49:12 Krishnaraj-Arch systemd[1]: Started Load/Save RF Kill Switch Status.
+Sep 24 14:49:12 Krishnaraj-Arch kernel: iwlwifi 0000:03:00.0: Applying debug destination EXTERNAL_DRAM
+Sep 24 14:49:12 Krishnaraj-Arch kernel: iwlwifi 0000:03:00.0: FW already configured (0) - re-configuring
+Sep 24 14:49:12 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547152.3600] audit: op="radio-control" arg="wireless-enabled:on" pid=2564 uid=1000 result="success"
+Sep 24 14:49:12 Krishnaraj-Arch wpa_supplicant[622]: nl80211: kernel reports: Match already configured
+Sep 24 14:49:12 Krishnaraj-Arch wpa_supplicant[622]: nl80211: kernel reports: Match already configured
+Sep 24 14:49:12 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547152.3609] manager: rfkill: Wi-Fi now enabled by radio killswitch
+Sep 24 14:49:12 Krishnaraj-Arch wpa_supplicant[622]: nl80211: kernel reports: Match already configured
+Sep 24 14:49:12 Krishnaraj-Arch wpa_supplicant[622]: nl80211: kernel reports: Match already configured
+Sep 24 14:49:12 Krishnaraj-Arch wpa_supplicant[622]: nl80211: kernel reports: Match already configured
+Sep 24 14:49:12 Krishnaraj-Arch wpa_supplicant[622]: nl80211: kernel reports: Match already configured
+Sep 24 14:49:12 Krishnaraj-Arch wpa_supplicant[622]: nl80211: kernel reports: Match already configured
+Sep 24 14:49:12 Krishnaraj-Arch wpa_supplicant[622]: nl80211: kernel reports: Match already configured
+Sep 24 14:49:12 Krishnaraj-Arch wpa_supplicant[622]: nl80211: kernel reports: Match already configured
+Sep 24 14:49:12 Krishnaraj-Arch wpa_supplicant[622]: nl80211: kernel reports: Match already configured
+Sep 24 14:49:12 Krishnaraj-Arch iwd[489]: Could not register frame watch type 00d0: -114
+Sep 24 14:49:12 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547152.4081] device (wlan0): supplicant interface state: internal-starting -> disconnected
+Sep 24 14:49:12 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547152.4081] device (p2p-dev-wlan0): state change: unavailable -> unmanaged (reason 'removed', sys-iface-state: 'removed')
+Sep 24 14:49:12 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547152.4088] Wi-Fi P2P device controlled by interface wlan0 created
+Sep 24 14:49:12 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547152.4092] manager: (p2p-dev-wlan0): new 802.11 Wi-Fi P2P device (/org/freedesktop/NetworkManager/Devices/6)
+Sep 24 14:49:12 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547152.4095] device (p2p-dev-wlan0): state change: unmanaged -> unavailable (reason 'managed', sys-iface-state: 'external')
+Sep 24 14:49:12 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547152.4101] device (wlan0): state change: unavailable -> disconnected (reason 'supplicant-available', sys-iface-state: 'managed')
+Sep 24 14:49:12 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547152.4108] device (p2p-dev-wlan0): state change: unavailable -> disconnected (reason 'none', sys-iface-state: 'managed')
+Sep 24 14:49:13 Krishnaraj-Arch wpa_supplicant[622]: wlan0: CTRL-EVENT-REGDOM-CHANGE init=DRIVER type=COUNTRY alpha2=IN
+Sep 24 14:49:13 Krishnaraj-Arch wpa_supplicant[622]: wlan0: CTRL-EVENT-SCAN-FAILED ret=-16
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.2371] policy: auto-activating connection 'homeours555_5G' (1e016d98-5b16-4089-9dde-103dee818e5b)
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.2377] device (wlan0): Activation: starting connection 'homeours555_5G' (1e016d98-5b16-4089-9dde-103dee818e5b)
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.2378] device (wlan0): state change: disconnected -> prepare (reason 'none', sys-iface-state: 'managed')
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.2382] manager: NetworkManager state is now CONNECTING
+Sep 24 14:49:13 Krishnaraj-Arch systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Sep 24 14:49:13 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144913.331213:INFO:ftl_signaling_connector.cc(136)] Attempting to reconnect signaling.
+Sep 24 14:49:13 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144913.332759:ERROR:ftl_registration_manager.cc(199)] Failed to sign in. Error code: 2, message: net::ERR_INTERNET_DISCONNECTED
+Sep 24 14:49:13 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144913.332792:ERROR:ftl_signal_strategy.cc(430)] Received server error. Error code: 2, message: net::ERR_INTERNET_DISCONNECTED, location: OnSignInGaiaResponse@remoting/signaling/ftl_signal_strategy.cc:274
+Sep 24 14:49:13 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144913.332811:INFO:ftl_signaling_connector.cc(98)] Signaling disconnected. error=NETWORK_ERROR
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3801] device (wlan0): set-hw-addr: reset MAC address to 60:F6:77:52:55:A3 (preserve)
+Sep 24 14:49:13 Krishnaraj-Arch dhcpcd[490]: wlan0: old hardware address: 3a:24:1c:43:b7:12
+Sep 24 14:49:13 Krishnaraj-Arch dhcpcd[490]: wlan0: new hardware address: 60:f6:77:52:55:a3
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3827] device (wlan0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3832] device (wlan0): Activation: (wifi) access point 'homeours555_5G' has security, but secrets are required.
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3832] device (wlan0): state change: config -> need-auth (reason 'none', sys-iface-state: 'managed')
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3835] sup-iface[3353bbf3d520d3ba,1,wlan0]: wps: type pbc start...
+Sep 24 14:49:13 Krishnaraj-Arch iwd[489]: Could not register frame watch type 00d0: -114
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3899] device (wlan0): state change: need-auth -> prepare (reason 'none', sys-iface-state: 'managed')
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3903] device (wlan0): state change: prepare -> config (reason 'none', sys-iface-state: 'managed')
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3907] device (wlan0): Activation: (wifi) connection 'homeours555_5G' has security, and secrets exist.  No new secrets needed.
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3908] Config: added 'ssid' value 'homeours555_5G'
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3908] Config: added 'scan_ssid' value '1'
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3908] Config: added 'bgscan' value 'simple:30:-70:86400'
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3908] Config: added 'key_mgmt' value 'WPA-PSK WPA-PSK-SHA256 SAE'
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3909] Config: added 'auth_alg' value 'OPEN'
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.3909] Config: added 'psk' value '<hidden>'
+Sep 24 14:49:13 Krishnaraj-Arch wpa_supplicant[622]: wlan0: WPS-CANCEL
+Sep 24 14:49:13 Krishnaraj-Arch flameshot[949]: "Object does not exist at path “/org/freedesktop/NetworkManager/ActiveConnection/2”"
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.4316] device (wlan0): supplicant interface state: disconnected -> inactive
+Sep 24 14:49:13 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547153.4317] device (p2p-dev-wlan0): supplicant management interface state: disconnected -> inactive
+Sep 24 14:49:14 Krishnaraj-Arch wpa_supplicant[622]: wlan0: SME: Trying to authenticate with b4:3d:08:08:d7:90 (SSID='homeours555_5G' freq=5180 MHz)
+Sep 24 14:49:14 Krishnaraj-Arch kernel: wlan0: authenticate with b4:3d:08:08:d7:90
+Sep 24 14:49:14 Krishnaraj-Arch iwd[489]: Unexpected connection related event -- is another supplicant running?
+Sep 24 14:49:14 Krishnaraj-Arch wpa_supplicant[622]: wlan0: Trying to associate with b4:3d:08:08:d7:90 (SSID='homeours555_5G' freq=5180 MHz)
+Sep 24 14:49:14 Krishnaraj-Arch kernel: wlan0: send auth to b4:3d:08:08:d7:90 (try 1/3)
+Sep 24 14:49:14 Krishnaraj-Arch kernel: wlan0: authenticated
+Sep 24 14:49:14 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547154.2582] device (wlan0): supplicant interface state: inactive -> authenticating
+Sep 24 14:49:14 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547154.2582] device (p2p-dev-wlan0): supplicant management interface state: inactive -> authenticating
+Sep 24 14:49:14 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547154.2583] device (wlan0): supplicant interface state: authenticating -> associating
+Sep 24 14:49:14 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547154.2583] device (p2p-dev-wlan0): supplicant management interface state: authenticating -> associating
+Sep 24 14:49:14 Krishnaraj-Arch kernel: wlan0: associate with b4:3d:08:08:d7:90 (try 1/3)
+Sep 24 14:49:14 Krishnaraj-Arch kernel: wlan0: RX AssocResp from b4:3d:08:08:d7:90 (capab=0x411 status=0 aid=3)
+Sep 24 14:49:14 Krishnaraj-Arch kernel: wlan0: associated
+Sep 24 14:49:14 Krishnaraj-Arch wpa_supplicant[622]: wlan0: Associated with b4:3d:08:08:d7:90
+Sep 24 14:49:14 Krishnaraj-Arch iwd[489]: Unexpected connection related event -- is another supplicant running?
+Sep 24 14:49:14 Krishnaraj-Arch wpa_supplicant[622]: wlan0: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+Sep 24 14:49:14 Krishnaraj-Arch kernel: wlan0: Limiting TX power to 30 (30 - 0) dBm as advertised by b4:3d:08:08:d7:90
+Sep 24 14:49:14 Krishnaraj-Arch wpa_supplicant[622]: wlan0: WPA: Key negotiation completed with b4:3d:08:08:d7:90 [PTK=CCMP GTK=TKIP]
+Sep 24 14:49:14 Krishnaraj-Arch wpa_supplicant[622]: wlan0: CTRL-EVENT-CONNECTED - Connection to b4:3d:08:08:d7:90 completed [id=0 id_str=]
+Sep 24 14:49:14 Krishnaraj-Arch dhcpcd[490]: wlan0: carrier acquired
+Sep 24 14:49:14 Krishnaraj-Arch wpa_supplicant[622]: wlan0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-69 noise=9999 txrate=6000
+Sep 24 14:49:14 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547154.3441] device (wlan0): supplicant interface state: associating -> completed
+Sep 24 14:49:14 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547154.3441] device (wlan0): Activation: (wifi) Stage 2 of 5 (Device Configure) successful. Connected to wireless network "homeours555_5G"
+Sep 24 14:49:14 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547154.3442] device (p2p-dev-wlan0): supplicant management interface state: associating -> completed
+Sep 24 14:49:14 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547154.3452] device (wlan0): state change: config -> ip-config (reason 'none', sys-iface-state: 'managed')
+Sep 24 14:49:14 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547154.3567] dhcp4 (wlan0): activation: beginning transaction (timeout in 45 seconds)
+Sep 24 14:49:14 Krishnaraj-Arch dhcpcd[490]: wlan0: IAID 77:52:55:a3
+Sep 24 14:49:14 Krishnaraj-Arch dhcpcd[490]: wlan0: adding address fe80::54e9:399f:98d:7418
+Sep 24 14:49:14 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.nm_dispatcher' unit='dbus-org.freedesktop.nm-dispatcher.service' requested by ':1.5' (uid=0 pid=548 comm="/usr/bin/NetworkManager --no-daemon")
+Sep 24 14:49:14 Krishnaraj-Arch systemd[1]: Starting Network Manager Script Dispatcher Service...
+Sep 24 14:49:14 Krishnaraj-Arch dbus-daemon[487]: [system] Successfully activated service 'org.freedesktop.nm_dispatcher'
+Sep 24 14:49:14 Krishnaraj-Arch systemd[1]: Started Network Manager Script Dispatcher Service.
+Sep 24 14:49:15 Krishnaraj-Arch dhcpcd[490]: wlan0: soliciting an IPv6 router
+Sep 24 14:49:15 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547155.4417] dhcp4 (wlan0): state changed new lease, address=192.168.1.34
+Sep 24 14:49:15 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547155.4423] policy: set 'homeours555_5G' (wlan0) as default for IPv4 routing and DNS
+Sep 24 14:49:15 Krishnaraj-Arch dhcpcd[490]: wlan0: rebinding lease of 192.168.1.34
+Sep 24 14:49:15 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547155.4631] device (wlan0): state change: ip-config -> ip-check (reason 'none', sys-iface-state: 'managed')
+Sep 24 14:49:15 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547155.4912] device (wlan0): state change: ip-check -> secondaries (reason 'none', sys-iface-state: 'managed')
+Sep 24 14:49:15 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547155.4918] device (wlan0): state change: secondaries -> activated (reason 'none', sys-iface-state: 'managed')
+Sep 24 14:49:15 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547155.4926] manager: NetworkManager state is now CONNECTED_SITE
+Sep 24 14:49:15 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547155.4937] device (wlan0): Activation: successful, device activated.
+Sep 24 14:49:15 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 apresolve.spotify.com
+Sep 24 14:49:15 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://apresolve.spotify.com/?time=1695547155&type=accesspoint
+Sep 24 14:49:15 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/net-fortune/v2/fortune
+Sep 24 14:49:15 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 apresolve.spotify.com
+Sep 24 14:49:15 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:49:15 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:15 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:15 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] getaddrinfo:                 dealer.spotify.com
+Sep 24 14:49:15 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] getaddrinfo:                 dealer.spotify.com
+Sep 24 14:49:15 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] getaddrinfo:                 ap-gae2.spotify.com
+Sep 24 14:49:15 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547155.8354] manager: NetworkManager state is now CONNECTED_GLOBAL
+Sep 24 14:49:15 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:49:15 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/social-connect/v2/sessions/current?alt=protobuf
+Sep 24 14:49:15 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144915.984544:INFO:ftl_signaling_connector.cc(136)] Attempting to reconnect signaling.
+Sep 24 14:49:15 Krishnaraj-Arch dhcpcd[490]: wlan0: Router Advertisement from fe80::1
+Sep 24 14:49:15 Krishnaraj-Arch dhcpcd[490]: wlan0: adding address 2402:e280:3e28:3a0:a028:7837:bcaa:643f/64
+Sep 24 14:49:16 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144916.001679:ERROR:ftl_registration_manager.cc(199)] Failed to sign in. Error code: 2, message: net::ERR_NETWORK_CHANGED
+Sep 24 14:49:16 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144916.001737:ERROR:ftl_signal_strategy.cc(430)] Received server error. Error code: 2, message: net::ERR_NETWORK_CHANGED, location: OnSignInGaiaResponse@remoting/signaling/ftl_signal_strategy.cc:274
+Sep 24 14:49:16 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144916.001763:INFO:ftl_signaling_connector.cc(98)] Signaling disconnected. error=NETWORK_ERROR
+Sep 24 14:49:16 Krishnaraj-Arch dhcpcd[490]: wlan0: adding route to 2402:e280:3e28:3a0::/64
+Sep 24 14:49:16 Krishnaraj-Arch dhcpcd[490]: wlan0: requesting DHCPv6 information
+Sep 24 14:49:16 Krishnaraj-Arch dhcpcd[490]: wlan0: adding default route via fe80::1
+Sep 24 14:49:16 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547156.2317] dhcp6 (wlan0): activation: beginning transaction (timeout in 45 seconds)
+Sep 24 14:49:16 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547156.2323] dhcp6 (wlan0): canceled DHCP transaction
+Sep 24 14:49:16 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547156.2323] dhcp6 (wlan0): state changed no lease
+Sep 24 14:49:16 Krishnaraj-Arch NetworkManager[548]: <info>  [1695547156.2326] policy: set 'homeours555_5G' (wlan0) as default for IPv6 routing and DNS
+Sep 24 14:49:16 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/user/zexc8gqns9sfqr8cqa9jirrrs/rootlist?decorate=revision%2Cattributes%2Clength%2Cowner%2Ccapabilities&from=0&length=120
+Sep 24 14:49:16 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/played-state/v1/items?fromTimestamp=1692189436887
+Sep 24 14:49:16 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/device-capabilities/v1/capabilities?device_type=computer&client_id=65b708073fc0480ea92a077233ca87bd&device_model=PC%20desktop&device_brand=spotify&client_version=1.1.84.716.gc5f8b819
+Sep 24 14:49:16 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 gae2-spclient.spotify.com
+Sep 24 14:49:16 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:16 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 gae2-dealer.spotify.com
+Sep 24 14:49:16 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 api.spotify.com
+Sep 24 14:49:16 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:49:17 Krishnaraj-Arch dhcpcd[490]: wlan0: leased 192.168.1.34 for 86400 seconds
+Sep 24 14:49:17 Krishnaraj-Arch dhcpcd[490]: wlan0: adding route to 192.168.1.0/24
+Sep 24 14:49:17 Krishnaraj-Arch dhcpcd[490]: wlan0: adding default route via 192.168.1.1
+Sep 24 14:49:17 Krishnaraj-Arch systemd[1]: systemd-rfkill.service: Deactivated successfully.
+Sep 24 14:49:20 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144920.177281:INFO:ftl_signaling_connector.cc(123)] Network state changed to online.
+Sep 24 14:49:20 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/offline/v1/devices/3836353364333165616165353462303962653331633038633838353735613732/cache/be78490cf5e7b8aa7e4049492645cfe6/resources:delta
+Sep 24 14:49:21 Krishnaraj-Arch dhcpcd[490]: wlan0: pid 548 deleted default route via fe80::1
+Sep 24 14:49:23 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/6Rb63v6kUu0NAitew4zLqZ/diff?revision=2%2C59243045101279bdff00b0696480deac03f6644c&handlesContent=
+Sep 24 14:49:24 Krishnaraj-Arch systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Sep 24 14:49:25 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144925.181274:INFO:ftl_signaling_connector.cc(136)] Attempting to reconnect signaling.
+Sep 24 14:49:26 Krishnaraj-Arch dhcpcd[490]: wlan0: failed to request DHCPv6 information
+Sep 24 14:49:26 Krishnaraj-Arch dhcpcd[490]: wlan0: failed to request DHCPv6 information
+Sep 24 14:49:26 Krishnaraj-Arch dhcpcd[490]: wlan0: adding default route via fe80::1
+Sep 24 14:49:26 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/37i9dQZF1DX5Ejj0EkURtP/diff?revision=0%2C31673312d6da30281aad13459489a80e9300e324&handlesContent=
+Sep 24 14:49:28 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144928.349551:INFO:ftl_signaling_connector.cc(93)] Signaling connected. New JID: 4310c32a590f645df11180320aa8ddcf@chromoting.gserviceaccount.com/chromoting_ftl_fa92dfe9-9c97-466f-b763-166346755881
+Sep 24 14:49:28 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/144928.349607:INFO:heartbeat_sender.cc(172)] Sending outgoing heartbeat.
+Sep 24 14:49:29 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/5aHtKeLjRutTfgLiNkf1xI/diff?revision=74%2C800e7b06dce79ce270aab9f9f3da750244f23718&handlesContent=
+Sep 24 14:49:30 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/1B9BPUMWDtl4ASyG4f693s/diff?revision=166%2C20918d44431527dbf63b66b28785ac514b2055c6&handlesContent=
+Sep 24 14:49:32 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:49:34 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:49:37 Krishnaraj-Arch systemd[2263]: Started Application launched by gnome-shell.
+Sep 24 14:49:38 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/5uwnHZlSpv3tD9twKnZ7UX/diff?revision=48%2Cc2d1c2485f6417ccdc896c24ce2aec8701b01dcc&handlesContent=
+Sep 24 14:49:39 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.hostname1' unit='dbus-org.freedesktop.hostname1.service' requested by ':1.179' (uid=1000 pid=8503 comm="/usr/bin/gnome-control-center power")
+Sep 24 14:49:39 Krishnaraj-Arch systemd[1]: Starting Hostname Service...
+Sep 24 14:49:39 Krishnaraj-Arch dbus-daemon[487]: [system] Successfully activated service 'org.freedesktop.hostname1'
+Sep 24 14:49:39 Krishnaraj-Arch systemd[1]: Started Hostname Service.
+Sep 24 14:49:40 Krishnaraj-Arch gnome-shell[2564]: Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x1400004
+Sep 24 14:49:40 Krishnaraj-Arch dbus-daemon[487]: [system] Activating via systemd: service name='org.freedesktop.bolt' unit='bolt.service' requested by ':1.179' (uid=1000 pid=8503 comm="/usr/bin/gnome-control-center power")
+Sep 24 14:49:40 Krishnaraj-Arch systemd[1]: Starting Thunderbolt system service...
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: bolt 0.9.5 starting up.
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: manager: initializing store
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: store: located at: /var/lib/boltd
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: config: loading user config
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: bouncer: initializing polkit
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: watchdog: enabled [pulse: 90s]
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: udev: initializing udev
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: store: loading domains
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: store: loading devices
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: power: state located at: /run/boltd/power
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: power: force power support: yes
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: power: setting force_power to ON
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: power: state changed: supported/on
+Sep 24 14:49:40 Krishnaraj-Arch boltd[8580]: power: guard '1' for 'boltd' active
+Sep 24 14:49:40 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playlist/v2/playlist/37i9dQZF1F0sijgNaJdgit/diff?revision=1669908962%2C00000000c9969e8e166b857eb2f350306c5c6c5a&handlesContent=
+Sep 24 14:49:45 Krishnaraj-Arch boltd[8580]: udev: found 0 domain
+Sep 24 14:49:45 Krishnaraj-Arch boltd[8580]: manager: acquired power guard '1'
+Sep 24 14:49:45 Krishnaraj-Arch boltd[8580]: udev: enumerating devices
+Sep 24 14:49:45 Krishnaraj-Arch boltd[8580]: power: guard '1' for 'boltd' deactivated
+Sep 24 14:49:45 Krishnaraj-Arch boltd[8580]: power: shutdown scheduled (T-20.00s)
+Sep 24 14:49:45 Krishnaraj-Arch boltd[8580]: power: state changed: supported/wait
+Sep 24 14:49:45 Krishnaraj-Arch dbus-daemon[487]: [system] Successfully activated service 'org.freedesktop.bolt'
+Sep 24 14:49:45 Krishnaraj-Arch systemd[1]: Started Thunderbolt system service.
+Sep 24 14:49:50 Krishnaraj-Arch systemd[2263]: app-gnome-gnome\x2dpower\x2dpanel-8503.scope: Consumed 3.069s CPU time.
+Sep 24 14:50:00 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:50:05 Krishnaraj-Arch boltd[8580]: power: setting force_power to OFF
+Sep 24 14:50:05 Krishnaraj-Arch boltd[8580]: power: state changed: supported/off
+Sep 24 14:50:05 Krishnaraj-Arch dbus-daemon[2306]: [session uid=1000 pid=2306] Activating service name='org.gnome.NautilusPreviewer' requested by ':1.57' (uid=1000 pid=3037 comm="/usr/bin/nautilus --gapplication-service")
+Sep 24 14:50:06 Krishnaraj-Arch dbus-daemon[2306]: [session uid=1000 pid=2306] Successfully activated service 'org.gnome.NautilusPreviewer'
+Sep 24 14:50:08 Krishnaraj-Arch wpa_supplicant[622]: wlan0: CTRL-EVENT-SIGNAL-CHANGE above=0 signal=-66 noise=9999 txrate=325000
+Sep 24 14:50:10 Krishnaraj-Arch systemd[1]: systemd-hostnamed.service: Deactivated successfully.
+Sep 24 14:50:16 Krishnaraj-Arch gnome-shell[2564]: Window manager warning: Buggy client sent a _NET_ACTIVE_WINDOW message with a timestamp of 0 for 0x2e0034d
+Sep 24 14:50:26 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:50:34 Krishnaraj-Arch systemd[2263]: Started dde-calendar date service.
+Sep 24 14:50:34 Krishnaraj-Arch bash[8756]: method return time=1695547234.600513 sender=:1.3 -> destination=:1.111 serial=18 reply_serial=2
+Sep 24 14:50:45 Krishnaraj-Arch spotify-adblock.desktop[8777]: spotify: /usr/lib/libcurl-gnutls.so.4: no version information available (required by spotify)
+Sep 24 14:50:45 Krishnaraj-Arch systemd[2263]: Started Application launched by gnome-shell.
+Sep 24 14:50:45 Krishnaraj-Arch spotify-adblock.desktop[8784]: /opt/spotify/spotify: /usr/lib/libcurl-gnutls.so.4: no version information available (required by /opt/spotify/spotify)
+Sep 24 14:50:45 Krishnaraj-Arch spotify-adblock.desktop[8785]: /opt/spotify/spotify: /usr/lib/libcurl-gnutls.so.4: no version information available (required by /opt/spotify/spotify)
+Sep 24 14:50:46 Krishnaraj-Arch spotify-adblock.desktop[8811]: /proc/self/exe: /usr/lib/libcurl-gnutls.so.4: no version information available (required by /proc/self/exe)
+Sep 24 14:50:46 Krishnaraj-Arch gnome-keyring-daemon[2300]: asked to register item /org/freedesktop/secrets/collection/login/2, but it's already registered
+Sep 24 14:50:46 Krishnaraj-Arch gnome-keyring-d[2300]: asked to register item /org/freedesktop/secrets/collection/login/2, but it's already registered
+Sep 24 14:50:46 Krishnaraj-Arch kernel: [drm] PCIE GART of 256M enabled (table at 0x000000F400000000).
+Sep 24 14:50:47 Krishnaraj-Arch kernel: amdgpu 0000:01:00.0: [drm:amdgpu_ring_test_helper [amdgpu]] *ERROR* ring comp_1.0.1 test failed (-110)
+Sep 24 14:50:47 Krishnaraj-Arch kernel: amdgpu: can't get the mac of 5
+Sep 24 14:50:49 Krishnaraj-Arch spotify-adblock.desktop[8777]: [libprotobuf ERROR ../core/vendor/protobuf3/src/google/protobuf/wire_format_lite.cc:577] String field 'spotify.event_sender.proto.DroppedEvents.DroppedEventsBySequenceIdEntry.key' contains invalid UTF-8 data when parsing a protocol buffer. Use the 'bytes' type if you intend to send raw bytes.
+Sep 24 14:50:49 Krishnaraj-Arch spotify-adblock.desktop[8777]: [*] Config file: /etc/spotify-adblock/config.toml
+Sep 24 14:50:49 Krishnaraj-Arch spotify-adblock.desktop[8777]: [+] getaddrinfo:                 dealer.spotify.com
+Sep 24 14:50:49 Krishnaraj-Arch spotify-adblock.desktop[8777]: [+] getaddrinfo:                 dealer.spotify.com
+Sep 24 14:50:49 Krishnaraj-Arch spotify-adblock.desktop[8777]: [+] cef_urlrequest_create:         https://apresolve.spotify.com/?time=1695547249&type=accesspoint
+Sep 24 14:50:49 Krishnaraj-Arch spotify-adblock.desktop[8811]: [*] Config file: /etc/spotify-adblock/config.toml
+Sep 24 14:50:49 Krishnaraj-Arch spotify-adblock.desktop[8811]: [+] getaddrinfo:                 apresolve.spotify.com
+Sep 24 14:50:50 Krishnaraj-Arch spotify-adblock.desktop[8777]: [+] getaddrinfo:                 dealer.spotify.com
+Sep 24 14:50:50 Krishnaraj-Arch spotify-adblock.desktop[8777]: [+] getaddrinfo:                 dealer.spotify.com
+Sep 24 14:50:52 Krishnaraj-Arch spotify-adblock.desktop[8777]: [+] getaddrinfo:                 dealer.spotify.com
+Sep 24 14:50:52 Krishnaraj-Arch spotify-adblock.desktop[8777]: [+] getaddrinfo:                 dealer.spotify.com
+Sep 24 14:50:53 Krishnaraj-Arch spotify-adblock.desktop[8777]: [-] cef_urlrequest_create:         https://spclient.wg.spotify.com/gabo-receiver-service/public/v3/events/
+Sep 24 14:50:53 Krishnaraj-Arch spotify-adblock.desktop[8777]: [-] cef_urlrequest_create:         https://spclient.wg.spotify.com/gabo-receiver-service/public/v3/events/
+Sep 24 14:50:53 Krishnaraj-Arch spotify-adblock.desktop[8777]: [+] cef_urlrequest_create:         https://login5.spotify.com/v3/login
+Sep 24 14:50:53 Krishnaraj-Arch spotify-adblock.desktop[8777]: [+] getaddrinfo:                 ap-gae2.spotify.com
+Sep 24 14:50:55 Krishnaraj-Arch systemd[2263]: app-gnome-spotify\x2dadblock-8777.scope: Consumed 4.653s CPU time.
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 gae2-spclient.spotify.com
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://heads-ak-spotify-com.akamaized.net/head/3cec64bf0708fe071bc961a28352a0ad74959fdd
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4958]: [-] getaddrinfo:                 heads-ak-spotify-com.akamaized.net
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playplay/v1/key/3cec64bf0708fe071bc961a28352a0ad74959fdd
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:50:56 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:50:57 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:50:59 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:51:01 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playplay/v1/key/f50a040c92b9193b253461cb51207610ed8ad5c0
+Sep 24 14:51:01 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playplay/v1/key/f50a040c92b9193b253461cb51207610ed8ad5c0
+Sep 24 14:51:01 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://heads-ak-spotify-com.akamaized.net/head/f50a040c92b9193b253461cb51207610ed8ad5c0
+Sep 24 14:51:01 Krishnaraj-Arch spotify-adblock.desktop[4958]: [-] getaddrinfo:                 heads-ak-spotify-com.akamaized.net
+Sep 24 14:51:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:51:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/net-fortune/v2/fortune
+Sep 24 14:51:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:03 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:03 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:51:08 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playplay/v1/key/05b23eefdce1f119324e83f3db9f973c3732742d
+Sep 24 14:51:20 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:51:23 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:51:27 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:51:27 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/net-fortune/v2/fortune
+Sep 24 14:51:27 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:27 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:27 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:27 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:27 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:27 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:27 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:29 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:51:29 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:51:29 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:51:30 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:51:30 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:51:30 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:51:30 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:51:32 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/playplay/v1/key/793cc9a1a2f9c1d2d0e10b1f5ec6dd71bf89be3d
+Sep 24 14:51:42 Krishnaraj-Arch /usr/lib/gdm-x-session[2337]: (EE) event10 - Synaptics TM3336-001: client bug: event processing lagging behind by 22ms, your system is too slow
+Sep 24 14:51:43 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/connect-state/v1/devices/fc2b7526d6a6f44897ac8148f97c9f60ab091fbb
+Sep 24 14:51:43 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:43 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:43 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:43 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:43 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:43 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:43 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/collection/v2/delta
+Sep 24 14:51:46 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:51:51 Krishnaraj-Arch gnome-shell[2564]: Could not load a pixbuf from icon theme.
+                                                   This may indicate that pixbuf loaders or the mime database could not be found.
+Sep 24 14:51:59 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:52:11 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:52:24 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:52:27 Krishnaraj-Arch kernel: perf: interrupt took too long (2505 > 2500), lowering kernel.perf_event_max_sample_rate to 79800
+Sep 24 14:53:04 Krishnaraj-Arch spotify-adblock.desktop[4899]: [+] cef_urlrequest_create:         https://spclient.wg.spotify.com/extended-metadata/v0/extended-metadata
+Sep 24 14:53:04 Krishnaraj-Arch spotify-adblock.desktop[4958]: [+] getaddrinfo:                 spclient.wg.spotify.com
+Sep 24 14:53:20 Krishnaraj-Arch systemd[2263]: Started Application launched by gnome-shell.
+Sep 24 14:53:22 Krishnaraj-Arch kernel: [drm] PCIE GART of 256M enabled (table at 0x000000F400000000).
+Sep 24 14:53:22 Krishnaraj-Arch kernel: amdgpu 0000:01:00.0: [drm:amdgpu_ring_test_helper [amdgpu]] *ERROR* ring comp_1.0.1 test failed (-110)
+Sep 24 14:53:22 Krishnaraj-Arch kernel: amdgpu: can't get the mac of 5
+Sep 24 14:53:29 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:53:35 Krishnaraj-Arch systemd[2263]: Started Application launched by gnome-shell.
+Sep 24 14:53:37 Krishnaraj-Arch gnome-shell[2564]: Can't update stage views actor <unnamed>[<MetaWindowActorX11>:0x55d5787e2f20] is on because it needs an allocation.
+Sep 24 14:53:37 Krishnaraj-Arch gnome-shell[2564]: Can't update stage views actor <unnamed>[<MetaSurfaceActorX11>:0x55d5751e2380] is on because it needs an allocation.
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] mpv 0.36.0 Copyright © 2000-2023 mpv/MPlayer/mplayer2 projects
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer]  built on Sun Jul 23 05:49:29 2023
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] libplacebo version: v5.264.1
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] FFmpeg version: n6.0
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] FFmpeg library versions:
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer]    libavutil       58.2.100
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer]    libavcodec      60.3.100
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer]    libavformat     60.3.100
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer]    libswscale      7.1.100
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer]    libavfilter     9.3.100
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer]    libswresample   4.10.100
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer]
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Configuration: -Db_lto=true -Db_pie=true -Dpython.bytecompile=1 -Dlibmpv=true -Dcaca=disabled -Dcdda=enabled -Ddvbin=enabled -Ddvdnav=enabled -Dlibarchive=enabled -Dprefix=/usr -Dlibexecdir=lib -Dsbindir=bin -Dauto_features=auto -Dbuildtype=plain -Dwrap_mode=nodownload
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] List of enabled features: alsa av-channel-layout avif_muxer build-date cdda cplugins cuda-hwaccel cuda-interop dmabuf-interop-gl dmabuf-interop-pl dmabuf-wayland drm drm-is-kms dvbin dvdnav egl egl-drm egl-helpers egl-x11 ffmpeg ffnvcodec gbm gl gl-wayland glibc-thread-name glob glob-posix gpl iconv jack javascript jpeg jpegxl lcms2 libarchive libass libavdevice libbluray libdl libm libplacebo libplacebo-next librt linux-fstatfs luajit manpage-build memfd_create noexecstack pipewire posix posix_shm pulse rubberband rubberband-3 shaderc stdatomic threads uchardet vaapi vaapi-drm vaapi-egl vaapi-libplacebo vaapi-wayland vaapi-x-egl vaapi-x11 vdpau vector vk_khr_display vt.h vulkan wayland wayland_protocols_1_27 wayland_protocols_1_31 wayland_protocols_1_32 x11 xv zimg zimg-st428 zlib
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Set property: vo="libmpv" -> 1
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Set property: gpu-hwdec-interop="auto" -> 1
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Set property: cache-default=15000 -> -3
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Set property: cache-backbuffer=15000 -> -3
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Set property: cache-secs=10 -> 1
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Set property: audio-client-name="Stremio" -> 1
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Set property: title="Stremio" -> 1
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Set property: audio-fallback-to-null="yes" -> 1
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Set property: audio-client-name="Stremio" -> 1
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Set property: title="Stremio" -> 1
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Waiting for scripts...
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [osd/libass] libass API version: 0x1701000
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [osd/libass] libass source: commit: 0.17.1-0-ge8ad72accd3a84268275a9385beb701c9284e5b3-dirty
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [osd/libass] Shaper: FriBidi 1.0.12 (SIMPLE) HarfBuzz-ng 8.2.1 (COMPLEX)
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [osd/libass] Setting up fonts...
+Sep 24 14:53:37 Krishnaraj-Arch stremio[9438]: WebEngineContext used before QtWebEngine::initialize() or OpenGL context creation failed.
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [osd/libass] Using font provider fontconfig
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [osd/libass] Done.
+Sep 24 14:53:37 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [cplayer] Done loading scripts.
+Sep 24 14:53:38 Krishnaraj-Arch stremio[9438]: qml: Loading web UI from URL: https://app.strem.io/shell-v4.4/#?loginFlow=desktop
+Sep 24 14:53:38 Krishnaraj-Arch stremio[9438]: qml: Stremio Shell version: 4.4.159
+Sep 24 14:53:38 Krishnaraj-Arch stremio[9438]: qml:  **** Completed. Loading Autoupdater ***
+Sep 24 14:53:38 Krishnaraj-Arch stremio[9438]: qml: Auto-updater: skipping, possibly not running an installed app?
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] GL_VERSION='4.6 (Compatibility Profile) Mesa 23.1.7-arch1.1'
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] Detected desktop OpenGL 4.6.
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] GL_VENDOR='Intel'
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] GL_RENDERER='Mesa Intel(R) UHD Graphics 620 (KBL GT2)'
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] GL_SHADING_LANGUAGE_VERSION='4.60'
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] Loaded extension GL_KHR_debug.
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] GL_*_swap_control extension missing.
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] Testing FBO format rgba16f
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] Using FBO format rgba16f.
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] No advanced processing required. Enabling dumb mode.
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] Loading hwdec driver 'vaapi'
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render/vaapi] VAAPI hwdec only works with OpenGL or Vulkan backends.
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] Loading failed.
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] Loading hwdec driver 'cuda'
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: Cannot load libcuda.so.1
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render/cuda] Failed to load CUDA symbols
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] Loading failed.
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] Loading hwdec driver 'drmprime'
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render/drmprime] drmprime hwdec requires at least one dmabuf interop backend.
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] Loading failed.
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] Loading hwdec driver 'drmprime-overlay'
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render/drmprime-overlay] Failed to retrieve DRM fd from native display.
+Sep 24 14:53:38 Krishnaraj-Arch smartcode-stremio.desktop[9438]: [libmpv_render] Loading failed.
+Sep 24 14:53:40 Krishnaraj-Arch smartcode-stremio.desktop[9438]: hls executables located ->  { ffmpeg: '/usr/bin/ffmpeg', ffsplit: null }
+Sep 24 14:53:40 Krishnaraj-Arch smartcode-stremio.desktop[9438]: Using app path -> /home/krishnaraj/.stremio-server
+Sep 24 14:53:40 Krishnaraj-Arch smartcode-stremio.desktop[9438]: Enabling casting...
+Sep 24 14:53:40 Krishnaraj-Arch smartcode-stremio.desktop[9438]: Discovery of new external device "vlc" - VLC
+Sep 24 14:53:40 Krishnaraj-Arch smartcode-stremio.desktop[9438]: Discovery of new external device "mpv" - MPV
+Sep 24 14:53:40 Krishnaraj-Arch smartcode-stremio.desktop[9438]: (node:9493) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+Sep 24 14:53:40 Krishnaraj-Arch smartcode-stremio.desktop[9438]: (Use `node --trace-deprecation ...` to show where the warning was created)
+Sep 24 14:53:41 Krishnaraj-Arch stremio[9438]: js: Error: [$parse:lexerr] Lexer Error: Unexpected next character  at columns 54-54 [&] in expression [//graph.facebook.com/536485737264355/picture?width=150&height=150].
+                                               http://errors.angularjs.org/1.5.7/$parse/lexerr?p0=Unexpected%20next%20character%20&p1=s%2054-54%20%5B%26%5D&p2=%2F%2Fgraph.facebook.com%2F536485737264355%2Fpicture%3Fwidth%3D150%26height%3D150
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:367
+                                                   at dr.throwError (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:75659)
+                                                   at dr.lex (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:74291)
+                                                   at $r.ast (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:80347)
+                                                   at Er.compile (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:85579)
+                                                   at kr.parse (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:100310)
+                                                   at l (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:101145)
+                                                   at f.$watch (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:107611)
+                                                   at Object.<anonymous> (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:513:1755)
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:6797
+                                                   at Ce (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:52194)
+                                                   at le (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:47739)
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:40876
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:40987
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:40987
+                                                   at le (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:47690)
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:40876
+                                                   at le (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:47690)
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:40876
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:40987
+                                                   at le (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:47690)
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:40876
+                                                   at le (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:47690)
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:40876
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:40246
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:9414
+                                                   at f.$eval (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:110762)
+                                                   at f.$apply (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:110997)
+                                                   at https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:9369
+                                                   at Object.invoke (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:24253)
+                                                   at i (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:9290)
+                                                   at we (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:9579)
+                                                   at be (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:8822)
+                                                   at HTMLDocument.<anonymous> (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:124:166449)
+                                                   at u (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:118:27195)
+                                                   at Object.fireWith [as resolveWith] (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:118:27956)
+                                                   at Function.ready (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:118:29753)
+                                                   at HTMLDocument.O (https://app.strem.io/shell-v4.4/blob.js?ver=fb604a:118:26931) <img stremio-image="{{settings.avatarUrl() || 'images/account.png'}}" class="picture">
+Sep 24 14:53:42 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-top-movies.deflix.tv/catalog/movie/imdb-most-popular.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:42 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-top-movies.deflix.tv/catalog/movie/top-box-office-us.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:42 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-top-movies.deflix.tv/catalog/movie/imdb-top-250.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:42 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-top-movies.deflix.tv/catalog/movie/rt-certified-fresh.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://9b7c457c25d2-stremio-addon.baby-beamup.club/catalog/series/series.top.cinemeta.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://9b7c457c25d2-stremio-addon.baby-beamup.club/catalog/movie/movie.top.cinemeta.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-indian-livetv.vercel.app/catalog/tv/sliv_home.json' (redirected from 'https://stremio-indian-livetv.now.sh/catalog/tv/sliv_home.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-indian-livetv.vercel.app/catalog/tv/mx_home.json' (redirected from 'https://stremio-indian-livetv.now.sh/catalog/tv/mx_home.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-indian-livetv.vercel.app/catalog/tv/zee5_home.json' (redirected from 'https://stremio-indian-livetv.now.sh/catalog/tv/zee5_home.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-books.vercel.app/catalog/books/books-top-paid.json' (redirected from 'https://stremio-books.now.sh/catalog/books/books-top-paid.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-horrible-addon-dev.sleeyax.vercel.app/catalog/series/horrible%3Acatalog.json' (redirected from 'https://stremio-horrible-addon-dev.sleeyax.now.sh/catalog/series/horrible%3Acatalog.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-books.vercel.app/catalog/books/books-top-free.json' (redirected from 'https://stremio-books.now.sh/catalog/books/books-top-free.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-books.vercel.app/catalog/books/audiobooks-top-audiobooks.json' (redirected from 'https://stremio-books.now.sh/catalog/books/audiobooks-top-audiobooks.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://blackbooks.vercel.app/catalog/books/books-top-paid.json' (redirected from 'https://blackbooks.now.sh/catalog/books/books-top-paid.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-mrpiracy.joaolvcm.vercel.app/catalog/movie/mr_piracy.json' (redirected from 'https://stremio-mrpiracy.joaolvcm.now.sh/catalog/movie/mr_piracy.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-mrpiracy.joaolvcm.vercel.app/catalog/series/mr_piracy.json' (redirected from 'https://stremio-mrpiracy.joaolvcm.now.sh/catalog/series/mr_piracy.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:43 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://wonderfulsubs.vercel.app/catalog/series/wonderfulsubs-popular.json' (redirected from 'https://wonderfulsubs.now.sh/catalog/series/wonderfulsubs-popular.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:44 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://wonderfulsubs.vercel.app/catalog/series/wonderfulsubs-latest.json' (redirected from 'https://wonderfulsubs.now.sh/catalog/series/wonderfulsubs-latest.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:44 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://4anime.vercel.app/catalog/series/4anime-series-list.json' (redirected from 'https://4anime.now.sh/catalog/series/4anime-series-list.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:44 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://4anime.vercel.app/catalog/movie/4anime-movie-list.json' (redirected from 'https://4anime.now.sh/catalog/movie/4anime-movie-list.json') from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:44 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://stremio-kickass.herokuapp.com/catalog/movie/movie.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:44 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://joaolvcm-stremio-yts.herokuapp.com/catalog/movie/yts.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:44 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://bolly-strem.herokuapp.com/catalog/movie/top.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:44 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://bolly-strem.herokuapp.com/catalog/movie/rating.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:44 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://bolly-strem.herokuapp.com/catalog/series/top.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:44 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://bolly-strem.herokuapp.com/catalog/series/rating.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:53:46 Krishnaraj-Arch systemd[2263]: Started Application launched by gnome-shell.
+Sep 24 14:53:48 Krishnaraj-Arch gnome-shell[2564]: Can't update stage views actor <unnamed>[<MetaWindowActorX11>:0x55d577284fd0] is on because it needs an allocation.
+Sep 24 14:53:48 Krishnaraj-Arch gnome-shell[2564]: Can't update stage views actor <unnamed>[<MetaSurfaceActorX11>:0x55d578b289d0] is on because it needs an allocation.
+Sep 24 14:53:48 Krishnaraj-Arch gnome-shell[2564]: Can't update stage views actor <unnamed>[<MetaWindowActorX11>:0x55d574d9ab20] is on because it needs an allocation.
+Sep 24 14:53:48 Krishnaraj-Arch gnome-shell[2564]: Can't update stage views actor <unnamed>[<MetaSurfaceActorX11>:0x55d57518de10] is on because it needs an allocation.
+Sep 24 14:53:48 Krishnaraj-Arch gnome-shell[2564]: Can't update stage views actor <unnamed>[<MetaWindowActorX11>:0x55d57894acb0] is on because it needs an allocation.
+Sep 24 14:53:48 Krishnaraj-Arch gnome-shell[2564]: Can't update stage views actor <unnamed>[<MetaSurfaceActorX11>:0x55d57a470a70] is on because it needs an allocation.
+Sep 24 14:53:59 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked
+Sep 24 14:54:08 Krishnaraj-Arch wpa_supplicant[622]: wlan0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-67 noise=9999 txrate=292600
+Sep 24 14:54:08 Krishnaraj-Arch stremio[9438]: js: Access to fetch at 'https://9546dcbb7c1c-stremio-fmovies.baby-beamup.club/catalog/movie/top.json' from origin 'https://app.strem.io' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
+Sep 24 14:54:09 Krishnaraj-Arch wpa_supplicant[622]: wlan0: CTRL-EVENT-SIGNAL-CHANGE above=0 signal=-72 noise=9999 txrate=260000
+Sep 24 14:54:13 Krishnaraj-Arch systemd[2263]: Started Application launched by gnome-shell.
+Sep 24 14:54:36 Krishnaraj-Arch gnome-system-monitor.desktop[9665]: glibtop(c=9665): [WARNING] statvfs '/home/krishnaraj/.cache/doc' failed: Operation not permitted
+Sep 24 14:54:36 Krishnaraj-Arch gnome-system-monitor.desktop[9665]: glibtop(c=9665): [WARNING] statvfs '/run/user/1000/doc' failed: Operation not permitted
+Sep 24 14:54:38 Krishnaraj-Arch wpa_supplicant[622]: wlan0: CTRL-EVENT-SIGNAL-CHANGE above=1 signal=-66 noise=9999 txrate=325000
+Sep 24 14:54:47 Krishnaraj-Arch chrome-remote-desktop[731]: [0924/145447.067860:INFO:heartbeat_sender.cc(172)] Sending outgoing heartbeat.
+Sep 24 14:54:54 Krishnaraj-Arch tracker-miner-f[3922]: Could not execute sparql: database is locked

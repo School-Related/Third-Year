@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.2)  19 SEP 2023 08:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  24 SEP 2023 20:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -887,14 +887,14 @@ Package rerunfilecheck Info: File `Assignment_3.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  13220 strings out of 477985
- 200855 string characters out of 5840059
+ 200855 string characters out of 5840058
  1861388 words of memory out of 5000000
  33119 multiletter control sequences out of 15000+600000
  555576 words of font info for 82 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,12n,76p,593b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_3.pdf (13 pages, 1359521 bytes).
+Output written on Assignment_3.pdf (13 pages, 1359518 bytes).
 PDF statistics:
  292 PDF objects out of 1000 (max. 8388607)
  250 compressed objects within 3 object streams
