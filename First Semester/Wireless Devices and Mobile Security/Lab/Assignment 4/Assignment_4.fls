@@ -802,6 +802,11 @@ INPUT /usr/share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd
 INPUT /usr/share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd
 INPUT /usr/share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8c.tfm
+INPUT ./android security/android security_5.jpg
+INPUT ./android security/android security_5.jpg
+INPUT android security/android security_5.jpg
+INPUT ./android security/android security_5.jpg
+INPUT ./android security/android security_5.jpg
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncri8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncri8t.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncri8t.vf
@@ -809,6 +814,26 @@ INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncri8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncb8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncb8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncr8c.vf
+INPUT ./app policies in android/app policies in android_4.jpg
+INPUT ./app policies in android/app policies in android_4.jpg
+INPUT app policies in android/app policies in android_4.jpg
+INPUT ./app policies in android/app policies in android_4.jpg
+INPUT ./app policies in android/app policies in android_4.jpg
+INPUT ./types of permissions in android/types of permissions in android_9.jpg
+INPUT ./types of permissions in android/types of permissions in android_9.jpg
+INPUT types of permissions in android/types of permissions in android_9.jpg
+INPUT ./types of permissions in android/types of permissions in android_9.jpg
+INPUT ./types of permissions in android/types of permissions in android_9.jpg
+INPUT ./camera permission in android/camera permission in android_9.jpg
+INPUT ./camera permission in android/camera permission in android_9.jpg
+INPUT camera permission in android/camera permission in android_9.jpg
+INPUT ./camera permission in android/camera permission in android_9.jpg
+INPUT ./camera permission in android/camera permission in android_9.jpg
+INPUT ./green dot in latest android phones for camera/green dot in latest android phones for camera_6.jpg
+INPUT ./green dot in latest android phones for camera/green dot in latest android phones for camera_6.jpg
+INPUT green dot in latest android phones for camera/green dot in latest android phones for camera_6.jpg
+INPUT ./green dot in latest android phones for camera/green dot in latest android phones for camera_6.jpg
+INPUT ./green dot in latest android phones for camera/green dot in latest android phones for camera_6.jpg
 INPUT ../../Programs/Assignment 4/screenshots/1.jpeg
 INPUT ../../Programs/Assignment 4/screenshots/1.jpeg
 INPUT ../../Programs/Assignment 4/screenshots/1.jpeg
