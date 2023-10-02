@@ -93,7 +93,7 @@
 
 
     \huge{\textsc{
-            Tools for Digital Forensics and Investigation
+            Simulation of Routing in Mobile Ad Hoc Networks with Multiple Nodes
         }} \\
 
 
@@ -107,7 +107,7 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Lab Assignment 1
+        Lab Assignment 3
     } % Subtitle or further description
     \vfill
 
@@ -136,27 +136,177 @@
 \setcounter{page}{1}
 
 \section{Aim}
+Write a program to simulate routing in mobile Ad-Hoc network with multiple nodes.
+You may use NetSim or NS2 or QualNet for this experiment.
 
 \section{Objectives}
 
+\begin{enumerate}
+    \item Understand about the basics of Mobile Ad-hoc Networks (MANETs) and different
+          routing protocols
+    \item Setup a network with wireless nodes using ns2
+    \item Get familiar with the different characteristics of MANET through simulations
+\end{enumerate}
 
 \section{Theory}
+\subsection{What are Mobile Ad-hoc Networks?}
+
+Mobile Ad-hoc Networks (MANETs) are decentralized networks formed by a collection of mobile devices that communicate with each other without relying on a pre-existing infrastructure or centralized administration. In MANETs, nodes act both as data sources and routers, dynamically establishing connections to relay information. This self-configuring and adaptive nature makes MANETs suitable for scenarios where traditional network infrastructure is impractical or unavailable, such as military operations, disaster response, and collaborative sensor networks. The topology of a MANET is dynamic, continually changing as nodes move, join, or leave the network.
+
+\subsection{MANET Applications}
+
+MANETs find applications in various domains, including:
+
+\begin{itemize}
+    \item \textbf{Military Operations:} MANETs provide an effective means of communication for soldiers and vehicles on the battlefield where a fixed infrastructure is not feasible.
+    \item \textbf{Disaster Response:} In disaster-stricken areas with damaged or nonexistent communication infrastructure, MANETs enable rescue teams to establish communication networks on the fly.
+    \item \textbf{Sensor Networks:} Collaborative sensor networks leverage MANETs, allowing sensors to dynamically form networks for collecting and transmitting data.
+    \item \textbf{Mobile Conferencing:} MANETs support spontaneous and mobile communication in conferences or meetings without the need for predefined infrastructure.
+\end{itemize}
+
+\subsection{Challenges and Issues in MANET}
+
+MANETs face several challenges and issues, including:
+
+\begin{itemize}
+    \item \textbf{Dynamic Topology:} Rapid changes in network topology due to the mobility of nodes make routing complex.
+    \item \textbf{Limited Resources:} Devices in MANETs often have constraints on power, processing capabilities, and memory, requiring energy-efficient protocols.
+    \item \textbf{Security Concerns:} MANETs are vulnerable to various security threats, such as eavesdropping, unauthorized access, and malicious attacks, due to the absence of a centralized authority.
+    \item \textbf{Routing Complexity:} Designing efficient routing protocols is challenging in the absence of a fixed infrastructure, requiring adaptability to dynamic conditions.
+\end{itemize}
+
+\subsection{Types of ADHOC Routing Protocols}
+
+Various types of ad-hoc routing protocols serve different purposes:
+
+\begin{enumerate}
+    \item \textbf{Proactive (Table-Driven) Protocols:} These protocols, like Optimized Link State Routing (OLSR), maintain consistent routing information through periodic updates. Nodes continuously update their routing tables, allowing for quick route selection when needed.
+    \item \textbf{Reactive (On-Demand) Protocols:} Protocols such as Ad Hoc On-Demand Distance Vector (AODV) establish routes only when necessary, reducing routing overhead. Route discovery occurs reactively in response to data transmission requirements.
+    \item \textbf{Hybrid Protocols:} Hybrid protocols combine features of both proactive and reactive protocols, providing adaptability to changing network conditions. They strike a balance between maintaining current routing information and on-demand route discovery.
+\end{enumerate}
+
+\subsection{Routing Protocols in MANET}
+
+Routing protocols in MANETs play a critical role in establishing and maintaining communication paths:
+
+\begin{itemize}
+    \item \textbf{AODV (Ad Hoc On-Demand Distance Vector):} A reactive protocol that establishes routes on demand. When a node needs to communicate with another, it initiates a route discovery process, and a route is established as a response.
+    \item \textbf{DSR (Dynamic Source Routing):} Another reactive protocol where nodes dynamically discover and maintain routes. Nodes maintain a route cache, and route discovery occurs when a route is not present in the cache.
+    \item \textbf{OLSR (Optimized Link State Routing):} A proactive protocol that efficiently maintains a topology table for optimized route selection. Nodes periodically exchange link state information, allowing for quicker route convergence.
+\end{itemize}
+
+These routing protocols address the challenges of MANETs by adapting to the dynamic nature of the network and varying resource constraints.
+
+
+
 
 \section{Platform}
 \textbf{Operating System}: Ubuntu 22.04 x86-64 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
 \textbf{Compilers or Interpreters}: NS2, NAM 1.4\\
 
-\section{Input and Output}
+\section{Screenshots}
 
 
-\section{Code}
-\lstinputlisting[language=Bash, caption=Assignment 3.tcl]{../../Programs/Assignment 3/Assignment_3.tcl}
+\section{Code and Algorithm}
+\subsection{Algorithm}
+\begin{enumerate}
+    \item Set network parameters such as channel, propagation, network interface, MAC, queue, antenna, etc.
+    \item Create a new simulator object.
+    \item Open trace and nam files for network visualization.
+    \item Load a flat grid topology.
+    \item Configure nodes in the network with various parameters.
+    \item Create nodes in the network and set their positions randomly.
+    \item Schedule nodes to move randomly.
+    \item Attach agents to nodes in the network.
+    \item Create a CBR traffic generator and attach it to a UDP agent.
+    \item Start the CBR traffic generator.
+    \item Schedule the end of the simulation.
+    \item Run the simulation.
+\end{enumerate}
+
+\subsection{Code}
+
+\lstinputlisting[language=bash, caption=AODV.tcl]{../../Programs/Assignment 3/Assignment_3.tcl}
 
 \section{Conclusion}
-Thus, We have learnt IDS systems and their types. We have also learnt about various tools based on IDS systems.
+Thus, implemented a TCL script to simulate routing in mobile Ad-Hoc network with
+multiple nodes using NS2.
 \clearpage
 
 \section{FAQ}
+
+\begin{enumerate}
+
+    \item \textit{What are the main features of routing protocols?}\\
+
+          Routing protocols in networking possess several key features:
+          \begin{itemize}
+              \item \textbf{Path Determination:} Routing protocols determine the optimal path for data transmission.
+              \item \textbf{Dynamic Adaptability:} They adapt to changes in network topology and conditions.
+              \item \textbf{Scalability:} Capable of handling networks of varying sizes.
+              \item \textbf{Robustness:} Resilient to network failures and able to recover quickly.
+              \item \textbf{Security:} Incorporate measures to secure routing information and prevent attacks.
+          \end{itemize}
+
+    \item \textit{Why is routing in an ad hoc network so difficult, and why is this network more vulnerable as compared to conventional networks?}\\
+
+          Ad hoc networks pose challenges due to their dynamic and self-configuring nature, making routing difficult. They are more vulnerable because:
+          \begin{itemize}
+              \item \textbf{Dynamic Topology:} Constantly changing network topology requires adaptive routing algorithms.
+              \item \textbf{Limited Resources:} Devices in ad hoc networks often have limited power and processing capabilities.
+              \item \textbf{Open Medium:} Wireless communication is susceptible to eavesdropping and unauthorized access.
+              \item \textbf{Lack of Centralized Authority:} Absence of a centralized control makes it challenging to enforce security policies.
+          \end{itemize}
+
+    \item \textit{Can ad hoc networks be used by multiple devices, and why?}\\
+
+          Yes, ad hoc networks can be used by multiple devices. The self-configuring nature of ad hoc networks allows devices to dynamically form connections without relying on a centralized infrastructure. This flexibility makes them suitable for scenarios where multiple devices need to communicate without the need for pre-existing network infrastructure.
+
+    \item \textit{What are common Attacks on Routing Protocols? Explain in detail.}\\
+
+          Common attacks on routing protocols include:
+          \begin{enumerate}
+              \item \textbf{Spoofing:} Impersonating a trusted node to inject false routing information.
+              \item \textbf{Routing Table Overflow:} Flooding a router's routing table to disrupt normal operations.
+              \item \textbf{Denial of Service (DoS):} Overloading the network to make it unavailable to legitimate users.
+              \item \textbf{Replay Attacks:} Capturing and retransmitting data to gain unauthorized access.
+              \item \textbf{Selective Forwarding:} Malicious nodes selectively forward packets to disrupt communication.
+          \end{enumerate}
+
+    \item \textit{How is Route maintenance carried out in the AODV protocol? Give advantages and disadvantages of AODV.}\\
+
+          Route maintenance in AODV involves:
+          \begin{itemize}
+              \item Periodic HELLO messages to verify the status of neighbor nodes.
+              \item Route Error (RERR) messages to notify about broken links.
+              \item Route Requests (RREQ) for new routes when needed.
+          \end{itemize}
+
+          \textbf{Advantages of AODV:}
+          \begin{itemize}
+              \item \textbf{Adaptability:} Adapts well to dynamic network conditions.
+              \item \textbf{Reduced Overhead:} Minimizes routing overhead by using on-demand route establishment.
+          \end{itemize}
+
+          \textbf{Disadvantages of AODV:}
+          \begin{itemize}
+              \item \textbf{Latency:} Introduces latency in route discovery.
+              \item \textbf{Route Rediscovery:} May lead to frequent route rediscovery in dynamic environments.
+          \end{itemize}
+
+    \item \textit{What is the main vulnerability of routing protocols?}\\
+
+          The main vulnerability of routing protocols is the susceptibility to various attacks, including:
+          \begin{itemize}
+              \item \textbf{Spoofing:} Impersonation of trusted nodes.
+              \item \textbf{Eavesdropping:} Unauthorized interception of communication.
+              \item \textbf{Denial of Service (DoS):} Overloading the network to disrupt service.
+              \item \textbf{Routing Information Manipulation:} Altering routing information to misdirect traffic.
+          \end{itemize}
+
+\end{enumerate}
+
+
 
 \end{document}

@@ -93,7 +93,7 @@
 
 
     \huge{\textsc{
-            Tools for Digital Forensics and Investigation
+            Demonstration of Security Permissions in Android using Apps.
         }} \\
 
 
@@ -107,7 +107,7 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Lab Assignment 1
+        Lab Assignment 4
     } % Subtitle or further description
     \vfill
 
@@ -136,28 +136,199 @@
 \setcounter{page}{1}
 
 \section{Aim}
+Study the security permissions for applications in android phones. Either
+demonstrates Android security permission configurations or Write the android app
+to demonstrate permissions usage control in android phones.
 
 \section{Objectives}
 
+\begin{enumerate}
+    \item To understand the basics of Android permissions
+    \item To increase user awareness and limit an app's access to sensitive data
+    \item Configuring permissions on Android 8.0 and lower includes allow listing, camera,
+          storage, location permission, etc.
+\end{enumerate}
 
 \section{Theory}
+
+\subsection{Android Security Architecture}
+
+Android security architecture is a multi-layered system designed to safeguard Android devices and user data. Key components include:
+
+\begin{itemize}
+    \item \textbf{Linux Kernel Security:} Provides core security features like process isolation and SELinux.
+    \item \textbf{Hardware Security:} Utilizes Trusted Execution Environments (TEEs) and hardware-backed security features.
+    \item \textbf{Application Sandboxing:} Ensures each Android app runs in its own isolated environment.
+    \item \textbf{Permission System:} Controls app capabilities, requiring explicit user approval for sensitive actions.
+    \item \textbf{Secure Boot and Verified Boot:} Ensures only trusted firmware and software run during device startup.
+    \item \textbf{Android Keystore:} A secure container for cryptographic keys used by apps.
+    \item \textbf{Network Security:} Enforces secure communication practices, supporting protocols like HTTPS.
+    \item \textbf{Updates and Patching:} Regular updates and security patches to address vulnerabilities.
+    \item \textbf{Google Play Protect:} Scans apps for malware before and after installation.
+    \item \textbf{Biometric Authentication:} Supports fingerprint and facial recognition for device security.
+\end{itemize}
+
+\subsection{Purpose of Permission to Protect the Privacy of an Android User}
+
+The purpose of permissions in Android is to protect the privacy and security of the user. Permissions define the actions an app can perform and the data it can access. By requiring explicit user approval for sensitive actions, Android ensures that users have control over their data and can make informed decisions about granting or denying access to specific resources. This permission model helps prevent unauthorized access, enhances user privacy, and mitigates potential security risks.
+
+\subsection{Permission Approval Example}
+
+When an Android app requests access to sensitive resources, the system prompts the user for permission. For example, when a photo editing app wants to access the device's camera, a permission dialog appears. The user can then choose to grant or deny camera access. If granted, the app can utilize the camera for taking photos. If denied, the app is restricted from accessing the camera, enhancing user control over their data.
+
+\subsection{Android Security Permissions: List of Permissions, Meaning with Examples}
+
+Android permissions control app capabilities. Common permissions include:
+
+\begin{itemize}
+    \item \textbf{CAMERA:} Allows the app to use the device camera. Example: A photo-taking app.
+    \item \textbf{READ\_CONTACTS:} Grants access to the user's contacts. Example: A messaging app needing contact information.
+    \item \textbf{ACCESS\_FINE\_LOCATION:} Permits access to precise device location. Example: A navigation app.
+    \item \textbf{READ\_SMS:} Enables reading SMS messages. Example: An app for managing text messages.
+    \item \textbf{RECORD\_AUDIO:} Allows recording audio. Example: A voice recorder app.
+\end{itemize}
+
+These permissions ensure that apps have the necessary access for their intended functionality while protecting user privacy and security.
+
+
 
 \section{Platform}
 \textbf{Operating System}: Ubuntu 22.04 x86-64 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
 \textbf{Compilers or Interpreters}: NS2, NAM 1.4\\
 
+\section{Screenshots}
 
-\section{Input and Output}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../../Programs/Assignment 4/screenshots/1.jpeg}
+    \caption{}
+\end{figure}
 
 
-% \section{Code}
-% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../../Programs/Assignment 4/screenshots/4.jpeg}
+    \caption{}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../../Programs/Assignment 4/screenshots/5.jpeg}
+    \caption{}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{../../Programs/Assignment 4/screenshots/2.jpeg}
+    \caption{}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{../../Programs/Assignment 4/screenshots/3.jpeg}
+    \caption{}
+\end{figure}
+
+
+\section{Code and Algorithm}
+\subsection{Algorithm}
+\begin{enumerate}
+    \item Open Android Studio and create a new project.
+    \item Add two buttons to the app's layout, one for invoking the camera and one for invoking storage permission.
+    \item Edit the app's manifest file to include the necessary permissions for camera and storage.
+    \item Write functions in the app's activity files to handle the button clicks and request the appropriate permissions.
+    \item Build the app and test it on an emulator or physical device.
+    \item Debug and fix any issues that arise during testing.
+    \item Export the app as an APK file.
+\end{enumerate}
+
+\subsection{Code}
+
+\lstinputlisting[language=java, caption=MainActivity.java]{../../Programs/Assignment 4/MainActivity.java}
+\lstinputlisting[language=xml, caption=activitymain.xml]{../../Programs/Assignment 4/activity_main.xml}
+\lstinputlisting[language=xml, caption=androidmanifest.xml]{../../Programs/Assignment 4/AndroidManifest.xml}
 
 \section{Conclusion}
-Thus, We have learnt IDS systems and their types. We have also learnt about various tools based on IDS systems.
+Thus, we have studied security permissions for applications in android phones also
+implemented android app to demonstrate permissions usage control in android phones
 \clearpage
 
 \section{FAQ}
+
+\begin{enumerate}
+    
+    \item \textbf{How to Toggle Permission on Android Phones:}
+    
+    To toggle permissions on Android phones:
+    
+    \begin{enumerate}
+        \item Open the "Settings" app on your Android device.
+        \item Scroll down and select "Apps" or "Application Manager," depending on your device.
+        \item Choose the app for which you want to modify permissions.
+        \item Navigate to the "Permissions" section within the app settings.
+        \item Toggle on or off the specific permissions according to your preference.
+        \item Confirm the changes, and the app will now have the adjusted permissions.
+    \end{enumerate}
+    
+    \item \textbf{How Do I Stop an App from Accessing My Contacts:}
+    
+    To prevent an app from accessing your contacts on Android:
+    
+    \begin{enumerate}
+        \item Open the "Settings" app on your Android device.
+        \item Go to "Apps" or "Application Manager."
+        \item Select the app you want to restrict from accessing contacts.
+        \item Look for the "Permissions" section.
+        \item Disable the "Contacts" permission for that specific app.
+        \item Confirm the changes, and the app will no longer have access to your contacts.
+    \end{enumerate}
+    
+    \item \textbf{Can Apps Steal Your Photos:}
+    
+    While reputable apps follow strict security protocols, there is a potential risk of malicious apps stealing photos. To mitigate this risk:
+    
+    \begin{itemize}
+        \item Only download apps from trusted sources like the Google Play Store.
+        \item Review app permissions before installation.
+        \item Regularly check app permissions in device settings and revoke unnecessary access.
+        \item Keep your device's operating system and apps up to date to benefit from security patches.
+    \end{itemize}
+    
+    \item \textbf{What Are App Protection Policies:}
+    
+    App protection policies are security measures implemented to safeguard sensitive data within mobile applications. These policies often include:
+    
+    \begin{itemize}
+        \item \textbf{Data Encryption:} Ensuring that data stored and transmitted by the app is encrypted.
+        \item \textbf{Access Controls:} Defining who can access certain features or data within the app.
+        \item \textbf{Authentication Requirements:} Implementing secure login methods to verify user identity.
+        \item \textbf{Secure Communication:} Ensuring that data exchanged between the app and servers is secure.
+    \end{itemize}
+    
+    App protection policies are crucial for maintaining the confidentiality and integrity of app data.
+    
+    \item \textbf{What Are the Types of Permissions in Android? Discuss Permission Protection Levels in Android:}
+    
+    Types of permissions in Android include:
+    
+    \begin{itemize}
+        \item \textbf{Normal Permissions:} Granted automatically when the app is installed. Examples include internet access.
+        \item \textbf{Dangerous Permissions:} Require explicit user consent. Examples include accessing contacts or location.
+        \item \textbf{Special Permissions:} Certain permissions that are particularly sensitive and need special handling.
+    \end{itemize}
+    
+    Permission protection levels in Android determine how permissions are granted and enforced:
+    
+    \begin{itemize}
+        \item \textbf{Normal:} Automatically granted.
+        \item \textbf{Dangerous:} Requested at runtime and require user approval.
+        \item \textbf{Signature:} Granted to apps signed with the same certificate as the system.
+        \item \textbf{System:} Only granted to system apps.
+    \end{itemize}
+    
+\end{enumerate}
+
+
 
 \end{document}
