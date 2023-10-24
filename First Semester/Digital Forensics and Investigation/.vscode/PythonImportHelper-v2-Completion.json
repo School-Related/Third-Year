@@ -380,6 +380,23 @@
         "documentation": {}
     },
     {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "sha256",
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "isExtraImport": true,
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
         "label": "bin_dir",
         "kind": 5,
         "importPath": "Case Study.ManimEnv.bin.activate_this",
@@ -3629,11 +3646,29 @@
         "documentation": {}
     },
     {
-        "label": "MyScene",
+        "label": "MyScene3",
         "kind": 6,
         "importPath": "Case Study.main",
         "description": "Case Study.main",
-        "peekOfCode": "class MyScene(Scene):\n    def construct(self):\n        self.camera.background_color = '#ece6e2'\n        text = Text(\"Hello, world!\", color=BLACK, font_size=40).to_edge(DOWN)\n        print(type(text))\n        self.play(Write(text))\n        self.play(text.animate.shift(UP), run_time = 2)\n        self.wait()",
+        "peekOfCode": "class MyScene3(Scene):\n    def construct(self):\n        self.camera.background_color = '#0B0705'\n        text = Text(\"Hello, world!\", color=BLACK, font_size=40).to_edge(DOWN)\n        print(type(text))\n        self.play(Write(text))\n        self.play(text.animate.shift(UP), run_time = 2)\n        self.wait()\nclass MainSlide(Scene):\n    def construct(self):",
+        "detail": "Case Study.main",
+        "documentation": {}
+    },
+    {
+        "label": "MainSlide",
+        "kind": 6,
+        "importPath": "Case Study.main",
+        "description": "Case Study.main",
+        "peekOfCode": "class MainSlide(Scene):\n    def construct(self):\n        self.camera.background_color = '#110B07'\n        tex = Tex(r\"\\LaTeX\", font_size=50, color=colors[\"text\"]).to_edge(TOP)\n        self.play(Write(tex))",
+        "detail": "Case Study.main",
+        "documentation": {}
+    },
+    {
+        "label": "colors",
+        "kind": 5,
+        "importPath": "Case Study.main",
+        "description": "Case Study.main",
+        "peekOfCode": "colors = {\n    \"bg\": \"#0B0705\",\n    \"text\": \"#F2E8CF\",\n}\nclass CreateCircle(Scene):\n    def construct(self):\n        circle = Circle()  # create a circle\n        circle.set_fill(PINK, opacity=0.5)  # set the color and transparency\n        self.play(Create(circle))  # show the circle on screen\nclass SquareToCircle(Scene):",
         "detail": "Case Study.main",
         "documentation": {}
     },
@@ -3860,6 +3895,51 @@
         "description": "Lab.Assignment 5.analyse_headers",
         "peekOfCode": "msg = email.message_from_string(email_content)\n# Extract and print common header fields\nprint(\"Subject:\", msg[\"Subject\"])\nprint(\"From:\", msg[\"From\"])\nprint(\"To:\", msg[\"To\"])\nprint(\"Date:\", msg[\"Date\"])\n# Extract and print additional header fields\nfor key, value in msg.items():\n    print(key + \":\", value)\n# Analyze other parts of the email, such as attachments, body, etc., as needed",
         "detail": "Lab.Assignment 5.analyse_headers",
+        "documentation": {}
+    },
+    {
+        "label": "hash_file",
+        "kind": 2,
+        "importPath": "Programs.Assignment 6.sha",
+        "description": "Programs.Assignment 6.sha",
+        "peekOfCode": "def hash_file(filename):\n   \"\"\"\"This function returns the SHA-1 hash\n   of the file passed into it\"\"\"\n   # make a hash object\n   h = hashlib.sha1()\n   # open file for reading in binary mode\n   with open(filename,'rb') as file:\n       # loop till the end of the file\n       chunk = 0\n       while chunk != b'':",
+        "detail": "Programs.Assignment 6.sha",
+        "documentation": {}
+    },
+    {
+        "label": "file_name",
+        "kind": 5,
+        "importPath": "Programs.Assignment 6.sha",
+        "description": "Programs.Assignment 6.sha",
+        "peekOfCode": "file_name = \"classical_guitar.mp3\"\nfile_name_modified = \"classical_guitar_modified.mp3\"\nprint(\"First Music File without Tampering: \")\nprint(file_name)\nprint(\"Hash is: \", hash_file(file_name))\nprint(\"Music File after deleting portion of it : \")\nprint(\"Hash is: \", hash_file(file_name_modified))\nprint(file_name_modified)\nprint(\"====\" * 21)\nprint(\"Image File\")",
+        "detail": "Programs.Assignment 6.sha",
+        "documentation": {}
+    },
+    {
+        "label": "file_name_modified",
+        "kind": 5,
+        "importPath": "Programs.Assignment 6.sha",
+        "description": "Programs.Assignment 6.sha",
+        "peekOfCode": "file_name_modified = \"classical_guitar_modified.mp3\"\nprint(\"First Music File without Tampering: \")\nprint(file_name)\nprint(\"Hash is: \", hash_file(file_name))\nprint(\"Music File after deleting portion of it : \")\nprint(\"Hash is: \", hash_file(file_name_modified))\nprint(file_name_modified)\nprint(\"====\" * 21)\nprint(\"Image File\")\nfrom hashlib import sha256",
+        "detail": "Programs.Assignment 6.sha",
+        "documentation": {}
+    },
+    {
+        "label": "file_location",
+        "kind": 5,
+        "importPath": "Programs.Assignment 6.sha",
+        "description": "Programs.Assignment 6.sha",
+        "peekOfCode": "file_location = os.path.join(os.path.dirname(__file__), \"tony.jpg\") \n# Read image file\nprint(\"Hash of the file is: \")\n# Convert to byte array\nwith open(file_location, \"rb\") as image_file:\n    f = image_file.read()\n    b = bytearray(f)\n# Print the result\nprint(sha256(b).hexdigest())\nprint(\"Modified the File, added hidden data to it.\")",
+        "detail": "Programs.Assignment 6.sha",
+        "documentation": {}
+    },
+    {
+        "label": "file_location",
+        "kind": 5,
+        "importPath": "Programs.Assignment 6.sha",
+        "description": "Programs.Assignment 6.sha",
+        "peekOfCode": "file_location = os.path.join(os.path.dirname(__file__), \"tony_changed.jpg\")\n# Read image file\n# Convert to byte array\nwith open(file_location, \"rb\") as image_file:\n    f = image_file.read()\n    b = bytearray(f)\n# Print the result\nprint(sha256(b).hexdigest())",
+        "detail": "Programs.Assignment 6.sha",
         "documentation": {}
     }
 ]
