@@ -3592,74 +3592,83 @@
         "documentation": {}
     },
     {
-        "label": "CreateCircle",
-        "kind": 6,
-        "importPath": "Case Study.main",
-        "description": "Case Study.main",
-        "peekOfCode": "class CreateCircle(Scene):\n    def construct(self):\n        circle = Circle()  # create a circle\n        circle.set_fill(PINK, opacity=0.5)  # set the color and transparency\n        self.play(Create(circle))  # show the circle on screen\nclass SquareToCircle(Scene):\n    def construct(self):\n        circle = Circle()  # create a circle\n        circle.set_fill(PINK, opacity=0.5)  # set color and transparency\n        square = Square()  # create a square",
-        "detail": "Case Study.main",
-        "documentation": {}
-    },
-    {
-        "label": "SquareToCircle",
-        "kind": 6,
-        "importPath": "Case Study.main",
-        "description": "Case Study.main",
-        "peekOfCode": "class SquareToCircle(Scene):\n    def construct(self):\n        circle = Circle()  # create a circle\n        circle.set_fill(PINK, opacity=0.5)  # set color and transparency\n        square = Square()  # create a square\n        square.rotate(PI / 4)  # rotate a certain amount\n        self.play(Create(square))  # animate the creation of the square\n        self.play(Transform(square, circle))  # interpolate the square into the circle\n        self.play(FadeOut(square))  # fade out animation\nclass AnimatedSquareToCircle(Scene):",
-        "detail": "Case Study.main",
-        "documentation": {}
-    },
-    {
-        "label": "AnimatedSquareToCircle",
-        "kind": 6,
-        "importPath": "Case Study.main",
-        "description": "Case Study.main",
-        "peekOfCode": "class AnimatedSquareToCircle(Scene):\n    def construct(self):\n        circle = Circle()  # create a circle\n        square = Square()  # create a square\n        self.play(Create(square))  # show the square on screen\n        self.play(square.animate.rotate(PI / 4))  # rotate the square\n        self.play(\n            ReplacementTransform(square, circle)\n        )  # transform the square into a circle\n        self.play(",
-        "detail": "Case Study.main",
-        "documentation": {}
-    },
-    {
-        "label": "SingleLineColor",
-        "kind": 6,
-        "importPath": "Case Study.main",
-        "description": "Case Study.main",
-        "peekOfCode": "class SingleLineColor(Scene):\n    def construct(self):\n        text = MarkupText(\n            f'all in red <span fgcolor=\"{YELLOW}\">except this</span>', color=RED\n        )\n        self.add(text)\nclass HelloLaTeX(Scene):\n    def construct(self):\n        tex = Tex(r\"\\LaTeX\", font_size=50, color=RED).to_edge(UL) \n        # self.play(Write(tex))",
-        "detail": "Case Study.main",
-        "documentation": {}
-    },
-    {
-        "label": "HelloLaTeX",
-        "kind": 6,
-        "importPath": "Case Study.main",
-        "description": "Case Study.main",
-        "peekOfCode": "class HelloLaTeX(Scene):\n    def construct(self):\n        tex = Tex(r\"\\LaTeX\", font_size=50, color=RED).to_edge(UL) \n        # self.play(Write(tex))\n        author = Tex(\"Author's name\")\n        self.play(Write(author), Write(tex), run_time=3)\n        newTex = Tex(\"Hello, This is Digital Forensics and Investigation\", font_size = 40, color=ORANGE)\n        newTex.next_to(author, DOWN)\n        self.play(Transform(author, newTex), run_time=1.5)\nclass Myscene(Scene):",
-        "detail": "Case Study.main",
-        "documentation": {}
-    },
-    {
-        "label": "Myscene",
-        "kind": 6,
-        "importPath": "Case Study.main",
-        "description": "Case Study.main",
-        "peekOfCode": "class Myscene(Scene):\n    def construct(self):\n        text1 = Text(\n            \"This is a text created using the Manim library\",\n            color=LIGHT_PINK,\n            font_size=40,\n        )\n        self.play(Write(text1), runtime=5)\n        self.wait(5)\n        self.play(FadeOut(text1))",
-        "detail": "Case Study.main",
-        "documentation": {}
-    },
-    {
-        "label": "MyScene3",
-        "kind": 6,
-        "importPath": "Case Study.main",
-        "description": "Case Study.main",
-        "peekOfCode": "class MyScene3(Scene):\n    def construct(self):\n        self.camera.background_color = '#0B0705'\n        text = Text(\"Hello, world!\", color=BLACK, font_size=40).to_edge(DOWN)\n        print(type(text))\n        self.play(Write(text))\n        self.play(text.animate.shift(UP), run_time = 2)\n        self.wait()\nclass MainSlide(Scene):\n    def construct(self):",
-        "detail": "Case Study.main",
-        "documentation": {}
-    },
-    {
         "label": "MainSlide",
         "kind": 6,
         "importPath": "Case Study.main",
         "description": "Case Study.main",
-        "peekOfCode": "class MainSlide(Scene):\n    def construct(self):\n        self.camera.background_color = '#110B07'\n        tex = Tex(r\"\\LaTeX\", font_size=50, color=colors[\"text\"]).to_edge(TOP)\n        self.play(Write(tex))",
+        "peekOfCode": "class MainSlide( Scene ) :\n    def construct( self ) :\n        self.camera.background_color = colors[ \"bg\" ]\n        tex = Tex( r\"Digital Forensics and Investigation\", font_size = 50, color = colors[ \"text\" ] ).to_edge( UP )\n        sem = Tex( r\"Semester 4, TY. B. Tech, Cybersecurity and Forensics\", font_size = 40, color = colors[ \"text\" ] ).next_to( tex, DOWN )\n        act = Tex( r\"Active Learning Case Study\", font_size = 40, color = colors[ \"text\" ] ).next_to( sem, DOWN )\n        self.play( Write( tex ), Write( sem ), Write(act), run_time = 2 )\n        title = Tex( \"The Story of Torrenting\", font_size = 80, color = colors[ \"accent\" ] ).center()\n        self.play( Write( title ), run_time = 3.5 )\n        # now put a box around the title",
+        "detail": "Case Study.main",
+        "documentation": {}
+    },
+    {
+        "label": "LevalvIllegal",
+        "kind": 6,
+        "importPath": "Case Study.main",
+        "description": "Case Study.main",
+        "peekOfCode": "class LevalvIllegal( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"The Legal vs the Illegal\", font_size = 80, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"Why should consumers choose the illegal route instead of simply following the laws? \", font_size = 40, color = colors[\n            \"text\" ], width = 250).next_to( title, DOWN * 3 )",
+        "detail": "Case Study.main",
+        "documentation": {}
+    },
+    {
+        "label": "HowTorrentingWorks",
+        "kind": 6,
+        "importPath": "Case Study.main",
+        "description": "Case Study.main",
+        "peekOfCode": "class HowTorrentingWorks( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"How Torrenting Works\", font_size = 80, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"Why is it Illegal, and so popular? \", font_size = 40, color = colors[\n            \"text\" ], width = 250).next_to( title, DOWN * 3 )",
+        "detail": "Case Study.main",
+        "documentation": {}
+    },
+    {
+        "label": "EarlyDaysOfTorrenting",
+        "kind": 6,
+        "importPath": "Case Study.main",
+        "description": "Case Study.main",
+        "peekOfCode": "class EarlyDaysOfTorrenting( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"Early Days of Torrenting\", font_size = 80, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"The Rise of Torrenting\", font_size = 40, color = colors[\n            \"text\" ], width = 250).next_to( title, DOWN * 3 )",
+        "detail": "Case Study.main",
+        "documentation": {}
+    },
+    {
+        "label": "YifySuccess",
+        "kind": 6,
+        "importPath": "Case Study.main",
+        "description": "Case Study.main",
+        "peekOfCode": "class YifySuccess( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"The Success of Yify Torrents\", font_size = 80, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"How yify became the most popular search term on torrenting sites.\", font_size = 40, color = colors[\n            \"text\" ], width = 250).next_to( title, DOWN * 3 )",
+        "detail": "Case Study.main",
+        "documentation": {}
+    },
+    {
+        "label": "AttemptsToTakeDown",
+        "kind": 6,
+        "importPath": "Case Study.main",
+        "description": "Case Study.main",
+        "peekOfCode": "class AttemptsToTakeDown( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"Attempts to Take it Down\", font_size = 80, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"What did the law do to manage this?\", font_size = 40, color = colors[\n            \"text\" ], width = 250).next_to( title, DOWN * 3 )",
+        "detail": "Case Study.main",
+        "documentation": {}
+    },
+    {
+        "label": "HowCaught",
+        "kind": 6,
+        "importPath": "Case Study.main",
+        "description": "Case Study.main",
+        "peekOfCode": "class HowCaught( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"How He was Finally Caught\", font_size = 80, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"The End is a new beginning.\", font_size = 40, color = colors[\n            \"text\" ], width = 250).next_to( title, DOWN * 3 )",
+        "detail": "Case Study.main",
+        "documentation": {}
+    },
+    {
+        "label": "FinalResult",
+        "kind": 6,
+        "importPath": "Case Study.main",
+        "description": "Case Study.main",
+        "peekOfCode": "class FinalResult( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"The Final Result\", font_size = 80, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"Repercussions and results of the backdoor deal. \", font_size = 40, color = colors[\n            \"text\" ], width = 250).next_to( title, DOWN * 3 )",
+        "detail": "Case Study.main",
+        "documentation": {}
+    },
+    {
+        "label": "Conclusion",
+        "kind": 6,
+        "importPath": "Case Study.main",
+        "description": "Case Study.main",
+        "peekOfCode": "class Conclusion( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"The Conclusion\", font_size = 80, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"Thank you so much for Listening!\", font_size = 40, color = colors[\n            \"text\" ], width = 250).next_to( title, DOWN * 3 )",
         "detail": "Case Study.main",
         "documentation": {}
     },
@@ -3668,7 +3677,7 @@
         "kind": 5,
         "importPath": "Case Study.main",
         "description": "Case Study.main",
-        "peekOfCode": "colors = {\n    \"bg\": \"#0B0705\",\n    \"text\": \"#F2E8CF\",\n}\nclass CreateCircle(Scene):\n    def construct(self):\n        circle = Circle()  # create a circle\n        circle.set_fill(PINK, opacity=0.5)  # set the color and transparency\n        self.play(Create(circle))  # show the circle on screen\nclass SquareToCircle(Scene):",
+        "peekOfCode": "colors = {\n    \"bg\" : \"#1a1a1a\",\n    \"text\" : \"#e6f2e4\",\n    \"accent\" : \"#f27756\",\n    \"neutral\" : \"#63311d\",\n}\nclass MainSlide( Scene ) :\n    def construct( self ) :\n        self.camera.background_color = colors[ \"bg\" ]\n        tex = Tex( r\"Digital Forensics and Investigation\", font_size = 50, color = colors[ \"text\" ] ).to_edge( UP )",
         "detail": "Case Study.main",
         "documentation": {}
     },

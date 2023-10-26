@@ -1,0 +1,290 @@
+[
+    {
+        "label": "collections",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "collections",
+        "description": "collections",
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "pygame",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pygame",
+        "description": "pygame",
+        "detail": "pygame",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "queue",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "queue",
+        "description": "queue",
+        "detail": "queue",
+        "documentation": {}
+    },
+    {
+        "label": "bfs",
+        "kind": 2,
+        "importPath": "Programs.Assignment_1.Assignment_1",
+        "description": "Programs.Assignment_1.Assignment_1",
+        "peekOfCode": "def bfs(graph, root):\n    visited, queue = set(), collections.deque([root])\n    visited.add(root)\n    while queue:\n        # Dequeue a vertex from queue\n        vertex = queue.popleft()\n        print(str(vertex) + \" \", end=\"\")\n        # If not visited, mark it as visited, and\n        # enqueue it\n        for neighbour in graph[vertex]:",
+        "detail": "Programs.Assignment_1.Assignment_1",
+        "documentation": {}
+    },
+    {
+        "label": "dfs",
+        "kind": 2,
+        "importPath": "Programs.Assignment_1.Assignment_1",
+        "description": "Programs.Assignment_1.Assignment_1",
+        "peekOfCode": "def dfs(graph, start, visited=None):\n    if visited is None:\n        visited = set()\n    visited.add(start)\n    print(start)\n    for next in graph[start] - visited:\n        dfs(graph, next, visited)\n    return visited\ngraph = {'0': set(['1', '2']),\n         '1': set(['0', '3', '4']),",
+        "detail": "Programs.Assignment_1.Assignment_1",
+        "documentation": {}
+    },
+    {
+        "label": "graph",
+        "kind": 5,
+        "importPath": "Programs.Assignment_1.Assignment_1",
+        "description": "Programs.Assignment_1.Assignment_1",
+        "peekOfCode": "graph = {'0': set(['1', '2']),\n         '1': set(['0', '3', '4']),\n         '2': set(['0']),\n         '3': set(['1']),\n         '4': set(['2', '3'])}\nprint(\"\\n\\nThe Following is the dfs solution: \")\ndfs(graph, '0')",
+        "detail": "Programs.Assignment_1.Assignment_1",
+        "documentation": {}
+    },
+    {
+        "label": "draw_grid",
+        "kind": 2,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "def draw_grid():\n    for i in range(GRID_WIDTH):\n        for j in range(GRID_HEIGHT):\n            rect = pygame.Rect(i * TILE_WIDTH, j * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT)\n            pygame.draw.rect(screen, WHITE, rect, 1)\n# Define the function for drawing the tiles\ndef draw_tiles():\n    for i in range(GRID_WIDTH):\n        for j in range(GRID_HEIGHT):\n            if current_state[j][i] != 0:",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "draw_tiles",
+        "kind": 2,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "def draw_tiles():\n    for i in range(GRID_WIDTH):\n        for j in range(GRID_HEIGHT):\n            if current_state[j][i] != 0:\n                rect = pygame.Rect(i * TILE_WIDTH, j * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT)\n                pygame.draw.rect(screen, GRAY, rect)\n                text = font.render(str(current_state[j][i]), True, BLACK)\n                text_rect = text.get_rect(center=rect.center)\n                screen.blit(text, text_rect)\n# Define the function for checking if the puzzle is solved",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "check_solution",
+        "kind": 2,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "def check_solution(current_state):\n    return np.array_equal(current_state, goal_state)\n# Define the function for generating the successors of a state\ndef generate_successors(state):\n    successors = []\n    blank_tile_position = np.argwhere(state == 0)[0]\n    for action in [(0, -1), (0, 1), (-1, 0), (1, 0)]:\n        next_position = blank_tile_position + action\n        if next_position[0] >= 0 and next_position[0] < GRID_HEIGHT and next_position[1] >= 0 and next_position[1] < GRID_WIDTH:\n            next_state = state.copy()",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "generate_successors",
+        "kind": 2,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "def generate_successors(state):\n    successors = []\n    blank_tile_position = np.argwhere(state == 0)[0]\n    for action in [(0, -1), (0, 1), (-1, 0), (1, 0)]:\n        next_position = blank_tile_position + action\n        if next_position[0] >= 0 and next_position[0] < GRID_HEIGHT and next_position[1] >= 0 and next_position[1] < GRID_WIDTH:\n            next_state = state.copy()\n            next_state[blank_tile_position[0]][blank_tile_position[1]] = next_state[next_position[0]][next_position[1]]\n            next_state[next_position[0]][next_position[1]] = 0\n            successors.append(next_state)",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_heuristic",
+        "kind": 2,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "def calculate_heuristic(state):\n    return np.sum(state != goal_state)\n# Define the function for solving the puzzle using the A* algorithm\n# Modify the function for solving the puzzle using the A* algorithm\n# Modify the function for solving the puzzle using the A* algorithm\ndef solve_puzzle():\n    frontier = queue.PriorityQueue()\n    frontier.put((0, tuple(current_state.flatten())))  # Store the state as a tuple\n    came_from = {}\n    cost_so_far = {tuple(current_state.flatten()): 0}",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "solve_puzzle",
+        "kind": 2,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "def solve_puzzle():\n    frontier = queue.PriorityQueue()\n    frontier.put((0, tuple(current_state.flatten())))  # Store the state as a tuple\n    came_from = {}\n    cost_so_far = {tuple(current_state.flatten()): 0}\n    solved = False  # Flag to indicate if the puzzle is solved\n    while not frontier.empty() and not solved:\n        current = frontier.get()[1]  # Retrieve the state as a tuple\n        current = np.array(current).reshape(GRID_HEIGHT, GRID_WIDTH)  # Convert it back to an array\n        for next_state in generate_successors(current):",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "BLACK",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "BLACK = (0, 0, 0)\nWHITE = (255, 255, 255)\nGRAY = (128, 128, 128)\nGREEN = (0, 255, 0)\nRED = (255, 0, 0)\n# Set the dimensions of the screen\nSCREEN_WIDTH = 500\nSCREEN_HEIGHT = 400\n# Set the dimensions of the grid\nGRID_WIDTH = 3",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "WHITE",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "WHITE = (255, 255, 255)\nGRAY = (128, 128, 128)\nGREEN = (0, 255, 0)\nRED = (255, 0, 0)\n# Set the dimensions of the screen\nSCREEN_WIDTH = 500\nSCREEN_HEIGHT = 400\n# Set the dimensions of the grid\nGRID_WIDTH = 3\nGRID_HEIGHT = 3",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "GRAY",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "GRAY = (128, 128, 128)\nGREEN = (0, 255, 0)\nRED = (255, 0, 0)\n# Set the dimensions of the screen\nSCREEN_WIDTH = 500\nSCREEN_HEIGHT = 400\n# Set the dimensions of the grid\nGRID_WIDTH = 3\nGRID_HEIGHT = 3\n# Set the dimensions of each tile",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "GREEN",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "GREEN = (0, 255, 0)\nRED = (255, 0, 0)\n# Set the dimensions of the screen\nSCREEN_WIDTH = 500\nSCREEN_HEIGHT = 400\n# Set the dimensions of the grid\nGRID_WIDTH = 3\nGRID_HEIGHT = 3\n# Set the dimensions of each tile\nTILE_WIDTH = SCREEN_WIDTH // GRID_WIDTH",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "RED",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "RED = (255, 0, 0)\n# Set the dimensions of the screen\nSCREEN_WIDTH = 500\nSCREEN_HEIGHT = 400\n# Set the dimensions of the grid\nGRID_WIDTH = 3\nGRID_HEIGHT = 3\n# Set the dimensions of each tile\nTILE_WIDTH = SCREEN_WIDTH // GRID_WIDTH\nTILE_HEIGHT = SCREEN_HEIGHT // GRID_HEIGHT",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "SCREEN_WIDTH",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "SCREEN_WIDTH = 500\nSCREEN_HEIGHT = 400\n# Set the dimensions of the grid\nGRID_WIDTH = 3\nGRID_HEIGHT = 3\n# Set the dimensions of each tile\nTILE_WIDTH = SCREEN_WIDTH // GRID_WIDTH\nTILE_HEIGHT = SCREEN_HEIGHT // GRID_HEIGHT\n# Initialize Pygame\npygame.init()",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "SCREEN_HEIGHT",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "SCREEN_HEIGHT = 400\n# Set the dimensions of the grid\nGRID_WIDTH = 3\nGRID_HEIGHT = 3\n# Set the dimensions of each tile\nTILE_WIDTH = SCREEN_WIDTH // GRID_WIDTH\nTILE_HEIGHT = SCREEN_HEIGHT // GRID_HEIGHT\n# Initialize Pygame\npygame.init()\n# Set the size of the screen",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "GRID_WIDTH",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "GRID_WIDTH = 3\nGRID_HEIGHT = 3\n# Set the dimensions of each tile\nTILE_WIDTH = SCREEN_WIDTH // GRID_WIDTH\nTILE_HEIGHT = SCREEN_HEIGHT // GRID_HEIGHT\n# Initialize Pygame\npygame.init()\n# Set the size of the screen\nscreen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))\n# Set the title of the screen",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "GRID_HEIGHT",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "GRID_HEIGHT = 3\n# Set the dimensions of each tile\nTILE_WIDTH = SCREEN_WIDTH // GRID_WIDTH\nTILE_HEIGHT = SCREEN_HEIGHT // GRID_HEIGHT\n# Initialize Pygame\npygame.init()\n# Set the size of the screen\nscreen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))\n# Set the title of the screen\npygame.display.set_caption(\"8 Puzzle Problem\")",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "TILE_WIDTH",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "TILE_WIDTH = SCREEN_WIDTH // GRID_WIDTH\nTILE_HEIGHT = SCREEN_HEIGHT // GRID_HEIGHT\n# Initialize Pygame\npygame.init()\n# Set the size of the screen\nscreen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))\n# Set the title of the screen\npygame.display.set_caption(\"8 Puzzle Problem\")\n# Set the font for the text\nfont = pygame.font.SysFont(None, 30)",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "TILE_HEIGHT",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "TILE_HEIGHT = SCREEN_HEIGHT // GRID_HEIGHT\n# Initialize Pygame\npygame.init()\n# Set the size of the screen\nscreen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))\n# Set the title of the screen\npygame.display.set_caption(\"8 Puzzle Problem\")\n# Set the font for the text\nfont = pygame.font.SysFont(None, 30)\n# Define the initial state of the puzzle",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "screen",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))\n# Set the title of the screen\npygame.display.set_caption(\"8 Puzzle Problem\")\n# Set the font for the text\nfont = pygame.font.SysFont(None, 30)\n# Define the initial state of the puzzle\ninitial_state = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 0]])\n# Define the goal state of the puzzle\ngoal_state = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 0]])\n# Define the current state of the puzzle",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "font",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "font = pygame.font.SysFont(None, 30)\n# Define the initial state of the puzzle\ninitial_state = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 0]])\n# Define the goal state of the puzzle\ngoal_state = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 0]])\n# Define the current state of the puzzle\ncurrent_state = initial_state.copy()\n# Define the position of the blank tile\nblank_tile_position = np.argwhere(current_state == 0)[0]\n# Define the position of the mouse",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "initial_state",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "initial_state = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 0]])\n# Define the goal state of the puzzle\ngoal_state = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 0]])\n# Define the current state of the puzzle\ncurrent_state = initial_state.copy()\n# Define the position of the blank tile\nblank_tile_position = np.argwhere(current_state == 0)[0]\n# Define the position of the mouse\nmouse_position = None\n# Define the flag for whether the game is over",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "goal_state",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "goal_state = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 0]])\n# Define the current state of the puzzle\ncurrent_state = initial_state.copy()\n# Define the position of the blank tile\nblank_tile_position = np.argwhere(current_state == 0)[0]\n# Define the position of the mouse\nmouse_position = None\n# Define the flag for whether the game is over\ngame_over = False\n# Define the function for drawing the grid",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "current_state",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "current_state = initial_state.copy()\n# Define the position of the blank tile\nblank_tile_position = np.argwhere(current_state == 0)[0]\n# Define the position of the mouse\nmouse_position = None\n# Define the flag for whether the game is over\ngame_over = False\n# Define the function for drawing the grid\ndef draw_grid():\n    for i in range(GRID_WIDTH):",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "blank_tile_position",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "blank_tile_position = np.argwhere(current_state == 0)[0]\n# Define the position of the mouse\nmouse_position = None\n# Define the flag for whether the game is over\ngame_over = False\n# Define the function for drawing the grid\ndef draw_grid():\n    for i in range(GRID_WIDTH):\n        for j in range(GRID_HEIGHT):\n            rect = pygame.Rect(i * TILE_WIDTH, j * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT)",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "mouse_position",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "mouse_position = None\n# Define the flag for whether the game is over\ngame_over = False\n# Define the function for drawing the grid\ndef draw_grid():\n    for i in range(GRID_WIDTH):\n        for j in range(GRID_HEIGHT):\n            rect = pygame.Rect(i * TILE_WIDTH, j * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT)\n            pygame.draw.rect(screen, WHITE, rect, 1)\n# Define the function for drawing the tiles",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "game_over",
+        "kind": 5,
+        "importPath": "Programs.Assignment_2.8_PuzzleProblem",
+        "description": "Programs.Assignment_2.8_PuzzleProblem",
+        "peekOfCode": "game_over = False\n# Define the function for drawing the grid\ndef draw_grid():\n    for i in range(GRID_WIDTH):\n        for j in range(GRID_HEIGHT):\n            rect = pygame.Rect(i * TILE_WIDTH, j * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT)\n            pygame.draw.rect(screen, WHITE, rect, 1)\n# Define the function for drawing the tiles\ndef draw_tiles():\n    for i in range(GRID_WIDTH):",
+        "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    }
+]

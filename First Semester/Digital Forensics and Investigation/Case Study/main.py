@@ -16,7 +16,8 @@ class MainSlide( Scene ) :
         self.camera.background_color = colors[ "bg" ]
         tex = Tex( r"Digital Forensics and Investigation", font_size = 50, color = colors[ "text" ] ).to_edge( UP )
         sem = Tex( r"Semester 4, TY. B. Tech, Cybersecurity and Forensics", font_size = 40, color = colors[ "text" ] ).next_to( tex, DOWN )
-        self.play( Write( tex ), Write( sem ), run_time = 2 )
+        act = Tex( r"Active Learning Case Study", font_size = 40, color = colors[ "text" ] ).next_to( sem, DOWN )
+        self.play( Write( tex ), Write( sem ), Write(act), run_time = 2 )
         title = Tex( "The Story of Torrenting", font_size = 80, color = colors[ "accent" ] ).center()
         self.play( Write( title ), run_time = 3.5 )
         
@@ -30,7 +31,7 @@ class MainSlide( Scene ) :
         self.play( Write( author_name ), Write( author ), Write( roll_no ), run_time = 2 )
         self.wait( 1 )
         # fade out
-        self.play( FadeOut( author_name ), FadeOut( author ), FadeOut( roll_no ), FadeOut( title ), FadeOut( tex ), FadeOut( sem ), run_time = 2 )
+        self.play( FadeOut( author_name ), FadeOut( author ), FadeOut( roll_no ), FadeOut(act), FadeOut( title ), FadeOut( tex ), FadeOut( sem ), run_time = 2 )
         # now uncreate the box
         self.play( Uncreate( box ), run_time = 1 )
         self.wait( 2 )
