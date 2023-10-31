@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.8.2)  29 AUG 2023 22:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  31 OCT 2023 21:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1399,14 +1399,14 @@ Package rerunfilecheck Info: File `Assignment_2.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  28038 strings out of 477985
- 509272 string characters out of 5840059
+ 509272 string characters out of 5840058
  2045388 words of memory out of 5000000
  47563 multiletter control sequences out of 15000+600000
  569140 words of font info for 102 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  83i,13n,99p,961b,2159s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb></usr/share/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfit1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_2.pdf (26 pages, 1403999 bytes).
+Output written on Assignment_2.pdf (26 pages, 1403994 bytes).
 PDF statistics:
  505 PDF objects out of 1000 (max. 8388607)
  421 compressed objects within 5 object streams

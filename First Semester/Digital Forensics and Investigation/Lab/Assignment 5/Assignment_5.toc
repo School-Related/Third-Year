@@ -1,29 +1,33 @@
 \contentsline {section}{\numberline {1}Aim}{1}{section.1}%
 \contentsline {section}{\numberline {2}Objectives}{1}{section.2}%
 \contentsline {section}{\numberline {3}Theory}{1}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Introduction to Digital Data Recovery}{1}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Need for Data Recovery Tools}{1}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Causes of Data Loss}{1}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Minimizing Downtime}{1}{subsubsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.3}Types of Data Recovery Tools}{1}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Software-Based Tools}{2}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Hardware-Based Tools}{2}{subsubsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.4}Historical Perspective}{2}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Early Data Recovery Tools}{2}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Modern Data Recovery Tools}{2}{subsubsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.5}Common Data Recovery Processes}{2}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Scanning and Detection}{2}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}File Reconstruction}{2}{subsubsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.3}Data Extraction}{2}{subsubsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.6}Challenges in Data Recovery}{3}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}Fragmentation}{3}{subsubsection.3.6.1}%
-\contentsline {subsubsection}{\numberline {3.6.2}Encryption}{3}{subsubsection.3.6.2}%
-\contentsline {subsubsection}{\numberline {3.6.3}Physical Damage}{3}{subsubsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.7}Forensic Perspective on Data Recovery}{3}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Importance of Recovering Deleted Files in Forensic Investigations}{3}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Challenges in Forensic Data Recovery}{3}{subsubsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.8}Legal and Ethical Considerations in Forensic Data Recovery}{4}{subsection.3.8}%
-\contentsline {section}{\numberline {4}Deleted File Recovery Procedure}{4}{section.4}%
-\contentsline {section}{\numberline {5}Platform}{14}{section.5}%
-\contentsline {section}{\numberline {6}Conclusion}{15}{section.6}%
-\contentsline {section}{References}{16}{section*.14}%
+\contentsline {subsection}{\numberline {3.1}Email Clients}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Email Headers}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Types of Email Headers}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Email Header Analysis}{4}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Platform}{5}{section.4}%
+\contentsline {section}{\numberline {5}Analysis}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Downloading Email Headers}{5}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}MIME-Version}{8}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Received}{9}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}ARC-Seal}{9}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}ARC-Message-Signature}{9}{subsubsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.5}ARC-Authentication-Results}{10}{subsubsection.5.1.5}%
+\contentsline {subsubsection}{\numberline {5.1.6}DKIM-Signature}{10}{subsubsection.5.1.6}%
+\contentsline {subsubsection}{\numberline {5.1.7}From}{10}{subsubsection.5.1.7}%
+\contentsline {subsubsection}{\numberline {5.1.8}To}{10}{subsubsection.5.1.8}%
+\contentsline {subsubsection}{\numberline {5.1.9}Subject}{11}{subsubsection.5.1.9}%
+\contentsline {subsubsection}{\numberline {5.1.10}Date}{11}{subsubsection.5.1.10}%
+\contentsline {subsubsection}{\numberline {5.1.11}Message-ID}{11}{subsubsection.5.1.11}%
+\contentsline {subsubsection}{\numberline {5.1.12}Content-Type}{11}{subsubsection.5.1.12}%
+\contentsline {subsubsection}{\numberline {5.1.13}Return-Path}{11}{subsubsection.5.1.13}%
+\contentsline {subsubsection}{\numberline {5.1.14}X-Sender-IP}{12}{subsubsection.5.1.14}%
+\contentsline {subsubsection}{\numberline {5.1.15}X-MS-Exchange-Transport-EndToEndLatency}{12}{subsubsection.5.1.15}%
+\contentsline {subsubsection}{\numberline {5.1.16}X-Microsoft-Antispam-Mailbox-Delivery}{12}{subsubsection.5.1.16}%
+\contentsline {subsubsection}{\numberline {5.1.17}X-Message-Info and X-Message-Delivery}{12}{subsubsection.5.1.17}%
+\contentsline {section}{\numberline {6}Analysing Effect of Network Connection on IP Headers}{15}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Using VPN}{15}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Without using VPN, on Wifi}{16}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Without using VPN, on Mobile Data}{17}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Conclusion}{19}{section.7}%
+\contentsline {section}{References}{20}{section*.12}%

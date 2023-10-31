@@ -362,24 +362,6 @@
         "documentation": {}
     },
     {
-        "label": "email",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "email",
-        "description": "email",
-        "detail": "email",
-        "documentation": {}
-    },
-    {
-        "label": "requests",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "requests",
-        "description": "requests",
-        "detail": "requests",
-        "documentation": {}
-    },
-    {
         "label": "hashlib",
         "kind": 6,
         "isExtraImport": true,
@@ -3886,24 +3868,6 @@
         "description": "Lab.Assignment 2.monitor_uptime",
         "peekOfCode": "\t\t\tunavailablity_time = \"connection was unavailable for: \" + down_time\n\t\t\tprint(uptime_message)\n\t\t\tprint(unavailablity_time)\n\t\t\twith open(FILE, \"a\") as file:\n\t\t\t\t# log entry for connection restoration time,\n\t\t\t\t# and unavailability time\n\t\t\t\tfile.write(uptime_message + \"\\n\")\n\t\t\t\tfile.write(unavailablity_time + \"\\n\")\nmain()",
         "detail": "Lab.Assignment 2.monitor_uptime",
-        "documentation": {}
-    },
-    {
-        "label": "email_file",
-        "kind": 5,
-        "importPath": "Lab.Assignment 5.analyse_headers",
-        "description": "Lab.Assignment 5.analyse_headers",
-        "peekOfCode": "email_file = \"./emails/Become a movie director!.eml\"  # Replace with the path to your email file\n# Read the email file\nwith open(email_file, \"r\", encoding=\"utf-8\") as file:\n    email_content = file.read()\n# Parse the email\nmsg = email.message_from_string(email_content)\n# Extract and print common header fields\nprint(\"Subject:\", msg[\"Subject\"])\nprint(\"From:\", msg[\"From\"])\nprint(\"To:\", msg[\"To\"])",
-        "detail": "Lab.Assignment 5.analyse_headers",
-        "documentation": {}
-    },
-    {
-        "label": "msg",
-        "kind": 5,
-        "importPath": "Lab.Assignment 5.analyse_headers",
-        "description": "Lab.Assignment 5.analyse_headers",
-        "peekOfCode": "msg = email.message_from_string(email_content)\n# Extract and print common header fields\nprint(\"Subject:\", msg[\"Subject\"])\nprint(\"From:\", msg[\"From\"])\nprint(\"To:\", msg[\"To\"])\nprint(\"Date:\", msg[\"Date\"])\n# Extract and print additional header fields\nfor key, value in msg.items():\n    print(key + \":\", value)\n# Analyze other parts of the email, such as attachments, body, etc., as needed",
-        "detail": "Lab.Assignment 5.analyse_headers",
         "documentation": {}
     },
     {
