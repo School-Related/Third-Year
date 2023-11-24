@@ -1,5 +1,22 @@
 [
     {
+        "label": "*",
+        "importPath": "manim",
+        "description": "manim",
+        "isExtraImport": true,
+        "detail": "manim",
+        "documentation": {}
+    },
+    {
+        "label": "manimpango",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "manimpango",
+        "description": "manimpango",
+        "detail": "manimpango",
+        "documentation": {}
+    },
+    {
         "label": "collections",
         "kind": 6,
         "isExtraImport": true,
@@ -33,6 +50,78 @@
         "importPath": "queue",
         "description": "queue",
         "detail": "queue",
+        "documentation": {}
+    },
+    {
+        "label": "MainSlide",
+        "kind": 6,
+        "importPath": "Active Learning.main2",
+        "description": "Active Learning.main2",
+        "peekOfCode": "class MainSlide( Scene ) :\n    def construct( self ) :\n        self.camera.background_color = colors[ \"bg\" ]\n        tex = Tex( r\"Aritificial Intelligence and Machine learning\", font_size = 50, color = colors[ \"text\" ] ).to_edge( UP )\n        sem = Tex( r\"Semester 4, TY. B. Tech, Cybersecurity and Forensics\", font_size = 40, color = colors[ \"text\" ] ).next_to( tex, DOWN )\n        act = Tex( r\"Active Learning\", font_size = 40, color = colors[ \"text\" ] ).next_to( sem, DOWN )\n        self.play( Write( tex ), Write( sem ), Write(act), run_time = 2 )\n        title = Tex( \"Understanding Neural Networks\", font_size = 60, color = colors[ \"accent\" ] ).center()\n        self.play( Write( title ), run_time = 3.5 )\n        # now put a box around the title",
+        "detail": "Active Learning.main2",
+        "documentation": {}
+    },
+    {
+        "label": "ParthIntro",
+        "kind": 6,
+        "importPath": "Active Learning.main2",
+        "description": "Active Learning.main2",
+        "peekOfCode": "class ParthIntro( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"Artificial Neural Networks and Their Terminology\", font_size = 55, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"PA07. Parth Zarekar\", font_size = 40, color = colors[\n            \"text\" ]).next_to( title, DOWN * 3 )",
+        "detail": "Active Learning.main2",
+        "documentation": {}
+    },
+    {
+        "label": "Perceptron",
+        "kind": 6,
+        "importPath": "Active Learning.main2",
+        "description": "Active Learning.main2",
+        "peekOfCode": "class Perceptron( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"Introduction to Perceptrons\", font_size = 60, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"Single and Multi Layer Perceptrons\", font_size = 40, color = colors[\n            \"text\" ]).next_to( title, DOWN * 3 )",
+        "detail": "Active Learning.main2",
+        "documentation": {}
+    },
+    {
+        "label": "ArchBackProp",
+        "kind": 6,
+        "importPath": "Active Learning.main2",
+        "description": "Active Learning.main2",
+        "peekOfCode": "class ArchBackProp( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"Architecture of Back Propagation\", font_size = 60, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"PA25. Sourab Karad\", font_size = 40, color = colors[\n            \"text\" ]).next_to( title, DOWN * 3 )",
+        "detail": "Active Learning.main2",
+        "documentation": {}
+    },
+    {
+        "label": "CFWI",
+        "kind": 6,
+        "importPath": "Active Learning.main2",
+        "description": "Active Learning.main2",
+        "peekOfCode": "class CFWI( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"Cost Function and Weights Initialization\", font_size = 60, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"Role, Definition, Formulas and Working\", font_size = 40, color = colors[\n            \"text\" ]).next_to( title, DOWN * 3 )",
+        "detail": "Active Learning.main2",
+        "documentation": {}
+    },
+    {
+        "label": "CaseStudy",
+        "kind": 6,
+        "importPath": "Active Learning.main2",
+        "description": "Active Learning.main2",
+        "peekOfCode": "class CaseStudy( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"Case Study on Image Enhancement with Keras\", font_size = 60, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"PA10. Krishnaraj Thadesar\", font_size = 40, color = colors[\n            \"text\" ]).next_to( title, DOWN * 3 )",
+        "detail": "Active Learning.main2",
+        "documentation": {}
+    },
+    {
+        "label": "Conclusion",
+        "kind": 6,
+        "importPath": "Active Learning.main2",
+        "description": "Active Learning.main2",
+        "peekOfCode": "class Conclusion( Scene ) :\n    def construct( self ) :\n        # this slide is only writing the heading of the topic on the screen, and a sub heading\n        self.camera.background_color = colors[ \"bg\" ]\n        title = Tex( \"The Conclusion\", font_size = 60, color = colors[ \"accent\" ] ).center()\n        # also draw a box around the title\n        box = SurroundingRectangle( title, buff = .4, color = colors[ \"accent\" ] )\n        self.play( Write( title ), Create( box ), run_time = 2.5 )\n        sub_title = Tex( \"Thank you so much for Listening!\", font_size = 40, color = colors[\n            \"text\" ]).next_to( title, DOWN * 3 )",
+        "detail": "Active Learning.main2",
+        "documentation": {}
+    },
+    {
+        "label": "colors",
+        "kind": 5,
+        "importPath": "Active Learning.main2",
+        "description": "Active Learning.main2",
+        "peekOfCode": "colors = {\n    \"bg\" : \"#000000\",\n    \"text\" : \"#e6f2e4\",\n    \"accent\" : \"#918ff0\",\n    \"neutral\" : \"#63311d\",\n}\nclass MainSlide( Scene ) :\n    def construct( self ) :\n        self.camera.background_color = colors[ \"bg\" ]\n        tex = Tex( r\"Aritificial Intelligence and Machine learning\", font_size = 50, color = colors[ \"text\" ] ).to_edge( UP )",
+        "detail": "Active Learning.main2",
         "documentation": {}
     },
     {
