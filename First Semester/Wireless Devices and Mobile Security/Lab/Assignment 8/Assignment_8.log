@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  26 NOV 2023 19:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  26 NOV 2023 21:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -660,14 +660,14 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.134 \clearpage
                  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 146--149
+Underfull \hbox (badness 10000) in paragraph at lines 145--148
 
  []
 
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 10.18341pt on input line 158.
+(Font)              scaled to size 10.18341pt on input line 151.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 13.39188pt on input line 158.
+(Font)              scaled to size 13.39188pt on input line 151.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -679,7 +679,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.158 \clearpage
+l.151 \clearpage
                  [1
 
 ]
@@ -694,21 +694,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ] (./Assignment_8.aux)
 Package rerunfilecheck Info: File `Assignment_8.out' has not changed.
-(rerunfilecheck)             Checksum: 8C468B103806800B9D9F69B8F9F99BCE;587.
+(rerunfilecheck)             Checksum: 511679F5321C7623F08DBDA48BFF7F5A;458.
  ) 
 Here is how much of TeX's memory you used:
- 12887 strings out of 477985
- 195634 string characters out of 5840058
+ 12885 strings out of 477985
+ 195614 string characters out of 5840058
  1854388 words of memory out of 5000000
- 32885 multiletter control sequences out of 15000+600000
+ 32884 multiletter control sequences out of 15000+600000
  543358 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,12n,76p,389b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_8.pdf (4 pages, 46996 bytes).
+Output written on Assignment_8.pdf (4 pages, 47239 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
+ 49 words of extra memory for PDF output out of 10000 (max. 10000000)
 
