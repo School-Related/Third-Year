@@ -1,6 +1,29 @@
 \contentsline {section}{\numberline {1}Aim}{1}{section.1}%
 \contentsline {section}{\numberline {2}Objectives}{1}{section.2}%
 \contentsline {section}{\numberline {3}Theory}{1}{section.3}%
-\contentsline {section}{\numberline {4}Platform}{1}{section.4}%
-\contentsline {section}{\numberline {5}Conclusion}{1}{section.5}%
-\contentsline {section}{\numberline {6}FAQ}{2}{section.6}%
+\contentsline {subsection}{\numberline {3.1}What is a Router?}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}What is an APN Router?}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}What is the Difference between a Router and an APN Router?}{2}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Different Types of Routers Available in the Market}{3}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}CISCO}{3}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}TP Link}{3}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}D-Link}{4}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}Netgear}{5}{subsubsection.3.4.4}%
+\contentsline {subsubsection}{\numberline {3.4.5}Asus}{7}{subsubsection.3.4.5}%
+\contentsline {subsubsection}{\numberline {3.4.6}Linksys}{8}{subsubsection.3.4.6}%
+\contentsline {subsubsection}{\numberline {3.4.7}MikroTik}{10}{subsubsection.3.4.7}%
+\contentsline {subsubsection}{\numberline {3.4.8}Ubiquiti}{11}{subsubsection.3.4.8}%
+\contentsline {subsubsection}{\numberline {3.4.9}Huawei}{12}{subsubsection.3.4.9}%
+\contentsline {section}{\numberline {4}Router Comparison}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Cisco Routers}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}TP-Link Routers}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}D-Link Routers}{14}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Netgear Routers}{14}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}ASUS Routers}{15}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Linksys Routers}{15}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}MikroTik Routers}{15}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Ubiquiti Routers}{16}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}Huawei Routers}{16}{subsection.4.9}%
+\contentsline {section}{\numberline {5}Platform}{16}{section.5}%
+\contentsline {section}{\numberline {6}Conclusion}{16}{section.6}%
+\contentsline {section}{References}{17}{section*.2}%

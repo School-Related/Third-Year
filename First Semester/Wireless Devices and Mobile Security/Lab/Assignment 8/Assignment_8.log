@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  26 NOV 2023 21:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  26 NOV 2023 21:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -521,12 +521,12 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip62
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 24.
-LaTeX Font Info:    Trying to load font information for T1+fnc on input line 67.
+LaTeX Font Info:    Trying to load font information for T1+fnc on input line 65.
  (/usr/share/texmf-dist/tex/latex/fouriernc/t1fnc.fd
 File: t1fnc.fd 2005/12/13 scaled font definitions for T1/fnc.
 )
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 10.18341pt on input line 67.
+(Font)              scaled to size 10.18341pt on input line 65.
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count312
@@ -534,42 +534,42 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (./Assignment_8.aux)
 \openout1 = `Assignment_8.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 67.
-LaTeX Font Info:    Trying to load font information for FML+fncmi on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 65.
+LaTeX Font Info:    Trying to load font information for FML+fncmi on input line 65.
  (/usr/share/texmf-dist/tex/latex/fouriernc/fmlfncmi.fd
 File: fmlfncmi.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncmi.
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for FMS/fncm/m/n on input line 67.
-LaTeX Font Info:    Trying to load font information for FMS+fncm on input line 67.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for FMS/fncm/m/n on input line 65.
+LaTeX Font Info:    Trying to load font information for FMS+fncm on input line 65.
  (/usr/share/texmf-dist/tex/latex/fouriernc/fmsfncm.fd
 File: fmsfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FMS/fncm.
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 67.
-LaTeX Font Info:    Trying to load font information for FMX+futm on input line 67.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 65.
+LaTeX Font Info:    Trying to load font information for FMX+futm on input line 65.
  (/usr/share/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -624,32 +624,60 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Redeclaring math accent \widehat on input line 67.
-LaTeX Font Info:    Redeclaring math accent \widetilde on input line 67.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 65.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 65.
 \c@lstlisting=\count319
-Package hyperref Info: Link coloring ON on input line 67.
+Package hyperref Info: Link coloring ON on input line 65.
  (./Assignment_8.out) (./Assignment_8.out)
 \@outlinefile=\write3
 \openout3 = `Assignment_8.out'.
 
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 19.28804pt on input line 72.
+LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
 (Font)              scaled to size 19.28804pt on input line 74.
-LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 19.28804pt on input line 76.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 16.07027pt on input line 80.
+(Font)              scaled to size 16.07027pt on input line 78.
 LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 16.07027pt on input line 111.
+(Font)              scaled to size 16.07027pt on input line 105.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 13.39188pt on input line 119.
+(Font)              scaled to size 13.39188pt on input line 112.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 13.39188pt on input line 132.
+(Font)              scaled to size 13.39188pt on input line 122.
  (./Assignment_8.toc
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 10.18341pt on input line 1.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 7.71893pt on input line 4.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 5.57996pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for FML+fncm on input line 4.
+ (/usr/share/texmf-dist/tex/latex/fouriernc/fmlfncm.fd
+File: fmlfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncm.
+)
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
 )
 \tf@toc=\write4
 \openout4 = `Assignment_8.toc'.
@@ -658,16 +686,27 @@ LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.134 \clearpage
+l.124 \clearpage
                  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 145--148
-
- []
-
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 11.15991pt on input line 142.
+LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
+(Font)              scaled to size 11.15991pt on input line 142.
+<routers/routers_0.jpg, id=160, 2055.68pt x 1370.11874pt>
+File: routers/routers_0.jpg Graphic file (type jpg)
+<use routers/routers_0.jpg>
+Package pdftex.def Info: routers/routers_0.jpg  used on input line 155.
+(pdftex.def)             Requested size: 211.38832pt x 140.88756pt.
+<routers/routers_7.jpg, id=161, 1043.9pt x 782.925pt>
+File: routers/routers_7.jpg Graphic file (type jpg)
+<use routers/routers_7.jpg>
+Package pdftex.def Info: routers/routers_7.jpg  used on input line 161.
+(pdftex.def)             Requested size: 211.38832pt x 158.54144pt.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 10.18341pt on input line 151.
+(Font)              scaled to size 10.18341pt on input line 164.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 13.39188pt on input line 151.
+(Font)              scaled to size 13.39188pt on input line 164.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -679,10 +718,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.151 \clearpage
-                 [1
+l.164 
+       [1
 
-]
+ <./routers/routers_0.jpg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -690,25 +729,263 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[2
+[2 <./routers/routers_7.jpg>]
+<cisco router/cisco router_2.jpg, id=188, 2569.6pt x 1379.1525pt>
+File: cisco router/cisco router_2.jpg Graphic file (type jpg)
+<use cisco router/cisco router_2.jpg>
+Package pdftex.def Info: cisco router/cisco router_2.jpg  used on input line 199.
+(pdftex.def)             Requested size: 211.38832pt x 113.44899pt.
+<cisco router admin page/cisco router admin page_0.jpg, id=189, 974.11816pt x 394.94028pt>
+File: cisco router admin page/cisco router admin page_0.jpg Graphic file (type jpg)
+<use cisco router admin page/cisco router admin page_0.jpg>
+Package pdftex.def Info: cisco router admin page/cisco router admin page_0.jpg  used on input line 205.
+(pdftex.def)             Requested size: 446.26582pt x 180.93349pt.
 
-] (./Assignment_8.aux)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[3 <./cisco router/cisco router_2.jpg> <./cisco router admin page/cisco router admin page_0.jpg>]
+<tp link router/tp link router_7.jpg, id=201, 1906.12125pt x 1906.12125pt>
+File: tp link router/tp link router_7.jpg Graphic file (type jpg)
+<use tp link router/tp link router_7.jpg>
+Package pdftex.def Info: tp link router/tp link router_7.jpg  used on input line 220.
+(pdftex.def)             Requested size: 211.38832pt x 211.36092pt.
+<tp link admin page/tp link admin page_6.jpg, id=202, 970.3753pt x 468.24937pt>
+File: tp link admin page/tp link admin page_6.jpg Graphic file (type jpg)
+<use tp link admin page/tp link admin page_6.jpg>
+Package pdftex.def Info: tp link admin page/tp link admin page_6.jpg  used on input line 226.
+(pdftex.def)             Requested size: 446.26582pt x 215.3473pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[4 <./tp link router/tp link router_7.jpg> <./tp link admin page/tp link admin page_6.jpg>]
+<d link router/d link router_1.jpg, id=212, 1084.05pt x 1096.095pt>
+File: d link router/d link router_1.jpg Graphic file (type jpg)
+<use d link router/d link router_1.jpg>
+Package pdftex.def Info: d link router/d link router_1.jpg  used on input line 241.
+(pdftex.def)             Requested size: 211.38832pt x 213.7293pt.
+<dlink admin page/dlink admin page_3.jpg, id=213, 1284.8pt x 722.7pt>
+File: dlink admin page/dlink admin page_3.jpg Graphic file (type jpg)
+<use dlink admin page/dlink admin page_3.jpg>
+Package pdftex.def Info: dlink admin page/dlink admin page_3.jpg  used on input line 247.
+(pdftex.def)             Requested size: 446.26582pt x 251.01897pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[5 <./d link router/d link router_1.jpg> <./dlink admin page/dlink admin page_3.jpg>]
+<netgear routers/netgear routers_8.jpg, id=223, 1003.75pt x 1003.75pt>
+File: netgear routers/netgear routers_8.jpg Graphic file (type jpg)
+<use netgear routers/netgear routers_8.jpg>
+Package pdftex.def Info: netgear routers/netgear routers_8.jpg  used on input line 262.
+(pdftex.def)             Requested size: 211.38832pt x 211.39104pt.
+<netgear routers admin page/netgear routers admin page_0.jpg, id=224, 1630.09pt x 1266.7325pt>
+File: netgear routers admin page/netgear routers admin page_0.jpg Graphic file (type jpg)
+<use netgear routers admin page/netgear routers admin page_0.jpg>
+Package pdftex.def Info: netgear routers admin page/netgear routers admin page_0.jpg  used on input line 268.
+(pdftex.def)             Requested size: 446.26582pt x 346.77722pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[6 <./netgear routers/netgear routers_8.jpg>]
+<asus routers/asus routers_3.jpg, id=232, 578.16pt x 578.16pt>
+File: asus routers/asus routers_3.jpg Graphic file (type jpg)
+<use asus routers/asus routers_3.jpg>
+Package pdftex.def Info: asus routers/asus routers_3.jpg  used on input line 282.
+(pdftex.def)             Requested size: 211.38832pt x 211.38393pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[7 <./netgear routers admin page/netgear routers admin page_0.jpg>]
+<asus router admin page/asus router admin page_9.jpg, id=242, 1345.025pt x 879.285pt>
+File: asus router admin page/asus router admin page_9.jpg Graphic file (type jpg)
+<use asus router admin page/asus router admin page_9.jpg>
+Package pdftex.def Info: asus router admin page/asus router admin page_9.jpg  used on input line 288.
+(pdftex.def)             Requested size: 446.26582pt x 291.73471pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[8 <./asus routers/asus routers_3.jpg> <./asus router admin page/asus router admin page_9.jpg>]
+<linksys routers/linksys routers_9.jpg, id=252, 1806.75pt x 1806.75pt>
+File: linksys routers/linksys routers_9.jpg Graphic file (type jpg)
+<use linksys routers/linksys routers_9.jpg>
+Package pdftex.def Info: linksys routers/linksys routers_9.jpg  used on input line 303.
+(pdftex.def)             Requested size: 211.38832pt x 211.3696pt.
+<linksys routers admin page/linksys routers admin page_7.jpg, id=253, 1196.47pt x 965.6075pt>
+File: linksys routers admin page/linksys routers admin page_7.jpg Graphic file (type jpg)
+<use linksys routers admin page/linksys routers admin page_7.jpg>
+Package pdftex.def Info: linksys routers admin page/linksys routers admin page_7.jpg  used on input line 309.
+(pdftex.def)             Requested size: 446.26582pt x 360.15704pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[9 <./linksys routers/linksys routers_9.jpg>]
+<microtik routers/microtik routers_4.jpg, id=260, 3854.4pt x 2453.165pt>
+File: microtik routers/microtik routers_4.jpg Graphic file (type jpg)
+<use microtik routers/microtik routers_4.jpg>
+Package pdftex.def Info: microtik routers/microtik routers_4.jpg  used on input line 324.
+(pdftex.def)             Requested size: 211.38832pt x 134.53145pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[10 <./linksys routers admin page/linksys routers admin page_7.jpg>]
+<mikrotik router admin page/mikrotik router admin page_5.jpg, id=270, 761.84625pt x 523.9575pt>
+File: mikrotik router admin page/mikrotik router admin page_5.jpg Graphic file (type jpg)
+<use mikrotik router admin page/mikrotik router admin page_5.jpg>
+Package pdftex.def Info: mikrotik router admin page/mikrotik router admin page_5.jpg  used on input line 330.
+(pdftex.def)             Requested size: 446.26582pt x 306.91765pt.
+<ubiquiti routers/ubiquiti routers_0.jpg, id=271, 1027.84pt x 1027.84pt>
+File: ubiquiti routers/ubiquiti routers_0.jpg Graphic file (type jpg)
+<use ubiquiti routers/ubiquiti routers_0.jpg>
+Package pdftex.def Info: ubiquiti routers/ubiquiti routers_0.jpg  used on input line 345.
+(pdftex.def)             Requested size: 211.38832pt x 211.38295pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[11 <./microtik routers/microtik routers_4.jpg
+
+pdfTeX warning: pdflatex (file ./microtik routers/microtik routers_4.jpg): large interlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
+> <./mikrotik router admin page/mikrotik router admin page_5.jpg>]
+<ubiquiti router admin page/ubiquiti router admin page_2.jpg, id=284, 1017.04968pt x 472.01344pt>
+File: ubiquiti router admin page/ubiquiti router admin page_2.jpg Graphic file (type jpg)
+<use ubiquiti router admin page/ubiquiti router admin page_2.jpg>
+Package pdftex.def Info: ubiquiti router admin page/ubiquiti router admin page_2.jpg  used on input line 351.
+(pdftex.def)             Requested size: 446.26582pt x 207.11037pt.
+<huawei routers/huawei routers_8.jpg, id=285, 1505.625pt x 1079.03125pt>
+File: huawei routers/huawei routers_8.jpg Graphic file (type jpg)
+<use huawei routers/huawei routers_8.jpg>
+Package pdftex.def Info: huawei routers/huawei routers_8.jpg  used on input line 366.
+(pdftex.def)             Requested size: 211.38832pt x 151.49142pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[12 <./ubiquiti routers/ubiquiti routers_0.jpg> <./ubiquiti router admin page/ubiquiti router admin page_2.jpg>]
+<huawei router admin page/huawei router admin page_2.jpg, id=297, 1284.8pt x 722.7pt>
+File: huawei router admin page/huawei router admin page_2.jpg Graphic file (type jpg)
+<use huawei router admin page/huawei router admin page_2.jpg>
+Package pdftex.def Info: huawei router admin page/huawei router admin page_2.jpg  used on input line 372.
+(pdftex.def)             Requested size: 446.26582pt x 251.01897pt.
+LaTeX Font Info:    Trying to load font information for TS1+fnc on input line 381.
+ (/usr/share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd
+File: ts1fnc.fd 2005/12/13 font definitions for TS1/fnc.
+)
+LaTeX Font Info:    Font shape `TS1/fnc/m/n' will be
+(Font)              scaled to size 10.18341pt on input line 381.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[13 <./huawei routers/huawei routers_8.jpg> <./huawei router admin page/huawei router admin page_2.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[14]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 501--504
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[16]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 514.
+ (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[17
+
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./Assignment_8.aux)
 Package rerunfilecheck Info: File `Assignment_8.out' has not changed.
-(rerunfilecheck)             Checksum: 511679F5321C7623F08DBDA48BFF7F5A;458.
+(rerunfilecheck)             Checksum: ECDB91355E481D0E8E366DDF8DD4ED8F;3766.
  ) 
 Here is how much of TeX's memory you used:
- 12885 strings out of 477985
- 195614 string characters out of 5840058
- 1854388 words of memory out of 5000000
- 32884 multiletter control sequences out of 15000+600000
- 543358 words of font info for 55 fonts, out of 8000000 for 9000
+ 13303 strings out of 477985
+ 205924 string characters out of 5840058
+ 1861388 words of memory out of 5000000
+ 33125 multiletter control sequences out of 15000+600000
+ 555890 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,12n,76p,389b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_8.pdf (4 pages, 47239 bytes).
+ 75i,12n,76p,552b,546s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+Output written on Assignment_8.pdf (19 pages, 7816446 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 389 PDF objects out of 1000 (max. 8388607)
+ 331 compressed objects within 4 object streams
+ 119 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 

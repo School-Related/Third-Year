@@ -16,12 +16,12 @@
 \usepackage{blindtext}
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    filecolor=magenta,      
-    urlcolor=cyan,
-    pdfpagemode=FullScreen,
-    }
+  colorlinks=true,
+  linkcolor=black,
+  filecolor=magenta,
+  urlcolor=cyan,
+  pdfpagemode=FullScreen,
+}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -29,22 +29,22 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
+  backgroundcolor=\color{backcolour},
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
 }
 
 \lstset{style=mystyle}
@@ -58,8 +58,6 @@
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{1pt}
 
-
-
 % Other Doc Editing
 % \parindent 0ex
 %\renewcommand{\baselinestretch}{1.5}
@@ -67,67 +65,59 @@
 \begin{document}
 
 \begin{titlepage}
-    \centering
+  \centering
 
-    %---------------------------NAMES-------------------------------
+  %---------------------------NAMES-------------------------------
 
-    \huge\textsc{
-        MIT World Peace University
-    }\\
+  \huge\textsc{
+    MIT World Peace University
+  }\\
 
-    \vspace{0.75\baselineskip} % space after Uni Name
+  \vspace{0.75\baselineskip} % space after Uni Name
 
-    \LARGE{
-        Wireless Devices and Mobile Security\\
-        Third Year B. Tech, Semester 5
-    }
+  \LARGE{
+    Wireless Devices and Mobile Security\\
+    Third Year B. Tech, Semester 5
+  }
 
-    \vfill % space after Sub Name
+  \vfill % space after Sub Name
 
-    %--------------------------TITLE-------------------------------
+  %--------------------------TITLE-------------------------------
 
-    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
-    \rule{\textwidth}{0.6pt}
-    \vspace{0.75\baselineskip} % Whitespace above the title
+  \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+  \rule{\textwidth}{0.6pt}
+  \vspace{0.75\baselineskip} % Whitespace above the title
 
+  \huge{\textsc{
+      Study and Comparison of Different types of APN routers, like CISCO, TP Link, D-Link, etc.
+    }} \\
 
+  \vspace{0.5\baselineskip} % Whitespace below the title
+  \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
+  \rule{\textwidth}{1.6pt}
 
-    \huge{\textsc{
-            Study and Comparison of Different types of APN routers, like CISCO, TP Link, D-Link, etc.
-        }} \\
+  \vspace{1\baselineskip} % Whitespace after the title block
 
+  %--------------------------SUBTITLE --------------------------	
 
+  \LARGE\textsc{
+    Lab Assignment 8
+  } % Subtitle or further description
+  \vfill
 
-    \vspace{0.5\baselineskip} % Whitespace below the title
-    \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
-    \rule{\textwidth}{1.6pt}
+  %--------------------------AUTHOR-------------------------------
 
-    \vspace{1\baselineskip} % Whitespace after the title block
+  Prepared By \vspace{0.5\baselineskip} % Whitespace before the editors
 
-    %--------------------------SUBTITLE --------------------------	
-
-    \LARGE\textsc{
-        Lab Assignment 8
-    } % Subtitle or further description
-    \vfill
-
-    %--------------------------AUTHOR-------------------------------
-
-    Prepared By
-    \vspace{0.5\baselineskip} % Whitespace before the editors
-
-    \Large{
-        Krishnaraj Thadesar \\
-        Cyber Security and Forensics\\
-        Batch A1, PA 10
-    }
-
-
-    \vspace{0.5\baselineskip} % Whitespace below the editor list
-    \today
+  \Large{
+    Krishnaraj Thadesar \\
+    Cyber Security and Forensics\\
+    Batch A1, PA 10
+  }
+  \vspace{0.5\baselineskip} % Whitespace below the editor list
+  \today
 
 \end{titlepage}
-
 
 \tableofcontents
 \thispagestyle{empty}
@@ -136,10 +126,376 @@
 \setcounter{page}{1}
 
 \section{Aim}
+To learn about different types of APN routers, like CISCO, TP Link, D-Link, and
+compare their features.
 
 \section{Objectives}
+\begin{enumerate}
+  \item To learn about different types of APN routers, like CISCO, TP Link, D-Link,
+        etc.
+  \item To compare their features.
+  \item To learn about the security features of these routers.
+\end{enumerate}
 
 \section{Theory}
+
+\subsection{What is a Router?}
+\begin{enumerate}
+  \item \textbf{Definition:} A router is a network device that connects multiple computer networks together and directs data traffic between them. It operates at the network layer of the OSI model and is a key component in home and enterprise networking.
+
+  \item \textbf{Functionality:} Routers forward data packets based on their destination IP addresses, making decisions about the optimal path for data transmission.
+
+  \item \textbf{Key Features:} Many routers also include built-in features like firewalls, DHCP servers, and wireless access points.
+
+  \item \textbf{Use Cases:} Routers are essential for enabling communication between devices on different networks, providing internet access, and ensuring data security.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\textwidth]{routers/routers_0.jpg}
+  \caption{A Router}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\textwidth]{routers/routers_7.jpg}
+  \caption{A Router}
+\end{figure}
+
+\subsection{What is an APN Router?}
+\begin{enumerate}
+  \item \textbf{Definition:} An APN router, or Access Point Name router, is a specialized router designed to manage the connection between a mobile network and the internet. It plays a crucial role in enabling data communication for mobile devices.
+
+  \item \textbf{Mobile Network Integration:} APN routers facilitate the integration of mobile devices with the internet by providing a gateway for data communication.
+
+  \item \textbf{Configuration:} Users can configure APN settings on these routers to specify the network to which they want to connect.
+
+  \item \textbf{Use Cases:} APN routers are commonly used in scenarios where reliable mobile data connectivity is required, such as in remote locations or for mobile hotspots.
+\end{enumerate}
+
+\subsection{What is the Difference between a Router and an APN Router?}
+\begin{enumerate}
+  \item \textbf{Scope:} A standard router manages data communication between different computer networks, while an APN router specifically handles the connection between mobile networks and the internet.
+
+  \item \textbf{Functionality:} Routers focus on directing data packets between networks based on IP addresses, while APN routers specialize in managing mobile data connections for devices like smartphones and IoT devices.
+
+  \item \textbf{Configuration:} APN routers involve configuring settings related to mobile network access, including APN settings, which are not typically found in standard routers.
+
+  \item \textbf{Use Cases:} Routers are used in general networking scenarios, while APN routers are tailored for mobile data communication, making them suitable for mobile hotspots, remote locations, and IoT applications.
+\end{enumerate}
+
+\subsection{Different Types of Routers Available in the Market}
+\subsubsection{CISCO}
+\begin{enumerate}
+  \item \textbf{Enterprise Focus:} CISCO routers are widely used in enterprise-level networks, providing advanced features and scalability.
+
+  \item \textbf{Security Features:} CISCO routers often include robust security features, making them suitable for securing large networks.
+
+  \item \textbf{Variety of Models:} The product range includes routers for small businesses, branch offices, and large data centers.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\textwidth]{cisco router/cisco router_2.jpg}
+  \caption{Cisco Routers}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.95\textwidth]{cisco router admin page/cisco router admin page_0.jpg}
+  \caption{Cisco Router Admin page}
+\end{figure}
+
+\subsubsection{TP Link}
+\begin{enumerate}
+  \item \textbf{Consumer and Small Business Focus:} TP-Link routers are popular among consumers and small businesses, offering a balance between features and affordability.
+
+  \item \textbf{Wireless Technologies:} Many TP-Link routers support advanced wireless technologies, including Wi-Fi 6.
+
+  \item \textbf{User-Friendly Interface:} TP-Link routers often feature a user-friendly interface, making them accessible for home users.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\textwidth]{tp link router/tp link router_7.jpg}
+  \caption{TP Link Routers}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.95\textwidth]{tp link admin page/tp link admin page_6.jpg}
+  \caption{TP Link Router Admin page}
+\end{figure}
+
+\subsubsection{D-Link}
+\begin{enumerate}
+  \item \textbf{Home and Small Office Use:} D-Link routers cater to home users and small office environments.
+
+  \item \textbf{Affordability:} D-Link routers are known for their affordability and straightforward setups.
+
+  \item \textbf{Wireless Connectivity:} Many D-Link models support wireless connectivity, making them suitable for homes with multiple devices.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\textwidth]{d link router/d link router_1.jpg}
+  \caption{D Link Routers}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.95\textwidth]{dlink admin page/dlink admin page_3.jpg}
+  \caption{D Link Admin Page}
+\end{figure}
+
+\subsubsection{Netgear}
+\begin{enumerate}
+  \item \textbf{Home Networking Focus:} Netgear routers are designed for home networking, emphasizing ease of use and reliability.
+
+  \item \textbf{Mesh Wi-Fi Systems:} Netgear offers mesh Wi-Fi systems for extended coverage in larger homes.
+
+  \item \textbf{Parental Controls:} Some Netgear routers include robust parental control features for managing internet access.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\textwidth]{netgear routers/netgear routers_8.jpg}
+  \caption{Netgear Routers}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.95\textwidth]{netgear routers admin page/netgear routers admin page_0.jpg}
+  \caption{Netgear Router Admin Page}
+\end{figure}
+\subsubsection{Asus}
+\begin{enumerate}
+  \item \textbf{Gaming and High-Performance:} ASUS routers often target gamers and users seeking high-performance networking solutions.
+
+  \item \textbf{Advanced Features:} ASUS routers may include features like gaming acceleration, VPN support, and AiMesh for mesh networking.
+
+  \item \textbf{Quality of Service (QoS):} ASUS routers may prioritize gaming traffic using QoS features for an enhanced gaming experience.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\textwidth]{asus routers/asus routers_3.jpg}
+  \caption{Asus Routers}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.95\textwidth]{asus router admin page/asus router admin page_9.jpg}
+  \caption{Asus Router Admin Page}
+\end{figure}
+
+\subsubsection{Linksys}
+\begin{enumerate}
+  \item \textbf{Home and Small Business:} Linksys routers cater to both home users and small businesses.
+
+  \item \textbf{Mesh Networking:} Linksys offers mesh networking solutions for whole-home coverage.
+
+  \item \textbf{Open Source Firmware:} Some Linksys models support open-source firmware, allowing advanced users to customize their router's functionality.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\textwidth]{linksys routers/linksys routers_9.jpg}
+  \caption{Linksys Routers}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.95\textwidth]{linksys routers admin page/linksys routers admin page_7.jpg}
+  \caption{Linksys Router Admin Page}
+\end{figure}
+
+\subsubsection{MikroTik}
+\begin{enumerate}
+  \item \textbf{Affordable and Versatile:} MikroTik routers are known for their affordability and versatility.
+
+  \item \textbf{RouterOS:} MikroTik routers run on RouterOS, a Linux-based operating system, providing extensive configuration options.
+
+  \item \textbf{Enterprise Solutions:} MikroTik offers routers suitable for both small networks and larger enterprise solutions.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\textwidth]{microtik routers/microtik routers_4.jpg}
+  \caption{Microtik Routers}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.95\textwidth]{mikrotik router admin page/mikrotik router admin page_5.jpg}
+  \caption{Mikrotik Router Admin Page}
+\end{figure}
+
+\subsubsection{Ubiquiti}
+\begin{enumerate}
+  \item \textbf{Enterprise Networking:} Ubiquiti routers focus on providing solutions for enterprise-level networking.
+
+  \item \textbf{Unified Networking:} Ubiquiti offers routers that integrate with their broader ecosystem of networking products, providing a unified network management experience.
+
+  \item \textbf{Scalability:} Ubiquiti routers are scalable and suitable for building large, complex networks.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\textwidth]{ubiquiti routers/ubiquiti routers_0.jpg}
+  \caption{Ubiquiti Routers}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.95\textwidth]{ubiquiti router admin page/ubiquiti router admin page_2.jpg}
+  \caption{Ubiquti Router Admin Page}
+\end{figure}
+
+\subsubsection{Huawei}
+\begin{enumerate}
+  \item \textbf{Diverse Product Range:} Huawei offers a diverse range of routers, including models for consumers, small businesses, and large enterprises.
+
+  \item \textbf{5G Routers:} Huawei is known for its 5G routers, providing high-speed internet connectivity.
+
+  \item \textbf{Advanced Technologies:} Huawei routers often incorporate advanced technologies, making them suitable for modern networking requirements.
+\end{enumerate}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.45\textwidth]{huawei routers/huawei routers_8.jpg}
+  \caption{Huawei Routers}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.95\textwidth]{huawei router admin page/huawei router admin page_2.jpg}
+  \caption{Huaewi Router Admin Page}
+\end{figure}
+
+\section{Router Comparison}
+
+\subsection{Cisco Routers}
+\textbf{Pros:}
+\begin{itemize}
+  \item Advanced features suitable for enterprise networks.
+  \item Robust security features.
+  \item Variety of models catering to different network sizes.
+\end{itemize}
+\textbf{Cons:}
+\begin{itemize}
+  \item Higher cost, especially for enterprise-level models.
+  \item Steeper learning curve for configuration.
+\end{itemize}
+
+\subsection{TP-Link Routers}
+\textbf{Pros:}
+\begin{itemize}
+  \item Affordable options for home and small business users.
+  \item Support for advanced wireless technologies.
+  \item User-friendly interface.
+\end{itemize}
+\textbf{Cons:}
+\begin{itemize}
+  \item May lack some advanced features compared to enterprise-level routers.
+  \item Limited scalability for large networks.
+\end{itemize}
+
+\subsection{D-Link Routers}
+\textbf{Pros:}
+\begin{itemize}
+  \item Cost-effective for home and small office use.
+  \item Straightforward setups.
+  \item Wireless connectivity for multiple devices.
+\end{itemize}
+\textbf{Cons:}
+\begin{itemize}
+  \item Limited feature set compared to more advanced routers.
+  \item May not be suitable for larger networks.
+\end{itemize}
+
+\subsection{Netgear Routers}
+\textbf{Pros:}
+\begin{itemize}
+  \item Designed for home networking with a focus on ease of use.
+  \item Mesh Wi-Fi systems for extended coverage.
+  \item Some models offer robust parental control features.
+\end{itemize}
+\textbf{Cons:}
+\begin{itemize}
+  \item Features may be less advanced compared to routers targeting enterprise or
+        gaming markets.
+  \item Limited options for advanced configurations.
+\end{itemize}
+
+\subsection{ASUS Routers}
+\textbf{Pros:}
+\begin{itemize}
+  \item Targeted towards gaming and high-performance users.
+  \item Advanced features like gaming acceleration and AiMesh support.
+  \item Quality of Service (QoS) prioritization for an enhanced gaming experience.
+\end{itemize}
+\textbf{Cons:}
+\begin{itemize}
+  \item Higher cost compared to basic home routers.
+  \item May have a steeper learning curve for users unfamiliar with advanced networking
+        concepts.
+\end{itemize}
+
+\subsection{Linksys Routers}
+\textbf{Pros:}
+\begin{itemize}
+  \item Suitable for both home users and small businesses.
+  \item Mesh networking solutions for whole-home coverage.
+  \item Some models support open-source firmware for customization.
+\end{itemize}
+\textbf{Cons:}
+\begin{itemize}
+  \item Features may not be as advanced as routers designed for specific purposes like
+        gaming or enterprise networking.
+  \item Limited scalability for larger networks.
+\end{itemize}
+
+\subsection{MikroTik Routers}
+\textbf{Pros:}
+\begin{itemize}
+  \item Affordable and versatile routers.
+  \item RouterOS provides extensive configuration options.
+  \item Suitable for both small networks and larger enterprise solutions.
+\end{itemize}
+\textbf{Cons:}
+\begin{itemize}
+  \item May have a steeper learning curve due to advanced configuration options.
+  \item Limited brand recognition compared to more mainstream options.
+\end{itemize}
+
+\subsection{Ubiquiti Routers}
+\textbf{Pros:}
+\begin{itemize}
+  \item Focused on enterprise networking solutions.
+  \item Integration with a broader ecosystem of networking products.
+  \item Scalable for building large, complex networks.
+\end{itemize}
+\textbf{Cons:}
+\begin{itemize}
+  \item Higher cost compared to routers designed for home use.
+  \item May be overkill for smaller networks or home users.
+\end{itemize}
+
+\subsection{Huawei Routers}
+\textbf{Pros:}
+\begin{itemize}
+  \item Diverse product range catering to consumers, small businesses, and large
+        enterprises.
+  \item Known for 5G routers providing high-speed internet connectivity.
+  \item Incorporates advanced technologies suitable for modern networking requirements.
+\end{itemize}
+\textbf{Cons:}
+\begin{itemize}
+  \item Limited availability in certain regions compared to more globally recognized
+        brands.
+  \item Some models may be priced higher than comparable options from other brands.
+\end{itemize}
 
 \section{Platform}
 \textbf{Operating System}: Arch Linux x86-64 \\
@@ -147,9 +503,47 @@
 \textbf{Compilers or Interpreters}: Python 3.10.1\\
 
 \section{Conclusion}
-Thus, we have successfully studied and compared different types of APN routers, like CISCO, TP Link, D-Link, etc.
+Thus, we have successfully studied and compared different types of APN routers,
+like CISCO, TP Link, D-Link, etc.
+
 \clearpage
 
-\section{FAQ}
+\begin{thebibliography}{99}
+  \bibitem{ciscorouters}
+  Cisco Routers. \\
+  Website: \url{https://www.cisco.com/c/en/us/products/routers/index.html}
+
+  \bibitem{tplinkrouters}
+  TP-Link Routers. \\
+  Website: \url{https://www.tp-link.com/us/home-networking/wifi-router/}
+
+  \bibitem{dlinkrouters}
+  D-Link Routers. \\
+  Website: \url{https://www.dlink.com/en/consumer/routers}
+
+  \bibitem{netgearrouters}
+  Netgear Routers. \\
+  Website: \url{https://www.netgear.com/home/products/networking/wifi-routers/}
+
+  \bibitem{asusrouters}
+  ASUS Routers. \\
+  Website: \url{https://www.asus.com/Networking-IoT-Servers/WiFi-Routers-Products/}
+
+  \bibitem{linksysrouters}
+  Linksys Routers. \\
+  Website: \url{https://www.linksys.com/us/routers/}
+
+  \bibitem{mikrotikrouters}
+  MikroTik Routers. \\
+  Website: \url{https://mikrotik.com/products/group/routers}
+
+  \bibitem{ubiquitirouters}
+  Ubiquiti Routers. \\
+  Website: \url{https://www.ui.com/products/#routing}
+
+  \bibitem{huaweirouters}
+  Huawei Routers. \\
+  Website: \url{https://consumer.huawei.com/en/routers/}
+\end{thebibliography}
 
 \end{document}
