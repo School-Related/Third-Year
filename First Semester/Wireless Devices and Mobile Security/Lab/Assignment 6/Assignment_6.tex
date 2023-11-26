@@ -18,10 +18,10 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
-    filecolor=magenta,      
-    urlcolor=cyan,
+    filecolor=magenta,
+    urlcolor=blue,
     pdfpagemode=FullScreen,
-    }
+}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -29,21 +29,21 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
+    backgroundcolor=\color{backcolour},
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,
     tabsize=2
 }
 
@@ -57,8 +57,6 @@
 \fancyhead[R]{\textit{Krishnaraj T}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{1pt}
-
-
 
 % Other Doc Editing
 % \parindent 0ex
@@ -90,13 +88,9 @@
     \rule{\textwidth}{0.6pt}
     \vspace{0.75\baselineskip} % Whitespace above the title
 
-
-
     \huge{\textsc{
             Program to Send OTP to Mobile Phone using Python and Twilio API
         }} \\
-
-
 
     \vspace{0.5\baselineskip} % Whitespace below the title
     \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
@@ -113,8 +107,7 @@
 
     %--------------------------AUTHOR-------------------------------
 
-    Prepared By
-    \vspace{0.5\baselineskip} % Whitespace before the editors
+    Prepared By \vspace{0.5\baselineskip} % Whitespace before the editors
 
     \Large{
         Krishnaraj Thadesar \\
@@ -122,12 +115,10 @@
         Batch A1, PA 10
     }
 
-
     \vspace{0.5\baselineskip} % Whitespace below the editor list
     \today
 
 \end{titlepage}
-
 
 \tableofcontents
 \thispagestyle{empty}
@@ -136,11 +127,88 @@
 \setcounter{page}{1}
 
 \section{Aim}
-
+To write a program to send OTP to mobile phone using Python and Twilio API.
 \section{Objectives}
-
-
+\begin{enumerate}
+    \item To learn how to use Twilio API to send SMS.
+    \item To learn how to use Python to send SMS.
+    \item To learn how to use Python to generate OTP.
+\end{enumerate}
 \section{Theory}
+
+\subsection{Twilio API}
+\begin{enumerate}
+    \item \textbf{Overview:} The Twilio API is a cloud communications platform that allows developers to integrate messaging, voice, and video capabilities into their applications. It provides a set of RESTful APIs for building communication solutions.
+
+    \item \textbf{Key Features:}
+          \begin{itemize}
+              \item Sending and receiving SMS and MMS messages.
+              \item Making and receiving voice calls.
+              \item Video conferencing capabilities.
+              \item Integration with various programming languages.
+          \end{itemize}
+
+    \item \textbf{Use Cases:}
+          \begin{itemize}
+              \item Implementing two-factor authentication (2FA).
+              \item Building notification systems.
+              \item Creating interactive voice response (IVR) systems.
+          \end{itemize}
+
+\end{enumerate}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{twilio/twilio_6.jpg}
+    \caption{Twilio Features}
+\end{figure}
+
+\subsection{Pricing of Twilio API}
+\begin{enumerate}
+    \item \textbf{Billing Model:} Twilio charges based on usage, with costs associated with each message, call, or other communication type.
+
+    \item \textbf{Factors Affecting Pricing:}
+          \begin{itemize}
+              \item Message type (SMS, MMS).
+              \item Destination country for calls and messages.
+              \item Type of phone number used (local, toll-free).
+              \item Volume of usage.
+          \end{itemize}
+
+    \item \textbf{Pricing Details:} Twilio provides a detailed pricing page on their official website, allowing users to estimate costs based on their specific use case.
+
+\end{enumerate}
+
+\subsection{OTP Generation with Python}
+\begin{enumerate}
+    \item \textbf{Python Libraries:} Use libraries like `pyotp` or `onetimepass` to generate OTPs (One-Time Passwords) in Python.
+
+    \item \textbf{Time-based OTP (TOTP):} TOTP is a widely used algorithm for generating OTPs based on the current time.
+
+    \item \textbf{Implementation:} Sample Python code involves importing the library, creating an OTP object, and generating OTPs based on the provided key.
+
+    \item \textbf{Security Considerations:} Ensure the secure storage of secret keys and follow best practices for OTP implementation.
+
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{otp.png}
+    \caption{OTP Example SMS}
+\end{figure}
+
+\subsection{Working of OTPs for Enhanced Security}
+\begin{enumerate}
+    \item \textbf{Two-Factor Authentication (2FA):} OTPs are commonly used as a second factor to enhance security along with passwords.
+
+    \item \textbf{Dynamic Authentication Codes:} OTPs change dynamically at regular intervals, providing a time-sensitive layer of security.
+
+    \item \textbf{Use in Identity Verification:} OTPs are employed in identity verification processes, ensuring that the entity accessing the system has possession of the valid OTP.
+
+    \item \textbf{Avoiding Replay Attacks:} OTPs are designed to be used only once, mitigating the risk of replay attacks.
+\end{enumerate}
+
 
 \section{Platform}
 \textbf{Operating System}: Arch Linux x86-64 \\
@@ -149,14 +217,51 @@
 
 \section{Input and Output}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{./output.jpeg}
+    \caption{Terminal Input and Output}
+\end{figure}
 
-% \section{Code}
-% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{./message.jpeg}
+    \caption{Message Received on Phone (+919834312135)}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{./otps.jpeg}
+    \caption{Other Messages Received on Phone (+919834312135)}
+\end{figure}
+
+\section{Code}
+\lstinputlisting[language=Python, caption=Script to Send SMS via Twilio API]{../../Programs/Assignment 6/send_sms.py}
 
 \section{Conclusion}
-Thus, We have learnt IDS systems and their types. We have also learnt about various tools based on IDS systems.
-\clearpage
+Thus, we have successfully used Twilio API to send OTP to a mobile phone using
+Python, and verified it on the script. \clearpage
 
-\section{FAQ}
+\begin{thebibliography}{99}
+    \bibitem{twiliodocs}
+    Twilio Documentation. \\
+    \url{https://www.twilio.com/docs}
+
+    \bibitem{twiliopricing}
+    Twilio Pricing. \\
+    \url{https://www.twilio.com/pricing}
+
+    \bibitem{pyotp}
+    PyOTP Documentation. \\
+    \url{https://github.com/pyauth/pyotp}
+
+    \bibitem{onetimepass}
+    onetimepass Documentation. \\
+    \url{https://github.com/tadeck/onetimepass}
+
+    \bibitem{nistguidelines}
+    NIST Digital Identity Guidelines. \\
+    \url{https://www.nist.gov/publications/digital-identity-guidelines}
+\end{thebibliography}
 
 \end{document}

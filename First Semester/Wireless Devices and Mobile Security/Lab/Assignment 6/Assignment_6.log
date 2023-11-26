@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  26 NOV 2023 19:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  26 NOV 2023 20:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -521,12 +521,12 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip62
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 24.
-LaTeX Font Info:    Trying to load font information for T1+fnc on input line 67.
+LaTeX Font Info:    Trying to load font information for T1+fnc on input line 65.
  (/usr/share/texmf-dist/tex/latex/fouriernc/t1fnc.fd
 File: t1fnc.fd 2005/12/13 scaled font definitions for T1/fnc.
 )
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 10.18341pt on input line 67.
+(Font)              scaled to size 10.18341pt on input line 65.
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count312
@@ -534,42 +534,42 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (./Assignment_6.aux)
 \openout1 = `Assignment_6.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 67.
-LaTeX Font Info:    Trying to load font information for FML+fncmi on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for FML/fncmi/m/it on input line 65.
+LaTeX Font Info:    Trying to load font information for FML+fncmi on input line 65.
  (/usr/share/texmf-dist/tex/latex/fouriernc/fmlfncmi.fd
 File: fmlfncmi.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncmi.
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for FMS/fncm/m/n on input line 67.
-LaTeX Font Info:    Trying to load font information for FMS+fncm on input line 67.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for FMS/fncm/m/n on input line 65.
+LaTeX Font Info:    Trying to load font information for FMS+fncm on input line 65.
  (/usr/share/texmf-dist/tex/latex/fouriernc/fmsfncm.fd
 File: fmsfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FMS/fncm.
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 67.
-LaTeX Font Info:    Trying to load font information for FMX+futm on input line 67.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 65.
+LaTeX Font Info:    Trying to load font information for FMX+futm on input line 65.
  (/usr/share/texmf-dist/tex/latex/fourier/fmxfutm.fd
 File: fmxfutm.fd futm-extension
 )
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -624,32 +624,60 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Font Info:    Redeclaring math accent \widehat on input line 67.
-LaTeX Font Info:    Redeclaring math accent \widetilde on input line 67.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 65.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 65.
 \c@lstlisting=\count319
-Package hyperref Info: Link coloring ON on input line 67.
+Package hyperref Info: Link coloring ON on input line 65.
  (./Assignment_6.out) (./Assignment_6.out)
 \@outlinefile=\write3
 \openout3 = `Assignment_6.out'.
 
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 19.28804pt on input line 72.
+LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
 (Font)              scaled to size 19.28804pt on input line 74.
-LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 19.28804pt on input line 76.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 16.07027pt on input line 80.
+(Font)              scaled to size 16.07027pt on input line 78.
 LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 16.07027pt on input line 111.
+(Font)              scaled to size 16.07027pt on input line 105.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 13.39188pt on input line 119.
+(Font)              scaled to size 13.39188pt on input line 112.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 13.39188pt on input line 132.
+(Font)              scaled to size 13.39188pt on input line 123.
  (./Assignment_6.toc
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 10.18341pt on input line 1.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 7.71893pt on input line 4.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 5.57996pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for FML+fncm on input line 4.
+ (/usr/share/texmf-dist/tex/latex/fouriernc/fmlfncm.fd
+File: fmlfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncm.
+)
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
 )
 \tf@toc=\write4
 \openout4 = `Assignment_6.toc'.
@@ -658,16 +686,28 @@ LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.134 \clearpage
+l.125 \clearpage
                  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 146--149
-
- []
-
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 11.15991pt on input line 139.
+LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
+(Font)              scaled to size 11.15991pt on input line 139.
+LaTeX Font Info:    Trying to load font information for TS1+fnc on input line 145.
+ (/usr/share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd
+File: ts1fnc.fd 2005/12/13 font definitions for TS1/fnc.
+)
+LaTeX Font Info:    Font shape `TS1/fnc/m/n' will be
+(Font)              scaled to size 10.18341pt on input line 145.
+<twilio/twilio_6.jpg, id=75, 1706.375pt x 983.675pt>
+File: twilio/twilio_6.jpg Graphic file (type jpg)
+<use twilio/twilio_6.jpg>
+Package pdftex.def Info: twilio/twilio_6.jpg  used on input line 163.
+(pdftex.def)             Requested size: 446.26582pt x 257.25043pt.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 10.18341pt on input line 158.
+(Font)              scaled to size 10.18341pt on input line 166.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 13.39188pt on input line 158.
+(Font)              scaled to size 13.39188pt on input line 166.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -679,10 +719,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.158 \clearpage
-                 [1
+l.166 
+       [1
 
 ]
+<otp.png, id=86, 623.32875pt x 334.24875pt>
+File: otp.png Graphic file (type png)
+<use otp.png>
+Package pdftex.def Info: otp.png  used on input line 197.
+(pdftex.def)             Requested size: 352.31625pt x 188.92738pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -690,25 +736,104 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[2
+[2 <./twilio/twilio_6.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 214--217
+
+ []
+
+<./output.jpeg, id=101, 1432.35126pt x 292.09125pt>
+File: ./output.jpeg Graphic file (type jpg)
+<use ./output.jpeg>
+Package pdftex.def Info: ./output.jpeg  used on input line 222.
+(pdftex.def)             Requested size: 446.26582pt x 91.00195pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[3 <./otp.png>]
+<./message.jpeg, id=112, 740.7675pt x 1606.0pt>
+File: ./message.jpeg Graphic file (type jpg)
+<use ./message.jpeg>
+Package pdftex.def Info: ./message.jpeg  used on input line 228.
+(pdftex.def)             Requested size: 211.38832pt x 458.2784pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[4 <./output.jpeg>]
+<./otps.jpeg, id=118, 740.7675pt x 1606.0pt>
+File: ./otps.jpeg Graphic file (type jpg)
+<use ./otps.jpeg>
+Package pdftex.def Info: ./otps.jpeg  used on input line 234.
+(pdftex.def)             Requested size: 211.38832pt x 458.2784pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[5 <./message.jpeg>] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 239.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 239.
+ (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+) (../../Programs/Assignment 6/send_sms.py
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 8.36993pt on input line 1.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[6{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./otps.jpeg>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[7]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[8
 
 ] (./Assignment_6.aux)
 Package rerunfilecheck Info: File `Assignment_6.out' has not changed.
-(rerunfilecheck)             Checksum: 8C468B103806800B9D9F69B8F9F99BCE;587.
+(rerunfilecheck)             Checksum: F7B93A9CBF1652C2ADD6C72FE718B80E;1423.
  ) 
 Here is how much of TeX's memory you used:
- 12887 strings out of 477985
- 195634 string characters out of 5840058
- 1853388 words of memory out of 5000000
- 32885 multiletter control sequences out of 15000+600000
- 543358 words of font info for 55 fonts, out of 8000000 for 9000
+ 13601 strings out of 477985
+ 203910 string characters out of 5840058
+ 2225388 words of memory out of 5000000
+ 33459 multiletter control sequences out of 15000+600000
+ 558493 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,12n,76p,389b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_6.pdf (4 pages, 47073 bytes).
+ 75i,13n,76p,627b,2246s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+Output written on Assignment_6.pdf (10 pages, 441242 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 257 PDF objects out of 1000 (max. 8388607)
+ 225 compressed objects within 3 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 122 words of extra memory for PDF output out of 10000 (max. 10000000)
 
