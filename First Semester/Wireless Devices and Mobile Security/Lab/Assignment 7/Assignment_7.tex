@@ -18,10 +18,10 @@
 \hypersetup{
     colorlinks=true,
     linkcolor=black,
-    filecolor=magenta,      
-    urlcolor=cyan,
+    filecolor=magenta,
+    urlcolor=blue,
     pdfpagemode=FullScreen,
-    }
+}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -29,21 +29,21 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
+    backgroundcolor=\color{backcolour},
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
     stringstyle=\color{codepurple},
     basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,
     tabsize=2
 }
 
@@ -57,8 +57,6 @@
 \fancyhead[R]{\textit{Krishnaraj T}}
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{1pt}
-
-
 
 % Other Doc Editing
 % \parindent 0ex
@@ -90,13 +88,9 @@
     \rule{\textwidth}{0.6pt}
     \vspace{0.75\baselineskip} % Whitespace above the title
 
-
-
     \huge{\textsc{
-            Configuration of APN of a router, and manage its access control for Security. 
+            Configuration of APN of a router, and manage its access control for Security.
         }} \\
-
-
 
     \vspace{0.5\baselineskip} % Whitespace below the title
     \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
@@ -113,8 +107,7 @@
 
     %--------------------------AUTHOR-------------------------------
 
-    Prepared By
-    \vspace{0.5\baselineskip} % Whitespace before the editors
+    Prepared By \vspace{0.5\baselineskip} % Whitespace before the editors
 
     \Large{
         Krishnaraj Thadesar \\
@@ -122,12 +115,10 @@
         Batch A1, PA 10
     }
 
-
     \vspace{0.5\baselineskip} % Whitespace below the editor list
     \today
 
 \end{titlepage}
-
 
 \tableofcontents
 \thispagestyle{empty}
@@ -136,27 +127,168 @@
 \setcounter{page}{1}
 
 \section{Aim}
-
+To Learn about the Configuration of APN of a router, and manage its access
+control for Security.
 \section{Objectives}
-
+\begin{enumerate}
+    \item To learn how to configure APN of a router.
+    \item To learn how to manage access control of a router.
+    \item To learn how to secure a router.
+    \item To learn how to connect a device to a router.
+\end{enumerate}
 
 \section{Theory}
+\subsection{Access Point Name (APN)}
+\begin{enumerate}
+  \item \textbf{Definition:} APN, or Access Point Name, is a gateway between a mobile network and another computer network. It is used to connect mobile devices to the internet and other resources.
+
+  \item \textbf{Configuration:} Users can configure APN settings on their devices, specifying the network to which they want to connect.
+
+  \item \textbf{Use in Mobile Networks:} APNs play a crucial role in enabling data communication for mobile devices, facilitating internet access and multimedia messaging.
+
+  \item \textbf{Security Considerations:} Configuring APN settings securely is important to prevent unauthorized access and potential security vulnerabilities.
+\end{enumerate}
+
+\subsection{Access Control}
+\begin{enumerate}
+  \item \textbf{Definition:} Access control refers to the practice of restricting access to a system or resource only to authorized entities and preventing unauthorized access.
+
+  \item \textbf{Key Components:} Access control systems typically include authentication, authorization, and auditing mechanisms.
+
+  \item \textbf{Implementation:} Access control can be implemented through methods like role-based access control (RBAC), mandatory access control (MAC), or discretionary access control (DAC).
+
+  \item \textbf{Importance in Security:} Proper access control is crucial for protecting sensitive information, ensuring privacy, and preventing unauthorized activities.
+
+\end{enumerate}
+
+\subsection{Router Security}
+\begin{enumerate}
+  \item \textbf{Router Configuration:} Securing a router involves configuring settings such as passwords, firewalls, and firmware updates.
+
+  \item \textbf{Firewall Settings:} Routers often include built-in firewalls that can be configured to filter incoming and outgoing traffic.
+
+  \item \textbf{Firmware Updates:} Regularly updating router firmware is essential to patch vulnerabilities and improve overall security.
+
+  \item \textbf{Guest Network Considerations:} Many routers offer guest network features, allowing users to separate guest and private networks for enhanced security.
+
+\end{enumerate}
+
+\subsection{Connecting a Device to a Router}
+\begin{enumerate}
+  \item \textbf{SSID and Password:} To connect a device to a router, users typically need to enter the router's SSID (Service Set Identifier) and the associated password.
+
+  \item \textbf{Wi-Fi Protected Setup (WPS):} Some routers support WPS, a simplified method for connecting devices without entering a password.
+
+  \item \textbf{Security Considerations:} Using strong passwords and avoiding public Wi-Fi networks are important for securing device connections.
+
+  \item \textbf{Troubleshooting:} In case of connection issues, troubleshooting steps may involve checking router settings, restarting devices, or updating network drivers.
+
+\end{enumerate}
+
+\subsection{Different Wi-Fi Security Protocols}
+\begin{enumerate}
+  \item \textbf{WEP (Wired Equivalent Privacy):} An older and less secure protocol, susceptible to various attacks.
+
+  \item \textbf{WPA (Wi-Fi Protected Access):} Introduced as a more secure replacement for WEP, with variations like WPA2 and WPA3.
+
+  \item \textbf{WPA3:} The latest Wi-Fi security protocol, providing stronger encryption and improved security features.
+
+  \item \textbf{Choosing Security Protocols:} Users should select the most secure protocol supported by their devices and routers.
+
+\end{enumerate}
+
+
+
+\section{Implementation}
+
+\subsection{Configuration Instructions}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{lab router/1.png}
+    % \caption{}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{lab router/2.png}
+    % \caption{}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{lab router/3.png}
+    % \caption{}
+\end{figure}
+
+\subsection{Set up Instructions}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{lab router/connection.png}
+\end{figure}
+
+\subsection{The Router}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{lab router/router 3.jpeg}
+    \caption{Ports of the router}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{lab router/router 4.jpeg}
+    \caption{The Router}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{lab router/tp link 1.png}
+    \caption{The Admin page of the TP Link Router}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{lab router/tp link 2.png}
+    \caption{The Admin page of the TP Link Router}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{lab router/tp link 3.png}
+    \caption{The Admin page of the TP Link Router}
+\end{figure}
 
 \section{Platform}
 \textbf{Operating System}: Arch Linux x86-64 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
 \textbf{Compilers or Interpreters}: Python 3.10.1\\
 
-\section{Input and Output}
-
-
-% \section{Code}
-% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
-
 \section{Conclusion}
-Thus, We have learnt IDS systems and their types. We have also learnt about various tools based on IDS systems.
+Thus, we have learnt about the Configuration of APN of a router, and manage its access control for Security.
+
 \clearpage
 
-\section{FAQ}
-
+\begin{thebibliography}{99}
+    \bibitem{gsmaapn}
+      GSM Association (GSMA) APN Configuration Guidelines. \\
+      \url{https://www.gsma.com/technicalprojects/wp-content/uploads/2019/05/IR-82-v16.0.pdf}
+  
+    \bibitem{nistaccesscontrol}
+      NIST Special Publication 800-53: Access Control. \\
+      \url{https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final}
+  
+    \bibitem{fccroutersecurity}
+      Federal Communications Commission (FCC) Router Security Tips. \\
+      \url{https://www.fcc.gov/general/router-security-tips}
+  
+    \bibitem{wifiwps}
+      Wi-Fi Alliance: Wi-Fi Protected Setup (WPS) Overview. \\
+      \url{https://www.wi-fi.org/discover-wi-fi/wi-fi-protected-setup}
+  
+    \bibitem{wifisecurityprotocols}
+      Wi-Fi Alliance: Wi-Fi Security Protocols. \\
+      \url{https://www.wi-fi.org/discover-wi-fi/security}
+  \end{thebibliography}
 \end{document}
