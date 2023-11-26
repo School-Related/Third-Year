@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  26 NOV 2023 19:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  26 NOV 2023 20:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -639,17 +639,45 @@ LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 16.07027pt on input line 78.
 LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 16.07027pt on input line 109.
+(Font)              scaled to size 16.07027pt on input line 105.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 13.39188pt on input line 117.
+(Font)              scaled to size 13.39188pt on input line 112.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 13.39188pt on input line 130.
+(Font)              scaled to size 13.39188pt on input line 123.
  (./Assignment_5.toc
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 10.18341pt on input line 1.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 7.71893pt on input line 4.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 5.57996pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for FML+fncm on input line 4.
+ (/usr/share/texmf-dist/tex/latex/fouriernc/fmlfncm.fd
+File: fmlfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncm.
+)
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
 )
 \tf@toc=\write4
 \openout4 = `Assignment_5.toc'.
@@ -658,16 +686,28 @@ LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.132 \clearpage
+l.125 \clearpage
                  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 144--147
-
- []
-
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 11.15991pt on input line 147.
+LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
+(Font)              scaled to size 11.15991pt on input line 147.
+<android studio/android studio_0.jpg, id=110, 1204.5pt x 1204.5pt>
+File: android studio/android studio_0.jpg Graphic file (type jpg)
+<use android studio/android studio_0.jpg>
+Package pdftex.def Info: android studio/android studio_0.jpg  used on input line 151.
+(pdftex.def)             Requested size: 211.38832pt x 211.37878pt.
+LaTeX Font Info:    Trying to load font information for TS1+fnc on input line 159.
+ (/usr/share/texmf-dist/tex/latex/fouriernc/ts1fnc.fd
+File: ts1fnc.fd 2005/12/13 font definitions for TS1/fnc.
+)
+LaTeX Font Info:    Font shape `TS1/fnc/m/n' will be
+(Font)              scaled to size 10.18341pt on input line 159.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 10.18341pt on input line 155.
+(Font)              scaled to size 10.18341pt on input line 169.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 13.39188pt on input line 155.
+(Font)              scaled to size 13.39188pt on input line 169.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -679,10 +719,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.155 \clearpage
-                 [1
+l.169               \item R
+                           ich set of templates for common Android app compo... [1
 
-]
+ <./android studio/android studio_0.jpg>]
+<android studio/android studio_2.jpg, id=125, 1838.87pt x 1086.0575pt>
+File: android studio/android studio_2.jpg Graphic file (type jpg)
+<use android studio/android studio_2.jpg>
+Package pdftex.def Info: android studio/android studio_2.jpg  used on input line 176.
+(pdftex.def)             Requested size: 446.26582pt x 263.5592pt.
+<decryption/decryption_0.jpg, id=126, 710.655pt x 425.1885pt>
+File: decryption/decryption_0.jpg Graphic file (type jpg)
+<use decryption/decryption_0.jpg>
+Package pdftex.def Info: decryption/decryption_0.jpg  used on input line 206.
+(pdftex.def)             Requested size: 446.26582pt x 267.00728pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -690,25 +741,151 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[2
+[2 <./android studio/android studio_2.jpg>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 231.
+ (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./decryption/decryption_0.jpg>]
+Overfull \hbox (15.94809pt too wide) in paragraph at lines 244--244
+ []      \T1/cmtt/m/n/10.95 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />[] 
+ []
+
+
+Overfull \hbox (21.60646pt too wide) in paragraph at lines 244--244
+ []      \T1/cmtt/m/n/10.95 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />[] 
+ []
+
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 255.
+ (../../Programs/Assignment 5/app/src/main/AndroidManifest.xml
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 8.36993pt on input line 1.
+)
+<screenshots/presentation.png, id=149, 5769.555pt x 3099.58pt>
+File: screenshots/presentation.png Graphic file (type png)
+<use screenshots/presentation.png>
+Package pdftex.def Info: screenshots/presentation.png  used on input line 261.
+(pdftex.def)             Requested size: 446.26582pt x 239.742pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 269--272
+
+ []
+
+<screenshots/WhatsApp Image 2023-11-20 at 20.50.02.jpeg, id=185, 740.7675pt x 1606.0pt>
+File: screenshots/WhatsApp Image 2023-11-20 at 20.50.02.jpeg Graphic file (type jpg)
+<use screenshots/WhatsApp Image 2023-11-20 at 20.50.02.jpeg>
+Package pdftex.def Info: screenshots/WhatsApp Image 2023-11-20 at 20.50.02.jpeg  used on input line 277.
+(pdftex.def)             Requested size: 211.38832pt x 458.2784pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[5 <./screenshots/presentation.png>] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (../../Programs/Assignment 5/app/src/main/java/com/krishnaraj/filesealer/MainActivity.java
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[6 <./screenshots/WhatsApp Image 2023-11-20 at 20.50.02.jpeg>]) (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[7]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[8]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[9]
+<message digest/message digest_1.jpg, id=362, 553.06625pt x 358.33875pt>
+File: message digest/message digest_1.jpg Graphic file (type jpg)
+<use message digest/message digest_1.jpg>
+Package pdftex.def Info: message digest/message digest_1.jpg  used on input line 429.
+(pdftex.def)             Requested size: 399.29463pt x 258.70905pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[10
+
+ <./message digest/message digest_1.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 456--458
+[][]$\T1/cmtt/m/n/10.95 https : / / docs . oracle . com / javase / 8 / docs / technotes / guides / security / crypto /
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[11
 
 ] (./Assignment_5.aux)
 Package rerunfilecheck Info: File `Assignment_5.out' has not changed.
-(rerunfilecheck)             Checksum: 8C468B103806800B9D9F69B8F9F99BCE;587.
+(rerunfilecheck)             Checksum: 1370E57122D2DEF71EE5620207164D63;2603.
  ) 
 Here is how much of TeX's memory you used:
- 12887 strings out of 477985
- 195634 string characters out of 5840058
- 1853388 words of memory out of 5000000
- 32885 multiletter control sequences out of 15000+600000
- 543358 words of font info for 55 fonts, out of 8000000 for 9000
+ 13978 strings out of 477985
+ 210942 string characters out of 5840058
+ 2273388 words of memory out of 5000000
+ 33682 multiletter control sequences out of 15000+600000
+ 558493 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,12n,76p,389b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_5.pdf (4 pages, 47079 bytes).
+ 75i,13n,76p,661b,2232s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+Output written on Assignment_5.pdf (13 pages, 2946740 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 469 PDF objects out of 1000 (max. 8388607)
+ 428 compressed objects within 5 object streams
+ 242 named destinations out of 1000 (max. 500000)
+ 183 words of extra memory for PDF output out of 10000 (max. 10000000)
 
