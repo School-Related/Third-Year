@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  22 NOV 2023 22:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  26 NOV 2023 20:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -697,15 +697,15 @@ Package rerunfilecheck Info: File `Assignment_10.out' has not changed.
 (rerunfilecheck)             Checksum: 8C468B103806800B9D9F69B8F9F99BCE;587.
  ) 
 Here is how much of TeX's memory you used:
- 12886 strings out of 477985
- 195651 string characters out of 5840058
+ 12887 strings out of 477985
+ 195658 string characters out of 5840058
  1853388 words of memory out of 5000000
  32885 multiletter control sequences out of 15000+600000
- 542345 words of font info for 54 fonts, out of 8000000 for 9000
+ 543358 words of font info for 55 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  75i,12n,76p,391b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_10.pdf (4 pages, 46434 bytes).
+Output written on Assignment_10.pdf (4 pages, 47064 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream

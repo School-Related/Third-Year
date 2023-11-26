@@ -762,6 +762,8 @@ INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncri8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncri8t.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncri8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncri8r.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncri8t.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncri8r.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/ncntrsbk/pncr8t.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/ncntrsbk/pncr8r.tfm
 INPUT Assignment_8.aux
