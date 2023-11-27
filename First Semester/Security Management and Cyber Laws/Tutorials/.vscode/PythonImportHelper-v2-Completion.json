@@ -1,0 +1,29 @@
+[
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "hash_password",
+        "kind": 2,
+        "importPath": "save_pass_hash",
+        "description": "save_pass_hash",
+        "peekOfCode": "def hash_password(password):\n    # Hash the password using SHA-1\n    hashed_password = hashlib.sha1(password.encode()).hexdigest()\n    return hashed_password\n# List of common passwords (for educational purposes only)\ncommon_passwords = [\"password\", \"123456\", \"qwerty\", \"letmein\", \"admin\", \"1234\", \"welcome\", \n\"tigger\",\n\"sunshine\",\n\"chocolate\",\n\"password1\",",
+        "detail": "save_pass_hash",
+        "documentation": {}
+    },
+    {
+        "label": "common_passwords",
+        "kind": 5,
+        "importPath": "save_pass_hash",
+        "description": "save_pass_hash",
+        "peekOfCode": "common_passwords = [\"password\", \"123456\", \"qwerty\", \"letmein\", \"admin\", \"1234\", \"welcome\", \n\"tigger\",\n\"sunshine\",\n\"chocolate\",\n\"password1\",\n\"soccer\",\n\"anthony\",\n\"friends\",\n\"butterfly\",\n\"purple\",",
+        "detail": "save_pass_hash",
+        "documentation": {}
+    }
+]
