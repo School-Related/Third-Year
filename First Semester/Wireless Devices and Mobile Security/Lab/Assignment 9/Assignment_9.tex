@@ -16,12 +16,12 @@
 \usepackage{blindtext}
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    filecolor=magenta,      
-    urlcolor=cyan,
-    pdfpagemode=FullScreen,
-    }
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=blue,
+	pdfpagemode=FullScreen,
+}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -29,22 +29,22 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
+	backgroundcolor=\color{backcolour},
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\ttfamily\footnotesize,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbers=left,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2
 }
 
 \lstset{style=mystyle}
@@ -58,8 +58,6 @@
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{1pt}
 
-
-
 % Other Doc Editing
 % \parindent 0ex
 %\renewcommand{\baselinestretch}{1.5}
@@ -67,67 +65,60 @@
 \begin{document}
 
 \begin{titlepage}
-    \centering
+	\centering
 
-    %---------------------------NAMES-------------------------------
+	%---------------------------NAMES-------------------------------
 
-    \huge\textsc{
-        MIT World Peace University
-    }\\
+	\huge\textsc{
+		MIT World Peace University
+	}\\
 
-    \vspace{0.75\baselineskip} % space after Uni Name
+	\vspace{0.75\baselineskip} % space after Uni Name
 
-    \LARGE{
-        Wireless Devices and Mobile Security\\
-        Third Year B. Tech, Semester 5
-    }
+	\LARGE{
+		Wireless Devices and Mobile Security\\
+		Third Year B. Tech, Semester 5
+	}
 
-    \vfill % space after Sub Name
+	\vfill % space after Sub Name
 
-    %--------------------------TITLE-------------------------------
+	%--------------------------TITLE-------------------------------
 
-    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
-    \rule{\textwidth}{0.6pt}
-    \vspace{0.75\baselineskip} % Whitespace above the title
+	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+	\rule{\textwidth}{0.6pt}
+	\vspace{0.75\baselineskip} % Whitespace above the title
 
+	\huge{\textsc{
+			Installation and Configuration of Any Wifi Traffic Analyser Tool.
+		}} \\
 
+	\vspace{0.5\baselineskip} % Whitespace below the title
+	\rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
+	\rule{\textwidth}{1.6pt}
 
-    \huge{\textsc{
-            Installation and Configuration of Any Wifi Traffic Analyser Tool. 
-        }} \\
+	\vspace{1\baselineskip} % Whitespace after the title block
 
+	%--------------------------SUBTITLE --------------------------	
 
+	\LARGE\textsc{
+		Lab Assignment 9
+	} % Subtitle or further description
+	\vfill
 
-    \vspace{0.5\baselineskip} % Whitespace below the title
-    \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
-    \rule{\textwidth}{1.6pt}
+	%--------------------------AUTHOR-------------------------------
 
-    \vspace{1\baselineskip} % Whitespace after the title block
+	Prepared By \vspace{0.5\baselineskip} % Whitespace before the editors
 
-    %--------------------------SUBTITLE --------------------------	
+	\Large{
+		Krishnaraj Thadesar \\
+		Cyber Security and Forensics\\
+		Batch A1, PA 10
+	}
 
-    \LARGE\textsc{
-        Lab Assignment 9
-    } % Subtitle or further description
-    \vfill
-
-    %--------------------------AUTHOR-------------------------------
-
-    Prepared By
-    \vspace{0.5\baselineskip} % Whitespace before the editors
-
-    \Large{
-        Krishnaraj Thadesar \\
-        Cyber Security and Forensics\\
-        Batch A1, PA 10
-    }
-
-
-    \vspace{0.5\baselineskip} % Whitespace below the editor list
-    \today
+	\vspace{0.5\baselineskip} % Whitespace below the editor list
+	\today
 
 \end{titlepage}
-
 
 \tableofcontents
 \thispagestyle{empty}
@@ -136,17 +127,126 @@
 \setcounter{page}{1}
 
 \section{Aim}
-Install, configure and demonstrate any one Wi-Fi traffic analyzer using sniffing tools such as
-Wireshark, AirCrack, AirSnort, etc.
+Install, configure and demonstrate any one Wi-Fi traffic analyzer using
+sniffing tools such as Wireshark, AirCrack, AirSnort, etc.
 
 \section{Objectives}
 \begin{enumerate}
-    \item To install Wireshark on the system.
-    \item To capture packets using Wireshark.
-    \item To analyse the captured packets.
+	\item To install Wireshark on the system.
+	\item To capture packets using Wireshark.
+	\item To analyse the captured packets.
 \end{enumerate}
 
 \section{Theory}
+
+\subsection{Wireshark}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.95\textwidth]{wireshark/wireshark_4.jpg}
+	\caption{Wireshark GUI}
+\end{figure}
+
+\subsubsection{Installation}
+\begin{itemize}
+	\item \textbf{Procedure:} Wireshark can be installed on various operating systems, including Windows, macOS, and Linux. Visit the official Wireshark website (\url{https://www.wireshark.org/}) and follow the installation instructions for your specific platform.
+	\item \textbf{Dependencies:} Wireshark may require the installation of WinPcap (Windows), libpcap (Linux), or npcap (Windows) for packet capture.
+\end{itemize}
+
+\subsubsection{Working}
+\begin{itemize}
+	\item Wireshark captures and analyzes packets on a network in real-time.
+	\item Users can apply various filters to focus on specific types of traffic.
+	\item The captured data can be displayed in different formats, facilitating detailed
+	      protocol analysis.
+\end{itemize}
+
+\subsubsection{Pros}
+\begin{itemize}
+	\item User-friendly interface with powerful features.
+	\item Extensive protocol support for in-depth analysis.
+	\item Active community and regular updates.
+\end{itemize}
+
+\subsubsection{Cons}
+\begin{itemize}
+	\item May consume significant system resources during packet capture.
+	\item Beginners might find the wealth of features overwhelming.
+	\item Limited to the capabilities of the network interface card (NIC).
+\end{itemize}
+
+\subsection{AirCrack}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.95\textwidth]{aircrackng/aircrackng_3.jpg}
+	\caption{Aircrack}
+\end{figure}
+
+\subsubsection{Installation}
+\begin{itemize}
+	\item \textbf{Procedure:} AirCrack-ng, a suite of wireless network security tools, can be installed on various platforms. Detailed installation instructions are available on the official website (\url{https://www.aircrack-ng.org/}).
+	\item \textbf{Dependencies:} AirCrack-ng relies on libpcap and other libraries for packet capture and analysis.
+\end{itemize}
+
+\subsubsection{Working}
+\begin{itemize}
+	\item AirCrack-ng is primarily used for assessing the security of Wi-Fi networks.
+	\item It includes tools for capturing, analyzing, and cracking WEP and WPA/WPA2-PSK
+	      keys.
+	\item Supports various attacks like packet injection and de-authentication to test
+	      network vulnerabilities.
+\end{itemize}
+
+\subsubsection{Pros}
+\begin{itemize}
+	\item Comprehensive suite for wireless network security.
+	\item Active development community and frequent updates.
+	\item Capable of testing the security of WEP and WPA/WPA2-PSK.
+\end{itemize}
+
+\subsubsection{Cons}
+\begin{itemize}
+	\item Requires a good understanding of wireless networks and security concepts.
+	\item Use in unauthorized networks may violate ethical and legal standards.
+	\item Effectiveness is dependent on the strength of encryption used.
+\end{itemize}
+
+\subsection{AirSnort}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.95\textwidth]{airsnort/airsnort_6.jpg}
+	\caption{Airsnort}
+\end{figure}
+
+\subsubsection{Installation}
+\begin{itemize}
+	\item \textbf{Procedure:} AirSnort, a wireless LAN (WLAN) tool, is no longer actively maintained. Installation may vary based on the available repositories or archived versions.
+	\item \textbf{Dependencies:} Originally designed for Linux, it relies on libpcap and other libraries for packet capture.
+\end{itemize}
+
+\subsubsection{Working}
+\begin{itemize}
+	\item AirSnort was designed to crack WEP encryption keys by capturing data packets
+	      and analyzing them.
+	\item It focused on exploiting weaknesses in the WEP algorithm to recover network
+	      passwords.
+	\item Due to its outdated nature, it may not be effective against modern, more secure
+	      encryption standards.
+\end{itemize}
+
+\subsubsection{Pros}
+\begin{itemize}
+	\item Historically used for educational purposes to highlight WEP vulnerabilities.
+	\item Provided insights into the weaknesses of early wireless encryption
+\end{itemize}
+
+\subsubsection{Cons}
+\begin{itemize}
+	\item Outdated and no longer actively maintained.
+	\item Limited effectiveness against modern and more secure Wi-Fi encryption.
+	\item Not recommended for practical use in contemporary security assessments.
+\end{itemize}
 
 \section{Platform}
 \textbf{Operating System}: Arch Linux x86-64 \\
@@ -155,47 +255,75 @@ Wireshark, AirCrack, AirSnort, etc.
 
 \section{Working Screenshots}
 
-
 \section{Conclusion}
-Thus, the installation and configuration of Any Wifi Traffic Analyser Tool was successfully done. We installed Wireshark, captured packets and analysed them. 
+Thus, the installation and configuration of Any Wifi Traffic Analyser Tool was
+successfully done. We installed Wireshark, captured packets and analysed them.
+
+\section{FAQ}
+
+\begin{enumerate}
+	\item \textit{List the different open source tool to capture packet. Also, write its
+		      features.}\\
+
+	      \textbf{Packet Capture Tools:}
+	      \begin{itemize}
+		      \item \textit{Wireshark:}
+		            \begin{itemize}
+			            \item \textbf{Features:} Wireshark is a widely-used open-source packet analyzer. It allows real-time packet capture and display.
+			            \item \textbf{Additional Features:} Protocol analysis, deep inspection of hundreds of protocols, live capture, and offline analysis.
+			            \item \textbf{Reference:} \cite{wireshark}
+		            \end{itemize}
+
+		      \item \textit{Tshark:}
+		            \begin{itemize}
+			            \item \textbf{Features:} Tshark is the command-line version of Wireshark. It offers similar features for packet capture and analysis.
+			            \item \textbf{Additional Features:} Scriptable using Lua, supports various capture file formats.
+			            \item \textbf{Reference:} \cite{tshark}
+		            \end{itemize}
+
+		      \item \textit{Tcpdump:}
+		            \begin{itemize}
+			            \item \textbf{Features:} Tcpdump is a command-line packet analyzer for Unix-like systems.
+			            \item \textbf{Additional Features:} Filters for specific protocols, customizable output formats.
+			            \item \textbf{Reference:} \cite{tcpdump}
+		            \end{itemize}
+	      \end{itemize}
+
+	\item \textit{Which mode NIC uses for Ethereal/packet sniffing?}\\
+
+	      \textbf{NIC Modes for Ethereal/Packet Sniffing:} NIC primarily uses the \textit{Promiscuous Mode} for Ethereal/packet sniffing. In this mode, the NIC captures all traffic on the network, regardless of the destination address.
+	\item \textit{Which wireshark filter can be used to monitor outgoing packets from a specific
+		      system on the network?}\\
+
+	      \textbf{Wireshark Filter for Monitoring Outgoing Packets:} To monitor outgoing packets from a specific system on the network using Wireshark, you can use the following filter:
+	      \begin{verbatim}
+            ip.src == <source_IP_address>
+        \end{verbatim}
+	      Replace \texttt{<source\_IP\_address>} with the actual IP address of the system
+	      you want to monitor.
+\end{enumerate}
+
 \clearpage
 \begin{thebibliography}{99}
-    \bibitem{ciscorouters}
-    Cisco Routers. \\
-    Website: \url{https://www.cisco.com/c/en/us/products/routers/index.html}
-  
-    \bibitem{tplinkrouters}
-    TP-Link Routers. \\
-    Website: \url{https://www.tp-link.com/us/home-networking/wifi-router/}
-  
-    \bibitem{dlinkrouters}
-    D-Link Routers. \\
-    Website: \url{https://www.dlink.com/en/consumer/routers}
-  
-    \bibitem{netgearrouters}
-    Netgear Routers. \\
-    Website: \url{https://www.netgear.com/home/products/networking/wifi-routers/}
-  
-    \bibitem{asusrouters}
-    ASUS Routers. \\
-    Website: \url{https://www.asus.com/Networking-IoT-Servers/WiFi-Routers-Products/}
-  
-    \bibitem{linksysrouters}
-    Linksys Routers. \\
-    Website: \url{https://www.linksys.com/us/routers/}
-  
-    \bibitem{mikrotikrouters}
-    MikroTik Routers. \\
-    Website: \url{https://mikrotik.com/products/group/routers}
-  
-    \bibitem{ubiquitirouters}
-    Ubiquiti Routers. \\
-    Website: \url{https://www.ui.com/products/#routing}
-  
-    \bibitem{huaweirouters}
-    Huawei Routers. \\
-    Website: \url{https://consumer.huawei.com/en/routers/}
-  \end{thebibliography}
-  
+	\bibitem{wireshark}
+	Wireshark. \\
+	Website: \url{https://www.wireshark.org/}
+
+	\bibitem{tshark}
+	Tshark. \\
+	Website: \url{https://www.wireshark.org/docs/man-pages/tshark.html}
+
+	\bibitem{tcpdump}
+	Tcpdump. \\
+	Website: \url{https://www.tcpdump.org/}
+
+	\bibitem{aircrack}
+	AirCrack-ng. \\
+	Website: \url{https://www.aircrack-ng.org/}
+
+	\bibitem{airsnort}
+	AirSnort. \\
+	Website: \url{https://sourceforge.net/projects/airsnort/}
+\end{thebibliography}
 
 \end{document}
