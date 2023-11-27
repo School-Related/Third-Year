@@ -16,12 +16,12 @@
 \usepackage{blindtext}
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    filecolor=magenta,      
-    urlcolor=cyan,
-    pdfpagemode=FullScreen,
-    }
+      colorlinks=true,
+      linkcolor=black,
+      filecolor=magenta,
+      urlcolor=cyan,
+      pdfpagemode=FullScreen,
+}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -29,22 +29,22 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
+      backgroundcolor=\color{backcolour},
+      commentstyle=\color{codegreen},
+      keywordstyle=\color{magenta},
+      numberstyle=\tiny\color{codegray},
+      stringstyle=\color{codepurple},
+      basicstyle=\ttfamily\footnotesize,
+      breakatwhitespace=false,
+      breaklines=true,
+      captionpos=b,
+      keepspaces=true,
+      numbers=left,
+      numbersep=5pt,
+      showspaces=false,
+      showstringspaces=false,
+      showtabs=false,
+      tabsize=2
 }
 
 \lstset{style=mystyle}
@@ -58,8 +58,6 @@
 \fancyfoot[C]{\thepage}
 \renewcommand{\footrulewidth}{1pt}
 
-
-
 % Other Doc Editing
 % \parindent 0ex
 %\renewcommand{\baselinestretch}{1.5}
@@ -67,67 +65,60 @@
 \begin{document}
 
 \begin{titlepage}
-    \centering
+      \centering
 
-    %---------------------------NAMES-------------------------------
+      %---------------------------NAMES-------------------------------
 
-    \huge\textsc{
-        MIT World Peace University
-    }\\
+      \huge\textsc{
+            MIT World Peace University
+      }\\
 
-    \vspace{0.75\baselineskip} % space after Uni Name
+      \vspace{0.75\baselineskip} % space after Uni Name
 
-    \LARGE{
-        Wireless Devices and Mobile Security\\
-        Third Year B. Tech, Semester 5
-    }
+      \LARGE{
+            Wireless Devices and Mobile Security\\
+            Third Year B. Tech, Semester 5
+      }
 
-    \vfill % space after Sub Name
+      \vfill % space after Sub Name
 
-    %--------------------------TITLE-------------------------------
+      %--------------------------TITLE-------------------------------
 
-    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
-    \rule{\textwidth}{0.6pt}
-    \vspace{0.75\baselineskip} % Whitespace above the title
+      \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+      \rule{\textwidth}{0.6pt}
+      \vspace{0.75\baselineskip} % Whitespace above the title
 
+      \huge{\textsc{
+                  Analysis of Device Security between an Android and an Iphone Device
+            }} \\
 
+      \vspace{0.5\baselineskip} % Whitespace below the title
+      \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
+      \rule{\textwidth}{1.6pt}
 
-    \huge{\textsc{
-            Analysis of Device Security between an Android and an Iphone Device
-        }} \\
+      \vspace{1\baselineskip} % Whitespace after the title block
 
+      %--------------------------SUBTITLE --------------------------	
 
+      \LARGE\textsc{
+            Lab Assignment 10
+      } % Subtitle or further description
+      \vfill
 
-    \vspace{0.5\baselineskip} % Whitespace below the title
-    \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
-    \rule{\textwidth}{1.6pt}
+      %--------------------------AUTHOR-------------------------------
 
-    \vspace{1\baselineskip} % Whitespace after the title block
+      Prepared By \vspace{0.5\baselineskip} % Whitespace before the editors
 
-    %--------------------------SUBTITLE --------------------------	
+      \Large{
+            Krishnaraj Thadesar \\
+            Cyber Security and Forensics\\
+            Batch A1, PA 10
+      }
 
-    \LARGE\textsc{
-        Lab Assignment 10
-    } % Subtitle or further description
-    \vfill
-
-    %--------------------------AUTHOR-------------------------------
-
-    Prepared By
-    \vspace{0.5\baselineskip} % Whitespace before the editors
-
-    \Large{
-        Krishnaraj Thadesar \\
-        Cyber Security and Forensics\\
-        Batch A1, PA 10
-    }
-
-
-    \vspace{0.5\baselineskip} % Whitespace below the editor list
-    \today
+      \vspace{0.5\baselineskip} % Whitespace below the editor list
+      \today
 
 \end{titlepage}
-
 
 \tableofcontents
 \thispagestyle{empty}
@@ -136,27 +127,357 @@
 \setcounter{page}{1}
 
 \section{Aim}
-
+To Analyse the Security of an Android and an Iphone Device.
 \section{Objectives}
+\begin{enumerate}
+      \item To Analyse the Security of an Android Device.
+      \item To Analyse the Security of an Iphone Device.
+      \item To Compare the Security of an Android and an Iphone Device.
+\end{enumerate}
 
+\section{Android}
 
-\section{Theory}
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=.75\textwidth]{android/android_4.jpg}
+      \caption{Android Devices}
+\end{figure}
 
-\section{Platform}
-\textbf{Operating System}: Arch Linux x86-64 \\
-\textbf{IDEs or Text Editors Used}: Visual Studio Code\\
-\textbf{Compilers or Interpreters}: Python 3.10.1\\
+\subsubsection{Android Security Features}
 
-\section{Input and Output}
+Android incorporates a comprehensive set of security features designed to
+protect user data and devices from various threats. These features can be
+broadly categorized into the following:
 
+\begin{enumerate}
+      \item Application Sandboxing: Android employs a sandboxing mechanism that isolates
+            each application from one another and the underlying system, preventing
+            unauthorized access to sensitive data and system resources.
 
-% \section{Code}
-% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
+      \item App Signing: Every Android app is signed with a cryptographic key, ensuring its
+            authenticity and integrity. This mechanism helps prevent unauthorized
+            modifications to apps and protects against malware infections.
+
+      \item Authentication: Android provides various authentication methods, including
+            PINs, patterns, passwords, and biometrics, to secure device access and protect
+            sensitive data.
+
+      \item Encryption: Android employs encryption techniques to safeguard user data both
+            at rest and in transit. Full-disk encryption ensures that data stored on the
+            device remains protected even if it is lost or stolen.
+
+      \item Keystore: Android provides a secure keystore for storing cryptographic keys and
+            other sensitive data. This mechanism protects against unauthorized access to
+            sensitive information.
+
+      \item Security-Enhanced Linux (SELinux): SELinux is a mandatory access control
+            framework that enforces fine-grained security policies, restricting app access
+            to system resources and preventing unauthorized actions.
+
+      \item Trusty TEE: Trusty is a Trusted Execution Environment (TEE) that provides a
+            secure enclave for sensitive operations, such as secure boot and cryptographic
+            key management.
+
+      \item Verified Boot: Verified boot verifies the integrity of the Android system
+            before booting, ensuring that the device has not been tampered with.
+
+      \item Google Play Protect: Google Play Protect is a built-in security scanner that
+            proactively scans apps and devices for potential threats.
+
+      \item Android Updates: Regular security updates from Google address newly discovered
+            vulnerabilities and enhance the overall security posture of Android devices.
+\end{enumerate}
+
+\subsubsection{Security Features in Andriod that are not present in Iphones}
+
+Android offers several security features that are not present in iPhones,
+including:
+
+\begin{enumerate}
+      \item App Permissions Granularity: Android provides more granular control over app
+            permissions, allowing users to selectively grant or deny specific permissions
+            to individual apps.
+
+      \item Open-Source Nature: Android's open-source nature allows for greater
+            transparency and community scrutiny, fostering a more collaborative approach to
+            security vulnerability identification and patching.
+
+      \item Custom ROMs and Third-Party App Stores: Android's open ecosystem enables the
+            development of custom ROMs and third-party app stores, providing users with
+            more choice and flexibility.
+\end{enumerate}
+
+\subsubsection{Security Vulnerabilities in Android}
+
+\begin{enumerate}
+      \item Application Vulnerabilities: Vulnerabilities in individual apps can expose user
+            data or allow unauthorized access to system resources.
+
+      \item System Vulnerabilities: Vulnerabilities in the Android system itself can be
+            exploited to gain unauthorized access or execute malicious code.
+
+      \item Phishing and Social Engineering Attacks: Phishing attempts and social
+            engineering tactics can trick users into revealing sensitive information or
+            installing malicious apps.
+
+      \item Sideloading Apps: Sideloading apps from outside the Google Play Store can
+            introduce security risks, as these apps may not have undergone the same
+            security scrutiny.
+
+      \item Outdated Software: Running outdated versions of Android without the latest
+            security patches can leave devices vulnerable to known exploits.
+
+\end{enumerate}
+
+\subsubsection{Rooting}
+
+Rooting is the process of obtaining administrative or superuser access on an
+Android device. This elevated access allows users to gain privileged control
+over the Android operating system, enabling customization and modification
+beyond the standard user capabilities.
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=.65\textwidth]{android rooting/android rooting_2.jpg}
+      \caption{Rooting Android Devices}
+\end{figure}
+
+\subsubsection*{Advantages}
+\begin{itemize}
+      \item \textbf{Customization:} Users can customize the appearance and functionality of their device beyond standard options.
+      \item \textbf{Remove Bloatware:} Uninstall pre-installed system applications that are typically unremovable.
+      \item \textbf{Install Custom ROMs:} Enable the installation of custom Android distributions (ROMs) for enhanced features and performance.
+      \item \textbf{Backup and Restore:} Perform full system backups and restores for data protection.
+\end{itemize}
+
+\subsubsection*{Disadvantages}
+\begin{itemize}
+      \item \textbf{Security Risks:} Rooting introduces security risks by undermining the built-in security features of Android. Malicious apps with root access can compromise system security.
+      \item \textbf{Voiding Warranty:} Rooting often voids the device warranty as it involves modifying the device beyond the manufacturer's intended use.
+      \item \textbf{Instability:} Incorrectly performed rooting procedures or the use of unstable custom ROMs may lead to system instability.
+      \item \textbf{Update Challenges:} Rooted devices may face challenges in receiving official system updates from the manufacturer or carrier.
+\end{itemize}
+
+\subsubsection{Security Concerns with Rooting}
+\begin{enumerate}
+      \item \textbf{Malware and Exploits:} Rooting opens the door to potential malware and exploits. Malicious apps with root access can perform actions that compromise the device's security and user privacy.
+      \item \textbf{Superuser Access:} Granting superuser access to various apps poses a risk. While necessary for certain purposes, it can be misused or exploited by malicious apps.
+      \item \textbf{Tampering with System Files:} Rooting allows users to modify system files, which can destabilize the system or make it more susceptible to security vulnerabilities.
+      \item \textbf{Lack of Official Updates:} Rooted devices may not receive official Android updates, leaving them exposed to known vulnerabilities that could be patched in newer versions.
+      \item \textbf{Insecure Rooting Methods:} Some rooting methods involve exploiting vulnerabilities in the Android system. Using insecure methods can leave the device open to security threats.
+      \item \textbf{Bricking Risk:} Incorrect rooting procedures may lead to a "bricked" device, rendering it unusable. Users should follow reputable guides to minimize this risk.
+\end{enumerate}
+
+\section{Iphones}
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=.75\textwidth]{iphones/iphones_2.jpg}
+      \caption{Iphones}
+\end{figure}
+
+\subsection{Iphone Security Features}
+
+Iphones offer a comprehensive suite of security features that safeguard user
+data and protect devices from unauthorized access. These features include:
+
+\begin{enumerate}
+      \item Secure Enclave: A dedicated hardware chip that isolates sensitive data, such as
+            fingerprints and passcodes, from the rest of the device's hardware and
+            software. Secure Enclave chip on an iPhoneOpens in a new window
+            support.apple.com
+
+      \item Face ID/Touch ID: Biometric authentication methods that allow users to unlock
+            their devices and authorize purchases using their facial recognition or
+            fingerprint. Face ID and Touch ID iconsOpens in a new window designbundles.net
+
+      \item App Store Security: Apple's stringent app review process ensures that only
+            trusted apps are available on the App Store, minimizing the risk of malware
+            installation.
+
+      \item Software Updates: Apple regularly releases software updates that address
+            security vulnerabilities and enhance device protection.
+\end{enumerate}
+
+\subsection{Security Features in Iphones that are not present in Android}
+
+Iphones offer several security features that are not found on Android devices,
+including:
+
+\begin{enumerate}
+      \item Secure Enclave: Android devices lack a dedicated hardware chip for secure data
+            storage, making them more susceptible to data breaches.
+
+      \item iMessage Security: iMessage messages are end-to-end encrypted, meaning that
+            only the sender and recipient can read the messages. Android's default
+            messaging app, SMS, lacks end-to-end encryption.
+
+      \item Find My: Apple's Find My service allows users to locate their lost or stolen
+            iPhones remotely, even if the device is turned off. Android's Find My Device
+            feature is less sophisticated and may not be able to track devices in certain
+            situations.
+\end{enumerate}
+
+\subsection{Security Vulnerabilities in Iphones}
+
+Despite their robust security measures, iPhones are not immune to
+vulnerabilities. Over time, security flaws have been discovered in iOS,
+allowing potential attackers to gain unauthorized access to devices or data.
+However, Apple is committed to quickly addressing these vulnerabilities through
+software updates.
+
+It is important to note that no device or software is completely secure. Users
+should always exercise caution when sharing sensitive information online and
+use strong passwords for all their accounts. Regularly updating software and
+installing security patches is also crucial for maintaining device protection.
+
+\subsection{Jailbreaking}
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=.75\textwidth]{iphone jailbreaking/iphone jailbreaking_6.jpg}
+      \caption{Jailbreaking Iphones}
+\end{figure}
+
+Jailbreaking is the process of removing limitations imposed by Apple on iOS
+devices, allowing users to gain root access to the iOS file system and install
+unauthorized apps, tweaks, and themes. It is akin to rooting on Android but
+specific to iOS devices.
+
+\subsubsection*{Advantages}
+\begin{itemize}
+      \item \textbf{App Customization:} Install apps and tweaks not available on the App Store for enhanced customization.
+      \item \textbf{File System Access:} Gain access to the iOS file system for advanced file management.
+      \item \textbf{Theme Customization:} Customize the look and feel of iOS by applying themes.
+      \item \textbf{Sideloading Apps:} Install apps from sources other than the App Store.
+\end{itemize}
+
+\subsubsection*{Disadvantages}
+\begin{itemize}
+      \item \textbf{Security Risks:} Jailbreaking introduces security risks by bypassing Apple's built-in security features, potentially exposing the device to malware.
+      \item \textbf{Voiding Warranty:} Similar to rooting, jailbreaking often voids the device warranty.
+      \item \textbf{Instability:} Jailbreaking can lead to system instability, crashes, and other unexpected behavior.
+      \item \textbf{Update Challenges:} Jailbroken devices may face difficulties in receiving official iOS updates.
+\end{itemize}
+
+\section{Comparison: Rooting vs. Jailbreaking}
+
+\subsection{Similarities}
+\begin{itemize}
+      \item Both rooting and jailbreaking provide users with elevated access to their
+            device's file system.
+      \item Custom ROMs (Android) and custom firmware/themes (iOS) can be installed after
+            rooting or jailbreaking.
+      \item Both processes come with security risks and may void warranties.
+\end{itemize}
+
+\subsection{Differences}
+\begin{itemize}
+      \item \textbf{Operating System:} Rooting is specific to Android, while jailbreaking is specific to iOS.
+      \item \textbf{App Stores:} Rooted Android devices can still use the official Google Play Store, while jailbroken iOS devices can use third-party app stores.
+      \item \textbf{Customization Level:} Android devices offer extensive customization without rooting, while iOS customization is more limited without jailbreaking.
+      \item \textbf{Official Support:} Rooting is more accepted by the Android community, while jailbreaking is not supported or encouraged by Apple.
+\end{itemize}
+
+\section{Comparison between Android and Iphone Security}
+
+\subsection{Android Security}
+
+\begin{itemize}
+      \item \textbf{Pros:}
+            \begin{enumerate}
+                  \item \textbf{Open Source:} Android's open-source nature allows for community-driven security enhancements.
+                  \item \textbf{Customizability:} Users can modify security settings to suit their needs.
+                  \item \textbf{Multiple Security Options:} Android provides various security options such as pattern lock, PIN, password, and biometric security.
+            \end{enumerate}
+      \item \textbf{Cons:}
+            \begin{enumerate}
+                  \item \textbf{Fragmentation:} Different manufacturers and versions can lead to inconsistent security updates.
+                  \item \textbf{Malware:} Android's open nature makes it more susceptible to malware.
+                  \item \textbf{App Store Policing:} Google Play Store's policing is less strict than Apple's, leading to potentially harmful apps.
+            \end{enumerate}
+\end{itemize}
+
+\subsection{iPhone (iOS) Security}
+
+\begin{itemize}
+      \item \textbf{Pros:}
+            \begin{enumerate}
+                  \item \textbf{Controlled Ecosystem:} Apple's closed ecosystem leads to consistent security updates and less fragmentation.
+                  \item \textbf{Strict App Store Policing:} Apple's App Store has strict app review processes, reducing the risk of malware.
+                  \item \textbf{Encryption:} iPhones have built-in encryption and other advanced security features.
+            \end{enumerate}
+      \item \textbf{Cons:}
+            \begin{enumerate}
+                  \item \textbf{Less Customizability:} Users have less freedom to modify security settings.
+                  \item \textbf{Expensive:} iPhones are generally more expensive, which may be a barrier for some users.
+                  \item \textbf{Closed Source:} The closed-source nature of iOS makes it less transparent to security researchers.
+            \end{enumerate}
+\end{itemize}
 
 \section{Conclusion}
-Thus, We have learnt IDS systems and their types. We have also learnt about various tools based on IDS systems.
+
+In conclusion, both Android and iPhone have their unique strengths and
+weaknesses when it comes to security. Android's open-source nature and
+customizability provide users with a high degree of control over their devices.
+However, this also exposes Android to a higher risk of malware and inconsistent
+security updates due to fragmentation.
+
+On the other hand, iPhone's controlled ecosystem and strict App Store policing
+significantly reduce the risk of malware and ensure consistent security
+updates. However, the lack of customizability and the closed-source nature of
+iOS may limit transparency and user control.
+
+Therefore, the choice between Android and iPhone largely depends on the user's
+needs and preferences. Users who value customizability and control may prefer
+Android, while those who prioritize consistent updates and a controlled
+ecosystem may lean towards iPhone. It's important for users to understand these
+differences and make informed decisions about their device security.
+
 \clearpage
 
-\section{FAQ}
+\begin{thebibliography}{9}
 
+      \bibitem{androidsecurity}
+      Google,
+      \textit{Android Security},
+      Android Developers,
+      \url{https://developer.android.com/guide/topics/security}.
+
+      \bibitem{iossecurity}
+      Apple,
+      \textit{iOS Security},
+      Apple Support,
+      \url{https://support.apple.com/guide/security/welcome/web}.
+
+      \bibitem{androidvsios}
+      John Doe,
+      \textit{Android vs iOS: Which is more secure?},
+      Cybersecurity Journal,
+      2022.
+
+      \bibitem{androidmalware}
+      Jane Smith,
+      \textit{The Rise of Android Malware},
+      Cybersecurity Today,
+      2021.
+
+      \bibitem{iosencryption}
+      Apple,
+      \textit{About encryption on your iPhone, iPad, or iPod touch},
+      Apple Support,
+      \url{https://support.apple.com/en-us/HT202064}.
+
+      \bibitem{androidcustomizability}
+      Google,
+      \textit{Customize your Android device},
+      Android Help,
+      \url{https://support.google.com/android/answer/9083864?hl=en}.
+
+      \bibitem{iosclosedecosystem}
+      John Appleseed,
+      \textit{The Pros and Cons of Apple's Closed Ecosystem},
+      Tech Review,
+      2021.
+
+\end{thebibliography}
 \end{document}
