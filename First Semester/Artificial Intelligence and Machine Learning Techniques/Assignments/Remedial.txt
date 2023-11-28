@@ -1,0 +1,82 @@
+1. How does backpropagation algorithm work?
+2. What is the difference between supervised learning and unsupervised learning?
+3. How does K- Means performing clustering?
+4. What is SVM? How does SVM Work?
+5. What is Decision Tree Algorithm. List down some popular algorithms used for deriving
+Decision Trees and their attribute selection measures
+
+
+Certainly, let's expand on each topic:
+
+### 1. Backpropagation Algorithm:
+
+Backpropagation is a crucial algorithm for training artificial neural networks (ANNs).
+
+1. **Forward Pass:**
+   - In the forward pass, input data is propagated through the network layer by layer.
+   - Neurons apply activation functions to weighted inputs, producing output activations.
+
+2. **Calculate Error:**
+   - The difference between the predicted output and the actual target is computed using a loss function.
+   - Common loss functions include Mean Squared Error (MSE) for regression and Cross-Entropy for classification.
+
+3. **Backward Pass:**
+   - During the backward pass, error gradients are calculated with respect to the network's weights.
+   - These gradients represent how much each weight contributed to the error.
+
+4. **Gradient Descent:**
+   - Utilizing the gradients, the weights are updated through an iterative optimization process, often using gradient descent.
+   - Learning rates control the step size in the weight update process.
+
+References: Rumelhart, D. E., Hinton, G. E., & Williams, R. J. (1986). Learning representations by back-propagating errors.
+
+### 2. Supervised Learning vs. Unsupervised Learning:
+
+**Supervised Learning:**
+- In supervised learning, the algorithm learns from a labeled dataset, where each training example has both input features and corresponding output labels.
+- The model generalizes patterns from the training data to make predictions on new, unseen data.
+
+**Unsupervised Learning:**
+- Unsupervised learning deals with unlabeled data.
+- Clustering algorithms, such as K-Means, group similar data points, while dimensionality reduction techniques, like PCA, extract underlying structures.
+
+### 3. K-Means Clustering:
+
+K-Means is a widely used unsupervised clustering algorithm.
+
+1. **Initialization:**
+   - The algorithm starts by randomly selecting k initial centroids, representing cluster centers.
+
+2. **Assignment:**
+   - Each data point is assigned to the nearest centroid based on a distance metric, often Euclidean distance.
+
+3. **Update Centroids:**
+   - Centroids are recalculated as the mean of all data points assigned to a particular cluster.
+
+4. **Repeat:**
+   - The assignment and centroid update steps are repeated iteratively until convergence.
+
+Reference: MacQueen, J. B. (1967). Some methods for classification and analysis of multivariate observations.
+
+### 4. Support Vector Machine (SVM):
+
+SVM is a powerful supervised learning algorithm for classification and regression.
+
+- **Definition:** SVM constructs a hyperplane to separate data into classes, maximizing the margin between them.
+- **Kernel Trick:** SVM can map data into higher-dimensional spaces, enabling better separation when a linear boundary is insufficient.
+
+Reference: Cortes, C., & Vapnik, V. (1995). Support-vector networks.
+
+### 5. Decision Tree Algorithm:
+
+Decision trees are versatile and interpretable models used in supervised learning.
+
+- **Definition:** A decision tree is a tree-like structure where each internal node represents a decision based on an attribute, each branch represents an outcome of the decision, and each leaf node represents a class label or regression value.
+- **Popular Algorithms:**
+  1. **CART (Classification and Regression Trees):** Builds binary trees and is commonly used for classification and regression.
+  2. **ID3 (Iterative Dichotomiser 3):** Uses entropy and information gain for attribute selection in tree building.
+  3. **C4.5:** An improvement of ID3, using gain ratio for attribute selection.
+
+References: 
+- Breiman, L., Friedman, J. H., Olshen, R. A., & Stone, C. J. (1984). Classification and regression trees.
+- Quinlan, J. R. (1986). Induction of decision trees.
