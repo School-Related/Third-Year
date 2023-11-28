@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  27 NOV 2023 23:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.9.21)  28 NOV 2023 22:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -758,9 +758,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[4] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
+[4]
+<zip pass.png, id=360, 1327.96124pt x 970.62625pt>
+File: zip pass.png Graphic file (type png)
+<use zip pass.png>
+Package pdftex.def Info: zip pass.png  used on input line 414.
+(pdftex.def)             Requested size: 446.26582pt x 326.17262pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -769,7 +773,66 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
 [5]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 415.
+<zip cracked.png, id=379, 1284.8pt x 565.11125pt>
+File: zip cracked.png Graphic file (type png)
+<use zip cracked.png>
+Package pdftex.def Info: zip cracked.png  used on input line 420.
+(pdftex.def)             Requested size: 446.26582pt x 196.28288pt.
+<zip_with_new.png, id=380, 1173.38374pt x 700.6175pt>
+File: zip_with_new.png Graphic file (type png)
+<use zip_with_new.png>
+Package pdftex.def Info: zip_with_new.png  used on input line 426.
+(pdftex.def)             Requested size: 446.26582pt x 266.46191pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[6 <./zip pass.png> <./zip cracked.png>]
+<new user.png, id=390, 853.1875pt x 270.00874pt>
+File: new user.png Graphic file (type png)
+<use new user.png>
+Package pdftex.def Info: new user.png  used on input line 432.
+(pdftex.def)             Requested size: 446.26582pt x 141.23346pt.
+<shadow.png, id=391, 866.23625pt x 271.0125pt>
+File: shadow.png Graphic file (type png)
+<use shadow.png>
+Package pdftex.def Info: shadow.png  used on input line 438.
+(pdftex.def)             Requested size: 446.26582pt x 139.62054pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[7 <./zip_with_new.png> <./new user.png>]
+<john shadow.png, id=400, 1265.72874pt x 665.48625pt>
+File: john shadow.png Graphic file (type png)
+<use john shadow.png>
+Package pdftex.def Info: john shadow.png  used on input line 444.
+(pdftex.def)             Requested size: 446.26582pt x 234.62962pt.
+<md5hashcrack.png, id=401, 1284.8pt x 565.11125pt>
+File: md5hashcrack.png Graphic file (type png)
+<use md5hashcrack.png>
+Package pdftex.def Info: md5hashcrack.png  used on input line 450.
+(pdftex.def)             Requested size: 446.26582pt x 196.28288pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[8 <./shadow.png> <./john shadow.png>] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 456.
  (./save_pass_hash.py
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 8.36993pt on input line 1.
@@ -781,7 +844,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[6]
+[9 <./md5hashcrack.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -789,8 +852,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[7])
-Underfull \hbox (badness 10000) in paragraph at lines 418--421
+[10])
+Underfull \hbox (badness 10000) in paragraph at lines 459--462
 
  []
 
@@ -801,7 +864,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[8]
+[11]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -809,25 +872,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[9
+[12
 
 ] (./tool_analysis.aux)
 Package rerunfilecheck Info: File `tool_analysis.out' has not changed.
 (rerunfilecheck)             Checksum: 0204FC6992184058D99E4AC7EB7AE894;5938.
  ) 
 Here is how much of TeX's memory you used:
- 13753 strings out of 477985
- 206310 string characters out of 5840058
- 2101388 words of memory out of 5000000
- 33459 multiletter control sequences out of 15000+600000
+ 13816 strings out of 477985
+ 207200 string characters out of 5840058
+ 2103388 words of memory out of 5000000
+ 33504 multiletter control sequences out of 15000+600000
  558493 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,13n,76p,554b,2225s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,76p,600b,2245s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on tool_analysis.pdf (12 pages, 144180 bytes).
+Output written on tool_analysis.pdf (15 pages, 4879498 bytes).
 PDF statistics:
- 626 PDF objects out of 1000 (max. 8388607)
- 596 compressed objects within 6 object streams
- 265 named destinations out of 1000 (max. 500000)
- 433 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 663 PDF objects out of 1000 (max. 8388607)
+ 615 compressed objects within 7 object streams
+ 275 named destinations out of 1000 (max. 500000)
+ 468 words of extra memory for PDF output out of 10000 (max. 10000000)
 

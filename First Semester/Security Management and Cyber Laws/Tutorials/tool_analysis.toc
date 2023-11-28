@@ -48,7 +48,7 @@
 \contentsline {subsubsection}{\numberline {4.7.3}Cons}{5}{subsubsection.4.7.3}%
 \contentsline {subsubsection}{\numberline {4.7.4}Steps}{5}{subsubsection.4.7.4}%
 \contentsline {subsubsection}{\numberline {4.7.5}Screenshots}{6}{subsubsection.4.7.5}%
-\contentsline {section}{\numberline {5}Code}{6}{section.5}%
-\contentsline {section}{\numberline {6}Platform}{8}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion}{8}{section.7}%
-\contentsline {section}{References}{9}{section*.2}%
+\contentsline {section}{\numberline {5}Code}{9}{section.5}%
+\contentsline {section}{\numberline {6}Platform}{11}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{11}{section.7}%
+\contentsline {section}{References}{12}{section*.2}%

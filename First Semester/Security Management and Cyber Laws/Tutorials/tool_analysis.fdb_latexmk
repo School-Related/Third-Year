@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1701106573 "/run/media/krishnaraj/Classes/University/Third Year/First Semester/Security Management and Cyber Laws/Tutorials/tool_analysis.tex" "tool_analysis.pdf" "tool_analysis" 1701106575 0
-  "/run/media/krishnaraj/Classes/University/Third Year/First Semester/Security Management and Cyber Laws/Tutorials/tool_analysis.tex" 1701106573 13824 7661cc4dcd6ffb470048a5599f810cff ""
+["pdflatex"] 1701191338 "/run/media/krishnaraj/Classes/University/Third Year/First Semester/Security Management and Cyber Laws/Tutorials/tool_analysis.tex" "tool_analysis.pdf" "tool_analysis" 1701191347 0
+  "/run/media/krishnaraj/Classes/University/Third Year/First Semester/Security Management and Cyber Laws/Tutorials/tool_analysis.tex" 1701191327 14933 bdc40bdb88522a09ee95395f961c876b ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1689853683 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1689853683 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1689853683 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -118,11 +118,18 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1689853683 40684 9b9ec0b4288972636ff6a3b9c4238efc ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1695285212 4482925 a1a254cacf5c7108f7b28226c8f3b19f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1695285176 6768050 f1abe6d2662983ea80d0bdb89af7992a ""
+  "john shadow.png" 1701190627 1016956 e3a474f5e917ff8493180c68b3a32f59 ""
+  "md5hashcrack.png" 1701190796 802482 52b8ffebea5a8dd232516938e56956a6 ""
+  "new user.png" 1701190528 184776 2c04e74418e6054bdb1523e443075d92 ""
   "save_pass_hash.py" 1701105942 2128 a3a67062915ca44a6d1da0e27efd0cc6 ""
-  "tool_analysis.aux" 1701106575 7566 5d970abff80ff9b3bc95c55fd277d82e "pdflatex"
-  "tool_analysis.out" 1701106575 5938 0204fc6992184058d99e4ac7eb7ae894 "pdflatex"
-  "tool_analysis.tex" 1701106573 13824 7661cc4dcd6ffb470048a5599f810cff ""
-  "tool_analysis.toc" 1701106575 4319 f98bc3aecddbfeeeda3d11b17d596fc1 "pdflatex"
+  "shadow.png" 1701190604 254141 bd5e8a81640c996e4654883c127d0243 ""
+  "tool_analysis.aux" 1701191347 8574 50cc6160b82f99a7374ebcfb4c5ff2fa "pdflatex"
+  "tool_analysis.out" 1701191347 5938 0204fc6992184058d99e4ac7eb7ae894 "pdflatex"
+  "tool_analysis.tex" 1701191327 14933 bdc40bdb88522a09ee95395f961c876b ""
+  "tool_analysis.toc" 1701191347 4322 2395afa4f512e11de67b67c80334c9b6 "pdflatex"
+  "zip cracked.png" 1701190918 884435 4103ede61ccd1a988d1796d98c4dc359 ""
+  "zip pass.png" 1701190504 1456861 51477151556622a87c0e1a801d538e3a ""
+  "zip_with_new.png" 1701191013 849115 c606503359644be23b47856fb120bc8e ""
   (generated)
   "tool_analysis.aux"
   "tool_analysis.log"
