@@ -1,0 +1,19 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Usage}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Vaults}{1}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Technologies Used}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Frontend}{1}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}ReactJS}{1}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Tailwind CSS}{1}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}DaisyUI}{1}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Hero Icons}{2}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.5}Tabler Icons}{2}{subsubsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.2}Backend}{2}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Node JS}{2}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Express JS}{2}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}MySQL or Mariadb}{2}{subsubsection.2.2.3}%
+\contentsline {section}{\numberline {3}Features}{2}{section.3}%
+\contentsline {section}{\numberline {4}Workflow/ Architecture Diagram}{3}{section.4}%
+\contentsline {section}{\numberline {5}Future Scope and Conclusion}{3}{section.5}%
+\contentsline {section}{\numberline {6}Screenshots}{4}{section.6}%
+\contentsline {section}{References}{8}{section*.2}%
