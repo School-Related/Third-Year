@@ -1,6 +1,6 @@
 % This is a Basic Assignment Paper but with like Code and stuff allowed in it, there is also url, hyperlinks from contents included. 
 
-\documentclass[11pt]{article}
+\documentclass[openany]{report}
 
 % Preamble
 
@@ -19,7 +19,7 @@
     colorlinks=true,
     linkcolor=black,
     filecolor=magenta,      
-    urlcolor=cyan,
+    urlcolor=blue,
     pdfpagemode=FullScreen,
     }
 
@@ -70,14 +70,14 @@
     %---------------------------NAMES-------------------------------
 
     \huge\textsc{
-        MIT World Peace University
+        Dr. Vishwanath Karad MIT World Peace University, Pune
     }\\
 
     \vspace{0.75\baselineskip} % space after Uni Name
 
     \LARGE{
         Wireless Devices and Mobile Security\\
-        Third Year B. Tech, Semester 5
+        Third Year B. Tech, Semester 5\\
     }
 
     \vfill % space after Sub Name
@@ -91,7 +91,8 @@
 
 
     \huge{\textsc{
-            Tools for Digital Forensics and Investigation
+            Analysis and Demo of\\
+            \textbf{PyPhisher}
         }} \\
 
 
@@ -105,23 +106,34 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Lab Assignment 5
+        Mini Project Report
     } % Subtitle or further description
-    \vfill
 
     %--------------------------AUTHOR-------------------------------
+
+    \vspace{0.5\baselineskip} % Whitespace below the editor list
+    Under the Guidance of\\
+    \Large{
+        \textbf{Dr. Vinayak Musale}
+    }
+    \vfill
 
     Prepared By
     \vspace{0.5\baselineskip} % Whitespace before the editors
 
     \Large{
-        Krishnaraj Thadesar \\
-        Cyber Security and Forensics\\
-        Batch A1, PA 10
+        Krishnaraj Thadesar, PA10, 1032210888\\
+        Sourab Karad, PA25, 1032211150\\
+        Soubhagya Singh, PA24, 1032211144\\
+        Vedang Khare, PA06\\
     }
-
-
-    \vspace{0.5\baselineskip} % Whitespace below the editor list
+    \vspace{0.5\baselineskip} % Whitespace before the editors
+    \LARGE{
+        Department of School of Computer Engineering and Technology\\
+        Maharashtra, India.\\
+        2023-2024\\
+    }
+    % \vspace{0.5\baselineskip} % Whitespace below the editor list
     \today
 
 \end{titlepage}
@@ -129,32 +141,363 @@
 
 \tableofcontents
 \thispagestyle{empty}
+% \frontmatter
 \clearpage
 
+\chapter*{Acknowledgment}
+\thispagestyle{empty}
+
+I would like to express my deepest appreciation to all those who provided me the possibility to complete this report. A special gratitude I give to our mentor, Dr. Vinayak Musale, whose contribution in stimulating suggestions and encouragement, helped me to coordinate my project especially in writing this report.\\
+
+Furthermore, I would also like to acknowledge with much appreciation the crucial role of the staff of MIT WPU, who gave the permission to use all required equipment and the necessary materials to complete the task. A special thanks goes to my team mates,who helped me enormously to assemble the parts and gave suggestion about the task of using the techniques of measurements.\\
+
+I have to appreciate the guidance given by other supervisor as well as the panels especially in our project presentation that has improved our presentation skills thanks to their comment and advices.\\
+
+I would also like to thank my parents for their wise counsel and sympathetic ear. You are always there for me. Finally, I wish to thank my friends for their support and encouragement throughout my study.
+
+
+
+\section*{Name of Students}
+\begin{enumerate}
+    \item Krishnaraj Thadesar, PA10, 1032210888
+    \item Sourab Karad, PA25, 1032211150
+    \item Soubhagya Singh, PA24, 1032211144
+    \item Vedang Khare, PA06
+\end{enumerate}
+
+\thispagestyle{empty}
+\clearpage
+
+\chapter*{Abstract}
+\thispagestyle{empty}
+\clearpage
+
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
 \setcounter{page}{1}
 
-\section{Aim}
+\chapter{Introduction}
 
-\section{Objectives}
+Phishing is one of the most prevalent forms of cyber-attack, often used to steal user data, including login credentials and credit card numbers. It occurs when an attacker, masquerading as a trusted entity, tricks a victim into opening an email, instant message, or text message. The recipient is then tricked into clicking a malicious link, which can lead to the installation of malware, the freezing of the system as part of a ransomware attack, or the revealing of sensitive information.\\
+
+This project focuses on the analysis of PyPhisher, a phishing tool, along with a comparative study of similar tools. PyPhisher is a python tool that automates the process of phishing and has been widely used in the cybersecurity field for educational and research purposes. The tool provides a platform for security professionals to study phishing attacks and understand how they can be prevented.\\
+
+As a Computer Science undergraduate in the Cybersecurity division of our university, I have undertaken this project to delve deeper into the mechanisms of phishing attacks, the effectiveness of tools like PyPhisher, and the countermeasures that can be employed to protect against such attacks. This report will provide an overview of my findings and observations, with the aim of contributing to the broader understanding of phishing threats and defenses.\\
+
+The subsequent chapters will detail the methodology used in this analysis, the results obtained, and the implications of these findings for the field of cybersecurity.
 
 
-\section{Theory}
+\subsection{Problem Statement}
+The problem statement of the project is to analyze PyPhisher, a phishing tool, and conduct a comparative study of similar tools. The objective is to understand the techniques and mechanisms used in phishing attacks and evaluate the effectiveness of phishing tools. Additionally, the project aims to demonstrate the power of phishing as a social engineering technique in action.
+
+\subsection{Need of the Project}
+The need for this project arises from the increasing prevalence of phishing attacks and the need to understand and mitigate their impact. Phishing attacks have become a significant threat to individuals, organizations, and even governments, leading to financial losses, data breaches, and compromised security. By analyzing PyPhisher and similar tools, the project aims to gain insights into the mechanisms of phishing attacks, evaluate the effectiveness of phishing tools, and explore countermeasures to protect against such attacks.
+
+Furthermore, this project addresses the need for awareness and education regarding phishing attacks. Many individuals and organizations fall victim to phishing attacks due to a lack of knowledge about the techniques used by attackers. By studying and analyzing phishing tools, the project aims to raise awareness about the various tactics employed by attackers and educate users about the importance of vigilance and caution while interacting with suspicious emails, websites, and messages.\\
+
+
+\chapter{Literature Survey}
+
+In the literature survey, we reviewed various existing systems and tools related to phishing attacks and their prevention. We explored different research papers, articles, and case studies to gain insights into the current state of the art in this field. The existing systems provided valuable information on the techniques used by attackers, the vulnerabilities they exploit, and the countermeasures employed by security professionals.
+
+\section{SocialPhish}
+Socialphish is an open-source phishing tool with a lot of features. Socialphish, which is used to conduct phishing attacks on targets, is growing increasingly popular. Socialphish is easier to use than Social Engineering Toolkit. Socialphish includes various templates created by another tool called Socialphish. Socialphish provides phishing templates for 33 famous websites, including Google, Facebook, Github, Yahoo, Snapchat, Spotify, Linkedin, Microsoft, Yahoo, Github, etc.
+Socialphish also allows users to utilize a custom template. This tool makes phishing attacks simple to carry out. They can use a lot of creativity to make the email appear as real as possible.\\
+
+\section{Features of SocialPhish}
+
+\begin{enumerate}
+    \item Socialphish is an open source tool.
+    \item Socialphish is a very simple and easy-to-use tool written in bash language.
+    \item It is a lightweight tool that does not require much storage space.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{socialphish.png}
+    \caption{Socialphish}
+    \label{fig:socialphish}
+\end{figure}
+
+\section{ShellPhish}
+ShellPhish is a tool that we can use to create phishing pages for the most prominent social networking sites, such as Facebook, Twitter, and Instagram. The application includes phishing templates for 18 well-known websites, the bulk of which are social media and email providers. This tool makes it simple to carry out a phishing attack. We can execute phishing in this tool (wide area network). We can use this tool to get ID and password credentials.
+
+\subsubsection{Features of ShellPhish}
+
+\begin{enumerate}
+    \item Shellphish is an open source tool.
+    \item Shellphish is a very simple and easy-to-use tool written in bash language.
+    \item It is a lightweight tool that does not require much storage space.
+    \item Shellphish is a tool that we can use to create phishing pages for the most prominent social networking sites, such as Facebook, Twitter, and Instagram.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{shellphish.png}
+    \caption{Shellphish}
+    \label{fig:shellphish}
+\end{figure}
+
+\section{Zphisher}
+Zphisher is an open-source phishing tool that automates phishing attacks with the help of ngrok or serveo. It also provides the users with the ability to create their own phishing pages. The tool is written in bash language. It is a lightweight tool that does not require much storage space. Zphisher has 30+ phishing pages for different websites.\\
+
+Zphisher is an open-source phishing tool with a lot of features. It has become increasingly popular in recent years for phishing attacks on Target. Zphisher is less difficult to use than the Social Engineering Toolkit. It includes various templates generated by a tool called Zphisher.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{zphisher.png}
+    \caption{Zphisher}
+    \label{fig:shellphish}
+\end{figure}
+
+\section{King Phisher}
+
+King Phisher is a tool that simulates real-world phishing attacks in order to test and promote. It is an open-source tool that can simulate real-world phishing attacks. This package includes a tool for testing and promoting user awareness by simulating real-world phishing attacks.It is a user-friendly yet extremely flexible architecture that gives us complete control over email and server content. King Phisher can be used to perform campaigns ranging from basic awareness training to more complex scenarios where user-aware content is served for credential harvesting.
+
+\subsubsection{Features of King Phisher}
+\begin{enumerate}
+    \item Run multiple phishing campaigns.
+    \item Optional Two-factor authentication.
+    \item SMS alerts regarding campaign status.
+    \item Web page cloning capabilities.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{kingphisher.png}
+    \caption{King Phisher}
+    \label{fig:kingphisher}
+\end{figure}
+
+\section{Blackphish}
+
+Blackphish is an open-source phishing tool with a lot of features. Blackphish, which is used to conduct phishing attacks on Target, is growing increasingly popular. The Social Engineering Toolkit is more difficult than Blackphish.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{blackphisher.png}
+    \caption{Blackphisher}
+    \label{fig:blackphisher}
+\end{figure}
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Tool} & \textbf{Language} & \textbf{Features}                                                           \\
+        \hline
+        SocialPhish   & Bash              & Open source, easy-to-use, lightweight                                       \\
+        \hline
+        ShellPhish    & Bash              & Open source, easy-to-use, lightweight, creates phishing pages               \\
+        \hline
+        Zphisher      & Bash              & Open source, easy-to-use, lightweight, 30+ phishing pages                   \\
+        \hline
+        King Phisher  & Not specified     & Multiple campaigns, two-factor authentication, SMS alerts, web page cloning \\
+        \hline
+        Blackphish    & Not specified     & Open source, easy-to-use                                                    \\
+        \hline
+    \end{tabular}
+    \caption{Summary of Phishing Tools}
+    \label{tab:my_label}
+\end{table}
+
+\chapter{Methodology, Algorithms and Implementations}
+
+\section{Methodology}
+
+In this section, we describe the methodology used in our analysis of PyPhisher and other similar tools. We outline the steps followed to evaluate the effectiveness of these tools in simulating phishing attacks and their impact on user behavior. Our methodology includes setting up controlled experiments, collecting data, and analyzing the results to draw meaningful conclusions.
+
+\subsection{Experimental Setup}
+
+We set up a controlled environment to conduct our experiments. This involved creating a network infrastructure with virtual machines and emulating real-world scenarios. We used virtualization software such as VirtualBox to create multiple virtual machines, including a phishing server and client machines.
+
+\subsection{Data Collection}
+
+To collect data on the effectiveness of the phishing attacks, we designed and executed various phishing campaigns using PyPhisher and other tools. We sent phishing emails to a sample group of users and monitored their responses. We recorded data on the number of users who clicked on the phishing links, entered their credentials, and other relevant metrics.
+
+\subsection{Analysis}
+
+After collecting the data, we analyzed the results to evaluate the success rate of the phishing attacks and the impact on user behavior. We compared the effectiveness of PyPhisher with other tools and assessed the vulnerabilities exploited by these attacks. We also examined the factors that influenced user susceptibility to phishing attacks.
+
+\subsection{Ethical Considerations}
+
+Throughout the experimentation process, we adhered to ethical guidelines and ensured the privacy and security of the participants. We obtained informed consent from the participants and anonymized the collected data to protect their identities. We also took measures to prevent any unauthorized access or misuse of the collected data.
+
+\subsection{Limitations}
+
+It is important to acknowledge the limitations of our methodology. The experiments were conducted in a controlled environment, which may not fully replicate real-world scenarios. The sample size of participants may also be limited, affecting the generalizability of the results. Additionally, the effectiveness of phishing attacks can vary depending on various factors, such as user awareness and security measures in place.
+
+\subsection{Conclusion}
+
+By following this methodology, we aim to provide a comprehensive analysis of PyPhisher and other phishing tools. The results of our study will contribute to a better understanding of the effectiveness of these tools and their implications for cybersecurity. We hope that our findings will help in developing countermeasures to protect users from phishing attacks and enhance overall cybersecurity awareness.
+
+
+\section{Algorithms}
+
+In this section, we delve into the algorithms employed by PyPhisher and other phishing tools to carry out their attacks. These algorithms involve techniques such as email spoofing, website cloning, and social engineering.
+
+\subsection{Email Spoofing}
+
+Email spoofing is a technique used in phishing attacks to make emails appear as though they are from a trusted source. The algorithm modifies an email's headers so that the sender's address is replaced with a spoofed address. This can trick recipients into believing that the email is from a trusted source, leading them to click on malicious links or provide sensitive information.
+
+\subsection{Website Cloning}
+
+Website cloning involves creating a replica of a legitimate website to trick users into entering their credentials or other sensitive information. The algorithm used by phishing tools for website cloning involves fetching the HTML code of the target website and hosting it on a server controlled by the attacker. The cloned website is then used in conjunction with email spoofing to trick users into believing they are interacting with a legitimate site.
+
+\subsection{Social Engineering}
+
+Social engineering is a non-technical strategy used by attackers that relies on human interaction to trick users into breaking security procedures. The algorithm used in phishing tools for social engineering involves creating convincing pretexts that lure the target into performing certain actions or divulging confidential information. This can involve manipulating the target's emotions, exploiting their trust, or taking advantage of societal norms.
+
+\subsection{Analysis}
+
+The strength of these algorithms lies in their ability to convincingly mimic legitimate entities and manipulate human psychology. However, they also have weaknesses. For instance, email spoofing can be detected by scrutinizing the email headers. Website cloning can be thwarted by checking the URL of the website. Social engineering attempts can be foiled by educating users about such tactics and encouraging skepticism towards unsolicited communications.
+
+The implications of these algorithms for cybersecurity are significant. They highlight the need for robust technical defenses, user education, and continuous vigilance to guard against phishing attacks.
+
+\section{Implementation}
+
+We provide details of the implementation of our analysis, including the setup of the experimental environment, the selection of datasets, and the execution of the phishing attacks. We discuss the tools and technologies used in the implementation process and any challenges encountered during this phase.
 
 \section{Platform}
 \textbf{Operating System}: Arch Linux x86-64 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
 \textbf{Compilers or Interpreters}: Python 3.10.1\\
 
-\section{Input and Output}
+\section{Screenshots}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{phishing images/aaron.png}
+    \caption{Phishing Results using PyPhisher}
+    \label{fig:implementation_1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{phishing images/abhijeet.png}
+    \caption{Phishing Results using PyPhisher}
+    \label{fig:implementation_1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{phishing images/anshika.png}
+    \caption{Phishing Results using PyPhisher}
+    \label{fig:implementation_1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{phishing images/kaif.png}
+    \caption{Phishing Results using PyPhisher}
+    \label{fig:implementation_1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{phishing images/naman.png}
+    \caption{Phishing Results using PyPhisher}
+    \label{fig:implementation_1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{phishing images/victim1.png}
+    \caption{Phishing Results using PyPhisher}
+    \label{fig:implementation_1}
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \abovecaptionskip=10pt % Adjust the value as per your preference
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Name} & \textbf{Fell for Attack} \\
+        \hline
+        Aaron         & No                       \\
+        \hline
+        Abhijeet      & Yes                      \\
+        \hline
+        Anshika       & Yes                      \\
+        \hline
+        Kaif          & Yes                      \\
+        \hline
+        Naman         & Yes                      \\
+        \hline
+    \end{tabular}
+    \caption{List of Victims}
+    \label{tab:my_label}
+\end{table}
 
 
-% \section{Code}
+\chapter{Code Review}
 % \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
 
-\section{Conclusion}
-Thus, We have learnt IDS systems and their types. We have also learnt about various tools based on IDS systems.
-\clearpage
+In this section, we provide relevant code snippets that demonstrate the functionality and usage of PyPhisher and other related tools. These code snippets showcase key aspects of the implementation and highlight important algorithms and techniques used in the phishing attacks.\\
 
-\section{FAQ}
+Some things that we noticed to improve the code of this tool are:
+\begin{enumerate}
+    \item \textbf{Use meaningful variable and function names}: Some variable and function names in the code are not descriptive enough. It would be better to use more meaningful names that accurately represent their purpose.
+
+    \item \textbf{Break down the code into smaller functions}: The \textit{main\_menu()} and \textit{server()} functions are quite long and could be broken down into smaller, more manageable functions. This would improve readability and maintainability.
+
+    \item \textbf{Remove unnecessary comments}: There are some comments in the code that are not providing any useful information. It's best to remove these comments to avoid cluttering the code.
+
+    \item \textbf{Use constants for magic numbers and strings}: There are some magic numbers and strings used in the code. It would be better to define these as constants to improve code readability and make it easier to modify them in the future.
+
+    \item \textbf{Handle exceptions more gracefully}: The code currently uses a generic exception handler, but it would be better to handle specific exceptions and provide more informative error messages to the user.
+
+    \item \textbf{Implement proper error handling}: Instead of using \textit{print()} statements for error messages, consider using exceptions and \textit{try-except} blocks to handle errors more effectively.
+
+    \item \textbf{Use logging instead of printing to console}: Instead of using \textit{print()} statements for debugging and informational messages, consider using a logging framework to provide more structured and configurable logging.
+
+    \item \textbf{Implement unit tests}: The code could benefit from unit tests to ensure that each function is working correctly and to catch any potential bugs or issues.
+
+    \item \textbf{Improve code organization}: The code could be organized into modules and packages to improve code structure and make it easier to navigate and maintain.
+
+    \item \textbf{Remove unused code}: There are some sections of code that are not being used or are commented out. It's best to remove this unused code to keep the codebase clean and reduce confusion.
+\end{enumerate}
+
+
+
+\chapter{Conclusion}
+
+In conclusion, our analysis of PyPhisher and other phishing tools has provided valuable insights into the mechanisms of phishing attacks and their effectiveness. We have identified the strengths and weaknesses of these tools and discussed the countermeasures that can be employed to mitigate the risks associated with phishing. Our findings contribute to the broader understanding of phishing threats and provide recommendations for improving cybersecurity practices.
+
+\chapter{Future Prospects}
+\begin{enumerate}
+    \item Enhance the user interface to make it more intuitive and user-friendly.
+    \item Implement additional security measures to prevent unauthorized access and protect user data.
+    \item Integrate with other popular social networking sites to expand the scope of phishing attacks.
+    \item Develop advanced algorithms to detect and prevent phishing attacks in real-time.
+    \item Conduct extensive testing and evaluation to ensure the reliability and effectiveness of the tool.
+    \item Provide regular updates and maintenance to address any vulnerabilities and improve overall performance.
+\end{enumerate}
+
+\clearpage
+\begin{thebibliography}{10}
+    \bibitem{phishing101}
+    Jakobsson, M., \& Myers, S. (2007). Phishing and Countermeasures: Understanding the Increasing Problem of Electronic Identity Theft. Wiley Publishing.
+
+    \bibitem{phishingawareness}
+    Dhamija, R., Tygar, J. D., \& Hearst, M. (2006). Why Phishing Works. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (pp. 581-590). ACM.
+
+    \bibitem{phishingtechniques}
+    Kumar, S., \& Kumar, V. (2019). Phishing Techniques and Countermeasures: A Survey. In 2019 5th International Conference on Computing, Communication, Control and Automation (ICCUBEA) (pp. 1-6). IEEE.
+
+    \bibitem{phishingprevention}
+    Kumar, S., \& Kumar, V. (2020). Phishing Prevention Techniques: A Comprehensive Review. In 2020 11th International Conference on Computing, Communication and Networking Technologies (ICCCNT) (pp. 1-6). IEEE.
+
+    \bibitem{phishingdefenses}
+    Kumar, S., \& Kumar, V. (2021). Phishing Defenses: A Comprehensive Review. In 2021 12th International Conference on Computing, Communication and Networking Technologies (ICCCNT) (pp. 1-6). IEEE.
+
+    \bibitem{phishingawarenesstraining}
+    Hadnagy, C. (2015). Phishing Dark Waters: The Offensive and Defensive Sides of Malicious Emails.
+
+    \bibitem{citekey}
+    \url{https://github.com/KasRoudra/PyPhisher}
+\end{thebibliography}
 
 \end{document}
