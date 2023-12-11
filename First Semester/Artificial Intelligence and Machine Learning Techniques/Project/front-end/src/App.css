@@ -1,0 +1,14 @@
+body{
+  padding:0;
+  margin:0;
+  background-color:#000000;
+    height: 100%;
+    overflow: auto; /* Ensure that overflow is set to auto or scroll */
+  
+}
+@font-face {
+  font-family: 'Mostwasted';
+  src: local('Mostwasted'), url('../src/Resources/Fonts/Mostwasted.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

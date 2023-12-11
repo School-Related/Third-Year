@@ -1,0 +1,41 @@
+/* About.css */
+
+.aboutfullbody {
+  overflow-x: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+.aboutbody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.devscard-container {
+  margin: 20px;
+}
+
+.credits-section,
+.technology-section,
+.go-ahead-section {
+  max-width: 800px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-heading {
+  color: white; /* Adjust the color for better readability on the background */
+  margin-bottom: 15px;
+  margin-top: 100px;
+
+  font-size: 42px;
+}
+#prob{
+  margin-left: 16rem;
+}
+.midtext{
+  font-size:20px;
+}

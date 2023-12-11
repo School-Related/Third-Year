@@ -1,0 +1,42 @@
+
+.project-container {
+  width: 1000px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding:20px;
+  margin: 2rem;
+}
+
+.project-section {
+  margin-left: 12rem;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  color: white; /* Set text color to white */
+  width: 1000px;
+  height: 600px;
+}
+
+.project-heading {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.project-content {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.project-key-points {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+
+}
+
+.project-key-points-item {
+  margin-bottom: 10px;
+}
+
+/* You can customize these class names further based on your needs */

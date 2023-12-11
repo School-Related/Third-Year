@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+
+
+.blobcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.square {
+
+    position: relative;
+    margin: 0 10px;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square span:nth-child(1) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+    transition: 0.5s;
+    animation: animate 6s linear infinite;
+    background-color: #333;
+
+
+}
+
+.linkedin:hover span:nth-child(1) {
+    border: none;
+    background: #f07e6e;
+}
+
+.twitter:hover span:nth-child(1) {
+    border: none;
+    background: #84cdfa;
+}
+
+.github:hover span:nth-child(1) {
+    border: none;
+    background: #5ad1cd;
+}
+
+.square span:nth-child(2) {
+    position: absolute;
+  
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+    background-color: pink;
+
+}
+
+.linkedin:hover span:nth-child(2) {
+    border: none;
+    background: #f07e6e;
+}
+
+.twitter:hover span:nth-child(2) {
+    border: none;
+    background: #84cdfa;
+}
+
+.github:hover span:nth-child(2) {
+    border: none;
+    background: #5ad1cd;
+}
+
+.square span:nth-child(3) {
+    position: absolute;
+ 
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%;
+    transition: 0.5s;
+    animation: animate2 10s linear infinite;
+    background-color: white;
+
+}
+
+.linkedin:hover span:nth-child(3) {
+    border: none;
+    background: #f07e6e;
+}
+
+.twitter:hover span:nth-child(3) {
+    border: none;
+    background: #84cdfa;
+}
+
+.github:hover span:nth-child(3) {
+    border: none;
+    background: #5ad1cd;
+}
+
+.blobcontent {
+    position: relative;
+    padding: 40px 60px;
+    color: black;
+    text-align: center;
+    transition: 0.5s;
+    background-color: transparent;
+
+    z-index: 1000;
+}
+.blobcontent:hover{
+    color: white;
+}
+.blobcontent a {
+    background-color: transparent;
+
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    border: 3px solid #fff;
+    padding: 6px 18px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
+}
+
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.text{
+    background-color: transparent;
+}
+
+.blobcontent h2{
+    background-color: transparent;
+
+}

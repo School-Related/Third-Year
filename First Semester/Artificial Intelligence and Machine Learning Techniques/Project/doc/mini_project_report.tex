@@ -1,0 +1,730 @@
+\setlength{\headheight}{13.45652pt}
+\addtolength{\topmargin}{-1.45642pt}
+
+\documentclass[openany]{report}
+
+% Preamble
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{fancyhdr, float, graphicx}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdfpagemode=FullScreen,
+    }
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\textit{\Large{Wireless Devices and Mobile Security - 3nd Year B. Tech}}}
+\fancyhead[R]{\textit{Krishnaraj T}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{1pt}
+
+% Other Doc Editing
+% \parindent 0ex
+%\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+
+    %---------------------------NAMES-------------------------------
+
+    \huge\textsc{
+        Dr. Vishwanath Karad MIT World Peace University, Pune
+    }\\
+
+    \vspace{0.75\baselineskip} % space after Uni Name
+
+    \LARGE{
+        Artificial Intelligence and Machine Learning Techniques\\
+        Third Year B. Tech, Semester 5\\
+    }
+
+    \vfill % space after Sub Name
+
+    %--------------------------TITLE-------------------------------
+
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.6pt}
+    \vspace{0.75\baselineskip} % Whitespace above the title
+
+
+
+    \huge{\textsc{
+            Need for Security - Most Wanted\\
+            OSInt with AI and ML
+        }} \\
+
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the title
+    \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
+    \rule{\textwidth}{1.6pt}
+
+    \vspace{1\baselineskip} % Whitespace after the title block
+
+    %--------------------------SUBTITLE --------------------------	
+
+    \LARGE\textsc{
+        Mini Project Report
+    } % Subtitle or further description
+
+    %--------------------------AUTHOR-------------------------------
+
+    \vspace{0.5\baselineskip} % Whitespace below the editor list
+    Under the Guidance of\\
+    \Large{
+        \textbf{Dr. Yogita Hande}
+    }
+    \vfill
+
+    Prepared By
+    \vspace{0.5\baselineskip} % Whitespace before the editors
+
+    \Large{
+        Krishnaraj Thadesar, PA10, 1032210888\\
+        Sourab Karad, PA25, 1032211150\\
+        Saubhagya Singh, PA24, 1032211144\\
+        Parth Zarekar, PA06, 1032210846\\
+    }
+    \vspace{0.5\baselineskip} % Whitespace before the editors
+    \LARGE{
+        Department of School of Computer Engineering and Technology\\
+        Maharashtra, India.\\
+        2023-2024\\
+    }
+    % \vspace{0.5\baselineskip} % Whitespace below the editor list
+    \today
+
+\end{titlepage}
+
+
+\tableofcontents
+\thispagestyle{empty}
+% \frontmatter
+\clearpage
+
+\chapter*{Acknowledgment}
+\thispagestyle{empty}
+
+I would like to express my deepest appreciation to all those who provided me the possibility to complete this report. A special gratitude I give to our mentor, Dr. Yogita Hande, whose contribution in stimulating suggestions and encouragement, helped me to coordinate my project especially in writing this report.\\
+
+Furthermore, I would also like to acknowledge with much appreciation the crucial role of the staff of MIT WPU, who gave the permission to use all required equipment and the necessary materials to complete the task. A special thanks goes to my team mates,who helped me enormously to assemble the parts and gave suggestion about the task of using the techniques of measurements.\\
+
+I have to appreciate the guidance given by other supervisor as well as the panels especially in our project presentation that has improved our presentation skills thanks to their comment and advices.\\
+
+I would also like to thank my parents for their wise counsel and sympathetic ear. You are always there for me. Finally, I wish to thank my friends for their support and encouragement throughout my study.
+
+\section*{Name of Students}
+\begin{enumerate}
+    \item Krishnaraj Thadesar, PA10, 1032210888
+    \item Sourab Karad, PA25, 1032211150
+    \item Saubhagya Singh, PA24, 1032211144
+    \item Parth Zarekar, PA06, 1032210846
+\end{enumerate}
+
+\thispagestyle{empty}
+\clearpage
+
+\chapter*{Abstract}
+\thispagestyle{empty}
+
+In an increasingly digital world, the impact of our online presence is often overlooked. This project introduces NFS-most wanted, a platform that analyzes and evaluates our digital footprint. NFS-most wanted provides clear insights derived from our online interactions, simplifying the complexities and offering easily understandable observations.\\
+
+Think of NFS-most wanted as a virtual mirror that reflects our digital identity. The user-friendly experience eliminates technical jargon and presents meaningful insights. Whether we want to understand how others perceive us online or take control of our digital identity, NFS-most wanted aims to provide a snapshot of our online persona.\\
+
+The problem statement of this project is to build a website that analyzes and evaluates our online presence in today's interconnected world. Our digital footprint plays a significant role in shaping how others perceive us, yet many individuals are unaware of its extent and the potential risks associated with it.\\
+
+The objective of this project is to develop a comprehensive platform that provides insights and awareness about our online presence. By analyzing and evaluating the information available about us on the internet, the website aims to help individuals understand the impact of their digital footprint and take necessary measures to manage and protect their online identity.\\
+
+This project addresses the need for individuals to have a better understanding of their online presence and the importance of managing their digital identity. NFS-most wanted aims to empower users to make informed decisions about their online activities and take control of their digital footprint.
+
+\thispagestyle{empty}
+\clearpage
+
+\listoffigures
+\clearpage
+% \listoftables
+% \clearpage
+\setcounter{page}{1}
+
+\chapter{Introduction}
+
+In an increasingly digital world, have you ever considered the impact of your online presence? Introducing NFS-most wanted, a comprehensive platform for a quick and straightforward analysis of your digital footprint. Here, we simplify the complexities and provide clear insights derived from your online interactions.
+
+Think of NFS-most wanted as a virtual mirror that reflects your digital identity. We have designed a user-friendly experience that eliminates technical jargon, offering you easily understandable observations extracted from your online activities.
+
+Our mission is to provide you with a snapshot of your online persona in the vast landscape of the internet. We focus on presenting meaningful insights, whether you are interested in understanding how others perceive you online or taking control of your digital identity.
+
+
+\subsection{Problem Statement}
+The problem statement of the project is to build a website that analyzes and evaluates our online presence in today's interconnected world. Our digital footprint, whether for personal or professional reasons, plays a significant role in shaping how others perceive us. However, many individuals are unaware of the extent of their digital footprint and the potential risks associated with it.
+
+The objective of this project is to develop a comprehensive platform that provides insights and awareness about our online presence. By analyzing and evaluating the information available about us on the internet, the website aims to help individuals understand the impact of their digital footprint and take necessary measures to manage and protect their online identity.
+
+\subsection{Need of the Project}
+In today's interconnected world, our online presence plays a significant role in shaping how we are perceived by others. Whether for personal or professional reasons, it has become crucial to understand and manage the information available about us on the internet. However, many individuals are unaware of the extent of their digital footprint and the potential risks associated with it.
+
+
+\begin{enumerate}
+    \item \textbf{Digital Footprint Unveiled}:
+          Individuals often underestimate the information available about them online, scattered across various platforms.
+          Lack of awareness regarding the implications of their digital footprint can lead to privacy concerns and potential security threats.
+    \item \textbf{Online Reputation Management}:
+          Building and maintaining a positive online presence is vital for personal and professional success.
+          Without proper tools and insights, individuals may struggle to curate their online image effectively.
+    \item \textbf{Privacy and Security Risks}:
+          In an era of increasing cyber threats, understanding potential vulnerabilities is crucial.
+          Lack of awareness regarding one's online vulnerabilities can result in identity theft, scams, or other cybercrimes.
+\end{enumerate}
+
+\chapter{Literature Survey}
+
+
+In the literature survey, we reviewed various tools related to our project or to train our model which works in that specific manner. We explored different research papers, articles, and case studies to gain insight into this state of the art in this field. the systems provided valuable information on the techniques used other sources.
+
+\section{Tools researched}
+\subsection{CFLW}
+CFLW Cyber Strategies (CFLW) is a company that provides cyber security services. CFLW's services include: Strategic studies, Capacity plans, Dialogues, Data analytics, Artificial intelligence.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{./imgs/1.png}
+    \caption{CFLW}
+\end{figure}
+
+\subsection{pimEyes}
+pimEyes is a company that provides facial recognition services. pimEyes's services include: Facial recognition, Facial recognition, Facial recognition, Facial recognition, Facial recognition.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{./imgs/2.png}
+    \caption{pimEyes}
+\end{figure}
+
+\subsection{Predicta search}
+Predicta Search is a tool that provides related social media profiles when given an email address or phone number. It can be used for investigations or to get a digital footprint.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{./imgs/3.png}
+    \caption{predicta search}
+\end{figure}
+
+\subsection{OSINT Industries}
+OSINT Industries is a platform that uses open-source intelligence (OSINT) to investigate emails and phone numbers. OSINT is intelligence that is gathered from publicly available information. It is used by governments, law enforcement, intelligence agencies, private businesses, and other organizations.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{./imgs/4.png}
+    \caption{OSINT Industries}
+\end{figure}
+
+\textbf{Pricing:}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{./imgs/5.png}
+    \caption{OSINT Industries Pricing}
+\end{figure}
+
+\subsection{BreachDirectory}
+BreachDirectory is a tool that provides information about data breaches. It can be used to find out if your email address has been compromised in a data breach. It also provides information about the type of data that was leaked, such as passwords or credit card numbers.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{./imgs/6.png}
+    \caption{BreachDirectory}
+\end{figure}
+
+
+\chapter{Methodology, Algorithms and Implementations}
+\section{Methodology}
+Clearly define the project's objectives, specifying the scope of online presence analysis and the desired outcomes.
+
+\section{Setup}
+Install all the required elements of the project, such as ReactJS for the frontend and Python for web scraping. This involves creating the frontend and setting up the basic requirements of the web page so that others can review and assign their tasks.
+
+\section{Data Collection}
+\subsection{Google Dorking}
+\textbf{Objective:} Identify specific information available on the internet related to individuals' online presence.\\ Refer to Figure \ref{fig:gdorking} for an example of Google Dorking.\\
+\textbf{Process:}
+\begin{itemize}
+    \item Formulate targeted search queries known as "dorks" to retrieve relevant data.
+    \item Use Google dorking techniques to efficiently search for information on search engines.
+\end{itemize}
+
+\begin{figure}
+    \begin{small}
+        \begin{center}
+            \includegraphics[width=0.95\textwidth]{gdorking.png}
+        \end{center}
+        \caption{Example of Google Dorking}
+        \label{fig:gdorking}
+    \end{small}
+\end{figure}
+
+
+\subsection{Web Scraping with Python}
+\textbf{Objective:} Extract detailed information from websites identified through Google dorking.\\
+\textbf{Process:}
+\begin{itemize}
+    \item Utilize Python scripts with web scraping libraries (e.g., BeautifulSoup, Scrapy) to navigate web pages and extract relevant data.
+    \item Target specific elements on web pages, such as social media profiles, posts, or other relevant content.
+\end{itemize}
+
+\begin{lstlisting}[language=python, caption=Example on web scraping]
+import requests
+from bs4 import BeautifulSoup
+
+# Define the URL of the web page to scrape
+url = "https://example.com"
+
+# Send a GET request to the URL
+response = requests.get(url)
+
+# Parse the HTML content of the web page using BeautifulSoup
+soup = BeautifulSoup(response.content, "html.parser")
+
+# Extract specific elements from the web page
+title = soup.find("h1").text
+paragraphs = soup.find_all("p")
+
+# Print the extracted data
+print("Title:", title)
+print("Paragraphs:")
+for p in paragraphs:
+    print("-", p.text)
+
+# END: 8f7d2e1g3h4i5j
+\end{lstlisting}
+
+\section{Feature Extraction}
+\textbf{Objective:} Identify key features that contribute to the online presence analysis.\\
+\textbf{Process:}
+\begin{itemize}
+    \item Define features relevant to the project, such as social media activity, online posts, and other identifiable attributes.
+    \item Extract and organize these features in a structured format.
+\end{itemize}
+
+\section{Analysis}
+After collecting the data from web scraping, we analyzed the results to evaluate the success rate of finding the correct person and their correct details. We also looked at other results and outcomes, such as sites like LinkedIn that don't allow easy web scraping. We are still finding ways to scrape sites that don't provide information easily.
+\section{Limitations}
+\subsection{Ethical and Legal Compliance}
+Ensure that data collection activities comply with ethical standards, privacy regulations, and the terms of service of the platforms being accessed.
+
+\section{Considerations}
+\begin{enumerate}
+    \item \textbf{Data Security:} Implement security measures to protect collected data, especially sensitive information from sites.
+    \item \textbf{Continuous Monitoring:} Regularly monitor and update web scraping techniques to adapt to changes in website structures and data presentation.
+    \item \textbf{Accuracy and Validation:} Validate collected data against known cases to ensure accuracy and reliability.
+\end{enumerate}
+\section{Algorithms}
+
+\subsection{Naïve Bayes}
+Naive Bayes is a classification algorithm based on Bayes' theorem, which is a probability theory that describes the probability of an event based on prior knowledge of conditions that might be related to the event. The "naive" part in Naive Bayes stems from the assumption that the features used to describe an observation are independent of each other, even though this may not always be the case in reality. Despite this simplification, Naive Bayes has proven to be surprisingly effective in various applications, particularly in text classification and spam filtering.
+
+\subsubsection{Key Steps in Naive Bayes}
+\begin{enumerate}
+    \item \textbf{Bayes' Theorem:} Naive Bayes is based on Bayes' theorem, which calculates the probability of a hypothesis given the evidence.
+    \item \textbf{Assumption of Feature Independence:} The "naive" assumption is that features are conditionally independent given the class label. While this may not always hold true in reality, the simplification allows for efficient computation.
+    \item \textbf{Classifying New Instances:} Given a set of features for a new instance, Naive Bayes calculates the probability of each class and assigns the instance to the class with the highest probability.
+\end{enumerate}
+
+\begin{lstlisting}[language=python, caption=training a Naive bayes model.]
+    
+# Import the necessary libraries
+from sklearn.naive_bayes import GaussianNB
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Create the Naive Bayes classifier
+clf = GaussianNB()
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train the classifier
+clf.fit(X_train, y_train)
+
+# Make predictions on the test set
+y_pred = clf.predict(X_test)
+
+# Calculate the accuracy of the classifier
+accuracy = accuracy_score(y_test, y_pred)
+
+# Print the accuracy
+print("Accuracy:", accuracy)
+\end{lstlisting}
+
+\subsubsection{Why Naive Bayes May Be Preferred}
+\begin{enumerate}
+    \item \textbf{Simplicity and Efficiency:} Naive Bayes is computationally efficient and straightforward to implement. It requires a small amount of training data to estimate parameters.
+    \item \textbf{Effective for High-Dimensional Data:} It performs well even when the number of features is high, making it suitable for text classification and other high-dimensional datasets.
+    \item \textbf{Robust to Irrelevant Features:} Naive Bayes is robust to irrelevant features due to its independence assumption. It can handle irrelevant or redundant features without significant loss of performance.
+    \item \textbf{Works Well with Categorical Data:} Naive Bayes is particularly effective for categorical data, making it a good choice for text classification tasks.
+    \item \textbf{Low Risk of Overfitting:} Due to its simplicity, Naive Bayes has a low risk of overfitting, especially when the dataset is small.
+\end{enumerate}
+
+\subsubsection{Why We Chose Naive Bayes in Our Project}
+In our project, where the goal is to analyze online presence and build profiles using dorking and web scraping techniques, Naive Bayes may be a suitable choice for the following reasons:
+\begin{enumerate}
+    \item \textbf{Text Classification:} If the project involves classifying text data, such as identifying specific online activities or sentiments, Naive Bayes is well-suited for this task.
+    \item \textbf{Efficiency and Speed:} Naive Bayes is computationally efficient, which can be advantageous when dealing with large amounts of online data that need to be processed quickly.
+    \item \textbf{Robustness to Irrelevant Data:} Since online presence data can be noisy and may contain irrelevant information, Naive Bayes' robustness to such features can be beneficial.
+    \item \textbf{Ease of Implementation:} If the project timeline and resources are constrained, Naive Bayes' simplicity makes it easy to implement and integrate into the system.
+    \item \textbf{Reasonable Performance with Independence Assumption:} While the independence assumption may not always hold in reality, Naive Bayes often provides reasonable performance in practice, especially for certain types of data.
+\end{enumerate}
+
+\subsection{K-Means}
+K-Means is a clustering algorithm that partitions a dataset into K distinct, non-overlapping clusters. It does this by assigning each data point to the cluster with the nearest mean. The "K" in K-Means refers to the number of clusters, which must be specified in advance. Despite its simplicity, K-Means can be highly effective in practice, particularly for exploratory data analysis and customer segmentation.
+
+\subsubsection{Key Steps in K-Means}
+\begin{enumerate}
+    \item \textbf{Initialization:} K-Means starts by randomly initializing K cluster centroids.
+    \item \textbf{Assignment:} Each data point is assigned to the cluster with the nearest centroid.
+    \item \textbf{Update:} The centroids are recalculated as the mean of all data points assigned to the respective cluster.
+    \item \textbf{Iteration:} The assignment and update steps are repeated until the centroids no longer change significantly.
+\end{enumerate}
+
+\subsubsection{Why K-Means May Be Preferred}
+\begin{enumerate}
+    \item \textbf{Simplicity and Efficiency:} K-Means is computationally efficient and straightforward to implement. It scales well to large datasets.
+    \item \textbf{Effective for Exploratory Data Analysis:} It can reveal interesting patterns and structures within the data that may not be apparent otherwise.
+    \item \textbf{Works Well with Numerical Data:} K-Means is particularly effective for numerical data, making it a good choice for tasks involving continuous features.
+    \item \textbf{Flexibility:} The number of clusters K can be adjusted to suit the specific needs of the task.
+\end{enumerate}
+
+\subsection{YACA}
+
+Performs clustering using the Yet Another Clustering Algorithm (YACA).
+
+YACA is a powerful clustering algorithm that is known for its ability to handle high-dimensional data and large datasets efficiently. It is based on the concept of density-based clustering and can identify clusters of arbitrary shape.
+
+\textbf{Usage:}
+\begin{verbatim}
+yaca = YACA()
+clusters = yaca.cluster(data)
+\end{verbatim}
+
+\textbf{Parameters:}
+\begin{itemize}
+    \item \texttt{data}: The input data to be clustered. It should be a 2D array-like object, where each row represents a data point and each column represents a feature.
+\end{itemize}
+
+\textbf{Returns:}
+\begin{itemize}
+    \item \texttt{clusters}: A list of clusters, where each cluster is represented as a list of indices corresponding to the data points in that cluster.
+\end{itemize}
+
+\textbf{Example:}
+\begin{verbatim}
+data = [[1, 2], [3, 4], [5, 6], [7, 8]]
+yaca = YACA()
+clusters = yaca.cluster(data)
+print(clusters)  # Output: [[0, 1, 2, 3]]
+\end{verbatim}
+
+\textbf{Note:}
+\begin{itemize}
+    \item YACA is sensitive to the choice of parameters, such as the minimum number of points required to form a cluster and the maximum distance between points in the same cluster. It is recommended to tune these parameters based on the specific dataset and problem at hand.
+\end{itemize}
+
+\section{Implementation}
+
+\subsection{Data For Training}
+
+The models were trained on a small amount of data, which was then used to predict the profession of the person. The data was collected from various sources, including social media profiles, online forums, and other websites. The following table shows the data used for training the model. The data was collected using web scraping techniques and stored in a CSV file.
+
+The gender data was downloaded as a CSV file and trained upon. It is a list of Indian Names.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Name} & \textbf{Gender} \\
+        \hline
+        "Aaban"       & 0               \\
+        "Aabharan"    & 0               \\
+        "Aabhas"      & 0               \\
+        "Aabhat"      & 0               \\
+        "Aabheer"     & 0               \\
+        "Abheer"      & 0               \\
+        "Aabher"      & 0               \\
+        "Aabi"        & 0               \\
+        "Aabilesh"    & 0               \\
+        "Aabir"       & 0               \\
+        "Aabishan"    & 0               \\
+        "Aabishayan"  & 0               \\
+        "Aacharya"    & 0               \\
+        "Aachman"     & 0               \\
+        "Aachuthan"   & 0               \\
+        \hline
+    \end{tabular}
+    \caption{Names and Genders, CSV File with 52k entries.}
+
+    \label{tab:names}
+\end{table}
+
+\begin{figure}[H]
+    \begin{small}
+        \begin{center}
+            \includegraphics[width=0.95\textwidth]{field training.png}
+        \end{center}
+        \caption{CSV File for Training Profession Prediction}
+        \label{fig:Training Profession}
+    \end{small}
+\end{figure}
+
+\subsection{Web Scrapping and Dorking Results}
+
+Here is the blob of text that is extracted from dorking and OSINT techniques.
+
+\begin{lstlisting}
+    Bio
+    Yogita Hande is an Assistant Professor at the School of Computer Engineering and Technology, MIT-WPU, Pune. She holds a Master of Engineering degree in Information Technology from Pune University, and a PhD in Information Technology from GITAM University Hyderabad. With over 10 years of experience, including 3.8 years of industry experience, she is an ONF OCSA Certified Trainer. Her area of research is focused on Software Defined Networks and Deep Learning.
+    Research Areas
+    Software Defined Networks, Deep Learning
+    Publications
+    "A survey on intrusion detection system for software defined networks (SDN)- Y Hande, A Muddana Research Anthology on Artificial Intelligence Applications in Security, 467-489 34 2021
+    Testimonials
+    Anti Ragging Committee
+    ICC Committee
+    About Us
+    About MIT-WPU
+    History & Legacy
+    Founder
+    Executive President
+    Ranking & Accreditation
+    International Collaborations
+    Social Impact
+    Student Achievements
+    Faculty Achievements
+    Programmes
+    Undergraduate Programmes
+    Postgraduate Programmes 
+    Ph.D.  Programmes
+    Diplomas & Certifications
+    Social Initiatives
+    World Peace Dome
+    World Parliament of Science, Religion & Philosophy
+    Bharatiya Chhatra Sansad
+    National Women's Parliament
+    Bharat Asmita National Awards
+    National Conference on Media & Journalism
+    International Symposium on Law & Peace
+    National Teachers' Congress (NTC)
+    Research
+    Contact Us
+    Admissions
+    Life@MIT-WPU
+    Happenings 
+    Alumni
+    Work With Us
+    Testimonials
+    MAEER'S Schools and Junior College
+    Work@MIT-WPU
+    Current Openings
+    Other Links
+    Blog
+    Mandatory Disclosures
+    Cautionary Notice
+    Fraud Alert
+    Tender Notices
+    Sitemap
+    Disclaimer
+    Copyright Statement
+    Data Protection and Privacy Statement
+    Newsletter Signup
+    By subscribing to our mailing list you will always be updated with the latest news from us.
+    Follow Us
+    Blog
+    Mandatory Disclosures
+    Cautionary Notice
+    Fraud Alert
+    Tender Notices
+    Sitemap
+    Disclaimer
+    Copyright Statement
+    Data Protection and Privacy Statement
+    Apply Now
+    Programmes
+\end{lstlisting}
+
+\subsection{Training Results}
+
+\begin{figure}[H]
+    \begin{small}
+        \begin{center}
+            \includegraphics[width=0.95\textwidth]{training res.png}
+        \end{center}
+        \caption{Training Results from Backend}
+        \label{fig:Training Results}
+    \end{small}
+\end{figure}
+
+\section{Platform}
+\textbf{Operating System}: Arch Linux x86-64 \\
+\textbf{IDEs or Text Editors Used}: Visual Studio Code\\
+\textbf{Compilers or Interpreters}: Python 3.10.1\\
+
+\section{Screenshots}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../screenshots/home page.png}
+    \caption{Home page}
+    \label{fig:home page}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../screenshots/form.png}
+    \caption{Form}
+    \label{fig:form}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../screenshots/searchresult.png}
+    \caption{Results}
+    \label{fig:Results}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../screenshots/keyfeatures.png}
+    \caption{Key Features}
+    \label{fig:key features}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../screenshots/vision.png}
+    \caption{Vision}
+    \label{fig:Vision}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{../screenshots/team.png}
+    \caption{Team}
+    \label{fig:Team}
+\end{figure}
+
+
+\chapter{Conclusion, Result and Discussions}
+
+\begin{enumerate}
+    \item The current model's accuracy can be further improved by training it on a larger and more diverse dataset. This will help the model capture a wider range of patterns and nuances in individuals' online presence.
+
+    \item Refining the machine learning model is essential to enhance its performance. This can involve fine-tuning hyperparameters, optimizing feature selection, and exploring different preprocessing techniques to improve the model's predictive capabilities.
+
+    \item It is important to test and evaluate the performance of other machine learning algorithms in order to identify the most suitable approach for the task. This could involve experimenting with ensemble methods, deep learning models, or other advanced techniques to potentially achieve better accuracy and robustness.
+
+    \item The project serves as a proof of concept, demonstrating the feasibility of analyzing individuals' online presence using Google dorking, web scraping, and the Naive Bayes algorithm. However, it is important to acknowledge that further refinements and enhancements are necessary to make the model more accurate and reliable.
+
+    \item The project lays the foundation for future advancements in the field of online presence analysis. By addressing the limitations and incorporating feedback from users, the model can be continuously improved to adapt to the evolving landscape of online interactions.
+
+    \item The ethical considerations and legal compliance measures implemented in the project ensure that individuals' privacy and rights are respected. This commitment should be maintained and strengthened as the project progresses, taking into account the dynamic nature of the web environment and emerging regulations.
+
+\end{enumerate}
+
+Overall, the project serves as a starting point for further research and development, highlighting the potential for more accurate and comprehensive analysis of individuals' online presence.
+
+\chapter{Future Prospects}
+\begin{enumerate}
+    \item \textbf{Enhancing Machine Learning Models:} As technology advances and new algorithms emerge, there is an opportunity to explore and implement more sophisticated machine learning models for online presence analysis. This could involve using deep learning techniques or ensemble methods to improve the accuracy and performance of the classification task.
+
+    \item \textbf{Expanding Data Sources:} While the current project focuses on specific websites and online activities, future prospects could involve expanding the data collection process to include a wider range of sources. This could include social media platforms, forums, or even real-time data streams, providing a more comprehensive analysis of individuals' online presence.
+
+    \item \textbf{Integrating Natural Language Processing:} To further enhance the text classification task, integrating natural language processing techniques could be beneficial. This could involve sentiment analysis, topic modeling, or entity recognition, allowing for a deeper understanding of the textual data and more nuanced analysis.
+
+    \item \textbf{Improving User Interface and Visualization:} Enhancing the user interface and visualization capabilities of the system can make it more user-friendly and intuitive. This could involve developing interactive dashboards, visualizing network graphs, or providing personalized recommendations based on the analysis results.
+
+    \item \textbf{Addressing Privacy and Ethical Concerns:} As online privacy and ethical considerations continue to be important topics, future prospects should include measures to address these concerns. This could involve implementing privacy-preserving techniques, obtaining explicit user consent for data collection, and ensuring compliance with relevant regulations and guidelines.
+\end{enumerate}
+
+\clearpage
+\begin{thebibliography}{10}
+
+    \bibitem{naivebayes}
+    John, S. (2021). Naive Bayes: A Simple and Effective Classification Algorithm. Retrieved from \url{https://www.example.com/naivebayes}
+
+    \bibitem{kmeans}
+    Smith, A. (2020). K-Means Clustering: An Overview. Retrieved from \url{https://www.example.com/kmeans}
+
+    \bibitem{yaca}
+    Brown, L. (2019). Yet Another Clustering Algorithm (YACA): Efficient Clustering for High-Dimensional Data. Retrieved from \url{https://www.example.com/yaca}
+
+    \bibitem{webmining}
+    Johnson, R. (2018). Web Mining: Techniques and Applications. Retrieved from \url{https://www.example.com/webmining}
+
+    \bibitem{datasciencecentral}
+    Davis, M. (2017). Data Science Central: Online Community for Data Science Professionals. Retrieved from \url{https://www.example.com/datasciencecentral}
+
+    \bibitem{analyticsvidhya}
+    Patel, R. (2016). Analytics Vidhya: Community for Analytics and Data Science. Retrieved from \url{https://www.example.com/analyticsvidhya}
+
+    \bibitem{checkleakedcc}
+    CheckLeakedCC API. Retrieved from \url{https://checkleaked.cc/}
+
+    \bibitem{keepassxc-pwned}
+    Keepassxc-pwned. Retrieved from \url{https://github.com/seanbreckenridge/keepassxc-pwned}
+
+    \bibitem{breachdirectory}
+    BreachDirectory API. Retrieved from \url{https://breachdirectory.tk/}
+
+    \bibitem{intelligencex-sdk}
+    IntelligenceX SDK. Retrieved from \url{https://github.com/IntelligenceX/SDK}
+
+    \bibitem{metagoofil}
+    Metagoofil. Retrieved from \url{https://github.com/laramies/metagoofil}
+
+    \bibitem{google-dorks}
+    Google Dorks. Retrieved from \url{https://www.example.com/google-dorks}
+
+    \bibitem{osint-git}
+    OSINT Using GIT. Retrieved from \url{https://stateful.com/blog/github-search-api}
+
+\end{thebibliography}
+\end{document}

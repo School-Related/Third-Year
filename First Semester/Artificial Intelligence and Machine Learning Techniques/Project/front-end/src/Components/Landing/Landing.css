@@ -1,0 +1,172 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+  
+.bg {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 12rem;
+    position: absolute;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mostwasted', sans-serif!important;
+    opacity: 0;
+    animation: appear 0.5s ease-in-out 9s forwards;
+    color:white;
+}
+
+.content .main-heading {
+    margin-top: 1rem;
+    font-size: 140px;
+    margin-right: 8rem;
+    color: white;
+    text-shadow: 0 0 10px #ff6bff;
+
+
+}
+
+.content h1 {
+    font-family: 'Mostwasted', sans-serif!important;
+    font-size: 100px;
+    color: white;
+    text-shadow: 0 0 10px #ff6bff;
+    background-color: rgba(0, 0, 0, 0);
+    margin-right: 3rem;
+    font-size: 100px;
+}
+
+
+.desc{
+    background-color: rgba(0, 0, 0, 0);
+    margin-right: 4rem;
+    font-size: 40px;
+    color: white;
+    font-family: "Audiowide", cursive;
+    text-shadow: 0 0 10px #ff6bff;
+
+}
+.word .menu {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    background:transparent;
+}
+
+.wheel {
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+    margin-right: 3rem;
+    margin-left: 3.5rem;
+    opacity: 0;
+    animation: appear 0.5s ease-in-out 7s forwards;
+    border: 3px solid pink;
+    filter: drop-shadow(0 0 10px rgba(	255, 16, 240,1));
+    transition: transform 0.3s ease-in-out;
+
+}
+.wheel:hover
+{
+    transform: translateY(-10px) translateX(10px);
+
+}
+@keyframes appear {
+    to {
+        opacity: 1;
+    }
+}
+
+.menu {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.wheel button {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    transition: transform 0.3s ease-in-out;
+
+}
+
+#option1{
+    background-image: url('../../Resources/Images/wheel.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+#option2{
+    background-image: url('../../Resources/Images/aboutus.webp');
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+#option3{
+    background-image: url('../../Resources/Images/performance.png');
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+#option4{
+    background-image: url('../../Resources/Images/search.webp');
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+.Options{
+    font-family: "Helvetica Neue",Helvetica,Arial;
+    font-size: 2rem;
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    font-weight: 500;
+    justify-content: center;
+
+}
+.rise span{
+	text-shadow: -0.01em -0.01em 0.01em #000;
+	animation: rise 2s ease-in-out 0.5s forwards;
+    font-family: "Audiowide", cursive;
+    margin-left: 6rem;
+    margin-right:6rem ;
+    margin-top: 1rem;
+    opacity: 0;
+    animation: appear 0.5s ease-in-out 7s forwards;
+    background-color: rgba(0,0,0,0);
+    filter: drop-shadow(0 0 0px rgba(	255, 255, 255,1));
+    font-weight: 500;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rise span:hover{
+    color: #ff6bff;
+    transform: translateY(-10px);
+}
+
+  #lastopt
+  {
+    margin-left:5rem;
+    background-color: rgba(0,0,0,0);
+
+  }
+
+  .word{
+    background-color:transparent;
+  }
