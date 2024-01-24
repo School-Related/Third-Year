@@ -1,0 +1,260 @@
+% This is a Basic Assignment Paper but with like Code and stuff allowed in it, there is also url, hyperlinks from contents included. 
+
+\documentclass[11pt]{article}
+
+% Preamble
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb}
+\usepackage{fancyhdr, float, graphicx}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdfpagemode=FullScreen,
+    }
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\textit{\Large{OOPJC Mini Project Report}}}
+%\fancyhead[R]{\textit{something}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{1pt}
+
+
+
+% Other Doc Editing
+% \parindent 0ex
+%\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+% \begin{titlepage}
+% 	\centering
+
+% 	%---------------------------NAMES-------------------------------
+
+% 	\huge\textsc{
+% 		MIT World Peace University
+% 	}\\
+
+% 	\vspace{0.75\baselineskip} % space after Uni Name
+
+% 	\LARGE{
+% 		Object Oriented Programming with Java and C++\\
+% 		Second Year B. Tech, Semester 1
+% 	}
+
+% 	\vfill % space after Sub Name
+
+% 	%--------------------------TITLE-------------------------------
+
+% 	\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+% 	\rule{\textwidth}{0.6pt}
+% 	\vspace{0.75\baselineskip} % Whitespace above the title
+
+
+
+% 	\huge{\textsc{
+% 			Mini Project with Java - Price Guessing Game\\
+% 			\textit{"How Much?"}
+% 		}} \\
+
+
+
+% 	\vspace{0.5\baselineskip} % Whitespace below the title
+% 	\rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
+% 	\rule{\textwidth}{1.6pt}
+
+% 	\vspace{1\baselineskip} % Whitespace after the title block
+
+% 	%--------------------------SUBTITLE --------------------------	
+
+% 	\LARGE\textsc{
+% 		Project Report
+% 	} % Subtitle or further description
+% 	\vfill
+
+% 	%--------------------------AUTHOR-------------------------------
+
+% 	Prepared By
+% 	\vspace{0.5\baselineskip} % Whitespace before the editors
+
+% 	\Large{
+% 		Krishnaraj Thadesar \\
+% 		Cyber Security and Forensics\\
+% 		Batch A2, PA 20
+% 	}
+
+
+% 	\vspace{0.5\baselineskip} % Whitespace below the editor list
+% 	\today
+
+% \end{titlepage}
+
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\setcounter{page}{1}
+
+\section*{Top Face Recognition Algorithms - Source 1}
+
+\subsection*{Eigenfaces}
+This algorithm uses principal component analysis to extract features from the face image. It was one of the earliest algorithms for face recognition and is still used today in some applications.
+
+\subsection*{Fisherfaces}
+This algorithm is an extension of eigenfaces that takes into account the class labels of the face images. It has been shown to be more robust than eigenfaces in the presence of variations in lighting and expression.
+
+\subsection*{DeepFace}
+This algorithm uses a deep convolutional neural network to extract features from the face image. It was one of the first algorithms to achieve human-level performance on the Labeled Faces in the Wild dataset.
+
+\subsection*{FaceNet}
+This algorithm uses a triplet loss function to learn a mapping from face images to a high-dimensional feature space. It has achieved state-of-the-art performance on several face recognition benchmarks, including the LFW, AgeDB, CFP-FP, and IJB-C datasets.
+
+\subsection*{References}
+\begin{itemize}
+    \item Source: \url{https://jonascleveland.com/best-algorithms-for-face-recognition/}
+\end{itemize}
+
+
+\section*{Top Face Recognition Algorithms - Source 2}
+
+\subsection*{FaceNet}
+FaceNet is an algorithm based on a deep convolutional neural network (CNN), which can be used for face recognition, verification, and clustering.
+
+
+\subsection*{ArcFace}
+ArcFace is an ML model that tries to create a separation between a number of predefined different classes. 
+
+\subsection*{face.evoLVE}
+face.evoLVE is a popular and actively developed open source library that is primarily used for frontal face recognition. It provides all key components of face analytics, including face alignment, data processing, backbones, loss functions, and optimizations to improve performance.
+
+
+\subsection*{OpenFace}
+OpenFace is a tool for computer vision researchers building applications based on facial analysis and recognition.
+
+
+\subsection*{References}
+\begin{itemize}
+    \item Source: \url{https://datagen.tech/guides/face-recognition/facial-recognition-algorithm/}
+\end{itemize}
+
+
+\section*{DeepFace Library Face Recognition Models - Source 3}
+
+\subsection*{The Most Popular Face Recognition Models}
+The Most Popular Face Recognition Models While most alternative facial recognition libraries serve a single AI model, the DeepFace library wraps many cutting-edge face recognition models. Hence, it is the easiest way to use the Facebook DeepFace algorithm and all the other top face recognition algorithms below. The following deep learning face recognition algorithms can be used with the DeepFace library. Most of them are based on state-of-the-art Convolutional Neural Networks (CNN) and provide best-in-class results.
+
+\begin{enumerate}
+    \item VGC Face
+    \item Google Facenet
+    \item Openface
+    \item Facebook Deepface
+    \item Deepid
+    \item Dlib
+    \item Arcface
+\end{enumerate}
+
+
+\subsection*{References}
+\begin{itemize}
+    \item Source: \url{https://viso.ai/computer-vision/deepface/}
+\end{itemize}
+
+\section*{Top Face Recognition Algorithms Chat GPT - Source 4}
+\begin{enumerate}
+    \item \textbf{Eigenfaces}
+    \item \textbf{Fisherfaces}
+    \item \textbf{Local Binary Pattern (LBP)}
+    \item \textbf{LBPH (Local Binary Pattern Histograms)}
+    \item \textbf{DeepFace (Deep Learning-based)}
+    \item \textbf{DeepID}
+    \item \textbf{VGG-Face}
+    \item \textbf{OpenFace}
+    \item \textbf{ArcFace}
+    \item \textbf{FaceNet}
+\end{enumerate}
+
+\subsection*{References}
+\begin{itemize}
+    \item Source: Various
+\end{itemize}
+
+
+\section*{Additional Face Recognition Algorithm Information - Bard - Source 5}
+
+\subsection*{DeepFace (FaceNet):}
+Developed by Google, it utilizes a complex convolutional neural network to learn highly accurate face embeddings. Notably employed in Google Photos and verification systems.
+
+\subsection*{ArcFace:}
+Developed by Megvii, ArcFace focuses on maximizing the angular margin between representations of different identities, leading to improved discrimination and robustness. Widely used in commercial applications.
+
+\subsection*{CosFace:}
+Similar to ArcFace, CosFace uses a cosine similarity metric to compare face embeddings, achieving high accuracy and efficiency. Implemented in Face++ and other platforms.
+
+\subsection*{Triplet Loss:}
+Popularizes the idea of learning by comparing similar and dissimilar face pairs, providing robust representations under challenging conditions. Used in both research and commercial systems.
+
+\subsection*{Siamese Networks:}
+These networks compare two input images and learn to distinguish faces based on their similarity or dissimilarity. Used in verification tasks and gaining traction in research.
+
+\subsection*{LightCNN:}
+Designed for resource-constrained devices, LightCNN is a lightweight CNN offering surprisingly good accuracy with low computational requirements. Ideal for mobile applications and embedded systems.
+
+\subsection*{VGGFace:}
+An earlier CNN architecture adapted for face recognition, still relevant for its simplicity and decent performance. Utilized in research and benchmarking tasks.
+
+\subsection*{YOLO Face:}
+Combines face detection and recognition in a single deep learning model, providing real-time efficiency and good accuracy. Suitable for surveillance and video analysis applications.
+
+\subsection*{OpenFace:}
+An open-source framework based on various techniques, offering a flexible platform for research and development of face recognition algorithms.
+
+\subsection*{Eigenfaces:}
+A classic algorithm using PCA to extract facial features and compare them with a database of eigenfaces. Though less accurate than deep learning methods, it offers historical significance and understanding of early face recognition concepts.
+
+\subsection*{References:}
+Various sources mentioned in previous responses.
+
+
+
+\end{document}

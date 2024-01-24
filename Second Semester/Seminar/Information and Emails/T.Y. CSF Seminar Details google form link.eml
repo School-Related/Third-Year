@@ -1,0 +1,116 @@
+Received: by 2002:ac8:4dd4:0:b0:42a:481d:a06 with SMTP id g20csp928933qtw;
+        Wed, 24 Jan 2024 04:32:21 -0800 (PST)
+Received: from mail-sor-f55.google.com (mail-sor-f55.google.com. [209.85.220.55])
+        by mx.google.com with SMTPS id d81-20020a256854000000b00dc608c33efesor601560ybc.6.2024.01.24.04.32.20
+        for <1032210888@mitwpu.edu.in>
+        (Google Transport Security);
+        Wed, 24 Jan 2024 04:32:20 -0800 (PST)
+Received: by 2002:a05:6870:818d:b0:206:caac:57dd with SMTP id
+ k13-20020a056870818d00b00206caac57ddls1407329oae.0.-pod-prod-07-us; Wed, 24
+ Jan 2024 04:31:58 -0800 (PST)
+Received: from mail-pg1-x52b.google.com (mail-pg1-x52b.google.com. [2607:f8b0:4864:20::52b])
+        by gmr-mx.google.com with ESMTPS id qa6-20020a056871e70600b0021450f47812si722381oac.0.2024.01.24.04.31.58
+        for <sycsf2021-25@googlegroups.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 24 Jan 2024 04:31:58 -0800 (PST)
+Received: by mail-pg1-x52b.google.com with SMTP id 41be03b00d2f7-5d4a1e66750so492367a12.0
+        for <sycsf2021-25@googlegroups.com>; Wed, 24 Jan 2024 04:31:58 -0800 (PST)
+From: Seema Idhate <seema.idhate@mitwpu.edu.in>
+To: SY CSF 2022-23 <sycsf2021-25@googlegroups.com>
+CC: Coordinator <schoolofcet.csf@mitwpu.edu.in>, JAYSHREE AHER
+	<jayshree.aher@mitwpu.edu.in>, Vinayak Musale <vinayak.musale@mitwpu.edu.in>
+Subject: T.Y. CSF Seminar Details google form link
+Thread-Topic: T.Y. CSF Seminar Details google form link
+Thread-Index: AXc3eWoy7q6xtCpyTu8sDD+RFQ71KA==
+Sender: "sycsf2021-25@googlegroups.com" <sycsf2021-25@googlegroups.com>
+X-MS-Exchange-MessageSentRepresentingType: 2
+Date: Wed, 24 Jan 2024 12:30:00 +0000
+Message-ID:
+	<CAJAwKrb6F2YQFdCR1vKjVvoLOBgUayYwCVmT+7j7bJnmsUT10w@mail.gmail.com>
+List-Help: <https://groups.google.com/support/>,
+ <mailto:sycsf2021-25+help@googlegroups.com>
+List-Unsubscribe:
+	<mailto:googlegroups-manage+1035915115274+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/sycsf2021-25/subscribe>
+Content-Language: en-US
+X-MS-Has-Attach:
+X-Auto-Response-Suppress: All
+X-MS-Exchange-Organization-SCL: -1
+X-MS-TNEF-Correlator:
+X-MS-Exchange-Organization-RecordReviewCfmType: 0
+received-spf: pass (google.com: domain of seema.idhate@mitwpu.edu.in
+ designates 2607:f8b0:4864:20::52b as permitted sender)
+ client-ip=2607:f8b0:4864:20::52b;
+Content-Type: multipart/alternative;
+	boundary="_000_CAJAwKrb6F2YQFdCR1vKjVvoLOBgUayYwCVmT7j7bJnmsUT10wmailg_"
+MIME-Version: 1.0
+
+--_000_CAJAwKrb6F2YQFdCR1vKjVvoLOBgUayYwCVmT7j7bJnmsUT10wmailg_
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
+
+RGVhciBBbGwgVFlDU0YgU3R1ZGVudHMNCkZpbmQgdGhlIGdvb2dsZSBmb3JtIGxpbmsgZm9yIHNl
+bWluYXIgZGV0YWlscywgU3VibWl0IHRoaXMgR29vZ2xlIEZvcm0gdGlsbCAyNS8wMS8yMDI0IGJ5
+IDYgcG0NCg0KaHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vZm9ybXMvZC9lLzFGQUlwUUxTZnlqZG9H
+RUJncGVtZWpMczJia19laXV0d0NRTHhrUy1lekNmTlZzQ0dQUmRiZVBRL3ZpZXdmb3JtP3VzcD1z
+Zl9saW5rDQpSZWdhcmRzLA0KTXJzLiBTZWVtYSBJZGhhdGUNCkFzc2lzdGFudCBQcm9mZXNzb3IN
+ClNjaG9vbCBvZiBDb21wdXRlciBFbmdpbmVlcmluZyBhbmQgVGVjaG5vbG9neSwNCiBNSVQtV1BV
+LCBLb3RocnVkLCBQdW5lDQoNCi0tDQpZb3UgcmVjZWl2ZWQgdGhpcyBtZXNzYWdlIGJlY2F1c2Ug
+eW91IGFyZSBzdWJzY3JpYmVkIHRvIHRoZSBHb29nbGUgR3JvdXBzICJ0eWNzZjIwMjEtMjVAZ29v
+Z2xlZ3JvdXBzLmNvbSIgZ3JvdXAuDQpUbyB1bnN1YnNjcmliZSBmcm9tIHRoaXMgZ3JvdXAgYW5k
+IHN0b3AgcmVjZWl2aW5nIGVtYWlscyBmcm9tIGl0LCBzZW5kIGFuIGVtYWlsIHRvIHN5Y3NmMjAy
+MS0yNSt1bnN1YnNjcmliZUBnb29nbGVncm91cHMuY29tPG1haWx0bzpzeWNzZjIwMjEtMjUrdW5z
+dWJzY3JpYmVAZ29vZ2xlZ3JvdXBzLmNvbT4uDQpUbyB2aWV3IHRoaXMgZGlzY3Vzc2lvbiBvbiB0
+aGUgd2ViLCB2aXNpdCBodHRwczovL2dyb3Vwcy5nb29nbGUuY29tL2QvbXNnaWQvc3ljc2YyMDIx
+LTI1L0NBSkF3S3JiNkYyWVFGZENSMXZLalZ2b0xPQmdVYXlZd0NWbVQlMkI3ajdiSm5tc1VUMTB3
+JTQwbWFpbC5nbWFpbC5jb208aHR0cHM6Ly9ncm91cHMuZ29vZ2xlLmNvbS9kL21zZ2lkL3N5Y3Nm
+MjAyMS0yNS9DQUpBd0tyYjZGMllRRmRDUjF2S2pWdm9MT0JnVWF5WXdDVm1UJTJCN2o3YkpubXNV
+VDEwdyU0MG1haWwuZ21haWwuY29tP3V0bV9tZWRpdW09ZW1haWwmdXRtX3NvdXJjZT1mb290ZXI+
+Lg0KRm9yIG1vcmUgb3B0aW9ucywgdmlzaXQgaHR0cHM6Ly9ncm91cHMuZ29vZ2xlLmNvbS9kL29w
+dG91dC4NCg==
+
+--_000_CAJAwKrb6F2YQFdCR1vKjVvoLOBgUayYwCVmT7j7bJnmsUT10wmailg_
+Content-Type: text/html; charset="utf-8"
+Content-ID: <200DBB70A92C474BA42DCA5C74766070@1>
+Content-Transfer-Encoding: base64
+
+PGh0bWw+DQo8aGVhZD4NCjxtZXRhIGh0dHAtZXF1aXY9IkNvbnRlbnQtVHlwZSIgY29udGVudD0i
+dGV4dC9odG1sOyBjaGFyc2V0PXV0Zi04Ij4NCjwvaGVhZD4NCjxib2R5Pg0KPGRpdiBkaXI9Imx0
+ciI+DQo8ZGl2Pg0KPGRpdj5EZWFyIEFsbCBUWUNTRiBTdHVkZW50cyZuYnNwOzwvZGl2Pg0KPGRp
+dj48c3BhbiBzdHlsZT0iY29sb3I6cmdiKDMyLDMzLDM2KTtmb250LWZhbWlseTpkb2NzLVJvYm90
+bztmb250LXNpemU6MTQuNjY2N3B4Ij5GaW5kIHRoZSBnb29nbGUgZm9ybSBsaW5rIGZvciBzZW1p
+bmFyIGRldGFpbHMsIFN1Ym1pdCB0aGlzIEdvb2dsZSBGb3JtIHRpbGwgMjUvMDEvMjAyNCBieSA2
+IHBtPC9zcGFuPjwvZGl2Pg0KPC9kaXY+DQo8ZGl2Pjxicj4NCjwvZGl2Pg0KPGEgaHJlZj0iaHR0
+cHM6Ly9kb2NzLmdvb2dsZS5jb20vZm9ybXMvZC9lLzFGQUlwUUxTZnlqZG9HRUJncGVtZWpMczJi
+a19laXV0d0NRTHhrUy1lekNmTlZzQ0dQUmRiZVBRL3ZpZXdmb3JtP3VzcD1zZl9saW5rIj5odHRw
+czovL2RvY3MuZ29vZ2xlLmNvbS9mb3Jtcy9kL2UvMUZBSXBRTFNmeWpkb0dFQmdwZW1lakxzMmJr
+X2VpdXR3Q1FMeGtTLWV6Q2ZOVnNDR1BSZGJlUFEvdmlld2Zvcm0/dXNwPXNmX2xpbms8L2E+PGJy
+IGNsZWFyPSJhbGwiPg0KPGRpdj4NCjxkaXYgZGlyPSJsdHIiIGNsYXNzPSJnbWFpbF9zaWduYXR1
+cmUiIGRhdGEtc21hcnRtYWlsPSJnbWFpbF9zaWduYXR1cmUiPg0KPGRpdiBkaXI9Imx0ciI+PGZv
+bnQgc2l6ZT0iMSIgc3R5bGU9ImNvbG9yOnJnYigzNCwzNCwzNCkiPjxmb250IGZhY2U9ImNvbWlj
+IHNhbnMgbXMsIHNhbnMtc2VyaWYiPlJlZ2FyZHMsPC9mb250Pjxicj4NCjxmb250IGZhY2U9ImNv
+bWljIHNhbnMgbXMsIHNhbnMtc2VyaWYiPjxiPk1ycy4gU2VlbWEgSWRoYXRlPC9iPjwvZm9udD48
+L2ZvbnQ+DQo8ZGl2IHN0eWxlPSJjb2xvcjpyZ2IoMzQsMzQsMzQpIj48c3BhbiBzdHlsZT0iZm9u
+dC1mYW1pbHk6JnF1b3Q7Y29taWMgc2FucyBtcyZxdW90OyxzYW5zLXNlcmlmO2ZvbnQtc2l6ZTp4
+LXNtYWxsIj5Bc3Npc3RhbnQgUHJvZmVzc29yPC9zcGFuPg0KPGRpdj48Zm9udCBzaXplPSIxIj48
+Zm9udCBmYWNlPSJjb21pYyBzYW5zIG1zLCBzYW5zLXNlcmlmIj5TY2hvb2wgb2YgQ29tcHV0ZXIg
+RW5naW5lZXJpbmcgYW5kIFRlY2hub2xvZ3ksPC9mb250Pjxicj4NCjxmb250IGZhY2U9ImNvbWlj
+IHNhbnMgbXMsIHNhbnMtc2VyaWYiPiZuYnNwO01JVC1XUFUsIEtvdGhydWQsIFB1bmU8L2ZvbnQ+
+PC9mb250PjwvZGl2Pg0KPC9kaXY+DQo8L2Rpdj4NCjwvZGl2Pg0KPC9kaXY+DQo8L2Rpdj4NCjxw
+PjwvcD4NCi0tIDxicj4NCllvdSByZWNlaXZlZCB0aGlzIG1lc3NhZ2UgYmVjYXVzZSB5b3UgYXJl
+IHN1YnNjcmliZWQgdG8gdGhlIEdvb2dsZSBHcm91cHMgJnF1b3Q7dHljc2YyMDIxLTI1QGdvb2ds
+ZWdyb3Vwcy5jb20mcXVvdDsgZ3JvdXAuPGJyPg0KVG8gdW5zdWJzY3JpYmUgZnJvbSB0aGlzIGdy
+b3VwIGFuZCBzdG9wIHJlY2VpdmluZyBlbWFpbHMgZnJvbSBpdCwgc2VuZCBhbiBlbWFpbCB0bw0K
+PGEgaHJlZj0ibWFpbHRvOnN5Y3NmMjAyMS0yNSt1bnN1YnNjcmliZUBnb29nbGVncm91cHMuY29t
+Ij5zeWNzZjIwMjEtMjUrdW5zdWJzY3JpYmVAZ29vZ2xlZ3JvdXBzLmNvbTwvYT4uPGJyPg0KVG8g
+dmlldyB0aGlzIGRpc2N1c3Npb24gb24gdGhlIHdlYiwgdmlzaXQgPGEgaHJlZj0iaHR0cHM6Ly9n
+cm91cHMuZ29vZ2xlLmNvbS9kL21zZ2lkL3N5Y3NmMjAyMS0yNS9DQUpBd0tyYjZGMllRRmRDUjF2
+S2pWdm9MT0JnVWF5WXdDVm1UJTJCN2o3YkpubXNVVDEwdyU0MG1haWwuZ21haWwuY29tP3V0bV9t
+ZWRpdW09ZW1haWwmYW1wO3V0bV9zb3VyY2U9Zm9vdGVyIj4NCmh0dHBzOi8vZ3JvdXBzLmdvb2ds
+ZS5jb20vZC9tc2dpZC9zeWNzZjIwMjEtMjUvQ0FKQXdLcmI2RjJZUUZkQ1IxdktqVnZvTE9CZ1Vh
+eVl3Q1ZtVCUyQjdqN2JKbm1zVVQxMHclNDBtYWlsLmdtYWlsLmNvbTwvYT4uPGJyPg0KRm9yIG1v
+cmUgb3B0aW9ucywgdmlzaXQgPGEgaHJlZj0iaHR0cHM6Ly9ncm91cHMuZ29vZ2xlLmNvbS9kL29w
+dG91dCI+aHR0cHM6Ly9ncm91cHMuZ29vZ2xlLmNvbS9kL29wdG91dDwvYT4uPGJyPg0KPC9ib2R5
+Pg0KPC9odG1sPg0K
+
+--_000_CAJAwKrb6F2YQFdCR1vKjVvoLOBgUayYwCVmT7j7bJnmsUT10wmailg_--
