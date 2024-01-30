@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.1.29)  29 JAN 2024 22:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.1.29)  30 JAN 2024 21:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"p:/Classes/Univeristy/Third Year/Second Semester/Mini Project/docs/synopsis.tex"
-(p:/Classes/Univeristy/Third Year/Second Semester/Mini Project/docs/synopsis.tex
+**"p:/Classes/Univeristy/Third Year/Second Semester/Seminar/Documentation/3_project_synopsis.tex"
+(p:/Classes/Univeristy/Third Year/Second Semester/Seminar/Documentation/3_project_synopsis.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -543,8 +543,8 @@ LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count316
 \l__pdf_internal_box=\box57
-) (synopsis.aux)
-\openout1 = `synopsis.aux'.
+) (3_project_synopsis.aux)
+\openout1 = `3_project_synopsis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
@@ -640,9 +640,9 @@ LaTeX Font Info:    Redeclaring math accent \widehat on input line 68.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 68.
 \c@lstlisting=\count323
 Package hyperref Info: Link coloring ON on input line 68.
- (synopsis.out) (synopsis.out)
+ (3_project_synopsis.out) (3_project_synopsis.out)
 \@outlinefile=\write3
-\openout3 = `synopsis.out'.
+\openout3 = `3_project_synopsis.out'.
 
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 19.28804pt on input line 75.
@@ -650,80 +650,91 @@ LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
 (Font)              scaled to size 19.28804pt on input line 78.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 16.07027pt on input line 82.
-LaTeX Font Info:    Font shape `T1/fnc/b/sc' will be
-(Font)              scaled to size 19.28804pt on input line 100.
 LaTeX Font Info:    Font shape `T1/fnc/m/sc' will be
-(Font)              scaled to size 16.07027pt on input line 114.
+(Font)              scaled to size 16.07027pt on input line 113.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 13.39188pt on input line 122.
+(Font)              scaled to size 13.39188pt on input line 121.
  [1
 
 {C:/Users/Krishnaraj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 13.39188pt on input line 138.
- (synopsis.toc
+(Font)              scaled to size 13.39188pt on input line 133.
+ (3_project_synopsis.toc
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 10.18341pt on input line 1.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 7.71893pt on input line 5.
+(Font)              scaled to size 7.71893pt on input line 2.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 5.57996pt on input line 5.
+(Font)              scaled to size 5.57996pt on input line 2.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 5.
+(Font)              scaled to size 10.07397pt on input line 2.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 5.
+(Font)              scaled to size 7.63599pt on input line 2.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 5.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+(Font)              scaled to size 5.51999pt on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for FML+fncm on input line 5.
+LaTeX Font Info:    Trying to load font information for FML+fncm on input line 2.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/fouriernc\fmlfncm.fd
 File: fmlfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncm.
 )
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 5.
+(Font)              scaled to size 10.07397pt on input line 2.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 5.
+(Font)              scaled to size 7.63599pt on input line 2.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 5.
+(Font)              scaled to size 5.51999pt on input line 2.
+
+Overfull \hbox (0.57306pt too wide) in paragraph at lines 5--5
+ [] [][][]\T1/fnc/b/n/10.95 Comparitive Anal-y-sis of At-ten-dence Mon-i-tor-ing Sys-tems De-vel-oped and used World- 
+ []
+
 )
 \tf@toc=\write4
-\openout4 = `synopsis.toc'.
+\openout4 = `3_project_synopsis.toc'.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.140 \clearpage
+l.135 \clearpage
                  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
-
+Overfull \hbox (16.76913pt too wide) in paragraph at lines 139--139
+[]\T1/fnc/b/n/14.4 Comparision be-tween Face Recog-ni-tion Al-go-rithms and Tech-niques 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
-
- []
-
-LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 10.18341pt on input line 153.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 11.15991pt on input line 168.
+(Font)              scaled to size 11.15991pt on input line 141.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 11.15991pt on input line 168.
+(Font)              scaled to size 11.15991pt on input line 141.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 151.
+(C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+Overfull \hbox (16.03343pt too wide) in paragraph at lines 149--152
+\T1/fnc/m/n/10.95 of the Thirty-First Asilo-mar Con-fer-ence on Sig-nals, Sys-tems and Com-put-ers (Cat. No.97CB36136),
+ []
+
+
+Overfull \hbox (10.41011pt too wide) in paragraph at lines 149--152
+\T1/fnc/m/n/10.95 Face recog-ni-tion;Testing;Image seg-men-ta-tion;Image databases;Neural net-works;Biometrics;Face
+ []
+
+
+Overfull \hbox (0.64642pt too wide) in paragraph at lines 149--152
+\T1/fnc/m/n/10.95 de-tec-tion;Layout;Mouth;Vectors, URL: [][]$\T1/cmtt/m/n/10.95 https : / / ieeexplore . ieee . org / abstract / document /
+ []
+
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 13.39188pt on input line 171.
+(Font)              scaled to size 10.18341pt on input line 160.
+LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
+(Font)              scaled to size 13.39188pt on input line 160.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -735,23 +746,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.171     \item R
-                 aspberry Pi High-Quality Camera [1
+l.160 
+       [1
 
 ]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[2]
-<aws estimate.jpg, id=101, 860.21375pt x 860.21375pt>
-File: aws estimate.jpg Graphic file (type jpg)
-<use aws estimate.jpg>
-Package pdftex.def Info: aws estimate.jpg  used on input line 209.
-(pdftex.def)             Requested size: 446.26582pt x 446.27678pt.
+Overfull \hbox (4.3527pt too wide) in paragraph at lines 176--177
+[][][]\T1/fnc/b/n/10.95 Impact of data vi-su-al-iza-tion on decision-making and its im-pli-ca-tions for pub-lic health
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -760,34 +761,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[3 <./aws estimate.jpg>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.93642pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.93642pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
-
-[4] (synopsis.aux)
+[2] (3_project_synopsis.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
-Package rerunfilecheck Info: File `synopsis.out' has not changed.
-(rerunfilecheck)             Checksum: DC49AE3283030AC7E678BB49FE75426B;2267.
+Package rerunfilecheck Info: File `3_project_synopsis.out' has not changed.
+(rerunfilecheck)             Checksum: 2164E60A83FAF619F2650EECBCBCCA81;2373.
  ) 
 Here is how much of TeX's memory you used:
- 13251 strings out of 474542
- 202772 string characters out of 5742086
+ 13234 strings out of 474542
+ 203159 string characters out of 5742086
  1933978 words of memory out of 5000000
- 35237 multiletter control sequences out of 15000+600000
- 604994 words of font info for 88 fonts, out of 8000000 for 9000
+ 35233 multiletter control sequences out of 15000+600000
+ 601362 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,79p,614b,545s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncb8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncr8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on synopsis.pdf (6 pages, 169236 bytes).
+ 75i,12n,79p,1505b,530s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncb8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncr8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+Output written on 3_project_synopsis.pdf (4 pages, 72371 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 145 PDF objects out of 1000 (max. 8388607)
+ 20 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

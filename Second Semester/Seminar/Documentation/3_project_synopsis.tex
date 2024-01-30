@@ -1,0 +1,183 @@
+% This is a Basic Assignment Paper but with like Code and stuff allowed in it, there is also url, hyperlinks from contents included. 
+
+\documentclass[11pt]{article}
+
+% Preamble
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage{fancyhdr, float, graphicx}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=codepurple,
+    pdfpagemode=FullScreen,
+    }
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\textit{\Large{Seminar}}}
+\fancyhead[R]{\textit{krishnaraj T}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{1pt}
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}[thm]{Definition}
+
+
+% Other Doc Editing
+% \parindent 0ex
+%\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+
+    %---------------------------NAMES-------------------------------
+
+    \huge\textsc{
+        MIT World Peace University\\
+        School of Computer Science and Engineering
+    }\\
+
+    \vspace{0.75\baselineskip} % space after Uni Name
+
+    \LARGE{
+        Seminar\\
+        Third Year B. Tech, Semester 6
+    }
+
+    \vfill % space after Sub Name
+
+    %--------------------------TITLE-------------------------------
+
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.6pt}
+    \vspace{0.75\baselineskip} % Whitespace above the title
+
+
+
+    \huge{\textsc{
+        Synopsis for 3 Seminar Topics 
+    }} \\
+
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the title
+    \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
+    \rule{\textwidth}{1.6pt}
+
+    \vspace{1\baselineskip} % Whitespace after the title block
+
+    %--------------------------SUBTITLE --------------------------	
+
+    \LARGE\textsc{
+        Title, Description and Papers\\
+    } % Subtitle or further description
+    \vfill
+
+    %--------------------------AUTHOR-------------------------------
+
+    Prepared By
+    \vspace{0.5\baselineskip} % Whitespace before the editors
+
+    \Large{
+        PA10. Krishnaraj Thadesar - 1032210888\\
+        Cyber Security and Forensics\\
+    }
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the editor list
+    \today
+
+\end{titlepage}
+
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\setcounter{page}{1}
+
+\section{Comparision between Face Recognition Algorithms and Techniques}
+
+\subsection{Domains}
+Machine Learning and Artificial Intelligence
+\subsection{Description}
+My seminar is about comparing different ways of recognizing faces using computers. We'll look at both old and new methods. Some old ones, like Eigenfaces and Fisherfaces, use math to find face features. Then there are newer methods like DeepFace, FaceNet, and ArcFace that use deep learning and complex networks to do the job. We'll dig into each method's pros and cons – how well they work, if they handle different lighting and face angles, how fast they are, and if they can handle a lot of data. I'll also talk about some newer ideas like Siamese Networks and Triplet Loss, plus a lightweight method called LightCNN. The goal is to help people understand these techniques and pick the right one for their needs, whether they're researchers, developers, or just curious about where face recognition is headed. This topic is related to my Mini project, which is Attendence via Face Recognition in Every class. So research pertaining to it crucial for me to decide which algorithm I have to implement.
+
+\subsection{Papers Referred}
+\begin{enumerate}
+    \item \href{https://www.ehu.eus/ccwintco/uploads/d/d2/PFC-IonMarqu%C3%A9s.pdf}{\textbf{Face Recognition Algorithms}}
+    \item W. A. Barrett, "A survey of face recognition algorithms and testing results," Conference Record of the Thirty-First Asilomar Conference on Signals, Systems and Computers (Cat. No.97CB36136), Pacific Grove, CA, USA, 1997, pp. 301-305 vol.1, doi: 10.1109/ACSSC.1997.680208.
+    keywords: {Face recognition;Testing;Image segmentation;Image databases;Neural networks;Biometrics;Face detection;Layout;Mouth;Vectors},
+    URL: \url{https://ieeexplore.ieee.org/abstract/document/680208}
+    
+\end{enumerate}
+
+\section{Comparitive Analysis of Attendence Monitoring Systems Developed and used Worldwide}
+\subsection{Domains}
+Data Analysis
+\subsection{Description}
+The seminar topic focuses on conducting a comparative analysis of attendance monitoring systems that have been developed and implemented globally. This study aims to examine various attendance tracking methods, their functionalities, and widespread applications across different industries. The analysis encompasses traditional attendance systems, such as manual methods and basic card-based systems, comparing them with more advanced technologies like biometric systems, RFID (Radio-Frequency Identification), and facial recognition-based attendance systems. Each method will be evaluated based on factors like accuracy, ease of use, scalability, and adaptability to diverse environments. The seminar explores the advantages and disadvantages of these systems, taking into account their cost-effectiveness, reliability, and potential challenges, especially in the context of different educational institutions, workplaces, and organizations. By delving into worldwide implementations, the aim is to provide insights into the practicality and efficiency of these systems across various cultural and operational settings. The goal of this comparative analysis is to offer a comprehensive understanding of attendance monitoring systems, enabling stakeholders to make informed decisions about adopting the most suitable solution based on their specific needs and organizational requirements.
+
+\subsection{Papers Referred}
+\begin{enumerate}
+    \item \href{https://www.tandfonline.com/doi/abs/10.1080/03075070802457066}{\textbf{A large‐scale investigation into the relationship between attendance and attainment: a study using an innovative, electronic attendance monitoring system}}
+\end{enumerate}
+
+\section{Studying the Impact of Data Visualization and Analysis on Real Life Decision Making }
+\subsection{Domains}
+Data Analysis and Visualization
+\subsection{Description}
+
+The seminar, "Impact of Data Visualization and Analysis on Real-Life Decision Making," explores how using pictures and analyzing data can really change the way people make decisions in different jobs. We'll look at real examples where looking at data in a visual way has helped organizations make better choices. We'll talk about how clear pictures and accurate data can help people understand complex information. The seminar will also discuss challenges, like possible mistakes and ethical issues, that can come up when working with data. We'll look at how businesses use tools to see data better and make smart decisions. By the end, attendees will understand how using data and visualizations can really make a difference in everyday decision-making.
+
+
+\subsection{Papers Referred}
+\begin{enumerate}
+    \item \href{https://www.tandfonline.com/doi/abs/10.1080/17538157.2021.1982949}{\textbf{Impact of data visualization on decision-making and its implications for public health practice: a systematic literature review}}
+\end{enumerate}
+
+\clearpage
+
+\pagebreak
+
+\end{document}
