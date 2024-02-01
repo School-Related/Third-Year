@@ -53,6 +53,340 @@
         "documentation": {}
     },
     {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "HTMLResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "train_field_classifier",
+        "importPath": "trainers.train_field_classifier",
+        "description": "trainers.train_field_classifier",
+        "isExtraImport": true,
+        "detail": "trainers.train_field_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "get_profession_from_blob",
+        "importPath": "trainers.run_field_classifier",
+        "description": "trainers.run_field_classifier",
+        "isExtraImport": true,
+        "detail": "trainers.run_field_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "guess_gender",
+        "importPath": "trainers.run_guess_gender",
+        "description": "trainers.run_guess_gender",
+        "isExtraImport": true,
+        "detail": "trainers.run_guess_gender",
+        "documentation": {}
+    },
+    {
+        "label": "get_google_links",
+        "importPath": "web_scrappers.dork_sites",
+        "description": "web_scrappers.dork_sites",
+        "isExtraImport": true,
+        "detail": "web_scrappers.dork_sites",
+        "documentation": {}
+    },
+    {
+        "label": "get_google_images",
+        "importPath": "web_scrappers.get_google_images",
+        "description": "web_scrappers.get_google_images",
+        "isExtraImport": true,
+        "detail": "web_scrappers.get_google_images",
+        "documentation": {}
+    },
+    {
+        "label": "get_github_info",
+        "importPath": "web_scrappers.github_scrapper",
+        "description": "web_scrappers.github_scrapper",
+        "isExtraImport": true,
+        "detail": "web_scrappers.github_scrapper",
+        "documentation": {}
+    },
+    {
+        "label": "get_github_people_images",
+        "importPath": "web_scrappers.github_scrapper",
+        "description": "web_scrappers.github_scrapper",
+        "isExtraImport": true,
+        "detail": "web_scrappers.github_scrapper",
+        "documentation": {}
+    },
+    {
+        "label": "make_blob_by_scrapping",
+        "importPath": "web_scrappers.make_blob_by_scrapping",
+        "description": "web_scrappers.make_blob_by_scrapping",
+        "isExtraImport": true,
+        "detail": "web_scrappers.make_blob_by_scrapping",
+        "documentation": {}
+    },
+    {
+        "label": "get_breach_info",
+        "importPath": "web_scrappers.breachdirApi",
+        "description": "web_scrappers.breachdirApi",
+        "isExtraImport": true,
+        "detail": "web_scrappers.breachdirApi",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_text_from_search_query",
+        "importPath": "web_scrappers.textscrapping",
+        "description": "web_scrappers.textscrapping",
+        "isExtraImport": true,
+        "detail": "web_scrappers.textscrapping",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "joblib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "joblib",
+        "description": "joblib",
+        "detail": "joblib",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "CountVectorizer",
+        "importPath": "sklearn.feature_extraction.text",
+        "description": "sklearn.feature_extraction.text",
+        "isExtraImport": true,
+        "detail": "sklearn.feature_extraction.text",
+        "documentation": {}
+    },
+    {
+        "label": "TfidfVectorizer",
+        "importPath": "sklearn.feature_extraction.text",
+        "description": "sklearn.feature_extraction.text",
+        "isExtraImport": true,
+        "detail": "sklearn.feature_extraction.text",
+        "documentation": {}
+    },
+    {
+        "label": "MultinomialNB",
+        "importPath": "sklearn.naive_bayes",
+        "description": "sklearn.naive_bayes",
+        "isExtraImport": true,
+        "detail": "sklearn.naive_bayes",
+        "documentation": {}
+    },
+    {
+        "label": "MultinomialNB",
+        "importPath": "sklearn.naive_bayes",
+        "description": "sklearn.naive_bayes",
+        "isExtraImport": true,
+        "detail": "sklearn.naive_bayes",
+        "documentation": {}
+    },
+    {
+        "label": "make_pipeline",
+        "importPath": "sklearn.pipeline",
+        "description": "sklearn.pipeline",
+        "isExtraImport": true,
+        "detail": "sklearn.pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "search",
+        "importPath": "googlesearch",
+        "description": "googlesearch",
+        "isExtraImport": true,
+        "detail": "googlesearch",
+        "documentation": {}
+    },
+    {
+        "label": "search",
+        "importPath": "googlesearch",
+        "description": "googlesearch",
+        "isExtraImport": true,
+        "detail": "googlesearch",
+        "documentation": {}
+    },
+    {
+        "label": "search",
+        "importPath": "googlesearch",
+        "description": "googlesearch",
+        "isExtraImport": true,
+        "detail": "googlesearch",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "importPath": "dateutil.parser",
+        "description": "dateutil.parser",
+        "isExtraImport": true,
+        "detail": "dateutil.parser",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "importPath": "dateutil.parser",
+        "description": "dateutil.parser",
+        "isExtraImport": true,
+        "detail": "dateutil.parser",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "routes.basic",
+        "description": "routes.basic",
+        "isExtraImport": true,
+        "detail": "routes.basic",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "routes.trainer",
+        "description": "routes.trainer",
+        "isExtraImport": true,
+        "detail": "routes.trainer",
+        "documentation": {}
+    },
+    {
         "label": "MainSlide",
         "kind": 6,
         "importPath": "Active Learning.main2",
@@ -374,6 +708,339 @@
         "description": "Programs.Assignment_2.8_PuzzleProblem",
         "peekOfCode": "game_over = False\n# Define the function for drawing the grid\ndef draw_grid():\n    for i in range(GRID_WIDTH):\n        for j in range(GRID_HEIGHT):\n            rect = pygame.Rect(i * TILE_WIDTH, j * TILE_HEIGHT, TILE_WIDTH, TILE_HEIGHT)\n            pygame.draw.rect(screen, WHITE, rect, 1)\n# Define the function for drawing the tiles\ndef draw_tiles():\n    for i in range(GRID_WIDTH):",
         "detail": "Programs.Assignment_2.8_PuzzleProblem",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "Project.back-end.routes.basic",
+        "description": "Project.back-end.routes.basic",
+        "peekOfCode": "def index():\n    return {\"message\": \"Hello\"}",
+        "detail": "Project.back-end.routes.basic",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "Project.back-end.routes.basic",
+        "description": "Project.back-end.routes.basic",
+        "peekOfCode": "router = APIRouter(\n    prefix=\"/test\",\n    tags=[\"Test\"]\n)\n@router.get(\"/\")\ndef index():\n    return {\"message\": \"Hello\"}",
+        "detail": "Project.back-end.routes.basic",
+        "documentation": {}
+    },
+    {
+        "label": "TrainModelInputModel",
+        "kind": 6,
+        "importPath": "Project.back-end.routes.trainer",
+        "description": "Project.back-end.routes.trainer",
+        "peekOfCode": "class TrainModelInputModel( BaseModel ) :\n    first_name: str\n    last_name: str\n    city: str\n    email: Optional[ str ] | None = None\n    github: Optional[ str ] | None = None\n    workplace: Optional[ str ] | None = None\n@router.post( \"/train_models\" )\ndef start_train_dork_sites( Data: TrainModelInputModel ) :\n    # get names from request",
+        "detail": "Project.back-end.routes.trainer",
+        "documentation": {}
+    },
+    {
+        "label": "start_train_dork_sites",
+        "kind": 2,
+        "importPath": "Project.back-end.routes.trainer",
+        "description": "Project.back-end.routes.trainer",
+        "peekOfCode": "def start_train_dork_sites( Data: TrainModelInputModel ) :\n    # get names from request\n    first_name = Data.first_name\n    last_name = Data.last_name\n    city = Data.city\n    email = Data.email\n    github = Data.github\n    workplace = Data.workplace\n    # print everything\n    print( f\"First name: {first_name}\" )",
+        "detail": "Project.back-end.routes.trainer",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "Project.back-end.routes.trainer",
+        "description": "Project.back-end.routes.trainer",
+        "peekOfCode": "router = APIRouter(\n        prefix = \"/train\",\n        tags = [ \"Train\" ]\n)\nclass TrainModelInputModel( BaseModel ) :\n    first_name: str\n    last_name: str\n    city: str\n    email: Optional[ str ] | None = None\n    github: Optional[ str ] | None = None",
+        "detail": "Project.back-end.routes.trainer",
+        "documentation": {}
+    },
+    {
+        "label": "train_gender_classifier",
+        "kind": 2,
+        "importPath": "Project.back-end.trainers.guess_genders",
+        "description": "Project.back-end.trainers.guess_genders",
+        "peekOfCode": "def train_gender_classifier(csv_file):\n    # Load data from CSV file\n    df = pd.read_csv(csv_file)\n    # Create a pipeline with CountVectorizer and Multinomial Naive Bayes\n    model = make_pipeline(CountVectorizer(), MultinomialNB())\n    # Train the model\n    model.fit(df['name'], df['gender'])\n    # Return the trained model\n    return model\ndef predict_gender(model, name):",
+        "detail": "Project.back-end.trainers.guess_genders",
+        "documentation": {}
+    },
+    {
+        "label": "predict_gender",
+        "kind": 2,
+        "importPath": "Project.back-end.trainers.guess_genders",
+        "description": "Project.back-end.trainers.guess_genders",
+        "peekOfCode": "def predict_gender(model, name):\n    # Predict the gender for the given name\n    predicted_gender = model.predict([name])\n    # Return the predicted gender\n    return predicted_gender[0]\ndef export_model(model, output_path):\n    # Export the model using joblib\n    joblib.dump(model, output_path)\n    print(f\"Model exported to {output_path}\")\n# Example usage:",
+        "detail": "Project.back-end.trainers.guess_genders",
+        "documentation": {}
+    },
+    {
+        "label": "export_model",
+        "kind": 2,
+        "importPath": "Project.back-end.trainers.guess_genders",
+        "description": "Project.back-end.trainers.guess_genders",
+        "peekOfCode": "def export_model(model, output_path):\n    # Export the model using joblib\n    joblib.dump(model, output_path)\n    print(f\"Model exported to {output_path}\")\n# Example usage:\ntrained_model = train_gender_classifier(csv_file_path)\n# Export the trained model\nexport_model(trained_model, model_file_path)",
+        "detail": "Project.back-end.trainers.guess_genders",
+        "documentation": {}
+    },
+    {
+        "label": "csv_file_path",
+        "kind": 5,
+        "importPath": "Project.back-end.trainers.guess_genders",
+        "description": "Project.back-end.trainers.guess_genders",
+        "peekOfCode": "csv_file_path = os.path.join( os.path.dirname( __file__ ), '../data/Gender_Data.csv' )\nmodel_file_path = os.path.join( os.path.dirname(__file__), '../models/gender_classifier_model.joblib')\ndef train_gender_classifier(csv_file):\n    # Load data from CSV file\n    df = pd.read_csv(csv_file)\n    # Create a pipeline with CountVectorizer and Multinomial Naive Bayes\n    model = make_pipeline(CountVectorizer(), MultinomialNB())\n    # Train the model\n    model.fit(df['name'], df['gender'])\n    # Return the trained model",
+        "detail": "Project.back-end.trainers.guess_genders",
+        "documentation": {}
+    },
+    {
+        "label": "model_file_path",
+        "kind": 5,
+        "importPath": "Project.back-end.trainers.guess_genders",
+        "description": "Project.back-end.trainers.guess_genders",
+        "peekOfCode": "model_file_path = os.path.join( os.path.dirname(__file__), '../models/gender_classifier_model.joblib')\ndef train_gender_classifier(csv_file):\n    # Load data from CSV file\n    df = pd.read_csv(csv_file)\n    # Create a pipeline with CountVectorizer and Multinomial Naive Bayes\n    model = make_pipeline(CountVectorizer(), MultinomialNB())\n    # Train the model\n    model.fit(df['name'], df['gender'])\n    # Return the trained model\n    return model",
+        "detail": "Project.back-end.trainers.guess_genders",
+        "documentation": {}
+    },
+    {
+        "label": "trained_model",
+        "kind": 5,
+        "importPath": "Project.back-end.trainers.guess_genders",
+        "description": "Project.back-end.trainers.guess_genders",
+        "peekOfCode": "trained_model = train_gender_classifier(csv_file_path)\n# Export the trained model\nexport_model(trained_model, model_file_path)",
+        "detail": "Project.back-end.trainers.guess_genders",
+        "documentation": {}
+    },
+    {
+        "label": "run_field_classifier",
+        "kind": 2,
+        "importPath": "Project.back-end.trainers.run_field_classifier",
+        "description": "Project.back-end.trainers.run_field_classifier",
+        "peekOfCode": "def run_field_classifier( input_word: str ) -> str :\n    # classifier path\n    classifier_path = os.path.join( os.path.dirname( __file__ ), '../models/category_classifier_model.joblib' )\n    # tfidf vectorizer path\n    tfidf_vectorizer_path = os.path.join( os.path.dirname( __file__ ), '../models/tfidf_vectorizer.joblib' )\n    # Load the saved model and TF-IDF vectorizer\n    loaded_classifier = joblib.load(\n            classifier_path\n    )\n    loaded_tfidf_vectorizer = joblib.load( tfidf_vectorizer_path )",
+        "detail": "Project.back-end.trainers.run_field_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "get_profession_from_blob",
+        "kind": 2,
+        "importPath": "Project.back-end.trainers.run_field_classifier",
+        "description": "Project.back-end.trainers.run_field_classifier",
+        "peekOfCode": "def get_profession_from_blob( blob: str ) -> str :\n    print(blob)\n    # get words from blob\n    words = blob.split( \" \" )\n    # get profession for all words in the blob, and maintain a list\n    professions = []\n    for word in words :\n        professions.append( run_field_classifier( word ) )\n    # get the most common profession\n    profession = max( set( professions ), key = professions.count )",
+        "detail": "Project.back-end.trainers.run_field_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "predict_gender",
+        "kind": 2,
+        "importPath": "Project.back-end.trainers.run_guess_gender",
+        "description": "Project.back-end.trainers.run_guess_gender",
+        "peekOfCode": "def predict_gender( model, name ) :\n    # Predict the gender for the given name\n    predicted_gender = model.predict( [ name ] )\n    # Return the predicted gender\n    return predicted_gender[ 0 ]\ndef import_model() :\n    # Load the model using joblib\n    model = joblib.load( model_file_path )\n    print( f\"Model loaded from {model_file_path}\" )\n    return model",
+        "detail": "Project.back-end.trainers.run_guess_gender",
+        "documentation": {}
+    },
+    {
+        "label": "import_model",
+        "kind": 2,
+        "importPath": "Project.back-end.trainers.run_guess_gender",
+        "description": "Project.back-end.trainers.run_guess_gender",
+        "peekOfCode": "def import_model() :\n    # Load the model using joblib\n    model = joblib.load( model_file_path )\n    print( f\"Model loaded from {model_file_path}\" )\n    return model\ndef guess_gender( name ) :\n    imported_model = import_model()\n    predicted_gender_imported = predict_gender( imported_model, name )\n    if predicted_gender_imported == 0 :\n        predicted_gender_imported = \"Male\"",
+        "detail": "Project.back-end.trainers.run_guess_gender",
+        "documentation": {}
+    },
+    {
+        "label": "guess_gender",
+        "kind": 2,
+        "importPath": "Project.back-end.trainers.run_guess_gender",
+        "description": "Project.back-end.trainers.run_guess_gender",
+        "peekOfCode": "def guess_gender( name ) :\n    imported_model = import_model()\n    predicted_gender_imported = predict_gender( imported_model, name )\n    if predicted_gender_imported == 0 :\n        predicted_gender_imported = \"Male\"\n    else :\n        predicted_gender_imported = \"Female\"\n    return predicted_gender_imported\n# example usage\n# name = input(\"Enter a name: \")",
+        "detail": "Project.back-end.trainers.run_guess_gender",
+        "documentation": {}
+    },
+    {
+        "label": "model_file_path",
+        "kind": 5,
+        "importPath": "Project.back-end.trainers.run_guess_gender",
+        "description": "Project.back-end.trainers.run_guess_gender",
+        "peekOfCode": "model_file_path = os.path.join( os.path.dirname( __file__ ), '../models/gender_classifier_model.joblib' )\ndef predict_gender( model, name ) :\n    # Predict the gender for the given name\n    predicted_gender = model.predict( [ name ] )\n    # Return the predicted gender\n    return predicted_gender[ 0 ]\ndef import_model() :\n    # Load the model using joblib\n    model = joblib.load( model_file_path )\n    print( f\"Model loaded from {model_file_path}\" )",
+        "detail": "Project.back-end.trainers.run_guess_gender",
+        "documentation": {}
+    },
+    {
+        "label": "train_field_classifier",
+        "kind": 2,
+        "importPath": "Project.back-end.trainers.train_field_classifier",
+        "description": "Project.back-end.trainers.train_field_classifier",
+        "peekOfCode": "def train_field_classifier():\n    # data csv path\n    data_path = os.path.join( os.path.dirname( __file__ ), '../data/field_classification_data.csv' )\n    # get data from csv file\n    data = pd.read_csv( data_path )\n    # create data frame\n    df = pd.DataFrame( data )\n    # ouput data frame to csv file\n    df.to_csv( 'data/field_classification_data.csv', index = False )\n    # TF-IDF Vectorization",
+        "detail": "Project.back-end.trainers.train_field_classifier",
+        "documentation": {}
+    },
+    {
+        "label": "get_breach_info",
+        "kind": 2,
+        "importPath": "Project.back-end.web_scrappers.breachdirApi",
+        "description": "Project.back-end.web_scrappers.breachdirApi",
+        "peekOfCode": "def get_breach_info(email):\n    url = \"https://breachdirectory.p.rapidapi.com/\"\n    querystring = {\"func\":\"auto\",\"term\": email}\n    headers = {\n        \"X-RapidAPI-Key\": \"8ec5691261msheb0aef3b5791f26p1da1bdjsnb66c6c98e060\",\n        \"X-RapidAPI-Host\": \"breachdirectory.p.rapidapi.com\"\n    }\n    # response = requests.get(url, headers=headers, params=querystring)\n    # return response.json()\n    return {",
+        "detail": "Project.back-end.web_scrappers.breachdirApi",
+        "documentation": {}
+    },
+    {
+        "label": "get_google_links",
+        "kind": 2,
+        "importPath": "Project.back-end.web_scrappers.dork_sites",
+        "description": "Project.back-end.web_scrappers.dork_sites",
+        "peekOfCode": "def get_google_links(first_name, last_name, city, workspace, email, github, num_results=10):\n    try:\n        # Construct the query\n        query = f\"{first_name} {last_name} AND {city}\"\n        # if github is not None and email is not None and workspace is not None:\n        #     query = f\"{first_name} {last_name} AND {city} AND {github} AND {email} AND {workspace}\"\n        # elif github is not None and email is not None:\n        #     query = f\"{first_name} {last_name} AND {city} AND {github} AND {email}\"\n        # elif github is not None and workspace is not None:\n        #     query = f\"{first_name} {last_name} AND {city} AND {github} AND {workspace}\"",
+        "detail": "Project.back-end.web_scrappers.dork_sites",
+        "documentation": {}
+    },
+    {
+        "label": "get_google_images",
+        "kind": 2,
+        "importPath": "Project.back-end.web_scrappers.get_google_images",
+        "description": "Project.back-end.web_scrappers.get_google_images",
+        "peekOfCode": "def get_google_images(first_name, last_name, city, workspace, email, github) :\n    query = f\"{first_name} {last_name} AND {city}\"\n    print(query)\n    # if github is not None and email is not None and workspace is not None:\n    #     query = f\"{first_name} {last_name} AND {city} AND {github} AND {email} AND {workspace}\"\n    # elif github is not None and email is not None:\n    #     query = f\"{first_name} {last_name} AND {city} AND {github} AND {email}\"\n    # elif github is not None and workspace is not None:\n    #     query = f\"{first_name} {last_name} AND {city} AND {github} AND {workspace}\"\n    # elif email is not None and workspace is not None:",
+        "detail": "Project.back-end.web_scrappers.get_google_images",
+        "documentation": {}
+    },
+    {
+        "label": "get_github_info",
+        "kind": 2,
+        "importPath": "Project.back-end.web_scrappers.github_scrapper",
+        "description": "Project.back-end.web_scrappers.github_scrapper",
+        "peekOfCode": "def get_github_info(username):\n    print(\"trying username: \", username)\n    base_url = \"https://api.github.com/users/\"\n    # Get user info\n    user_url = base_url + username\n    user_response = requests.get(user_url)\n    user_info = user_response.json()\n    print(user_info)\n    join_year = parse(user_info['created_at']).year\n    # Get followers",
+        "detail": "Project.back-end.web_scrappers.github_scrapper",
+        "documentation": {}
+    },
+    {
+        "label": "get_github_people_images",
+        "kind": 2,
+        "importPath": "Project.back-end.web_scrappers.github_scrapper",
+        "description": "Project.back-end.web_scrappers.github_scrapper",
+        "peekOfCode": "def get_github_people_images(people):\n    # edge case handling\n    if not people:\n        return []\n    images = []\n    for person in people:\n        base_url = \"https://api.github.com/users/\"\n        # Get user info\n        user_url = base_url + person\n        user_response = requests.get(user_url)",
+        "detail": "Project.back-end.web_scrappers.github_scrapper",
+        "documentation": {}
+    },
+    {
+        "label": "get_github_info",
+        "kind": 2,
+        "importPath": "Project.back-end.web_scrappers.gitscrapping",
+        "description": "Project.back-end.web_scrappers.gitscrapping",
+        "peekOfCode": "def get_github_info(username):\n    base_url = \"https://api.github.com/users/\"\n    # Get user info\n    user_url = base_url + username\n    user_response = requests.get(user_url)\n    user_info = user_response.json()\n    join_year = parse(user_info['created_at']).year\n    # Get followers\n    followers_url = base_url + username + \"/followers\"\n    followers_response = requests.get(followers_url)",
+        "detail": "Project.back-end.web_scrappers.gitscrapping",
+        "documentation": {}
+    },
+    {
+        "label": "get_blob",
+        "kind": 2,
+        "importPath": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "description": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "peekOfCode": "def get_blob( link ) :\n    # get blob from link\n    return \"This is a blob from a link\"\ndef make_blob_by_scrapping( first_name, last_name, city ) :\n    query = f\"{first_name} {last_name} AND {city}\"\n    # get blob from links\n    results = search(query, advanced=True, num_results=5)\n    blob = \"\"\n    urls = []\n    for i in results:",
+        "detail": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "documentation": {}
+    },
+    {
+        "label": "make_blob_by_scrapping",
+        "kind": 2,
+        "importPath": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "description": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "peekOfCode": "def make_blob_by_scrapping( first_name, last_name, city ) :\n    query = f\"{first_name} {last_name} AND {city}\"\n    # get blob from links\n    results = search(query, advanced=True, num_results=5)\n    blob = \"\"\n    urls = []\n    for i in results:\n        blob += i.title + \" \" + i.description + \" \"\n        urls.append(i.url)\n    return blob, urls",
+        "detail": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_linkedin",
+        "kind": 2,
+        "importPath": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "description": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "peekOfCode": "def scrape_linkedin(url):\n    # Send a GET request to the URL\n    response = requests.get(url)\n    # Check if the request was successful (status code 200)\n    if response.status_code == 200:\n        # Parse the HTML content of the page\n        soup = BeautifulSoup(response.content, 'html.parser')\n        # Extract relevant text\n        relevant_text = soup.get_text()\n        return relevant_text",
+        "detail": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "documentation": {}
+    },
+    {
+        "label": "links",
+        "kind": 5,
+        "importPath": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "description": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "peekOfCode": "links = [ 'https://mitwpu.edu.in/faculty/yogita-shivaji-hande', 'https://in.linkedin.com/in/yogita-hande-a606b245',\n          'https://www.healyos.com/team/dr-yogita-hande/', 'https://in.linkedin.com/in/yogitahande/en',\n          'https://scholar.google.co.in/citations?user=YqzWWdEAAAAJ&hl=en', 'https://www.facebook.com/yogita.hande.921/',\n          'https://twitter.com/HandeYogita', 'https://m.facebook.com/yogita.hande.779/?locale=hi_IN',\n          'https://www.coursehero.com/file/101639645/SEMDisplay-LP-Yogitapdf/',\n          'https://www.flipkart.com/information-cyber-security-savitribai-phule-pune-university-it-sem-7/p/itmdf88ba4308692',\n          'https://moderncoe.edu.in/computer-engineering/faculty-details.aspx' ]\ndef scrape_linkedin(url):\n    # Send a GET request to the URL\n    response = requests.get(url)",
+        "detail": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "documentation": {}
+    },
+    {
+        "label": "url",
+        "kind": 5,
+        "importPath": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "description": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "peekOfCode": "url = \"https://www.linkedin.com/example\"\noutput = scrape_linkedin(url)\nif output:\n    print(output)",
+        "detail": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "documentation": {}
+    },
+    {
+        "label": "output",
+        "kind": 5,
+        "importPath": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "description": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "peekOfCode": "output = scrape_linkedin(url)\nif output:\n    print(output)",
+        "detail": "Project.back-end.web_scrappers.make_blob_by_scrapping",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 5,
+        "importPath": "Project.back-end.web_scrappers.test",
+        "description": "Project.back-end.web_scrappers.test",
+        "peekOfCode": "results = search('yogita hande AND pune', advanced=True, num_results=5)\nblob = \"\"\nurls = []\nfor i in results:\n    blob += i.title + \" \" + i.description + \" \"\n    urls.append(i.url)\nprint(blob)\nprint(urls)",
+        "detail": "Project.back-end.web_scrappers.test",
+        "documentation": {}
+    },
+    {
+        "label": "blob",
+        "kind": 5,
+        "importPath": "Project.back-end.web_scrappers.test",
+        "description": "Project.back-end.web_scrappers.test",
+        "peekOfCode": "blob = \"\"\nurls = []\nfor i in results:\n    blob += i.title + \" \" + i.description + \" \"\n    urls.append(i.url)\nprint(blob)\nprint(urls)",
+        "detail": "Project.back-end.web_scrappers.test",
+        "documentation": {}
+    },
+    {
+        "label": "urls",
+        "kind": 5,
+        "importPath": "Project.back-end.web_scrappers.test",
+        "description": "Project.back-end.web_scrappers.test",
+        "peekOfCode": "urls = []\nfor i in results:\n    blob += i.title + \" \" + i.description + \" \"\n    urls.append(i.url)\nprint(blob)\nprint(urls)",
+        "detail": "Project.back-end.web_scrappers.test",
+        "documentation": {}
+    },
+    {
+        "label": "clean_text",
+        "kind": 2,
+        "importPath": "Project.back-end.web_scrappers.textscrapping",
+        "description": "Project.back-end.web_scrappers.textscrapping",
+        "peekOfCode": "def clean_text(text):\n    # Replace newlines with a space\n    text = re.sub('\\n', ' ', text)\n    # Replace multiple spaces with a single space\n    text = re.sub(' +', ' ', text)\n    # Remove leading and trailing whitespace\n    text = text.strip()\n    return text\ndef scrape_text_from_search_query(api_key, cx, first_name, last_name, city, work_place):\n    query = f'\"{first_name} {last_name}\" AND \"{city}\" AND \"{work_place}\"'",
+        "detail": "Project.back-end.web_scrappers.textscrapping",
+        "documentation": {}
+    },
+    {
+        "label": "scrape_text_from_search_query",
+        "kind": 2,
+        "importPath": "Project.back-end.web_scrappers.textscrapping",
+        "description": "Project.back-end.web_scrappers.textscrapping",
+        "peekOfCode": "def scrape_text_from_search_query(api_key, cx, first_name, last_name, city, work_place):\n    query = f'\"{first_name} {last_name}\" AND \"{city}\" AND \"{work_place}\"'\n    url = f\"https://www.googleapis.com/customsearch/v1?key={api_key}&cx={cx}&q={query}\"\n    print(url)\n    data = requests.get(url).json()\n    if 'items' not in data:\n        print('No items in data. Data:', data)\n        return []\n    texts = []\n    for item in data['items'][:2]:",
+        "detail": "Project.back-end.web_scrappers.textscrapping",
+        "documentation": {}
+    },
+    {
+        "label": "read_root",
+        "kind": 2,
+        "importPath": "Project.back-end.app",
+        "description": "Project.back-end.app",
+        "peekOfCode": "def read_root():\n    return {\"Hello\": \"World\"}",
+        "detail": "Project.back-end.app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "Project.back-end.app",
+        "description": "Project.back-end.app",
+        "peekOfCode": "app = FastAPI()\n# include routers\napp.include_router(basic_router)\napp.include_router(trainer_router)\n# Cors stuff\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:3000\"],\n    allow_credentials=True,\n    allow_methods=[\"*\"],",
+        "detail": "Project.back-end.app",
         "documentation": {}
     }
 ]
