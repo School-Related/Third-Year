@@ -1,0 +1,270 @@
+% This is a Basic Assignment Paper but with like Code and stuff allowed in it, there is also url, hyperlinks from contents included. 
+
+\documentclass[11pt]{article}
+
+% Preamble
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage{fancyhdr, float, graphicx}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=codepurple,
+    pdfpagemode=FullScreen,
+    }
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\textit{\Large{Cloud Infrastructure and Security - TY. B. Tech}}}
+\fancyhead[R]{\textit{Krishnaraj T}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{1pt}
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}[thm]{Definition}
+
+
+% Other Doc Editing
+% \parindent 0ex
+%\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+
+    %---------------------------NAMES-------------------------------
+
+    \huge\textsc{
+        MIT World Peace University
+    }\\
+
+    \vspace{0.75\baselineskip} % space after Uni Name
+
+    \LARGE{
+        Cloud Infrastructure and Security\\
+        Third Year B. Tech, Semester 6
+    }
+
+    \vfill % space after Sub Name
+
+    %--------------------------TITLE-------------------------------
+
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.6pt}
+    \vspace{0.75\baselineskip} % Whitespace above the title
+
+
+
+    \huge{\textsc{
+            Installing and Running Docker on Windows
+        }} \\
+
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the title
+    \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
+    \rule{\textwidth}{1.6pt}
+
+    \vspace{1\baselineskip} % Whitespace after the title block
+
+    %--------------------------SUBTITLE --------------------------	
+
+    \LARGE\textsc{
+        Assignment 5
+    } % Subtitle or further description
+    \vfill
+
+    %--------------------------AUTHOR-------------------------------
+
+    Prepared By
+    \vspace{0.5\baselineskip} % Whitespace before the editors
+
+    \Large{
+        Krishnaraj Thadesar \\
+        Cyber Security and Forensics\\
+        Batch A1, PA 10
+    }
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the editor list
+    \today
+
+\end{titlepage}
+
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\setcounter{page}{1}
+
+\section{Aim}
+To install and Run Docker on Windows or Ubuntu
+
+\section{Objectives}
+\begin{enumerate}
+    \item To learn how to install Docker on Windows
+    \item To understand the importance of Docker
+\end{enumerate}
+
+\section{Theory}
+
+\subsection{What is Docker?}
+
+Docker is a platform for developing, shipping, and running applications in containers. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly. With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production.
+
+\subsection{Why Docker?}
+
+\begin{enumerate}
+    \item \textbf{Rapid Deployment}: Docker containers can be built, deployed, and scaled quickly.
+    \item \textbf{Version Control}: Docker images are version-controlled and can be pushed to a remote repository.
+    \item \textbf{Isolation}: Docker containers are isolated from each other and from the host system.
+    \item \textbf{Portability}: Docker containers can run on any system that supports Docker.
+    \item \textbf{Resource Efficiency}: Docker containers share the host system's kernel and require fewer resources than virtual machines.
+    \item \textbf{Security}: Docker containers are secure by default and can be further secured using Docker security features.
+    \item \textbf{Scalability}: Docker containers can be scaled horizontally and vertically to meet demand.
+    \item \textbf{Microservices}: Docker containers are ideal for building microservices-based applications.
+    \item \textbf{DevOps}: Docker containers are a key enabler of DevOps practices.
+    \item \textbf{Continuous Integration/Continuous Deployment (CI/CD)}: Docker containers are used in CI/CD pipelines to automate the build, test, and deployment process.
+    \item \textbf{Cloud-Native Applications}: Docker containers are the foundation of cloud-native applications.
+    \item \textbf{Open Source}: Docker is open source and has a large community of contributors.
+\end{enumerate}
+
+\section{Setting up Docker on Windows}
+
+Download and run the docker installer from the official website: \url{https://www.docker.com/products/docker-desktop}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{docker images gui.png}
+    \caption{The Home page with images in the Docker GUI}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{docker logged in.png}
+    \caption{You can then log in to your docker account in the GUI.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{docker hub.png}
+    \caption{Docker Hub in the GUI}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{creating a container.png}
+    \caption{Setting up a new Container in the GUI.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{running container.png}
+    \caption{Running the Container}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{creating a repo.png}
+    \caption{Making a New Repository in Docker Hub}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{dockerfile.png}
+    \caption{You have to write a dockerfile for your code. }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{dockerfile and path.png}
+    \caption{This is what the dockerfile looks like. }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{building docker.png}
+    \caption{Building the image on the terminal. }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{pushing to hub.png}
+    \caption{Pushing the new image on the hub.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{updated repo.png}
+    \caption{The updated repo with the new image.}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{docker container running on terminal.png}
+    \caption{Running the newly created container on the terminal.}
+\end{figure}
+
+
+\section{Platform}
+\textbf{Operating System}: Windows 11 \\
+\textbf{IDEs or Text Editors Used}: Visual Studio Code\\
+\textbf{Compilers or Interpreters}: Python 3.10.1\\
+
+% \section{Code}
+% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
+
+\section{FAQs}
+
+
+\section{Conclusion}
+In this assignment, we have learnt how to install Docker on Windows and run it. We have also understood the importance of Docker in the field of Cloud Computing and DevOps.
+
+\clearpage
+
+\pagebreak
+\begin{thebibliography}{}
+
+\end{thebibliography}
+
+\end{document}

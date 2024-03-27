@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Aim}{1}{section.1}%
+\contentsline {section}{\numberline {2}Objectives}{1}{section.2}%
+\contentsline {section}{\numberline {3}Theory}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}What is Docker?}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Why Docker?}{1}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Setting up Docker on Windows}{2}{section.4}%
+\contentsline {section}{\numberline {5}Platform}{8}{section.5}%
+\contentsline {section}{\numberline {6}FAQs}{8}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{8}{section.7}%
+\contentsline {section}{References}{9}{section*.2}%
