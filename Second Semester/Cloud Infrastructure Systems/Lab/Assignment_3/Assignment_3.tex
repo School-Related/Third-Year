@@ -319,6 +319,55 @@ Testing: After making changes to the security group, it's advisable to test your
 
 \section{FAQs}
 
+\begin{enumerate}
+    \item \textbf{How do you deploy a website on AWS using EC2?}
+          \begin{itemize}
+              \item Launch an EC2 instance and select an appropriate instance type based on your website's requirements.
+              \item Choose a suitable Amazon Machine Image (AMI) for your EC2 instance, such as Amazon Linux or Ubuntu.
+              \item Configure security groups to control inbound and outbound traffic to your EC2 instance, allowing access to HTTP (port 80) and HTTPS (port 443) if your website uses SSL/TLS.
+              \item Connect to your EC2 instance using SSH or Remote Desktop Protocol (RDP) and set up the necessary software stack for hosting your website, such as a web server (e.g., Apache, Nginx) and a database server (e.g., MySQL, PostgreSQL).
+              \item Upload your website files to the appropriate directory on the EC2 instance, typically the web server's document root.
+              \item Configure the web server to serve your website and test the deployment to ensure it's accessible over the internet.
+              \item Optionally, assign an Elastic IP (EIP) to your EC2 instance to ensure a static IP address for your website.
+          \end{itemize}
+
+    \item \textbf{What's the purpose of an Application Load Balancer (ALB) in this setup?}
+          \begin{itemize}
+              \item An Application Load Balancer (ALB) helps distribute incoming traffic across multiple EC2 instances hosting the website, improving availability, fault tolerance, and scalability.
+              \item It acts as a single point of contact for clients, routing HTTP and HTTPS requests to the appropriate EC2 instances based on configured rules.
+              \item The ALB provides advanced routing features such as path-based routing, host-based routing, and support for multiple SSL certificates, enabling flexible traffic management for different parts of the website.
+              \item Additionally, the ALB performs health checks on EC2 instances and automatically routes traffic away from unhealthy instances, ensuring high availability and reliability of the website.
+          \end{itemize}
+
+    \item \textbf{How do you ensure security for your EC2 instances?}
+          \begin{itemize}
+              \item Utilize AWS Identity and Access Management (IAM) to manage user access and permissions for interacting with EC2 instances.
+              \item Configure security groups to control inbound and outbound traffic, allowing only necessary ports and protocols.
+              \item Implement network access control lists (ACLs) at the subnet level to filter traffic entering and leaving the EC2 instances.
+              \item Regularly update and patch the operating system and software running on EC2 instances to address security vulnerabilities.
+              \item Enable encryption for data at rest using AWS Key Management Service (KMS) and encrypt data in transit using SSL/TLS.
+              \item Utilize AWS services such as AWS Config, AWS CloudTrail, and Amazon GuardDuty to monitor and detect security threats and compliance violations.
+          \end{itemize}
+
+    \item \textbf{Why is scalability important for a web application?}
+          \begin{itemize}
+              \item Scalability allows a web application to handle increasing amounts of traffic, user requests, and data without experiencing performance degradation or downtime.
+              \item It ensures that the application can grow or shrink its resource capacity dynamically in response to changing demand, improving user experience and satisfaction.
+              \item Scalability enables efficient resource utilization, cost optimization, and the ability to accommodate spikes in traffic during peak periods or special events.
+              \item It enhances the application's availability, fault tolerance, and resilience by distributing workloads across multiple resources and avoiding single points of failure.
+              \item Scalability is essential for meeting business objectives, accommodating business growth, and maintaining competitiveness in the digital marketplace.
+          \end{itemize}
+
+    \item \textbf{Can you explain how the ALB helps with scalability and high availability?}
+          \begin{itemize}
+              \item The ALB distributes incoming traffic evenly across multiple EC2 instances, allowing the web application to handle a higher volume of requests and scale horizontally.
+              \item It automatically detects unhealthy instances and reroutes traffic to healthy instances, ensuring continuous availability and reliability of the application.
+              \item The ALB supports dynamic scaling by integrating with AWS Auto Scaling, allowing EC2 instances to be added or removed based on demand, traffic patterns, or other metrics.
+              \item With features like path-based routing and host-based routing, the ALB enables flexible traffic management and can direct requests to different EC2 instances based on specific criteria, improving performance and resource utilization.
+              \item By offloading SSL/TLS termination, the ALB reduces the computational overhead on EC2 instances, improving their efficiency and scalability.
+          \end{itemize}
+\end{enumerate}
+
 
 \section{Conclusion}
 
@@ -327,10 +376,8 @@ In this assignment, we have learned about web services, PaaS tools, and the depl
 
 \pagebreak
 \begin{thebibliography}{}
-
-    \bibitem{CloudConceptsOverview}
-    IBM Cloud. Cloud Computing Concepts Overview. Accessed from: \url{https://www.ibm.com/cloud/learn/cloud-computing-concepts}.
-
+    \bibitem{awsdocs}
+    Amazon Web Services. \textit{AWS Documentation}. Available at: \url{https://docs.aws.amazon.com/}.
 \end{thebibliography}
 
 \end{document}
