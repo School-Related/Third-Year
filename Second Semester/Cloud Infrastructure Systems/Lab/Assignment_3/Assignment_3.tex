@@ -94,7 +94,7 @@
 
 
     \huge{\textsc{
-            Deploying Web server in Python on Cyclic (PaaS)
+            Deployment on AWS and Load Balancing
         }} \\
 
 
@@ -108,7 +108,7 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Assignment 2
+        Assignment 3
     } % Subtitle or further description
     \vfill
 
@@ -137,258 +137,177 @@
 \setcounter{page}{1}
 
 \section{Aim}
-Write a Web Service using Java or Python. Deploy the services using PaaS tools such as
-Cloud Foundry/ GoogleAppEngine / OpenShift.
+Create an account on AWS. Deploy a Website admission portal on EC2 Service.
+Configure the traffic rules for the server for a specific need. Creation of application load
+balancer.
 
 \section{Objectives}
 \begin{enumerate}
-    \item To understand the concept of web service.
-    \item To get familiar with PaaS Service.
-    \item Learn how to deploy the web service on cloud Foundry/GoogleAppEngine/ OpenShift
+    \item To get acquainted with AWS platform.
+    \item To get familiar with EC2 Service
+    \item Learn how to configure the traffic rules.
+    \item To understand creation of application load balancer
 \end{enumerate}
 
 \section{Theory}
+\subsection{Introduction to AWS (Amazon Web Services)}
+Amazon Web Services (AWS) is a comprehensive, evolving cloud computing platform provided by Amazon. It provides a mix of infrastructure as a service (IaaS), platform as a service (PaaS) and packaged software as a service (SaaS) offerings. AWS services can offer an organization tools such as compute power, database storage and content delivery services. Moving to the cloud with AWS can help organizations cut costs, improve efficiency and innovate at a faster pace.
 
-\section{Introduction to Web services}
-
-Web services are software systems designed to support interoperable machine-to-machine interaction over a network. They are built on standard web technologies such as HTTP, XML, and SOAP, and can be accessed using standard protocols like REST, JSON, and WSDL. Web services provide a platform-independent way of integrating applications and services across different platforms and technologies.
+\subsection{Features of AWS}
 
 \begin{enumerate}
-    \item \textbf{Web Service Architecture:} Web services follow a client-server architecture, where the client sends requests to the server, and the server processes the requests and sends back responses. The communication between the client and server is done using standard protocols like HTTP, SOAP, or REST.
-    \item \textbf{Web Service Standards:} Web services are built on standard web technologies and protocols, such as XML, SOAP, WSDL, and UDDI. These standards define the message format, communication protocols, and service description for web services, ensuring interoperability and compatibility across different platforms and technologies.
-    \item \textbf{Web Service Security:} Web services need to be secure to protect sensitive data and prevent unauthorized access. Security mechanisms like SSL/TLS, OAuth, and WS-Security can be used to secure web services and ensure data confidentiality, integrity, and authentication.
-    \item \textbf{Web Service Deployment:} Web services can be deployed on different platforms, such as on-premises servers, cloud platforms, or PaaS services. Deployment involves configuring the web service, setting up the server environment, and making the service accessible to clients over the network.
+    \item \textbf{Compute:} AWS offers a wide range of compute services, including Amazon Elastic Compute Cloud (EC2), AWS Lambda, Amazon Elastic Container Service (ECS), and more. These services provide scalable compute capacity for running applications and workloads.
+    \item \textbf{Storage:} AWS provides various storage services, such as Amazon Simple Storage Service (S3), Amazon Elastic Block Store (EBS), Amazon Glacier, and more. These services offer scalable, durable, and cost-effective storage solutions for data storage and backup.
+    \item \textbf{Database:} AWS offers a range of database services, including Amazon Relational Database Service (RDS), Amazon DynamoDB, Amazon Redshift, and more. These services provide managed database solutions for different use cases and workloads.
+    \item \textbf{Networking:} AWS provides networking services such as Amazon Virtual Private Cloud (VPC), Amazon Route 53, AWS Direct Connect, and more. These services enable users to build secure and scalable network architectures for their applications.
+    \item \textbf{Security:} AWS offers a wide range of security services, including AWS Identity and Access Management (IAM), AWS Key Management Service (KMS), AWS WAF, and more. These services help users secure their applications, data, and infrastructure in the cloud.
+    \item \textbf{Management Tools:} AWS provides management tools such as AWS CloudFormation, AWS CloudWatch, AWS Config, and more. These tools help users automate, monitor, and manage their AWS resources and services.
+    \item \textbf{Analytics:} AWS offers analytics services such as Amazon Kinesis, Amazon EMR, Amazon Redshift, and more. These services help users collect, process, analyze, and visualize data to derive insights and make informed decisions.
+    \item \textbf{Machine Learning:} AWS provides machine learning services such as Amazon SageMaker, Amazon Rekognition, Amazon Comprehend, and more. These services enable users to build, train, and deploy machine learning models at scale.
+    \item \textbf{Internet of Things (IoT):} AWS offers IoT services such as AWS IoT Core, AWS IoT Greengrass, AWS IoT Device Management, and more. These services help users connect, manage, and secure IoT devices and applications.
+    \item \textbf{Serverless Computing:} AWS provides serverless computing services such as AWS Lambda, Amazon API Gateway, AWS Step Functions, and more. These services enable users to build and deploy applications without managing servers.
+    \item \textbf{Containers:} AWS offers container services such as Amazon Elastic Container Service (ECS), Amazon Elastic Kubernetes Service (EKS), AWS Fargate, and more. These services help users run and manage containerized applications at scale.
+    \item \textbf{DevOps:} AWS provides DevOps services such as AWS CodePipeline, AWS CodeBuild, AWS CodeDeploy, and more. These services help users automate software development and deployment processes.
+    \item \textbf{Artificial Intelligence (AI):} AWS offers AI services such as Amazon Lex, Amazon Polly, Amazon Translate, and more. These services enable users to build AI-powered applications and services.
+    \item \textbf{Blockchain:} AWS provides blockchain services such as Amazon Managed Blockchain, Amazon Quantum Ledger Database (QLDB), and more. These services help users build scalable and secure blockchain applications.
+    \item \textbf{Augmented Reality (AR) and Virtual Reality (VR):} AWS offers AR and VR services such as Amazon Sumerian, Amazon S3 Glacier Deep Archive, and more. These services help users create immersive AR and VR experiences.
+    \item \textbf{Game Development:} AWS provides game development services such as Amazon GameLift, Amazon Lumberyard, and more. These services help users build, deploy, and scale games in the cloud.
 \end{enumerate}
 
-\subsection{Web Service Protocols}
+\subsection{Steps /procedure to follow for an AWS account creation}
+
 \begin{enumerate}
-    \item \textbf{SOAP (Simple Object Access Protocol):} SOAP is a protocol for exchanging structured information in the implementation of web services. It uses XML as the message format and can be accessed using standard protocols like HTTP, SMTP, and TCP.
-    \item \textbf{REST (Representational State Transfer):} REST is an architectural style for designing networked applications. RESTful web services use standard HTTP methods like GET, POST, PUT, and DELETE to perform operations on resources. They typically use JSON or XML as the message format and are lightweight and easy to use.
-    \item \textbf{WSDL (Web Services Description Language):} WSDL is an XML-based language for describing web services and their interfaces. It defines the operations, messages, and bindings of a web service and provides a standard way to communicate with the service.
-    \item \textbf{UDDI (Universal Description, Discovery, and Integration):} UDDI is a standard for publishing and discovering web services. It provides a directory service where businesses can register their web services and clients can search for and access the services.
-    \item \textbf{HTTP (Hypertext Transfer Protocol):} HTTP is the standard protocol for transferring data over the web. It is used by web services to send and receive messages between clients and servers.
+    \item \textbf{Sign Up for AWS:} Go to the AWS website and click on the "Create an AWS Account" button. Follow the on-screen instructions to create a new AWS account.
+    \item \textbf{Provide Account Information:} Enter your email address, password, and account name. Click on the "Continue" button to proceed.
+    \item \textbf{Contact Information:} Enter your contact information, including name, address, and phone number. Click on the "Create Account and Continue" button.
+    \item \textbf{Payment Information:} Enter your payment information, including credit card details. AWS may charge a small amount to verify your identity.
+    \item \textbf{Identity Verification:} AWS will verify your identity by sending a verification code to your phone number. Enter the code to complete the verification process.
+    \item \textbf{Choose a Support Plan:} Choose a support plan based on your requirements. You can choose the Basic (free) plan or opt for a paid plan for additional support.
+    \item \textbf{Confirmation:} Review the account details and click on the "Create Account and Continue" button to complete the account creation process.
+    \item \textbf{Sign In:} Sign in to your new AWS account using your email address and password. You can now access the AWS Management Console and start using AWS services.
 \end{enumerate}
 
-\subsection{Web Service Standards}
+\subsection{Briefing on EC2 Service}
 
+Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides resizable compute capacity in the cloud. It is designed to make web-scale cloud computing easier for developers. Amazon EC2's simple web service interface allows you to obtain and configure capacity with minimal friction. It provides you with complete control of your computing resources and lets you run on Amazon's proven computing environment.
+
+\subsubsection{Features}
 \begin{enumerate}
-    \item \textbf{XML (Extensible Markup Language):} XML is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. It is widely used in web services for representing data in a structured and standardized way.
-    \item \textbf{JSON (JavaScript Object Notation):} JSON is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is commonly used in RESTful web services for data serialization and exchange.
-    \item \textbf{SSL/TLS (Secure Sockets Layer/Transport Layer Security):} SSL/TLS are cryptographic protocols that provide secure communication over a computer network. They are used to encrypt data transmitted between clients and servers, ensuring data confidentiality and integrity.
-    \item \textbf{OAuth (Open Authorization):} OAuth is an open standard for access delegation that allows users to grant third-party applications access to their resources without sharing their credentials. It is commonly used in web services to authenticate and authorize users.
-    \item \textbf{WS-Security (Web Services Security):} WS-Security is a standard for securing web services using message-level security mechanisms. It provides features like encryption, digital signatures, and authentication to ensure the confidentiality, integrity, and authenticity of messages.
-    \item \textbf{HTTP Methods:} HTTP methods like GET, POST, PUT, and DELETE are used in RESTful web services to perform operations on resources. GET is used to retrieve data, POST is used to create data, PUT is used to update data, and DELETE is used to delete data.
-    \item \textbf{HTTP Status Codes:} HTTP status codes like 200 OK, 201 Created, 400 Bad Request, and 404 Not Found are used in web services to indicate the status of a request. They provide information about the success or failure of a request and help clients understand the response from the server.
+    \item \textbf{Virtual Servers:} Amazon EC2 provides virtual servers, known as instances, that can be launched in minutes. You can choose from a variety of instance types with different compute, memory, and storage configurations.
+    \item \textbf{Scalability:} Amazon EC2 allows you to scale your compute capacity up or down based on your application's needs. You can launch multiple instances to handle increased traffic or reduce the number of instances during off-peak hours.
+    \item \textbf{Security:} Amazon EC2 provides security features such as security groups, network access control lists (ACLs), and key pairs to secure your instances. You can also use AWS Identity and Access Management (IAM) to control access to your resources.
+    \item \textbf{Integration:} Amazon EC2 integrates with other AWS services such as Amazon S3, Amazon RDS, and Amazon VPC. You can easily deploy applications that use multiple AWS services and resources.
+    \item \textbf{Monitoring:} Amazon EC2 provides monitoring and logging features through Amazon CloudWatch. You can monitor your instances' performance, set alarms, and view logs to troubleshoot issues.
+    \item \textbf{Auto Scaling:} Amazon EC2 Auto Scaling allows you to automatically adjust the number of instances in your Auto Scaling group based on demand. You can define scaling policies to scale in or out based on metrics such as CPU utilization or request count.
+    \item \textbf{Load Balancing:} Amazon EC2 works with Elastic Load Balancing to distribute incoming traffic across multiple instances. You can use Application Load Balancers or Network Load Balancers to achieve high availability and fault tolerance.
+    \item \textbf{Pricing:} Amazon EC2 offers a pay-as-you-go pricing model with no upfront costs or long-term contracts. You only pay for the compute capacity you use, and you can choose from various pricing options based on your requirements.
 \end{enumerate}
 
-\section{Different types of Web services}
+\subsection{Deploying the website using EC2 service}
+% figures
 
-Web services can be categorized into two main types:
+\subsection{Configure the traffic rules for the server}
 
+Steps:
 \begin{enumerate}
-    \item \textbf{SOAP-based Web Services:} SOAP (Simple Object Access Protocol) is a protocol for exchanging structured information in the implementation of web services. SOAP-based web services use XML as the message format and can be accessed using standard protocols like HTTP, SMTP, and TCP.
-    \item \textbf{RESTful Web Services:} REST (Representational State Transfer) is an architectural style for designing networked applications. RESTful web services use standard HTTP methods like GET, POST, PUT, and DELETE to perform operations on resources. They typically use JSON or XML as the message format and are lightweight and easy to use.
-\end{enumerate}
+    \item Accessing the Security Group:
 
-\subsection{SOAP}
-\begin{enumerate}
-    \item \textbf{Description:} SOAP (Simple Object Access Protocol) is a protocol for exchanging structured information in the implementation of web services. It uses XML as the message format and can be accessed using standard protocols like HTTP, SMTP, and TCP.
-    \item \textbf{Advantages:}
-          \begin{itemize}
-              \item \textbf{Standardized Protocol:} SOAP is a standardized protocol that defines a set of rules for exchanging messages between clients and servers.
-              \item \textbf{Interoperability:} SOAP-based web services are platform-independent and can be accessed from any programming language or platform that supports the protocol.
-              \item \textbf{Security:} SOAP supports security features like encryption, digital signatures, and authentication to ensure data confidentiality and integrity.
-              \item \textbf{Complex Data Types:} SOAP allows for the use of complex data types and structures in messages, making it suitable for enterprise-level applications.
-          \end{itemize}
-    \item \textbf{Disadvantages:}
-          \begin{itemize}
-              \item \textbf{Complexity:} SOAP messages can be complex and verbose, making them less efficient for simple data exchange.
-              \item \textbf{Performance Overhead:} SOAP-based web services can have higher performance overhead due to the XML parsing and processing required.
-              \item \textbf{Limited Browser Support:} SOAP is not well-supported by web browsers, limiting its use in client-side applications.
-              \item \textbf{Versioning:} SOAP services can be difficult to version and maintain over time, leading to compatibility issues between clients and servers.
-          \end{itemize}
-    \item \textbf{Example:} A SOAP-based web service for a banking application that allows clients to transfer funds between accounts using XML messages over HTTP.
-    \item \textbf{Use Cases:} SOAP-based web services are commonly used in enterprise applications, financial services, and healthcare systems that require secure and reliable communication between clients and servers.
-\end{enumerate}
-
-
-\subsection{REST}
-
-\begin{enumerate}
-    \item \textbf{Description:} REST (Representational State Transfer) is an architectural style for designing networked applications. RESTful web services use standard HTTP methods like GET, POST, PUT, and DELETE to perform operations on resources. They typically use JSON or XML as the message format and are lightweight and easy to use.
-    \item \textbf{Advantages:}
-          \begin{itemize}
-              \item \textbf{Simplicity:} RESTful web services are simple and easy to use, making them ideal for lightweight applications and client-side development.
-              \item \textbf{Performance:} REST services have lower performance overhead compared to SOAP services due to their lightweight message format and stateless nature.
-              \item \textbf{Browser Support:} REST is well-supported by web browsers and can be easily consumed by client-side applications using JavaScript.
-              \item \textbf{Scalability:} RESTful web services are scalable and can handle a large number of concurrent requests, making them suitable for high-traffic applications.
-          \end{itemize}
-    \item \textbf{Disadvantages:}
-          \begin{itemize}
-              \item \textbf{Security:} REST does not provide built-in security features like encryption or authentication, requiring additional measures to secure the communication between clients and servers.
-              \item \textbf{Complex Operations:} RESTful services can be limited in handling complex operations or transactions that require multiple steps or state management.
-              \item \textbf{Versioning:} REST services can be challenging to version and maintain over time, leading to compatibility issues between clients and servers.
-              \item \textbf{Data Integrity:} REST does not provide built-in mechanisms for ensuring data integrity or consistency, requiring developers to implement custom solutions.
-          \end{itemize}
-    \item \textbf{Example:} A RESTful web service for a social media application that allows users to create, read, update, and delete posts using JSON messages over HTTP.
-    \item \textbf{Use Cases:} RESTful web services are commonly used in mobile applications, IoT devices, and web applications that require lightweight communication between clients and servers.
-    \item \textbf{Comparison:} SOAP vs. REST
-          \begin{itemize}
-              \item \textbf{Protocol:} SOAP is a protocol, while REST is an architectural style.
-              \item \textbf{Message Format:} SOAP uses XML, while REST uses JSON or XML.
-              \item \textbf{Security:} SOAP supports security features, while REST requires additional measures for security.
-              \item \textbf{Complexity:} SOAP messages can be complex, while REST messages are simple and lightweight.
-              \item \textbf{Performance:} SOAP services have higher performance overhead, while REST services are more efficient.
-          \end{itemize}
-\end{enumerate}
-
-
-\section{Web service Development using Python}
-
-Python is a popular programming language for developing web services due to its simplicity, readability, and versatility. Python provides libraries and frameworks for building web services using different protocols like SOAP and REST. Some popular libraries and frameworks for web service development in Python include Flask, Django, and FastAPI.
-
-\subsection{FastAPI}
-\begin{enumerate}
-    \item \textbf{Description:} FastAPI is a modern web framework for building APIs with Python 3.6+ based on standard Python type hints. It is fast, easy to use, and provides automatic validation, serialization, and documentation of API endpoints.
-    \item \textbf{Features:}
-          \begin{itemize}
-              \item \textbf{Fast:} FastAPI is one of the fastest web frameworks for Python, providing high performance and low latency for API requests.
-              \item \textbf{Easy to Use:} FastAPI is easy to learn and use, with a simple and intuitive syntax that leverages Python type hints for defining API endpoints.
-              \item \textbf{Automatic Validation:} FastAPI automatically validates request data based on type hints and provides detailed error messages for invalid inputs.
-              \item \textbf{Automatic Documentation:} FastAPI generates interactive API documentation based on type hints, allowing users to explore and test API endpoints in real-time.
-          \end{itemize}
-    \item \textbf{Example:} A simple web service using FastAPI that exposes endpoints for creating, reading, updating, and deleting user data.
-    \item \textbf{Installation:} FastAPI can be installed using pip, the Python package manager, by running the command \texttt{pip install fastapi}.
-    \item \textbf{Usage:} FastAPI provides a built-in development server for running web services locally and supports deployment to cloud platforms like Heroku, AWS, and Azure.
-    \item \textbf{Resources:} FastAPI documentation, tutorials, and examples are available on the official website at \url{https://fastapi.tiangolo.com/}.
-    \item \textbf{Comparison between Flask, Django, and FastAPI:}
+          There are two primary ways to configure traffic rules for an EC2 instance:
           \begin{enumerate}
-              \item \textbf{Flask:} Flask is a lightweight web framework for Python that is easy to use and flexible. It is suitable for small to medium-sized web applications and APIs.
-              \item \textbf{Django:} Django is a full-featured web framework for Python that provides a complete set of tools and libraries for building complex web applications. It is suitable for large-scale projects with high traffic and data requirements.
-              \item \textbf{FastAPI:} FastAPI is a modern web framework for Python that is fast, easy to use, and provides automatic validation and documentation of API endpoints. It is suitable for building high-performance APIs with minimal code.
+              \item Using the AWS Management Console:
+                    \begin{enumerate}
+                        \item Go to the Amazon EC2 service in the AWS Management Console (https://aws.amazon.com/).
+                        \item In the navigation pane on the left, select the option for Security Groups.
+                        \item Choose the security group you want to modify. This security group will be assigned to your EC2 instance and controls the inbound and outbound traffic.
+                    \end{enumerate}
+              \item Using the AWS CLI:
+                    AWS provides a Command Line Interface (CLI) for managing various AWS services, including EC2 security groups. You can find instructions and reference guides for the AWS CLI here: https://aws.amazon.com/cli/
           \end{enumerate}
+
+    \item Adding Inbound Rules:
+          \begin{enumerate}
+              \item Inbound rules define which types of traffic are allowed to reach your EC2 instance from the internet or your VPC (Virtual Private Cloud).
+              \item To add an inbound rule, click on the "Edit inbound rules" button in the AWS Management Console.
+          \end{enumerate}
+
+    \item Specifying Rule Details:
+
+          When adding an inbound rule, you'll need to specify several details:
+          \begin{enumerate}
+              \item Protocol: Choose the communication protocol for the traffic (e.g., TCP, UDP, ICMP).
+              \item Port Range: Specify the port(s) on your EC2 instance that this rule applies to. For example, port 22 for SSH access or port 80 for web traffic. You can also open a range of ports if needed.
+              \item Source: Define the source of the traffic. You can allow traffic from anywhere (0.0.0.0/0 for IPv4 or ::/0 for IPv6) or restrict it to specific IP addresses, security groups, or VPCs.
+          \end{enumerate}
+
+    \item Adding Outbound Rules (Optional):
+          \begin{enumerate}
+              \item Outbound rules define what type of traffic your EC2 instance can initiate towards the internet or other resources. By default, outbound traffic is allowed, but you can configure restrictions if needed.
+              \item The process for adding outbound rules is similar to adding inbound rules. You'll specify the protocol, port range, and destination for the outbound traffic.
+          \end{enumerate}
+
+    \item Saving the Changes:
+
+          Once you've added or modified the desired rules, click on the "Save" button to apply the changes to the security group.
+
 \end{enumerate}
 
-\section{Steps / Procedure to follow for web service deployment using any PaaS tool}
-
-\subsection{Creation of the Web Service}
-
-\begin{lstlisting}[language=python]
-import uvicorn
-from app import app
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8181)
-\end{lstlisting}
+Important Considerations:
 
 
-\begin{lstlisting}[language=python]
-from fastapi import FastAPI
-from fastapi.responses import FileResponse
+Security Best Practices: It's recommended to follow security best practices when configuring traffic rules. Don't open unnecessary ports or allow access from unrestricted sources.
 
-from pydantic import BaseModel
+Specific Needs: Tailor the rules to your specific application or service running on the EC2 instance.
 
-app = FastAPI()
+Testing: After making changes to the security group, it's advisable to test your application or service to ensure it functions as expected with the new rules in place.
 
+\subsection{Creating Application load balancer}
+\begin{enumerate}
+    \item \textbf{Prepare Your EC2 Instances:}
+          \begin{itemize}
+              \item Launch or ensure you have EC2 instances running your application.
+              \item Make sure your application is properly configured and running on these instances.
+          \end{itemize}
 
-class Item(BaseModel):
-    item_id: int
+    \item \textbf{Create a Target Group:}
+          \begin{itemize}
+              \item Go to the Amazon EC2 dashboard.
+              \item Under "Load Balancing," navigate to "Target Groups."
+              \item Click on "Create target group."
+              \item Specify a name for your target group, protocol, port, and VPC.
+              \item Define the health checks for your target instances.
+          \end{itemize}
 
+    \item \textbf{Create an Application Load Balancer:}
+          \begin{itemize}
+              \item In the EC2 dashboard, under "Load Balancing," navigate to "Load Balancers."
+              \item Click on "Create Load Balancer."
+              \item Choose "Application Load Balancer" as the type.
+              \item Configure the load balancer settings, including name, listeners, availability zones, and security settings.
+              \item Associate the previously created target group with the load balancer.
+          \end{itemize}
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World, to: there all along react native app."}
+    \item \textbf{Configure Listener Rules:}
+          \begin{itemize}
+              \item Define the listener rules to route traffic to the appropriate target group based on the request characteristics (e.g., path patterns, host headers).
+          \end{itemize}
 
+    \item \textbf{Update DNS Records (Optional):}
+          \begin{itemize}
+              \item If you're using a custom domain, update your DNS records to point to the DNS name of your load balancer.
+          \end{itemize}
 
-@app.get('/favicon.ico', include_in_schema=False)
-async def favicon():
-    return FileResponse('favicon.ico')
+    \item \textbf{Test Your Load Balancer:}
+          \begin{itemize}
+              \item Ensure that your load balancer is routing traffic to your EC2 instances correctly.
+              \item Test your application to verify that it is functioning as expected with the load balancer in place.
+          \end{itemize}
 
-
-@app.get("/item/{item_id}")
-async def read_item(item_id: int):
-    return {"item_id": item_id}
-
-
-@app.get("/items/")
-async def list_items():
-    return [{"item_id": 1, "name": "Foo"}, {"item_id": 2, "name": "Bar"}]
-
-
-@app.post("/items/")
-async def create_item(item: Item):
-    return item
-\end{lstlisting}
-
-\subsection{Requirements File To be downloaded on Cyclic}
-\begin{lstlisting}
-anyio==3.7.0
-certifi==2023.7.22
-click==8.1.3
-dnspython==2.3.0
-email-validator==2.0.0.post2
-exceptiongroup==1.1.1
-fastapi==0.96.0
-h11==0.14.0
-httpcore==0.17.2
-httptools==0.5.0
-httpx==0.24.1
-idna==3.4
-itsdangerous==2.1.2
-Jinja2==3.1.2
-MarkupSafe==2.1.3
-orjson==3.9.0
-pydantic==1.10.8
-python-dotenv==1.0.0
-python-multipart==0.0.6
-PyYAML==6.0
-sniffio==1.3.0
-starlette==0.27.0
-ujson==5.7.0
-uvicorn==0.22.0
-uvloop==0.17.0
-watchfiles==0.19.0
-websockets==11.0.3
-pytest
-
-\end{lstlisting}
-
-\subsection{Make Repository on Github}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.95\textwidth]{github.png}
-    \caption{Repository of the App on Github}
-\end{figure}
-\subsection{Upload on Cyclic}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.95\textwidth]{cyclic home.png}
-    \caption{App on Cyclic after Connecting Github Repository}
-\end{figure}
-\subsection{Deployment after commit on Cyclic}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.95\textwidth]{automatic github deployments.png}
-    \caption{After every commit, cyclic auto deploys the new service after building it. }
-\end{figure}
-\subsection{Get request from Browser}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.95\textwidth]{sending get request.png}
-    \caption{Sending get request from browser}
-\end{figure}
-\subsection{Response fromn the Web Service}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.95\textwidth]{response.png}
-    \caption{Response from server}
-\end{figure}
-\subsection{Stored on Amazon S3 with Dynamodb}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.95\textwidth]{data.png}
-    \caption{Url and s3 bucket}
-\end{figure}
+    \item \textbf{Monitor and Scale:}
+          \begin{itemize}
+              \item Monitor the performance and health of your load balancer and EC2 instances using Amazon CloudWatch metrics.
+              \item Configure auto-scaling policies to automatically adjust the number of EC2 instances based on demand.
+          \end{itemize}
+\end{enumerate}
 
 \section{Platform}
 \textbf{Operating System}: Windows 11 \\
@@ -400,53 +319,6 @@ pytest
 
 \section{FAQs}
 
-\begin{enumerate}
-    \item \textbf{Explain the differences between SOAP and RESTful web services in terms of architecture, communication protocols, and data formats?}\\
-          \begin{itemize}
-              \item \textbf{Architecture:}
-                    \begin{itemize}
-                        \item \textbf{SOAP (Simple Object Access Protocol):} SOAP is a protocol-based standard for exchanging structured information in the implementation of web services. It relies on XML for message format and typically uses WSDL (Web Services Description Language) for service description.
-                        \item \textbf{RESTful (Representational State Transfer):} RESTful web services are based on the REST architectural style, which emphasizes a stateless client-server interaction, uniform resource identifiers (URIs) for resource identification, and standard HTTP methods (GET, POST, PUT, DELETE) for communication.
-                    \end{itemize}
-              \item \textbf{Communication Protocols:}
-                    \begin{itemize}
-                        \item \textbf{SOAP:} SOAP typically uses HTTP or SMTP (Simple Mail Transfer Protocol) as the communication protocol. It can also work with other protocols such as TCP/IP and JMS (Java Message Service).
-                        \item \textbf{RESTful:} RESTful web services primarily use HTTP as the communication protocol. They leverage standard HTTP methods and status codes for CRUD (Create, Read, Update, Delete) operations.
-                    \end{itemize}
-              \item \textbf{Data Formats:}
-                    \begin{itemize}
-                        \item \textbf{SOAP:} SOAP messages are typically formatted using XML (eXtensible Markup Language). They can also support other data formats such as JSON (JavaScript Object Notation) and MTOM (Message Transmission Optimization Mechanism) for binary data.
-                        \item \textbf{RESTful:} RESTful web services can support various data formats, including XML, JSON, HTML, and plain text. The choice of data format is typically based on the client's requirements and preferences.
-                    \end{itemize}
-          \end{itemize}
-    \item \textbf{Can you describe the typical architecture of a web service and the components involved, including clients, servers, and service endpoints?}\\
-          \begin{itemize}
-              \item A typical web service architecture consists of clients, servers, and service endpoints.
-              \item \textbf{Clients:} Clients are applications or systems that consume the web service by sending requests and processing responses.
-              \item \textbf{Servers:} Servers host the web service and handle client requests. They process incoming requests, perform necessary operations, and send responses back to clients.
-              \item \textbf{Service Endpoints:} Service endpoints are URLs (Uniform Resource Locators) or URIs (Uniform Resource Identifiers) that clients use to access the web service. Each endpoint corresponds to a specific operation or resource exposed by the service.
-          \end{itemize}
-    \item \textbf{What are some common use cases for web services in various industries and domains, such as e-commerce, finance, healthcare, and IoT?}\\
-          \begin{itemize}
-              \item \textbf{E-commerce:} Integrating payment gateways, order processing systems, and inventory management.
-              \item \textbf{Finance:} Implementing banking APIs for transaction processing, account management, and fraud detection.
-              \item \textbf{Healthcare:} Interconnecting electronic health record systems, medical imaging services, and patient management platforms.
-              \item \textbf{IoT (Internet of Things):} Collecting sensor data, monitoring device status, and controlling connected devices.
-          \end{itemize}
-    \item \textbf{What are Platform-as-a-Service (PaaS) tools like Cloud Foundry, Google App Engine, and OpenShift, and how do they differ from other cloud computing service models?}\\
-          \begin{itemize}
-              \item PaaS tools like Cloud Foundry, Google App Engine, and OpenShift provide platforms for developing, deploying, and managing applications without the complexity of managing underlying infrastructure.
-              \item Unlike Infrastructure as a Service (IaaS) and Software as a Service (SaaS), which focus on providing infrastructure or ready-to-use software, PaaS offers a complete development and deployment environment.
-              \item PaaS tools abstract away infrastructure management tasks such as provisioning servers, configuring networks, and managing operating systems, allowing developers to focus on building and deploying applications.
-          \end{itemize}
-    \item \textbf{How does Cloud Foundry streamline the process of deploying and managing applications across different cloud environments, including public, private, and hybrid clouds?}\\
-          \begin{itemize}
-              \item Cloud Foundry provides a consistent platform for deploying applications across multiple cloud environments, including public, private, and hybrid clouds.
-              \item It abstracts away the underlying infrastructure complexity and provides a self-service platform for developers to deploy and manage applications with minimal manual intervention.
-              \item Cloud Foundry supports automation of application lifecycle management tasks such as deployment, scaling, and monitoring, reducing operational overhead and ensuring consistent application performance.
-              \item By leveraging containerization and microservices architectures, Cloud Foundry enables developers to build and deploy applications in a modular and scalable manner, enhancing agility and flexibility.
-          \end{itemize}
-\end{enumerate}
 
 \section{Conclusion}
 
