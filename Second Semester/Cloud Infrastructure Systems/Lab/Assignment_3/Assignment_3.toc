@@ -13,12 +13,12 @@
 \contentsline {subsection}{\numberline {7.1}Creation of the Web Service}{5}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Requirements File To be downloaded on Cyclic}{6}{subsection.7.2}%
 \contentsline {subsection}{\numberline {7.3}Make Repository on Github}{7}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Upload on Cyclic}{7}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}Deployment after commit on Cyclic}{8}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}Get request from Browser}{8}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Response fromn the Web Service}{9}{subsection.7.7}%
-\contentsline {subsection}{\numberline {7.8}Stored on Amazon S3 with Dynamodb}{9}{subsection.7.8}%
-\contentsline {section}{\numberline {8}Platform}{9}{section.8}%
-\contentsline {section}{\numberline {9}FAQs}{9}{section.9}%
-\contentsline {section}{\numberline {10}Conclusion}{11}{section.10}%
-\contentsline {section}{References}{12}{section*.2}%
+\contentsline {subsection}{\numberline {7.4}Upload on Cyclic}{8}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Deployment after commit on Cyclic}{9}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Get request from Browser}{10}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Response fromn the Web Service}{11}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Stored on Amazon S3 with Dynamodb}{12}{subsection.7.8}%
+\contentsline {section}{\numberline {8}Platform}{12}{section.8}%
+\contentsline {section}{\numberline {9}FAQs}{13}{section.9}%
+\contentsline {section}{\numberline {10}Conclusion}{14}{section.10}%
+\contentsline {section}{References}{16}{section*.2}%

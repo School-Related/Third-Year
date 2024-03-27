@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.27)  28 MAR 2024 01:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.27)  28 MAR 2024 01:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"p:/Classes/Univeristy/Third Year/Second Semester/Cloud Infrastructure Systems/Lab/Assignment_2/Assignment_2.tex"
-(p:/Classes/Univeristy/Third Year/Second Semester/Cloud Infrastructure Systems/Lab/Assignment_2/Assignment_2.tex
+**"p:/Classes/Univeristy/Third Year/Second Semester/Cloud Infrastructure Systems/Lab/Assignment_3/Assignment_3.tex"
+(p:/Classes/Univeristy/Third Year/Second Semester/Cloud Infrastructure Systems/Lab/Assignment_3/Assignment_3.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -545,8 +545,8 @@ LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count317
 \l__pdf_internal_box=\box57
-) (Assignment_2.aux)
-\openout1 = `Assignment_2.aux'.
+) (Assignment_3.aux)
+\openout1 = `Assignment_3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
@@ -642,9 +642,8 @@ LaTeX Font Info:    Redeclaring math accent \widehat on input line 68.
 LaTeX Font Info:    Redeclaring math accent \widetilde on input line 68.
 \c@lstlisting=\count324
 Package hyperref Info: Link coloring ON on input line 68.
- (Assignment_2.out) (Assignment_2.out)
 \@outlinefile=\write3
-\openout3 = `Assignment_2.out'.
+\openout3 = `Assignment_3.out'.
 
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 19.28804pt on input line 75.
@@ -661,40 +660,10 @@ LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 {C:/Users/Krishnaraj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 13.39188pt on input line 133.
- (Assignment_2.toc
-LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
-(Font)              scaled to size 10.18341pt on input line 1.
-LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 7.71893pt on input line 5.
-LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 5.57996pt on input line 5.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 5.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 5.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 5.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
- (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
- (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for FML+fncm on input line 5.
- (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/fouriernc\fmlfncm.fd
-File: fmlfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncm.
-)
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 5.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 5.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 5.
-)
+
+No file Assignment_3.toc.
 \tf@toc=\write4
-\openout4 = `Assignment_2.toc'.
+\openout4 = `Assignment_3.toc'.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -702,6 +671,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.135 \clearpage
                  [1]
+LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
+(Font)              scaled to size 10.18341pt on input line 157.
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
 (Font)              scaled to size 11.15991pt on input line 163.
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
@@ -760,7 +731,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 261.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+)
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 7.71893pt on input line 263.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 5.57996pt on input line 263.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 263.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 263.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 263.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 263.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 263.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for FML+fncm on input line 263.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/fouriernc\fmlfncm.fd
+File: fmlfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncm.
+)
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 263.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 263.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 263.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/03/11 1.10a listings language file
 )
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
@@ -782,21 +782,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
 [6]
-<github.png, id=267, 1069.596pt x 292.6935pt>
-File: github.png Graphic file (type png)
-<use github.png>
-Package pdftex.def Info: github.png  used on input line 359.
-(pdftex.def)             Requested size: 446.26582pt x 122.12206pt.
-<cyclic home.png, id=269, 1010.5755pt x 410.7345pt>
-File: cyclic home.png Graphic file (type png)
-<use cyclic home.png>
-Package pdftex.def Info: cyclic home.png  used on input line 365.
-(pdftex.def)             Requested size: 446.26582pt x 181.37553pt.
-<automatic github deployments.png, id=270, 1034.06325pt x 535.40025pt>
-File: automatic github deployments.png Graphic file (type png)
-<use automatic github deployments.png>
-Package pdftex.def Info: automatic github deployments.png  used on input line 371.
-(pdftex.def)             Requested size: 446.26582pt x 231.05908pt.
+
+LaTeX Warning: File `github.png' not found on input line 359.
+
+
+p:/Classes/Univeristy/Third Year/Second Semester/Cloud Infrastructure Systems/Lab/Assignment_3/Assignment_3.tex:359: Package pdftex.def Error: File `github.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.359 ...graphics[width=.95\textwidth]{github.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `cyclic home.png' not found on input line 365.
+
+
+p:/Classes/Univeristy/Third Year/Second Semester/Cloud Infrastructure Systems/Lab/Assignment_3/Assignment_3.tex:365: Package pdftex.def Error: File `cyclic home.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.365 ...ics[width=.95\textwidth]{cyclic home.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -805,17 +819,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[7 <./github.png> <./cyclic home.png>]
-<sending get request.png, id=287, 870.8535pt x 405.9165pt>
-File: sending get request.png Graphic file (type png)
-<use sending get request.png>
-Package pdftex.def Info: sending get request.png  used on input line 377.
-(pdftex.def)             Requested size: 446.26582pt x 208.01187pt.
-<response.png, id=288, 947.9415pt x 157.7895pt>
-File: response.png Graphic file (type png)
-<use response.png>
-Package pdftex.def Info: response.png  used on input line 383.
-(pdftex.def)             Requested size: 446.26582pt x 74.28145pt.
+[7]
+
+LaTeX Warning: File `automatic github deployments.png' not found on input line 371.
+
+
+p:/Classes/Univeristy/Third Year/Second Semester/Cloud Infrastructure Systems/Lab/Assignment_3/Assignment_3.tex:371: Package pdftex.def Error: File `automatic github deployments.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.371 ...twidth]{automatic github deployments.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -824,13 +842,76 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[8 <./automatic github deployments.png> <./sending get request.png>]
-<data.png, id=297, 1024.42725pt x 452.28975pt>
-File: data.png Graphic file (type png)
-<use data.png>
-Package pdftex.def Info: data.png  used on input line 389.
-(pdftex.def)             Requested size: 446.26582pt x 197.0274pt.
+[8]
 
+LaTeX Warning: File `sending get request.png' not found on input line 377.
+
+
+p:/Classes/Univeristy/Third Year/Second Semester/Cloud Infrastructure Systems/Lab/Assignment_3/Assignment_3.tex:377: Package pdftex.def Error: File `sending get request.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.377 ...h=.95\textwidth]{sending get request.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[9]
+
+LaTeX Warning: File `response.png' not found on input line 383.
+
+
+p:/Classes/Univeristy/Third Year/Second Semester/Cloud Infrastructure Systems/Lab/Assignment_3/Assignment_3.tex:383: Package pdftex.def Error: File `response.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.383 ...aphics[width=.95\textwidth]{response.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[10]
+
+LaTeX Warning: File `data.png' not found on input line 389.
+
+
+p:/Classes/Univeristy/Third Year/Second Semester/Cloud Infrastructure Systems/Lab/Assignment_3/Assignment_3.tex:389: Package pdftex.def Error: File `data.png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.389 ...degraphics[width=.95\textwidth]{data.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 394--397
 
  []
@@ -847,7 +928,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[9 <./response.png> <./data.png>]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 422--423
 
  []
@@ -858,18 +939,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 429--430
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
-
- []
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.93642pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[10]
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
@@ -881,7 +962,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[11]
+[14]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -889,28 +970,46 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[12
+[15]
 
-] (Assignment_2.aux)
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[16
+
+] (Assignment_3.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
-Package rerunfilecheck Info: File `Assignment_2.out' has not changed.
-(rerunfilecheck)             Checksum: 83766BA3DE94B0276D375E78BBE7474C;3950.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `Assignment_3.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Assignment_3.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  83766BA3DE94B0276D375E78BBE7474C;3950.
  ) 
 Here is how much of TeX's memory you used:
- 13954 strings out of 474424
- 211518 string characters out of 5739379
+ 14063 strings out of 474424
+ 214610 string characters out of 5739379
  2100496 words of memory out of 5000000
- 35916 multiletter control sequences out of 15000+600000
+ 36027 multiletter control sequences out of 15000+600000
  604275 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,79p,742b,2044s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncb8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncr8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_2.pdf (14 pages, 547161 bytes).
+Output written on Assignment_3.pdf (18 pages, 131664 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 163 named destinations out of 1000 (max. 500000)
- 223 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 167 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

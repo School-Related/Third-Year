@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.27)  27 MAR 2024 23:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.27)  28 MAR 2024 01:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -964,14 +964,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
 [15]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 381.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 379.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Underfull \hbox (badness 3568) in paragraph at lines 384--386
-[]\T1/fnc/m/n/10.95 Benefits of Vir-tu-al-iza-tion. Ac-cessed from: [][]$\T1/cmtt/m/n/10.95 https : / / www . vmware . com / topics / glossary /
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -990,17 +986,17 @@ Package rerunfilecheck Info: File `Assignment_1.out' has not changed.
 (rerunfilecheck)             Checksum: ADE5984525E5435674B13B0C1DB5AFAA;1962.
  ) 
 Here is how much of TeX's memory you used:
- 13488 strings out of 474424
- 208312 string characters out of 5739379
+ 13492 strings out of 474424
+ 208296 string characters out of 5739379
  1938496 words of memory out of 5000000
- 35538 multiletter control sequences out of 15000+600000
+ 35540 multiletter control sequences out of 15000+600000
  601672 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,79p,646b,614s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncb8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncr8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_1.pdf (18 pages, 1260733 bytes).
+Output written on Assignment_1.pdf (18 pages, 1260014 bytes).
 PDF statistics:
- 308 PDF objects out of 1000 (max. 8388607)
- 80 named destinations out of 1000 (max. 500000)
+ 306 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
  218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
