@@ -1,0 +1,393 @@
+% This is a Basic Assignment Paper but with like Code and stuff allowed in it, there is also url, hyperlinks from contents included. 
+
+\documentclass[11pt]{article}
+
+% Preamble
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage{fancyhdr, float, graphicx}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{fouriernc} % Use the New Century Schoolbook font
+\usepackage[nottoc, notlot, notlof]{tocbibind}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=codepurple,
+    pdfpagemode=FullScreen,
+    }
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% Header and Footer
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{\textit{\Large{Cloud Infrastructure and Security - TY. B. Tech}}}
+\fancyhead[R]{\textit{Krishnaraj T}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\footrulewidth}{1pt}
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}[thm]{Definition}
+
+
+% Other Doc Editing
+% \parindent 0ex
+%\renewcommand{\baselinestretch}{1.5}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+
+    %---------------------------NAMES-------------------------------
+
+    \huge\textsc{
+        MIT World Peace University
+    }\\
+
+    \vspace{0.75\baselineskip} % space after Uni Name
+
+    \LARGE{
+        Cloud Infrastructure and Security\\
+        Third Year B. Tech, Semester 6
+    }
+
+    \vfill % space after Sub Name
+
+    %--------------------------TITLE-------------------------------
+
+    \rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+    \rule{\textwidth}{0.6pt}
+    \vspace{0.75\baselineskip} % Whitespace above the title
+
+
+
+    \huge{\textsc{
+            Deploying Web server in Python on Cyclic (PaaS)
+        }} \\
+
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the title
+    \rule{\textwidth}{0.6pt}\vspace*{-\baselineskip}\vspace*{2.8pt}
+    \rule{\textwidth}{1.6pt}
+
+    \vspace{1\baselineskip} % Whitespace after the title block
+
+    %--------------------------SUBTITLE --------------------------	
+
+    \LARGE\textsc{
+        Assignment 2
+    } % Subtitle or further description
+    \vfill
+
+    %--------------------------AUTHOR-------------------------------
+
+    Prepared By
+    \vspace{0.5\baselineskip} % Whitespace before the editors
+
+    \Large{
+        Krishnaraj Thadesar \\
+        Cyber Security and Forensics\\
+        Batch A1, PA 10
+    }
+
+
+    \vspace{0.5\baselineskip} % Whitespace below the editor list
+    \today
+
+\end{titlepage}
+
+
+\tableofcontents
+\thispagestyle{empty}
+\clearpage
+
+\setcounter{page}{1}
+
+\section{Aim}
+Write a Web Service using Java or Python. Deploy the services using PaaS tools such as
+Cloud Foundry/ GoogleAppEngine / OpenShift.
+
+\section{Objectives}
+\begin{enumerate}
+    \item To understand the concept of web service.
+    \item To get familiar with PaaS Service.
+    \item Learn how to deploy the web service on cloud Foundry/GoogleAppEngine/ OpenShift
+\end{enumerate}
+
+\section{Theory}
+
+\section{Introduction to Web services}
+
+Web services are software systems designed to support interoperable machine-to-machine interaction over a network. They are built on standard web technologies such as HTTP, XML, and SOAP, and can be accessed using standard protocols like REST, JSON, and WSDL. Web services provide a platform-independent way of integrating applications and services across different platforms and technologies.
+
+\begin{enumerate}
+    \item \textbf{Web Service Architecture:} Web services follow a client-server architecture, where the client sends requests to the server, and the server processes the requests and sends back responses. The communication between the client and server is done using standard protocols like HTTP, SOAP, or REST.
+    \item \textbf{Web Service Standards:} Web services are built on standard web technologies and protocols, such as XML, SOAP, WSDL, and UDDI. These standards define the message format, communication protocols, and service description for web services, ensuring interoperability and compatibility across different platforms and technologies.
+    \item \textbf{Web Service Security:} Web services need to be secure to protect sensitive data and prevent unauthorized access. Security mechanisms like SSL/TLS, OAuth, and WS-Security can be used to secure web services and ensure data confidentiality, integrity, and authentication.
+    \item \textbf{Web Service Deployment:} Web services can be deployed on different platforms, such as on-premises servers, cloud platforms, or PaaS services. Deployment involves configuring the web service, setting up the server environment, and making the service accessible to clients over the network.
+\end{enumerate}
+
+\subsection{Web Service Protocols}
+\begin{enumerate}
+    \item \textbf{SOAP (Simple Object Access Protocol):} SOAP is a protocol for exchanging structured information in the implementation of web services. It uses XML as the message format and can be accessed using standard protocols like HTTP, SMTP, and TCP.
+    \item \textbf{REST (Representational State Transfer):} REST is an architectural style for designing networked applications. RESTful web services use standard HTTP methods like GET, POST, PUT, and DELETE to perform operations on resources. They typically use JSON or XML as the message format and are lightweight and easy to use.
+    \item \textbf{WSDL (Web Services Description Language):} WSDL is an XML-based language for describing web services and their interfaces. It defines the operations, messages, and bindings of a web service and provides a standard way to communicate with the service.
+    \item \textbf{UDDI (Universal Description, Discovery, and Integration):} UDDI is a standard for publishing and discovering web services. It provides a directory service where businesses can register their web services and clients can search for and access the services.
+    \item \textbf{HTTP (Hypertext Transfer Protocol):} HTTP is the standard protocol for transferring data over the web. It is used by web services to send and receive messages between clients and servers.
+\end{enumerate}
+
+\subsection{Web Service Standards}
+
+\begin{enumerate}
+    \item \textbf{XML (Extensible Markup Language):} XML is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. It is widely used in web services for representing data in a structured and standardized way.
+    \item \textbf{JSON (JavaScript Object Notation):} JSON is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is commonly used in RESTful web services for data serialization and exchange.
+    \item \textbf{SSL/TLS (Secure Sockets Layer/Transport Layer Security):} SSL/TLS are cryptographic protocols that provide secure communication over a computer network. They are used to encrypt data transmitted between clients and servers, ensuring data confidentiality and integrity.
+    \item \textbf{OAuth (Open Authorization):} OAuth is an open standard for access delegation that allows users to grant third-party applications access to their resources without sharing their credentials. It is commonly used in web services to authenticate and authorize users.
+    \item \textbf{WS-Security (Web Services Security):} WS-Security is a standard for securing web services using message-level security mechanisms. It provides features like encryption, digital signatures, and authentication to ensure the confidentiality, integrity, and authenticity of messages.
+    \item \textbf{HTTP Methods:} HTTP methods like GET, POST, PUT, and DELETE are used in RESTful web services to perform operations on resources. GET is used to retrieve data, POST is used to create data, PUT is used to update data, and DELETE is used to delete data.
+    \item \textbf{HTTP Status Codes:} HTTP status codes like 200 OK, 201 Created, 400 Bad Request, and 404 Not Found are used in web services to indicate the status of a request. They provide information about the success or failure of a request and help clients understand the response from the server.
+\end{enumerate}
+
+\section{Different types of Web services}
+
+Web services can be categorized into two main types:
+
+\begin{enumerate}
+    \item \textbf{SOAP-based Web Services:} SOAP (Simple Object Access Protocol) is a protocol for exchanging structured information in the implementation of web services. SOAP-based web services use XML as the message format and can be accessed using standard protocols like HTTP, SMTP, and TCP.
+    \item \textbf{RESTful Web Services:} REST (Representational State Transfer) is an architectural style for designing networked applications. RESTful web services use standard HTTP methods like GET, POST, PUT, and DELETE to perform operations on resources. They typically use JSON or XML as the message format and are lightweight and easy to use.
+\end{enumerate}
+
+\subsection{SOAP}
+\begin{enumerate}
+    \item \textbf{Description:} SOAP (Simple Object Access Protocol) is a protocol for exchanging structured information in the implementation of web services. It uses XML as the message format and can be accessed using standard protocols like HTTP, SMTP, and TCP.
+    \item \textbf{Advantages:}
+          \begin{itemize}
+              \item \textbf{Standardized Protocol:} SOAP is a standardized protocol that defines a set of rules for exchanging messages between clients and servers.
+              \item \textbf{Interoperability:} SOAP-based web services are platform-independent and can be accessed from any programming language or platform that supports the protocol.
+              \item \textbf{Security:} SOAP supports security features like encryption, digital signatures, and authentication to ensure data confidentiality and integrity.
+              \item \textbf{Complex Data Types:} SOAP allows for the use of complex data types and structures in messages, making it suitable for enterprise-level applications.
+          \end{itemize}
+    \item \textbf{Disadvantages:}
+          \begin{itemize}
+              \item \textbf{Complexity:} SOAP messages can be complex and verbose, making them less efficient for simple data exchange.
+              \item \textbf{Performance Overhead:} SOAP-based web services can have higher performance overhead due to the XML parsing and processing required.
+              \item \textbf{Limited Browser Support:} SOAP is not well-supported by web browsers, limiting its use in client-side applications.
+              \item \textbf{Versioning:} SOAP services can be difficult to version and maintain over time, leading to compatibility issues between clients and servers.
+          \end{itemize}
+    \item \textbf{Example:} A SOAP-based web service for a banking application that allows clients to transfer funds between accounts using XML messages over HTTP.
+    \item \textbf{Use Cases:} SOAP-based web services are commonly used in enterprise applications, financial services, and healthcare systems that require secure and reliable communication between clients and servers.
+\end{enumerate}
+
+
+\subsection{REST}
+
+\begin{enumerate}
+    \item \textbf{Description:} REST (Representational State Transfer) is an architectural style for designing networked applications. RESTful web services use standard HTTP methods like GET, POST, PUT, and DELETE to perform operations on resources. They typically use JSON or XML as the message format and are lightweight and easy to use.
+    \item \textbf{Advantages:}
+          \begin{itemize}
+              \item \textbf{Simplicity:} RESTful web services are simple and easy to use, making them ideal for lightweight applications and client-side development.
+              \item \textbf{Performance:} REST services have lower performance overhead compared to SOAP services due to their lightweight message format and stateless nature.
+              \item \textbf{Browser Support:} REST is well-supported by web browsers and can be easily consumed by client-side applications using JavaScript.
+              \item \textbf{Scalability:} RESTful web services are scalable and can handle a large number of concurrent requests, making them suitable for high-traffic applications.
+          \end{itemize}
+    \item \textbf{Disadvantages:}
+          \begin{itemize}
+              \item \textbf{Security:} REST does not provide built-in security features like encryption or authentication, requiring additional measures to secure the communication between clients and servers.
+              \item \textbf{Complex Operations:} RESTful services can be limited in handling complex operations or transactions that require multiple steps or state management.
+              \item \textbf{Versioning:} REST services can be challenging to version and maintain over time, leading to compatibility issues between clients and servers.
+              \item \textbf{Data Integrity:} REST does not provide built-in mechanisms for ensuring data integrity or consistency, requiring developers to implement custom solutions.
+          \end{itemize}
+    \item \textbf{Example:} A RESTful web service for a social media application that allows users to create, read, update, and delete posts using JSON messages over HTTP.
+    \item \textbf{Use Cases:} RESTful web services are commonly used in mobile applications, IoT devices, and web applications that require lightweight communication between clients and servers.
+    \item \textbf{Comparison:} SOAP vs. REST
+          \begin{itemize}
+              \item \textbf{Protocol:} SOAP is a protocol, while REST is an architectural style.
+              \item \textbf{Message Format:} SOAP uses XML, while REST uses JSON or XML.
+              \item \textbf{Security:} SOAP supports security features, while REST requires additional measures for security.
+              \item \textbf{Complexity:} SOAP messages can be complex, while REST messages are simple and lightweight.
+              \item \textbf{Performance:} SOAP services have higher performance overhead, while REST services are more efficient.
+          \end{itemize}
+\end{enumerate}
+
+
+\section{Web service Development using Python}
+
+Python is a popular programming language for developing web services due to its simplicity, readability, and versatility. Python provides libraries and frameworks for building web services using different protocols like SOAP and REST. Some popular libraries and frameworks for web service development in Python include Flask, Django, and FastAPI.
+
+\subsection{FastAPI}
+\begin{enumerate}
+    \item \textbf{Description:} FastAPI is a modern web framework for building APIs with Python 3.6+ based on standard Python type hints. It is fast, easy to use, and provides automatic validation, serialization, and documentation of API endpoints.
+    \item \textbf{Features:}
+          \begin{itemize}
+              \item \textbf{Fast:} FastAPI is one of the fastest web frameworks for Python, providing high performance and low latency for API requests.
+              \item \textbf{Easy to Use:} FastAPI is easy to learn and use, with a simple and intuitive syntax that leverages Python type hints for defining API endpoints.
+              \item \textbf{Automatic Validation:} FastAPI automatically validates request data based on type hints and provides detailed error messages for invalid inputs.
+              \item \textbf{Automatic Documentation:} FastAPI generates interactive API documentation based on type hints, allowing users to explore and test API endpoints in real-time.
+          \end{itemize}
+    \item \textbf{Example:} A simple web service using FastAPI that exposes endpoints for creating, reading, updating, and deleting user data.
+    \item \textbf{Installation:} FastAPI can be installed using pip, the Python package manager, by running the command \texttt{pip install fastapi}.
+    \item \textbf{Usage:} FastAPI provides a built-in development server for running web services locally and supports deployment to cloud platforms like Heroku, AWS, and Azure.
+    \item \textbf{Resources:} FastAPI documentation, tutorials, and examples are available on the official website at \url{https://fastapi.tiangolo.com/}.
+    \item \textbf{Comparison between Flask, Django, and FastAPI:}
+          \begin{enumerate}
+              \item \textbf{Flask:} Flask is a lightweight web framework for Python that is easy to use and flexible. It is suitable for small to medium-sized web applications and APIs.
+              \item \textbf{Django:} Django is a full-featured web framework for Python that provides a complete set of tools and libraries for building complex web applications. It is suitable for large-scale projects with high traffic and data requirements.
+              \item \textbf{FastAPI:} FastAPI is a modern web framework for Python that is fast, easy to use, and provides automatic validation and documentation of API endpoints. It is suitable for building high-performance APIs with minimal code.
+          \end{enumerate}
+\end{enumerate}
+
+\section{Steps / Procedure to follow for web service deployment using any PaaS tool}
+
+\subsection{Creation of the Web Service}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{}
+    \caption{}
+\end{figure}
+\subsection{Creation of the Web Service}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{}
+    \caption{}
+\end{figure}
+\subsection{Creation of the Web Service}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{}
+    \caption{}
+\end{figure}
+\subsection{Creation of the Web Service}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{}
+    \caption{}
+\end{figure}
+\subsection{Creation of the Web Service}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{}
+    \caption{}
+\end{figure}
+\subsection{Creation of the Web Service}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.45\textwidth]{}
+    \caption{}
+\end{figure}
+
+\section{Platform}
+\textbf{Operating System}: Windows 11 \\
+\textbf{IDEs or Text Editors Used}: Visual Studio Code\\
+% \textbf{Compilers or Interpreters}: Python 3.10.1\\
+
+% \section{Code}
+% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
+
+\section{FAQs}
+
+\begin{enumerate}
+    \item \textbf{Explain the concept of Virtual Machine and How it differs from Physical Machine:}
+          \begin{itemize}
+              \item \textbf{Virtual Machine (VM):} A virtual machine is a software-based emulation of a physical computer that runs an operating system and applications. It operates in an isolated environment from the host system and can be configured with specific hardware resources.
+              \item \textbf{Differences from Physical Machine:}
+                    \begin{itemize}
+                        \item \textbf{Hardware Independence:} VMs are not tied to specific physical hardware and can be easily moved or replicated across different host systems.
+                        \item \textbf{Isolation:} Each VM operates independently from other VMs and the host system, providing a secure and isolated environment for running applications.
+                        \item \textbf{Resource Allocation:} VMs can be allocated specific amounts of CPU, memory, storage, and network resources, allowing for efficient utilization and optimization of hardware resources.
+                        \item \textbf{Snapshots and Cloning:} VMs support features like snapshots and cloning, allowing users to capture the state of a VM at a particular point in time and create identical copies for testing or backup purposes.
+                    \end{itemize}
+          \end{itemize}
+
+    \item \textbf{Software or Packages for Ubuntu Server VM Experimentation:}
+          \begin{itemize}
+              \item \textbf{Apache Web Server:} For hosting websites or web applications.
+              \item \textbf{MySQL or PostgreSQL:} Relational database management systems for storing and managing data.
+              \item \textbf{Node.js or Python:} Programming languages and runtime environments for developing and running server-side applications.
+              \item \textbf{Docker:} Containerization platform for packaging and deploying applications.
+              \item \textbf{Git:} Version control system for managing project code.
+              \item \textbf{OpenSSH:} Secure shell protocol for remote access and administration of the server.
+              \item \textbf{Nginx:} Web server and reverse proxy for serving static content or load balancing.
+          \end{itemize}
+
+    \item \textbf{Configuration Options for Ubuntu Server VM in VMware Workstation:}
+          \begin{itemize}
+              \item \textbf{Hardware Resources:} Allocate CPU cores, RAM, disk space, and network adapters to the VM.
+              \item \textbf{Operating System Installation:} Select the Ubuntu Server ISO image for installation.
+              \item \textbf{Network Settings:} Choose between bridged, NAT, or host-only networking modes.
+              \item \textbf{Storage Options:} Create virtual disks and configure storage settings such as disk type (e.g., SATA, SCSI), size, and location.
+              \item \textbf{VM Hardware Compatibility:} Choose the hardware compatibility level for the VM, which determines the virtual hardware features available.
+              \item \textbf{Integration Features:} Enable or disable features like VMware Tools, which enhance VM performance and integration with the host system.
+          \end{itemize}
+
+    \item \textbf{Utilization of Hardware Virtualization Technologies by VMware Workstation:}
+          \begin{itemize}
+              \item \textbf{Processor Virtualization:} VMware Workstation leverages hardware-assisted virtualization technologies such as Intel VT-x and AMD-V to offload virtualization tasks to the CPU, improving performance and efficiency.
+              \item \textbf{Memory Management:} Hardware virtualization assists in efficiently managing memory resources, allowing VMs to access physical memory directly and reducing overhead associated with memory management.
+              \item \textbf{I/O Virtualization:} Virtualization technologies optimize I/O operations by providing direct access to physical devices from within the VM, enhancing disk and network performance.
+              \item \textbf{Virtualization Extensions:} VMware Workstation supports hardware virtualization extensions such as Intel VT-d and AMD-Vi for improved security and isolation of VMs.
+          \end{itemize}
+
+    \item \textbf{Handling Installation of Ubuntu Server OS in VMware Workstation:}
+          \begin{itemize}
+              \item \textbf{Create New Virtual Machine:} Use the New Virtual Machine Wizard to set up a new VM.
+              \item \textbf{Select Guest Operating System:} Choose Ubuntu Server as the guest OS.
+              \item \textbf{Allocate Resources:} Assign CPU cores, memory, and storage for the VM.
+              \item \textbf{Configure Network:} Select network settings such as bridged, NAT, or host-only.
+              \item \textbf{Install Ubuntu Server:} Mount the Ubuntu Server ISO image and boot the VM to begin the installation process.
+              \item \textbf{Follow Installation Steps:} Proceed with the installation by following the on-screen prompts, including disk partitioning, user account setup, and package selection.
+              \item \textbf{Install VMware Tools:} After installation, install VMware Tools to enhance VM performance and integration with the host system.
+          \end{itemize}
+\end{enumerate}
+
+\section{Conclusion}
+In this assignment, we have learnt about VMWare and how to use it. We have also learnt how to install Ubuntu Server on VMWare Workstation. This will help us in understanding virtualization and cloud computing concepts better.
+
+\clearpage
+
+\pagebreak
+\begin{thebibliography}{}
+
+    \bibitem{CloudConceptsOverview}
+    Cloud Computing Concepts Overview.
+    Accessed from: \url{https://www.ibm.com/cloud/learn/cloud-computing-concepts}
+
+    \bibitem{VirtualizationBenefits}
+    Benefits of Virtualization.
+    Accessed from: \url{https://www.vmware.com/topics/glossary/content/virtualization}
+
+\end{thebibliography}
+
+\end{document}
