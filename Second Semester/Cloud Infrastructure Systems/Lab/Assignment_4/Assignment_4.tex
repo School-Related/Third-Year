@@ -142,17 +142,144 @@ equivalent libraries
 
 \section{Objectives}
 \begin{enumerate}
-    \item To get acquainted with AWS platform.
-    \item To get familiar with EC2 Service
-    \item Learn how to configure the traffic rules.
-    \item To understand creation of application load balancer
+    \item To learn about BOTO3 library in Python
 \end{enumerate}
 
 \section{Theory}
+
+\subsection{Boto3}
+
+Boto3 is the Amazon Web Services (AWS) SDK for Python. It allows Python developers to interact with AWS services such as Amazon S3, EC2, DynamoDB, and many others programmatically. Boto3 provides an easy-to-use interface to make API calls to AWS services, manage AWS resources, and automate various tasks in your applications or scripts. It handles authentication, request signing, and error handling, making it simple to integrate AWS functionality into your Python applications.
+
+Some key features of Boto3 include:
+
+\begin{itemize}
+    \item \textbf{Comprehensive AWS Service Coverage:} Boto3 supports a wide range of AWS services, allowing developers to interact with almost every aspect of the AWS ecosystem.
+    \item \textbf{Resource-Oriented Interface:} Boto3 provides a resource-oriented interface that allows developers to work with AWS resources in a natural and intuitive way. Resources represent entities such as EC2 instances, S3 buckets, DynamoDB tables, and more.
+    \item \textbf{Low-Level Client Interface:} In addition to the resource-oriented interface, Boto3 also offers a low-level client interface that allows direct interaction with AWS service APIs. This interface provides more control and flexibility but requires a deeper understanding of the underlying service APIs.
+    \item \textbf{Easy Configuration and Authentication:} Boto3 simplifies the process of configuring AWS credentials and authentication, supporting various authentication methods such as IAM roles, access keys, and temporary security credentials.
+    \item \textbf{Integration with AWS Services:} Boto3 integrates seamlessly with other AWS services and features, such as AWS Lambda, Amazon SQS, Amazon SNS, and Amazon CloudWatch, enabling developers to build sophisticated applications and workflows.
+    \item \textbf{Active Community and Support:} Boto3 benefits from an active community of developers and contributors, ensuring continuous improvement, updates, and support for new AWS features and services.
+\end{itemize}
+
+For more information and detailed documentation on Boto3, refer to the official AWS documentation: \url{https://boto3.amazonaws.com/v1/documentation/api/latest/index.html}.
+
+\subsection{Amazon S3}
+
+Amazon Simple Storage Service (Amazon S3) is a scalable object storage service offered by Amazon Web Services (AWS). It provides developers and businesses with a secure, durable, and highly available storage infrastructure for storing and retrieving any amount of data at any time. Amazon S3 is designed to offer 99.999999999 Percent (11 nines) durability and 99.99 Percentage availability of objects over a given year, making it suitable for a wide range of use cases, from simple file storage to complex data analytics and archival solutions.
+
+Key features of Amazon S3 include:
+
+\begin{itemize}
+    \item \textbf{Scalability and Durability:} Amazon S3 is designed to scale seamlessly to accommodate growing amounts of data and offers high durability for stored objects through data replication and redundancy across multiple geographically distributed data centers.
+    \item \textbf{Data Protection and Security:} Amazon S3 provides multiple layers of data protection and security features, including encryption at rest and in transit, access control using AWS Identity and Access Management (IAM) policies and bucket policies, and versioning to protect against accidental deletions or overwrites.
+    \item \textbf{Flexible Storage Classes:} Amazon S3 offers multiple storage classes with different levels of durability, availability, and performance characteristics to optimize storage costs and meet specific use case requirements, including Standard, Intelligent-Tiering, Glacier, and more.
+    \item \textbf{Integration and Compatibility:} Amazon S3 seamlessly integrates with other AWS services such as AWS Lambda, Amazon CloudFront, Amazon Athena, and Amazon Redshift, enabling developers to build powerful applications and workflows that leverage the capabilities of S3 for data storage and retrieval.
+    \item \textbf{Lifecycle Management:} Amazon S3 provides lifecycle policies that allow you to automatically transition objects between storage classes or expire objects based on predefined rules, helping you optimize storage costs and compliance requirements over time.
+    \item \textbf{Cross-Region Replication:} Amazon S3 supports cross-region replication, allowing you to replicate objects across different AWS regions for disaster recovery, data locality, and compliance reasons, ensuring data resilience and availability in multiple geographic locations.
+\end{itemize}
+
+\section{Python Script}
+\begin{lstlisting}[language=python]
+import boto3
+s3 = boto3.client('s3')
+
+import json
+
+def put(key, value):
+    # store something
+    s3.put_object(
+        Body=json.dumps({key: value}),
+        Bucket="cyclic-tame-red-seagull-shoe-us-east-1",
+        Key=f"some_files/{key}.json"
+    )
+    print("Stored successfully")
+
+def get(key):
+    # get it back
+    my_file = s3.get_object(
+        Bucket="cyclic-tame-red-seagull-shoe-us-east-1",
+        Key=f"some_files/{key}.json"
+    )
+    return json.loads(my_file['Body'].read())
+
+def delete(key):
+    # delete the key
+    s3.delete_object(
+        Bucket="cyclic-tame-red-seagull-shoe-us-east-1",
+        Key=f"some_files/{key}.json"
+    )
+
+def listbucket():
+    # list all keys
+    my_bucket = s3.list_objects(
+        Bucket="cyclic-tame-red-seagull-shoe-us-east-1"
+    )
+    return my_bucket
+
+
+if __name__ == "__main__":
+    print("Welcome to CIS assignment 4")
+    print("What do you want to do: ")
+    print("1. Store a key value pair")
+    print("2. Retrieve a value for a key")
+    print("3. Delete a key value pair")
+    print("4. List all keys in the bucket")
+    print("5. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == "1":
+        key = input("Enter the key: ")
+        value = input("Enter the value: ")
+        put(key, value)
+
+    elif choice == "2":
+        key = input("Enter the key: ")
+        print(get(key))
+
+    elif choice == "3":
+        key = input("Enter the key: ")
+        delete(key)
+
+    elif choice == "4":
+        print(listbucket())
+
+    else:
+        print("Invalid choice. Exiting...")
+\end{lstlisting}
+
+\section{Running the Script}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{putting_credentials.png}
+    \caption{Pasting Credentials in the Powershell}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{store and get values.png}
+    \caption{Storing and Getting Values}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{get all values.png}
+    \caption{Listing all files. }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{delete.png}
+    \caption{Deleting a File}
+\end{figure}
+
 \section{Platform}
 \textbf{Operating System}: Windows 11 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
-% \textbf{Compilers or Interpreters}: Python 3.10.1\\
+\textbf{Compilers or Interpreters}: Python 3.10.1\\
 
 % \section{Code}
 % \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
@@ -161,7 +288,7 @@ equivalent libraries
 
 
 \section{Conclusion}
-In this assignment, we learned how to manage and monitor S3 operations to a specific account using BOTO3 or equivalent libraries. 
+In this assignment, we learned how to manage and monitor S3 operations to a specific account using BOTO3 in python. We inserted and changed data in a project that was deployed on Amazon s3 using a PaaS called Cyclic.
 \clearpage
 
 \pagebreak

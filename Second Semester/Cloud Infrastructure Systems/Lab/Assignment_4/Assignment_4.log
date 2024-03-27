@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.27)  28 MAR 2024 01:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.27)  28 MAR 2024 02:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -664,6 +664,34 @@ LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
  (Assignment_4.toc
 LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
 (Font)              scaled to size 10.18341pt on input line 1.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 7.71893pt on input line 4.
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 5.57996pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for FML+fncm on input line 4.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/fouriernc\fmlfncm.fd
+File: fmlfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncm.
+)
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 4.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 4.
 )
 \tf@toc=\write4
 \openout4 = `Assignment_4.toc'.
@@ -674,14 +702,25 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.135 \clearpage
                  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
+LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
+(Font)              scaled to size 11.15991pt on input line 150.
+LaTeX Font Info:    Font shape `T1/fnc/b/n' will be
+(Font)              scaled to size 11.15991pt on input line 150.
+LaTeX Font Info:    Trying to load font information for TS1+fnc on input line 157.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/fouriernc\ts1fnc.fd
+File: ts1fnc.fd 2005/12/13 font definitions for TS1/fnc.
+)
+LaTeX Font Info:    Font shape `TS1/fnc/m/n' will be
+(Font)              scaled to size 10.18341pt on input line 157.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 165.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 10.18341pt on input line 165.
+(Font)              scaled to size 10.18341pt on input line 170.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 13.39188pt on input line 165.
+(Font)              scaled to size 13.39188pt on input line 170.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -693,42 +732,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.165 \clearpage
-                 [1
+l.170 
+       [1
 
-]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 171.
- (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+] (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/03/11 1.10a listings language file
 )
 LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 7.71893pt on input line 171.
-LaTeX Font Info:    Font shape `T1/fnc/m/n' will be
-(Font)              scaled to size 5.57996pt on input line 171.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 171.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 171.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 171.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 171.
- (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 171.
- (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for FML+fncm on input line 171.
- (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/fouriernc\fmlfncm.fd
-File: fmlfncm.fd 2005/12/20 Fontinst v1.928 font definitions for FML/fncm.
-)
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 171.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 171.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 171.
+(Font)              scaled to size 8.36993pt on input line 184.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -737,7 +748,69 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[2
+[2]
+<putting_credentials.png, id=96, 1146.08176pt x 584.1825pt>
+File: putting_credentials.png Graphic file (type png)
+<use putting_credentials.png>
+Package pdftex.def Info: putting_credentials.png  used on input line 256.
+(pdftex.def)             Requested size: 446.26582pt x 227.4737pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[3]
+<store and get values.png, id=154, 1149.69525pt x 584.78474pt>
+File: store and get values.png Graphic file (type png)
+<use store and get values.png>
+Package pdftex.def Info: store and get values.png  used on input line 263.
+(pdftex.def)             Requested size: 446.26582pt x 226.98543pt.
+<get all values.png, id=155, 1153.911pt x 561.89925pt>
+File: get all values.png Graphic file (type png)
+<use get all values.png>
+Package pdftex.def Info: get all values.png  used on input line 269.
+(pdftex.def)             Requested size: 446.26582pt x 217.30501pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[4 <./putting_credentials.png> <./store and get values.png>]
+<delete.png, id=164, 1152.10425pt x 320.397pt>
+File: delete.png Graphic file (type png)
+<use delete.png>
+Package pdftex.def Info: delete.png  used on input line 275.
+(pdftex.def)             Requested size: 446.26582pt x 124.10365pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--283
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[5 <./get all values.png> <./delete.png>]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 297.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[6
 
 ] (Assignment_4.aux)
  ***********
@@ -745,20 +818,20 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `Assignment_4.out' has not changed.
-(rerunfilecheck)             Checksum: 8815F47E862D84B7A6F0EFDFA380C643;557.
+(rerunfilecheck)             Checksum: 1EBC65D33A37D3846182FBE861F9A0C3;996.
  ) 
 Here is how much of TeX's memory you used:
- 13233 strings out of 474424
- 203405 string characters out of 5739379
- 1931496 words of memory out of 5000000
- 35352 multiletter control sequences out of 15000+600000
- 598070 words of font info for 83 fonts, out of 8000000 for 9000
+ 13825 strings out of 474424
+ 210043 string characters out of 5739379
+ 2251496 words of memory out of 5000000
+ 35859 multiletter control sequences out of 15000+600000
+ 604275 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,79p,646b,530s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncb8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncr8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on Assignment_4.pdf (4 pages, 62155 bytes).
+ 75i,13n,79p,679b,2175s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncb8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncr8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
+Output written on Assignment_4.pdf (8 pages, 5787798 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 16 named destinations out of 1000 (max. 500000)
- 57 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 300 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

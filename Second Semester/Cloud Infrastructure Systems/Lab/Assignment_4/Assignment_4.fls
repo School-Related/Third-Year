@@ -206,23 +206,6 @@ INPUT .\Assignment_4.toc
 INPUT .\Assignment_4.toc
 INPUT Assignment_4.toc
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncb8t.tfm
-OUTPUT Assignment_4.toc
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncb8t.vf
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncb8r.tfm
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncb8t.vf
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncb8r.tfm
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncri8t.tfm
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncri8t.tfm
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncri8t.vf
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncri8r.tfm
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncri8t.vf
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncri8r.tfm
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncr8t.vf
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncr8r.tfm
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1095.tfm
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncr8t.tfm
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncr8t.tfm
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\fouriernc\fncmii.tfm
@@ -255,9 +238,72 @@ INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\fourier
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\fourier\fourier-bb.tfm
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\fourier\fourier-bb.tfm
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\fourier\fourier-bb.tfm
+OUTPUT Assignment_4.toc
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncb8t.vf
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncb8r.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncb8t.vf
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncb8r.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncr8t.vf
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncr8r.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncr8t.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncb8t.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\fouriernc\ts1fnc.fd
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\fouriernc\ts1fnc.fd
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\fouriernc\ts1fnc.fd
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncr8c.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt1095.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncri8t.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncri8t.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncri8t.vf
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncri8r.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncri8t.vf
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncri8r.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncb8t.vf
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncb8r.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncr8c.vf
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\listings\lstlang1.sty
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\ectt0900.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncr8t.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\ncntrsbk\pncr8t.vf
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\ncntrsbk\pncr8r.tfm
+INPUT .\putting_credentials.png
+INPUT .\putting_credentials.png
+INPUT .\putting_credentials.png
+INPUT .\putting_credentials.png
+INPUT .\putting_credentials.png
+INPUT .\putting_credentials.png
+INPUT .\putting_credentials.png
+INPUT .\store and get values.png
+INPUT .\store and get values.png
+INPUT .\store and get values.png
+INPUT .\store and get values.png
+INPUT .\store and get values.png
+INPUT .\store and get values.png
+INPUT .\store and get values.png
+INPUT .\get all values.png
+INPUT .\get all values.png
+INPUT .\get all values.png
+INPUT .\get all values.png
+INPUT .\get all values.png
+INPUT .\get all values.png
+INPUT .\get all values.png
+INPUT .\delete.png
+INPUT .\delete.png
+INPUT .\delete.png
+INPUT .\delete.png
+INPUT .\delete.png
+INPUT .\delete.png
+INPUT .\delete.png
 INPUT Assignment_4.aux
 INPUT .\Assignment_4.out
 INPUT .\Assignment_4.out
+INPUT C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0900.pk
+INPUT C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt0900.pk
 INPUT C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
 INPUT C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\urw\ncntrsbk\uncb8a.pfb
