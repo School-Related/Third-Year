@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {0.1}Keywords}{3}{section.0.1}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Problem Statement}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Need of the Project}{1}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Literature Survey}{2}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Methodology, Algorithms and Implementations}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Methodology}{3}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Algorithms}{3}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Implementation}{3}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Platform}{3}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Screenshots}{3}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Code Review}{4}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{5}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Future Prospects}{6}{chapter.6}%
+\contentsline {chapter}{Bibliography}{7}{chapter*.7}%
