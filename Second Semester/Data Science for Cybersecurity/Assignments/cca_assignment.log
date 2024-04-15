@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.15)  15 APR 2024 22:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.15)  15 APR 2024 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1478,10 +1478,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.519 \clearpage
                  [1]
+<hourly traffic.jpg, id=37, 1668.2325pt x 765.86125pt>
+File: hourly traffic.jpg Graphic file (type jpg)
+<use hourly traffic.jpg>
+Package pdftex.def Info: hourly traffic.jpg  used on input line 546.
+(pdftex.def)             Requested size: 1668.22845pt x 765.85938pt.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 10.18341pt on input line 548.
+(Font)              scaled to size 10.18341pt on input line 549.
 LaTeX Font Info:    Font shape `T1/fnc/m/it' will be
-(Font)              scaled to size 13.39188pt on input line 548.
+(Font)              scaled to size 13.39188pt on input line 549.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1494,19 +1499,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.548 D
-       iscovering malicious URLs involves extracting feature vectors from UR... [1
+l.549 
+       [1
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 550.
+<ports.jpg, id=48, 1681.28125pt x 765.86125pt>
+File: ports.jpg Graphic file (type jpg)
+<use ports.jpg>
+Package pdftex.def Info: ports.jpg  used on input line 558.
+(pdftex.def)             Requested size: 1681.27718pt x 765.85938pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.93642pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.93642pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
+
+[2 <./hourly traffic.jpg> <./ports.jpg>]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 568.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 557.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 575.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Overfull \hbox (33.84pt too wide) in paragraph at lines 564--564
+Overfull \hbox (33.84pt too wide) in paragraph at lines 582--582
 []\T1/cmtt/m/n/10.95 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)[] 
  []
 
@@ -1517,7 +1536,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[2]
+[3]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.93642pt, for example:
@@ -1525,7 +1544,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.93642pt}.
 
-[3] (cca_assignment.aux)
+[4] (cca_assignment.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -1534,17 +1553,17 @@ Package rerunfilecheck Info: File `cca_assignment.out' has not changed.
 (rerunfilecheck)             Checksum: D9F7D044641ABFCE5C89A03A6B78CA0F;384.
  ) 
 Here is how much of TeX's memory you used:
- 29513 strings out of 474424
- 544603 string characters out of 5739379
- 1935496 words of memory out of 5000000
- 51333 multiletter control sequences out of 15000+600000
+ 29556 strings out of 474424
+ 545292 string characters out of 5739379
+ 1936496 words of memory out of 5000000
+ 51360 multiletter control sequences out of 15000+600000
  590171 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,13n,87p,651b,535s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,12n,87p,650b,584s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncb8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncr8a.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ncntrsbk/uncri8a.pfb>
-Output written on cca_assignment.pdf (5 pages, 72737 bytes).
+Output written on cca_assignment.pdf (6 pages, 248133 bytes).
 PDF statistics:
- 124 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 148 PDF objects out of 1000 (max. 8388607)
+ 25 named destinations out of 1000 (max. 500000)
+ 55 words of extra memory for PDF output out of 10000 (max. 10000000)
 

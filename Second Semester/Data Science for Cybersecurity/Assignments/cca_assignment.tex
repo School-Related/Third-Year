@@ -521,26 +521,44 @@
 \setcounter{page}{1}
 
 \section{Question 1}
-\textbf{Explain how to Cleansing unstructured data with respect to Data security strategies?}
+\textbf{Explain how to Clean unstructured data with respect to Data security strategies?}
 
-Data cleansing of unstructured data involves several key steps to ensure the implementation of effective data security strategies. Firstly, it's crucial to identify any sensitive information within the data, such as personally identifiable information (PII) or confidential data. For example, in a dataset containing customer records, sensitive information may include names, addresses, and credit card numbers.
+\begin{enumerate}
+    \item Data cleansing of unstructured data involves several key steps to ensure the implementation of effective data security strategies. Firstly, it's crucial to identify any sensitive information within the data, such as personally identifiable information (PII) or confidential data. For example, in a dataset containing customer records, sensitive information may include names, addresses, and credit card numbers.
 
-Once sensitive information is identified, encryption techniques should be applied to protect the data during the cleansing process. Encryption ensures that even if unauthorized access occurs, the data remains unreadable and secure. This step is essential to prevent data breaches and maintain confidentiality.
+    \item Once sensitive information is identified, encryption techniques should be applied to protect the data during the cleansing process. Encryption ensures that even if unauthorized access occurs, the data remains unreadable and secure. This step is essential to prevent data breaches and maintain confidentiality.
 
-Access controls should also be implemented to restrict unauthorized access to the data. Role-based access control (RBAC) or attribute-based access control (ABAC) can be used to ensure that only authorized personnel can access and modify the data. This helps prevent data leaks and unauthorized modifications.
+    \item Access controls should also be implemented to restrict unauthorized access to the data. Role-based access control (RBAC) or attribute-based access control (ABAC) can be used to ensure that only authorized personnel can access and modify the data. This helps prevent data leaks and unauthorized modifications.
 
-Data anonymization techniques can be employed to remove personally identifiable information while preserving the integrity of the dataset. For example, masking or tokenization can be used to replace sensitive information with non-sensitive placeholders, ensuring that the data remains usable for analysis while protecting individual privacy.
+    \item Data anonymization techniques can be employed to remove personally identifiable information while preserving the integrity of the dataset. For example, masking or tokenization can be used to replace sensitive information with non-sensitive placeholders, ensuring that the data remains usable for analysis while protecting individual privacy.
 
-Regular audits and monitoring should be conducted to detect any security breaches or unauthorized access attempts. By continuously monitoring data access and modifications, organizations can identify and respond to security incidents promptly, minimizing the impact of potential breaches.
+    \item Regular audits and monitoring should be conducted to detect any security breaches or unauthorized access attempts. By continuously monitoring data access and modifications, organizations can identify and respond to security incidents promptly, minimizing the impact of potential breaches.
+\end{enumerate}
 
 \section{Question 2}
 \textbf{How is data analytics used in cybersecurity? Discuss with Example.}
 
-Data analytics plays a crucial role in cybersecurity by enabling organizations to detect and respond to security threats more effectively. For example, anomaly detection algorithms can analyze network traffic data to identify unusual patterns or behaviors that may indicate a cyber attack. By analyzing network traffic in real-time, these algorithms can detect and respond to security incidents promptly, minimizing potential damage.
+\begin{enumerate}
+    \item Data analytics plays a crucial role in cybersecurity by enabling organizations to detect and respond to security threats more effectively. For example, anomaly detection algorithms can analyze network traffic data to identify unusual patterns or behaviors that may indicate a cyber attack. By analyzing network traffic in real-time, these algorithms can detect and respond to security incidents promptly, minimizing potential damage.
 
-Machine learning models can analyze large volumes of security logs to identify potential security incidents or suspicious activities. For instance, a machine learning model trained on historical security logs can learn patterns associated with known cyber threats and identify similar patterns in new data. This helps security analysts prioritize alerts and respond to incidents more efficiently.
+          \begin{figure}[H]
+              \centering
+              \includegraphics[width=.85\textwidth]{hourly traffic.jpg}
+              \caption{With Data Visualization and Analysis, we can find an attack occuring at a specific time.}
+          \end{figure}
 
-Predictive analytics techniques can be used to forecast future cyber threats based on historical data and trends. For example, predictive models can analyze patterns in malware distribution or phishing attacks to anticipate future threats and take proactive measures to prevent them. By leveraging data analytics, organizations can strengthen their cybersecurity defenses and stay one step ahead of cybercriminals.
+    \item Machine learning models can analyze large volumes of security logs to identify potential security incidents or suspicious activities. For instance, a machine learning model trained on historical security logs can learn patterns associated with known cyber threats and identify similar patterns in new data. This helps security analysts prioritize alerts and respond to incidents more efficiently.
+
+    \item Predictive analytics techniques can be used to forecast future cyber threats based on historical data and trends. For example, predictive models can analyze patterns in malware distribution or phishing attacks to anticipate future threats and take proactive measures to prevent them. By leveraging data analytics, organizations can strengthen their cybersecurity defenses and stay one step ahead of cybercriminals.
+\end{enumerate}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{ports.jpg}
+    \caption{We can check how many requests are sent over certain ports and identify any malicious activity.}
+\end{figure}
+
 
 \section{Question 3}
 \textbf{How can we discover malicious URLs? Discuss by Extracting Feature Vectors For Malicious URL Detection.}
@@ -580,10 +598,31 @@ Machine learning algorithms such as random forests or support vector machines ca
 \section{Question 4}
 \textbf{How can we ensure Information Privacy, Anomaly detection using Adversarial Machine Learning? Explain with example.}
 
-Information privacy can be ensured through anomaly detection using adversarial machine learning techniques. Adversarial machine learning involves training models to detect anomalies or deviations from normal behavior in data while simultaneously defending against adversarial attacks designed to deceive the model.
+\begin{enumerate}
+    \item Information privacy can be ensured through anomaly detection using adversarial machine learning techniques. Adversarial machine learning involves training models to detect anomalies or deviations from normal behavior in data while simultaneously defending against adversarial attacks designed to deceive the model.
 
-For example, in the context of intrusion detection systems, adversarial machine learning models can be trained to identify abnormal network traffic patterns indicative of a cyber attack. These models are robust against adversarial attacks that attempt to evade detection by subtly modifying the attack patterns. By continuously adapting and evolving the model based on new data and emerging threats, information privacy can be safeguarded effectively against sophisticated adversaries.
+    \item For example, in the context of intrusion detection systems, adversarial machine learning models can be trained to identify abnormal network traffic patterns indicative of a cyber attack. These models are robust against adversarial attacks that attempt to evade detection by subtly modifying the attack patterns. By continuously adapting and evolving the model based on new data and emerging threats, information privacy can be safeguarded effectively against sophisticated adversaries.
+\end{enumerate}
 
+
+Ensuring information privacy through anomaly detection using adversarial machine learning involves training models to detect anomalies in data while simultaneously defending against adversarial attacks designed to deceive the model. Here's an explanation with an example:
+
+\begin{enumerate}
+    \item \textbf{Training the Model}: The organization collects historical data on database access patterns, including timestamps, user IDs, and types of queries executed. This data is used to train a machine learning model, such as an autoencoder or a deep neural network, to learn the normal behavior of users accessing the database.
+
+    \item \textbf{Defending Against Adversarial Attacks}: Adversarial attacks are attempts to deceive the anomaly detection model by intentionally modifying or disguising malicious activities to evade detection. To defend against such attacks, the model is trained to recognize and adapt to adversarial behavior during the training phase. Techniques like adversarial training or robust optimization are used to make the model more resilient to adversarial manipulations.
+
+    \item \textbf{Monitoring in Real-Time}: Once the model is trained, it is deployed to monitor database access in real-time. As new access events occur, the model evaluates them against learned patterns of normal behavior. Any deviations from the norm are flagged as anomalies and trigger alerts for further investigation.
+\end{enumerate}
+
+\textbf{Example:}
+Consider a scenario where a database administrator (DBA) typically accesses the customer database during regular business hours to perform routine maintenance tasks. However, one day, the DBA accesses the database at an unusual time, late at night, and executes a large number of queries within a short period.
+
+The anomaly detection system, powered by adversarial machine learning, detects this unusual behavior and raises an alert, indicating a potential security breach. Upon investigation, it's discovered that the DBA's credentials were compromised, and an unauthorized user was attempting to extract sensitive customer information from the database.
+
+By leveraging adversarial machine learning for anomaly detection, the organization was able to identify and mitigate the security threat promptly, safeguarding the privacy of customer data and preventing a potential data breach.
+
+This example illustrates how adversarial machine learning can be used to ensure information privacy through effective anomaly detection, even in the face of sophisticated adversarial attacks.
 
 
 \end{document}
