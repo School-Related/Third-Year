@@ -478,7 +478,7 @@
 
 
     \huge{\textsc{
-            Data Pre Processing in Python
+            Simple Linear Regression
         }} \\
 
 
@@ -492,7 +492,7 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Assignment 2
+        Assignment 5
     } % Subtitle or further description
     \vfill
 
@@ -521,69 +521,66 @@
 \setcounter{page}{1}
 
 \section{Aim}
-Using python perform some Preprocessing using Python Libraries on any dataset.
-
+To implement a simple linear regression model using Python.
 \section{Objectives}
 \begin{enumerate}
-    \item To perform data preprocessing on a dataset using Python.
-    \item To understand the importance of data preprocessing in data science.
-    \item To learn how to use Python libraries for data preprocessing.
+    \item To understand the concept of simple linear regression.
+    \item To implement a simple linear regression model using Python.
 \end{enumerate}
 
 \section{Theory}
 
-Data preprocessing is a crucial step in the data science pipeline. It involves cleaning and transforming raw data into a more understandable format. Real-world data is often incomplete, inconsistent, and/or lacking in certain behaviors or trends, and is likely to contain many errors.
+\subsection{Machine Learning}
+Machine learning is a subset of artificial intelligence that focuses on developing algorithms and models that allow computers to learn from and make predictions or decisions based on data. Machine learning algorithms can be broadly categorized into three types: supervised learning, unsupervised learning, and reinforcement learning.
 
-Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. It is a proven method for handling such data. This process is essential because data scientists cannot work with raw data directly due to its inherent complexities and imperfections.
+\subsection{Supervised Learning}
+Supervised learning is a type of machine learning where the model is trained on a labeled dataset, meaning that the input data is paired with the correct output or target variable. The goal of supervised learning is to learn a mapping function from the input to the output, so that the model can make predictions on new, unseen data.
 
-The process of data preprocessing encompasses various tasks, including handling missing values, dealing with outliers, normalizing data, transforming features, and integrating multiple datasets. Each of these tasks contributes to ensuring that the data is of high quality and suitable for analysis and modeling.
+\subsection{Regression}
+Regression is a type of supervised learning algorithm that is used to predict continuous values or quantities. In regression, the goal is to learn a mapping function from the input features to a continuous output variable. Simple linear regression is a type of regression that models the relationship between a single input feature and a continuous output variable.
 
-By performing data preprocessing, data scientists can enhance the quality of their analyses and improve the performance of machine learning models. Preprocessed data is easier to work with, interpret, and analyze, leading to more reliable insights and predictions.
+\subsection{Simple Linear Regression}
+Simple linear regression is a statistical method that models the relationship between a single input feature (independent variable) and a continuous output variable (dependent variable). The relationship is modeled as a straight line, with the equation of the line given by:
 
-\section{Data Preprocessing Techniques}
+\[y = mx + c\]
+
+where \(y\) is the dependent variable, \(x\) is the independent variable, \(m\) is the slope of the line, and \(c\) is the y-intercept. The goal of simple linear regression is to find the values of \(m\) and \(c\) that best fit the data, so that the model can make accurate predictions on new data.
+
+\subsection{Fitting a Simple Linear Regression Model}
+To fit a simple linear regression model, we use the least squares method, which minimizes the sum of the squared differences between the observed values and the values predicted by the model. The formula for the slope \(m\) and y-intercept \(c\) of the line are given by:
+
+\[m = \frac{n(\sum xy) - (\sum x)(\sum y)}{n(\sum x^2) - (\sum x)^2}\]
+
+\[c = \frac{\sum y - m(\sum x)}{n}\]
+
+where \(n\) is the number of data points, \(\sum x\) is the sum of the input feature values, \(\sum y\) is the sum of the output variable values, \(\sum xy\) is the sum of the product of the input feature and output variable values, and \(\sum x^2\) is the sum of the squared input feature values.
+
+\subsection{Predicting with a Simple Linear Regression Model}
+Once the model has been trained and the values of \(m\) and \(c\) have been determined, we can use the model to make predictions on new, unseen data. To predict the output variable value for a given input feature value, we substitute the input feature value into the equation of the line:
+
+\[y_{\text{pred}} = mx_{\text{new}} + c\]
+
+where \(y_{\text{pred}}\) is the predicted output variable value, \(x_{\text{new}}\) is the input feature value, \(m\) is the slope of the line, and \(c\) is the y-intercept.
+
+\subsection{Evaluating a Simple Linear Regression Model}
+To evaluate the performance of a simple linear regression model, we can use metrics such as the mean squared error (MSE) and the coefficient of determination (\(R^2\)). The mean squared error measures the average squared difference between the observed and predicted values, while the coefficient of determination measures the proportion of the variance in the output variable that is predictable from the input feature. Their formulas are given by:
+
+\[MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2\]
+
+\[R^2 = 1 - \frac{\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}{\sum_{i=1}^{n}(y_i - \bar{y})^2}\]
+
+where \(n\) is the number of data points, \(y_i\) is the observed output variable value, \(\hat{y}_i\) is the predicted output variable value, and \(\bar{y}\) is the mean of the output variable values.
+
+\section{Procedure}
 \begin{enumerate}
-    \item Data Cleaning
-    \item Data Transformation
-    \item Data Reduction
-    \item Data Normalization
-    \item Data Integration
+    \item Import the required python packages.
+    \item Load the dataset.
+    \item Data analysis.
+    \item Split the dataset into dependent/independent variables.
+    \item Split data into Train/Test sets.
+    \item Train the regression model.
+    \item Predict the result.
 \end{enumerate}
-
-\section{Data Preprocessing Techniques}
-
-\subsection{Data Cleaning}
-\begin{itemize}
-    \item Identification and handling of missing values, which can involve imputation techniques such as mean, median, or mode imputation, or removal of incomplete records.
-    \item Detection and treatment of outliers using statistical methods like Z-score, interquartile range (IQR), or visualizations.
-    \item Consistency checks to identify and rectify errors or inconsistencies in the data.
-\end{itemize}
-
-\subsection{Data Transformation}
-\begin{itemize}
-    \item Encoding categorical variables through techniques like one-hot encoding, label encoding, or ordinal encoding.
-    \item Feature scaling or normalization to ensure that all features have a similar scale, which can include methods such as Min-Max scaling or standardization.
-    \item Creation of new features through techniques like polynomial features, interaction terms, or feature extraction from existing ones.
-\end{itemize}
-
-\subsection{Data Reduction}
-\begin{itemize}
-    \item Dimensionality reduction methods to reduce the number of features in the dataset, such as Principal Component Analysis (PCA) or Singular Value Decomposition (SVD).
-    \item Feature selection techniques to identify and retain the most relevant features, including filter methods, wrapper methods, and embedded methods.
-\end{itemize}
-
-\subsection{Data Normalization}
-\begin{itemize}
-    \item Ensuring data consistency and conformity by bringing it to a common scale or format.
-    \item Standardization of data to have a mean of 0 and a standard deviation of 1, making it easier to compare and interpret different features.
-    \item Min-Max scaling to rescale data to a fixed range, typically between 0 and 1, preserving the relationships between data points.
-\end{itemize}
-
-\subsection{Data Integration}
-\begin{itemize}
-    \item Combining data from multiple sources or datasets into a single unified dataset, ensuring consistency and coherence.
-    \item Handling conflicts or inconsistencies in data schemas, formats, or values during the integration process.
-    \item Resolving duplicate records or redundant information to create a clean and comprehensive dataset.
-\end{itemize}
 
 \section{Platform}
 \textbf{Operating System}: Windows 11 \\
@@ -597,39 +594,147 @@ matplotlib==3.8.3
 numpy==1.26.4
 pandas==2.2.2
 seaborn==0.13.2
+scikit-learn==3.3.0
 \end{lstlisting}
-\section{Code}
 
+
+\section{Code}
+\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{7}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} Step 1: Import the required Python packages}
+    \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sns}
+    \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+    \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{model\PYZus{}selection} \PY{k+kn}{import} \PY{n}{train\PYZus{}test\PYZus{}split}
+    \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{linear\PYZus{}model} \PY{k+kn}{import} \PY{n}{LinearRegression}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{8}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} Step 2: Load the dataset}
+    \PY{n}{df} \PY{o}{=} \PY{n}{sns}\PY{o}{.}\PY{n}{load\PYZus{}dataset}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{tips}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{9}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} Step 3: Data analysis (optional)}
+    \PY{c+c1}{\PYZsh{} For example, you can visualize the relationship between variables using Seaborn}
+    \PY{n}{sns}\PY{o}{.}\PY{n}{pairplot}\PY{p}{(}\PY{n}{df}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+        \begin{center}
+        \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_2_0.png}
+        \end{center}
+        { \hspace*{\fill} \\}
+        
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{10}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} Step 4: Split the dataset into dependent/independent variables}
+    \PY{n}{X} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{total\PYZus{}bill}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{]}  \PY{c+c1}{\PYZsh{} Independent variable}
+    \PY{n}{y} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{tip}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}  \PY{c+c1}{\PYZsh{} Dependent variable}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{11}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} Step 5: Split data into Train/Test sets}
+    \PY{n}{X\PYZus{}train}\PY{p}{,} \PY{n}{X\PYZus{}test}\PY{p}{,} \PY{n}{y\PYZus{}train}\PY{p}{,} \PY{n}{y\PYZus{}test} \PY{o}{=} \PY{n}{train\PYZus{}test\PYZus{}split}\PY{p}{(}
+        \PY{n}{X}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{n}{test\PYZus{}size}\PY{o}{=}\PY{l+m+mf}{0.2}\PY{p}{,} \PY{n}{random\PYZus{}state}\PY{o}{=}\PY{l+m+mi}{42}
+    \PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{12}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} Step 6: Train the regression model}
+    \PY{n}{model} \PY{o}{=} \PY{n}{LinearRegression}\PY{p}{(}\PY{p}{)}
+    \PY{n}{model}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{X\PYZus{}train}\PY{p}{,} \PY{n}{y\PYZus{}train}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{12}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    LinearRegression()
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{13}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} Step 7: Predict the result}
+    \PY{n}{y\PYZus{}pred} \PY{o}{=} \PY{n}{model}\PY{o}{.}\PY{n}{predict}\PY{p}{(}\PY{n}{X\PYZus{}test}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{14}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} Visualize the predicted results against the actual data}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{scatter}\PY{p}{(}\PY{n}{X\PYZus{}test}\PY{p}{,} \PY{n}{y\PYZus{}test}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{blue}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Actual data}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{X\PYZus{}test}\PY{p}{,} \PY{n}{y\PYZus{}pred}\PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{red}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Predicted data}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Total Bill}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Tip}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Simple Linear Regression}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+        \begin{center}
+        \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_7_0.png}
+        \end{center}
+        { \hspace*{\fill} \\}
+        
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{15}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} use lmplot from seaborn to plot the regression line}
+    \PY{n}{sns}\PY{o}{.}\PY{n}{lmplot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{total\PYZus{}bill}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{tip}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{data}\PY{o}{=}\PY{n}{df}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{15}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    <seaborn.axisgrid.FacetGrid at 0x1ec8bba5180>
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{center}
+        \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_8_1.png}
+        \end{center}
+        { \hspace*{\fill} \\}
+        
+    
+        % Add a bibliography block to the postdoc
 \clearpage
 \section{FAQs}
-
 \begin{enumerate}
-    \item \textbf{What is Preprocessing technique?}\\
-          Data preprocessing involves a series of steps aimed at cleaning, transforming, and organizing raw data into a format that is more suitable for analysis and modeling. These steps include handling missing values, dealing with outliers, normalizing data, transforming features, and integrating multiple datasets.
+    \item \textbf{What is Linear Regression?}\\
+          Linear regression is a statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to observed data. The equation takes the form \(y = mx + b\), where \(y\) is the dependent variable, \(x\) is the independent variable, \(m\) is the slope, and \(b\) is the intercept. The goal of linear regression is to find the best-fitting line that minimizes the sum of the squared differences between the observed and predicted values.
 
-    \item \textbf{What is the use of Preprocessing technique in data science?}\\
-          Preprocessing techniques are essential in data science for several reasons:
+    \item \textbf{How does Linear Regression help in cybersecurity and forensics?}\\
+          Linear regression is utilized in cybersecurity and forensics for various purposes:
           \begin{itemize}
-              \item Enhancing data quality by addressing issues like missing values, outliers, and inconsistencies.
-              \item Improving the performance of machine learning models by ensuring that the data meets the assumptions and requirements of the algorithms.
-              \item Facilitating feature engineering by transforming and creating new features from existing ones.
-              \item Enabling effective data visualization and exploration by preparing the data in a standardized and interpretable format.
-          \end{itemize}
-
-    \item \textbf{What is the difference between the data with preprocessing and without preprocessing?}\\
-          The differences between preprocessed and unprocessed data are significant and can impact the outcomes of data analysis and modeling:
-          \begin{itemize}
-              \item Data Quality: Preprocessed data tends to have higher quality, with missing values handled, outliers addressed, and inconsistencies resolved, leading to more reliable results.
-              \item Model Performance: Preprocessing improves the performance of machine learning models by ensuring that the data meets the assumptions of the algorithms, resulting in more accurate predictions and better generalization.
-              \item Interpretability: Preprocessed data is often easier to interpret and analyze, as it is in a standardized format with normalized scales and transformed features, facilitating effective data exploration and visualization.
+              \item \textbf{Anomaly Detection}: Linear regression can be used to identify anomalous behavior or deviations from normal patterns in network traffic, system logs, or user behavior. By analyzing historical data, linear regression models can detect unusual patterns that may indicate security breaches or cyberattacks.
+              \item \textbf{Intrusion Detection}: Linear regression models can be trained on features extracted from network traffic or system logs to classify incoming data as normal or malicious. By learning the underlying patterns of normal behavior, linear regression models can help detect and prevent cyber threats in real-time.
+              \item \textbf{Digital Forensics}: Linear regression can assist digital forensics analysts in investigating cybercrimes by analyzing large volumes of data collected from digital devices or networks. By correlating various factors such as timestamps, file sizes, and access patterns, linear regression models can provide insights into the sequence of events and potential perpetrators involved in cyber incidents.
+              \item \textbf{Risk Assessment}: Linear regression can be used to assess the risk of cyber threats and vulnerabilities in organizational systems and infrastructure. By analyzing historical data on security incidents, linear regression models can predict the likelihood of future security breaches and help prioritize mitigation efforts and resource allocation.
           \end{itemize}
 \end{enumerate}
 
-
 \section{Conclusion}
-In this assignment, we have explored the importance of data preprocessing in data science and learned about various preprocessing techniques. We have also implemented data preprocessing using Python libraries like Pandas, Numpy, Matplotlib, and Seaborn. Data preprocessing is a crucial step in the data science pipeline, as it helps clean, transform, and organize raw data into a format that is more suitable for analysis and modeling. \\
-
-By applying preprocessing techniques, we can enhance data quality, improve model performance, and facilitate effective data exploration and visualization. Data preprocessing is an essential skill for data scientists and analysts, as it enables them to work with real-world data effectively and derive meaningful insights from it.
+In this assignment, we implemented a simple linear regression model using Python. We loaded a dataset, performed data preprocessing, split the data into training and testing sets, trained the regression model, and made predictions on new data. We also evaluated the performance of the model using metrics such as the mean squared error and the coefficient of determination. By implementing a simple linear regression model, we gained a better understanding of how regression models work and how they can be used to make predictions on continuous data.
 
 \clearpage
 
