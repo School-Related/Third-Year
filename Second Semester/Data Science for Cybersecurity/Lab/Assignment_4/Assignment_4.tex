@@ -71,13 +71,13 @@
 % Keep aspect ratio if custom image width or height is specified
 \setkeys{Gin}{keepaspectratio}
 % Maintain compatibility with old templates. Remove in nbconvert 6.0
-\let\Oldincludegraphics\includegraphics
+% \let\Oldincludegraphics\includegraphics
 % Ensure that by default, figures have no caption (until we provide a
 % proper Figure object with a Caption API and a way to capture that
 % in the conversion process - todo).
-\usepackage{caption}
-\DeclareCaptionFormat{nocaption}{}
-\captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
+% \usepackage{caption}
+% \DeclareCaptionFormat{nocaption}{}
+% \captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
 
 \usepackage{float}
 \floatplacement{figure}{H} % forces figures to be placed at the correct location
@@ -535,6 +535,141 @@ To Plot the following:
 
 \section{Theory}
 
+\subsection{Scatter Plots in Matplotlib and Seaborn}
+
+Scatter plots are used to visualize the relationship between two continuous variables. They display individual data points as dots on a two-dimensional plane, with one variable represented on the x-axis and the other on the y-axis. Scatter plots are useful for identifying patterns, correlations, and outliers in the data.
+
+\begin{lstlisting}[language=python, caption="Scatter plot using Matplotlib"]
+    import matplotlib.pyplot as plt
+    
+    x = [1, 2, 3, 4, 5]
+    y = [2, 3, 5, 7, 11]
+    
+    plt.scatter(x, y)
+    plt.xlabel('X-axis')
+    plt.ylabel('Y-axis')
+    plt.title('Scatter Plot')
+    plt.show()
+
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{1.jpg}
+    \caption{Scatter Plot}
+\end{figure}
+\begin{lstlisting}[language=Python, caption={Scatter plot using Seaborn}]
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+    
+    x = [1, 2, 3, 4, 5]
+    y = [2, 3, 5, 7, 11]
+    
+    sns.scatterplot(x=x, y=y)
+    plt.xlabel('X-axis')
+    plt.ylabel('Y-axis')
+    plt.title('Scatter Plot')
+    plt.show()
+\end{lstlisting}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{2.jpg}
+    \caption{Scatter Plot in Seaborn}
+\end{figure}
+
+\subsection*{Scatter Plots in Bokeh}
+Bokeh is a Python library for creating interactive visualizations. Scatter plots in Bokeh provide similar functionality to Matplotlib and Seaborn but offer interactivity such as hover tooltips and zooming capabilities.
+
+\begin{lstlisting}[language=Python, caption={Scatter plot using Bokeh}]
+    from bokeh.plotting import figure, output_file, show
+    
+    x = [1, 2, 3, 4, 5]
+    y = [2, 3, 5, 7, 11]
+    
+    output_file("scatter_plot.html")
+    
+    p = figure(title="Scatter Plot", x_axis_label='X-axis', y_axis_label='Y-axis')
+    p.circle(x, y, size=10, color="navy", alpha=0.5)
+    
+    show(p)
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{3.jpg}
+    \caption{Scatter Plot using Bokeh}
+\end{figure}
+\subsection*{Preparation of Line Plot Data}
+
+Line plots are used to visualize trends and patterns in data over time or other ordered categories. To prepare data for a line plot, you typically have one variable representing the x-axis (e.g., time) and another representing the y-axis (e.g., numerical values).
+
+Line plots are created similarly in Matplotlib, Seaborn, and Bokeh. They visualize the relationship between two continuous variables by connecting data points with straight lines.
+
+
+\begin{lstlisting}[language=Python, caption={Line plot using Matplotlib}]
+    import matplotlib.pyplot as plt
+    
+    x = [1, 2, 3, 4, 5]
+    y = [2, 3, 5, 7, 11]
+    
+    plt.plot(x, y)
+    plt.xlabel('X-axis')
+    plt.ylabel('Y-axis')
+    plt.title('Line Plot')
+    plt.show()
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{4.jpg}
+    \caption{Matplotlib Line Plot}
+\end{figure}
+
+\begin{lstlisting}[language=Python, caption={Line plot using Seaborn}]
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+    
+    x = [1, 2, 3, 4, 5]
+    y = [2, 3, 5, 7, 11]
+    
+    sns.lineplot(x=x, y=y)
+    plt.xlabel('X-axis')
+    plt.ylabel('Y-axis')
+    plt.title('Line Plot')
+    plt.show()
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{5.jpg}
+    \caption{Seaborn Plot by using different hue}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{6.jpg}
+    \caption{Seaborn line plot using different hue and style. }
+\end{figure}
+
+\begin{lstlisting}[language=Python, caption={Line plot using Bokeh}]
+    from bokeh.plotting import figure, output_file, show
+    
+    x = [1, 2, 3, 4, 5]
+    y = [2, 3, 5, 7, 11]
+    
+    output_file("line_plot.html")
+    
+    p = figure(title="Line Plot", x_axis_label='X-axis', y_axis_label='Y-axis')
+    p.line(x, y, line_width=2)
+    
+    show(p)
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.75\textwidth]{7.jpg}
+    \caption{Bokeh Line Plot}
+\end{figure}
 \section{Platform}
 \textbf{Operating System}: Windows 11 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
@@ -547,17 +682,46 @@ matplotlib==3.8.3
 numpy==1.26.4
 pandas==2.2.2
 seaborn==0.13.2
+bokeh==3.4.1
 \end{lstlisting}
-\section{Code}
 
 \clearpage
 \section{FAQs}
 
+\subsection{Question 1}
 \begin{enumerate}
-    \item
+    \item \textbf{What is data visualization in Data science?}\\
+          Data visualization in data science refers to the graphical representation of data to visually communicate insights, patterns, and trends. It involves creating visualizations such as charts, graphs, maps, and dashboards to help analysts and stakeholders understand complex datasets more easily and make informed decisions.
 \end{enumerate}
-\section{Conclusion}
 
+\subsection{Question 2}
+\begin{enumerate}
+    \item \textbf{Why do we need data visualizations? Explain properly.}\\
+          Data visualizations are essential in data science for several reasons:
+          \begin{itemize}
+              \item \textbf{Enhanced Understanding}: Visual representations make it easier to interpret and understand complex datasets, enabling analysts to uncover insights and patterns that may not be apparent from raw data alone.
+              \item \textbf{Communication}: Visualizations facilitate communication of findings and insights to stakeholders, making it easier for non-technical audiences to grasp key concepts and make data-driven decisions.
+              \item \textbf{Identification of Trends}: Visualizations allow analysts to identify trends, correlations, and outliers in the data quickly, enabling them to detect patterns and relationships that may inform future strategies or actions.
+              \item \textbf{Decision Making}: Visualizations empower decision-makers to assess data-driven insights visually, enabling them to make informed decisions based on a clear understanding of the data and its implications.
+              \item \textbf{Exploratory Analysis}: Visualizations support exploratory data analysis by enabling analysts to interact with the data dynamically, exploring different perspectives and hypotheses to gain deeper insights.
+          \end{itemize}
+\end{enumerate}
+
+\subsection{Question 3}
+\begin{enumerate}
+    \item \textbf{Describe the different data visualization approaches in Data science using Python?}\\
+          In data science, various data visualization approaches can be implemented using Python libraries such as Matplotlib, Seaborn, Plotly, and Pandas. These approaches include:
+          \begin{itemize}
+              \item \textbf{Static Visualizations}: Creating static visualizations such as line plots, bar charts, histograms, scatter plots, and box plots using Matplotlib and Seaborn libraries. These visualizations are suitable for presenting static snapshots of data insights.
+              \item \textbf{Interactive Visualizations}: Generating interactive visualizations such as interactive plots, heatmaps, and geographic maps using Plotly library. Interactive visualizations allow users to explore data dynamically, zoom in/out, and interact with data points for deeper insights.
+              \item \textbf{Statistical Visualizations}: Generating statistical visualizations such as probability density plots, violin plots, and pair plots using Seaborn library. Statistical visualizations provide insights into data distributions, correlations, and statistical relationships.
+              \item \textbf{Dashboarding}: Creating interactive dashboards and reports using libraries such as Plotly Dash or Bokeh. Dashboards integrate multiple visualizations and controls into a single interface, enabling users to interactively explore and analyze data.
+          \end{itemize}
+          These approaches enable data scientists and analysts to create a wide range of visualizations tailored to specific data exploration and communication needs, enhancing the understanding and impact of data-driven insights.
+\end{enumerate}
+
+\section{Conclusion}
+In this assignment, we explored data visualization and analysis techniques using Python libraries such as Matplotlib, Seaborn, and Bokeh. We learned how to create scatter plots and line plots to visualize relationships between variables and trends in data. By leveraging these visualization tools, data scientists can gain deeper insights into complex datasets, communicate findings effectively, and make informed decisions based on data-driven insights.
 \clearpage
 
 \pagebreak

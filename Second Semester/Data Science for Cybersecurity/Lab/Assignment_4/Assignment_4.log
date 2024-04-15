@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.15)  16 APR 2024 00:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.15)  16 APR 2024 03:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -523,25 +523,6 @@ Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
 \tcb@totallowerbox=\box75
 )) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
-) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
-Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
-Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen264
-\captionmargin=\dimen265
-\caption@leftmargin=\dimen266
-\caption@rightmargin=\dimen267
-\caption@width=\dimen268
-\caption@indent=\dimen269
-\caption@parindent=\dimen270
-\caption@hangindent=\dimen271
-Package caption Info: Standard document class detected.
-)
-\c@caption@flags=\count332
-\c@continuedfloat=\count333
-Package caption Info: float package is loaded.
-Package caption Info: hyperref package is loaded.
-Package caption Info: listings package is loaded.
 ) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
 \@enLab=\toks48
@@ -919,11 +900,11 @@ File: greek-fontenc.def 2023-09-12 2.5 Common Greek font encoding definitions
    defining Unicode char U+00B5 (decimal 181)
 )) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
-\FV@CodeLineNo=\count334
+\FV@CodeLineNo=\count332
 \FV@InFile=\read4
 \FV@TabBox=\box77
-\c@FancyVerbLine=\count335
-\FV@StepNumber=\count336
+\c@FancyVerbLine=\count333
+\FV@StepNumber=\count334
 \FV@OutFile=\write4
 ) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/grffile\grffile.sty
 Package: grffile 2019/11/11 v2.1 Extended file name support for graphics (legacy)
@@ -936,7 +917,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks49
 \XKV@tempa@toks=\toks50
 )
-\XKV@depth=\count337
+\XKV@depth=\count335
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
@@ -946,31 +927,31 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box78
 )
-\tc@llx=\dimen272
-\tc@lly=\dimen273
-\tc@urx=\dimen274
-\tc@ury=\dimen275
+\tc@llx=\dimen264
+\tc@lly=\dimen265
+\tc@urx=\dimen266
+\tc@ury=\dimen267
 Package trimclip Info: Using driver 'tc-pdftex.def'.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen276
-\adjbox@Height=\dimen277
-\adjbox@Depth=\dimen278
-\adjbox@Totalheight=\dimen279
-\adjbox@pwidth=\dimen280
-\adjbox@pheight=\dimen281
-\adjbox@pdepth=\dimen282
-\adjbox@ptotalheight=\dimen283
+\adjbox@Width=\dimen268
+\adjbox@Height=\dimen269
+\adjbox@Depth=\dimen270
+\adjbox@Totalheight=\dimen271
+\adjbox@pwidth=\dimen272
+\adjbox@pheight=\dimen273
+\adjbox@pdepth=\dimen274
+\adjbox@ptotalheight=\dimen275
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count338
+\c@checkoddpage=\count336
 ) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box79
-\sift@deathcycles=\count339
-\@vwid@loff=\dimen284
-\@vwid@roff=\dimen285
+\sift@deathcycles=\count337
+\@vwid@loff=\dimen276
+\@vwid@roff=\dimen277
 )) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/titling\titling.sty
 Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip66
@@ -982,77 +963,77 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \LTright=\skip70
 \LTpre=\skip71
 \LTpost=\skip72
-\LTchunksize=\count340
-\LTcapwidth=\dimen286
+\LTchunksize=\count338
+\LTcapwidth=\dimen278
 \LT@head=\box80
 \LT@firsthead=\box81
 \LT@foot=\box82
 \LT@lastfoot=\box83
 \LT@gbox=\box84
-\LT@cols=\count341
-\LT@rows=\count342
-\c@LT@tables=\count343
-\c@LT@chunks=\count344
+\LT@cols=\count339
+\LT@rows=\count340
+\c@LT@tables=\count341
+\c@LT@chunks=\count342
 \LT@p@ftn=\toks51
 ) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen287
-\lightrulewidth=\dimen288
-\cmidrulewidth=\dimen289
-\belowrulesep=\dimen290
-\belowbottomsep=\dimen291
-\aboverulesep=\dimen292
-\abovetopsep=\dimen293
-\cmidrulesep=\dimen294
-\cmidrulekern=\dimen295
-\defaultaddspace=\dimen296
-\@cmidla=\count345
-\@cmidlb=\count346
-\@aboverulesep=\dimen297
-\@belowrulesep=\dimen298
-\@thisruleclass=\count347
-\@lastruleclass=\count348
-\@thisrulewidth=\dimen299
+\heavyrulewidth=\dimen279
+\lightrulewidth=\dimen280
+\cmidrulewidth=\dimen281
+\belowrulesep=\dimen282
+\belowbottomsep=\dimen283
+\aboverulesep=\dimen284
+\abovetopsep=\dimen285
+\cmidrulesep=\dimen286
+\cmidrulekern=\dimen287
+\defaultaddspace=\dimen288
+\@cmidla=\count343
+\@cmidlb=\count344
+\@aboverulesep=\dimen289
+\@belowrulesep=\dimen290
+\@thisruleclass=\count345
+\@lastruleclass=\count346
+\@thisrulewidth=\dimen291
 ) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen300
+\col@sep=\dimen292
 \ar@mcellbox=\box85
-\extrarowheight=\dimen301
+\extrarowheight=\dimen293
 \NC@list=\toks52
 \extratabsurround=\skip73
 \backup@length=\skip74
 \ar@cellbox=\box86
 ) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count349
-\calc@Bcount=\count350
-\calc@Adimen=\dimen302
-\calc@Bdimen=\dimen303
+\calc@Acount=\count347
+\calc@Bcount=\count348
+\calc@Adimen=\dimen294
+\calc@Bdimen=\dimen295
 \calc@Askip=\skip75
 \calc@Bskip=\skip76
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count351
+\calc@Ccount=\count349
 \calc@Cskip=\skip77
 ) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip78
-\enit@outerparindent=\dimen304
+\enit@outerparindent=\dimen296
 \enit@toks=\toks53
 \enit@inbox=\box87
-\enit@count@id=\count352
-\enitdp@description=\count353
+\enit@count@id=\count350
+\enitdp@description=\count351
 ) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
 \UL@box=\box88
 \UL@hyphenbox=\box89
 \UL@skip=\skip79
 \UL@hook=\toks54
-\UL@height=\dimen305
-\UL@pe=\count354
-\UL@pixel=\dimen306
+\UL@height=\dimen297
+\UL@pe=\count352
+\UL@pixel=\dimen298
 \ULC@box=\box90
 Package: ulem 2019/11/18
-\ULdepth=\dimen307
+\ULdepth=\dimen299
 ) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.sty
 Package: soul 2023-06-14 v3.1 Permit use of UTF-8 characters in soul (HO)
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul-ori.sty
@@ -1063,20 +1044,20 @@ Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 \SOUL@cmds=\toks58
 \SOUL@buffer=\toks59
 \SOUL@token=\toks60
-\SOUL@syllgoal=\dimen308
-\SOUL@syllwidth=\dimen309
-\SOUL@charkern=\dimen310
-\SOUL@hyphkern=\dimen311
-\SOUL@dimen=\dimen312
-\SOUL@dimeni=\dimen313
-\SOUL@minus=\count355
-\SOUL@comma=\count356
-\SOUL@apo=\count357
-\SOUL@grave=\count358
+\SOUL@syllgoal=\dimen300
+\SOUL@syllwidth=\dimen301
+\SOUL@charkern=\dimen302
+\SOUL@hyphkern=\dimen303
+\SOUL@dimen=\dimen304
+\SOUL@dimeni=\dimen305
+\SOUL@minus=\count353
+\SOUL@comma=\count354
+\SOUL@apo=\count355
+\SOUL@grave=\count356
 \SOUL@spaceskip=\skip80
-\SOUL@ttwidth=\dimen314
-\SOUL@uldp=\dimen315
-\SOUL@ulht=\dimen316
+\SOUL@ttwidth=\dimen306
+\SOUL@uldp=\dimen307
+\SOUL@ulht=\dimen308
 ) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\mathrsfs.sty
@@ -1087,7 +1068,7 @@ Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \Wrappedvisiblespacebox=\box92
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count359
+\l__color_backend_stack_int=\count357
 \l__pdf_internal_box=\box93
 ) (Assignment_4.aux)
 \openout1 = `Assignment_4.aux'.
@@ -1153,16 +1134,16 @@ LaTeX Font Info:    ... okay on input line 452.
 
 (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count360
-\scratchdimen=\dimen317
+\scratchcounter=\count358
+\scratchdimen=\dimen309
 \scratchbox=\box94
-\nofMPsegments=\count361
-\nofMParguments=\count362
+\nofMPsegments=\count359
+\nofMParguments=\count360
 \everyMPshowfont=\toks61
-\MPscratchCnt=\count363
-\MPscratchDim=\dimen318
-\MPnumerator=\count364
-\makeMPintoPDFobject=\count365
+\MPscratchCnt=\count361
+\MPscratchDim=\dimen310
+\MPnumerator=\count362
+\makeMPintoPDFobject=\count363
 \everyMPtoPDFconversion=\toks62
 ) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1170,7 +1151,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count366
+\c@lstlisting=\count364
 Package hyperref Info: Link coloring ON on input line 452.
  (Assignment_4.out) (Assignment_4.out)
 \@outlinefile=\write5
@@ -1178,13 +1159,7 @@ Package hyperref Info: Link coloring ON on input line 452.
 
 
 Couldn't patch \deferred@thm@head!
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: longtable package is loaded.
-(C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
-Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
-)
-Package caption Info: End \AtBeginDocument code.
- (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/greek-fontenc\puenc-greek.def
+(C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/greek-fontenc\puenc-greek.def
 File: puenc-greek.def 2023-09-12 2.5 Greek LICRs for PDF strings
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/greek-fontenc\greek-fontenc.def
 File: greek-fontenc.def 2023-09-12 2.5 Common Greek font encoding definitions
@@ -1241,7 +1216,19 @@ LaTeX Info: Redefining \omega on input line 452.
    defining Unicode char U+03F5 (decimal 1013)
  [1
 
-{C:/Users/Krishnaraj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Assignment_4.toc)
+{C:/Users/Krishnaraj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (Assignment_4.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 4.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+))
 \tf@toc=\write6
 \openout6 = `Assignment_4.toc'.
 
@@ -1250,15 +1237,24 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.519 \clearpage
-                 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 539--542
-
- []
-
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 544.
-(C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+                 [1] (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/03/11 1.10a listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 542.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 542.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 549.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+<1.jpg, id=77, 564.1075pt x 456.70625pt>
+File: 1.jpg Graphic file (type jpg)
+<use 1.jpg>
+Package pdftex.def Info: 1.jpg  used on input line 558.
+(pdftex.def)             Requested size: 564.10611pt x 456.70512pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.99762pt, for example:
@@ -1270,8 +1266,113 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.553 \clearpage
-                 [1
+l.561 ...on, caption={Scatter plot using Seaborn}]
+                                                   [1
+
+]
+<2.jpg, id=103, 564.1075pt x 456.70625pt>
+File: 2.jpg Graphic file (type jpg)
+<use 2.jpg>
+Package pdftex.def Info: 2.jpg  used on input line 578.
+(pdftex.def)             Requested size: 564.10611pt x 456.70512pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[2 <./1.jpg>]
+<3.jpg, id=121, 1087.06125pt x 1018.80624pt>
+File: 3.jpg Graphic file (type jpg)
+<use 3.jpg>
+Package pdftex.def Info: 3.jpg  used on input line 600.
+(pdftex.def)             Requested size: 1087.0586pt x 1018.80376pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[3 <./2.jpg>]
+<4.jpg, id=140, 564.1075pt x 456.70625pt>
+File: 4.jpg Graphic file (type jpg)
+<use 4.jpg>
+Package pdftex.def Info: 4.jpg  used on input line 625.
+(pdftex.def)             Requested size: 564.10611pt x 456.70512pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[4 <./3.jpg>]
+<5.jpg, id=158, 564.1075pt x 456.70625pt>
+File: 5.jpg Graphic file (type jpg)
+<use 5.jpg>
+Package pdftex.def Info: 5.jpg  used on input line 645.
+(pdftex.def)             Requested size: 564.10611pt x 456.70512pt.
+<6.jpg, id=159, 564.1075pt x 456.70625pt>
+File: 6.jpg Graphic file (type jpg)
+<use 6.jpg>
+Package pdftex.def Info: 6.jpg  used on input line 650.
+(pdftex.def)             Requested size: 564.10611pt x 456.70512pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[5 <./4.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[6 <./5.jpg> <./6.jpg>]
+<7.jpg, id=184, 987.69pt x 916.42375pt>
+File: 7.jpg Graphic file (type jpg)
+<use 7.jpg>
+Package pdftex.def Info: 7.jpg  used on input line 670.
+(pdftex.def)             Requested size: 987.68759pt x 916.42152pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 674--677
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[7 <./7.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[8]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[9
 
 ]
 
@@ -1281,28 +1382,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
 
-[2
-
-] (Assignment_4.aux)
+[10] (Assignment_4.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `Assignment_4.out' has not changed.
-(rerunfilecheck)             Checksum: CF3F18AB79B7FB157644672552CB4E7B;629.
+(rerunfilecheck)             Checksum: 48271D2F13826FE7639B7BF8C619302C;1165.
  ) 
 Here is how much of TeX's memory you used:
- 29381 strings out of 474424
- 539794 string characters out of 5739379
- 1939496 words of memory out of 5000000
- 51222 multiletter control sequences out of 15000+600000
- 568308 words of font info for 53 fonts, out of 8000000 for 9000
+ 28477 strings out of 474424
+ 519454 string characters out of 5739379
+ 1998496 words of memory out of 5000000
+ 50201 multiletter control sequences out of 15000+600000
+ 575328 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,12n,87p,648b,1122s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk>
-Output written on Assignment_4.pdf (4 pages, 112541 bytes).
+ 83i,12n,87p,648b,1621s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0900.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk>
+Output written on Assignment_4.pdf (12 pages, 358822 bytes).
 PDF statistics:
- 394 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 651 PDF objects out of 1000 (max. 8388607)
+ 117 named destinations out of 1000 (max. 500000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
