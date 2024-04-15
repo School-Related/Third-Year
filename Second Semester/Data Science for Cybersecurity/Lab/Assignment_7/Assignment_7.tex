@@ -75,9 +75,9 @@
 % Ensure that by default, figures have no caption (until we provide a
 % proper Figure object with a Caption API and a way to capture that
 % in the conversion process - todo).
-\usepackage{caption}
-\DeclareCaptionFormat{nocaption}{}
-\captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
+% \usepackage{caption}
+% \DeclareCaptionFormat{nocaption}{}
+% \captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
 
 \usepackage{float}
 \floatplacement{figure}{H} % forces figures to be placed at the correct location
@@ -478,7 +478,7 @@
 
 
     \huge{\textsc{
-            Data Pre Processing in Python
+            Implementation of K-Means Clustering in Python
         }} \\
 
 
@@ -492,7 +492,7 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Assignment 2
+        Assignment 7
     } % Subtitle or further description
     \vfill
 
@@ -521,69 +521,60 @@
 \setcounter{page}{1}
 
 \section{Aim}
-Using python perform some Preprocessing using Python Libraries on any dataset.
+Implement K-Means Clustering in Python using IOT Based Attacks dataset.
 
 \section{Objectives}
 \begin{enumerate}
-    \item To perform data preprocessing on a dataset using Python.
-    \item To understand the importance of data preprocessing in data science.
-    \item To learn how to use Python libraries for data preprocessing.
+    \item To understand the concept of K-Means Clustering.
+    \item To implement K-Means Clustering in Python.
 \end{enumerate}
 
 \section{Theory}
+\subsection{K-Means Clustering}
 
-Data preprocessing is a crucial step in the data science pipeline. It involves cleaning and transforming raw data into a more understandable format. Real-world data is often incomplete, inconsistent, and/or lacking in certain behaviors or trends, and is likely to contain many errors.
+K-Means clustering is a popular unsupervised machine learning algorithm used for partitioning a dataset into K distinct clusters. The algorithm aims to minimize the variance within each cluster and maximize the variance between clusters.
 
-Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. It is a proven method for handling such data. This process is essential because data scientists cannot work with raw data directly due to its inherent complexities and imperfections.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.85\textwidth]{kmeans.jpg}
+    \caption{K Means Clustering Example}
+\end{figure}
+\subsection{K-Means Clustering Algorithm}
 
-The process of data preprocessing encompasses various tasks, including handling missing values, dealing with outliers, normalizing data, transforming features, and integrating multiple datasets. Each of these tasks contributes to ensuring that the data is of high quality and suitable for analysis and modeling.
+The K-Means clustering algorithm can be summarized in the following steps:
 
-By performing data preprocessing, data scientists can enhance the quality of their analyses and improve the performance of machine learning models. Preprocessed data is easier to work with, interpret, and analyze, leading to more reliable insights and predictions.
-
-\section{Data Preprocessing Techniques}
 \begin{enumerate}
-    \item Data Cleaning
-    \item Data Transformation
-    \item Data Reduction
-    \item Data Normalization
-    \item Data Integration
+    \item \textbf{Initialization}: Randomly initialize K cluster centroids.
+    \item \textbf{Assign Data Points to Nearest Centroid}: Assign each data point to the cluster with the nearest centroid.
+    \item \textbf{Update Centroids}: Recalculate the centroids of each cluster based on the mean of the data points assigned to that cluster.
+    \item \textbf{Repeat Steps 2 and 3}: Iterate the process of assigning data points to clusters and updating centroids until convergence.
+    \item \textbf{Convergence Criteria}: The algorithm converges when the centroids no longer change significantly between iterations or when a specified number of iterations is reached.
 \end{enumerate}
 
-\section{Data Preprocessing Techniques}
+The objective function of K-Means clustering can be defined as minimizing the within-cluster sum of squared distances:
 
-\subsection{Data Cleaning}
-\begin{itemize}
-    \item Identification and handling of missing values, which can involve imputation techniques such as mean, median, or mode imputation, or removal of incomplete records.
-    \item Detection and treatment of outliers using statistical methods like Z-score, interquartile range (IQR), or visualizations.
-    \item Consistency checks to identify and rectify errors or inconsistencies in the data.
-\end{itemize}
+\[
+    \underset{C}{\operatorname{argmin}} \sum_{i=1}^{K} \sum_{x \in C_{i}}\|x - \mu_{i}\|^2
+\]
 
-\subsection{Data Transformation}
-\begin{itemize}
-    \item Encoding categorical variables through techniques like one-hot encoding, label encoding, or ordinal encoding.
-    \item Feature scaling or normalization to ensure that all features have a similar scale, which can include methods such as Min-Max scaling or standardization.
-    \item Creation of new features through techniques like polynomial features, interaction terms, or feature extraction from existing ones.
-\end{itemize}
+Where:
+- \(C\) represents the set of clusters.
+- \(C_{i}\) represents the data points assigned to cluster \(i\).
+- \(\mu_{i}\) represents the centroid of cluster \(i\).
+- \(\|\cdot\|\) denotes the Euclidean distance.
 
-\subsection{Data Reduction}
-\begin{itemize}
-    \item Dimensionality reduction methods to reduce the number of features in the dataset, such as Principal Component Analysis (PCA) or Singular Value Decomposition (SVD).
-    \item Feature selection techniques to identify and retain the most relevant features, including filter methods, wrapper methods, and embedded methods.
-\end{itemize}
+The algorithm converges to a locally optimal solution, and the quality of the clustering depends on the initial placement of centroids and the choice of K. K-Means is efficient and scalable for large datasets but may converge to suboptimal solutions depending on the initial centroids and data distribution.
 
-\subsection{Data Normalization}
-\begin{itemize}
-    \item Ensuring data consistency and conformity by bringing it to a common scale or format.
-    \item Standardization of data to have a mean of 0 and a standard deviation of 1, making it easier to compare and interpret different features.
-    \item Min-Max scaling to rescale data to a fixed range, typically between 0 and 1, preserving the relationships between data points.
-\end{itemize}
-
-\subsection{Data Integration}
-\begin{itemize}
-    \item Combining data from multiple sources or datasets into a single unified dataset, ensuring consistency and coherence.
-    \item Handling conflicts or inconsistencies in data schemas, formats, or values during the integration process.
-    \item Resolving duplicate records or redundant information to create a clean and comprehensive dataset.
-\end{itemize}
+\section{Procedure}
+\begin{enumerate}
+    \item Import the required python packages.
+    \item Load the dataset.
+    \item Data analysis.
+    \item Split the dataset into dependent/independent variables.
+    \item Split data into Train/Test sets.
+    \item Train the regression model.
+    \item Predict the result.
+\end{enumerate}
 
 \section{Platform}
 \textbf{Operating System}: Windows 11 \\
@@ -598,39 +589,42 @@ numpy==1.26.4
 pandas==2.2.2
 seaborn==0.13.2
 \end{lstlisting}
+
+
 \section{Code}
 
 \clearpage
 \section{FAQs}
 
 \begin{enumerate}
-    \item \textbf{What is Preprocessing technique?}\\
-          Data preprocessing involves a series of steps aimed at cleaning, transforming, and organizing raw data into a format that is more suitable for analysis and modeling. These steps include handling missing values, dealing with outliers, normalizing data, transforming features, and integrating multiple datasets.
-
-    \item \textbf{What is the use of Preprocessing technique in data science?}\\
-          Preprocessing techniques are essential in data science for several reasons:
+    \item \textbf{What do you understand by K-Means method?}
           \begin{itemize}
-              \item Enhancing data quality by addressing issues like missing values, outliers, and inconsistencies.
-              \item Improving the performance of machine learning models by ensuring that the data meets the assumptions and requirements of the algorithms.
-              \item Facilitating feature engineering by transforming and creating new features from existing ones.
-              \item Enabling effective data visualization and exploration by preparing the data in a standardized and interpretable format.
+              \item K-Means is a popular clustering algorithm used in machine learning and data mining.
+              \item It aims to partition a dataset into K distinct, non-overlapping clusters, where each data point belongs to the cluster with the nearest mean.
+              \item The algorithm iteratively assigns each data point to the nearest cluster centroid and recalculates the centroids until convergence.
+              \item K-Means is commonly used for data exploration, pattern recognition, and image segmentation tasks.
           \end{itemize}
 
-    \item \textbf{What is the difference between the data with preprocessing and without preprocessing?}\\
-          The differences between preprocessed and unprocessed data are significant and can impact the outcomes of data analysis and modeling:
+    \item \textbf{Discuss on how can we get data from IoT devices for Cyber Security?}
           \begin{itemize}
-              \item Data Quality: Preprocessed data tends to have higher quality, with missing values handled, outliers addressed, and inconsistencies resolved, leading to more reliable results.
-              \item Model Performance: Preprocessing improves the performance of machine learning models by ensuring that the data meets the assumptions of the algorithms, resulting in more accurate predictions and better generalization.
-              \item Interpretability: Preprocessed data is often easier to interpret and analyze, as it is in a standardized format with normalized scales and transformed features, facilitating effective data exploration and visualization.
+              \item IoT (Internet of Things) devices generate vast amounts of data that can be leveraged for cybersecurity purposes.
+              \item Data from IoT devices can be obtained through various means, including direct data collection from sensors, network traffic monitoring, and device logs.
+              \item Security protocols and standards such as MQTT (Message Queuing Telemetry Transport) and HTTPS (Hypertext Transfer Protocol Secure) can be used to securely transmit data from IoT devices to centralized servers or cloud platforms.
+              \item Data preprocessing techniques, such as data cleaning, normalization, and feature extraction, may be applied to IoT data to prepare it for cybersecurity analysis.
+          \end{itemize}
+
+    \item \textbf{Can K-Means method be used for Anomaly Detection? Explain how?}
+          \begin{itemize}
+              \item While K-Means is primarily a clustering algorithm, it can be adapted for anomaly detection in certain scenarios.
+              \item One approach is to use K-Means to cluster normal data points and identify clusters with fewer data points, which may indicate anomalies.
+              \item Another approach is to calculate the distance of each data point to its nearest cluster centroid and flag data points with distances above a certain threshold as anomalies.
+              \item However, K-Means may not be suitable for detecting complex or nonlinear anomalies, and other anomaly detection techniques such as Isolation Forest or One-Class SVM may be more appropriate in such cases.
           \end{itemize}
 \end{enumerate}
 
 
 \section{Conclusion}
-In this assignment, we have explored the importance of data preprocessing in data science and learned about various preprocessing techniques. We have also implemented data preprocessing using Python libraries like Pandas, Numpy, Matplotlib, and Seaborn. Data preprocessing is a crucial step in the data science pipeline, as it helps clean, transform, and organize raw data into a format that is more suitable for analysis and modeling. \\
-
-By applying preprocessing techniques, we can enhance data quality, improve model performance, and facilitate effective data exploration and visualization. Data preprocessing is an essential skill for data scientists and analysts, as it enables them to work with real-world data effectively and derive meaningful insights from it.
-
+In this Assignment, we implemented the K-Means Clustering algorithm in Python using the IOT Based Attacks dataset. We loaded the dataset, performed data analysis, split the data into dependent and independent variables, and trained the K-Means model. We visualized the clusters and analyzed the results. K-Means clustering is a powerful technique for partitioning data into distinct clusters based on similarity and can be applied to various domains, including cybersecurity and forensics.
 \clearpage
 
 \pagebreak
