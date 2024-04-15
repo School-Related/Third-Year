@@ -9,7 +9,7 @@
 \usepackage{fancyhdr, float, graphicx}
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
-\usepackage{fouriernc} % Use the New Century Schoolbook font
+% \usepackage{fouriernc} % Use the New Century Schoolbook font
 \usepackage[nottoc, notlot, notlof]{tocbibind}
 \usepackage{listings}
 \usepackage{xcolor}
@@ -478,7 +478,7 @@
 
 
     \huge{\textsc{
-            Basics of Python
+            Data Pre Processing in Python
         }} \\
 
 
@@ -492,7 +492,7 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Assignment 1
+        Assignment 2
     } % Subtitle or further description
     \vfill
 
@@ -521,449 +521,115 @@
 \setcounter{page}{1}
 
 \section{Aim}
-To implement basic programs in Python.
+Using python perform some Preprocessing using Python Libraries on any dataset.
 
 \section{Objectives}
 \begin{enumerate}
-    \item To learn about the basics of Python programming language.
-    \item To understand the basic syntax and data types in Python.
-    \item To implement basic programs in Python.
+    \item To perform data preprocessing on a dataset using Python.
+    \item To understand the importance of data preprocessing in data science.
+    \item To learn how to use Python libraries for data preprocessing.
 \end{enumerate}
 
-% \section{Theory}
+\section{Theory}
 
+Data preprocessing is a crucial step in the data science pipeline. It involves cleaning and transforming raw data into a more understandable format. Real-world data is often incomplete, inconsistent, and/or lacking in certain behaviors or trends, and is likely to contain many errors.
+
+Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. It is a proven method for handling such data. This process is essential because data scientists cannot work with raw data directly due to its inherent complexities and imperfections.
+
+The process of data preprocessing encompasses various tasks, including handling missing values, dealing with outliers, normalizing data, transforming features, and integrating multiple datasets. Each of these tasks contributes to ensuring that the data is of high quality and suitable for analysis and modeling.
+
+By performing data preprocessing, data scientists can enhance the quality of their analyses and improve the performance of machine learning models. Preprocessed data is easier to work with, interpret, and analyze, leading to more reliable insights and predictions.
+
+\section{Data Preprocessing Techniques}
+\begin{enumerate}
+    \item Data Cleaning
+    \item Data Transformation
+    \item Data Reduction
+    \item Data Normalization
+    \item Data Integration
+\end{enumerate}
+
+\section{Data Preprocessing Techniques}
+
+\subsection{Data Cleaning}
+\begin{itemize}
+    \item Identification and handling of missing values, which can involve imputation techniques such as mean, median, or mode imputation, or removal of incomplete records.
+    \item Detection and treatment of outliers using statistical methods like Z-score, interquartile range (IQR), or visualizations.
+    \item Consistency checks to identify and rectify errors or inconsistencies in the data.
+\end{itemize}
+
+\subsection{Data Transformation}
+\begin{itemize}
+    \item Encoding categorical variables through techniques like one-hot encoding, label encoding, or ordinal encoding.
+    \item Feature scaling or normalization to ensure that all features have a similar scale, which can include methods such as Min-Max scaling or standardization.
+    \item Creation of new features through techniques like polynomial features, interaction terms, or feature extraction from existing ones.
+\end{itemize}
+
+\subsection{Data Reduction}
+\begin{itemize}
+    \item Dimensionality reduction methods to reduce the number of features in the dataset, such as Principal Component Analysis (PCA) or Singular Value Decomposition (SVD).
+    \item Feature selection techniques to identify and retain the most relevant features, including filter methods, wrapper methods, and embedded methods.
+\end{itemize}
+
+\subsection{Data Normalization}
+\begin{itemize}
+    \item Ensuring data consistency and conformity by bringing it to a common scale or format.
+    \item Standardization of data to have a mean of 0 and a standard deviation of 1, making it easier to compare and interpret different features.
+    \item Min-Max scaling to rescale data to a fixed range, typically between 0 and 1, preserving the relationships between data points.
+\end{itemize}
+
+\subsection{Data Integration}
+\begin{itemize}
+    \item Combining data from multiple sources or datasets into a single unified dataset, ensuring consistency and coherence.
+    \item Handling conflicts or inconsistencies in data schemas, formats, or values during the integration process.
+    \item Resolving duplicate records or redundant information to create a clean and comprehensive dataset.
+\end{itemize}
 
 \section{Platform}
-\textbf{Operating System}: Arch Linux X8664 \\
+\textbf{Operating System}: Windows 11 \\
 \textbf{IDEs or Text Editors Used}: Visual Studio Code\\
 \textbf{Compilers or Interpreters}: Python 3.10.1\\
 
+\section{Requirements}
+\begin{lstlisting}
+python==3.10.1
+matplotlib==3.8.3
+numpy==1.26.4
+pandas==2.2.2
+seaborn==0.13.2
+\end{lstlisting}
 \section{Code}
 
-\begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \tightlist
-    \item
-          Python Program to Find a Series in an Array Consisting of Characters
-\end{enumerate}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{28}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{n}{array} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{wijwoifjasbabcjasidf}\PY{l+s+s2}{\PYZdq{}}
-
-        \PY{c+c1}{\PYZsh{} find a series of elements (a, b, c) in an array}
-
-        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{array}\PY{p}{)}\PY{p}{)}\PY{p}{:}
-        \PY{k}{if} \PY{n}{array}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{a}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
-        \PY{k}{if} \PY{n}{array}\PY{p}{[}\PY{n}{i}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{b}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
-        \PY{k}{if} \PY{n}{array}\PY{p}{[}\PY{n}{i}\PY{o}{+}\PY{l+m+mi}{2}\PY{p}{]} \PY{o}{==} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{c}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}
-        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{found at}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{i}\PY{p}{)}
-        \PY{k}{break}
-        \PY{k}{else}\PY{p}{:}
-        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{not found}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    found at 11
-\end{Verbatim}
+\clearpage
+\section{FAQs}
 
 \begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{1}
-    \tightlist
-    \item
-          Python program to find the occurrence of a particular number in an
-          array
+    \item \textbf{What is Preprocessing technique?}\\
+          Data preprocessing involves a series of steps aimed at cleaning, transforming, and organizing raw data into a format that is more suitable for analysis and modeling. These steps include handling missing values, dealing with outliers, normalizing data, transforming features, and integrating multiple datasets.
+
+    \item \textbf{What is the use of Preprocessing technique in data science?}\\
+          Preprocessing techniques are essential in data science for several reasons:
+          \begin{itemize}
+              \item Enhancing data quality by addressing issues like missing values, outliers, and inconsistencies.
+              \item Improving the performance of machine learning models by ensuring that the data meets the assumptions and requirements of the algorithms.
+              \item Facilitating feature engineering by transforming and creating new features from existing ones.
+              \item Enabling effective data visualization and exploration by preparing the data in a standardized and interpretable format.
+          \end{itemize}
+
+    \item \textbf{What is the difference between the data with preprocessing and without preprocessing?}\\
+          The differences between preprocessed and unprocessed data are significant and can impact the outcomes of data analysis and modeling:
+          \begin{itemize}
+              \item Data Quality: Preprocessed data tends to have higher quality, with missing values handled, outliers addressed, and inconsistencies resolved, leading to more reliable results.
+              \item Model Performance: Preprocessing improves the performance of machine learning models by ensuring that the data meets the assumptions of the algorithms, resulting in more accurate predictions and better generalization.
+              \item Interpretability: Preprocessed data is often easier to interpret and analyze, as it is in a standardized format with normalized scales and transformed features, facilitating effective data exploration and visualization.
+          \end{itemize}
 \end{enumerate}
 
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{4}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{k}{def} \PY{n+nf}{find\PYZus{}number\PYZus{}in\PYZus{}array}\PY{p}{(}\PY{n}{array}\PY{p}{,} \PY{n}{number}\PY{p}{)}\PY{p}{:}
-        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{array}\PY{p}{)}\PY{p}{)}\PY{p}{:}
-        \PY{k}{if} \PY{n}{array}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{==} \PY{n}{number}\PY{p}{:}
-        \PY{k}{return} \PY{n}{i}
-        \PY{k}{return} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
-
-        \PY{c+c1}{\PYZsh{} example}
-        \PY{n}{array} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{]}
-        \PY{n}{number} \PY{o}{=} \PY{l+m+mi}{7}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{find\PYZus{}number\PYZus{}in\PYZus{}array}\PY{p}{(}\PY{n}{array}\PY{p}{,} \PY{n}{number}\PY{p}{)}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    6
-\end{Verbatim}
-
-\begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{2}
-    \tightlist
-    \item
-          Find the union and intersection of two arrays in Python
-\end{enumerate}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{5}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{k}{def} \PY{n+nf}{find\PYZus{}union\PYZus{}and\PYZus{}intersection}\PY{p}{(}\PY{n}{array1}\PY{p}{,} \PY{n}{array2}\PY{p}{)}\PY{p}{:}
-        \PY{n}{union} \PY{o}{=} \PY{p}{[}\PY{p}{]}
-        \PY{n}{intersection} \PY{o}{=} \PY{p}{[}\PY{p}{]}
-        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{array1}\PY{p}{)}\PY{p}{)}\PY{p}{:}
-        \PY{k}{if} \PY{n}{array1}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o+ow}{in} \PY{n}{array2}\PY{p}{:}
-        \PY{n}{intersection}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{array1}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
-        \PY{n}{union}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{array1}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
-        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{array2}\PY{p}{)}\PY{p}{)}\PY{p}{:}
-        \PY{k}{if} \PY{n}{array2}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o+ow}{not} \PY{o+ow}{in} \PY{n}{array1}\PY{p}{:}
-        \PY{n}{union}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{array2}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
-        \PY{k}{return} \PY{n}{union}\PY{p}{,} \PY{n}{intersection}
-
-        \PY{c+c1}{\PYZsh{} example}
-        \PY{n}{array1} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{]}
-        \PY{n}{array2} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{12}\PY{p}{,} \PY{l+m+mi}{14}\PY{p}{,} \PY{l+m+mi}{16}\PY{p}{]}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{find\PYZus{}union\PYZus{}and\PYZus{}intersection}\PY{p}{(}\PY{n}{array1}\PY{p}{,} \PY{n}{array2}\PY{p}{)}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 16], [2, 4, 6, 8])
-\end{Verbatim}
-
-\begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{3}
-    \tightlist
-    \item
-          Create number variables (int, float and complex) and print their types
-          and values in Python
-\end{enumerate}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{6}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{c+c1}{\PYZsh{} creating number variables}
-        \PY{n}{a} \PY{o}{=} \PY{l+m+mi}{1}
-        \PY{n}{b} \PY{o}{=} \PY{l+m+mf}{2.1}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{a}\PY{p}{)}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{type}\PY{p}{(}\PY{n}{b}\PY{p}{)}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    <class 'int'>
-    <class 'float'>
-\end{Verbatim}
-
-\begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{4}
-    \tightlist
-    \item
-          Python program to print a string, extract characters from the string
-\end{enumerate}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{7}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{k}{def} \PY{n+nf}{extract\PYZus{}characters}\PY{p}{(}\PY{n}{string}\PY{p}{)}\PY{p}{:}
-        \PY{n}{characters} \PY{o}{=} \PY{p}{[}\PY{p}{]}
-        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{string}\PY{p}{)}\PY{p}{)}\PY{p}{:}
-        \PY{n}{characters}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{n}{string}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
-        \PY{k}{return} \PY{n}{characters}
-
-        \PY{c+c1}{\PYZsh{} example}
-        \PY{n}{string} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Hello World!}\PY{l+s+s2}{\PYZdq{}}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{extract\PYZus{}characters}\PY{p}{(}\PY{n}{string}\PY{p}{)}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd', '!']
-\end{Verbatim}
-
-\begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{5}
-    \tightlist
-    \item
-          Python Program to print words with their length of a string
-\end{enumerate}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{9}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{k}{def} \PY{n+nf}{print\PYZus{}words\PYZus{}with\PYZus{}length}\PY{p}{(}\PY{n}{string}\PY{p}{)}\PY{p}{:}
-        \PY{n}{words} \PY{o}{=} \PY{n}{string}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{p}{)}
-        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{words}\PY{p}{)}\PY{p}{)}\PY{p}{:}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{words}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{words}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}\PY{p}{)}
-
-        \PY{c+c1}{\PYZsh{} example}
-        \PY{n}{string} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Data science with Cyber Security}\PY{l+s+s2}{\PYZdq{}}
-        \PY{n}{print\PYZus{}words\PYZus{}with\PYZus{}length}\PY{p}{(}\PY{n}{string}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    Data : 4
-    science : 7
-    with : 4
-    Cyber : 5
-    Security : 8
-\end{Verbatim}
-
-\begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{6}
-    \tightlist
-    \item
-          Python Print EVEN length words
-\end{enumerate}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{10}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{k}{def} \PY{n+nf}{print\PYZus{}even\PYZus{}length\PYZus{}words}\PY{p}{(}\PY{n}{string}\PY{p}{)}\PY{p}{:}
-        \PY{n}{words} \PY{o}{=} \PY{n}{string}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{p}{)}
-        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{words}\PY{p}{)}\PY{p}{)}\PY{p}{:}
-        \PY{k}{if} \PY{n+nb}{len}\PY{p}{(}\PY{n}{words}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)} \PY{o}{\PYZpc{}} \PY{l+m+mi}{2} \PY{o}{==} \PY{l+m+mi}{0}\PY{p}{:}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{words}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
-
-        \PY{c+c1}{\PYZsh{} example}
-        \PY{n}{string} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Data science with Cyber Security}\PY{l+s+s2}{\PYZdq{}}
-        \PY{n}{print\PYZus{}even\PYZus{}length\PYZus{}words}\PY{p}{(}\PY{n}{string}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    Data
-    with
-    Security
-\end{Verbatim}
-
-\begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{7}
-    \tightlist
-    \item
-          Read contents of the file using readline() method in Python
-\end{enumerate}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{16}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{o}{!}touch\PY{+w}{ }test.txt
-        \PY{o}{!}\PY{+w}{ }\PY{n+nb}{echo}\PY{+w}{ }\PY{l+s+s2}{\PYZdq{}Hello World!\PYZdq{}}\PY{+w}{ }\PYZgt{}\PY{+w}{ }test.txt
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{13}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{test.txt}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{r}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)} \PY{k}{as} \PY{n}{file}\PY{p}{:}
-        \PY{n}{data} \PY{o}{=} \PY{n}{file}\PY{o}{.}\PY{n}{read}\PY{p}{(}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{data}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    Hello World!
-
-\end{Verbatim}
-
-\begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{8}
-    \tightlist
-    \item
-          Read contents of a file using readline() method and manipulating it in
-          Python
-\end{enumerate}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{17}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{test.txt}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{r}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)} \PY{k}{as} \PY{n}{file}\PY{p}{:}
-        \PY{c+c1}{\PYZsh{} using readline}
-        \PY{n}{data} \PY{o}{=} \PY{n}{file}\PY{o}{.}\PY{n}{readline}\PY{p}{(}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{data}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    Hello World!
-
-\end{Verbatim}
-
-\begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{9}
-    \tightlist
-    \item
-          Copy odd lines of one file to another file in Python
-\end{enumerate}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{21}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{o}{!}\PY{+w}{ }touch\PY{+w}{ }oddeven.txt
-        \PY{o}{!}\PY{+w}{ }\PY{n+nb}{echo}\PY{+w}{ }\PY{l+s+s2}{\PYZdq{}1 2 3 \PYZbs{}n 4 5 6 \PYZbs{}n 7 8 9\PYZdq{}}\PY{+w}{ }\PYZgt{}\PY{+w}{ }oddeven.txt
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{22}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{k}{def} \PY{n+nf}{print\PYZus{}odd\PYZus{}lines}\PY{p}{(}\PY{n}{file}\PY{p}{)}\PY{p}{:}
-        \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{n}{file}\PY{p}{,} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{r}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)} \PY{k}{as} \PY{n}{file}\PY{p}{:}
-        \PY{n}{data} \PY{o}{=} \PY{n}{file}\PY{o}{.}\PY{n}{readlines}\PY{p}{(}\PY{p}{)}
-        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{data}\PY{p}{)}\PY{p}{)}\PY{p}{:}
-        \PY{k}{if} \PY{n}{i} \PY{o}{\PYZpc{}} \PY{l+m+mi}{2} \PY{o}{==} \PY{l+m+mi}{0}\PY{p}{:}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{data}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
-
-        \PY{c+c1}{\PYZsh{} example}
-        \PY{n}{file} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{oddeven.txt}\PY{l+s+s2}{\PYZdq{}}
-        \PY{n}{print\PYZus{}odd\PYZus{}lines}\PY{p}{(}\PY{n}{file}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    1 2 3
-
-    7 8 9
-
-\end{Verbatim}
-
-\begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{10}
-    \tightlist
-    \item
-          Python program for Linear Search
-\end{enumerate}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{23}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{k}{def} \PY{n+nf}{linear\PYZus{}search}\PY{p}{(}\PY{n}{array}\PY{p}{,} \PY{n}{number}\PY{p}{)}\PY{p}{:}
-        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{array}\PY{p}{)}\PY{p}{)}\PY{p}{:}
-        \PY{k}{if} \PY{n}{array}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{==} \PY{n}{number}\PY{p}{:}
-        \PY{k}{return} \PY{n}{i}
-        \PY{k}{return} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
-
-        \PY{c+c1}{\PYZsh{} example}
-        \PY{n}{array} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{]}
-        \PY{n}{number} \PY{o}{=} \PY{l+m+mi}{7}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{linear\PYZus{}search}\PY{p}{(}\PY{n}{array}\PY{p}{,} \PY{n}{number}\PY{p}{)}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    6
-\end{Verbatim}
-
-\begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{11}
-    \tightlist
-    \item
-          Python program to print list elements in different ways
-\end{enumerate}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{24}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{directly}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-        \PY{n}{lst} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{]}
-        \PY{c+c1}{\PYZsh{} print list elements directly}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{lst}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{for loop}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-        \PY{c+c1}{\PYZsh{} print list elements using for loop}
-        \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{lst}\PY{p}{)}\PY{p}{)}\PY{p}{:}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{lst}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
-
-        \PY{c+c1}{\PYZsh{} print list elements using while loop}
-
-        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{while loop}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-        \PY{n}{i} \PY{o}{=} \PY{l+m+mi}{0}
-        \PY{k}{while} \PY{n}{i} \PY{o}{\PYZlt{}} \PY{n+nb}{len}\PY{p}{(}\PY{n}{lst}\PY{p}{)}\PY{p}{:}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{lst}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
-        \PY{n}{i} \PY{o}{+}\PY{o}{=} \PY{l+m+mi}{1}
-
-        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{list comprehension}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-        \PY{c+c1}{\PYZsh{} print list elements using list comprehension}
-        \PY{n+nb}{print}\PY{p}{(}\PY{p}{[}\PY{n}{lst}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{lst}\PY{p}{)}\PY{p}{)}\PY{p}{]}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    1
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9
-    1
-    2
-    3
-    4
-    5
-    6
-    7
-    8
-    9
-        [1, 2, 3, 4, 5, 6, 7, 8, 9]
-\end{Verbatim}
-
-\begin{enumerate}
-    \def\labelenumi{\arabic{enumi}.}
-    \setcounter{enumi}{12}
-    \tightlist
-    \item
-          Python Program for Adding, removing elements in the list
-\end{enumerate}
-
-\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
-    \prompt{In}{incolor}{25}{\boxspacing}
-    \begin{Verbatim}[commandchars=\\\{\}]
-        \PY{c+c1}{\PYZsh{} program to add and remove elements}
-        \PY{n}{lst} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{9}\PY{p}{]}
-        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{before adding element}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{lst}\PY{p}{)}
-        \PY{c+c1}{\PYZsh{} adding element to list}
-        \PY{n}{lst}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{after adding element}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{lst}\PY{p}{)}
-
-        \PY{c+c1}{\PYZsh{} removing element from list}
-        \PY{n}{lst}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{after removing element}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
-        \PY{n+nb}{print}\PY{p}{(}\PY{n}{lst}\PY{p}{)}
-    \end{Verbatim}
-\end{tcolorbox}
-
-\begin{Verbatim}[commandchars=\\\{\}]
-    before adding element
-        [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    after adding element
-        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-    after removing element
-        [1, 2, 3, 4, 5, 6, 7, 8, 9]
-\end{Verbatim}
-
-
-% Add a bibliography block to the postdoc
-
-% \lstinputlisting[language=Python, caption="DSA Signature Validity using PyCrypto Library"]{../Programs/Assignment_7/dsa using lib.py}
 
 \section{Conclusion}
-In this assignment, we have implemented various Python programs to understand the basic concepts of Python programming. We have implemented programs to find the number in an array, find the union and intersection of two arrays, create number variables and print their types and values, extract characters from a string, print words with their length of a string, print EVEN length words, read contents of the file using readline() method, read contents of a file using readline() method and manipulating it, copy odd lines of one file to another file, linear search, print list elements in different ways, and adding, removing elements in the list.
+In this assignment, we have explored the importance of data preprocessing in data science and learned about various preprocessing techniques. We have also implemented data preprocessing using Python libraries like Pandas, Numpy, Matplotlib, and Seaborn. Data preprocessing is a crucial step in the data science pipeline, as it helps clean, transform, and organize raw data into a format that is more suitable for analysis and modeling. \\
+
+By applying preprocessing techniques, we can enhance data quality, improve model performance, and facilitate effective data exploration and visualization. Data preprocessing is an essential skill for data scientists and analysts, as it enables them to work with real-world data effectively and derive meaningful insights from it.
 
 \clearpage
 
