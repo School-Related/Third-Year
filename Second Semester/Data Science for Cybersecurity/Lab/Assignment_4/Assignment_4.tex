@@ -478,7 +478,7 @@
 
 
     \huge{\textsc{
-            Data Pre Processing in Python
+            Data Visualisation and Analysis on a Dataset
         }} \\
 
 
@@ -492,7 +492,7 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Assignment 2
+        Assignment 4
     } % Subtitle or further description
     \vfill
 
@@ -521,69 +521,19 @@
 \setcounter{page}{1}
 
 \section{Aim}
-Using python perform some Preprocessing using Python Libraries on any dataset.
+To perform data visualisation and analysis on a dataset using Python.
 
 \section{Objectives}
+To Plot the following:
 \begin{enumerate}
-    \item To perform data preprocessing on a dataset using Python.
-    \item To understand the importance of data preprocessing in data science.
-    \item To learn how to use Python libraries for data preprocessing.
+    \item Figures in matplotlib
+    \item Scatter plots in matplotlib and Seaborn
+    \item Scatter plots in Bokeh
+    \item Preparation of line plot data
+    \item Line plots in matplotlib, Seaborn, and Bokeh
 \end{enumerate}
 
 \section{Theory}
-
-Data preprocessing is a crucial step in the data science pipeline. It involves cleaning and transforming raw data into a more understandable format. Real-world data is often incomplete, inconsistent, and/or lacking in certain behaviors or trends, and is likely to contain many errors.
-
-Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. It is a proven method for handling such data. This process is essential because data scientists cannot work with raw data directly due to its inherent complexities and imperfections.
-
-The process of data preprocessing encompasses various tasks, including handling missing values, dealing with outliers, normalizing data, transforming features, and integrating multiple datasets. Each of these tasks contributes to ensuring that the data is of high quality and suitable for analysis and modeling.
-
-By performing data preprocessing, data scientists can enhance the quality of their analyses and improve the performance of machine learning models. Preprocessed data is easier to work with, interpret, and analyze, leading to more reliable insights and predictions.
-
-\section{Data Preprocessing Techniques}
-\begin{enumerate}
-    \item Data Cleaning
-    \item Data Transformation
-    \item Data Reduction
-    \item Data Normalization
-    \item Data Integration
-\end{enumerate}
-
-\section{Data Preprocessing Techniques}
-
-\subsection{Data Cleaning}
-\begin{itemize}
-    \item Identification and handling of missing values, which can involve imputation techniques such as mean, median, or mode imputation, or removal of incomplete records.
-    \item Detection and treatment of outliers using statistical methods like Z-score, interquartile range (IQR), or visualizations.
-    \item Consistency checks to identify and rectify errors or inconsistencies in the data.
-\end{itemize}
-
-\subsection{Data Transformation}
-\begin{itemize}
-    \item Encoding categorical variables through techniques like one-hot encoding, label encoding, or ordinal encoding.
-    \item Feature scaling or normalization to ensure that all features have a similar scale, which can include methods such as Min-Max scaling or standardization.
-    \item Creation of new features through techniques like polynomial features, interaction terms, or feature extraction from existing ones.
-\end{itemize}
-
-\subsection{Data Reduction}
-\begin{itemize}
-    \item Dimensionality reduction methods to reduce the number of features in the dataset, such as Principal Component Analysis (PCA) or Singular Value Decomposition (SVD).
-    \item Feature selection techniques to identify and retain the most relevant features, including filter methods, wrapper methods, and embedded methods.
-\end{itemize}
-
-\subsection{Data Normalization}
-\begin{itemize}
-    \item Ensuring data consistency and conformity by bringing it to a common scale or format.
-    \item Standardization of data to have a mean of 0 and a standard deviation of 1, making it easier to compare and interpret different features.
-    \item Min-Max scaling to rescale data to a fixed range, typically between 0 and 1, preserving the relationships between data points.
-\end{itemize}
-
-\subsection{Data Integration}
-\begin{itemize}
-    \item Combining data from multiple sources or datasets into a single unified dataset, ensuring consistency and coherence.
-    \item Handling conflicts or inconsistencies in data schemas, formats, or values during the integration process.
-    \item Resolving duplicate records or redundant information to create a clean and comprehensive dataset.
-\end{itemize}
 
 \section{Platform}
 \textbf{Operating System}: Windows 11 \\
@@ -604,32 +554,9 @@ seaborn==0.13.2
 \section{FAQs}
 
 \begin{enumerate}
-    \item \textbf{What is Preprocessing technique?}\\
-          Data preprocessing involves a series of steps aimed at cleaning, transforming, and organizing raw data into a format that is more suitable for analysis and modeling. These steps include handling missing values, dealing with outliers, normalizing data, transforming features, and integrating multiple datasets.
-
-    \item \textbf{What is the use of Preprocessing technique in data science?}\\
-          Preprocessing techniques are essential in data science for several reasons:
-          \begin{itemize}
-              \item Enhancing data quality by addressing issues like missing values, outliers, and inconsistencies.
-              \item Improving the performance of machine learning models by ensuring that the data meets the assumptions and requirements of the algorithms.
-              \item Facilitating feature engineering by transforming and creating new features from existing ones.
-              \item Enabling effective data visualization and exploration by preparing the data in a standardized and interpretable format.
-          \end{itemize}
-
-    \item \textbf{What is the difference between the data with preprocessing and without preprocessing?}\\
-          The differences between preprocessed and unprocessed data are significant and can impact the outcomes of data analysis and modeling:
-          \begin{itemize}
-              \item Data Quality: Preprocessed data tends to have higher quality, with missing values handled, outliers addressed, and inconsistencies resolved, leading to more reliable results.
-              \item Model Performance: Preprocessing improves the performance of machine learning models by ensuring that the data meets the assumptions of the algorithms, resulting in more accurate predictions and better generalization.
-              \item Interpretability: Preprocessed data is often easier to interpret and analyze, as it is in a standardized format with normalized scales and transformed features, facilitating effective data exploration and visualization.
-          \end{itemize}
+    \item
 \end{enumerate}
-
-
 \section{Conclusion}
-In this assignment, we have explored the importance of data preprocessing in data science and learned about various preprocessing techniques. We have also implemented data preprocessing using Python libraries like Pandas, Numpy, Matplotlib, and Seaborn. Data preprocessing is a crucial step in the data science pipeline, as it helps clean, transform, and organize raw data into a format that is more suitable for analysis and modeling. \\
-
-By applying preprocessing techniques, we can enhance data quality, improve model performance, and facilitate effective data exploration and visualization. Data preprocessing is an essential skill for data scientists and analysts, as it enables them to work with real-world data effectively and derive meaningful insights from it.
 
 \clearpage
 

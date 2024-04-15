@@ -478,7 +478,7 @@
 
 
     \huge{\textsc{
-            Data Pre Processing in Python
+            Statistical Approaches in Data Science
         }} \\
 
 
@@ -492,7 +492,7 @@
     %--------------------------SUBTITLE --------------------------	
 
     \LARGE\textsc{
-        Assignment 2
+        Assignment 3
     } % Subtitle or further description
     \vfill
 
@@ -521,69 +521,69 @@
 \setcounter{page}{1}
 
 \section{Aim}
-Using python perform some Preprocessing using Python Libraries on any dataset.
+Learning some statistical approaches that are used in data science.
 
 \section{Objectives}
 \begin{enumerate}
-    \item To perform data preprocessing on a dataset using Python.
-    \item To understand the importance of data preprocessing in data science.
-    \item To learn how to use Python libraries for data preprocessing.
+    \item Write a Python program to implement central tendency for housing data.
+    \item Using python compute variance in the weather.
+    \item Compute variance in the weather to find best time to visit New Delhi(or any city).
+    \item Using histogram find the best time to visit Delhi (or any)s on any dataset.
 \end{enumerate}
 
 \section{Theory}
 
-Data preprocessing is a crucial step in the data science pipeline. It involves cleaning and transforming raw data into a more understandable format. Real-world data is often incomplete, inconsistent, and/or lacking in certain behaviors or trends, and is likely to contain many errors.
+\subsection{Types of Statistics}
+Statistics can be broadly categorized into two main types: descriptive statistics and inferential statistics.
 
-Data preprocessing is a data mining technique that involves transforming raw data into an understandable format. It is a proven method for handling such data. This process is essential because data scientists cannot work with raw data directly due to its inherent complexities and imperfections.
+\subsection{Descriptive Statistics}
+Descriptive statistics involve methods for summarizing and describing the features of a dataset. It provides insights into the central tendency, variability, and distribution of the data.
 
-The process of data preprocessing encompasses various tasks, including handling missing values, dealing with outliers, normalizing data, transforming features, and integrating multiple datasets. Each of these tasks contributes to ensuring that the data is of high quality and suitable for analysis and modeling.
-
-By performing data preprocessing, data scientists can enhance the quality of their analyses and improve the performance of machine learning models. Preprocessed data is easier to work with, interpret, and analyze, leading to more reliable insights and predictions.
-
-\section{Data Preprocessing Techniques}
-\begin{enumerate}
-    \item Data Cleaning
-    \item Data Transformation
-    \item Data Reduction
-    \item Data Normalization
-    \item Data Integration
-\end{enumerate}
-
-\section{Data Preprocessing Techniques}
-
-\subsection{Data Cleaning}
+\subsubsection{Measures of Central Tendency}
+Measures of central tendency are statistics that describe the center or average of a dataset. Common measures of central tendency include the mean, median, and mode.
 \begin{itemize}
-    \item Identification and handling of missing values, which can involve imputation techniques such as mean, median, or mode imputation, or removal of incomplete records.
-    \item Detection and treatment of outliers using statistical methods like Z-score, interquartile range (IQR), or visualizations.
-    \item Consistency checks to identify and rectify errors or inconsistencies in the data.
+    \item \textbf{Mean}: The arithmetic average of a set of values, calculated by summing all the values and dividing by the number of observations.
+
+          Formula: \[ \bar{x} = \frac{\sum_{i=1}^{n} x_i}{n} \]
+    \item \textbf{Median}: The middle value in a dataset when the values are arranged in ascending order. It divides the dataset into two equal halves.
+
+          Formula: \[ \text{Median} = \begin{cases} x_{(n+1)/2} & \text{if } n \text{ is odd} \\ \frac{x_{n/2} + x_{n/2 + 1}}{2} & \text{if } n \text{ is even} \end{cases} \]
+    \item \textbf{Mode}: The value that appears most frequently in a dataset.
+
+          Formula: \[ \text{Mode} = \text{value with highest frequency} \]
 \end{itemize}
 
-\subsection{Data Transformation}
+\subsubsection{Measures of Dispersion}
+Measures of dispersion quantify the spread or variability of the data points in a dataset. They provide information about how the data is distributed around the central tendency.
 \begin{itemize}
-    \item Encoding categorical variables through techniques like one-hot encoding, label encoding, or ordinal encoding.
-    \item Feature scaling or normalization to ensure that all features have a similar scale, which can include methods such as Min-Max scaling or standardization.
-    \item Creation of new features through techniques like polynomial features, interaction terms, or feature extraction from existing ones.
+    \item \textbf{Range}: The difference between the maximum and minimum values in a dataset.
+
+          Formula:
+          \[ \text{Range} = \text{Maximum value} - \text{Minimum value} \]
+    \item \textbf{Variance}: The average of the squared differences from the mean. It measures the average distance of each data point from the mean.
+
+          Formula:
+          \[ \text{Variance} = \frac{\sum_{i=1}^{n} (x_i - \bar{x})^2}{n} \]
+    \item \textbf{Standard Deviation}: The square root of the variance. It provides a measure of the dispersion of data points around the mean.
+
+          Formula:
+          \[ \text{Standard Deviation} = \sqrt{\text{Variance}} \]
 \end{itemize}
 
-\subsection{Data Reduction}
-\begin{itemize}
-    \item Dimensionality reduction methods to reduce the number of features in the dataset, such as Principal Component Analysis (PCA) or Singular Value Decomposition (SVD).
-    \item Feature selection techniques to identify and retain the most relevant features, including filter methods, wrapper methods, and embedded methods.
-\end{itemize}
+\subsection{Inferential Statistics}
 
-\subsection{Data Normalization}
-\begin{itemize}
-    \item Ensuring data consistency and conformity by bringing it to a common scale or format.
-    \item Standardization of data to have a mean of 0 and a standard deviation of 1, making it easier to compare and interpret different features.
-    \item Min-Max scaling to rescale data to a fixed range, typically between 0 and 1, preserving the relationships between data points.
-\end{itemize}
+Inferential statistics involve methods for making predictions or inferences about a population based on a sample of data. It uses probability theory to draw conclusions about the population parameters.
 
-\subsection{Data Integration}
-\begin{itemize}
-    \item Combining data from multiple sources or datasets into a single unified dataset, ensuring consistency and coherence.
-    \item Handling conflicts or inconsistencies in data schemas, formats, or values during the integration process.
-    \item Resolving duplicate records or redundant information to create a clean and comprehensive dataset.
-\end{itemize}
+\subsubsection{Hypothesis Testing}
+Hypothesis testing is a statistical method used to determine whether there is enough evidence to reject a null hypothesis in favor of an alternative hypothesis. It involves setting up a null hypothesis and an alternative hypothesis, collecting data, and using statistical tests to make a decision.
+
+\subsubsection{Regression Analysis}
+
+Regression analysis is a statistical technique used to model the relationship between a dependent variable and one or more independent variables. It helps in understanding how the value of the dependent variable changes when one or more independent variables are varied.
+
+\subsubsection{Correlation Analysis}
+
+Correlation analysis is a statistical method used to measure the strength and direction of the relationship between two variables. It helps in understanding how changes in one variable are associated with changes in another variable.
 
 \section{Platform}
 \textbf{Operating System}: Windows 11 \\
@@ -603,34 +603,34 @@ seaborn==0.13.2
 \clearpage
 \section{FAQs}
 
+\subsection{Question 1}
 \begin{enumerate}
-    \item \textbf{What is Preprocessing technique?}\\
-          Data preprocessing involves a series of steps aimed at cleaning, transforming, and organizing raw data into a format that is more suitable for analysis and modeling. These steps include handling missing values, dealing with outliers, normalizing data, transforming features, and integrating multiple datasets.
+    \item \textbf{What do you understand by Statistics for Data science?}\\
+          Statistics for data science involves the application of statistical methods and techniques to analyze, interpret, and derive insights from data. It encompasses a wide range of methods, including descriptive statistics, inferential statistics, and predictive modeling, to explore patterns, relationships, and trends within datasets. In data science, statistics plays a crucial role in data preprocessing, exploratory data analysis, hypothesis testing, and model evaluation, enabling data scientists to make informed decisions and derive actionable insights from data.
 
-    \item \textbf{What is the use of Preprocessing technique in data science?}\\
-          Preprocessing techniques are essential in data science for several reasons:
-          \begin{itemize}
-              \item Enhancing data quality by addressing issues like missing values, outliers, and inconsistencies.
-              \item Improving the performance of machine learning models by ensuring that the data meets the assumptions and requirements of the algorithms.
-              \item Facilitating feature engineering by transforming and creating new features from existing ones.
-              \item Enabling effective data visualization and exploration by preparing the data in a standardized and interpretable format.
-          \end{itemize}
-
-    \item \textbf{What is the difference between the data with preprocessing and without preprocessing?}\\
-          The differences between preprocessed and unprocessed data are significant and can impact the outcomes of data analysis and modeling:
-          \begin{itemize}
-              \item Data Quality: Preprocessed data tends to have higher quality, with missing values handled, outliers addressed, and inconsistencies resolved, leading to more reliable results.
-              \item Model Performance: Preprocessing improves the performance of machine learning models by ensuring that the data meets the assumptions of the algorithms, resulting in more accurate predictions and better generalization.
-              \item Interpretability: Preprocessed data is often easier to interpret and analyze, as it is in a standardized format with normalized scales and transformed features, facilitating effective data exploration and visualization.
-          \end{itemize}
 \end{enumerate}
 
+\subsection{Question 2}
+\begin{enumerate}
+    \item \textbf{Do we need preprocessing to perform statistics for Data science? Justify, your answer}\\
+          Yes, preprocessing is essential for performing statistics in data science. Preprocessing involves cleaning, transforming, and preparing raw data to make it suitable for statistical analysis. Without preprocessing, raw data may contain missing values, outliers, inconsistencies, or other irregularities that can affect the accuracy and reliability of statistical results. Preprocessing techniques such as handling missing values, outlier detection, data normalization, and feature engineering help ensure that the data meets the assumptions and requirements of statistical methods. By preprocessing the data, data scientists can improve the quality of statistical analysis, enhance the performance of models, and derive more accurate and meaningful insights from the data.
+\end{enumerate}
+
+\subsection{Question 3}
+\begin{enumerate}
+    \item \textbf{Describe the different Statistical approaches in Data science using Python?}\\
+          In data science, various statistical approaches are used to analyze and model data using Python. Some common statistical approaches include:
+          \begin{itemize}
+              \item Descriptive Statistics: Summarizing and describing the features of a dataset using measures of central tendency, dispersion, and visualization techniques.
+              \item Inferential Statistics: Making inferences and predictions about populations based on sample data using hypothesis testing, confidence intervals, and regression analysis.
+              \item Predictive Modeling: Building predictive models to forecast future outcomes or classify data into different categories using techniques such as linear regression, logistic regression, decision trees, and ensemble methods.
+              \item Time Series Analysis: Analyzing and forecasting time-series data using methods like autoregressive integrated moving average (ARIMA), seasonal decomposition, and exponential smoothing.
+          \end{itemize}
+          Python provides a wide range of libraries and tools for implementing these statistical approaches, including NumPy, pandas, SciPy, scikit-learn, and Statsmodels, making it a popular choice for statistical analysis in data science.
+\end{enumerate}
 
 \section{Conclusion}
-In this assignment, we have explored the importance of data preprocessing in data science and learned about various preprocessing techniques. We have also implemented data preprocessing using Python libraries like Pandas, Numpy, Matplotlib, and Seaborn. Data preprocessing is a crucial step in the data science pipeline, as it helps clean, transform, and organize raw data into a format that is more suitable for analysis and modeling. \\
-
-By applying preprocessing techniques, we can enhance data quality, improve model performance, and facilitate effective data exploration and visualization. Data preprocessing is an essential skill for data scientists and analysts, as it enables them to work with real-world data effectively and derive meaningful insights from it.
-
+In this assignment, we learned about various statistical approaches used in data science, including measures of central tendency, dispersion, hypothesis testing, regression analysis, and correlation analysis. We implemented these statistical concepts using Python and explored how they can be applied to analyze and interpret data. By understanding and applying statistical methods, data scientists can gain valuable insights from data, make informed decisions, and build predictive models to solve real-world problems.
 \clearpage
 
 \pagebreak
