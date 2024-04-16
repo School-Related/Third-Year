@@ -11,5 +11,5 @@
 \contentsline {section}{\numberline {5}Platform}{3}{section.5}%
 \contentsline {section}{\numberline {6}Requirements}{3}{section.6}%
 \contentsline {section}{\numberline {7}Code}{3}{section.7}%
-\contentsline {section}{\numberline {8}FAQs}{4}{section.8}%
-\contentsline {section}{\numberline {9}Conclusion}{4}{section.9}%
+\contentsline {section}{\numberline {8}FAQs}{8}{section.8}%
+\contentsline {section}{\numberline {9}Conclusion}{8}{section.9}%

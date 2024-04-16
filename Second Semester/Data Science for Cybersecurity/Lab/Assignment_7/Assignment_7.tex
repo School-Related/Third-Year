@@ -593,6 +593,1348 @@ seaborn==0.13.2
 
 \section{Code}
 
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{95}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} implementing k means clustering on iot based attacks dataset}
+\PY{c+c1}{\PYZsh{} importing required libraries}
+\PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+\PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+\PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{cluster} \PY{k+kn}{import} \PY{n}{KMeans}
+\PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{preprocessing} \PY{k+kn}{import} \PY{n}{StandardScaler}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{96}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} importing the dataset}
+\PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{part\PYZhy{}00000\PYZhy{}363d1ba3\PYZhy{}8ab5\PYZhy{}4f96\PYZhy{}bc25\PYZhy{}4d5862db7cb9\PYZhy{}c000.csv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{96}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+   flow\_duration  Header\_Length  Protocol Type  Duration         Rate  \textbackslash{}
+0       0.000000          54.00           6.00     64.00     0.329807
+1       0.000000          57.04           6.33     64.00     4.290556
+2       0.000000           0.00           1.00     64.00    33.396799
+3       0.328175       76175.00          17.00     64.00  4642.133010
+4       0.117320         101.73           6.11     65.91     6.202211
+
+         Srate  Drate  fin\_flag\_number  syn\_flag\_number  rst\_flag\_number  {\ldots}  \textbackslash{}
+0     0.329807    0.0              1.0              0.0              1.0  {\ldots}
+1     4.290556    0.0              0.0              0.0              0.0  {\ldots}
+2    33.396799    0.0              0.0              0.0              0.0  {\ldots}
+3  4642.133010    0.0              0.0              0.0              0.0  {\ldots}
+4     6.202211    0.0              0.0              1.0              0.0  {\ldots}
+
+         Std  Tot size           IAT  Number   Magnitue     Radius  \textbackslash{}
+0   0.000000     54.00  8.334383e+07     9.5  10.392305   0.000000
+1   2.822973     57.04  8.292607e+07     9.5  10.464666   4.010353
+2   0.000000     42.00  8.312799e+07     9.5   9.165151   0.000000
+3   0.000000     50.00  8.301570e+07     9.5  10.000000   0.000000
+4  23.113111     57.88  8.297300e+07     9.5  11.346876  32.716243
+
+    Covariance  Variance  Weight             label
+0     0.000000      0.00  141.55  DDoS-RSTFINFlood
+1   160.987842      0.05  141.55     DoS-TCP\_Flood
+2     0.000000      0.00  141.55   DDoS-ICMP\_Flood
+3     0.000000      0.00  141.55     DoS-UDP\_Flood
+4  3016.808286      0.19  141.55     DoS-SYN\_Flood
+
+[5 rows x 47 columns]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{97}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df}\PY{o}{.}\PY{n}{info}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 238687 entries, 0 to 238686
+Data columns (total 47 columns):
+ \#   Column           Non-Null Count   Dtype
+---  ------           --------------   -----
+ 0   flow\_duration    238687 non-null  float64
+ 1   Header\_Length    238687 non-null  float64
+ 2   Protocol Type    238687 non-null  float64
+ 3   Duration         238687 non-null  float64
+ 4   Rate             238687 non-null  float64
+ 5   Srate            238687 non-null  float64
+ 6   Drate            238687 non-null  float64
+ 7   fin\_flag\_number  238687 non-null  float64
+ 8   syn\_flag\_number  238687 non-null  float64
+ 9   rst\_flag\_number  238687 non-null  float64
+ 10  psh\_flag\_number  238687 non-null  float64
+ 11  ack\_flag\_number  238687 non-null  float64
+ 12  ece\_flag\_number  238687 non-null  float64
+ 13  cwr\_flag\_number  238687 non-null  float64
+ 14  ack\_count        238687 non-null  float64
+ 15  syn\_count        238687 non-null  float64
+ 16  fin\_count        238687 non-null  float64
+ 17  urg\_count        238687 non-null  float64
+ 18  rst\_count        238687 non-null  float64
+ 19  HTTP             238687 non-null  float64
+ 20  HTTPS            238687 non-null  float64
+ 21  DNS              238687 non-null  float64
+ 22  Telnet           238687 non-null  float64
+ 23  SMTP             238687 non-null  float64
+ 24  SSH              238687 non-null  float64
+ 25  IRC              238687 non-null  float64
+ 26  TCP              238687 non-null  float64
+ 27  UDP              238687 non-null  float64
+ 28  DHCP             238687 non-null  float64
+ 29  ARP              238687 non-null  float64
+ 30  ICMP             238687 non-null  float64
+ 31  IPv              238687 non-null  float64
+ 32  LLC              238687 non-null  float64
+ 33  Tot sum          238687 non-null  float64
+ 34  Min              238687 non-null  float64
+ 35  Max              238687 non-null  float64
+ 36  AVG              238687 non-null  float64
+ 37  Std              238687 non-null  float64
+ 38  Tot size         238687 non-null  float64
+ 39  IAT              238687 non-null  float64
+ 40  Number           238687 non-null  float64
+ 41  Magnitue         238687 non-null  float64
+ 42  Radius           238687 non-null  float64
+ 43  Covariance       238687 non-null  float64
+ 44  Variance         238687 non-null  float64
+ 45  Weight           238687 non-null  float64
+ 46  label            238687 non-null  object
+dtypes: float64(46), object(1)
+memory usage: 85.6+ MB
+    \end{Verbatim}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{98}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} lets remove columns that we dont need.}
+\PY{n}{df}\PY{o}{.}\PY{n}{columns}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{98}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+Index(['flow\_duration', 'Header\_Length', 'Protocol Type', 'Duration', 'Rate',
+       'Srate', 'Drate', 'fin\_flag\_number', 'syn\_flag\_number',
+       'rst\_flag\_number', 'psh\_flag\_number', 'ack\_flag\_number',
+       'ece\_flag\_number', 'cwr\_flag\_number', 'ack\_count', 'syn\_count',
+       'fin\_count', 'urg\_count', 'rst\_count', 'HTTP', 'HTTPS', 'DNS', 'Telnet',
+       'SMTP', 'SSH', 'IRC', 'TCP', 'UDP', 'DHCP', 'ARP', 'ICMP', 'IPv', 'LLC',
+       'Tot sum', 'Min', 'Max', 'AVG', 'Std', 'Tot size', 'IAT', 'Number',
+       'Magnitue', 'Radius', 'Covariance', 'Variance', 'Weight', 'label'],
+      dtype='object')
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{99}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df}\PY{o}{.}\PY{n}{drop}\PY{p}{(}
+    \PY{n}{columns}\PY{o}{=}\PY{p}{[}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Drate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{fin\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{syn\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{rst\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{psh\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ack\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ece\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cwr\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ack\PYZus{}count}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{syn\PYZus{}count}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{fin\PYZus{}count}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{urg\PYZus{}count}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{rst\PYZus{}count}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{HTTP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{HTTPS}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{DNS}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Telnet}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{SMTP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{SSH}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{IRC}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{TCP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{UDP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{DHCP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ARP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ICMP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{IPv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{LLC}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Tot sum}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Min}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Max}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{AVG}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Std}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Tot size}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{IAT}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Magnitue}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Radius}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Covariance}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Variance}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Weight}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{p}{]}\PY{p}{,}
+    \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}
+\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{100}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} let us now visualize scatter plots of the data}
+\PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sns}
+
+\PY{c+c1}{\PYZsh{} before that lets scale the data down, just take the first 1000 rows}
+\PY{n}{scaled\PYZus{}df} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{1000}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{101}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}\PY{n}{df}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{101}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<seaborn.axisgrid.FacetGrid at 0x2d6006d7520>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_7_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{102}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} lets go through the dataset, and remove those rows with labels that occur very less times to remove noise}
+
+\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{102}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+label
+DDoS-ICMP\_Flood            36554
+DDoS-UDP\_Flood             27626
+DDoS-TCP\_Flood             23149
+DDoS-PSHACK\_Flood          21210
+DDoS-SYN\_Flood             20739
+DDoS-RSTFINFlood           20669
+DDoS-SynonymousIP\_Flood    18189
+DoS-UDP\_Flood              16957
+DoS-TCP\_Flood              13630
+DoS-SYN\_Flood              10275
+BenignTraffic               5600
+Mirai-greeth\_flood          5016
+Mirai-udpplain              4661
+Mirai-greip\_flood           3758
+DDoS-ICMP\_Fragmentation     2377
+MITM-ArpSpoofing            1614
+DDoS-ACK\_Fragmentation      1505
+DDoS-UDP\_Fragmentation      1484
+DNS\_Spoofing                 925
+Recon-HostDiscovery          697
+Recon-OSScan                 517
+Recon-PortScan               430
+DoS-HTTP\_Flood               414
+VulnerabilityScan            210
+DDoS-HTTP\_Flood              169
+DDoS-SlowLoris               106
+DictionaryBruteForce          63
+SqlInjection                  31
+BrowserHijacking              30
+CommandInjection              28
+Backdoor\_Malware              22
+XSS                           18
+Uploading\_Attack               8
+Recon-PingSweep                6
+Name: count, dtype: int64
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{103}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} lets keep the top 5 labels and remove the rest}
+\PY{n}{top\PYZus{}labels} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}\PY{o}{.}\PY{n}{index}
+\PY{n}{df} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{top\PYZus{}labels}\PY{p}{)}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{104}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df}\PY{o}{.}\PY{n}{shape}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{104}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+(129278, 7)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{105}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} lets try plotting again}
+\PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}\PY{n}{df}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{105}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<seaborn.axisgrid.FacetGrid at 0x2d651613af0>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_11_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{127}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} lets remove flow\PYZus{}duration rows with z scores more than 3}
+\PY{k+kn}{from} \PY{n+nn}{scipy} \PY{k+kn}{import} \PY{n}{stats}
+
+\PY{n}{z} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{abs}\PY{p}{(}\PY{n}{stats}\PY{o}{.}\PY{n}{zscore}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+\PY{n}{non\PYZus{}outlier\PYZus{}df} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{p}{(}\PY{n}{z} \PY{o}{\PYZlt{}} \PY{l+m+mf}{0.0115}\PY{p}{)}\PY{p}{]}
+\PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{o}{.}\PY{n}{shape}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{127}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+(34489, 7)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{128}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} lets plot a distribution}
+\PY{n}{sns}\PY{o}{.}\PY{n}{displot}\PY{p}{(}\PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{kde}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fill}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{128}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<seaborn.axisgrid.FacetGrid at 0x2d62991a350>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_13_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{129}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} lets try plotting again}
+\PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}
+    \PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{p}{,}
+    \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{x}\PY{o}{=}\PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{,}
+    \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{129}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<seaborn.axisgrid.FacetGrid at 0x2d644e29030>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_14_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{131}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} lets now try with only 1000 rows}
+\PY{n}{scaled\PYZus{}df} \PY{o}{=} \PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{]}
+
+\PY{c+c1}{\PYZsh{} lets plot}
+\PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}
+    \PY{n}{scaled\PYZus{}df}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{n}{scaled\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}
+\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{131}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<seaborn.axisgrid.FacetGrid at 0x2d64f866d40>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_15_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{135}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} we still cant see a nice cluster here, lets try and remove ddos udp flood}
+\PY{n}{scaled\PYZus{}df} \PY{o}{=} \PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{p}{[}\PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{!=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{DDoS\PYZhy{}UDP\PYZus{}Flood}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{138}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} lets plot again}
+\PY{n}{scaled\PYZus{}df} \PY{o}{=} \PY{n}{scaled\PYZus{}df}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{]}
+\PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}
+    \PY{n}{scaled\PYZus{}df}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{n}{scaled\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}
+\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{138}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<seaborn.axisgrid.FacetGrid at 0x2d651567850>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_17_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{139}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} lets try other features}
+\PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{139}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+    flow\_duration  Header\_Length  Protocol Type  Duration       Rate  \textbackslash{}
+2        0.000000           0.00           1.00     64.00  33.396799
+9        0.000000          54.20           6.00     64.00  11.243547
+10       0.223192          61.54           6.11     64.64   9.087882
+11       0.000000          54.00           6.00     64.00  17.333181
+12       0.000000           0.00           1.00     75.46   0.000000
+
+        Srate              label
+2   33.396799    DDoS-ICMP\_Flood
+9   11.243547     DDoS-SYN\_Flood
+10   9.087882  DDoS-PSHACK\_Flood
+11  17.333181     DDoS-TCP\_Flood
+12   0.000000    DDoS-ICMP\_Flood
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{141}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} lets plot rate just like flow\PYZus{}duration}
+\PY{n}{df}\PY{o}{.}\PY{n}{shape}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{141}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+(129278, 7)
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{143}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}\PY{n}{df}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{143}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<seaborn.axisgrid.FacetGrid at 0x2d61a8e65c0>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_20_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{154}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} its not great but there are some clusters, we can try here.}
+\PY{c+c1}{\PYZsh{} lets try implementing k means}
+
+\PY{c+c1}{\PYZsh{} lets try with 5 clusters}
+\PY{n}{kmeans} \PY{o}{=} \PY{n}{KMeans}\PY{p}{(}\PY{n}{n\PYZus{}clusters}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{)}
+\PY{n}{kmeans}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+
+\PY{c+c1}{\PYZsh{} lets get the labels}
+\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cluster}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{kmeans}\PY{o}{.}\PY{n}{labels\PYZus{}}
+
+\PY{c+c1}{\PYZsh{} lets plot}
+\PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}
+    \PY{n}{df}\PY{p}{,}
+    \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,}
+    \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cluster}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{palette}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{viridis}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{legend}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{full}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{style}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+\PY{p}{)}
+
+\PY{c+c1}{\PYZsh{} titles}
+\PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{K Means Clustering for Rate of Attacks into 3 Clusters}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Index}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{154}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+Text(49.60998958333333, 0.5, 'Rate')
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_21_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{153}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} lets try with 3 clusters}
+\PY{n}{kmeans} \PY{o}{=} \PY{n}{KMeans}\PY{p}{(}\PY{n}{n\PYZus{}clusters}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{)}
+\PY{n}{kmeans}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+
+\PY{c+c1}{\PYZsh{} lets get the labels}
+\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cluster}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{kmeans}\PY{o}{.}\PY{n}{labels\PYZus{}}
+
+\PY{c+c1}{\PYZsh{} lets plot}
+\PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}
+    \PY{n}{df}\PY{p}{,}
+    \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,}
+    \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cluster}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{palette}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{viridis}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{legend}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{full}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{style}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+\PY{p}{)}
+
+\PY{c+c1}{\PYZsh{} titles}
+\PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{K Means Clustering for Rate of Attacks into 3 Clusters}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Index}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{153}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+Text(49.60998958333333, 0.5, 'Rate')
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_22_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{156}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{scaled\PYZus{}df} \PY{o}{=} \PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{]}
+
+\PY{c+c1}{\PYZsh{} we could also try it on flow\PYZus{}duration}
+\PY{n}{kmeans} \PY{o}{=} \PY{n}{KMeans}\PY{p}{(}\PY{n}{n\PYZus{}clusters}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{)}
+\PY{n}{kmeans}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{scaled\PYZus{}df}\PY{p}{[}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+
+\PY{c+c1}{\PYZsh{} lets get the labels}
+\PY{n}{scaled\PYZus{}df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cluster}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{kmeans}\PY{o}{.}\PY{n}{labels\PYZus{}}
+
+\PY{c+c1}{\PYZsh{} lets plot}
+\PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}
+    \PY{n}{scaled\PYZus{}df}\PY{p}{,}
+    \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{x}\PY{o}{=}\PY{n}{scaled\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{,}
+    \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cluster}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{palette}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{viridis}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{legend}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{full}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+    \PY{n}{style}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+C:\textbackslash{}Users\textbackslash{}Krishnaraj\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Temp\textbackslash{}ipykernel\_43912\textbackslash{}3087714870.py:8:
+SettingWithCopyWarning:
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row\_indexer,col\_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-
+docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+  scaled\_df["cluster"] = kmeans.labels\_
+    \end{Verbatim}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{156}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<seaborn.axisgrid.FacetGrid at 0x2d6821e67d0>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_23_2.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{157}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} so that concludes our k means clustering analysis on features of an IOT dataset.}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{159}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} credits to https://www.unb.ca/cic/datasets/iotdataset\PYZhy{}2022.html for the dataset}
+\PY{c+c1}{\PYZsh{} Citation: Sajjad Dadkhah, Hassan Mahdikhani, Priscilla Kyei Danso, Alireza Zohourian, Kevin Anh Truong, Ali A. Ghorbani, “Towards the development of a realistic multidimensional IoT profiling dataset”, Submitted to: The 19th Annual International Conference on Privacy, Security \PYZam{} Trust (PST2022) August 22\PYZhy{}24, 2022, Fredericton, Canada.}
+
+\PY{c+c1}{\PYZsh{} analysis by: Krishnaraj T}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{ }{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+
+\end{Verbatim}
+\end{tcolorbox}
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{95}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} implementing k means clustering on iot based attacks dataset}
+        \PY{c+c1}{\PYZsh{} importing required libraries}
+        \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+        \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{cluster} \PY{k+kn}{import} \PY{n}{KMeans}
+        \PY{k+kn}{from} \PY{n+nn}{sklearn}\PY{n+nn}{.}\PY{n+nn}{preprocessing} \PY{k+kn}{import} \PY{n}{StandardScaler}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{96}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} importing the dataset}
+        \PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{part\PYZhy{}00000\PYZhy{}363d1ba3\PYZhy{}8ab5\PYZhy{}4f96\PYZhy{}bc25\PYZhy{}4d5862db7cb9\PYZhy{}c000.csv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{96}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+           flow\_duration  Header\_Length  Protocol Type  Duration         Rate  \textbackslash{}
+        0       0.000000          54.00           6.00     64.00     0.329807
+        1       0.000000          57.04           6.33     64.00     4.290556
+        2       0.000000           0.00           1.00     64.00    33.396799
+        3       0.328175       76175.00          17.00     64.00  4642.133010
+        4       0.117320         101.73           6.11     65.91     6.202211
+        
+                 Srate  Drate  fin\_flag\_number  syn\_flag\_number  rst\_flag\_number  {\ldots}  \textbackslash{}
+        0     0.329807    0.0              1.0              0.0              1.0  {\ldots}
+        1     4.290556    0.0              0.0              0.0              0.0  {\ldots}
+        2    33.396799    0.0              0.0              0.0              0.0  {\ldots}
+        3  4642.133010    0.0              0.0              0.0              0.0  {\ldots}
+        4     6.202211    0.0              0.0              1.0              0.0  {\ldots}
+        
+                 Std  Tot size           IAT  Number   Magnitue     Radius  \textbackslash{}
+        0   0.000000     54.00  8.334383e+07     9.5  10.392305   0.000000
+        1   2.822973     57.04  8.292607e+07     9.5  10.464666   4.010353
+        2   0.000000     42.00  8.312799e+07     9.5   9.165151   0.000000
+        3   0.000000     50.00  8.301570e+07     9.5  10.000000   0.000000
+        4  23.113111     57.88  8.297300e+07     9.5  11.346876  32.716243
+        
+            Covariance  Variance  Weight             label
+        0     0.000000      0.00  141.55  DDoS-RSTFINFlood
+        1   160.987842      0.05  141.55     DoS-TCP\_Flood
+        2     0.000000      0.00  141.55   DDoS-ICMP\_Flood
+        3     0.000000      0.00  141.55     DoS-UDP\_Flood
+        4  3016.808286      0.19  141.55     DoS-SYN\_Flood
+        
+        [5 rows x 47 columns]
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{97}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{n}{df}\PY{o}{.}\PY{n}{info}\PY{p}{(}\PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+            \begin{Verbatim}[commandchars=\\\{\}]
+        <class 'pandas.core.frame.DataFrame'>
+        RangeIndex: 238687 entries, 0 to 238686
+        Data columns (total 47 columns):
+         \#   Column           Non-Null Count   Dtype
+        ---  ------           --------------   -----
+         0   flow\_duration    238687 non-null  float64
+         1   Header\_Length    238687 non-null  float64
+         2   Protocol Type    238687 non-null  float64
+         3   Duration         238687 non-null  float64
+         4   Rate             238687 non-null  float64
+         5   Srate            238687 non-null  float64
+         6   Drate            238687 non-null  float64
+         7   fin\_flag\_number  238687 non-null  float64
+         8   syn\_flag\_number  238687 non-null  float64
+         9   rst\_flag\_number  238687 non-null  float64
+         10  psh\_flag\_number  238687 non-null  float64
+         11  ack\_flag\_number  238687 non-null  float64
+         12  ece\_flag\_number  238687 non-null  float64
+         13  cwr\_flag\_number  238687 non-null  float64
+         14  ack\_count        238687 non-null  float64
+         15  syn\_count        238687 non-null  float64
+         16  fin\_count        238687 non-null  float64
+         17  urg\_count        238687 non-null  float64
+         18  rst\_count        238687 non-null  float64
+         19  HTTP             238687 non-null  float64
+         20  HTTPS            238687 non-null  float64
+         21  DNS              238687 non-null  float64
+         22  Telnet           238687 non-null  float64
+         23  SMTP             238687 non-null  float64
+         24  SSH              238687 non-null  float64
+         25  IRC              238687 non-null  float64
+         26  TCP              238687 non-null  float64
+         27  UDP              238687 non-null  float64
+         28  DHCP             238687 non-null  float64
+         29  ARP              238687 non-null  float64
+         30  ICMP             238687 non-null  float64
+         31  IPv              238687 non-null  float64
+         32  LLC              238687 non-null  float64
+         33  Tot sum          238687 non-null  float64
+         34  Min              238687 non-null  float64
+         35  Max              238687 non-null  float64
+         36  AVG              238687 non-null  float64
+         37  Std              238687 non-null  float64
+         38  Tot size         238687 non-null  float64
+         39  IAT              238687 non-null  float64
+         40  Number           238687 non-null  float64
+         41  Magnitue         238687 non-null  float64
+         42  Radius           238687 non-null  float64
+         43  Covariance       238687 non-null  float64
+         44  Variance         238687 non-null  float64
+         45  Weight           238687 non-null  float64
+         46  label            238687 non-null  object
+        dtypes: float64(46), object(1)
+        memory usage: 85.6+ MB
+            \end{Verbatim}
+        
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{98}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} lets remove columns that we dont need.}
+        \PY{n}{df}\PY{o}{.}\PY{n}{columns}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{98}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        Index(['flow\_duration', 'Header\_Length', 'Protocol Type', 'Duration', 'Rate',
+               'Srate', 'Drate', 'fin\_flag\_number', 'syn\_flag\_number',
+               'rst\_flag\_number', 'psh\_flag\_number', 'ack\_flag\_number',
+               'ece\_flag\_number', 'cwr\_flag\_number', 'ack\_count', 'syn\_count',
+               'fin\_count', 'urg\_count', 'rst\_count', 'HTTP', 'HTTPS', 'DNS', 'Telnet',
+               'SMTP', 'SSH', 'IRC', 'TCP', 'UDP', 'DHCP', 'ARP', 'ICMP', 'IPv', 'LLC',
+               'Tot sum', 'Min', 'Max', 'AVG', 'Std', 'Tot size', 'IAT', 'Number',
+               'Magnitue', 'Radius', 'Covariance', 'Variance', 'Weight', 'label'],
+              dtype='object')
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{ }{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{99}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{n}{df}\PY{o}{.}\PY{n}{drop}\PY{p}{(}
+            \PY{n}{columns}\PY{o}{=}\PY{p}{[}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Drate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{fin\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{syn\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{rst\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{psh\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ack\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ece\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cwr\PYZus{}flag\PYZus{}number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ack\PYZus{}count}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{syn\PYZus{}count}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{fin\PYZus{}count}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{urg\PYZus{}count}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{rst\PYZus{}count}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{HTTP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{HTTPS}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{DNS}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Telnet}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{SMTP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{SSH}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{IRC}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{TCP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{UDP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{DHCP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ARP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ICMP}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{IPv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{LLC}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Tot sum}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Min}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Max}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{AVG}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Std}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Tot size}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{IAT}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Number}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Magnitue}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Radius}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Covariance}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Variance}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+                \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Weight}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{p}{]}\PY{p}{,}
+            \PY{n}{inplace}\PY{o}{=}\PY{k+kc}{True}\PY{p}{,}
+        \PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{100}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} let us now visualize scatter plots of the data}
+        \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sns}
+        
+        \PY{c+c1}{\PYZsh{} before that lets scale the data down, just take the first 1000 rows}
+        \PY{n}{scaled\PYZus{}df} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{1000}\PY{p}{]}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{101}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}\PY{n}{df}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{101}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        <seaborn.axisgrid.FacetGrid at 0x2d6006d7520>
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{center}
+            \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_7_1.png}
+            \end{center}
+            { \hspace*{\fill} \\}
+            
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{102}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} lets go through the dataset, and remove those rows with labels that occur very less times to remove noise}
+        
+        \PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{102}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        label
+        DDoS-ICMP\_Flood            36554
+        DDoS-UDP\_Flood             27626
+        DDoS-TCP\_Flood             23149
+        DDoS-PSHACK\_Flood          21210
+        DDoS-SYN\_Flood             20739
+        DDoS-RSTFINFlood           20669
+        DDoS-SynonymousIP\_Flood    18189
+        DoS-UDP\_Flood              16957
+        DoS-TCP\_Flood              13630
+        DoS-SYN\_Flood              10275
+        BenignTraffic               5600
+        Mirai-greeth\_flood          5016
+        Mirai-udpplain              4661
+        Mirai-greip\_flood           3758
+        DDoS-ICMP\_Fragmentation     2377
+        MITM-ArpSpoofing            1614
+        DDoS-ACK\_Fragmentation      1505
+        DDoS-UDP\_Fragmentation      1484
+        DNS\_Spoofing                 925
+        Recon-HostDiscovery          697
+        Recon-OSScan                 517
+        Recon-PortScan               430
+        DoS-HTTP\_Flood               414
+        VulnerabilityScan            210
+        DDoS-HTTP\_Flood              169
+        DDoS-SlowLoris               106
+        DictionaryBruteForce          63
+        SqlInjection                  31
+        BrowserHijacking              30
+        CommandInjection              28
+        Backdoor\_Malware              22
+        XSS                           18
+        Uploading\_Attack               8
+        Recon-PingSweep                6
+        Name: count, dtype: int64
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{103}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} lets keep the top 5 labels and remove the rest}
+        \PY{n}{top\PYZus{}labels} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}\PY{o}{.}\PY{n}{index}
+        \PY{n}{df} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{top\PYZus{}labels}\PY{p}{)}\PY{p}{]}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{104}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{n}{df}\PY{o}{.}\PY{n}{shape}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{104}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        (129278, 7)
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{105}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} lets try plotting again}
+        \PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}\PY{n}{df}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{105}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        <seaborn.axisgrid.FacetGrid at 0x2d651613af0>
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{center}
+            \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_11_1.png}
+            \end{center}
+            { \hspace*{\fill} \\}
+            
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{127}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} lets remove flow\PYZus{}duration rows with z scores more than 3}
+        \PY{k+kn}{from} \PY{n+nn}{scipy} \PY{k+kn}{import} \PY{n}{stats}
+        
+        \PY{n}{z} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{abs}\PY{p}{(}\PY{n}{stats}\PY{o}{.}\PY{n}{zscore}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+        \PY{n}{non\PYZus{}outlier\PYZus{}df} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{p}{(}\PY{n}{z} \PY{o}{\PYZlt{}} \PY{l+m+mf}{0.0115}\PY{p}{)}\PY{p}{]}
+        \PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{o}{.}\PY{n}{shape}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{127}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        (34489, 7)
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{128}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} lets plot a distribution}
+        \PY{n}{sns}\PY{o}{.}\PY{n}{displot}\PY{p}{(}\PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{kde}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{fill}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{128}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        <seaborn.axisgrid.FacetGrid at 0x2d62991a350>
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{center}
+            \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_13_1.png}
+            \end{center}
+            { \hspace*{\fill} \\}
+            
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{129}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} lets try plotting again}
+        \PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}
+            \PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{p}{,}
+            \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{x}\PY{o}{=}\PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{,}
+            \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{129}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        <seaborn.axisgrid.FacetGrid at 0x2d644e29030>
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{center}
+            \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_14_1.png}
+            \end{center}
+            { \hspace*{\fill} \\}
+            
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{131}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} lets now try with only 1000 rows}
+        \PY{n}{scaled\PYZus{}df} \PY{o}{=} \PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{]}
+        
+        \PY{c+c1}{\PYZsh{} lets plot}
+        \PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}
+            \PY{n}{scaled\PYZus{}df}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{n}{scaled\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}
+        \PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{131}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        <seaborn.axisgrid.FacetGrid at 0x2d64f866d40>
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{center}
+            \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_15_1.png}
+            \end{center}
+            { \hspace*{\fill} \\}
+            
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{135}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} we still cant see a nice cluster here, lets try and remove ddos udp flood}
+        \PY{n}{scaled\PYZus{}df} \PY{o}{=} \PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{p}{[}\PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{!=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{DDoS\PYZhy{}UDP\PYZus{}Flood}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{138}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} lets plot again}
+        \PY{n}{scaled\PYZus{}df} \PY{o}{=} \PY{n}{scaled\PYZus{}df}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{]}
+        \PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}
+            \PY{n}{scaled\PYZus{}df}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{n}{scaled\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}
+        \PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{138}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        <seaborn.axisgrid.FacetGrid at 0x2d651567850>
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{center}
+            \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_17_1.png}
+            \end{center}
+            { \hspace*{\fill} \\}
+            
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{139}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} lets try other features}
+        \PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{139}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+            flow\_duration  Header\_Length  Protocol Type  Duration       Rate  \textbackslash{}
+        2        0.000000           0.00           1.00     64.00  33.396799
+        9        0.000000          54.20           6.00     64.00  11.243547
+        10       0.223192          61.54           6.11     64.64   9.087882
+        11       0.000000          54.00           6.00     64.00  17.333181
+        12       0.000000           0.00           1.00     75.46   0.000000
+        
+                Srate              label
+        2   33.396799    DDoS-ICMP\_Flood
+        9   11.243547     DDoS-SYN\_Flood
+        10   9.087882  DDoS-PSHACK\_Flood
+        11  17.333181     DDoS-TCP\_Flood
+        12   0.000000    DDoS-ICMP\_Flood
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{141}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} lets plot rate just like flow\PYZus{}duration}
+        \PY{n}{df}\PY{o}{.}\PY{n}{shape}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{141}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        (129278, 7)
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{143}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}\PY{n}{df}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{143}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        <seaborn.axisgrid.FacetGrid at 0x2d61a8e65c0>
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{center}
+            \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_20_1.png}
+            \end{center}
+            { \hspace*{\fill} \\}
+            
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{154}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} its not great but there are some clusters, we can try here.}
+        \PY{c+c1}{\PYZsh{} lets try implementing k means}
+        
+        \PY{c+c1}{\PYZsh{} lets try with 5 clusters}
+        \PY{n}{kmeans} \PY{o}{=} \PY{n}{KMeans}\PY{p}{(}\PY{n}{n\PYZus{}clusters}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{)}
+        \PY{n}{kmeans}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} lets get the labels}
+        \PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cluster}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{kmeans}\PY{o}{.}\PY{n}{labels\PYZus{}}
+        
+        \PY{c+c1}{\PYZsh{} lets plot}
+        \PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}
+            \PY{n}{df}\PY{p}{,}
+            \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,}
+            \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cluster}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{palette}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{viridis}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{legend}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{full}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{style}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} titles}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{K Means Clustering for Rate of Attacks into 3 Clusters}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Index}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{154}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        Text(49.60998958333333, 0.5, 'Rate')
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{center}
+            \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_21_1.png}
+            \end{center}
+            { \hspace*{\fill} \\}
+            
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{153}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} lets try with 3 clusters}
+        \PY{n}{kmeans} \PY{o}{=} \PY{n}{KMeans}\PY{p}{(}\PY{n}{n\PYZus{}clusters}\PY{o}{=}\PY{l+m+mi}{3}\PY{p}{)}
+        \PY{n}{kmeans}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} lets get the labels}
+        \PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cluster}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{kmeans}\PY{o}{.}\PY{n}{labels\PYZus{}}
+        
+        \PY{c+c1}{\PYZsh{} lets plot}
+        \PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}
+            \PY{n}{df}\PY{p}{,}
+            \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{x}\PY{o}{=}\PY{n}{df}\PY{o}{.}\PY{n}{index}\PY{p}{,}
+            \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cluster}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{palette}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{viridis}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{legend}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{full}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{style}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} titles}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{K Means Clustering for Rate of Attacks into 3 Clusters}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Index}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Rate}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{153}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        Text(49.60998958333333, 0.5, 'Rate')
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{center}
+            \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_22_1.png}
+            \end{center}
+            { \hspace*{\fill} \\}
+            
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{156}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{n}{scaled\PYZus{}df} \PY{o}{=} \PY{n}{non\PYZus{}outlier\PYZus{}df}\PY{p}{[}\PY{p}{:}\PY{l+m+mi}{100}\PY{p}{]}
+        
+        \PY{c+c1}{\PYZsh{} we could also try it on flow\PYZus{}duration}
+        \PY{n}{kmeans} \PY{o}{=} \PY{n}{KMeans}\PY{p}{(}\PY{n}{n\PYZus{}clusters}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{)}
+        \PY{n}{kmeans}\PY{o}{.}\PY{n}{fit}\PY{p}{(}\PY{n}{scaled\PYZus{}df}\PY{p}{[}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+        
+        \PY{c+c1}{\PYZsh{} lets get the labels}
+        \PY{n}{scaled\PYZus{}df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cluster}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{=} \PY{n}{kmeans}\PY{o}{.}\PY{n}{labels\PYZus{}}
+        
+        \PY{c+c1}{\PYZsh{} lets plot}
+        \PY{n}{sns}\PY{o}{.}\PY{n}{relplot}\PY{p}{(}
+            \PY{n}{scaled\PYZus{}df}\PY{p}{,}
+            \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{flow\PYZus{}duration}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{x}\PY{o}{=}\PY{n}{scaled\PYZus{}df}\PY{o}{.}\PY{n}{index}\PY{p}{,}
+            \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{scatter}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{cluster}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{palette}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{viridis}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{legend}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{full}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+            \PY{n}{style}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{label}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{p}{)}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+            \begin{Verbatim}[commandchars=\\\{\}]
+        C:\textbackslash{}Users\textbackslash{}Krishnaraj\textbackslash{}AppData\textbackslash{}Local\textbackslash{}Temp\textbackslash{}ipykernel\_43912\textbackslash{}3087714870.py:8:
+        SettingWithCopyWarning:
+        A value is trying to be set on a copy of a slice from a DataFrame.
+        Try using .loc[row\_indexer,col\_indexer] = value instead
+        
+        See the caveats in the documentation: https://pandas.pydata.org/pandas-
+        docs/stable/user\_guide/indexing.html\#returning-a-view-versus-a-copy
+          scaled\_df["cluster"] = kmeans.labels\_
+            \end{Verbatim}
+        
+                    \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+        \prompt{Out}{outcolor}{156}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        <seaborn.axisgrid.FacetGrid at 0x2d6821e67d0>
+        \end{Verbatim}
+        \end{tcolorbox}
+                
+            \begin{center}
+            \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_23_2.png}
+            \end{center}
+            { \hspace*{\fill} \\}
+            
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{157}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} so that concludes our k means clustering analysis on features of an IOT dataset.}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{159}{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        \PY{c+c1}{\PYZsh{} credits to https://www.unb.ca/cic/datasets/iotdataset\PYZhy{}2022.html for the dataset}
+        \PY{c+c1}{\PYZsh{} Citation: Sajjad Dadkhah, Hassan Mahdikhani, Priscilla Kyei Danso, Alireza Zohourian, Kevin Anh Truong, Ali A. Ghorbani, “Towards the development of a realistic multidimensional IoT profiling dataset”, Submitted to: The 19th Annual International Conference on Privacy, Security \PYZam{} Trust (PST2022) August 22\PYZhy{}24, 2022, Fredericton, Canada.}
+        
+        \PY{c+c1}{\PYZsh{} analysis by: Krishnaraj T}
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+        \prompt{In}{incolor}{ }{\boxspacing}
+        \begin{Verbatim}[commandchars=\\\{\}]
+        
+        \end{Verbatim}
+        \end{tcolorbox}
+        
+        
+            % Add a bibliography block to the postdoc
+            
+            
 \clearpage
 \section{FAQs}
 
