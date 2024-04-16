@@ -600,6 +600,713 @@ seaborn==0.13.2
 \end{lstlisting}
 \section{Code}
 
+    
+
+    
+\begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{26}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} import libraries}
+    \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+    \PY{k+kn}{import} \PY{n+nn}{pandas} \PY{k}{as} \PY{n+nn}{pd}
+    \PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+    \PY{k+kn}{import} \PY{n+nn}{seaborn} \PY{k}{as} \PY{n+nn}{sns}
+    
+    \PY{n}{sns}\PY{o}{.}\PY{n}{set\PYZus{}theme}\PY{p}{(}\PY{n}{style}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{darkgrid}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{7}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} load dataset}
+    \PY{n}{df} \PY{o}{=} \PY{n}{pd}\PY{o}{.}\PY{n}{read\PYZus{}csv}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{data.csv}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{7}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+       Unnamed: 0      Zone  State   City                  Name          Type  \textbackslash{}
+    0           0  Northern  Delhi  Delhi            India Gate  War Memorial
+    1           1  Northern  Delhi  Delhi        Humayun's Tomb          Tomb
+    2           2  Northern  Delhi  Delhi     Akshardham Temple        Temple
+    3           3  Northern  Delhi  Delhi  Waste to Wonder Park    Theme Park
+    4           4  Northern  Delhi  Delhi         Jantar Mantar   Observatory
+    
+      Establishment Year  time needed to visit in hrs  Google review rating  \textbackslash{}
+    0               1921                          0.5                   4.6
+    1               1572                          2.0                   4.5
+    2               2005                          5.0                   4.6
+    3               2019                          2.0                   4.1
+    4               1724                          2.0                   4.2
+    
+       Entrance Fee in INR Airport with 50km Radius Weekly Off   Significance  \textbackslash{}
+    0                    0                      Yes        NaN     Historical
+    1                   30                      Yes        NaN     Historical
+    2                   60                      Yes        NaN      Religious
+    3                   50                      Yes     Monday  Environmental
+    4                   15                      Yes        NaN     Scientific
+    
+      DSLR Allowed  Number of google review in lakhs Best Time to visit
+    0          Yes                              2.60            Evening
+    1          Yes                              0.40          Afternoon
+    2           No                              0.40          Afternoon
+    3          Yes                              0.27            Evening
+    4          Yes                              0.31            Morning
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \subsection{Pre Processing}\label{pre-processing}
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{8}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets remove the unnamed column}
+    \PY{n}{df} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Unnamed: 0}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+    \PY{n}{df}\PY{o}{.}\PY{n}{columns}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{8}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    Index(['Zone', 'State', 'City', 'Name', 'Type', 'Establishment Year',
+           'time needed to visit in hrs', 'Google review rating',
+           'Entrance Fee in INR', 'Airport with 50km Radius', 'Weekly Off',
+           'Significance', 'DSLR Allowed', 'Number of google review in lakhs',
+           'Best Time to visit'],
+          dtype='object')
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{19}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets remove null values}
+    \PY{n+nb}{print}\PY{p}{(}\PY{n}{df}\PY{o}{.}\PY{n}{isnull}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{sum}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+        \begin{Verbatim}[commandchars=\\\{\}]
+    Zone                                  0
+    State                                 0
+    City                                  0
+    Name                                  0
+    Type                                  0
+    Establishment Year                    0
+    time needed to visit in hrs           0
+    Google review rating                  0
+    Entrance Fee in INR                   0
+    Airport with 50km Radius              0
+    Weekly Off                          293
+    Significance                          0
+    DSLR Allowed                          0
+    Number of google review in lakhs      0
+    Best Time to visit                    0
+    dtype: int64
+        \end{Verbatim}
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{30}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets find outliers for ratings column, using z score}
+    \PY{k+kn}{from} \PY{n+nn}{scipy} \PY{k+kn}{import} \PY{n}{stats}
+    
+    \PY{n}{z} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{abs}\PY{p}{(}\PY{n}{stats}\PY{o}{.}\PY{n}{zscore}\PY{p}{(}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google review rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+    
+    \PY{c+c1}{\PYZsh{} lets remove outliers}
+    \PY{n}{df} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{p}{(}\PY{n}{z} \PY{o}{\PYZlt{}} \PY{l+m+mi}{3}\PY{p}{)}\PY{p}{]}
+    \PY{n}{df}\PY{o}{.}\PY{n}{shape}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{30}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    (324, 14)
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{20}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} given weekly off is mostly empty, lets remove it}
+    \PY{n}{df} \PY{o}{=} \PY{n}{df}\PY{o}{.}\PY{n}{drop}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Weekly Off}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+    \PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{20}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+           Zone  State   City                  Name          Type  \textbackslash{}
+    0  Northern  Delhi  Delhi            India Gate  War Memorial
+    1  Northern  Delhi  Delhi        Humayun's Tomb          Tomb
+    2  Northern  Delhi  Delhi     Akshardham Temple        Temple
+    3  Northern  Delhi  Delhi  Waste to Wonder Park    Theme Park
+    4  Northern  Delhi  Delhi         Jantar Mantar   Observatory
+    
+      Establishment Year  time needed to visit in hrs  Google review rating  \textbackslash{}
+    0               1921                          0.5                   4.6
+    1               1572                          2.0                   4.5
+    2               2005                          5.0                   4.6
+    3               2019                          2.0                   4.1
+    4               1724                          2.0                   4.2
+    
+       Entrance Fee in INR Airport with 50km Radius   Significance DSLR Allowed  \textbackslash{}
+    0                    0                      Yes     Historical          Yes
+    1                   30                      Yes     Historical          Yes
+    2                   60                      Yes      Religious           No
+    3                   50                      Yes  Environmental          Yes
+    4                   15                      Yes     Scientific          Yes
+    
+       Number of google review in lakhs Best Time to visit
+    0                              2.60            Evening
+    1                              0.40          Afternoon
+    2                              0.40          Afternoon
+    3                              0.27            Evening
+    4                              0.31            Morning
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \subsection{EDA}\label{eda}
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{31}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets see the data types of the columns}
+    \PY{n}{df}\PY{o}{.}\PY{n}{dtypes}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{31}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    Zone                                 object
+    State                                object
+    City                                 object
+    Name                                 object
+    Type                                 object
+    Establishment Year                   object
+    time needed to visit in hrs         float64
+    Google review rating                float64
+    Entrance Fee in INR                   int64
+    Airport with 50km Radius             object
+    Significance                         object
+    DSLR Allowed                         object
+    Number of google review in lakhs    float64
+    Best Time to visit                   object
+    dtype: object
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{32}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{n}{df}\PY{o}{.}\PY{n}{info}\PY{p}{(}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+        \begin{Verbatim}[commandchars=\\\{\}]
+    <class 'pandas.core.frame.DataFrame'>
+    Index: 324 entries, 0 to 324
+    Data columns (total 14 columns):
+     \#   Column                            Non-Null Count  Dtype
+    ---  ------                            --------------  -----
+     0   Zone                              324 non-null    object
+     1   State                             324 non-null    object
+     2   City                              324 non-null    object
+     3   Name                              324 non-null    object
+     4   Type                              324 non-null    object
+     5   Establishment Year                324 non-null    object
+     6   time needed to visit in hrs       324 non-null    float64
+     7   Google review rating              324 non-null    float64
+     8   Entrance Fee in INR               324 non-null    int64
+     9   Airport with 50km Radius          324 non-null    object
+     10  Significance                      324 non-null    object
+     11  DSLR Allowed                      324 non-null    object
+     12  Number of google review in lakhs  324 non-null    float64
+     13  Best Time to visit                324 non-null    object
+    dtypes: float64(3), int64(1), object(10)
+    memory usage: 38.0+ KB
+        \end{Verbatim}
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{33}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{n}{df}\PY{o}{.}\PY{n}{describe}\PY{p}{(}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{33}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+           time needed to visit in hrs  Google review rating  Entrance Fee in INR  \textbackslash{}
+    count                   324.000000            324.000000           324.000000
+    mean                      1.797840              4.495679           112.620370
+    std                       0.956497              0.214591           528.554154
+    min                       0.500000              3.700000             0.000000
+    25\%                       1.000000              4.400000             0.000000
+    50\%                       1.500000              4.500000             0.000000
+    75\%                       2.000000              4.600000            36.250000
+    max                       7.000000              4.900000          7500.000000
+    
+           Number of google review in lakhs
+    count                        324.000000
+    mean                           0.406767
+    std                            0.646965
+    min                            0.010000
+    25\%                            0.059000
+    50\%                            0.165000
+    75\%                            0.492500
+    max                            7.400000
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{34}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets see the highest rated places to visit, sorting by Google Review Rating}
+    \PY{n}{df}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google review rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{34}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+             Zone           State           City                             Name  \textbackslash{}
+    92   Northern          Punjab       Amritsar  Golden Temple (Harmandir Sahib)
+    196  Northern          Ladakh            Leh                      Pangong Tso
+    72    Western         Gujarat  Rann of Kutch                       Rann Utsav
+    71    Western         Gujarat        Somnath                   Somnath Temple
+    145   Central  Madhya Pradesh         Orchha                      Orchha Fort
+    
+                   Type Establishment Year  time needed to visit in hrs  \textbackslash{}
+    92   Religious Site               1604                          1.5
+    196            Lake            Unknown                          2.0
+    72         Cultural            Unknown                          3.0
+    71           Temple               1951                          2.0
+    145            Fort               1500                          1.5
+    
+         Google review rating  Entrance Fee in INR Airport with 50km Radius  \textbackslash{}
+    92                    4.9                    0                      Yes
+    196                   4.9                   20                      Yes
+    72                    4.9                 7500                      Yes
+    71                    4.8                    0                       No
+    145                   4.8                   10                       No
+    
+        Significance DSLR Allowed  Number of google review in lakhs  \textbackslash{}
+    92     Spiritual          Yes                              1.90
+    196       Nature          Yes                              0.15
+    72      Cultural          Yes                              0.10
+    71     Religious           No                              0.39
+    145   Historical          Yes                              0.10
+    
+        Best Time to visit
+    92                 All
+    196            Morning
+    72             Evening
+    71             Morning
+    145          Afternoon
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{39}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets see which zone of India is most rated, being categorical, lets make a pie chart to see which has the most number of ratings}
+    \PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{plot}\PY{o}{.}\PY{n}{pie}\PY{p}{(}\PY{n}{autopct}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZpc{}1.1f}\PY{l+s+si}{\PYZpc{}\PYZpc{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{39}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    <Axes: ylabel='count'>
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{center}
+        \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_12_1.png}
+        \end{center}
+        { \hspace*{\fill} \\}
+        
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{46}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets plot zone vs rating}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
+    \PY{n}{sns}\PY{o}{.}\PY{n}{boxplot}\PY{p}{(}\PY{n}{x}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google review rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{data}\PY{o}{=}\PY{n}{df}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{gca}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+    \PY{c+c1}{\PYZsh{} title and labels}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone vs Google Review Rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google Review Rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{46}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    Text(0, 0.5, 'Google Review Rating')
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{center}
+        \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_13_1.png}
+        \end{center}
+        { \hspace*{\fill} \\}
+        
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{47}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{n}{sns}\PY{o}{.}\PY{n}{catplot}\PY{p}{(}\PY{n}{data}\PY{o}{=}\PY{n}{df}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google review rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{bar}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{c+c1}{\PYZsh{} title and labels}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone vs Google Review Rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google Review Rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{47}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    Text(25.319444444444443, 0.5, 'Google Review Rating')
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{center}
+        \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_14_1.png}
+        \end{center}
+        { \hspace*{\fill} \\}
+        
+        so we see that most of the zones are almost equally rated and there isnt
+    much difference there.
+    
+    we can then perform a hypothesis test to see if the ratings are
+    significantly different or not
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{50}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} null hypothesis: the ratings are not significantly different}
+    \PY{c+c1}{\PYZsh{} alternate hypothesis: the ratings are significantly different}
+    
+    \PY{k+kn}{from} \PY{n+nn}{scipy}\PY{n+nn}{.}\PY{n+nn}{stats} \PY{k+kn}{import} \PY{n}{f\PYZus{}oneway}  \PY{c+c1}{\PYZsh{} anova test}
+    
+    \PY{c+c1}{\PYZsh{} lets get the ratings for each zone}
+    \PY{n}{north} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{==} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Northern}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google review rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+    \PY{n}{south} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{==} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Southern}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google review rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+    \PY{n}{east} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{==} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Eastern}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google review rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+    \PY{n}{west} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{==} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Western}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google review rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+    \PY{n}{central} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{==} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Central}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google review rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+    \PY{n}{north\PYZus{}east} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{==} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{North Eastern}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google review rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}
+    
+    \PY{c+c1}{\PYZsh{} lets perform the test}
+    \PY{n}{f\PYZus{}oneway}\PY{p}{(}\PY{n}{north}\PY{p}{,} \PY{n}{south}\PY{p}{,} \PY{n}{east}\PY{p}{,} \PY{n}{west}\PY{p}{,} \PY{n}{central}\PY{p}{,} \PY{n}{north\PYZus{}east}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{50}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    F\_onewayResult(statistic=1.598487683716663, pvalue=0.16009417988080096)
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        since p value is more than 0.05, we fail to reject the null hypothesis,
+    which means the ratings are not significantly different
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{52}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{52}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+           Zone  State   City                  Name          Type  \textbackslash{}
+    0  Northern  Delhi  Delhi            India Gate  War Memorial
+    1  Northern  Delhi  Delhi        Humayun's Tomb          Tomb
+    2  Northern  Delhi  Delhi     Akshardham Temple        Temple
+    3  Northern  Delhi  Delhi  Waste to Wonder Park    Theme Park
+    4  Northern  Delhi  Delhi         Jantar Mantar   Observatory
+    
+      Establishment Year  time needed to visit in hrs  Google review rating  \textbackslash{}
+    0               1921                          0.5                   4.6
+    1               1572                          2.0                   4.5
+    2               2005                          5.0                   4.6
+    3               2019                          2.0                   4.1
+    4               1724                          2.0                   4.2
+    
+       Entrance Fee in INR Airport with 50km Radius   Significance DSLR Allowed  \textbackslash{}
+    0                    0                      Yes     Historical          Yes
+    1                   30                      Yes     Historical          Yes
+    2                   60                      Yes      Religious           No
+    3                   50                      Yes  Environmental          Yes
+    4                   15                      Yes     Scientific          Yes
+    
+       Number of google review in lakhs Best Time to visit
+    0                              2.60            Evening
+    1                              0.40          Afternoon
+    2                              0.40          Afternoon
+    3                              0.27            Evening
+    4                              0.31            Morning
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{66}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets see what places take the most time to visit}
+    \PY{n}{df}\PY{o}{.}\PY{n}{sort\PYZus{}values}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{time needed to visit in hrs}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{ascending}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+    
+    \PY{c+c1}{\PYZsh{} plottin a simple hist plot to see the relationship between time to visit and google review rating}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
+    \PY{n}{sns}\PY{o}{.}\PY{n}{histplot}\PY{p}{(}\PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{time needed to visit in hrs}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{data}\PY{o}{=}\PY{n}{df}\PY{p}{,} \PY{n}{ax}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{gca}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+    \PY{c+c1}{\PYZsh{} title and labels}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Time to Visit vs Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Time Needed in Hours to Visit }\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{66}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    Text(0, 0.5, 'Time Needed in Hours to Visit ')
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{center}
+        \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_19_1.png}
+        \end{center}
+        { \hspace*{\fill} \\}
+        
+        above graphs shows us that north and south often take around 2 hours,
+    south takes the least time, while eastern, celtral and north eastern can
+    be visited mostly in half to 3 hours.
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{77}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets see this better by binning the time needed to visit between 0 and 1, 1 and 2, 2 and 3, 3 and 4, 4 and 5}
+    \PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{time needed to visit in hrs}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{n}{bins}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{)}
+    \PY{c+c1}{\PYZsh{} lets plot}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{figure}\PY{p}{(}\PY{n}{figsize}\PY{o}{=}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
+    \PY{n}{sns}\PY{o}{.}\PY{n}{histplot}\PY{p}{(}
+        \PY{n}{x}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{time needed to visit in hrs}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{n}{data}\PY{o}{=}\PY{n}{df}\PY{p}{,}
+        \PY{n}{bins}\PY{o}{=}\PY{l+m+mi}{5}\PY{p}{,}
+        \PY{n}{ax}\PY{o}{=}\PY{n}{plt}\PY{o}{.}\PY{n}{gca}\PY{p}{(}\PY{p}{)}\PY{p}{,}
+        \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Zone}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}
+        \PY{n}{palette}\PY{o}{=}\PY{n}{sns}\PY{o}{.}\PY{n}{color\PYZus{}palette}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{husl}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{)}\PY{p}{,}
+    \PY{p}{)}
+    \PY{c+c1}{\PYZsh{} title and labels}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Time to Visit in Hours}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Time Needed in Hours to Visit }\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Count}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{77}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    Text(0, 0.5, 'Count')
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{center}
+        \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_21_1.png}
+        \end{center}
+        { \hspace*{\fill} \\}
+        
+        this shows us that most places can be visted in half to 2 hours, while
+    only some may take more. Places in south take the least time
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{78}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{78}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+           Zone  State   City                  Name          Type  \textbackslash{}
+    0  Northern  Delhi  Delhi            India Gate  War Memorial
+    1  Northern  Delhi  Delhi        Humayun's Tomb          Tomb
+    2  Northern  Delhi  Delhi     Akshardham Temple        Temple
+    3  Northern  Delhi  Delhi  Waste to Wonder Park    Theme Park
+    4  Northern  Delhi  Delhi         Jantar Mantar   Observatory
+    
+      Establishment Year  time needed to visit in hrs  Google review rating  \textbackslash{}
+    0               1921                          0.5                   4.6
+    1               1572                          2.0                   4.5
+    2               2005                          5.0                   4.6
+    3               2019                          2.0                   4.1
+    4               1724                          2.0                   4.2
+    
+       Entrance Fee in INR Airport with 50km Radius   Significance DSLR Allowed  \textbackslash{}
+    0                    0                      Yes     Historical          Yes
+    1                   30                      Yes     Historical          Yes
+    2                   60                      Yes      Religious           No
+    3                   50                      Yes  Environmental          Yes
+    4                   15                      Yes     Scientific          Yes
+    
+       Number of google review in lakhs Best Time to visit
+    0                              2.60            Evening
+    1                              0.40          Afternoon
+    2                              0.40          Afternoon
+    3                              0.27            Evening
+    4                              0.31            Morning
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{82}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets see what the best time to visit is with a bar chart}
+    \PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Best Time to visit}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{plot}\PY{o}{.}\PY{n}{bar}\PY{p}{(}\PY{p}{)}
+    \PY{c+c1}{\PYZsh{} df[\PYZdq{}Best Time to visit\PYZdq{}].value\PYZus{}counts().plot.pie(autopct=\PYZdq{}\PYZpc{}1.1f\PYZpc{}\PYZpc{}\PYZdq{})}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{82}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    <Axes: xlabel='Best Time to visit'>
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{center}
+        \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_24_1.png}
+        \end{center}
+        { \hspace*{\fill} \\}
+        
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{84}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets see what the best time to visit places in delhi are}
+    \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{City}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]} \PY{o}{==} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Delhi}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Best Time to visit}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{plot}\PY{o}{.}\PY{n}{pie}\PY{p}{(}
+        \PY{n}{autopct}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZpc{}1.1f}\PY{l+s+si}{\PYZpc{}\PYZpc{}}\PY{l+s+s2}{\PYZdq{}}
+    \PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{84}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    <Axes: ylabel='count'>
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{center}
+        \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_25_1.png}
+        \end{center}
+        { \hspace*{\fill} \\}
+        
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{85}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{n}{df}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{85}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+           Zone  State   City                  Name          Type  \textbackslash{}
+    0  Northern  Delhi  Delhi            India Gate  War Memorial
+    1  Northern  Delhi  Delhi        Humayun's Tomb          Tomb
+    2  Northern  Delhi  Delhi     Akshardham Temple        Temple
+    3  Northern  Delhi  Delhi  Waste to Wonder Park    Theme Park
+    4  Northern  Delhi  Delhi         Jantar Mantar   Observatory
+    
+      Establishment Year  time needed to visit in hrs  Google review rating  \textbackslash{}
+    0               1921                          0.5                   4.6
+    1               1572                          2.0                   4.5
+    2               2005                          5.0                   4.6
+    3               2019                          2.0                   4.1
+    4               1724                          2.0                   4.2
+    
+       Entrance Fee in INR Airport with 50km Radius   Significance DSLR Allowed  \textbackslash{}
+    0                    0                      Yes     Historical          Yes
+    1                   30                      Yes     Historical          Yes
+    2                   60                      Yes      Religious           No
+    3                   50                      Yes  Environmental          Yes
+    4                   15                      Yes     Scientific          Yes
+    
+       Number of google review in lakhs Best Time to visit
+    0                              2.60            Evening
+    1                              0.40          Afternoon
+    2                              0.40          Afternoon
+    3                              0.27            Evening
+    4                              0.31            Morning
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{103}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{n}{top\PYZus{}5\PYZus{}types} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Type}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{head}\PY{p}{(}\PY{p}{)}
+    \PY{c+c1}{\PYZsh{} lets filter df by these}
+    \PY{n}{df\PYZus{}top\PYZus{}5} \PY{o}{=} \PY{n}{df}\PY{p}{[}\PY{n}{df}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Type}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{isin}\PY{p}{(}\PY{n}{top\PYZus{}5\PYZus{}types}\PY{o}{.}\PY{n}{index}\PY{p}{)}\PY{p}{]}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{104}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets see the top 5 kinds of places by making a pie chart}
+    \PY{n}{df\PYZus{}top\PYZus{}5}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Type}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{.}\PY{n}{value\PYZus{}counts}\PY{p}{(}\PY{p}{)}\PY{o}{.}\PY{n}{plot}\PY{o}{.}\PY{n}{pie}\PY{p}{(}\PY{n}{autopct}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+si}{\PYZpc{}1.1f}\PY{l+s+si}{\PYZpc{}\PYZpc{}}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{104}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    <Axes: ylabel='count'>
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{center}
+        \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_28_1.png}
+        \end{center}
+        { \hspace*{\fill} \\}
+        
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{105}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    \PY{c+c1}{\PYZsh{} lets now see which are the most highly rated}
+    \PY{n}{sns}\PY{o}{.}\PY{n}{catplot}\PY{p}{(}\PY{n}{data}\PY{o}{=}\PY{n}{df\PYZus{}top\PYZus{}5}\PY{p}{,} \PY{n}{x}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Type}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{y}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Google review rating}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{kind}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{bar}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{hue}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Type}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+                \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+    \prompt{Out}{outcolor}{105}{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    <seaborn.axisgrid.FacetGrid at 0x1d85df57100>
+    \end{Verbatim}
+    \end{tcolorbox}
+            
+        \begin{center}
+        \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_29_1.png}
+        \end{center}
+        { \hspace*{\fill} \\}
+        
+        \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+    \prompt{In}{incolor}{ }{\boxspacing}
+    \begin{Verbatim}[commandchars=\\\{\}]
+    
+    \end{Verbatim}
+    \end{tcolorbox}
+    
+    
 \clearpage
 \section{FAQs}
 

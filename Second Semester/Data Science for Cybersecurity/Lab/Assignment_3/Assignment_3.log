@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.15)  16 APR 2024 00:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.15)  16 APR 2024 23:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1294,6 +1294,12 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 59
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 610.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 633.
+ (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.99762pt, for example:
@@ -1309,7 +1315,207 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
 
-[4
+[4]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[5]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[6]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[7]
+<output_12_1.png, id=183, 350.5095pt x 281.1303pt>
+File: output_12_1.png Graphic file (type png)
+<use output_12_1.png>
+Package pdftex.def Info: output_12_1.png  used on input line 932.
+(pdftex.def)             Requested size: 350.50865pt x 281.12961pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--935
+
+ []
+
+<output_13_1.png, id=185, 614.295pt x 397.485pt>
+File: output_13_1.png Graphic file (type png)
+<use output_13_1.png>
+Package pdftex.def Info: output_13_1.png  used on input line 957.
+(pdftex.def)             Requested size: 614.29349pt x 397.48402pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[8 <./output_12_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 959--960
+
+ []
+
+<output_14_1.png, id=191, 349.7868pt x 364.2408pt>
+File: output_14_1.png Graphic file (type png)
+<use output_14_1.png>
+Package pdftex.def Info: output_14_1.png  used on input line 980.
+(pdftex.def)             Requested size: 349.78595pt x 364.23991pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[9 <./output_13_1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 982--983
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[10 <./output_14_1.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[11]
+<output_19_1.png, id=207, 604.8999pt x 397.485pt>
+File: output_19_1.png Graphic file (type png)
+<use output_19_1.png>
+Package pdftex.def Info: output_19_1.png  used on input line 1085.
+(pdftex.def)             Requested size: 604.89842pt x 397.48402pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1087--1088
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[12 <./output_19_1.png>]
+<output_21_1.png, id=213, 610.6815pt x 397.485pt>
+File: output_21_1.png Graphic file (type png)
+<use output_21_1.png>
+Package pdftex.def Info: output_21_1.png  used on input line 1123.
+(pdftex.def)             Requested size: 610.68002pt x 397.48402pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1126
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[13 <./output_21_1.png>]
+<output_24_1.png, id=219, 400.3758pt x 353.4003pt>
+File: output_24_1.png Graphic file (type png)
+<use output_24_1.png>
+Package pdftex.def Info: output_24_1.png  used on input line 1187.
+(pdftex.def)             Requested size: 400.3748pt x 353.39941pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1189--1190
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[14 <./output_24_1.png>]
+<output_25_1.png, id=225, 310.761pt x 281.1303pt>
+File: output_25_1.png Graphic file (type png)
+<use output_25_1.png>
+Package pdftex.def Info: output_25_1.png  used on input line 1209.
+(pdftex.def)             Requested size: 310.76024pt x 281.12961pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1211--1212
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[15 <./output_25_1.png>]
+<output_28_1.png, id=231, 340.3917pt x 281.1303pt>
+File: output_28_1.png Graphic file (type png)
+<use output_28_1.png>
+Package pdftex.def Info: output_28_1.png  used on input line 1278.
+(pdftex.def)             Requested size: 340.39085pt x 281.12961pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1280--1281
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[16 <./output_28_1.png>]
+<output_29_1.png, id=237, 349.7868pt x 349.7868pt>
+File: output_29_1.png Graphic file (type png)
+<use output_29_1.png>
+Package pdftex.def Info: output_29_1.png  used on input line 1298.
+(pdftex.def)             Requested size: 349.78595pt x 349.78595pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1301
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[17 <./output_29_1.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.99762pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.99762pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
+
+[18
 
 ]
 
@@ -1319,26 +1525,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.99762pt}.
 
-[5] (Assignment_3.aux)
+[19] (Assignment_3.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `Assignment_3.out' has not changed.
-(rerunfilecheck)             Checksum: E206F0AF51A174BDABE818D5E422192E;2361.
+(rerunfilecheck)             Checksum: 2570629C5D769D86AA6DEDBC99415224;2565.
  ) 
 Here is how much of TeX's memory you used:
- 29484 strings out of 474424
- 541638 string characters out of 5739379
- 1937496 words of memory out of 5000000
- 51283 multiletter control sequences out of 15000+600000
- 575795 words of font info for 77 fonts, out of 8000000 for 9000
+ 29717 strings out of 474424
+ 546490 string characters out of 5739379
+ 2209496 words of memory out of 5000000
+ 51493 multiletter control sequences out of 15000+600000
+ 577218 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  83i,12n,87p,899b,1117s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Assignment_3.pdf (7 pages, 220448 bytes).
+ <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0900.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1440.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1095.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc1728.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\eccc2074.pk><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+Output written on Assignment_3.pdf (21 pages, 478822 bytes).
 PDF statistics:
- 574 PDF objects out of 1000 (max. 8388607)
- 39 named destinations out of 1000 (max. 500000)
- 165 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 815 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -12,8 +12,10 @@
 \contentsline {section}{\numberline {4}Platform}{2}{section.4}%
 \contentsline {section}{\numberline {5}Requirements}{3}{section.5}%
 \contentsline {section}{\numberline {6}Code}{3}{section.6}%
-\contentsline {section}{\numberline {7}FAQs}{4}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Question 1}{4}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Question 2}{4}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Question 3}{4}{subsection.7.3}%
-\contentsline {section}{\numberline {8}Conclusion}{5}{section.8}%
+\contentsline {subsection}{\numberline {6.1}Pre Processing}{4}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}EDA}{5}{subsection.6.2}%
+\contentsline {section}{\numberline {7}FAQs}{18}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Question 1}{18}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Question 2}{18}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Question 3}{18}{subsection.7.3}%
+\contentsline {section}{\numberline {8}Conclusion}{19}{section.8}%
