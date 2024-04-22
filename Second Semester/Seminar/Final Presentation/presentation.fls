@@ -331,7 +331,15 @@ INPUT .\presentation.nav
 INPUT .\presentation.nav
 INPUT presentation.nav
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT .\mit.jpg
+INPUT .\mit.jpg
+INPUT .\mit.jpg
+INPUT .\mit.jpg
+INPUT .\mit.jpg
+INPUT .\mit.jpg
+INPUT .\mit.jpg
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr5.tfm
 INPUT C:\Users\Krishnaraj\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
@@ -367,13 +375,78 @@ INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\sansmathaccent
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\sansmathaccent\mathkerncmssi10.tfm
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\sansmathaccent\mathkerncmssi8.tfm
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\sansmathaccent\mathkerncmssi8.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\sansmathaccent\mathkerncmssi8.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti7.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmtt8.tfm
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
+INPUT .\saubhagya.jpg
+INPUT .\saubhagya.jpg
+INPUT .\saubhagya.jpg
+INPUT .\saubhagya.jpg
+INPUT .\saubhagya.jpg
+INPUT .\saubhagya.jpg
+INPUT .\saubhagya.jpg
+INPUT .\avishkar.jpg
+INPUT .\avishkar.jpg
+INPUT .\avishkar.jpg
+INPUT .\avishkar.jpg
+INPUT .\avishkar.jpg
+INPUT .\avishkar.jpg
+INPUT .\avishkar.jpg
+INPUT .\karad.jpg
+INPUT .\karad.jpg
+INPUT .\karad.jpg
+INPUT .\karad.jpg
+INPUT .\karad.jpg
+INPUT .\karad.jpg
+INPUT .\karad.jpg
+INPUT .\krish.jpg
+INPUT .\krish.jpg
+INPUT .\krish.jpg
+INPUT .\krish.jpg
+INPUT .\krish.jpg
+INPUT .\krish.jpg
+INPUT .\krish.jpg
+INPUT .\parth.jpg
+INPUT .\parth.jpg
+INPUT .\parth.jpg
+INPUT .\parth.jpg
+INPUT .\parth.jpg
+INPUT .\parth.jpg
+INPUT .\parth.jpg
+INPUT .\face rec results cropped.jpg
+INPUT .\face rec results cropped.jpg
+INPUT .\face rec results cropped.jpg
+INPUT .\face rec results cropped.jpg
+INPUT .\face rec results cropped.jpg
+INPUT .\face rec results cropped.jpg
+INPUT .\face rec results cropped.jpg
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbxti10.tfm
 OUTPUT presentation.nav
 OUTPUT presentation.toc
 OUTPUT presentation.snm
 INPUT presentation.aux
 INPUT .\presentation.out
 INPUT .\presentation.out
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbxti10.pfb
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti7.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti7.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt8.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmtt8.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb

@@ -17,16 +17,22 @@
 \usecolortheme{seahorse}
 
 \renewcommand{\familydefault}{\rmdefault}
-
-% Title page
-\title{Machine Learning Powered Automated Facial Attendanc Tracking System}
-\author{Mid Term Status and Progress Evaluation}
-\date{\today}
-
 \begin{document}
 
+% Title page
+
+\title{Comparison between Face Recognition Algorithms and Techniques}
+\subtitle{Seminar Presentation}
+\author{PA. 10 Krishnaraj Thadesar \\ PRN: 1032210888 \\ \textbf{Mentor}: Prof. Vinayak Musale}
+
 \begin{frame}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=.45\textwidth]{mit.jpg}
+	\end{figure}
 	\titlepage
+	\date{\today}
+
 \end{frame}
 
 \begin{frame}
@@ -39,6 +45,13 @@
 	\centering
 	\frametitle{Introduction}
 	\begin{minipage}{0.95\textwidth}
+		\begin{itemize}
+			\item Face recognition is a biometric technology that uses distinctive features of the face to identify individuals.
+			\item It is a widely used technology in security systems and can be used for various applications such as access control, attendance tracking, and surveillance.
+			\item Face recognition technology has been around for decades, but recent advancements in machine learning and computer vision have made it more accurate and reliable.
+			\item There are several face recognition algorithms and techniques available, each with its own strengths and weaknesses.
+			\item In this seminar, we will compare some of the most popular face recognition algorithms and techniques and evaluate their performance on a common dataset.
+		\end{itemize}
 	\end{minipage}
 \end{frame}
 
@@ -47,54 +60,380 @@
 	\centering
 	\frametitle{Background and Motivation}
 	\begin{minipage}{0.95\textwidth}
+		\begin{itemize}
+			\item Face recognition technology has gained popularity in recent years due to its wide range of applications and potential benefits.
+			\item It can be used for security purposes, such as access control and surveillance, as well as for non-security applications, such as attendance tracking and personalization.
+			\item The accuracy and reliability of face recognition systems have improved significantly in recent years, thanks to advancements in machine learning and computer vision.
+			\item However, there are still many challenges and limitations associated with face recognition technology, such as occlusions, variations in lighting and pose, and the need for large amounts of training data.
+			\item In this seminar, we will explore some of the most popular face recognition algorithms and techniques and evaluate their performance on a common dataset to identify their strengths and weaknesses.
+		\end{itemize}
 	\end{minipage}
 \end{frame}
 
-\section{Litereature Review and Research Gaps}
 \begin{frame}
 	\centering
-	\frametitle{Litereature Review and Research Gaps}
+	\frametitle{Motivation}
 	\begin{minipage}{0.95\textwidth}
+		\begin{itemize}
+			\item The motivation for this topic came from impending research for a Project titled "Machine Learning Powered Automated Facial Attendance Tracking System".
+			\item The project aims to develop a system that can automatically track attendance using facial recognition technology.
+			\item To achieve this goal, it is essential to understand the different face recognition algorithms and techniques available and evaluate their performance to identify the most suitable approach for the project.
+			\item By comparing the performance of different face recognition algorithms and techniques, we can gain insights into their strengths and weaknesses and make informed decisions about which approach to use for the project.
+			\item This seminar will provide a comprehensive overview of the most popular face recognition algorithms and techniques and evaluate their performance on a common dataset to help guide the development of the attendance tracking system.
+		\end{itemize}
 	\end{minipage}
+\end{frame}
+
+\section{Literature Review and Research Gaps}
+\begin{frame}
+	\centering
+	\frametitle{Literature Review and Research Gaps}
+	\framesubtitle{Paper 1}
+	\centering
+	\begin{table}[]
+		\tiny
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\textit{Sr.No}                     & \textit{\begin{tabular}[c]{@{}c@{}}Publication Title \\ with Author\end{tabular}} & \textit{Year} & \textit{\begin{tabular}[c]{@{}c@{}}Positive Points of \\ the Publication\end{tabular}} & \textit{\begin{tabular}[c]{@{}c@{}}Gaps of the \\ Publication\end{tabular}} \\ \hline
+			1                                  &
+			\begin{minipage}[t]{0.2\textwidth}
+				\vspace{0.5cm}
+				Title:  \textit{"A Comparative Study of Facial Recognition Techniques: With focus on low computational power."}
+				\\
+
+				Author:  \textit{Schenkel, T., Ringhage, O. and Branding, N.}
+				\\
+
+				Link: \url{https://www.diva-portal.org/smash/get/diva2:1327708/FULLTEXT01.pdf}
+			\end{minipage}
+			                                   & 2019                                                                              &
+			\begin{minipage}[t]{0.3\textwidth}
+				\begin{enumerate}
+					\item \tiny{The publication compares five performance metrics, including recall and F-score, providing a comprehensive evaluation of facial recognition techniques.}
+					\item \tiny{It addresses the importance of balancing low computational time and prediction ability for security systems, offering practical guidelines for implementation.}
+					\item \tiny{The research questions are clearly defined, focusing on significant differences in performance, training time, and prediction time among different facial recognition techniques and classifiers.}
+				\end{enumerate}
+			\end{minipage} &
+			\begin{minipage}[t]{0.3\textwidth}
+				\begin{enumerate}
+					\item The document lacks detailed information on the specific facial recognition techniques and classifiers used in the experiments.
+					\item It does not provide a detailed breakdown of the dataset used for training and testing the facial recognition models.
+					\item While the document mentions the comparison of results, it does not delve into the specific findings or implications of these comparisons.
+				\end{enumerate}
+			\end{minipage}                                                                                                                                                                                                                                                                             \\ \hline
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+	\centering
+	\frametitle{Literature Review and Research Gaps}
+	\framesubtitle{Paper 2}
+	\centering
+	\begin{table}[]
+		\tiny
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\textit{Sr.No}                     & \textit{\begin{tabular}[c]{@{}c@{}}Publication Title \\ with Author\end{tabular}} & \textit{Year} & \textit{\begin{tabular}[c]{@{}c@{}}Positive Points of \\ the Publication\end{tabular}} & \textit{\begin{tabular}[c]{@{}c@{}}Gaps of the \\ Publication\end{tabular}} \\ \hline
+			1                                  &
+			\begin{minipage}[t]{0.2\textwidth}
+				\vspace{0.5cm}
+				Title:  \textit{"A Comparative Study on Facial Recognition Algorithms"}
+				\\
+
+				Author:  \textit{Sanmoy Paul and Sameer Acharya}
+				\\
+
+				Link: \url{https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3753064}
+			\end{minipage}
+			                                   & 2018                                                                              &
+			\begin{minipage}[t]{0.3\textwidth}
+				\begin{enumerate}
+					\item Comparative Analysis: The study provides a comparative analysis of different facial recognition algorithms, allowing developers to make informed choices based on recognition accuracies.
+
+					\item Algorithm Selection: By studying the advantages and disadvantages of various algorithms, developers can select the best facial recognition algorithm for their specific implementation needs.
+
+					\item Future Improvements: The research suggests future efforts to test on a larger set of images to enhance the accuracy of CNN and explore combining multiple machine learning classification algorithms for increased recognition accuracy and handling large datasets.
+				\end{enumerate}
+			\end{minipage} &
+			\begin{minipage}[t]{0.3\textwidth}
+				\begin{enumerate}
+					\item The document lacks detailed discussion on the specific methodologies used for training and testing the algorithms, which could provide more clarity on the experimental setup.
+					\item There is no mention of the computational resources or hardware specifications used for running the experiments, which could impact the reproducibility and scalability of the results.
+					\item The publication does not delve into the potential biases or limitations in the dataset used for training and testing the facial recognition models, which could affect the generalizability of the findings.
+				\end{enumerate}
+			\end{minipage}                                                                                                                                                                                                                                                                             \\ \hline
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+
+\begin{frame}
+	\centering
+	\frametitle{Literature Review and Research Gaps}
+	\framesubtitle{Paper 3}
+	\centering
+	\begin{table}[]
+		\tiny
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\textit{Sr.No}                     & \textit{\begin{tabular}[c]{@{}c@{}}Publication Title \\ with Author\end{tabular}} & \textit{Year} & \textit{\begin{tabular}[c]{@{}c@{}}Positive Points of \\ the Publication\end{tabular}} & \textit{\begin{tabular}[c]{@{}c@{}}Gaps of the \\ Publication\end{tabular}} \\ \hline
+			1                                  &
+			\begin{minipage}[t]{0.2\textwidth}
+				\vspace{0.5cm}
+				Title:  \textit{"A comparison of facial recognition algorithms."}
+				\\
+
+				Author:  \textit{Delbiaggio, Nicolas. }
+				\\
+
+				Link: \url{https://www.theseus.fi/handle/10024/132808}
+			\end{minipage}
+			                                   & 2017                                                                              &
+			\begin{minipage}[t]{0.3\textwidth}
+				\begin{enumerate}
+					\item Thesis covers a comprehensive comparison of facial recognition algorithms like Eigenfaces, Fisherfaces, LBPH, and OpenFace.
+
+					\item The study includes a detailed explanation of each algorithm, their strengths, weaknesses, and performance in a test case scenario.
+
+					\item The findings highlight OpenFace as the most accurate algorithm for facial recognition, providing valuable insights for further research in the field.
+				\end{enumerate}
+			\end{minipage} &
+			\begin{minipage}[t]{0.3\textwidth}
+				\begin{enumerate}
+					\item Lack of Exploration of Real-World Applications: The paper focuses on comparing facial recognition algorithms in a controlled setting. However, it does not delve into the practical applications of these algorithms in real-world scenarios.
+
+					\item Limited Discussion on Algorithm Limitations: While the strengths of the algorithms are discussed, there is a lack of emphasis on the limitations of each algorithm.
+
+					\item Absence of Future Research Directions: The paper concludes with the identification of the most accurate algorithm but fails to suggest potential future research directions in the field of facial recognition.
+				\end{enumerate}
+			\end{minipage}                                                                                                                                                                                                                                                                             \\ \hline
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+
+\begin{frame}
+	\centering
+	\frametitle{Literature Review and Research Gaps}
+	\framesubtitle{Paper 4}
+	\centering
+	\begin{table}[]
+		\tiny
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\textit{Sr.No}                     & \textit{\begin{tabular}[c]{@{}c@{}}Publication Title \\ with Author\end{tabular}} & \textit{Year} & \textit{\begin{tabular}[c]{@{}c@{}}Positive Points of \\ the Publication\end{tabular}} & \textit{\begin{tabular}[c]{@{}c@{}}Gaps of the \\ Publication\end{tabular}} \\ \hline
+			1                                  &
+			\begin{minipage}[t]{0.2\textwidth}
+				\vspace{0.5cm}
+				Title:  \textit{"Evaluating impact of race in facial recognition across machine learning and deep learning algorithms."}
+				\\
+
+				Author:  \textit{Coe, James, and Mustafa Atay.}
+				\\
+
+				Link: \url{https://mdpi-res.com/d_attachment/computers/computers-10-00113/article_deploy/computers-10-00113.pdf?version=1631271027}
+			\end{minipage}
+			                                   & 2021                                                                              &
+			\begin{minipage}[t]{0.3\textwidth}
+				\begin{enumerate}
+					\item The paper provides a detailed comparison of various facial recognition algorithms, including Eigenfaces, Fisherfaces, Local Binary Pattern Histogram, deep convolutional neural network algorithm, and OpenFace.
+					\item It highlights the efficiency and accuracy of these algorithms in real-life settings, with OpenFace being identified as the algorithm with the highest accuracy in identifying faces.
+					\item The study's findings offer valuable insights for practitioners in selecting the most suitable algorithm for facial recognition applications and suggest ways for academicians to enhance the current algorithms' accuracy further.
+				\end{enumerate}
+			\end{minipage} &
+			\begin{minipage}[t]{0.3\textwidth}
+				\begin{enumerate}
+					\item The paper focuses on a few specific facial recognition algorithms like Eigenfaces, Fisherfaces, and Local Binary Pattern Histograms. It lacks exploration of a wider range of algorithms available in the field, potentially missing out on newer, more accurate models.
+
+					\item While the study evaluates the algorithms' accuracy, it does not delve into their performance in real-life settings or practical applications. This gap could impact the algorithms' effectiveness when deployed in scenarios beyond controlled test environments.
+
+					\item The paper mentions the use of a custom dataset for testing the algorithms but does not elaborate on the dataset's diversity or size.
+				\end{enumerate}
+			\end{minipage}                                                                                                                                                                                                                                                                             \\ \hline
+		\end{tabular}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+	\centering
+	\frametitle{Literature Review and Research Gaps}
+	\framesubtitle{Paper 5}
+	\centering
+	\begin{table}[]
+		\tiny
+		\centering
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\textit{Sr.No}                     & \textit{\begin{tabular}[c]{@{}c@{}}Publication Title \\ with Author\end{tabular}} & \textit{Year} & \textit{\begin{tabular}[c]{@{}c@{}}Positive Points of \\ the Publication\end{tabular}} & \textit{\begin{tabular}[c]{@{}c@{}}Gaps of the \\ Publication\end{tabular}} \\ \hline
+			1                                  &
+			\begin{minipage}[t]{0.2\textwidth}
+				\vspace{0.5cm}
+				Title:  \textit{"Comparisons of Facial Recognition Algorithms Through a Case Study Application"}
+				\\
+
+				Author:  \textit{Dirin, Amir, Nicolas Delbiaggio, and Janne Kauttonen.}
+				\\
+
+				Link: \url{https://www.learntechlib.org/d/217823}
+			\end{minipage}
+			                                   & 2020                                                                              &
+			\begin{minipage}[t]{0.3\textwidth}
+				\begin{enumerate}
+					\item Efficiency Evaluation: The paper provides a detailed comparison of popular open source facial recognition algorithms, highlighting the efficiency and accuracy of each in real-life settings.
+
+					\item Practical Implications: The findings of the study offer valuable insights for practitioners in selecting the most suitable algorithm for facial recognition applications, enhancing decision-making processes.
+
+					\item Academic Contribution: The research contributes to the academic field by emphasizing the importance of improving the accuracy of existing algorithms, paving the way for further advancements in facial recognition technology.
+				\end{enumerate}
+			\end{minipage} &
+			\begin{minipage}[t]{0.3\textwidth}
+				\begin{enumerate}
+					\item The paper focuses on comparing a few facial recognition algorithms like Eigenfaces, Fisherfaces, and Local Binary Pattern Histogram. However, it lacks a comparison with a wider range of algorithms to provide a more comprehensive analysis.
+
+					\item While the paper evaluates the algorithms' performance in a controlled environment using test datasets, it doesn't discuss the practical implementation challenges or results in real-life scenarios, which could be a crucial research gap.
+
+					\item The paper does not delve into the scalability and efficiency aspects of the facial recognition algorithms studied. Understanding how these algorithms perform with larger datasets or in real-time applications could be a significant research gap to address.
+				\end{enumerate}
+			\end{minipage}                                                                                                                                                                                                                                                                             \\ \hline
+		\end{tabular}
+	\end{table}
 \end{frame}
 
 \section{Libraries Tested}
 \begin{frame}
 	\centering
 	\frametitle{Libraries Tested}
+	\framesubtitle{These are the libraries that were used to train and test a model.}
+	\begin{enumerate}
+		\item OpenCV
+		\item face\_recognition
+	\end{enumerate}
 	\begin{minipage}{0.95\textwidth}
 	\end{minipage}
 \end{frame}
 
+\begin{frame}
+	\centering
+	\frametitle{face\_recognition}
+	\framesubtitle{Overview}
+	\begin{minipage}{0.95\textwidth}
+		\begin{itemize}
+			\item face\_recognition is a Python library that provides a simple interface for face recognition tasks.
+			\item It is built on top of the dlib library, which is a popular library for machine learning and computer vision tasks.
+			\item face\_recognition provides a high-level API for face detection, face alignment, and face recognition, making it easy to use for developers.
+			\item The library uses deep learning models to detect and recognize faces in images and videos, achieving high accuracy and reliability.
+			\item face\_recognition is widely used in research and industry for various face recognition applications, such as access control, surveillance, and attendance tracking.
+		\end{itemize}
+	\end{minipage}
+\end{frame}
 \section{Training Data}
 \begin{frame}
 	\centering
 	\frametitle{Training Data}
+	\framesubtitle{These Images were Uploaded using the API along with student details.}
 	\begin{minipage}{0.95\textwidth}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.95\textwidth]{saubhagya.jpg}
+			\caption{Images Uploaded under Saubhagya's Name, and PRN. }
+		\end{figure}
 	\end{minipage}
 \end{frame}
-
-\section{Results}
 \begin{frame}
 	\centering
-	\frametitle{Results}
+	\frametitle{Training Data}
+	\framesubtitle{These Images were Uploaded using the API along with student details.}
 	\begin{minipage}{0.95\textwidth}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.95\textwidth]{avishkar.jpg}
+			\caption{Images Uploaded under Avishkar's Name, and PRN. }
+		\end{figure}
 	\end{minipage}
 \end{frame}
+\begin{frame}
+	\centering
+	\frametitle{Training Data}
+	\framesubtitle{These Images were Uploaded using the API along with student details.}
+	\begin{minipage}{0.95\textwidth}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.95\textwidth]{karad.jpg}
+			\caption{}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+\begin{frame}
+	\centering
+	\frametitle{Training Data}
+	\framesubtitle{These Images were Uploaded using the API along with student details.}
+	\begin{minipage}{0.95\textwidth}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.65\textwidth]{krish.jpg}
+			\caption{These are the images uploaded under Krish's Name and PRN.}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+\begin{frame}
+	\centering
+	\frametitle{Training Data}
+	\framesubtitle{These Images were Uploaded using the API along with student details.}
+	\begin{minipage}{0.95\textwidth}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.75\textwidth]{parth.jpg}
+			\caption{These are the images uploaded under Parth's Name and PRN.}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+\section{Preliminary Results}
+\begin{frame}
+	\centering
+	\frametitle{Preliminary Results}
+	\framesubtitle{Recognized Faces}
+	\begin{minipage}{0.95\textwidth}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=.95\textwidth]{face rec results cropped.jpg}
+			\caption{Results identifying 3 of the 4 faces. Empirical results show that the model is working, with accuracy of around 75 \%}
+		\end{figure}	\end{minipage}
+\end{frame}
+
 
 \section{Advantages}
 \begin{frame}
 	\centering
 	\frametitle{Advantages}
+	\framesubtitle{Advantages of Face Recognition Technology}
 	\begin{minipage}{0.95\textwidth}
+		\begin{enumerate}
+			\item High Accuracy: Face recognition technology can achieve high accuracy rates, making it suitable for security applications.
+			\item Non-intrusive: Face recognition is a non-intrusive biometric technology that does not require physical contact with the individual being identified.
+			\item Fast and Efficient: Face recognition systems can process large amounts of data quickly and efficiently, making them suitable for real-time applications.
+			\item Scalable: Face recognition technology can be easily scaled to accommodate large numbers of users, making it suitable for applications with a large user base.
+			\item Versatile: Face recognition technology can be used for a wide range of applications, from access control to attendance tracking to surveillance.
+		\end{enumerate}
 	\end{minipage}
 \end{frame}
 
 \section{Disadvantages}
 \begin{frame}
 	\centering
-	\frametitle{Disadvantages}
+	\frametitle{Disadvantages of Face Recognition Technology}
 	\begin{minipage}{0.95\textwidth}
+		\begin{enumerate}
+			\item \textbf{\textit{Privacy Concerns:}} Face recognition technology raises privacy concerns due to its potential for misuse and abuse.
+			\item \textbf{\textit{Security Risks:}} Face recognition systems can be vulnerable to attacks, such as spoofing and impersonation, which can compromise security.
+			\item \textbf{\textit{Bias and Discrimination:}} Face recognition systems can be biased and discriminatory, leading to inaccurate and unfair results.
+			\item \textbf{\textit{Legal and Ethical Issues:}} Face recognition technology raises legal and ethical issues related to data privacy, consent, and surveillance.
+			\item \textbf{\textit{Technical Limitations:}} Face recognition technology has technical limitations, such as sensitivity to variations in lighting, pose, and occlusions, which can affect accuracy and reliability.
+		\end{enumerate}
 	\end{minipage}
 \end{frame}
 
@@ -102,7 +441,26 @@
 \begin{frame}
 	\centering
 	\frametitle{Evaluation Metrics}
+	\framesubtitle{Overview}
 	\begin{minipage}{0.95\textwidth}
+		\begin{enumerate}
+			\item \textbf{\textit{Accuracy:}} The percentage of correctly identified faces out of the total number of faces.
+			\item \textbf{\textit{Precision:}} The percentage of correctly identified faces out of the total number of faces identified.
+			\item \textbf{\textit{Recall:}} The percentage of correctly identified faces out of the total number of faces in the dataset.
+			\item \textbf{\textit{F1 Score:}} The harmonic mean of precision and recall, which provides a balanced measure of accuracy.
+		\end{enumerate}
+	\end{minipage}
+\end{frame}
+\begin{frame}
+	\centering
+	\frametitle{Evaluation Metrics}
+	\framesubtitle{Continued}
+	\begin{minipage}{0.95\textwidth}
+		\begin{enumerate}
+			\item \textbf{\textit{Time taken:}} The time taken to process the dataset and identify the faces, which measures the efficiency of the algorithm.
+			\item \textbf{\textit{False Positive Rate:}} The percentage of incorrectly identified faces out of the total number of faces identified.
+			\item \textbf{\textit{False Negative Rate:}} The percentage of correctly identified faces out of the total number of faces not identified.
+		\end{enumerate}
 	\end{minipage}
 \end{frame}
 
@@ -111,6 +469,13 @@
 	\centering
 	\frametitle{Applications}
 	\begin{minipage}{0.95\textwidth}
+		\begin{enumerate}
+			\item \textbf{\textit{Access Control:}} Face recognition technology can be used for access control in buildings, vehicles, and devices.
+			\item \textbf{\textit{Attendance Tracking:}} Face recognition technology can be used to track attendance in schools, colleges, and workplaces.
+			\item \textbf{\textit{Surveillance:}} Face recognition technology can be used for surveillance in public spaces, airports, and other high-security areas.
+			\item \textbf{\textit{Personalization:}} Face recognition technology can be used for personalization in devices, such as smartphones and smart home devices.
+			\item \textbf{\textit{Healthcare:}} Face recognition technology can be used in healthcare for patient identification and monitoring.
+		\end{enumerate}
 	\end{minipage}
 \end{frame}
 
@@ -118,7 +483,15 @@
 \begin{frame}
 	\centering
 	\frametitle{Conclusion}
+
 	\begin{minipage}{0.95\textwidth}
+		\begin{itemize}
+			\item Face recognition technology is a powerful biometric technology that can be used for a wide range of applications, from security to personalization.
+			\item There are several face recognition algorithms and techniques available, each with its own strengths and weaknesses.
+			\item By comparing the performance of different face recognition algorithms and techniques, we can gain insights into their suitability for different applications.
+			\item The evaluation metrics provide a quantitative measure of the performance of face recognition algorithms and techniques, helping us identify the most suitable approach for a given application.
+			\item Face recognition technology has the potential to revolutionize various industries and improve the quality of life for individuals by providing secure and personalized services.
+		\end{itemize}
 	\end{minipage}
 \end{frame}
 
@@ -127,6 +500,13 @@
 	\centering
 	\frametitle{References}
 	\begin{minipage}{0.95\textwidth}
+		\begin{enumerate}
+			\item Schenkel T, Ringhage O, Branding N. A Comparative Study of Facial Recognition Techniques: With focus on low computational power.
+			\item Paul, S. and Acharya, S.K., 2020, December. A comparative study on facial recognition algorithms. In e-journal-First Pan IIT International Management Conference–2018.
+			\item Delbiaggio, N., 2017. A comparison of facial recognition’s algorithms.
+			\item Coe, J. and Atay, M., 2021. Evaluating impact of race in facial recognition across machine learning and deep learning algorithms. Computers, 10(9), p.113.
+			\item Dirin, Amir, Nicolas Delbiaggio, and Janne Kauttonen. "Comparisons of facial recognition algorithms through a case study application." (2020): 121-133.
+		\end{enumerate}
 	\end{minipage}
 \end{frame}
 
