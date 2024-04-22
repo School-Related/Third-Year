@@ -1,6 +1,6 @@
-PWD p:\Classes\Univeristy\Third Year\Second Semester\Seminar\Presentation
+PWD p:\Classes\Univeristy\Third Year\Second Semester\Seminar\Mid term eval Presentation
 INPUT C:\Users\Krishnaraj\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT p:\Classes\Univeristy\Third Year\Second Semester\Seminar\Presentation\presentation.tex
+INPUT p:\Classes\Univeristy\Third Year\Second Semester\Seminar\Mid term eval Presentation\presentation.tex
 OUTPUT presentation.log
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\beamer\beamer.cls
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\beamer\beamer.cls
@@ -286,8 +286,8 @@ INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\beamer\beamero
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\beamer\beamerouterthemedefault.sty
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\tools\multicol.sty
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\tools\multicol.sty
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\beamer\beamercolorthemeseahorse.sty
-INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\beamer\beamercolorthemeseahorse.sty
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\beamer\beamercolorthemebeaver.sty
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\beamer\beamercolorthemebeaver.sty
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\presentation.aux
@@ -377,3 +377,5 @@ INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfo
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
+INPUT C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb

@@ -1,2 +1,6 @@
-\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{References}{4}{0}{2}
+\beamer@sectionintoc {1}{Status Overview}{3}{0}{1}
+\beamer@sectionintoc {2}{Libraries Tested}{4}{0}{2}
+\beamer@sectionintoc {3}{Training Data}{5}{0}{3}
+\beamer@sectionintoc {4}{Results}{6}{0}{4}
+\beamer@sectionintoc {5}{Evaluation Metrics}{7}{0}{5}
+\beamer@sectionintoc {6}{Work Remaining}{8}{0}{6}

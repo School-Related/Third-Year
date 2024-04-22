@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.15)  21 APR 2024 21:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.15)  22 APR 2024 09:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"p:/Classes/Univeristy/Third Year/Second Semester/Seminar/Presentation/presentation.tex"
-(p:/Classes/Univeristy/Third Year/Second Semester/Seminar/Presentation/presentation.tex
+**"p:/Classes/Univeristy/Third Year/Second Semester/Seminar/Final Presentation/presentation.tex"
+(p:/Classes/Univeristy/Third Year/Second Semester/Seminar/Final Presentation/presentation.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
@@ -753,20 +753,40 @@ Dictionary: translator-theorem-dictionary, Language: English
 {C:/Users/Krishnaraj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (presentation.toc) [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 46.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 43.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 ) [3
 
 ] [4
+
+] [5
+
+] [6
+
+] [7
+
+] [8
+
+] [9
+
+] [10
+
+] [11
+
+] [12
+
+] [13
+
+] [14
 
 ]
 \tf@nav=\write6
@@ -784,20 +804,20 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 68B205B7C7D9F46121FEB48FE1F84366;196.
+(rerunfilecheck)             Checksum: C36301C65B92410604C4780863EFF161;1459.
  ) 
 Here is how much of TeX's memory you used:
- 21453 strings out of 474424
- 419036 string characters out of 5739379
- 1934496 words of memory out of 5000000
- 43345 multiletter control sequences out of 15000+600000
+ 21543 strings out of 474424
+ 419908 string characters out of 5739379
+ 1935496 words of memory out of 5000000
+ 43405 multiletter control sequences out of 15000+600000
  565391 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,14n,123p,480b,569s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,14n,123p,486b,569s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on presentation.pdf (4 pages, 59285 bytes).
+Output written on presentation.pdf (14 pages, 113190 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 59 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 449 PDF objects out of 1000 (max. 8388607)
+ 41 named destinations out of 1000 (max. 500000)
+ 139 words of extra memory for PDF output out of 10000 (max. 10000000)
 

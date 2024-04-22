@@ -1,0 +1,12 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Background and Motivation}{4}{0}{2}
+\beamer@sectionintoc {3}{Litereature Review and Research Gaps}{5}{0}{3}
+\beamer@sectionintoc {4}{Libraries Tested}{6}{0}{4}
+\beamer@sectionintoc {5}{Training Data}{7}{0}{5}
+\beamer@sectionintoc {6}{Results}{8}{0}{6}
+\beamer@sectionintoc {7}{Advantages}{9}{0}{7}
+\beamer@sectionintoc {8}{Disadvantages}{10}{0}{8}
+\beamer@sectionintoc {9}{Evaluation Metrics}{11}{0}{9}
+\beamer@sectionintoc {10}{Applications}{12}{0}{10}
+\beamer@sectionintoc {11}{Conclusion}{13}{0}{11}
+\beamer@sectionintoc {12}{References}{14}{0}{12}

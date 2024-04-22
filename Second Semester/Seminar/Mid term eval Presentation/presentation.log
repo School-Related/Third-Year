@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.15)  21 APR 2024 21:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3.31) (preloaded format=pdflatex 2024.4.15)  22 APR 2024 09:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"p:/Classes/Univeristy/Third Year/Second Semester/Seminar/Presentation/presentation.tex"
-(p:/Classes/Univeristy/Third Year/Second Semester/Seminar/Presentation/presentation.tex
+**"p:/Classes/Univeristy/Third Year/Second Semester/Seminar/Mid term eval Presentation/presentation.tex"
+(p:/Classes/Univeristy/Third Year/Second Semester/Seminar/Mid term eval Presentation/presentation.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
 (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamer.cls
@@ -603,7 +603,7 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \mult@nat@firstbox=\box120
 \colbreak@box=\box121
 \mc@col@check@num=\count346
-) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthemeseahorse.sty) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/beamer\beamercolorthemebeaver.sty) (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-03-14 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count347
 \l__pdf_internal_box=\box122
@@ -753,20 +753,28 @@ Dictionary: translator-theorem-dictionary, Language: English
 {C:/Users/Krishnaraj/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] (presentation.toc) [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 46.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 44.
  (C:\Users\Krishnaraj\AppData\Local\Programs\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 ) [3
 
 ] [4
+
+] [5
+
+] [6
+
+] [7
+
+] [8
 
 ]
 \tf@nav=\write6
@@ -784,20 +792,20 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
  ***********
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 68B205B7C7D9F46121FEB48FE1F84366;196.
+(rerunfilecheck)             Checksum: 838049D4922F83787EECFBF5945B9AA8;688.
  ) 
 Here is how much of TeX's memory you used:
- 21453 strings out of 474424
- 419036 string characters out of 5739379
+ 21535 strings out of 474424
+ 420868 string characters out of 5739379
  1934496 words of memory out of 5000000
- 43345 multiletter control sequences out of 15000+600000
+ 43415 multiletter control sequences out of 15000+600000
  565391 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,14n,123p,480b,569s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on presentation.pdf (4 pages, 59285 bytes).
+ 128i,14n,123p,494b,577s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Krishnaraj/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on presentation.pdf (8 pages, 89610 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
- 59 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 268 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
