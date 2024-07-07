@@ -1,0 +1,559 @@
+Delivered-To: kpt.krishnaraj@gmail.com
+Received: by 2002:a05:7022:4095:b0:7d:764a:baf1 with SMTP id x21csp887657dlx;
+ Sat, 11 May 2024 15:01:54 -0700 (PDT)
+X-Received: by 2002:a6b:904:0:b0:7de:b218:58a4 with SMTP id
+ ca18e2360f4ac-7e1b519cb4amr910698939f.3.1715464914532; Sat, 11 May 2024
+ 15:01:54 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1715464914; cv=none; d=google.com;
+ s=arc-20160816;
+ b=QhBVzCHWhkvPOhWHPweljnU/A8No/sWqnXgYbY83p9rm3a3exDxH6qsdNeOg6z8m6F
+ no27p34KeO4kp8Brwr2+ySuZ7cVX4E1fsKUweNuaCd8PkTJA/aPy0mS8hjyZHPNpsvYa
+ t62RPfhw50y7HdzRGTVWFKhdQD3J0XEgMCzQx6lAKexRm/yD9BPSLk7uyb2F9bc+q+bs
+ kzIAo3fnu0vwrAronCw+fQn4d66iuw0j4tb/gSOGXLIa4KMKhd4DKtN0Hn0FQhtxX6R4
+ JzmGYxaHTS+dV+Fu+6LKRZq545cCl91JZcny49d9Y+ZfF43k1RkaPwXFRbqV/xN0e/E7 HXYw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816; h=to:from:subject:date:message-id:feedback-id:mime-version
+ :dkim-signature; bh=WDhn0TK/vjmLcGgl3/aI9tgMAUG2XsDi3Dpq/J0f8PA=;
+ fh=b6nogKdzhb/q9zqsDVU668pUNI4bS1PNEat8EVxIyao=;
+ b=qMuEdKcDspQ7fTbKtC8DAyCg6Btwz7ThislDnzWbAaEDA0KqMesO8uwa5S7McZ/61W
+ P/urJ8Vvk+WRvuZu9XQiSbxS6tRmq3N8dJzR1zHRnDQBxzsuZi9iCpVLpU5vs1pYJjQm
+ GR9+mGpcG71LLtu9aWca8t/HwTlUx8uNdPcJHJc8tNOBgiFnUAvq5f/2p4Cto69HIyy0
+ jr0DlZoOByQHTboRGk2d1v9aHq9FwWdohzlT+8Z4M7flGImI/IznCPfclRdFwzqzQ8Kn
+ gEmjmqmdqEZTYW6ANjIe/GdlDiQCDtE7RV2lksZjhlCM6kN/OK5TlFYdFF5VcJiGrmgk RNZQ==;
+ dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; dkim=pass header.i=@google.com
+ header.s=20230601 header.b=RytdRtFN; spf=pass (google.com: domain of
+ 30eo_zhykan4forms-receipts-noreplygoogle.com@trix.bounces.google.com
+ designates 209.85.220.69 as permitted sender)
+ smtp.mailfrom=30eo_ZhYKAN4FORMS-RECEIPTS-NOREPLYGOOGLE.COM@trix.bounces.google.com;
+ dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Return-Path: <30eo_ZhYKAN4FORMS-RECEIPTS-NOREPLYGOOGLE.COM@trix.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com.
+ [209.85.220.69]) by mx.google.com with SMTPS id
+ 8926c6da1cb9f-48964245a4bsor1703097173.13.2024.05.11.15.01.54 for
+ <kpt.krishnaraj@gmail.com> (Google Transport Security); Sat, 11 May 2024
+ 15:01:54 -0700 (PDT)
+Received-SPF: pass (google.com: domain of
+ 30eo_zhykan4forms-receipts-noreplygoogle.com@trix.bounces.google.com
+ designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com; dkim=pass header.i=@google.com
+ header.s=20230601 header.b=RytdRtFN; spf=pass (google.com: domain of
+ 30eo_zhykan4forms-receipts-noreplygoogle.com@trix.bounces.google.com
+ designates 209.85.220.69 as permitted sender)
+ smtp.mailfrom=30eo_ZhYKAN4FORMS-RECEIPTS-NOREPLYGOOGLE.COM@trix.bounces.google.com;
+ dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=20230601; t=1715464914; x=1716069714; dara=google.com;
+ h=to:from:subject:date:message-id:feedback-id:mime-version:from:to:cc
+ :subject:date:message-id:reply-to;
+ bh=WDhn0TK/vjmLcGgl3/aI9tgMAUG2XsDi3Dpq/J0f8PA=;
+ b=RytdRtFNHVsr++Wb0iWf1gNAeWYtVgr2fybCE+fVAcgz/oThXFz1h97qBug+OqE9py
+ LAB2VaQvu9U+r18t5ykA4wTdP6uwOVF48Luh6gww38eUgO5Lmxz1+zuUYjBVNs5OWpNS
+ hYWLnzXVedPwAVF/zmxOMPkMah0k+Nxl2hASz1SNqnwhf1RBBZgpioJtR2WbIYC8miDc
+ 8D2qo2chCck2qGZxO+04n+urU5+TsRDbStDGYI059W9VY5yn/4Bj3eYyU7UFV37sJyfp
+ rFX0ZLJCGEMwro6krLcA/NsKKJ5qd6PpmrpSohdiunQxzdy0/9vHEYDEiCoGED0aG08K wmnQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+ s=20230601; t=1715464914; x=1716069714;
+ h=to:from:subject:date:message-id:feedback-id:mime-version
+ :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+ bh=WDhn0TK/vjmLcGgl3/aI9tgMAUG2XsDi3Dpq/J0f8PA=;
+ b=FZTSOMtfiGlP/JRz0oyixCwB+swKo0VlBRzheSUQ8R3OQ3WBldfFvLHWxUCqJzudPR
+ e7phFblzFBM+id6Vupsvkck5NAbiRhNpyMaqShflRAsIKDqND0GcX9socyMn6caiJhrk
+ 10fsUPKliRjFmypQa1iQwPSSzDHM0TCd4viw5HXqOLVVE8MFCbQWzs+/x6si36wStJqK
+ AYAM735GvwzmtDJuIRZqhDpSeK4T71SYKrbTYxnmj19nxm4WnZ3awl5OlTeHDFffQbgp
+ ce17UG6ZDxp9+A0455Z2ybduIKOphAmpQK6ZxjBBKno2zZStetJrIg8A/ZHET4EVal1G dLvw==
+X-Gm-Message-State: AOJu0Yz7kd2XPQyOGu+qkDdvROwLOHiKnm9+mAnt5K2D58wqBjUQS+TP
+ HbdWcAIfhRrQn1iSW3BTXZKMGzx9R+Y60EkPlHo67BJsxyP00QouUOlztnYoT+nbrcOPtOF9mNI
+ BuTezKmMDkkbGz+k4QtNRBiKFyw+7yESStpHApgnQtdjZhh4ey3PXdOxduqsU2sUjP/Ld6yGq+x
+ 7yJNBk5KOE6Hz7LmegYsqMlMGJZ0DRP0e4ueXnteaOos9lqYuSq6lRdRA9zhVzPjTBkcgyTpqV4
+ WnlZJEQWzc7kAoK0oFeHESp0u4aP81mPC8RLxE=
+X-Google-Smtp-Source: AGHT+IHMNzCNyxp8VHXRTeeLRMDKW3fiyyqRpB2DrKEfdvFqyW98sohQj9jMLPAecDmO8cMSYWnnWBp+TSEJc1T7hZxyfA==
+MIME-Version: 1.0
+X-Received: by 2002:a05:6e02:1a8e:b0:36c:4b24:9890 with SMTP id
+ e9e14a558f8ab-36cc14bd48bmr103258375ab.25.1715464913841; Sat, 11 May 2024
+ 15:01:53 -0700 (PDT)
+Feedback-ID: MailTypeResponseReceipt:GoogleForms
+X-GoogleForms-FormId: e/1FAIpQLScGg6j5CHfwE69GBjJj72BJdcR75RQ6UCPh-USxRQy7uguDkA
+X-GoogleForms-CustomerDisplayName: MIT-WPU
+Message-ID: <autogen-java-aacc13ec-1805-41f7-9cda-dbaccca5c7e0@google.com>
+Date: Sat, 11 May 2024 22:01:53 +0000
+Subject: T. Y. B. Tech. CSF_Panel-A and Panel-B_National Academic Immersion
+ Program (NAIP) @ IITJ- Indian Institute of Technology Jodhpur_Student
+ Registration Form
+From: Google Forms <forms-receipts-noreply@google.com>
+To: kpt.krishnaraj@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000d09ba1061834ccd5"
+
+--000000000000d09ba1061834ccd5
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+Google Forms
+
+
+Thanks for filling out TYB Tech. CSF_Panel-A and Panel-B_National Academic  
+Immersion Program (NAIP) @ IITJ- Indian Institute of Technology  
+Jodhpur_Student Registration Form
+Here's what was received.
+
+
+TYB Tech. CSF_Panel-A and Panel-B_National Academic Immersion Program  
+(NAIP) @ IITJ- Indian Institute of Technology Jodhpur_Student Registration  
+Form
+
+Dear Students of TYB Tech. CSF_Panel-A and Panel-B,
+Greetings from Department of Computer Engineering and Technology.
+Department of CET is planning to organize National Academic Immersion  
+Program (NAIP) for the students of Third Year B. Tech. Cybersecurity and  
+Forensics during 09th June 2024 to 19th June 2024 at Indian Institute of  
+Technology, Jodhpur.
+
+Students of Third Year B. Tech. CSF_Panel-A and Panel-B requested to fill  
+the registration form on or before 12th May 2024 till 01:30 PM to record  
+your willingness to participate in NAIP by filling information.
+
+
+Email *
+
+
+kpt.krishnaraj@gmail.com
+
+
+PRN Number *
+
+
+1032210888
+
+
+Roll Number *
+
+
+10
+
+
+Select Your Panel (Division) *
+
+
+Panel-A
+
+
+Panel-B
+
+
+Name of the Student as per ERP record *
+
+
+Krishnaraj Prashant Thadesar
+
+
+Student's Last Name (Surname) *
+
+
+Thadesar
+
+
+Student's First Name *
+
+
+Krishnaraj
+
+
+Student Contact Number (Whatsapp No) *
+
+
+9834312135
+
+
+Gender *
+
+
+Male
+
+
+Female
+
+
+Date of Birth *
+
+
+MM
+
+12
+
+
+/
+
+
+DD
+
+20
+
+
+/
+
+
+YYYY
+
+2002
+
+
+Age dated on 15th May 2024 *
+
+
+21
+
+
+Name of the Person (Parent / Guardian) for Contact in case of Emergency *
+
+
+Prashant Thadesar
+
+
+Emergency Contact Number (Parent / Guardian No) *
+
+
+7823060439
+
+
+T-Shirt Size (XS, S, M, L, XL, XXL) *
+
+
+XL
+
+
+Upload Scanned copy of any single Government Identity Proof/ Aadhar Card  
+Photo / Voters Id Photo / PAN Card Photo( Size of Document should be less  
+than 1 MB) *
+
+
+Submitted files
+
+
+
+PDF [Krishnaraj] Aadhar Card - Krishnaraj Thadesar.pdf
+
+
+Upload Scanned copy of Front and Back side MIT WPU Identity Card( Size of  
+Document should be less than 1 MB) *
+
+
+Submitted files
+
+
+
+PDF [Krishnarj] MIT ID Card - Krishnaraj Thadesar.pdf
+
+
+Upload recent Passport Size Photograph ( Size of image should be less than  
+1 MB) *
+
+
+Submitted files
+
+
+
+Image [Krishnaraj] Passport Size Pic 3 - Krishnaraj Thadesar.JPG
+
+
+Create your own Google Form
+
+Report Abuse
+
+
+
+--000000000000d09ba1061834ccd5
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style nonce=3D"wKUzeXB4RpineyuhENlYyw">@import url(https://fon=
+ts.googleapis.com/css?family=3DGoogle+Sans:400,500|Roboto:300,400,400i,500,=
+700&subset=3Dlatin,vietnamese,latin-ext,cyrillic,greek,cyrillic-ext,greek-e=
+xt);</style><style nonce=3D"wKUzeXB4RpineyuhENlYyw">[class=3D"x_body-conten=
+t-wrapper"] * {white-space: normal !important;}</style></head><body dir=3D"=
+ltr" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif=
+;font-size: 14px; font-weight: 400; line-height: 20px;text-align: start; wo=
+rd-wrap: break-word; margin: 0; padding: 0; height: 100%; width: 100%;"><ta=
+ble border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"background-co=
+lor:rgb(207,165,161);" width=3D"100%" role=3D"presentation"><tbody><tr heig=
+ht=3D"64px"><td style=3D"padding: 0 24px;"><img alt=3D"Google Forms" height=
+=3D"26px" style=3D"display: inline-block; margin: 0; vertical-align: middle=
+;" width=3D"143px" src=3D"https://www.gstatic.com/docs/forms/google_forms_l=
+ogo_lockup_black_2x.png"></td></tr></tbody></table><div class=3D"body-conte=
+nt-wrapper" style=3D"padding: 12px; background-color: rgb(248,242,241);"><d=
+iv style=3D"margin: 0 auto; max-width: 640px; min-width: 154px;"><div style=
+=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;padding: 20px;"><h1 style=3D"color:=
+ #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 20px; fon=
+t-weight: 400; line-height: 28px;margin: 0 0 12px;">Thanks for filling out=
+ <a href=3D"https://docs.google.com/forms/d/e/1FAIpQLScGg6j5CHfwE69GBjJj72BJ=
+dcR75RQ6UCPh-USxRQy7uguDkA/viewform?usp=3Dmail_form_link" target=3D"_blank" =
+style=3D"white-space: pre-wrap;">T. Y. B. Tech. CSF_Panel-A and Panel-B_Na=
+tional Academic Immersion Program (NAIP) @ IITJ-
+
+Indian Institute of Technology Jodhpur_Student Registration Form</a></h1>He=
+re's what was received.</div><div style=3D"border-bottom: 1px solid #dadce0=
+; border-left: 1px solid #dadce0; border-right: 1px solid #dadce0; border-t=
+op: 8px solid rgb(207,165,161); padding: 20px;background-color: #fff; borde=
+r-radius: 8px; margin-bottom: 12px;"><h1 dir=3D"ltr" style=3D"font-family:=
+ Roboto,Helvetica,Arial,sans-serif;font-size: 32px; font-weight: 400; line-h=
+eight: 42px;white-space: pre-wrap;margin: 0 0 12px;">T. Y. B. Tech. CSF_Pan=
+el-A and Panel-B_National Academic Immersion Program (NAIP) @ IITJ-
+
+Indian Institute of Technology Jodhpur_Student Registration Form</h1><div s=
+tyle=3D"white-space: pre-wrap;margin-bottom: 12px;">Dear Students of T. Y.=
+ B. Tech. CSF_Panel-A and Panel-B,<br><b>Greetings from Department of Comput=
+er Engineering and Technology.<br></b><span>Department of CET<b>=C2=A0</b><=
+/span>is planning to organize=C2=A0<b>National Academic Immersion Program (=
+NAIP)</b> for the students of <b>Third Year B. Tech. Cybersecurity and Fore=
+nsics=C2=A0</b>during <b>09th June 2024 to 19th</b><b>=C2=A0June 2024 at=C2=
+=A0Indian Institute of Technology, Jodhpur.</b><div><b><br>Students of Thir=
+d Year B. Tech. CSF</b>_<b>Panel-A and Panel-B=C2=A0</b>requested to<b>=C2=
+=A0</b>fill the=C2=A0 registration=C2=A0form on or before=C2=A0<b>12th May=
+ 2024 till 01</b><b>:30 PM=C2=A0</b><span>to record your willingness to part=
+icipate in NAIP by filling information.</span></div></div></div><div style=
+=3D"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; b=
+order-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"=
+padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Rob=
+oto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-heig=
+ht: 24px;white-space: pre-wrap;margin: 0 0 16px;">Email<span style=3D"color=
+: #d93025;" aria-label=3D"Required question"> *</span></h2></div><div style=
+=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=
+=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin=
+: 12px 0 8px; min-height: 20px;display: inline-block; max-width: 100%; min-=
+width: 50%;">kpt.krishnaraj@gmail.com</div></div></div></div><div style=3D"=
+border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; borde=
+r-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padd=
+ing: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,=
+Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height:=
+ 24px;white-space: pre-wrap;margin: 0 0 16px;">PRN Number<span style=3D"colo=
+r: #d93025;" aria-label=3D"Required question"> *</span></h2></div><div styl=
+e=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=
+=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin=
+: 12px 0 8px; min-height: 20px;display: inline-block; max-width: 100%; min-=
+width: 50%;">1032210888</div></div></div></div><div style=3D"border: 1px so=
+lid #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; =
+margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;">=
+<h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Aria=
+l,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-spa=
+ce: pre-wrap;margin: 0 0 16px;">Roll Number<span style=3D"color: #d93025;"=
+ aria-label=3D"Required question"> *</span></h2></div><div style=3D"padding: =
+0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-spac=
+e: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px;=
+ min-height: 20px;display: inline-block; max-width: 100%; min-width: 50%;">1=
+0</div></div></div></div><div style=3D"border: 1px solid #dadce0; padding:=
+ 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;m=
+argin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=
+=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size=
+: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 =
+0 16px;">Select Your Panel (Division)<span style=3D"color: #d93025;" aria-=
+label=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12=
+px;"><div style=3D"margin-top: 16px;"><table style=3D"color: #202124;font-f=
+amily: Roboto,Helvetica,Arial,sans-serif;font-size: 14px; font-weight: 400; =
+line-height: 20px;margin-top: 8px; table-layout: fixed;"><tr><td><div role=
+=3D"radio" aria-checked=3D"true" aria-label=3D"Panel-A" style=3D"border: so=
+lid 2px #5f6368; height: 16px; width: 16px; border-radius: 50%;"><div style=
+=3D"background-color: #5f6368; border: solid 5px #5f6368; border-radius: 50=
+%; margin: 3px; height: 0; width: 0;"></div></div></td><td style=3D"min-wid=
+th: 8px;"></td><td style=3D"word-break: break-word;">Panel-A</td></tr></tab=
+le></div><div style=3D"margin-top: 16px;"><table style=3D"color: #202124;fo=
+nt-family: Roboto,Helvetica,Arial,sans-serif;font-size: 14px; font-weight:=
+ 400; line-height: 20px;color: #70757a;margin-top: 8px; table-layout: fixed;=
+"><tr><td><div role=3D"radio" aria-checked=3D"false" aria-label=3D"Panel-B" =
+style=3D"border: solid 2px #9aa0a6; height: 16px; width: 16px; border-radi=
+us: 50%;"></div></td><td style=3D"min-width: 8px;"></td><td style=3D"word-b=
+reak: break-word;">Panel-B</td></tr></table></div></div></div><div style=3D=
+"border: 1px solid #dadce0; padding: 20px 12px;background-color: #fff; bord=
+er-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"pad=
+ding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto=
+,Helvetica,Arial,sans-serif;font-size: 16px; font-weight: 400; line-height: =
+24px;white-space: pre-wrap;margin: 0 0 16px;">Name of the Student as per E=
+RP record<span style=3D"color: #d93025;" aria-label=3D"Required question">=
+ *</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 100=
+%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dot=
+ted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-b=
+lock; max-width: 100%; min-width: 50%;">Krishnaraj Prashant Thadesar</div><=
+/div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12p=
+x;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bo=
+ttom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"colo=
+r: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px;=
+ font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;=
+">Student's Last Name (Surname)<span style=3D"color: #d93025;" aria-label=
+=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12px;">=
+<div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wra=
+p;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height=
+: 20px;display: inline-block; max-width: 100%; min-width: 50%;">Thadesar</d=
+iv></div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px =
+12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margi=
+n-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"=
+color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16=
+px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 1=
+6px;">Student's First Name<span style=3D"color: #d93025;" aria-label=3D"Req=
+uired question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div st=
+yle=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;borde=
+r-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;=
+display: inline-block; max-width: 100%; min-width: 50%;">Krishnaraj</div></=
+div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px=
+;background-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bot=
+tom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color=
+: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; f=
+ont-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;"=
+>Student Contact Number (Whatsapp No)<span style=3D"color: #d93025;" aria-l=
+abel=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12p=
+x;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pre=
+-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-he=
+ight: 20px;display: inline-block; max-width: 100%; min-width: 50%;">9834312=
+135</div></div></div></div><div style=3D"border: 1px solid #dadce0; padding=
+: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px=
+;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" sty=
+le=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-si=
+ze: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: =
+0 0 16px;">Gender<span style=3D"color: #d93025;" aria-label=3D"Required qu=
+estion"> *</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"m=
+argin-top: 16px;"><table style=3D"color: #202124;font-family: Roboto,Helvet=
+ica,Arial,sans-serif;font-size: 14px; font-weight: 400; line-height: 20px;m=
+argin-top: 8px; table-layout: fixed;"><tr><td><div role=3D"radio" aria-chec=
+ked=3D"true" aria-label=3D"Male" style=3D"border: solid 2px #5f6368; height=
+: 16px; width: 16px; border-radius: 50%;"><div style=3D"background-color: #=
+5f6368; border: solid 5px #5f6368; border-radius: 50%; margin: 3px; height: =
+0; width: 0;"></div></div></td><td style=3D"min-width: 8px;"></td><td styl=
+e=3D"word-break: break-word;">Male</td></tr></table></div><div style=3D"mar=
+gin-top: 16px;"><table style=3D"color: #202124;font-family: Roboto,Helvetic=
+a,Arial,sans-serif;font-size: 14px; font-weight: 400; line-height: 20px;col=
+or: #70757a;margin-top: 8px; table-layout: fixed;"><tr><td><div role=3D"rad=
+io" aria-checked=3D"false" aria-label=3D"Female" style=3D"border: solid 2px =
+#9aa0a6; height: 16px; width: 16px; border-radius: 50%;"></div></td><td st=
+yle=3D"min-width: 8px;"></td><td style=3D"word-break: break-word;">Female</=
+td></tr></table></div></div></div><div style=3D"border: 1px solid #dadce0;=
+ padding: 20px 12px;background-color: #fff; border-radius: 8px; margin-botto=
+m: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"au=
+to" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;=
+font-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;=
+margin: 0;">Date of Birth<span style=3D"color: #d93025;" aria-label=3D"Requ=
+ired question"> *</span></h2></div><div style=3D"padding: 0 12px;"><div sty=
+le=3D"display: inline-block; margin-top: 20px;"><div style=3D"display: inli=
+ne-block; margin: 0 2px; min-width: 14px; text-align: center;"><div style=
+=3D"color: #70757a;font-family: Roboto,Helvetica,Arial,sans-serif;font-size=
+: 12px; font-weight: 400; letter-spacing: .25px; line-height: 16px;margin-b=
+ottom: 12px; text-align: start;" aria-label=3D"Month">MM</div><div style=3D=
+"border-bottom: 1px solid rgba(0, 0, 0, 0.12);height: 20px; letter-spacing: =
+0.2px; white-space: pre;">12</div></div> <div style=3D"display: inline-blo=
+ck; margin: 0 2px; min-width: 5px; text-align: center;"><div style=3D"font-=
+weight: 700;">/</div></div> <div style=3D"display: inline-block; margin: 0=
+ 2px; min-width: 14px; text-align: center;"><div style=3D"color: #70757a;fon=
+t-family: Roboto,Helvetica,Arial,sans-serif;font-size: 12px; font-weight: 4=
+00; letter-spacing: .25px; line-height: 16px;margin-bottom: 12px; text-alig=
+n: start;" aria-label=3D"Day of the month">DD</div><div style=3D"border-bot=
+tom: 1px solid rgba(0, 0, 0, 0.12);height: 20px; letter-spacing: 0.2px; whi=
+te-space: pre;">20</div></div> <div style=3D"display: inline-block; margin: =
+0 2px; min-width: 5px; text-align: center;"><div style=3D"font-weight: 700=
+;">/</div></div> <div style=3D"display: inline-block; margin: 0 2px; min-wi=
+dth: 28px; text-align: center;"><div style=3D"color: #70757a;font-family: R=
+oboto,Helvetica,Arial,sans-serif;font-size: 12px; font-weight: 400; letter-=
+spacing: .25px; line-height: 16px;margin-bottom: 12px; text-align: start;"=
+ aria-label=3D"Year">YYYY</div><div style=3D"border-bottom: 1px solid rgba(0=
+, 0, 0, 0.12);height: 20px; letter-spacing: 0.2px; white-space: pre;">2002<=
+/div></div></div></div></div><div style=3D"border: 1px solid #dadce0; paddi=
+ng: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12=
+px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" s=
+tyle=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-=
+size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margi=
+n: 0 0 16px;">Age dated on 15th May 2024<span style=3D"color: #d93025;" ari=
+a-label=3D"Required question"> *</span></h2></div><div style=3D"padding: 0=
+ 12px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space:=
+ pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min=
+-height: 20px;display: inline-block; max-width: 100%; min-width: 50%;">21</=
+div></div></div></div><div style=3D"border: 1px solid #dadce0; padding: 20p=
+x 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12px;marg=
+in-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D=
+"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 1=
+6px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0=
+ 16px;">Name of the=C2=A0 Person=C2=A0
+
+(Parent / Guardian)=C2=A0 for Contact in case of=C2=A0
+
+Emergency<span style=3D"color: #d93025;" aria-label=3D"Required question">=
+ *</span></h2></div><div style=3D"padding: 0 12px;"><div style=3D"width: 100=
+%;"><div dir=3D"auto" style=3D"white-space: pre-wrap;border-bottom: 1px dot=
+ted rgba(0,0,0,0.38);margin: 12px 0 8px; min-height: 20px;display: inline-b=
+lock; max-width: 100%; min-width: 50%;">Prashant Thadesar</div></div></div>=
+</div><div style=3D"border: 1px solid #dadce0; padding: 20px 12px;backgroun=
+d-color: #fff; border-radius: 8px; margin-bottom: 12px;margin-bottom: 12px;=
+"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" style=3D"color: #202124;=
+font-family: Roboto,Helvetica,Arial,sans-serif;font-size: 16px; font-weight=
+: 400; line-height: 24px;white-space: pre-wrap;margin: 0 0 16px;">Emergency =
+Contact Number (Parent / Guardian No)<span style=3D"color: #d93025;" aria-=
+label=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12=
+px;"><div style=3D"width: 100%;"><div dir=3D"auto" style=3D"white-space: pr=
+e-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38);margin: 12px 0 8px; min-h=
+eight: 20px;display: inline-block; max-width: 100%; min-width: 50%;">782306=
+0439</div></div></div></div><div style=3D"border: 1px solid #dadce0; paddin=
+g: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom: 12p=
+x;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"auto" st=
+yle=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;font-s=
+ize: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;margin=
+: 0 0 16px;">T-Shirt Size (XS, S, M,=C2=A0L,=C2=A0XL,=C2=A0XXL)<span style=
+=3D"color: #d93025;" aria-label=3D"Required question"> *</span></h2></div><=
+div style=3D"padding: 0 12px;"><div style=3D"width: 100%;"><div dir=3D"auto=
+" style=3D"white-space: pre-wrap;border-bottom: 1px dotted rgba(0,0,0,0.38)=
+;margin: 12px 0 8px; min-height: 20px;display: inline-block; max-width: 100=
+%; min-width: 50%;">XL</div></div></div></div><div style=3D"border: 1px sol=
+id #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px;=
+ margin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><=
+h2 dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial=
+,sans-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-spac=
+e: pre-wrap;margin: 0 0 16px;">Upload Scanned copy of any single Government =
+Identity Proof/ Aadhar Card Photo / Voters Id Photo / PAN Card Photo( Size =
+of Document should be less than 1 MB)<span style=3D"color: #d93025;" aria-=
+label=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12=
+px;">Submitted files<div role=3D"list" aria-label=3D"Submitted files"><div=
+ dir=3D"auto" style=3D"border: 1px solid #dadce0; border-radius: 4px; margin=
+-top: 8px; padding: 8px;"><table role=3D"listitem"><tr><td><img src=3D"http=
+s://ssl.gstatic.com/docs/doclist/images/mediatype/icon_3_pdf_x32.png" alt=
+=3D"PDF" style=3D"height: 16px; width: 16px;"></td><td style=3D"min-width:=
+ 4px;"></td><td style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,=
+sans-serif;font-size: 14px; font-weight: 400; line-height: 20px;; word-brea=
+k: break-word;">[Krishnaraj] Aadhar Card - Krishnaraj Thadesar.pdf</td></tr=
+></table></div></div></div></div><div style=3D"border: 1px solid #dadce0; p=
+adding: 20px 12px;background-color: #fff; border-radius: 8px; margin-bottom=
+: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2 dir=3D"aut=
+o" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sans-serif;f=
+ont-size: 16px; font-weight: 400; line-height: 24px;white-space: pre-wrap;m=
+argin: 0 0 16px;">Upload Scanned copy of Front and Back side MIT WPU Identi=
+ty Card( Size of Document should be less than 1 MB)<span style=3D"color: #d=
+93025;" aria-label=3D"Required question"> *</span></h2></div><div style=3D"=
+padding: 0 12px;">Submitted files<div role=3D"list" aria-label=3D"Submitted =
+files"><div dir=3D"auto" style=3D"border: 1px solid #dadce0; border-radius=
+: 4px; margin-top: 8px; padding: 8px;"><table role=3D"listitem"><tr><td><im=
+g src=3D"https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_3_pdf_x=
+32.png" alt=3D"PDF" style=3D"height: 16px; width: 16px;"></td><td style=3D"=
+min-width: 4px;"></td><td style=3D"color: #202124;font-family: Roboto,Helve=
+tica,Arial,sans-serif;font-size: 14px; font-weight: 400; line-height: 20px;=
+; word-break: break-word;">[Krishnarj] MIT ID Card - Krishnaraj Thadesar.pd=
+f</td></tr></table></div></div></div></div><div style=3D"border: 1px solid=
+ #dadce0; padding: 20px 12px;background-color: #fff; border-radius: 8px; mar=
+gin-bottom: 12px;margin-bottom: 12px;"><div style=3D"padding: 0 12px;"><h2=
+ dir=3D"auto" style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,sa=
+ns-serif;font-size: 16px; font-weight: 400; line-height: 24px;white-space:=
+ pre-wrap;margin: 0 0 16px;">Upload recent Passport Size Photograph ( Size o=
+f image should be less than 1 MB)<span style=3D"color: #d93025;" aria-label=
+=3D"Required question"> *</span></h2></div><div style=3D"padding: 0 12px;">=
+Submitted files<div role=3D"list" aria-label=3D"Submitted files"><div dir=
+=3D"auto" style=3D"border: 1px solid #dadce0; border-radius: 4px; margin-to=
+p: 8px; padding: 8px;"><table role=3D"listitem"><tr><td><img src=3D"https:/=
+/ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_image_x32.png" alt=3D=
+"Image" style=3D"height: 16px; width: 16px;"></td><td style=3D"min-width: 4=
+px;"></td><td style=3D"color: #202124;font-family: Roboto,Helvetica,Arial,s=
+ans-serif;font-size: 14px; font-weight: 400; line-height: 20px;; word-break=
+: break-word;">[Krishnaraj] Passport Size Pic 3 - Krishnaraj Thadesar.JPG</=
+td></tr></table></div></div></div></div></div><table align=3D"center" cellp=
+adding=3D"0" cellspacing=3D"0" style=3D"max-width: 672px; min-width: 154px; =
+border-collapse: separate; border-spacing: 0 0.2em;" width=3D"100%" role=
+=3D"presentation"><tbody><tr height=3D"24px"><td></td></tr><tr><td><a href=
+=3D"https://docs.google.com/forms?usp=3Dmail_form_link" style=3D"color: #42=
+4242; font-size: 13px;">Create your own Google Form</a></td></tr><tr><td><a =
+href=3D"https://docs.google.com/forms/u/2/d/e/1FAIpQLScGg6j5CHfwE69GBjJj72=
+BJdcR75RQ6UCPh-USxRQy7uguDkA/reportabuse?source=3Dhttps://docs.google.com/f=
+orms/d/e/1FAIpQLScGg6j5CHfwE69GBjJj72BJdcR75RQ6UCPh-USxRQy7uguDkA/viewform&=
+amp;usp=3Dmail_receipt_abuse" target=3D"_blank" style=3D"color: #424242; fo=
+nt-size: 13px;">Report Abuse</a></td></tr></tbody></table></div></body></ht=
+ml>
+--000000000000d09ba1061834ccd5--

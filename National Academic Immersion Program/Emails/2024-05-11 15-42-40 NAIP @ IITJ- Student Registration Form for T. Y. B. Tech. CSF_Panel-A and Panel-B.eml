@@ -1,0 +1,350 @@
+Delivered-To: 1032210888@mitwpu.edu.in
+Received: by 2002:ac8:4f8c:0:b0:43d:f878:396f with SMTP id j12csp1123006qtw;
+ Sat, 11 May 2024 08:43:34 -0700 (PDT)
+X-Forwarded-Encrypted: i=4;
+ AJvYcCXyvoEfSdCBL0iNmkUuC2aKeoXSA26yCaDfrqAEKXdIAGZX0TmTeOsfF301vcOv+6MpHLN2BoyaXH0wwVz1Oj4AFiwUglj0U7o=
+X-Received: by 2002:a05:620a:4c9:b0:790:fc5a:1ffd with SMTP id
+ af79cd13be357-792c75fda83mr541541985a.66.1715442213809; Sat, 11 May 2024
+ 08:43:33 -0700 (PDT)
+ARC-Seal: i=3; a=rsa-sha256; t=1715442213; cv=pass; d=google.com;
+ s=arc-20160816;
+ b=0CvI2igl4fAIOk+eF4QBFS1g4ltzWDDDAXQ/MdYM+JDK+JwX7H9ZZ8zrVfoYcCW6Nx
+ ZKjXyvxI36aPVbY3laag7JQx8/Jq+oprkQox4AGVCDqoXi+l7cHTG/9+eFG9ZoVo8iv5
+ 8NbU4kJ+TLzIjwoKyr3IJGl+B6YzuMk0kUTFggE/2Ffy/pRWDCk9I7q9oFglg8xnIVHA
+ QQHJ/AgN/J0Nn91FwT33kxPRWP53/yEYyFrW0FY+A3D+GiG4EH2mXpH2ULHJ+9uy+8mt
+ XK+f3BRnjDeWQTwWHCePCLP5r5QDo3K7/RMYkAxKUN/dy+R1wbPWgt3RJFtoYEs5to90 psHw==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816; h=list-unsubscribe:list-archive:list-help:list-post:list-id
+ :mailing-list:precedence:to:subject:message-id:date:from
+ :mime-version:sender:dkim-signature;
+ bh=r0Q1MBWP/hYGbGOOqiDndzy5mhVIGZ702jkT4y7SWaM=;
+ fh=KJeXgxKPpwbbS9fZoRxdAIZCk0d4l/Te9361B6wPRYg=;
+ b=MCH4SKidTsIe0+IVpb33nSu7E85iiHyOlEVPKmNcfU8Q7AJwQr4ogX6ACRT4LZTNhD
+ ZK3lCXWd4+P5P2h1jwQQGZB4/J+kpbonzUuVs9800cdO4gZHWuIF/9nF4BjzQzGPLy22
+ z777UOJV72tnxqB8KQm8EoCIpvIzIYV1ZrNTwL3UBpLQPO2+XxTN2mazF5aWFmnhott+
+ aEczE3yOxXE328e160YE08aia6s5y7Sm5mGAXof4xPXoVCyFLpochYqv7zbrEbvmhJHL
+ tcYvazJ34rW1Ef7F34PEBrkvXLO/OvL+1B4kDqiIqDkOX8iQZt5Ey3Yg8qImQmwTwqtV K+bQ==;
+ dara=google.com
+ARC-Authentication-Results: i=3; mx.google.com; dkim=pass
+ header.i=@googlegroups.com header.s=20230601 header.b=IxdnOmKJ; arc=pass (i=2
+ spf=pass spfdomain=mitwpu.edu.in dkim=pass dkdomain=mitwpu.edu.in dmarc=pass
+ fromdomain=mitwpu.edu.in); spf=pass (google.com: domain of
+ sycsf2021-25+bncbdjnb4wm2mobbefe72yqmgqenjqoywq@googlegroups.com designates
+ 209.85.220.55 as permitted sender)
+ smtp.mailfrom=sycsf2021-25+bncBDJNB4WM2MOBBEFE72YQMGQENJQOYWQ@googlegroups.com;
+ dmarc=fail (p=NONE sp=NONE dis=NONE arc=pass) header.from=mitwpu.edu.in
+Return-Path: <sycsf2021-25+bncBDJNB4WM2MOBBEFE72YQMGQENJQOYWQ@googlegroups.com>
+Received: from mail-sor-f55.google.com (mail-sor-f55.google.com.
+ [209.85.220.55]) by mx.google.com with SMTPS id
+ af79cd13be357-792bf311cc1sor307589885a.17.2024.05.11.08.43.33 for
+ <1032210888@mitwpu.edu.in> (Google Transport Security); Sat, 11 May 2024
+ 08:43:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of
+ sycsf2021-25+bncbdjnb4wm2mobbefe72yqmgqenjqoywq@googlegroups.com designates
+ 209.85.220.55 as permitted sender) client-ip=209.85.220.55;
+Authentication-Results: mx.google.com; dkim=pass header.i=@googlegroups.com
+ header.s=20230601 header.b=IxdnOmKJ; arc=pass (i=2 spf=pass
+ spfdomain=mitwpu.edu.in dkim=pass dkdomain=mitwpu.edu.in dmarc=pass
+ fromdomain=mitwpu.edu.in); spf=pass (google.com: domain of
+ sycsf2021-25+bncbdjnb4wm2mobbefe72yqmgqenjqoywq@googlegroups.com designates
+ 209.85.220.55 as permitted sender)
+ smtp.mailfrom=sycsf2021-25+bncBDJNB4WM2MOBBEFE72YQMGQENJQOYWQ@googlegroups.com;
+ dmarc=fail (p=NONE sp=NONE dis=NONE arc=pass) header.from=mitwpu.edu.in
+ARC-Seal: i=2; a=rsa-sha256; t=1715442213; cv=pass; d=google.com;
+ s=arc-20160816;
+ b=TS+ooSYtQYgqQKihFzweuGrIz8TQWnSljL2xDXD8zg5thO6JJtIX26VzbJn8LueGt0
+ Ub/ZkERDssnGNcr14KsSKcA9g2RK5nsGDmKTR3R9CBjAjGe53nrN1z/QiPd4up6FN7UG
+ VoSGztVbOIlKhye+ZboTNSw7lBebsuejqTx/7Tw35HP++EZSaSZBCVd+DIvq75KFdAca
+ kpalRbSZgAWoaKbrIhgovxENv+0mpf95oUyyxwPIlj646Dbb1fz+2WpbECsb69rTqJSO
+ 97Mkk7QtV22necpOv8wndokQ/1aj/WJL5h0k7X0w8Rq/xAWsLmZ9xgsXNohkrp8ZycR2 Y6RA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816; h=list-unsubscribe:list-archive:list-help:list-post:list-id
+ :mailing-list:precedence:to:subject:message-id:date:from
+ :mime-version:sender:dkim-signature;
+ bh=r0Q1MBWP/hYGbGOOqiDndzy5mhVIGZ702jkT4y7SWaM=;
+ fh=KJeXgxKPpwbbS9fZoRxdAIZCk0d4l/Te9361B6wPRYg=;
+ b=tTkYOlgIi5dur11bFzCNcHBFzLr29FivF97jXithZALMeXKln8Y6M/isTSPUIlr6C5
+ MCmy38CexVJx7dNOenSNyr58Q+rkD4bRvTxNWM7DusjuNo1lHYESdWlgxMgOfdku47Me
+ gnIbkDj072cpNL3GGyExfjV23lcZIuwlrBlWCmUDr8XVwq6wCwpHPGc4jPLCt0bs4cc0
+ jvJdovCHoBbMne8BwA+QXaqVesZye7SwQ5d1kG+yl+KCooLIAPsiW5cnSxLAP8hpWU/C
+ h7xJvQjBiu1mYBjW0LiaY5XmWEBaYTaPlSACaW7KP9qrye7+RvJImTRQ2uj0e4rrlwjh jwyg==;
+ darn=mitwpu.edu.in
+ARC-Authentication-Results: i=2; gmr-mx.google.com; dkim=pass
+ header.i=@mitwpu.edu.in header.s=gsuite header.b=AZkHU0gF; spf=pass
+ (google.com: domain of vinayak.musale@mitwpu.edu.in designates
+ 2607:f8b0:4864:20::1033 as permitted sender)
+ smtp.mailfrom=vinayak.musale@mitwpu.edu.in; dmarc=pass (p=NONE sp=NONE
+ dis=NONE) header.from=mitwpu.edu.in
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=googlegroups.com;
+ s=20230601; t=1715442213; x=1716047013; darn=mitwpu.edu.in;
+ h=list-unsubscribe:list-archive:list-help:list-post:list-id
+ :mailing-list:precedence:x-original-authentication-results
+ :x-original-sender:to:subject:message-id:date:from:mime-version
+ :sender:from:to:cc:subject:date:message-id:reply-to;
+ bh=r0Q1MBWP/hYGbGOOqiDndzy5mhVIGZ702jkT4y7SWaM=;
+ b=IxdnOmKJoRIBZqEAVsaQlxduL3oSx1zwnj24Y8Al67UApjo+KTvhI2KWs1zc9T9gTl
+ PpUDBMEUJgcBzJJ0SQY7BECfRQ8K5VmRFklUWoyuvwFxstsQhlxaozwoZN2pO25ZDywQ
+ BmzTwWSWywK++v0g0gFO4X+EtS5fn5BN6AcmDrJ1rZ5vaDtvsOzkP6V1TKB3wvVq4/QW
+ FjX7rxAVBqTvjyWxdg8c+Yj2/T+ULcwwPw9Lc+t5GskRCeZiUkQc0bE5u3dJYtHN6uJp
+ PelB4pUivKd2RYnR5FuNRoZkpKBJ4Fich3ZhEybs0Umci/I6O/SDk0R0JqNHodtmP5Pz ej3A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net;
+ s=20230601; t=1715442213; x=1716047013;
+ h=list-unsubscribe:list-archive:list-help:list-post
+ :x-spam-checked-in-group:list-id:mailing-list:precedence
+ :x-original-authentication-results:x-original-sender:to:subject
+ :message-id:date:from:mime-version:x-beenthere:x-gm-message-state
+ :sender:from:to:cc:subject:date:message-id:reply-to;
+ bh=r0Q1MBWP/hYGbGOOqiDndzy5mhVIGZ702jkT4y7SWaM=;
+ b=fYDKBbAZgJ8ytnkdV3NWgI4xLhgZRoa5SZHHgDLjgispXSy57yGZQBtpxwTiKhrXg9
+ pe/eHg/f6K8RTRnUdrIDJ8Ps7PyYrf5gj1zmXPS1/9jFVBsz42HKrg8LWv4U2CrbLX31
+ Z94hOZ5Ee7LRAdU/ePGhZ326wjKeiDqilX1yi72vexbzERLn+E0FlA1Whd4iY1/44n9F
+ 26jagqlXJJKqA3a+hpw0WXQwd81ggAD4PBTPpdx1/jJJ/fDmsFYUofYQAQ7EhlRx/z+o
+ 8MP7Q8YUcN8HOehtJMmpXHn5BnC2hKExhXpN1aVdZl+IBcuaEIDgwivPDeiBbTSFiH3Q H/GA==
+Sender: sycsf2021-25@googlegroups.com
+X-Forwarded-Encrypted: i=2;
+ AJvYcCV9BfVIEQ8IAG/slsdmKDz77+pLxLDNr4doeHmN+ob9bMslW0uIK2V1Rk3jLhyRs48oRo9Oo/Qhs9pe5sgbY1qlmQ6OVvEoXuo=
+X-Gm-Message-State: AOJu0YzDCSxF+pK6S2BYkCFF/q7pk8QxSSwR3mg693tZH9Co621xNRSJ
+ wIstVjMdeuNx6yWO4VT6xWi3JD8xVPnQQmL/cVD1yo7tcb5E5/qL
+X-Google-Smtp-Source: AGHT+IFrpZNppB4rqh+1yKwexkppgT8DqRZ5p0rCJIY+1TMcAap4Ov+Tw+irqgDX+TppPGa1nNoiDg==
+X-Received: by 2002:a05:6a21:594:b0:1a3:bd8a:141f with SMTP id
+ adf61e73a8af0-1afde1d7bddmr5932043637.54.1715442193120; Sat, 11 May 2024
+ 08:43:13 -0700 (PDT)
+X-BeenThere: sycsf2021-25@googlegroups.com
+Received: by 2002:a05:6a00:3006:b0:6f4:5a4c:4199 with SMTP id
+ d2e1a72fcca58-6f4cad1e010ls910738b3a.0.-pod-prod-02-us; Sat, 11 May 2024
+ 08:43:12 -0700 (PDT)
+X-Received: by 2002:a05:6a20:430c:b0:1a9:ffa0:d007 with SMTP id
+ adf61e73a8af0-1afde1d919cmr6500679637.58.1715442191816; Sat, 11 May 2024
+ 08:43:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1715442191; cv=none; d=google.com;
+ s=arc-20160816;
+ b=m79lFR15OjIbVfbJ3lVVed0EWLXWQnTvdsJaexM2AJ1Bo07RMs+ID6E5qTvcjNbwvk
+ Jv6lFVjKh21WHzkM0XbzSVH/EtI3qZXdoxpKfmTPEWpKmuaUG8H3G+wL53q5OibjarQP
+ DnNARyDsrebmpKIug2zt7NyLnHDdssRLoEEMF9WpcczPCLynU+jv68jhotiK0xJQuwiu
+ 2K8FjhgGTsAClYvN8Yi5+IQYPIycb7aET5qRsOY1GSy69I6mP6Hn16iVjiaWQqcf3IF1
+ pqDENzNQFdaEYr/tfSYzyUktnCF6gjvACKQOhXAmD4ZLVSEx9lYPEoukvIcUvoiSHKaC UPgA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+ s=arc-20160816;
+ h=to:subject:message-id:date:from:mime-version:dkim-signature;
+ bh=ER2Z0NfUE7QpjDHcNLMcwUFfo2NayH5m1484R7KpPcQ=;
+ fh=L59xjacXrYJPYueVt0LQsvug+0KJfOZhGW+jcgUfbH4=;
+ b=NY7tPjZUmotatYCDmfj7LgN4QK4n7Jqg1AO9b+nvxBU5BdY2sAVkqLoqyi8eQ27NOW
+ GCTIjp5mda4AAvoBcxQ5WOqOzYexcPfCWKPngx012A72Nn4vDCnbSL6PuMcgQoFMG0UA
+ 10unSMnjanoFS9v+jvTilbLc4zra+mh1+fSRWMixCMlGgxJCqJqgie5iUME8/d1Te3Gc
+ oRhriPuNk9gAahkYW2FppVveK220aY8+s8Ev6YOx4V8Twr1ZSq48rURutJocJM2YJoys
+ Kfz8IAfBsfRbVqqU3nTEsDshig6WGYVl7n70lZ/IR/xNvhGnZ8iNengpkzTXsUXX6pMm +SGQ==;
+ dara=google.com
+ARC-Authentication-Results: i=1; gmr-mx.google.com; dkim=pass
+ header.i=@mitwpu.edu.in header.s=gsuite header.b=AZkHU0gF; spf=pass
+ (google.com: domain of vinayak.musale@mitwpu.edu.in designates
+ 2607:f8b0:4864:20::1033 as permitted sender)
+ smtp.mailfrom=vinayak.musale@mitwpu.edu.in; dmarc=pass (p=NONE sp=NONE
+ dis=NONE) header.from=mitwpu.edu.in
+Received: from mail-pj1-x1033.google.com (mail-pj1-x1033.google.com.
+ [2607:f8b0:4864:20::1033]) by gmr-mx.google.com with ESMTPS id
+ 98e67ed59e1d1-2b5d4c8eb23si367030a91.0.2024.05.11.08.43.11 for
+ <sycsf2021-25@googlegroups.com> (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256
+ bits=128/128); Sat, 11 May 2024 08:43:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of vinayak.musale@mitwpu.edu.in
+ designates 2607:f8b0:4864:20::1033 as permitted sender)
+ client-ip=2607:f8b0:4864:20::1033;
+Received: by mail-pj1-x1033.google.com with SMTP id
+ 98e67ed59e1d1-2af71daeec1so792544a91.0 for <sycsf2021-25@googlegroups.com>;
+ Sat, 11 May 2024 08:43:11 -0700 (PDT)
+X-Received: by 2002:a17:902:da84:b0:1e6:626c:f373 with SMTP id
+ d9443c01a7336-1ef433d3066mr70663675ad.0.1715442190936; Sat, 11 May 2024
+ 08:43:10 -0700 (PDT)
+MIME-Version: 1.0
+From: Vinayak Musale <vinayak.musale@mitwpu.edu.in>
+Date: Sat, 11 May 2024 21:12:40 +0530
+Message-ID: <CAB4wOzz6C4Fcm-90-9L-disp8BgXPh3ZhA_8X4wN6gOfruEzow@mail.gmail.com>
+Subject: NAIP @ IITJ- Student Registration Form for T. Y. B. Tech. CSF_Panel-A
+ and Panel-B
+To: SY CSF 2022-23 <sycsf2021-25@googlegroups.com>
+Content-Type: multipart/alternative; boundary="0000000000006c872606182f8202"
+X-Original-Sender: vinayak.musale@mitwpu.edu.in
+X-Original-Authentication-Results: gmr-mx.google.com;       dkim=pass
+ header.i=@mitwpu.edu.in header.s=gsuite header.b=AZkHU0gF;       spf=pass
+ (google.com: domain of vinayak.musale@mitwpu.edu.in designates
+ 2607:f8b0:4864:20::1033 as permitted sender)
+ smtp.mailfrom=vinayak.musale@mitwpu.edu.in; dmarc=pass (p=NONE sp=NONE
+ dis=NONE) header.from=mitwpu.edu.in
+Precedence: list
+Mailing-list: list sycsf2021-25@googlegroups.com; contact
+ sycsf2021-25+owners@googlegroups.com
+List-ID: <sycsf2021-25.googlegroups.com>
+X-Spam-Checked-In-Group: sycsf2021-25@googlegroups.com
+X-Google-Group-Id: 1035915115274
+List-Post: <https://groups.google.com/group/sycsf2021-25/post>,
+ <mailto:sycsf2021-25@googlegroups.com>
+List-Help: <https://groups.google.com/support/>,
+ <mailto:sycsf2021-25+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/sycsf2021-25
+List-Unsubscribe: <mailto:googlegroups-manage+1035915115274+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/sycsf2021-25/subscribe>
+
+--0000000000006c872606182f8202
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Students of T. Y. B. Tech. CSF_Panel-A and Panel-B,
+
+*Greetings from the Department of Computer Engineering and Technology.*The
+Department of CET is planning to organize *National Academic Immersion
+Program (NAIP)* for the students of *Third Year B. Tech. Cybersecurity and
+Forensics *during *09th June 2024 to 19th** June 2024 at Indian Institute
+of Technology, Jodhpur.*
+
+*Students of Third Year B. Tech. CSF*_*Panel-A and Panel-B *requested to fill
+the  registration form on or before *12th May 2024 till 01**:30 PM *to
+record your willingness to participate in NAIP by filling information.
+Google form link is as follows
+*https://forms.gle/sxmZWDZEv1kkVMx76 <https://forms.gle/sxmZWDZEv1kkVMx76>*
+
+-- 
+*Thanks and Regards*
+
+*Vinayak Musale*
+
+PhD CSE *|* MECSE *|* MBA(HR)
+
+*Assistant Professor*
+
+*Department of Computer Engineering and Technology*
+
+Dr. Vishwanath Karad MIT World Peace University
+
+S.No.124, Paud Road, Kothrud, Pune, India. PIN 411038
+
+Cellphone: +919850437871 / +919370237809
+
+#Email: *vinayak.musale@mitwpu.edu.in <vinayak.musale@mitwpu.edu.in>*
+
+-- 
+You received this message because you are subscribed to the Google Groups "tycsf2021-25@googlegroups.com" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to sycsf2021-25+unsubscribe@googlegroups.com.
+To view this discussion on the web, visit https://groups.google.com/d/msgid/sycsf2021-25/CAB4wOzz6C4Fcm-90-9L-disp8BgXPh3ZhA_8X4wN6gOfruEzow%40mail.gmail.com.
+For more options, visit https://groups.google.com/d/optout.
+
+--0000000000006c872606182f8202
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div dir=3D"auto"><span style=3D"color:rgb(32,33,36);font-=
+family:docs-Roboto;font-size:14.6667px">Dear Students of T. Y. B. Tech. CSF=
+_Panel-A and Panel-B,</span><br></div><div dir=3D"auto"><b style=3D"color:r=
+gb(32,33,36);font-family:docs-Roboto;font-size:14.6667px">Greetings from th=
+e Department of Computer Engineering and Technology.<br></b><span style=3D"=
+color:rgb(32,33,36);font-family:docs-Roboto;font-size:14.6667px">The Depart=
+ment of CET<b>=C2=A0</b></span><span style=3D"color:rgb(32,33,36);font-fami=
+ly:docs-Roboto;font-size:14.6667px">is planning to organize=C2=A0</span><b=
+ style=3D"color:rgb(32,33,36);font-family:docs-Roboto;font-size:14.6667px">N=
+ational Academic Immersion Program (NAIP)</b><span style=3D"color:rgb(32,33=
+,36);font-family:docs-Roboto;font-size:14.6667px">=C2=A0for the students of=
+=C2=A0</span><b style=3D"color:rgb(32,33,36);font-family:docs-Roboto;font-s=
+ize:14.6667px">Third Year B. Tech. Cybersecurity and Forensics=C2=A0</b><sp=
+an style=3D"color:rgb(32,33,36);font-family:docs-Roboto;font-size:14.6667px=
+">during=C2=A0</span><b style=3D"color:rgb(32,33,36);font-family:docs-Robot=
+o;font-size:14.6667px">09th June 2024 to 19th</b><b style=3D"color:rgb(32,3=
+3,36);font-family:docs-Roboto;font-size:14.6667px">=C2=A0June 2024 at=C2=A0=
+Indian Institute of Technology, Jodhpur.</b><div style=3D"color:rgb(32,33,3=
+6);font-family:docs-Roboto;font-size:14.6667px"><b><br>Students of Third Ye=
+ar B. Tech. CSF</b>_<b>Panel-A and Panel-B=C2=A0</b>requested to<b>=C2=A0</=
+b>fill the=C2=A0 registration=C2=A0form on or before=C2=A0<b>12th May 2024=
+ till 01</b><b>:30 PM=C2=A0</b>to record your willingness to participate in=
+ NAIP by filling information.</div><div style=3D"color:rgb(32,33,36);font-fa=
+mily:docs-Roboto;font-size:14.6667px">Google form link is as=C2=A0follows</=
+div><div style=3D"font-family:docs-Roboto;font-size:14.6667px"><span style=
+=3D"font-family:Arial,Helvetica,sans-serif;font-size:small"><b><font color=
+=3D"#0000ff"><a href=3D"https://forms.gle/sxmZWDZEv1kkVMx76">https://forms.=
+gle/sxmZWDZEv1kkVMx76</a></font></b></span></div></div><div><br></div><span =
+class=3D"gmail_signature_prefix">-- </span><br><div dir=3D"ltr" class=3D"g=
+mail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div st=
+yle=3D"color:rgb(34,34,34)"><b>Thanks and Regards</b></div><div style=3D"co=
+lor:rgb(34,34,34)"><br></div><div><div dir=3D"ltr"><div dir=3D"ltr"><div di=
+r=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"lt=
+r"><div dir=3D"ltr" style=3D"font-size:12.8px"><p class=3D"MsoNormal" style=
+=3D"margin-bottom:0.0001pt;line-height:normal;background-image:initial;back=
+ground-position:initial;background-repeat:initial"><b><span style=3D"font-s=
+ize:10pt;font-family:Verdana,&quot;sans-serif&quot;"><font color=3D"#073763=
+">Vinayak Musale</font></span></b></p><p class=3D"MsoNormal" style=3D"margi=
+n-bottom:0.0001pt;line-height:9.9pt;background-image:initial;background-pos=
+ition:initial;background-repeat:initial"><span style=3D"font-size:9.5pt;fon=
+t-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;color:#500050">PhD CSE=
+=C2=A0</span><b><span style=3D"font-size:13.5pt;font-family:&quot;Verdana&q=
+uot;,&quot;sans-serif&quot;;color:#990000">|</span></b><b><span style=3D"fo=
+nt-size:13.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;color=
+:blue">=C2=A0</span></b><span style=3D"font-size:9.5pt;font-family:&quot;Ve=
+rdana&quot;,&quot;sans-serif&quot;;color:#500050">MECSE=C2=A0</span><b><spa=
+n style=3D"font-size:13.5pt;font-family:&quot;Verdana&quot;,&quot;sans-seri=
+f&quot;;color:#990000">|</span></b><b><span style=3D"font-size:13.5pt;font-=
+family:&quot;Verdana&quot;,&quot;sans-serif&quot;;color:blue">=C2=A0</span>=
+</b><span style=3D"font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sa=
+ns-serif&quot;;color:#500050">MBA(HR)</span><span style=3D"color:#500050"><=
+/span></p><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-heigh=
+t:normal;background-image:initial;background-position:initial;background-re=
+peat:initial"><b><span style=3D"font-size:9.5pt;font-family:&quot;Verdana&q=
+uot;,&quot;sans-serif&quot;;color:#500050">Assistant=C2=A0Professor</span><=
+/b></p><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:n=
+ormal;background-image:initial;background-position:initial;background-repea=
+t:initial"><b><span style=3D"font-size:9.5pt;font-family:&quot;Verdana&quot=
+;,&quot;sans-serif&quot;;color:#500050">Department of Computer Engineering=
+ and Technology<span></span><span></span></span></b><span style=3D"color:#50=
+0050"></span></p><p class=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;lin=
+e-height:normal;background-image:initial;background-position:initial;backgr=
+ound-repeat:initial"><span style=3D"font-size:9.5pt;font-family:&quot;Verda=
+na&quot;,&quot;sans-serif&quot;;color:#500050">Dr. Vishwanath Karad MIT Wor=
+ld Peace University</span><span style=3D"color:#500050"></span></p><p class=
+=3D"MsoNormal" style=3D"margin-bottom:0.0001pt;line-height:normal;backgroun=
+d-image:initial;background-position:initial;background-repeat:initial"><spa=
+n style=3D"font-size:9.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif=
+&quot;;color:#500050">S.No.124, Paud Road, Kothrud, Pune, India. PIN 411038=
+</span><span style=3D"color:#500050"></span></p><p class=3D"MsoNormal" styl=
+e=3D"margin-bottom:6pt;line-height:11.75pt;background-image:initial;backgro=
+und-position:initial;background-repeat:initial"><span style=3D"font-size:9.=
+5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;color:#500050">C=
+ellphone: +919850437871 /=C2=A0+919370237809</span><span style=3D"color:#50=
+0050"></span></p><p class=3D"MsoNormal" style=3D"margin:0in 0in 0.0001pt;li=
+ne-height:13.2px;background-image:initial;background-position:initial;backg=
+round-repeat:initial;font-size:11pt;font-family:Calibri,sans-serif">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class=3D"MsoNormal"><span style=3D"font-size:9.0pt;line-height:107%;=
+font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;color:#500050">#</sp=
+an>Email:=C2=A0<u><span style=3D"font-size:9.5pt;line-height:107%;font-fami=
+ly:&quot;Verdana&quot;,&quot;sans-serif&quot;;color:blue"><a href=3D"mailto=
+:vinayak.musale@mitwpu.edu.in" target=3D"_blank"><span style=3D"color:blue"=
+>vinayak.musale@mitwpu.edu.in</span></a></span></u></p></div></div></div></=
+div></div></div></div></div></div></div></div></div>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;tycsf2021-25@googlegroups.com&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:sycsf2021-25+unsubscribe@googlegroups.com">sycsf2=
+021-25+unsubscribe@googlegroups.com</a>.<br />
+To view this discussion on the web, visit <a href=3D"https://groups.google.=
+com/d/msgid/sycsf2021-25/CAB4wOzz6C4Fcm-90-9L-disp8BgXPh3ZhA_8X4wN6gOfruEzo=
+w%40mail.gmail.com?utm_medium=3Demail&utm_source=3Dfooter">https://groups.g=
+oogle.com/d/msgid/sycsf2021-25/CAB4wOzz6C4Fcm-90-9L-disp8BgXPh3ZhA_8X4wN6gO=
+fruEzow%40mail.gmail.com</a>.<br />
+For more options, visit <a href=3D"https://groups.google.com/d/optout">http=
+s://groups.google.com/d/optout</a>.<br />
+
+--0000000000006c872606182f8202--
